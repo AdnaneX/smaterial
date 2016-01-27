@@ -1,0 +1,34 @@
+@mixin box-shadow($horizontal, $vertical, $blur, $spread, $color) {
+	// Mozilla
+	-moz-box-shadow: $horizontal $vertical, $blur, $spread, $color;
+	// Chrome
+	-webkit-box-shadow: $horizontal $vertical, $blur, $spread, $color;
+	// IE / Edge
+	-ms-box-shadow: $horizontal $vertical, $blur, $spread, $color;
+	// Opera
+	-o-box-shadow: $horizontal $vertical, $blur, $spread, $color;
+	// Normal
+	box-shadow: $horizontal $vertical, $blur, $spread, $color;
+}
+
+// Used for shadow depths
+@mixin multi-box-shadow($horizontal1, $vertical1, $blur1, $spread1, $color1, $horizontal2, $vertical2, $blur2, $spread2, $color2) {
+	// Mozilla
+	-moz-box-shadow: $horizontal1 $vertical1 $blur1 $spread1 $color1, $horizontal2 $vertical2 $blur2 $spread2 $color2;
+	// Chrome
+	-webkit-box-shadow: $horizontal1 $vertical1 $blur1 $spread1 $color1, $horizontal2 $vertical2 $blur2 $spread2 $color2;
+	// IE / Edge
+	-ms-box-shadow: $horizontal1 $vertical1 $blur1 $spread1 $color1, $horizontal2 $vertical2 $blur2 $spread2 $color2;
+	// Opera
+	-o-box-shadow: $horizontal1 $vertical1 $blur1 $spread1 $color1, $horizontal2 $vertical2 $blur2 $spread2 $color2;
+	// Normal
+	box-shadow: $horizontal1 $vertical1 $blur1 $spread1 $color1, $horizontal2 $vertical2 $blur2 $spread2 $color2;
+}
+
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-ms-border-radius: $radius;
+	-o-box-shadow: $radius;
+	border-radius: $radius;
+}

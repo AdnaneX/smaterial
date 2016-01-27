@@ -1,0 +1,91 @@
+body {
+	color: rgba(33, 33, 33, 0.87); // Change to rgba(00, 00, 00 ,0.87); to get black text
+	font-weight: 400;
+	font-size: $font-size;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	letter-spacing: .1px;
+
+	@media #{$large-up} {
+		//font-size: remCalc($large-screen-font-size);
+		font-size: 1rem;
+	}
+
+	@if( index( $roboto-font, $country-code ) ) {
+		font-family: 'Roboto', sans-serif;
+		line-height: remCalc(24px);
+	} @else if( index( $noto-font, $country-code ) ) {
+		font-family: 'Noto', sans-serif;
+		line-height: remCalc(26px);
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		font-family: inherit;
+		font-weight: 400;
+	}
+
+	h1 {
+		font-size: remCalc(56px);
+		font-weight: 300;
+	}
+
+	h2 {
+		font-size: remCalc(45px);
+		@if( index( $roboto-font, $country-code ) ) {
+			line-height: remCalc(48px);
+		} @else if( index( $noto-font, $country-code ) ) {
+			line-height: remCalc(63px);
+		}
+	}
+
+	h3 {
+		font-size: remCalc(34px);
+		@if( index( $roboto-font, $country-code ) ) {
+			line-height: remCalc(40px);
+		} @else if( index( $noto-font, $country-code ) ) {
+			line-height: remCalc(48px);
+		}
+	}
+
+	h4 {
+		font-size: remCalc(24px);
+		@if( index( $roboto-font, $country-code ) ) {
+			line-height: remCalc(32px);
+		} @else if( index( $noto-font, $country-code ) ) {
+			line-height: remCalc(34px);
+		}
+	}
+
+	h5 {
+		font-size: remCalc(20px);
+		@if( index( $roboto-font, $country-code ) ) {
+			line-height: remCalc(28px);
+		} @else if( index( $noto-font, $country-code ) ) {
+			line-height: remCalc(30px);
+		}
+	}
+
+	h6 {
+		font-size: remCalc(16px);
+		@if( index( $roboto-font, $country-code ) ) {
+			line-height: remCalc(24px);
+		} @else if( index( $noto-font, $country-code ) ) {
+			line-height: remCalc(26px);
+		}
+
+		@media #{$large-up} {
+			font-size: remCalc(15px);
+		}
+	}
+
+	button, input[type="reset"], input[type="submit"] {
+		@if( index( $roboto-font, $country-code ) ) {
+			text-transform: uppercase;
+			font-size: remCalc(14px);
+			font-weight: 500;
+		} @else if( index( $noto-font, $country-code ) ) {
+			font-size: remCalc(15px);
+			font-weight: 700;
+		}
+	}
+}

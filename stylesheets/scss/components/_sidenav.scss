@@ -1,0 +1,62 @@
+.sm-sidenav {
+	position: absolute;
+	background: $white;
+	padding: remCalc(24px) remCalc(16px) remCalc(24px) remCalc(16px);
+	bottom: 0;
+	@extend .sm-z1;
+
+	// Left navigation
+	&.sm-sidenav-left {
+		@media #{$medium-down} {
+			width: remCalc(320px);
+			max-width: remCalc(320px);
+		}
+
+		@media #{$medium-up} {
+			width: remCalc(400px);
+			max-width: remCalc(400px);
+		}
+
+		left: 0;
+
+		// Full height sidenav
+		&.sm-sidenav-full {
+			top: 0;
+		}
+
+		// Sidenav under navbar
+		&.sm-sidenav-floating {
+			top: remCalc(48px);
+
+			@media #{$small-up} {
+				top: remCalc(56px);
+			}
+
+			@media #{$medium-up} {
+				top: remCalc(64px);
+			}
+		}
+	}
+
+	// Right navigation
+	&.sm-sidenav-right {
+		max-width: 100%;
+		right: 0;
+		top: remCalc(48px);
+
+		@media #{$small-up} {
+			top: remCalc(56px);
+		}
+
+		@media #{$medium-up} {
+			top: remCalc(64px);
+		}
+
+	}
+
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+}

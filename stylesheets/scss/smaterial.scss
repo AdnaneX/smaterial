@@ -1,0 +1,17 @@
+/**************************************
+ * All components
+ *
+ * Some may be turned off by commenting them
+ **************************************/
+@import "components/mixins";
+@import 'components/colors'; // Color swatches http://www.google.com/design/spec/style/color.html
+@import 'components/settings'; // All settings
+@import 'components/normalize'; // Remove default styles
+@import 'components/functions'; // All functions
+@import 'components/grid'; // Grid functionality
+@import 'components/shadows'; // Shadow depths
+@import 'components/font'; // All available fonts http://www.google.com/design/spec/style/typography.html
+@import 'components/typography'; // Typography http://www.google.com/design/spec/style/typography.html
+@import 'components/icons'; // Icons with their shadow (can be turned off) http://www.google.com/design/spec/style/icons.html
+@import 'components/navbar'; // Top menu bar (can be turned off) http://www.google.com/design/spec/layout/structure.html#structure-toolbars
+@import 'components/sidenav'; // Side navigation (can be turned off) http://www.google.com/design/spec/layout/structure.html#structure-side-nav, http://www.google.com/design/spec/patterns/navigation-drawer.html#

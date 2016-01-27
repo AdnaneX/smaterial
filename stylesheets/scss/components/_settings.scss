@@ -1,0 +1,52 @@
+/**************************************
+ * Font settings more can be found in  _typography.scss and _font.scss
+ **************************************/
+
+// Specify country code to get specific fonts and font settings. Country code can be found in: http://www.google.com/design/spec/style/typography.html#typography-language-categories-reference
+$country-code: 'en';
+
+// Font types
+$roboto-font: ('af', 'am', 'az', 'bg', 'ca', 'cs', 'cy', 'da', 'de', 'el', 'en', 'en-GB', 'es', 'es-419', 'et', 'eu', 'fi', 'fil', 'fr', 'fr-CA', 'gl', 'hr', 'hu', 'hy', 'id', 'is', 'it', 'iw', 'ka', 'kk', 'ky', 'lt', 'lv', 'mk', 'mn', 'ms', 'nl', 'no', 'po', 'pt', 'pt-PT', 'ro', 'ru', 'sk', 'sl', 'sq', 'sr', 'sr-Latn', 'sv', 'sw', 'tr', 'uk', 'uz', 'zu');
+$noto-font: ('ar', 'bn', 'fa', 'gu', 'hi', 'ja', 'km', 'kn', 'ko', 'lo', 'ml', 'mr', 'my', 'ne', 'pa', 'si', 'ta', 'te', 'th', 'ur', 'vi','zh-CN', 'zh-HK', 'zh-TW');
+
+// Font paths
+$roboto-font-path: './components/fonts/Roboto/';
+$noto-font-path: './components/fonts/Noto/';
+
+// Font size
+$font-size: 15px;
+$large-screen-font-size: 14px;
+$h1-size: 56px;
+$h2-size: 45px;
+$h3-size: 34px;
+$h4-size: 24px;
+$h5-size: 20px;
+$h6-size: 16px;
+
+/**************************************
+ * Colors
+ **************************************/
+$main-color: $blue;
+
+/**************************************
+ * Grid settings
+ **************************************/
+
+// Break points
+$xsmall-screen: 480px; // Small mobile
+$small-screen: 960px; // Small tablet, medium mobile
+$medium-screen: 1280px; // Large tablet
+$large-screen: 1600px; // Small desktop
+$xlarge-screen: 1920px; // "Normal" desktop
+
+// The amount of columns. Default: 12
+$columns: 12;
+
+// Gutter
+$gutter: 16px;
+// More gutter settings can be found in _grid.scss
+
+/**************************************
+ * Icons
+ **************************************/
+$icon-font-path: './components/fonts/icons/';
