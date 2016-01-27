@@ -1,5 +1,5 @@
 body {
-	color: rgba(33, 33, 33, 0.87); // Change to rgba(00, 00, 00 ,0.87); to get black text
+	color: rgba($black, .87);
 	font-weight: 400;
 	font-size: $font-size;
 	text-rendering: optimizeLegibility;
@@ -27,10 +27,12 @@ body {
 	h1 {
 		font-size: remCalc(56px);
 		font-weight: 300;
+		color: rgba($black, .54);
 	}
 
 	h2 {
 		font-size: remCalc(45px);
+		color: rgba($black, .54);
 		@if( index( $roboto-font, $country-code ) ) {
 			line-height: remCalc(48px);
 		} @else if( index( $noto-font, $country-code ) ) {
@@ -40,6 +42,7 @@ body {
 
 	h3 {
 		font-size: remCalc(34px);
+		color: rgba($black, .54);
 		@if( index( $roboto-font, $country-code ) ) {
 			line-height: remCalc(40px);
 		} @else if( index( $noto-font, $country-code ) ) {
@@ -49,6 +52,7 @@ body {
 
 	h4 {
 		font-size: remCalc(24px);
+		color: rgba($black, .87);
 		@if( index( $roboto-font, $country-code ) ) {
 			line-height: remCalc(32px);
 		} @else if( index( $noto-font, $country-code ) ) {
@@ -58,6 +62,7 @@ body {
 
 	h5 {
 		font-size: remCalc(20px);
+		color: rgba($black, .87);
 		@if( index( $roboto-font, $country-code ) ) {
 			line-height: remCalc(28px);
 		} @else if( index( $noto-font, $country-code ) ) {
@@ -67,6 +72,7 @@ body {
 
 	h6 {
 		font-size: remCalc(16px);
+		color: rgba($black, .87);
 		@if( index( $roboto-font, $country-code ) ) {
 			line-height: remCalc(24px);
 		} @else if( index( $noto-font, $country-code ) ) {
@@ -79,6 +85,7 @@ body {
 	}
 
 	button, input[type="reset"], input[type="submit"] {
+		color: rgba($black, .87);
 		@if( index( $roboto-font, $country-code ) ) {
 			text-transform: uppercase;
 			font-size: remCalc(14px);

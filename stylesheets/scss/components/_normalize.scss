@@ -23,5 +23,31 @@ html, body {
 		-o-transition: width 300ms ease-in-out, height 300ms ease-in-out, font-size 300ms ease-in-out, top 300ms ease-in-out, padding 300ms ease-in-out;
 		transition: width 300ms ease-in-out, height 300ms ease-in-out, font-size 300ms ease-in-out, top 300ms ease-in-out, padding 300ms ease-in-out;
 	}
+
+	/**********************************
+	 * Default list style
+	 **********************************/
+
+	ul {
+		li, ol {
+			font-weight: 500;
+			font-size: remCalc(14px);
+			color: rgba($black, 0.87);
+			height: remCalc(48px);
+			line-height: remCalc(48px);
+
+			a {
+				font-weight: 500;
+				font-size: remCalc(14px);
+				color: rgba($black, 0.87);
+				height: remCalc(48px);
+				line-height: remCalc(48px);
+			}
+		}
+	}
+
+	.sm-circle {
+		border-radius: 50%;
+	}
 }
 

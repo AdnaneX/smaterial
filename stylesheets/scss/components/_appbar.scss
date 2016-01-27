@@ -1,4 +1,4 @@
-.sm-navbar {
+.sm-appbar {
 	@extend .sm-row, .sm-z1;
 	color: $white;
 	background: $blue;
@@ -31,7 +31,7 @@
 		}
 	}
 
-	.sm-navbar-nav {
+	.sm-appbar-nav {
 		@extend .sm-col, .sm-s1;
 
 		.material-icons {
@@ -41,7 +41,7 @@
 		}
 	}
 
-	.sm-navbar-title {
+	.sm-appbar-title {
 		@extend .sm-col, .sm-s7;
 		padding: remCalc(12px) 0 remCalc(12px) 0 !important;
 
@@ -57,10 +57,11 @@
 			margin: 0;
 			font-size: remCalc(24px);
 			font-weight: 500;
+			color: $white;
 		}
 	}
 
-	.sm-navbar-actions {
+	.sm-appbar-actions {
 		@extend .sm-col, .sm-s3;
 		.material-icons {
 			float: right;
@@ -70,14 +71,14 @@
 			}
 		}
 
-		.sm-navbar-search {
+		.sm-appbar-search {
 			input {
 				display: none;
 			}
 		}
 	}
 
-	.sm-navbar-menu {
+	.sm-appbar-menu {
 		@extend .sm-col, .sm-s1;
 
 		.material-icons {

@@ -6,7 +6,7 @@
 	@extend .sm-z1;
 
 	// Left navigation
-	&.sm-sidenav-left {
+	&-left {
 		@media #{$medium-down} {
 			width: remCalc(320px);
 			max-width: remCalc(320px);
@@ -20,12 +20,12 @@
 		left: 0;
 
 		// Full height sidenav
-		&.sm-sidenav-full {
+		&-full {
 			top: 0;
 		}
 
 		// Sidenav under navbar
-		&.sm-sidenav-floating {
+		&-floating {
 			top: remCalc(48px);
 
 			@media #{$small-up} {
@@ -39,7 +39,7 @@
 	}
 
 	// Right navigation
-	&.sm-sidenav-right {
+	&-right {
 		max-width: 100%;
 		right: 0;
 		top: remCalc(48px);
@@ -51,12 +51,35 @@
 		@media #{$medium-up} {
 			top: remCalc(64px);
 		}
-
 	}
 
 	ul {
 		list-style-type: none;
 		margin: 0;
 		padding: 0;
+
+		li {
+			&.sm-sidenav-drawer {
+				margin: remCalc(-24px) remCalc(-16px) auto  remCalc(-16px);
+				background: $lime;
+				padding: remCalc(16px);
+
+				.sm-sidenav-drawer-img {
+					width: remCalc(50px);
+					height: remCalc(50px);
+				}
+			}
+
+			a {
+				&:hover {
+					color: $blue;
+				}
+			}
+		}
+
+		.material-icons {
+			color: rgba($black, 0.54);
+			line-height: remCalc(48px);
+		}
 	}
 }
