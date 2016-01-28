@@ -8,12 +8,12 @@
 	// Left navigation
 	&-left {
 		@media #{$medium-down} {
-			width: remCalc(320px);
+			width: remCalc($sidenav-small-width);
 			max-width: remCalc(320px);
 		}
 
 		@media #{$medium-up} {
-			width: remCalc(400px);
+			width: remCalc($sidenav-width);
 			max-width: remCalc(400px);
 		}
 
@@ -63,23 +63,71 @@
 				margin: remCalc(-24px) remCalc(-16px) auto  remCalc(-16px);
 				background: $lime;
 				padding: remCalc(16px);
+				height: auto;
 
 				.sm-sidenav-drawer-img {
-					width: remCalc(50px);
+					width: 100%;
 					height: remCalc(50px);
+					margin-bottom: remCalc(5px);
+
+					img {
+						@extend .sm-circle;
+						width: remCalc(50px);
+						height: remCalc(50px);
+					}
+				}
+
+				.sm-sidenav-drawer-info {
+					height: remCalc(56px);
+
+					> div {
+						color: $white;
+						font-size: remCalc(14px);
+						height: remCalc(28px);
+						width: 75%;
+						max-width: 75%;
+						line-height: remCalc(28px);
+					}
+
+					.sm-sidenav-drawer-name {
+						font-weight: 500;
+					}
+
+					.sm-sidenav-drawer-email {
+						font-weight: 400;
+						float: left;
+					}
+
+					.sm-sidenav-drawer-button {
+						width: 25%;
+						float: left;
+
+						.material-icons {
+							color: $white;
+							height: remCalc(28px);
+							width: remCalc(28px);
+							vertical-align: middle;
+							line-height: remCalc(28px);
+						}
+					}
 				}
 			}
 
-			a {
+			.material-icons {
+				color: rgba($black, 0.54);
+				line-height: remCalc(48px);
+				height: remCalc(48px);
+				width: remCalc(48px);
+				vertical-align: middle;
+			}
+
+			a, .material-icons {
 				&:hover {
 					color: $blue;
 				}
 			}
 		}
 
-		.material-icons {
-			color: rgba($black, 0.54);
-			line-height: remCalc(48px);
-		}
+
 	}
 }
