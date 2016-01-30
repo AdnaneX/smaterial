@@ -26,6 +26,10 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		&lt;i class="material-icons">home&lt;/i>
 		&lt;i class="material-icons">compare_arrows&lt;/i>
 	</code>
+
+	<p class="sm-col sm-s12 sm-m6">
+		<img width="100%" src="//material-design.storage.googleapis.com/publish/material_v_4/material_ext_publish/0Bx4BSt6jniD7OFZFR1ZOUmFWTEE/style_icons_system_intro.png" alt="Material Design icons">
+	</p>
 </section>
 
 <?php

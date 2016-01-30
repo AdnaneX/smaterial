@@ -1,0 +1,9 @@
+code, pre {
+	background: $grey-300;
+	font-family: Monospaced;
+	padding: remCalc(5px);
+
+	pre {
+		display: block;
+	}
+}

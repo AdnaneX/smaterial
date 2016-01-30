@@ -34,6 +34,8 @@ html, body {
 			left: remCalc($sidenav-width);
 			right: 0;
 		}
+
+		overflow: auto;
 	}
 
 	* {
@@ -67,7 +69,7 @@ html, body {
 			font-weight: 500;
 			font-size: remCalc(14px);
 			color: rgba($black, .87);
-			height: remCalc(48px);
+			height: auto;
 			line-height: remCalc(48px);
 
 			a {

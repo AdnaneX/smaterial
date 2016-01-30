@@ -45,7 +45,7 @@
 	</header>
 
 	<aside>
-		<nav id="sm-sidenav" class="sm-sidenav sm-sidenav-left sm-sidenav-left-floating sm-sidenav-dropdown">
+		<nav class="sm-sidenav sm-sidenav-left sm-sidenav-left-floating">
 			<ul>
 				<li class="sm-sidenav-drawer">
 					<div class="sm-sidenav-drawer-img">
@@ -74,8 +74,12 @@
 						<li><a href="/style/typography.php">Typography</a></li>
 					</ul>
 				</li>
-				<li class="sm-sidenav-subheader">Example</li>
-				<li class="sm-sidenav-divider"></li>
+				<li class="sm-sidenav-dropdown">Components <i class="material-icons sm-right">expand_less</i>
+					<ul>
+						<li><a href="/components/sidenav.php">Sidenav</a></li>
+						<li><a href="/components/appbar.php">Appbar</a></li>
+					</ul>
+				</li>
 			</ul>
 		</nav>
 	</aside>
