@@ -27,6 +27,17 @@ $h6-size: 16px;
  * Colors
  **************************************/
 $main-color: $blue;
+$secondary-color: $lime;
+
+// Appbar
+$appbar-background: $main-color;
+$appbar-hover: $blue-700;
+$appbar-text: $white;
+$appbar-title: $white;
+
+// Sidenav
+$sidenav-background: $white;
+$sidenav-hover: $main-color;
 
 /**************************************
  * Grid settings

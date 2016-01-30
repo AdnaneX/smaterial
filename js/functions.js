@@ -13,15 +13,21 @@ $.fn.slideHorizontal = function() {
  * @param  int $ms      The time in which to rotate
  * @return type         description
  */
-$.fn.rotate = function( $degrees, $ms ) {
-	$(this).css({'-webkit-transform': 'rotate('+ $degrees +'deg)',
-		'-webkit-transition-duration': $ms + 'ms',
+$.fn.rotate = function( $degrees, $ms, $effect ) {
+	$(this).css({
+		'-webkit-transform': 'rotate('+ $degrees +'deg)',
+		'-webkit-transition': $ms + 'ms',
+		'-webkit-transition-timing-function': $effect,
 		'-moz-transform': 'rotate('+ $degrees +'deg)',
-		'-moz-transition-duration': $ms + 'ms',
+		'-moz-transition': $ms + 'ms',
+		'-moz-transition-timing-function': $effect,
 		'-ms-transform': 'rotate('+ $degrees +'deg)',
-		'-ms-transition-duration': $ms + 'ms',
+		'-ms-transition': $ms + 'ms',
+		'-ms-transition-timing-function': $effect,
 		'transform': 'rotate('+ $degrees +'deg)',
-		'transition-duration': $ms + 'ms'});
+		'transition': $ms + 'ms',
+		'transition-timing-function': $effect
+	});
 	return $(this);
 };
 
@@ -32,6 +38,14 @@ $.fn.rotate = function( $degrees, $ms ) {
  */
 function visible( $e ) {
 	if( $e.is(':visible') ) {
+		return true;
+	} else {
+		return false;
+	}
+}
+
+$.fn.visible = function() {
+	if($(this).is(':visible')) {
 		return true;
 	} else {
 		return false;

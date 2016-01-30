@@ -5,6 +5,7 @@
 
 		<link rel="stylesheet" href="/stylesheets/scss/smaterial.css"> <!-- Stylesheet -->
 
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta name="language" content="english">
 		<meta http-equiv="language" content="EN-US">
@@ -66,7 +67,7 @@
 						</div>
 					</li>
 					<li><a href="/"><i class="material-icons">home</i> Home</a></li>
-					<li>Components
+					<li class="sm-sidenav-dropdown">Components <i class="material-icons sm-right">arrow_drop_up</i>
 						<ul>
 							<li><a href="colors.php">Colors</a></li>
 							<li><a href="typography.php">Typography</a></li>
@@ -74,10 +75,14 @@
 							<li><a href="sidenav.php">Sidenav</a></li>
 						</ul>
 					</li>
+					<li class="sm-sidenav-subheader">Example</li>
+					<li class="sm-sidenav-divider"></li>
 				</ul>
 			</nav>
 		</aside>
 
-		<!--<script type="text/javascript" src="/js/SMaterial.min.js"></script> <!-- All JavaScript -->
+		<script type="text/javascript" src="/js/jquery-2.2.0.min.js"></script>
+		<script type="text/javascript" src="/js/functions.js"></script>
+		<script type="text/javascript" src="/js/sidenav.js"></script>
 	</body>
 </html>

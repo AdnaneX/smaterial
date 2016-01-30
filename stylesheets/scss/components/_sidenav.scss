@@ -10,6 +10,8 @@
 		@media #{$medium-down} {
 			width: remCalc($sidenav-small-width);
 			max-width: remCalc(320px);
+			margin-right: remCalc(56px);
+			display: none;
 		}
 
 		@media #{$medium-up} {
@@ -21,7 +23,15 @@
 
 		// Full height sidenav
 		&-full {
-			top: 0;
+			top: remCalc(48px);
+
+			@media #{$small-up} {
+				top: remCalc(56px);
+			}
+
+			@media #{$medium-up} {
+				top: 0;
+			}
 		}
 
 		// Sidenav under navbar
@@ -51,6 +61,17 @@
 		@media #{$medium-up} {
 			top: remCalc(64px);
 		}
+	}
+
+	&-divider {
+		margin: remCalc(8px) (- remCalc(16px));
+		height: remCalc(1px);
+		background: rgba($black, .12); //http://www.google.com/design/spec/components/dividers.html#dividers-types-of-dividers
+	}
+
+	&-subheader {
+		color: rgba($black, .54);
+		font-weight: 500;
 	}
 
 	ul {
@@ -113,21 +134,34 @@
 				}
 			}
 
+			&.sm-sidenav-dropdown {
+				height: auto;
+				cursor: pointer;
+
+				.sm-arrow {
+					width: auto;
+				}
+			}
+
+			a {
+				display: block;
+
+				&:hover {
+					color: $sidenav-hover;
+
+					.material-icons {
+						color: $sidenav-hover;
+					}
+				}
+			}
+
 			.material-icons {
-				color: rgba($black, 0.54);
+				color: rgba($black, .54);
 				line-height: remCalc(48px);
 				height: remCalc(48px);
 				width: remCalc(48px);
 				vertical-align: middle;
 			}
-
-			a, .material-icons {
-				&:hover {
-					color: $blue;
-				}
-			}
 		}
-
-
 	}
 }

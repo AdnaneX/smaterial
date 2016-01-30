@@ -15,6 +15,10 @@ html, body {
 	a {
 		text-decoration: none;
 		outline: none;
+
+		img {
+			outline: none;
+		}
 	}
 
 	* {
@@ -27,6 +31,18 @@ html, body {
 		::selection { background: $cyan-a100; }
 	}
 
+	.sm-circle {
+		border-radius: 50%;
+	}
+
+	.sm-left {
+		float: left;
+	}
+
+	.sm-right {
+		float: right;
+	}
+
 	/**********************************
 	 * Default list style
 	 **********************************/
@@ -35,22 +51,18 @@ html, body {
 		li, ol {
 			font-weight: 500;
 			font-size: remCalc(14px);
-			color: rgba($black, 0.87);
+			color: rgba($black, .87);
 			height: remCalc(48px);
 			line-height: remCalc(48px);
 
 			a {
 				font-weight: 500;
 				font-size: remCalc(14px);
-				color: rgba($black, 0.87);
+				color: rgba($black, .87);
 				height: remCalc(48px);
 				line-height: remCalc(48px);
 			}
 		}
-	}
-
-	.sm-circle {
-		border-radius: 50%;
 	}
 }
 
