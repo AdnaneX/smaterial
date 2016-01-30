@@ -1,18 +1,20 @@
 <?php
-$title = 'Home';
-$description = 'Home of SMaterial. The CSS framework based on Googles Material Design';
-$keywords = 'material design, smaterial, color';
+$title = 'Color';
+$description = 'Colors swatches of material design';
+$keywords = 'material design, smaterial, color, color swatches, material colors';
 
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>
 
-<div class="sm-row">
-	<div class="sm-col sm-s12 sm-m4">
-		<div class="sm-red">
-			sm-red $red
-		</div>
-	</div>
-</div>
+<section class="sm-row">
+	<h2>Color usage</h2>
+
+	<p class="sm-col sm-s12">
+		All of the below colors are used in the same way.
+		Both scss variables as css classes and color codes are named.
+	</p>
+</section>
+
 
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.php';

@@ -22,7 +22,7 @@
 		</div>
 
 		<div class="sm-appbar-title">
-			<h1>Home</h1>
+			<h1><?= $title; ?></h1>
 		</div>
 
 		<div class="sm-appbar-actions">
@@ -70,6 +70,7 @@
 				<li class="sm-sidenav-dropdown">Style <i class="material-icons sm-right">expand_less</i>
 					<ul>
 						<li><a href="/style/color.php">Color</a></li>
+						<li><a href="/style/icons.php">Icons</a></li>
 						<li><a href="/style/typography.php">Typography</a></li>
 					</ul>
 				</li>

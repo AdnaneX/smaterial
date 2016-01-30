@@ -62,8 +62,8 @@ html, body {
 	 * Default list style
 	 **********************************/
 
-	ul {
-		li, ol {
+	ul, ol {
+		li {
 			font-weight: 500;
 			font-size: remCalc(14px);
 			color: rgba($black, .87);
