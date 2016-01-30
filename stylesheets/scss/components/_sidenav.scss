@@ -1,7 +1,7 @@
 .sm-sidenav {
 	position: absolute;
 	background: $white;
-	padding: remCalc(24px) remCalc(16px) remCalc(24px) remCalc(16px);
+	padding: remCalc(16px) 0;
 	bottom: 0;
 	@extend .sm-z1;
 
@@ -64,7 +64,7 @@
 	}
 
 	&-divider {
-		margin: remCalc(8px) (- remCalc(16px));
+		margin: remCalc(8px) 0;
 		height: remCalc(1px);
 		background: rgba($black, .12); //http://www.google.com/design/spec/components/dividers.html#dividers-types-of-dividers
 	}
@@ -72,6 +72,10 @@
 	&-subheader {
 		color: rgba($black, .54);
 		font-weight: 500;
+
+		&:hover {
+			background: none !important;
+		}
 	}
 
 	ul {
@@ -80,10 +84,16 @@
 		padding: 0;
 
 		li {
+			padding: 0 remCalc(16px);
+
+			&:hover {
+				background: $grey-200;
+			}
+
 			&.sm-sidenav-drawer {
-				margin: remCalc(-24px) remCalc(-16px) auto  remCalc(-16px);
+				margin: remCalc(-16px) 0 remCalc(8px)  0;
+				padding: remCalc(16px) remCalc(16px) remCalc(8px) remCalc(16px);
 				background: $lime;
-				padding: remCalc(16px);
 				height: auto;
 
 				.sm-sidenav-drawer-img {
@@ -162,6 +172,10 @@
 				width: remCalc(48px);
 				vertical-align: middle;
 			}
+		}
+
+		ul {
+			margin-left: remCalc(10px);
 		}
 	}
 }

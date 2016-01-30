@@ -21,6 +21,21 @@ html, body {
 		}
 	}
 
+	main {
+		position: absolute;
+		padding: remCalc($gutter);
+
+		@media #{$medium-down} {
+			left: remCalc($sidenav-small-width);
+			right: 0;
+		}
+
+		@media #{$medium-up} {
+			left: remCalc($sidenav-width);
+			right: 0;
+		}
+	}
+
 	* {
 		-webkit-transition: width 300ms ease-in-out, height 300ms ease-in-out, font-size 300ms ease-in-out, top 300ms ease-in-out, padding 300ms ease-in-out;
 		-moz-transition: width 300ms ease-in-out, height 300ms ease-in-out, font-size 300ms ease-in-out, top 300ms ease-in-out, padding 300ms ease-in-out;
