@@ -1501,13 +1501,13 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 			<div class="sm-col sm-s6">.sm-deep-orange-a200-text</div>
 			<div class="sm-col sm-s6">.sm-deep-orange-a200</div>
 		</div>
-		<div class="sm-col sm-s12 sm-deep-orange-a400 sm-white-text sm-white-text">
+		<div class="sm-col sm-s12 sm-deep-orange-a400 sm-white-text">
 			<div class="sm-col sm-s6">$deep-orange-a400</div>
 			<div class="sm-col sm-s6">#FF3D00</div>
 			<div class="sm-col sm-s6">.sm-deep-orange-a400-text</div>
 			<div class="sm-col sm-s6">.sm-deep-orange-a400</div>
 		</div>
-		<div class="sm-col sm-s12 sm-deep-orange-a700">
+		<div class="sm-col sm-s12 sm-deep-orange-a700 sm-white-text">
 			<div class="sm-col sm-s6">$deep-orange-a700</div>
 			<div class="sm-col sm-s6">#DD2C00</div>
 			<div class="sm-col sm-s6">.sm-deep-orange-a700-text</div>
