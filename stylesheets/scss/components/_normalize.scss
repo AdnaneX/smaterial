@@ -24,18 +24,21 @@ html, body {
 	main {
 		position: absolute;
 		padding: remCalc($gutter);
+		right: 0;
+		bottom: 0;
+		top: remCalc(48px);
+		left: remCalc($sidenav-small-width);
+		overflow: auto;
 
-		@media #{$medium-down} {
-			left: remCalc($sidenav-small-width);
-			right: 0;
+		@media #{$small-up} {
+			top: remCalc(56px);
+
 		}
 
 		@media #{$medium-up} {
 			left: remCalc($sidenav-width);
-			right: 0;
+			top: remCalc(64px);
 		}
-
-		overflow: auto;
 	}
 
 	* {

@@ -665,7 +665,7 @@ $colors: (
 			.sm-#{$color_name}-text {
 				color: $color_value;
 			}
-		} @else if $color_name == 'tints' { // For tints
+		} @else if $color_name == 'shades' {
 			.sm-#{$color_type} {
 				background-color: $color_value;
 			}
