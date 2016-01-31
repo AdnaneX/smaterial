@@ -1,3 +1,9 @@
+/**************************************
+ * AppBar
+ *
+ * http://www.google.com/design/spec/layout/structure.html#structure-app-bar
+ **************************************/
+
 .sm-appbar {
 	@extend .sm-row, .sm-z1;
 	color: $appbar-text;

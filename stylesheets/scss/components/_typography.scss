@@ -83,16 +83,4 @@ body {
 			font-size: remCalc(15px);
 		}
 	}
-
-	button, input[type="reset"], input[type="submit"] {
-		color: rgba($black, .87);
-		@if( index( $roboto-font, $country-code ) ) {
-			text-transform: uppercase;
-			font-size: remCalc(14px);
-			font-weight: 500;
-		} @else if( index( $noto-font, $country-code ) ) {
-			font-size: remCalc(15px);
-			font-weight: 700;
-		}
-	}
 }

@@ -1,6 +1,18 @@
+/**************************************
+ * Only used for highlighting code in code examples
+ **************************************/
+
+@font-face {
+	font-family: "Source Code Pro";
+	src: url('./components/fonts/Source Code Pro/SourceCodePro-Regular.ttf');
+	font-weight: 400;
+	font-style: normal;
+}
+
 code, pre {
+
 	background: $grey-300;
-	font-family: Monospaced;
+	font-family: 'Source Code Pro', Monospaced;
 	padding: remCalc(5px);
 
 	pre {

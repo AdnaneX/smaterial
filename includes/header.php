@@ -78,6 +78,7 @@
 					<ul>
 						<li><a href="/components/sidenav.php">Sidenav</a></li>
 						<li><a href="/components/appbar.php">Appbar</a></li>
+						<li><a href="/components/buttons.php">Buttons</a></li>
 					</ul>
 				</li>
 			</ul>

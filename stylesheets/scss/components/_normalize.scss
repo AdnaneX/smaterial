@@ -41,7 +41,7 @@ html, body {
 		}
 	}
 
-	* {
+	div, header, main, footer {
 		-webkit-transition: width 300ms ease-in-out, height 300ms ease-in-out, font-size 300ms ease-in-out, top 300ms ease-in-out, padding 300ms ease-in-out;
 		-moz-transition: width 300ms ease-in-out, height 300ms ease-in-out, font-size 300ms ease-in-out, top 300ms ease-in-out, padding 300ms ease-in-out;
 		-o-transition: width 300ms ease-in-out, height 300ms ease-in-out, font-size 300ms ease-in-out, top 300ms ease-in-out, padding 300ms ease-in-out;

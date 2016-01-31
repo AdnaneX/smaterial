@@ -49,17 +49,17 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 
 	<code class="sm-col sm-s6">
 		<pre>
-			&lt;nav class="sm-sidenav sm-sidenav-left sm-sidenav-left-floating">
-				&lt;ul>
-					&lt;li>&lt;i class="material-icons">home&lt;/i>Home&lt;/li>
-					&lt;li class="divider">&lt;/li>
-					&lt;li class="sm-sidenav-dropdown">Dropdown
-						&lt;ul>
-							&lt;li>Dropdown content&lt;/li>
-						&lt;/ul>
-					&lt;/li>
-				&lt;/ul>
-			&lt;/nav>
+&lt;nav class="sm-sidenav sm-sidenav-left sm-sidenav-left-floating">
+  &lt;ul>
+    &lt;li>&lt;i class="material-icons">home&lt;/i>Home&lt;/li>
+    &lt;li class="divider">&lt;/li>
+    &lt;li class="sm-sidenav-dropdown">Dropdown
+	  &lt;ul>
+        &lt;li>Dropdown content&lt;/li>
+      &lt;/ul>
+    &lt;/li>
+  &lt;/ul>
+&lt;/nav>
 		</pre>
 	</code>
 </section>
@@ -73,29 +73,29 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 
 	<code class="sm-col sm-s6">
 		<pre>
-			&lt;nav class="sm-sidenav sm-sidenav-left sm-sidenav-left-floating">
-				&lt;ul>
-					&lt;li class="sm-sidenav-drawer">
-						&lt;div class="sm-sidenav-drawer-img">
-							&lt;img alt="thumbnail" src="/images/thumb.jpg">
-						&lt;/div>
+&lt;nav class="sm-sidenav sm-sidenav-left sm-sidenav-left-floating">
+  &lt;ul>
+    &lt;li class="sm-sidenav-drawer">
+      &lt;div class="sm-sidenav-drawer-img">
+        &lt;img alt="thumbnail" src="/images/thumb.jpg">
+      &lt;/div>
 
-						&lt;div class="sm-sidenav-drawer-info">
-							&lt;div class="sm-sidenav-drawer-name">
-								John Doe
-							&lt;/div>
+      &lt;div class="sm-sidenav-drawer-info">
+        &lt;div class="sm-sidenav-drawer-name">
+          John Doe
+		&lt;/div>
 
-							&lt;div class="sm-sidenav-drawer-email">
-								johndoe@gmail.com
-							&lt;/div>
+        &lt;div class="sm-sidenav-drawer-email">
+          johndoe@gmail.com
+        &lt;/div>
 
-							&lt;div class="sm-sidenav-drawer-button">
-								&lt;i class="material-icons">arrow_drop_up&lt;/i>
-							&lt;/div>
-						&lt;/div>
-					&lt;/li>
-				&lt;/ul>
-			&lt;/nav>
+        &lt;div class="sm-sidenav-drawer-button">
+         &lt;i class="material-icons">arrow_drop_up&lt;/i>
+        &lt;/div>
+      &lt;/div>
+    &lt;/li>
+  &lt;/ul>
+&lt;/nav>
 		</pre>
 	</code>
 </section>

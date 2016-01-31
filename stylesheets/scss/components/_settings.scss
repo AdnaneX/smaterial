@@ -39,6 +39,19 @@ $appbar-title: $white;
 $sidenav-background: $white;
 $sidenav-hover: $main-color;
 
+// Buttons
+$raised-button-background: $main-color;
+$raised-button-background-hover: $blue-a100;
+$raised-button-color: $white;
+$raised-icon-color: $white;
+
+$flat-button-color: $main-color;
+$flat-icon-color: $main-color;
+$flat-button-focus: $grey;
+
+$floating-button-background: $main-color;
+$floating-button-icon: $white;
+
 /**************************************
  * Grid settings
  **************************************/

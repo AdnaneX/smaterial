@@ -1,0 +1,193 @@
+/**************************************
+ * Buttons
+ *
+ * http://www.google.com/design/spec/components/buttons.html
+ * http://www.google.com/design/spec/components/buttons-floating-action-button.html
+ **************************************/
+
+
+button, input[type="button"], input[type="reset"], input[type="submit"], a {
+	&.sm-raised-button {
+		color: $raised-button-color;
+		//color: rgba($black, .87);
+		background: $raised-button-background;
+		border: none;
+		min-width: remCalc(64px);
+		height: remCalc(36px);
+		line-height: remCalc(36px);
+		padding: 0 remCalc(16px);
+		margin: remCalc(8px);
+		text-transform: uppercase;
+		text-decoration: none;
+		display: inline-block;
+		text-align: center;
+		cursor: pointer;
+
+		@if( index( $roboto-font, $country-code ) ) {
+			font-size: remCalc(14px);
+			font-weight: 500;
+			font-family: 'Roboto', sans-serif;
+		} @else if( index( $noto-font, $country-code ) ) {
+			font-size: remCalc(15px);
+			font-weight: 700;
+			font-family: 'Noto', sans-serif;
+		}
+
+		&:hover {
+			@extend .sm-z2;
+			background: $raised-button-background-hover;
+		}
+
+
+		.material-icons {
+			color: $raised-icon-color;
+			line-height: remCalc(36px);
+			vertical-align: middle;
+			height: remCalc(36px);
+			width: remCalc(36px);
+
+			&.sm-left {
+				margin-right: remCalc(8px);
+			}
+
+			&.sm-right {
+				margin-left: remCalc(8px);
+			}
+		}
+
+		&-dense {
+			height: remCalc(32px);
+			line-height: remCalc(32px);
+			font-size: remCalc(13px);
+
+			.material-icons {
+				line-height: remCalc(32px);
+				height: remCalc(32px);
+				width: remCalc(32px);
+			}
+		}
+
+		&-disabled {
+			background: rgba($black, .12);
+			color: rgba($black, .30);
+
+			&:hover {
+				@extend .sm-z0;
+				background: rgba($black, .12);
+			}
+		}
+	}
+
+	&.sm-flat-button {
+		color: $flat-button-color;
+		//color: rgba($black, .87);
+		background: none;
+		border: none;
+		min-width: remCalc(88px);
+		height: remCalc(36px);
+		line-height: remCalc(36px);
+		padding: 0 remCalc(16px);
+		margin: remCalc(8px);
+		outline: none;
+		text-transform: uppercase;
+		text-decoration: none;
+		display: inline-block;
+		text-align: center;
+		cursor: pointer;
+
+		@if( index( $roboto-font, $country-code ) ) {
+			font-size: remCalc(14px);
+			font-weight: 500;
+			font-family: 'Roboto', sans-serif;
+		} @else if( index( $noto-font, $country-code ) ) {
+			font-size: remCalc(15px);
+			font-weight: 700;
+			font-family: 'Noto', sans-serif;
+		}
+
+
+		.material-icons {
+			color: $flat-icon-color;
+			line-height: remCalc(36px);
+			vertical-align: middle;
+			height: remCalc(36px);
+			width: remCalc(36px);
+
+			&.sm-left {
+				margin-right: remCalc(8px);
+			}
+
+			&.sm-right {
+				margin-left: remCalc(8px);
+			}
+		}
+
+		&-dense {
+			height: remCalc(32px);
+			line-height: remCalc(32px);
+			font-size: remCalc(13px);
+
+			.material-icons {
+				line-height: remCalc(32px);
+				height: remCalc(32px);
+				width: remCalc(32px);
+			}
+		}
+
+		&-disabled {
+			background: none;
+			color: rgba($black, .26);
+		}
+	}
+}
+
+button, a {
+	&.sm-floating-button {
+		@extend .sm-z1;
+		border-radius: 50%;
+		border: none;
+		outline: none;
+		width: remCalc(56px);
+		height: remCalc(56px);
+		color: $floating-button-icon;
+		background: $floating-button-background;
+		text-decoration: none;
+		display: inline-block;
+		text-align: center;
+		line-height: remCalc(56px);
+		cursor: pointer;
+
+		&:hover {
+			@extend .sm-z2;
+		}
+
+
+		.material-icons {
+			height: remCalc(24px);
+			width: remCalc(24px);
+			vertical-align: middle;
+		}
+
+		&-mini {
+			width: remCalc(40px);
+			height: remCalc(40px);
+			line-height: remCalc(40px);
+
+		}
+	}
+}
+
+input[type="checkbox"].sm-icon-button {
+	border-radius: 50%;
+	border: none;
+	outline: none;
+	width: remCalc(56px);
+	height: remCalc(56px);
+	color: $floating-button-icon;
+	background: $floating-button-background;
+	text-decoration: none;
+	display: inline-block;
+	text-align: center;
+	line-height: remCalc(56px);
+	cursor: pointer;
+}
