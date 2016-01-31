@@ -727,13 +727,13 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 			<div class="sm-col sm-s6">.sm-cyan-700-text</div>
 			<div class="sm-col sm-s6">.sm-cyan-700</div>
 		</div>
-		<div class="sm-col sm-s12 sm-cyan-800 sm-white-text sm-white-text">
+		<div class="sm-col sm-s12 sm-cyan-800 sm-white-text">
 			<div class="sm-col sm-s6">$cyan-800</div>
 			<div class="sm-col sm-s6">#00838F</div>
 			<div class="sm-col sm-s6">.sm-cyan-800-text</div>
 			<div class="sm-col sm-s6">.sm-cyan-800</div>
 		</div>
-		<div class="sm-col sm-s12 sm-cyan-900">
+		<div class="sm-col sm-s12 sm-cyan-900 sm-white-text">
 			<div class="sm-col sm-s6">$cyan-900</div>
 			<div class="sm-col sm-s6">#006064</div>
 			<div class="sm-col sm-s6">.sm-cyan-900-text</div>
