@@ -35,6 +35,22 @@
 
 	/* Support for IE. */
 	font-feature-settings: 'liga';
+
+	&.sm-18 {
+		font-size: remCalc(18px);
+	}
+
+	&.sm-24 {
+		font-size: remCalc(24px);
+	}
+
+	&.sm-36 {
+		font-size: remCalc(36px);
+	}
+
+	&.sm-48 {
+		font-size: remCalc(48px);
+	}
 }
 
 /**************************************

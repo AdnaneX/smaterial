@@ -3,10 +3,12 @@
 	background: $white;
 	padding: remCalc(16px) 0;
 	bottom: 0;
-	@extend .sm-z1;
+	@extend .sm-z16;
 
 	// Left navigation
 	&-left {
+		left: 0;
+
 		@media #{$medium-down} {
 			width: remCalc($sidenav-small-width);
 			max-width: remCalc(320px);
@@ -17,9 +19,8 @@
 		@media #{$medium-up} {
 			width: remCalc($sidenav-width);
 			max-width: remCalc(400px);
+			display: block;
 		}
-
-		left: 0;
 
 		// Full height sidenav
 		&-full {
@@ -32,11 +33,47 @@
 			@media #{$medium-up} {
 				top: 0;
 			}
+
+			&-title {
+				display: none;
+
+				@media #{$medium-up} {
+					background: $sidenav-full-title-background;
+					display: block;
+					height: remCalc(64px);
+					font-size: remCalc(24px);
+					font-weight: 500;
+					margin-top: - remCalc(16px);
+
+					h1, h2, h3, h4, h5, h6 {
+						padding: 0;
+						margin: 0;
+						font-size: remCalc(24px);
+						font-weight: 500;
+						color: $sidenav-full-title-color;
+					}
+
+					&:hover {
+						background: $sidenav-full-title-background !important;
+					}
+				}
+			}
+
+			.sm-sidenav-drawer {
+				@media #{$small-up} {
+					margin: - remCalc(16px) 0 remCalc(8px) 0 !important;
+				}
+
+				@media #{$medium-up} {
+					margin: 0 0 remCalc(8px) 0 !important;
+				}
+			}
 		}
 
 		// Sidenav under navbar
 		&-floating {
 			top: remCalc(48px);
+			z-index: 10;
 
 			@media #{$small-up} {
 				top: remCalc(56px);
@@ -44,6 +81,10 @@
 
 			@media #{$medium-up} {
 				top: remCalc(64px);
+			}
+
+			.sm-sidenav-left-full-title {
+				display: none;
 			}
 		}
 	}
@@ -91,12 +132,18 @@
 			}
 
 			&.sm-sidenav-drawer {
-				margin: remCalc(-16px) 0 remCalc(8px)  0;
+				@extend .sm-row;
+				margin: remCalc(-16px) 0 remCalc(8px) 0;
 				padding: remCalc(16px) remCalc(16px) remCalc(8px) remCalc(16px);
 				background: $lime;
 				height: auto;
 
+				div {
+					padding: 0 !important;
+				}
+
 				.sm-sidenav-drawer-img {
+					@extend .sm-col, .sm-s12;
 					width: 100%;
 					height: remCalc(50px);
 					margin-bottom: remCalc(5px);
@@ -109,6 +156,7 @@
 				}
 
 				.sm-sidenav-drawer-info {
+					@extend .sm-col, .sm-s8;
 					height: remCalc(56px);
 
 					> div {
@@ -118,6 +166,7 @@
 						width: 75%;
 						max-width: 75%;
 						line-height: remCalc(28px);
+						@extend .sm-col, .sm-s12;
 					}
 
 					.sm-sidenav-drawer-name {
@@ -126,14 +175,17 @@
 
 					.sm-sidenav-drawer-email {
 						font-weight: 400;
-						float: left;
 					}
+				}
 
-					.sm-sidenav-drawer-button {
-						width: 25%;
-						float: left;
+				.sm-sidenav-drawer-button {
+					@extend .sm-col, .sm-s4;
+					height: remCalc(56px);
 
+					a {
+						text-align: right;
 						.material-icons {
+							margin-top: remCalc(28px);
 							color: $white;
 							height: remCalc(28px);
 							width: remCalc(28px);
@@ -152,6 +204,15 @@
 					width: auto;
 					position: absolute;
 					right: remCalc(16px);
+				}
+			}
+
+			&.sm-sidenav-footer {
+				bottom: 0;
+			   	position: absolute;
+
+				&:hover {
+					background: none;
 				}
 			}
 

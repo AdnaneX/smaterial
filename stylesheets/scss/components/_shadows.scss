@@ -1,25 +1,57 @@
+/**************************************
+ * Elevation and shadows
+ *
+ * http://www.google.com/design/spec/what-is-material/elevation-shadows.html
+ **************************************/
+
 .sm-z0 {
 	-moz-box-shadow: none !important;
 	-webkit-box-shadow: none !important;
+	-ms-box-shadow: none !important;
+	-o-box-shadow: none !important;
 	box-shadow: none !important;
 }
 
 .sm-z1 {
-	@include multi-box-shadow(0, remCalc(1px), remCalc(3px), 0, rgba(0,0,0,0.12), 0, remCalc(1px), remCalc(2px), 0, rgba(0,0,0,0.24));
+	@include material-shadow(1);
 }
 
 .sm-z2 {
-	@include multi-box-shadow(0, remCalc(3px), remCalc(6px), 0, rgba(0,0,0,0.16), 0, remCalc(3px), remCalc(6px), 0, rgba(0,0,0,0.23));
- }
+	@include material-shadow(2);
+}
 
 .sm-z3 {
-	@include multi-box-shadow(0, remCalc(10px), remCalc(20px), 0, rgba(0,0,0,0.19), 0, remCalc(6px), remCalc(6px), 0, rgba(0,0,0,0.23));
+	@include material-shadow(3);
 }
 
 .sm-z4 {
-	@include multi-box-shadow(0, remCalc(14px), remCalc(28px), 0, rgba(0,0,0,0.25), 0, remCalc(10px), remCalc(10px), 0, rgba(0,0,0,0.22));
+	@include material-shadow(4);
 }
 
-.sm-z5 {
-	@include multi-box-shadow(0, remCalc(19px), remCalc(38px), 0, rgba(0,0,0,0.30), 0, remCalc(15px), remCalc(12px), 0, rgba(0,0,0,0.22));
+.sm-z6 {
+	@include material-shadow(6);
+}
+
+.sm-z8 {
+	@include material-shadow(8);
+}
+
+.sm-z9 {
+	 @include material-shadow(9);
+ }
+
+.sm-z10 {
+	@include material-shadow(10);
+}
+
+.sm-z12 {
+	@include material-shadow(12);
+}
+
+.sm-z16 {
+	@include material-shadow(16);
+}
+
+.sm-z24 {
+	@include material-shadow(24);
 }

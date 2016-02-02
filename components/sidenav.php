@@ -42,24 +42,26 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		<li>
 			<code>.sm-sidenav-left-floating</code> to <code>.sm-sidenav-left-full</code>
 			(<em>Floating is positioned under the appbar.
-				The ful height is positioned over the appbar and is fixed (needs to be changed)</em>)
+				The full height is positioned over the appbar and is fixed on desktop but will appear under the appbar on smaller screens.</em>)
 		</li>
 	</ul>
 
 
 	<code class="sm-col sm-s6">
 		<pre>
-&lt;nav class="sm-sidenav sm-sidenav-left sm-sidenav-left-floating">
-  &lt;ul>
-    &lt;li>&lt;i class="material-icons">home&lt;/i>Home&lt;/li>
-    &lt;li class="divider">&lt;/li>
-    &lt;li class="sm-sidenav-dropdown">Dropdown
-	  &lt;ul>
-        &lt;li>Dropdown content&lt;/li>
-      &lt;/ul>
-    &lt;/li>
-  &lt;/ul>
-&lt;/nav>
+&lt;aside id="sm-sidenav" class="sm-sidenav sm-sidenav-left sm-sidenav-left-floating">
+  &lt;nav>
+    &lt;ul>
+      &lt;li>&lt;i class="material-icons">home&lt;/i>Home&lt;/li>
+      &lt;li class="divider">&lt;/li>
+      &lt;li class="sm-sidenav-dropdown">Dropdown
+	    &lt;ul>
+          &lt;li>Dropdown content&lt;/li>
+        &lt;/ul>
+      &lt;/li>
+    &lt;/ul>
+  &lt;/nav>
+&lt;/aside>
 		</pre>
 	</code>
 </section>
@@ -73,29 +75,59 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 
 	<code class="sm-col sm-s6">
 		<pre>
-&lt;nav class="sm-sidenav sm-sidenav-left sm-sidenav-left-floating">
-  &lt;ul>
-    &lt;li class="sm-sidenav-drawer">
-      &lt;div class="sm-sidenav-drawer-img">
-        &lt;img alt="thumbnail" src="/images/thumb.jpg">
-      &lt;/div>
-
-      &lt;div class="sm-sidenav-drawer-info">
-        &lt;div class="sm-sidenav-drawer-name">
-          John Doe
-		&lt;/div>
-
-        &lt;div class="sm-sidenav-drawer-email">
-          johndoe@gmail.com
+&lt;aside id="sm-sidenav" class="sm-sidenav sm-sidenav-left sm-sidenav-left-floating">
+  &lt;nav class="sm-sidenav sm-sidenav-left sm-sidenav-left-floating">
+    &lt;ul>
+      &lt;li class="sm-sidenav-drawer">
+        &lt;div class="sm-sidenav-drawer-img">
+          &lt;img alt="thumbnail" src="/images/thumb.jpg">
         &lt;/div>
 
-        &lt;div class="sm-sidenav-drawer-button">
-         &lt;i class="material-icons">arrow_drop_up&lt;/i>
+        &lt;div class="sm-sidenav-drawer-info">
+          &lt;div class="sm-sidenav-drawer-name">
+            John Doe
+		  &lt;/div>
+
+          &lt;div class="sm-sidenav-drawer-email">
+            johndoe@gmail.com
+          &lt;/div>
+
+          &lt;div class="sm-sidenav-drawer-button">
+           &lt;i class="material-icons">arrow_drop_up&lt;/i>
+          &lt;/div>
         &lt;/div>
-      &lt;/div>
-    &lt;/li>
-  &lt;/ul>
-&lt;/nav>
+      &lt;/li>
+    &lt;/ul>
+  &lt;/nav>
+&lt;/aside
+		</pre>
+	</code>
+</section>
+
+<section class="sm-row">
+	<h3>Sidenav trigger</h3>
+
+	<p class="sm-col sm-s12 sm-m6">
+		To show the menu on mobile or tablet you can add a trigger button.
+	</p>
+
+	<p class="sm-col sm-s12 sm-m6">
+		The trigger button could look like this:
+		<a href="#" id="sm-nav-button" data-sm-trigger="sm-sidenav">
+			<i class="material-icons">menu</i>
+		</a>
+	</p>
+
+	<p class="sm-col sm-s12 sm-m6">
+		The id and data-sm-trigger are required.
+		The data-sm-trigger can be anything you gave the sidenav as id.
+	</p>
+
+	<code class="sm-col sm-s12 sm-m6">
+		<pre>
+&lt;a href="#" id="sm-nav-button" data-sm-trigger="sm-sidenav">
+  &lt;i class="material-icons">menu&lt;/i>
+&lt;/a>
 		</pre>
 	</code>
 </section>
@@ -136,6 +168,16 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 				<td>$sidenav-small-width</td>
 				<td></td>
 				<td>Changes the width of the sidenav for mobile (<em>max width 320px</em>)</td>
+			</tr>
+			<tr>
+				<td>$sidenav-full-title-background</td>
+				<td>Change to color or variable</td>
+				<td>Changes the title background color when using full height sidenav</td>
+			</tr>
+			<tr>
+				<td>$sidenav-full-title-color</td>
+				<td>Change to color or variable</td>
+				<td>Changes the text color of the title when using will height sidenav</td>
 			</tr>
 		</tbody>
 	</table>

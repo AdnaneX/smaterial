@@ -29,6 +29,9 @@ $h6-size: 16px;
 $main-color: $blue;
 $secondary-color: $lime;
 
+$link-color: $main-color;
+$link-hover: $secondary-color;
+
 // Appbar
 $appbar-background: $main-color;
 $appbar-hover: $blue-700;
@@ -38,6 +41,9 @@ $appbar-title: $white;
 // Sidenav
 $sidenav-background: $white;
 $sidenav-hover: $main-color;
+
+$sidenav-full-title-background: $main-color;
+$sidenav-full-title-color: $white;
 
 // Buttons
 $raised-button-background: $main-color;

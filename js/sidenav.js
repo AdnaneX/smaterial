@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	var $sidenav = $('.sm-sidenav');
+	var $sidenav = $('#sm-sidenav');
 
 	$sidenav.find('li.sm-sidenav-dropdown').each(function() {
 		var $this = $(this),
@@ -28,5 +28,11 @@ $(document).ready(function() {
 				}
 			}
 		});
+	});
+
+	$('#sm-nav-button').click(function() {
+		var $trigger = $(this).data('sm-trigger');
+
+		$('#' + $trigger).slideHorizontal();
 	});
 });

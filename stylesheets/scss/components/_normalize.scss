@@ -13,8 +13,13 @@ html, body {
 	}
 
 	a {
+		color: $link-color;
 		text-decoration: none;
 		outline: none;
+
+		&:hover {
+			color: $link-hover;
+		}
 
 		img {
 			outline: none;
@@ -27,7 +32,7 @@ html, body {
 		right: 0;
 		bottom: 0;
 		top: remCalc(48px);
-		left: remCalc($sidenav-small-width);
+		left: 0;
 		overflow: auto;
 
 		@media #{$small-up} {
@@ -36,7 +41,7 @@ html, body {
 		}
 
 		@media #{$medium-up} {
-			left: remCalc($sidenav-width);
+			left: remCalc($sidenav-width + 10px);
 			top: remCalc(64px);
 		}
 	}
@@ -61,6 +66,11 @@ html, body {
 
 	.sm-right {
 		float: right;
+	}
+
+	.sm-center {
+		text-align: center;
+		vertical-align: middle;
 	}
 
 	/**********************************

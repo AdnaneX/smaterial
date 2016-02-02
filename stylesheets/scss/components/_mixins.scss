@@ -32,3 +32,23 @@
 	-o-box-shadow: $radius;
 	border-radius: $radius;
 }
+
+@mixin material-shadow($dp) {
+	$ambientY : $dp + unquote('px');
+	$ambientBlur: if($dp == 1, 3, $dp * 2) + unquote('px');
+	$ambientAlpha : ($dp + 10 + ($dp / 9.38)) / 100;
+
+	$directY: if($dp < 10, if($dp % 2 == 0, $dp - (($dp / 2) - 1), ($dp - (($dp - 1) / 2))), $dp - 4) + unquote('px');
+	$directBlur: if($dp == 1, 3, $dp * 2) + unquote('px');
+	$directAlpha: (24 - decimal-round($dp / 10)) / 100;
+
+	@include multi-box-shadow(0, $ambientY, $ambientBlur, 0, rgba(0, 0, 0, $ambientAlpha), 0, $directY, $directBlur, 0, rgba(0, 0, 0, $directAlpha));
+}
+
+@mixin transition($property, $duration: 400ms, $timing-function : ease-in-out, $delay: 0ms) {
+	-webkit-transition: $property $duration $timing-function $delay;
+	-moz-transition: $property $duration $timing-function $delay;
+	-ms-transition: $property $duration $timing-function $delay;
+	-o-transition: $property $duration $timing-function $delay;
+	transition: $property $duration $timing-function $delay;
+}

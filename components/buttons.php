@@ -20,7 +20,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	</p>
 </section>
 
-<section class="sm-row">
+<section class="sm-row" id="sm-raised-button">
 	<h3>Raised button</h3>
 
 	<p class="sm-col sm-s12 sm-m6">
@@ -69,7 +69,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	</code>
 </section>
 
-<section class="sm-row">
+<section class="sm-row" id="sm-flat-buttons">
 	<h3>Flat button</h3>
 
 	<p class="sm-col sm-s12 sm-m6">
@@ -117,7 +117,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	</code>
 </section>
 
-<section class="sm-row">
+<section class="sm-row" id="sm-floating-button">
 	<h3>Floating button</h3>
 
 	<p class="sm-col sm-s12 sm-m6">
@@ -153,8 +153,8 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	</p>
 
 	<p class="sm-col sm-s12 sm-m6">
-		<input type="checkbox" class="sm-icon-button" data-sm-icon="star_rate">
-		<input type="checkbox" class="sm-icon-button" data-sm-icon="favorite">
+		<input type="checkbox" class="sm-toggle-button sm-white-toggle-button" data-sm-toggle-icon="star_rate" data-sm-color="sm-yellow-text">
+		<input type="checkbox" class="sm-toggle-button sm-color-toggle-button" data-sm-toggle-icon="favorite" data-sm-color="sm-red-text">
 	</p>
 </section>
 
