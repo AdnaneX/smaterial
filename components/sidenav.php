@@ -47,7 +47,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	</ul>
 
 
-	<code class="sm-col sm-s6">
+	<code class="sm-col sm-s12 sm-m6">
 		<pre>
 &lt;aside id="sm-sidenav" class="sm-sidenav sm-sidenav-left sm-sidenav-left-floating">
   &lt;nav>
@@ -64,16 +64,43 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 &lt;/aside>
 		</pre>
 	</code>
+
+	<p class="sm-col sm-s12 sm-m6">
+		In order to see a page title when using full height you can add the following to the sidenav:
+		<strong>Note:</strong> this title is only visible on large screens.
+	</p>
+
+	<code class="sm-col sm-s12 sm-m6">
+		<pre>
+&lt;aside id="sm-sidenav" class="sm-sidenav sm-sidenav-left sm-sidenav-left-full">
+  &lt;nav>
+    &lt;ul>
+	  &lt;li class="class="sm-sidenav-left-full-title">
+		&lt;h1>Title here&lt;/h1>
+	  &lt;/li>
+      &lt;li>&lt;i class="material-icons">home&lt;/i>Home&lt;/li>
+      &lt;li class="divider">&lt;/li>
+      &lt;li class="sm-sidenav-dropdown">Dropdown
+	    &lt;ul>
+          &lt;li>Dropdown content&lt;/li>
+        &lt;/ul>
+      &lt;/li>
+    &lt;/ul>
+  &lt;/nav>
+&lt;/aside>
+		</pre>
+	</code>
 </section>
+
 
 <section class="sm-row">
 	<h4>Drawer / profile</h4>
 
-	<p class="sm-col sm-s6">
+	<p class="sm-col sm-s12 sm-m6">
 		The best dimensions for the image are square. This way the image won't transform.
 	</p>
 
-	<code class="sm-col sm-s6">
+	<code class="sm-col sm-s12 sm-m6">
 		<pre>
 &lt;aside id="sm-sidenav" class="sm-sidenav sm-sidenav-left sm-sidenav-left-floating">
   &lt;nav class="sm-sidenav sm-sidenav-left sm-sidenav-left-floating">

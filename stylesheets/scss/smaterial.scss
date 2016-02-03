@@ -16,4 +16,5 @@
 @import 'components/appbar'; // Top menu bar (can be turned off) http://www.google.com/design/spec/layout/structure.html#structure-toolbars
 @import 'components/sidenav'; // Side navigation (can be turned off) http://www.google.com/design/spec/layout/structure.html#structure-side-nav, http://www.google.com/design/spec/patterns/navigation-drawer.html#
 @import 'components/code'; // Used to highlight code (can be turned off)
-@import 'components/buttons'; // Used to style buttons (floating, raised and flat)
+@import 'components/buttons'; // Used to style buttons (can be turned off)
+@import 'components/ripple'; // Used to create ripple effect (can be turned off)

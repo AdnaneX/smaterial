@@ -47,9 +47,6 @@
 	<aside id="sm-sidenav" class="sm-sidenav sm-sidenav-left sm-sidenav-left-floating">
 		<nav>
 			<ul>
-				<li class="sm-sidenav-left-full-title">
-					<h1><?= $title; ?></h1>
-				</li>
 				<li class="sm-sidenav-drawer">
 					<div class="sm-sidenav-drawer-img">
 						<img alt="SMaterial thumbnail" src="/images/SMaterial-icon.jpg">
