@@ -38,6 +38,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		<button class="sm-raised-button sm-raised-button-disabled">Disabled</button>
 		<button class="sm-raised-button sm-raised-button-dense">Dense</button>
 		<a href="#" class="sm-raised-button">Link</a>
+		<button class="sm-raised-button sm-hover-ripple">Hover ripple</button>
 	</p>
 
 	<code class="sm-col sm-s12 sm-m6">

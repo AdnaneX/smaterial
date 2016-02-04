@@ -1,0 +1,9 @@
+.sm-hover-ripple {
+
+	.sm-circle-hover {
+		&:hover {
+			background: rgba($black, .12);
+			@include border-radius(50%);
+		}
+	}
+}

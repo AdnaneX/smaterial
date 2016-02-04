@@ -15,7 +15,7 @@
 		<meta name="keyword" content="<?= $keywords; ?>">
 	</head>
 
-	<body>
+	<body class="sm-text-large">
 	<header class="sm-appbar">
 		<div class="sm-appbar-nav">
 			<a href="#" id="sm-nav-button" data-sm-trigger="sm-sidenav"><i class="material-icons">menu</i></a>
@@ -80,6 +80,7 @@
 						<li><a href="/components/sidenav.php">Sidenav</a></li>
 						<li><a href="/components/appbar.php">Appbar</a></li>
 						<li><a href="/components/buttons.php">Buttons</a></li>
+						<li><a href="/components/cards.php">Cards</a></li>
 					</ul>
 				</li>
 

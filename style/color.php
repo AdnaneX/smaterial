@@ -17,7 +17,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 
 <section class="sm-row">
 	<div class="sm-col sm-s12 sm-m4">
-		<h3 class="sm-col sm-s12 sm-red-text">Red swatches</h3>
+		<h3 class="sm-col sm-s12 sm-red-text">Red</h3>
 		<div class="sm-col sm-s12 sm-red sm-white-text">
 			<div class="sm-col sm-s6">$red</div>
 			<div class="sm-col sm-s6">#F44336</div>
@@ -110,7 +110,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		</div>
 	</div>
 	<div class="sm-col sm-s12 sm-m4">
-		<h3 class="sm-col sm-s12 sm-pink-text">Pink swatches</h3>
+		<h3 class="sm-col sm-s12 sm-pink-text">Pink</h3>
 		<div class="sm-col sm-s12 sm-pink sm-white-text">
 			<div class="sm-col sm-s6">$pink</div>
 			<div class="sm-col sm-s6">#E91E63</div>
@@ -203,7 +203,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		</div>
 	</div>
 	<div class="sm-col sm-s12 sm-m4">
-		<h3 class="sm-col sm-s12 sm-purple-text">Purple swatches</h3>
+		<h3 class="sm-col sm-s12 sm-purple-text">Purple</h3>
 		<div class="sm-col sm-s12 sm-purple sm-white-text">
 			<div class="sm-col sm-s6">$purple</div>
 			<div class="sm-col sm-s6">#9C27B0</div>
@@ -298,7 +298,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 <section class="sm-row">
 	<div class="sm-col sm-s12 sm-m4">
-		<h3 class="sm-col sm-s12 sm-deep-purple-text">Deep purple swatches</h3>
+		<h3 class="sm-col sm-s12 sm-deep-purple-text">Deep purple</h3>
 		<div class="sm-col sm-s12 sm-deep-purple sm-white-text">
 			<div class="sm-col sm-s6">$deep-purple</div>
 			<div class="sm-col sm-s6">#673AB7</div>
@@ -391,7 +391,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		</div>
 	</div>
 	<div class="sm-col sm-s12 sm-m4">
-		<h3 class="sm-col sm-s12 sm-indigo-text">Indigo swatches</h3>
+		<h3 class="sm-col sm-s12 sm-indigo-text">Indigo</h3>
 		<div class="sm-col sm-s12 sm-indigo sm-white-text">
 			<div class="sm-col sm-s6">$indigo</div>
 			<div class="sm-col sm-s6">#3F51B5</div>
@@ -484,7 +484,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		</div>
 	</div>
 	<div class="sm-col sm-s12 sm-m4">
-		<h3 class="sm-col sm-s12 sm-blue-text">Blue swatches</h3>
+		<h3 class="sm-col sm-s12 sm-blue-text">Blue</h3>
 		<div class="sm-col sm-s12 sm-blue sm-white-text">
 			<div class="sm-col sm-s6">$blue</div>
 			<div class="sm-col sm-s6">#2196F3</div>
@@ -579,7 +579,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 <section class="sm-row">
 	<div class="sm-col sm-s12 sm-m4">
-		<h3 class="sm-col sm-s12 sm-light-blue-text">Light blue swatches</h3>
+		<h3 class="sm-col sm-s12 sm-light-blue-text">Light blue</h3>
 		<div class="sm-col sm-s12 sm-light-blue">
 			<div class="sm-col sm-s6">$light-blue</div>
 			<div class="sm-col sm-s6">#03A9F4</div>
@@ -672,7 +672,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		</div>
 	</div>
 	<div class="sm-col sm-s12 sm-m4">
-		<h3 class="sm-col sm-s12 sm-cyan-text">Cyan swatches</h3>
+		<h3 class="sm-col sm-s12 sm-cyan-text">Cyan</h3>
 		<div class="sm-col sm-s12 sm-cyan">
 			<div class="sm-col sm-s6">$cyan</div>
 			<div class="sm-col sm-s6">#00BCD4</div>
@@ -765,7 +765,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		</div>
 	</div>
 	<div class="sm-col sm-s12 sm-m4">
-		<h3 class="sm-col sm-s12 sm-teal-text">Teal swatches</h3>
+		<h3 class="sm-col sm-s12 sm-teal-text">Teal</h3>
 		<div class="sm-col sm-s12 sm-teal sm-white-text">
 			<div class="sm-col sm-s6">$teal</div>
 			<div class="sm-col sm-s6">#009688</div>
@@ -860,7 +860,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 <section class="sm-row">
 	<div class="sm-col sm-s12 sm-m4">
-		<h3 class="sm-col sm-s12 sm-green-text">Green swatches</h3>
+		<h3 class="sm-col sm-s12 sm-green-text">Green</h3>
 		<div class="sm-col sm-s12 sm-green">
 			<div class="sm-col sm-s6">$green</div>
 			<div class="sm-col sm-s6">#4CAF50</div>
@@ -953,7 +953,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		</div>
 	</div>
 	<div class="sm-col sm-s12 sm-m4">
-		<h3 class="sm-col sm-s12 sm-light-green-text">Light green swatches</h3>
+		<h3 class="sm-col sm-s12 sm-light-green-text">Light green</h3>
 		<div class="sm-col sm-s12 sm-light-green">
 			<div class="sm-col sm-s6">$light-green</div>
 			<div class="sm-col sm-s6">#8BC34A</div>
@@ -1046,7 +1046,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		</div>
 	</div>
 	<div class="sm-col sm-s12 sm-m4">
-		<h3 class="sm-col sm-s12 sm-lime-text">Lime swatches</h3>
+		<h3 class="sm-col sm-s12 sm-lime-text">Lime</h3>
 		<div class="sm-col sm-s12 sm-lime">
 			<div class="sm-col sm-s6">$lime</div>
 			<div class="sm-col sm-s6">#CDDC39</div>
@@ -1141,7 +1141,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 <section class="sm-row">
 	<div class="sm-col sm-s12 sm-m4">
-		<h3 class="sm-col sm-s12 sm-yellow-text">Yellow swatches</h3>
+		<h3 class="sm-col sm-s12 sm-yellow-text">Yellow</h3>
 		<div class="sm-col sm-s12 sm-yellow">
 			<div class="sm-col sm-s6">$yellow</div>
 			<div class="sm-col sm-s6">#FFEB3B</div>
@@ -1234,7 +1234,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		</div>
 	</div>
 	<div class="sm-col sm-s12 sm-m4">
-		<h3 class="sm-col sm-s12 sm-amber-text">Amber swatches</h3>
+		<h3 class="sm-col sm-s12 sm-amber-text">Amber</h3>
 		<div class="sm-col sm-s12 sm-amber">
 			<div class="sm-col sm-s6">$amber</div>
 			<div class="sm-col sm-s6">#FFC107</div>
@@ -1327,7 +1327,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		</div>
 	</div>
 	<div class="sm-col sm-s12 sm-m4">
-		<h3 class="sm-col sm-s12 sm-orange-text">Orange swatches</h3>
+		<h3 class="sm-col sm-s12 sm-orange-text">Orange</h3>
 		<div class="sm-col sm-s12 sm-orange">
 			<div class="sm-col sm-s6">$orange</div>
 			<div class="sm-col sm-s6">#FF9800</div>
@@ -1422,7 +1422,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 <section class="sm-row">
 	<div class="sm-col sm-s12 sm-m4">
-		<h3 class="sm-col sm-s12 sm-deep-orange-text">Deep orange swatches</h3>
+		<h3 class="sm-col sm-s12 sm-deep-orange-text">Deep orange</h3>
 		<div class="sm-col sm-s12 sm-deep-orange sm-white-text">
 			<div class="sm-col sm-s6">$deep-orange</div>
 			<div class="sm-col sm-s6">#FF5722</div>
@@ -1515,7 +1515,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		</div>
 	</div>
 	<div class="sm-col sm-s12 sm-m4">
-		<h3 class="sm-col sm-s12 sm-brown-text">Brown swatches</h3>
+		<h3 class="sm-col sm-s12 sm-brown-text">Brown</h3>
 		<div class="sm-col sm-s12 sm-brown sm-white-text">
 			<div class="sm-col sm-s6">$brown</div>
 			<div class="sm-col sm-s6">#795548</div>
@@ -1584,7 +1584,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		</div>
 	</div>
 	<div class="sm-col sm-s12 sm-m4">
-		<h3 class="sm-col sm-s12 sm-grey-text">Grey swatches</h3>
+		<h3 class="sm-col sm-s12 sm-grey-text">Grey</h3>
 		<div class="sm-col sm-s12 sm-grey">
 			<div class="sm-col sm-s6">$grey</div>
 			<div class="sm-col sm-s6">#9E9E9E</div>
@@ -1655,7 +1655,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 <section class="sm-row">
 	<div class="sm-col sm-s12 sm-m4">
-		<h3 class="sm-col sm-s12 sm-blue-grey-text">Blue grey swatches</h3>
+		<h3 class="sm-col sm-s12 sm-blue-grey-text">Blue grey</h3>
 		<div class="sm-col sm-s12 sm-blue-grey sm-white-text">
 			<div class="sm-col sm-s6">$blue-grey</div>
 			<div class="sm-col sm-s6">#607D8B</div>
@@ -1724,7 +1724,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		</div>
 	</div>
 	<div class="sm-col sm-s12 sm-m4">
-		<h3 class="sm-col sm-s12 sm-black-text">Shade swatches</h3>
+		<h3 class="sm-col sm-s12 sm-black-text">Shade</h3>
 		<div class="sm-col sm-s12 sm-black sm-white-text">
 			<div class="sm-col sm-s6">$black</div>
 			<div class="sm-col sm-s6">#000000</div>

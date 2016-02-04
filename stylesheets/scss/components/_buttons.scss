@@ -5,10 +5,9 @@
  * http://www.google.com/design/spec/components/buttons-floating-action-button.html
  **************************************/
 
-
 button, input[type="button"], input[type="reset"], input[type="submit"], a {
 	&.sm-raised-button {
-		@extend .sm-z2;
+		@extend .sm-z2, .button;
 		@include transition(all 100ms ease-in-out);
 		color: $raised-button-color;
 		//color: rgba($black, .87);
@@ -26,26 +25,16 @@ button, input[type="button"], input[type="reset"], input[type="submit"], a {
 		cursor: pointer;
 		outline: none;
 
-
-		@if( index( $roboto-font, $country-code ) ) {
-			font-size: remCalc(14px);
-			font-weight: 500;
-			font-family: 'Roboto', sans-serif;
-		} @else if( index( $noto-font, $country-code ) ) {
-			font-size: remCalc(15px);
-			font-weight: 700;
-			font-family: 'Noto', sans-serif;
-		}
-
+		/*
 		&:hover {
 			background: darken($raised-button-background-hover, 12%);
 			color: $raised-button-color;
 		}
+        */
 
 		&:active {
 			@extend .sm-z8;
 		}
-
 
 		.material-icons {
 			color: $raised-icon-color;
@@ -89,6 +78,7 @@ button, input[type="button"], input[type="reset"], input[type="submit"], a {
 	}
 
 	&.sm-flat-button {
+		@extend .button;
 		@include transition(all 100ms ease-in-out);
 		color: $flat-button-color;
 		//color: rgba($black, .87);
@@ -105,17 +95,6 @@ button, input[type="button"], input[type="reset"], input[type="submit"], a {
 		display: inline-block;
 		text-align: center;
 		cursor: pointer;
-
-		@if( index( $roboto-font, $country-code ) ) {
-			font-size: remCalc(14px);
-			font-weight: 500;
-			font-family: 'Roboto', sans-serif;
-		} @else if( index( $noto-font, $country-code ) ) {
-			font-size: remCalc(15px);
-			font-weight: 700;
-			font-family: 'Noto', sans-serif;
-		}
-
 
 		.material-icons {
 			color: $flat-icon-color;
@@ -185,6 +164,10 @@ button, a {
 			height: remCalc(40px);
 			line-height: remCalc(40px);
 		}
+	}
+
+	&.sm-dropdown-button {
+
 	}
 }
 

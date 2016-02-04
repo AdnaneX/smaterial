@@ -15,7 +15,7 @@
 	-webkit-border-radius: $radius;
 	-moz-border-radius: $radius;
 	-ms-border-radius: $radius;
-	-o-box-shadow: $radius;
+	-o-border-radius: $radius;
 	border-radius: $radius;
 }
 
@@ -67,4 +67,44 @@
 	@keyframes #{$name} {
 		@content;
 	}
+}
+
+@mixin border-radius-top($px) {
+	-webkit-border-top-left-radius: $px;
+	-webkit-border-top-right-radius: $px;
+	-moz-border-radius-topleft: $px;
+	-moz-border-radius-topright: $px;
+	border-top-left-radius: $px;
+	border-top-right-radius: $px;
+}
+
+@mixin border-radius-bottom($px) {
+	-webkit-border-bottom-left-radius: $px;
+	-webkit-border-bottom-right-radius: $px;
+	-moz-border-radius-bottomleft: $px;
+	-moz-border-radius-bottomright: $px;
+	border-bottom-left-radius: $px;
+	border-bottom-right-radius: $px;
+}
+
+// Typography
+@mixin font-size($fontSize: 14) {
+	font-size: $fontSize+0px;
+	font-size: ($fontSize/10)+0rem;
+}
+@mixin line-height($leadingSize: 14) {
+	line-height: $leadingSize+0px;
+	line-height: ($leadingSize/10)+0rem;
+}
+@mixin letter-spacing($kerningSize: 0) {
+	letter-spacing: $kerningSize+0px;
+	letter-spacing: ($kerningSize/10)+0rem;
+}
+@mixin font($fontSize, $leadingSize, $kerningSize) {
+	font-size: $fontSize+0px;
+	font-size: ($fontSize/10)+0rem;
+	line-height: $leadingSize+0px;
+	line-height: ($leadingSize/10)+0rem;
+	letter-spacing: $kerningSize+0px;
+	letter-spacing: ($kerningSize/10)+0rem;
 }

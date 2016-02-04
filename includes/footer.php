@@ -5,5 +5,6 @@
 		<script type="text/javascript" src="/js/functions.js"></script>
 		<script type="text/javascript" src="/js/sidenav.js"></script>
 		<script type="text/javascript" src="/js/buttons.js"></script>
+		<script type="text/javascript" src="/js/ripple.js"></script>
 	</body>
 </html>
