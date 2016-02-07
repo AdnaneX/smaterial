@@ -5,16 +5,16 @@
  **************************************/
 @import 'components/mixins';
 @import 'components/functions'; // All functions
-@import 'components/colors'; // Color swatches http://www.google.com/design/spec/style/color.html
+@import 'components/colors'; // Color swatches
 @import 'components/settings'; // All settings
 @import 'components/grid'; // Grid functionality
-@import 'components/normalize'; // Remove default styles
+@import 'components/normalize'; // Remove browser default styles add Material default styles
 @import 'components/shadows'; // Shadow depths
-@import 'components/font'; // All available fonts http://www.google.com/design/spec/style/typography.html
-@import 'components/typography'; // Typography http://www.google.com/design/spec/style/typography.html
-@import 'components/icons'; // Icons with their shadow (can be turned off) http://www.google.com/design/spec/style/icons.html
-@import 'components/appbar'; // Top menu bar (can be turned off) http://www.google.com/design/spec/layout/structure.html#structure-toolbars
-@import 'components/sidenav'; // Side navigation (can be turned off) http://www.google.com/design/spec/layout/structure.html#structure-side-nav, http://www.google.com/design/spec/patterns/navigation-drawer.html#
+@import 'components/font'; // All available fonts
+@import 'components/typography'; // Typography
+@import 'components/icons'; // Icons with their shadow (can be turned off)
+@import 'components/appbar'; // Top menu bar (can be turned off)
+@import 'components/sidenav'; // Side navigation (can be turned off)
 @import 'components/code'; // Used to highlight code (can be turned off)
 @import 'components/buttons'; // Used to style buttons (can be turned off)
 @import 'components/ripple'; // Used to create ripple effect (can be turned off)

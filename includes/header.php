@@ -15,7 +15,7 @@
 		<meta name="keyword" content="<?= $keywords; ?>">
 	</head>
 
-	<body class="sm-text-large">
+	<body>
 	<header class="sm-appbar">
 		<div class="sm-appbar-nav">
 			<a href="#" id="sm-nav-button" data-sm-trigger="sm-sidenav"><i class="material-icons">menu</i></a>
@@ -84,11 +84,12 @@
 					</ul>
 				</li>
 
+				<!--
 				<li class="sm-sidenav-footer">
 					<div class="addthis_sharing_toolbox"></div>
 				</li>
+				-->
 			</ul>
 		</nav>
 	</aside>
-
 	<main>

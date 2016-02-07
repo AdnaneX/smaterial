@@ -81,14 +81,14 @@ html, body {
 		li {
 			font-weight: 500;
 			font-size: remCalc(14px);
-			color: rgba($black, .87);
+			color: lighten($black, (100% - 87%));
 			height: auto;
 			line-height: remCalc(48px);
 
 			a {
 				font-weight: 500;
 				font-size: remCalc(14px);
-				color: rgba($black, .87);
+				color: lighten($black, (100% - 87%));
 				height: remCalc(48px);
 				line-height: remCalc(48px);
 			}

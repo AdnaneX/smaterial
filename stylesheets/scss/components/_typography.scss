@@ -4,125 +4,124 @@
  * http://www.google.com/design/spec/style/typography.html
  * http://codepen.io/zavoloklom/pen/IkaFL/
  **************************************/
-.display-4 {
+
+.sm-display-4 {
 	@include font($font-size-display-4, $line-height-display-4, $letter-spacing-display-4);
 	font-weight: $font-weight-display-4;
-	color: rgba($black, .54);
+	color: lighten($black, (100% - 54%));
 	text-transform: inherit;
 }
-.display-3 {
+.sm-display-3 {
 	@include font($font-size-display-3, $line-height-display-3, $letter-spacing-display-3);
 	font-weight: $font-weight-display-3;
-	color: rgba($black, .54);
+	color: lighten($black, (100% - 54%));
 	text-transform: inherit;
 }
-.display-2 {
+.sm-display-2 {
 	@include font($font-size-display-2, $line-height-display-2, $letter-spacing-display-2);
 	font-weight: $font-weight-display-2;
-	color: rgba($black, .54);
+	color: lighten($black, (100% - 54%));
 	text-transform: inherit;
 }
-.display-1 {
+.sm-display-1 {
 	@include font($font-size-display-1, $line-height-display-1, $letter-spacing-display-1);
 	font-weight: $font-weight-display-1;
-	color: rgba($black, .54);
+	color: lighten($black, (100% - 54%));
 	text-transform: inherit;
 }
-.headline {
+.sm-headline {
 	@include font($font-size-headline, $line-height-headline, $letter-spacing-headline);
 	font-weight: $font-weight-headline;
-	color: rgba($black, .87);
+	color: lighten($black, (100% - 87%));
 	text-transform: inherit;
 }
-.title {
+.sm-title {
 	@include font($font-size-title, $line-height-title, $letter-spacing-title);
 	font-weight: $font-weight-title;
-	color: rgba($black, .87);
+	color: lighten($black, (100% - 87%));
 	text-transform: inherit;
 }
-.subhead-2 {
+.sm-subhead-2 {
 	@include font($font-size-subhead-2, $line-height-subhead-2, $letter-spacing-subhead-2);
 	font-weight: $font-weight-subhead-2;
-	color: $font-color-subhead-2;
+	color: lighten($black, (100% - 87%));
 	text-transform: inherit;
 }
-.subhead-1 {
+.sm-subhead-1 {
 	@include font($font-size-subhead-1, $line-height-subhead-1, $letter-spacing-subhead-1);
 	font-weight: $font-weight-subhead-1;
-	color: rgba($black, .87);
+	color: lighten($black, (100% - 87%));
 	text-transform: inherit;
 }
-.body-2 {
+.sm-body-2 {
 	@include font($font-size-body-2, $line-height-body-2, $letter-spacing-body-2);
 	font-weight: $font-weight-body-2;
-	color: rgba($black, .87);
+	color: lighten($black, (100% - 87%));
 	text-transform: inherit;
 }
-.body-1 {
+.sm-body-1 {
 	@include font($font-size-body-1, $line-height-body-1, $letter-spacing-body-1);
 	font-weight: $font-weight-body-1;
-	color: rgba($black, .87);
+	color: lighten($black, (100% - 87%));
 	text-transform: inherit;
 }
-.caption {
+.sm-caption {
 	@include font($font-size-caption, $line-height-caption, $letter-spacing-caption);
 	font-weight: $font-weight-caption;
-	color: rgba($black, .54);
+	color: lighten($black, (100% - 54%));
 	text-transform: inherit;
 }
-.label {
+.sm-label {
 	@include font($font-size-label, $line-height-label, $letter-spacing-label);
 	font-weight: $font-weight-label;
-	color: $font-color-label;
+	color: lighten($black, (100% - 54%));
 	text-transform: inherit;
 }
-.menu {
+.sm-menu {
 	@include font($font-size-menu, $line-height-menu, $letter-spacing-menu);
 	font-weight: $font-weight-menu;
-	color: rgba($black, .87);
+	color: lighten($black, (100% - 87%));
 	text-transform: inherit;
 }
-.button {
+.sm-button {
 	@include font($font-size-button, $line-height-button, $letter-spacing-button);
 	font-weight: $font-weight-button;
-	color: rgba($black, .87);
+	color: lighten($black, (100% - 87%));
 	text-transform: uppercase;
 }
 
 // Font-size for device
 @media #{$small-down} {
-	.subhead-2 {
+	.sm-subhead-2 {
 		@include font-size($font-size-dv-subhead);
 	}
-	.subhead-1 {
+	.sm-subhead-1 {
 		@include font-size($font-size-dv-subhead);
 	}
-	.body-2 {
+	.sm-body-2 {
 		@include font-size($font-size-dv-body);
 	}
-	.body-1 {
+	.sm-body-1 {
 		@include font-size($font-size-dv-body);
 	}
-	.menu {
+	.sm-menu {
 		@include font-size($font-size-dv-menu);
 	}
 }
 
-.display-4, .display-3, .display-2, .display-1  {
+.sm-display-4, .sm-display-3, .sm-display-2, .sm-display-1  {
 	margin: 0 0 $line-height-title/2+0px 0;
 	margin-bottom: $line-height-title/20+0rem;
 }
 
-.headline, .title, .subhead-2, .subhead-1, .body-2, .body-1, .caption, .label, .menu, .button {
+.sm-headline, .sm-title, .sm-subhead-2, .sm-subhead-1, .sm-body-2, .sm-body-1, .sm-caption, .sm-label, .sm-menu, .sm-button {
 	margin: 0 0 $line-height-body-1/2+0px 0;
 	margin-bottom: $line-height-body-1/20+0rem;
 }
 
 body {
+	@extend .sm-body-1;
 	font-family: 'Roboto', sans-serif, 'Helvetica Neue', Helvetica, Arial;
-	color: rgba($black, .87);
-	font-weight: 400;
-	font-size: $font-size;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 
@@ -134,55 +133,55 @@ body {
     */
 
 	h1 {
-		@extend .display-3;
+		@extend .sm-display-3;
 		/*
 		font-size: remCalc(56px);
 		font-weight: 300;
-		color: rgba($black, .54);
+		color: lighten($black, (100% - 54%));
 		*/
 	}
 
 	h2 {
-		@extend .display-2;
+		@extend .sm-display-2;
 		/*
 		font-size: remCalc(45px);
-		color: rgba($black, .54);
+		color: lighten($black, (100% - 54%));
 		line-height: remCalc(48px);
 		*/
 	}
 
 	h3 {
-		@extend .display-1;
+		@extend .sm-display-1;
 		/*
 		font-size: remCalc(34px);
-		color: rgba($black, .54);
+		color: lighten($black, (100% - 54%));
 		line-height: remCalc(40px);
 		*/
 	}
 
 	h4 {
-		@extend .headline;
+		@extend .sm-headline;
 		/*
 		font-size: remCalc(24px);
-		color: rgba($black, .87);
+		color: lighten($black, (100% - 87%));
 		line-height: remCalc(32px);
 		*/
 	}
 
 	h5 {
-		@extend .title;
+		@extend .sm-title;
 		/*
 		font-size: remCalc(20px);
-		color: rgba($black, .87);
+		color: lighten($black, (100% - 87%));
 		line-height: remCalc(28px);
 		*/
 	}
 
 	h6 {
-		@extend .subhead-1;
+		@extend .sm-subhead-1;
 		/*
 		font-size: remCalc(16px);
-		color: rgba($black, .87);
+		color: lighten($black, (100% - 87%));
 		line-height: remCalc(24px);
 		*/
 	}

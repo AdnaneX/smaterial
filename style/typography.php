@@ -10,25 +10,8 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	<h2>Typography usage</h2>
 
 	<p class="sm-col sm-s12 sm-m6">
-		There are specific settings for Roboto and Noto fonts.
-		Because of this you can take a couple of steps to get a specific font and settings or leav it as is to use Roboto.
-		If you don't like Roboto or Noto fear not you can just overwrite the settings in your custom css.
-	</p>
-
-	<ol class="sm-col sm-s12 sm-m6">
-		<li>In _settings.scss edit the $country-code;</li>
-		<li>If you're not seeing any changes you might need to turn on the Noto font;</li>
-		<li>In _font.scss you can uncomment the required font;</li>
-	</ol>
-</section>
-
-
-<section class="sm-row">
-	<h3>Roboto</h3>
-
-	<p class="sm-col sm-s12 sm-m6">
 		The Roboto font is default for Material Design.
-		The font is included in the framework and is turned on as the default font.
+		The font is included in the framework and is set as the default font.
 	</p>
 
 	<p class="sm-col sm-s12 sm-m6">
@@ -39,20 +22,428 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	<p class="sm-col sm-s12 sm-m6">
 		<img width="100%" src="http://material-design.storage.googleapis.com/publish/material_v_4/material_ext_publish/0Bx4BSt6jniD7SW9CUzR4MnRpOTg/style_typography_roboto1.png" alt="Roboto font example">
 	</p>
+
+	<table class="sm-col sm-s12 sm-m6">
+		<thead>
+			<tr>
+				<th>Class</th>
+				<th>Used for</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>.sm-display-4</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>.sm-display-3</td>
+				<td>h1</td>
+			</tr>
+			<tr>
+				<td>.sm-display-2</td>
+				<td>h2</td>
+			</tr>
+			<tr>
+				<td>.sm-display-1</td>
+				<td>h3</td>
+			</tr>
+			<tr>
+				<td>.sm-headline</td>
+				<td>h4</td>
+			</tr>
+			<tr>
+				<td>.sm-title</td>
+				<td><a href="/components/appbar.php">Appbar title</a>, h5</td>
+			</tr>
+			<tr>
+				<td>.sm-subhead-2</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>.sm-subhead-1</td>
+				<td>h6</td>
+			</tr>
+			<tr>
+				<td>.sm-body-2</td>
+				<td>Body</td>
+			</tr>
+			<tr>
+				<td>.sm-body-1</td>
+				<td>Body</td>
+			</tr>
+			<tr>
+				<td>.sm-caption</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>.sm-label</td>
+				<td><a href="/components/form.php">Form labels</a></td>
+			</tr>
+			<tr>
+				<td>.sm-menu</td>
+				<td><a href="/components/sidenav.php">Sidenav</a></td>
+			</tr>
+			<tr>
+				<td>.sm-button</td>
+				<td><a href="/components/buttons.php">Button</a></td>
+			</tr>
+		</tbody>
+	</table>
 </section>
 
 <section class="sm-row">
-	<h3>Noto</h3>
+	<h3>Settings</h3>
 
-	<p class="sm-col sm-s12">
-		The Noto font is a special font which is capable of handling special characters.
-	</p>
+	<table>
+		<thead>
+			<tr>
+				<th>Variable</th>
+				<th>Options</th>
+				<th>Result</th>
+			</tr>
+		</thead>
+		<tbody>
+		<tr>
+			<th colspan="3">Font size</th>
+		</tr>
+		<tr>
+			<td>$font-size-initial</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>$font-size</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>$font-size-large</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+		<td>$font-size-small</td>
+		<td></td>
+		<td></td>
+		</tr>
 
-	<p class="sm-col sm-s12 sm-m6">
-		<img width="100%" src="http://material-design.storage.googleapis.com/publish/material_v_4/material_ext_publish/0B_udO5B8pzrzcWkwSW11bkstZEU/style_typography_noto1.png" alt="Noto font example">
-	</p>
+		<tr>
+			<th colspan="3">Typographic Scale</th>
+		</tr>
+		<tr>
+			<td>$font-size-display-4</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>$font-size-display-3</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>$font-size-display-2</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>$font-size-display-1</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>$font-size-headline</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>$font-size-title</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>$font-size-subhead-2</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>$font-size-subhead-1</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>$font-size-body-2</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>$font-size-body-1</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>$font-size-caption</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>$font-size-label</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>$font-size-menu</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>$font-size-button</td>
+			<td></td>
+			<td></td>
+		</tr>
+
+		<tr>
+			<th colspan="3">Typographic Scale for devices (max-width: 960px)</th>
+		</tr>
+		<tr>
+			<td>$font-size-dv-subhead</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>$font-size-dv-body</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>$font-size-dv-menu</td>
+			<td></td>
+			<td></td>
+		</tr>
+
+		<tr>
+			<th colspan="3">Basic Styles</th>
+		</tr>
+		<tr>
+			<td>$font-weight-display-4</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>$font-weight-display-3</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>$font-weight-display-2</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>$font-weight-display-1</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>$font-weight-headline</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>$font-weight-title</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>$font-weight-subhead-2</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>$font-weight-subhead-1</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>$font-weight-body-2</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>$font-weight-body-1</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>$font-weight-caption</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>$font-weight-label</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>$font-weight-menu</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>$font-weight-button</td>
+			<td></td>
+			<td></td>
+		</tr>
+
+		<tr>
+			<th colspan="3">Line Height</th>
+		</tr>
+		<tr>
+			<td>$line-height-display-4</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>$line-height-display-3</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>$line-height-display-2</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>$line-height-display-1</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>$line-height-headline</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>$line-height-title</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>$line-height-subhead-2</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>$line-height-subhead-1</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>$line-height-body-2</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>$line-height-body-1</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>$line-height-caption</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>$line-height-label</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>$line-height-menu</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>$line-height-button</td>
+			<td></td>
+			<td></td>
+		</tr>
+
+		<tr>
+			<th colspan="3">Tracking and kerning</th>
+		</tr>
+		<tr>
+			<td>$letter-spacing-display-4</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>$letter-spacing-display-3</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>$letter-spacing-display-2</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>$letter-spacing-display-1</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>$letter-spacing-headline</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>$letter-spacing-title</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>$letter-spacing-subhead-2</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>$letter-spacing-subhead-1</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>$letter-spacing-body-2</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>$letter-spacing-body-1</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>$letter-spacing-caption</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>$letter-spacing-label</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>$letter-spacing-menu</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>$letter-spacing-button</td>
+			<td></td>
+			<td></td>
+		</tr>
+		</tbody>
+	</table>
 </section>
-
 
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.php';

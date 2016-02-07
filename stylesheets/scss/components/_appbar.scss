@@ -2,6 +2,7 @@
  * AppBar
  *
  * http://www.google.com/design/spec/layout/structure.html#structure-app-bar
+ * http://www.google.com/design/spec/layout/structure.html#structure-toolbars
  **************************************/
 
 .sm-appbar {
@@ -48,22 +49,21 @@
 	}
 
 	.sm-appbar-title {
-		@extend .sm-col, .sm-s7;
+		@extend .sm-col, .sm-s7, .sm-title;
 		padding: remCalc(12px) 0 remCalc(12px) 0 !important;
+		font-size: remCalc(24px);
+		color: $appbar-title;
 
 		@media #{$small-up} {
 			padding: remCalc(20px) 0 remCalc(20px) 0 !important;
 		}
 
-		font-size: remCalc(24px);
-		font-weight: 500;
-
 		h1, h2, h3, h4, h5, h6 {
 			padding: 0;
 			margin: 0;
 			font-size: remCalc(24px);
-			font-weight: 500;
 			color: $appbar-title;
+			line-height: normal;
 		}
 	}
 

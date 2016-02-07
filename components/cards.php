@@ -20,7 +20,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	<div class="sm-col sm-s12 sm-m6 sm-l3">
 		<div class="sm-card">
 			<div class="sm-card-image">
-				<img src="http://lorempixel.com/400/200/" alt="example image">
+				<img src="http://lorempixel.com/400/200/abstract" alt="example image">
 			</div>
 
 			<div class="sm-card-title">
@@ -28,7 +28,9 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 				<div class="sm-card-title-sub">Example sub title</div>
 			</div>
 
-			<div class="sm-card-content"></div>
+			<div class="sm-card-content">
+				This is some content text
+			</div>
 
 			<div class="sm-card-actions sm-card-divider"></div>
 		</div>

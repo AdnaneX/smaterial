@@ -88,11 +88,11 @@
 }
 
 // Typography
-@mixin font-size($fontSize: 14) {
+@mixin font-size($fontSize: $font-size-initial) {
 	font-size: $fontSize+0px;
 	font-size: ($fontSize/10)+0rem;
 }
-@mixin line-height($leadingSize: 14) {
+@mixin line-height($leadingSize: $font-size-initial) {
 	line-height: $leadingSize+0px;
 	line-height: ($leadingSize/10)+0rem;
 }

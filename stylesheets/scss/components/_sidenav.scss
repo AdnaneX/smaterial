@@ -1,3 +1,11 @@
+/**************************************
+ * Sidenav
+ *
+ * https://www.google.com/design/spec/components/dividers.html#dividers-types-of-dividers
+ * http://www.google.com/design/spec/layout/structure.html#structure-side-nav
+ * http://www.google.com/design/spec/patterns/navigation-drawer.html
+ */
+
 .sm-sidenav {
 	position: absolute;
 	background: $white;
@@ -35,6 +43,7 @@
 			}
 
 			&-title {
+				@extend .sm-title;
 				display: none;
 
 				@media #{$medium-up} {
@@ -42,14 +51,14 @@
 					display: block;
 					height: remCalc(64px);
 					font-size: remCalc(24px);
-					font-weight: 500;
 					margin-top: - remCalc(16px);
+					margin-bottom: 0;
+					color: $sidenav-full-title-color;
 
 					h1, h2, h3, h4, h5, h6 {
 						padding: 0;
 						margin: 0;
 						font-size: remCalc(24px);
-						font-weight: 500;
 						color: $sidenav-full-title-color;
 					}
 
@@ -107,12 +116,13 @@
 	&-divider {
 		margin: remCalc(8px) 0;
 		height: remCalc(1px);
-		background: rgba($black, .12); //http://www.google.com/design/spec/components/dividers.html#dividers-types-of-dividers
+		background: lighten($black, (100% - 12%)); //http://www.google.com/design/spec/components/dividers.html#dividers-types-of-dividers
 	}
 
 	&-subheader {
-		color: rgba($black, .54);
-		font-weight: 500;
+		@extend .sm-subhead-1;
+		color: lighten($black, (100% - 54%));
+		//font-weight: 500;
 
 		&:hover {
 			background: none !important;
@@ -160,13 +170,13 @@
 					height: remCalc(56px);
 
 					> div {
+						@extend .sm-col, .sm-s12;
 						color: $white;
 						font-size: remCalc(14px);
 						height: remCalc(28px);
 						width: 75%;
 						max-width: 75%;
 						line-height: remCalc(28px);
-						@extend .sm-col, .sm-s12;
 					}
 
 					.sm-sidenav-drawer-name {
@@ -229,7 +239,7 @@
 			}
 
 			.material-icons {
-				color: rgba($black, .54);
+				color: lighten($black, (100% - 54%));
 				line-height: remCalc(48px);
 				height: remCalc(48px);
 				width: remCalc(48px);

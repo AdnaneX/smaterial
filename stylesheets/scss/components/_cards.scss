@@ -28,7 +28,13 @@
 			padding: remCalc(24px);
 		}
 
+		> div {
+			margin-bottom: 0 !important;
+		}
+
 		&-primary {
+			@extend .sm-title;
+
 			&.sm-large {
 				font-size: remCalc(24px);
 			}
@@ -39,7 +45,16 @@
 		}
 
 		&-sub {
+			@extend .sm-subhead-1;
 			font-size: remCalc(14px);
+		}
+	}
+
+	&-content {
+		padding: remCalc(16px) remCalc(16px) remCalc(24px) remCalc(16px);
+
+		@media #{$medium-up} {
+			padding: remCalc(24px);
 		}
 	}
 }
