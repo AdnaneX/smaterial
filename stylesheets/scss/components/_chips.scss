@@ -1,0 +1,59 @@
+/**************************************
+ * Chips
+ *
+ * http://www.google.com/design/spec/components/chips.html
+ **************************************/
+
+.sm-chip {
+	@include border-radius(remCalc(32px));
+	background: $chips-background;
+	color: lighten($chips-text, (100% - 87%));
+	font-size: remCalc(13px);
+	padding: 0 remCalc(12px);
+	height: remCalc(32px);
+	line-height: remCalc(32px);
+	display: inline-block;
+	font-weight: 500;
+
+	&-deletable {
+		.sm-chip-delete {
+			@include border-radius(50%);
+			vertical-align: middle;
+			display: inline-block;
+			width: remCalc(24px);
+			height: remCalc(24px);
+			margin-left: remCalc(4px);
+			margin-right: remCalc(-8px);
+			color: $chips-delete-cross;
+			background: rgba($chips-delete-background, .54);
+
+			&:hover {
+				cursor: pointer;
+			}
+		}
+
+		&:hover {
+			background: $chips-background-hover;
+			color: $chips-text-hover;
+
+			.sm-chip-delete {
+				color: $chips-delete-cross-hover;
+				background: $chips-delete-background-hover;
+			}
+		}
+	}
+
+	&-contact {
+		img {
+			margin-left: remCalc(-12px);
+			@include border-radius(50%);
+			height: remCalc(32px);
+			width: remCalc(32px);
+			margin-right: remCalc(8px);
+		}
+
+		&:hover {
+			@extend .sm-z2;
+		}
+	}
+}

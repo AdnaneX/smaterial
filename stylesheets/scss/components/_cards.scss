@@ -10,51 +10,9 @@
 	width: 100%;
 	margin: remCalc(4px);
 
-	&-image {
-		img {
-			@include border-radius-top(2px);
-			width: 100%;
-			height: 56.25%;
-			display: block;
-		}
-	}
-
-	&-title {
-		width: 100%;
-		float: none !important;
-		padding: remCalc(24px) remCalc(16px) remCalc(16px) remCalc(16px);
-
-		@media #{$medium-up} {
-			padding: remCalc(24px);
-		}
-
-		> div {
-			margin-bottom: 0 !important;
-		}
-
-		&-primary {
+	&-basic {
+		&-title {
 			@extend .sm-title;
-
-			&.sm-large {
-				font-size: remCalc(24px);
-			}
-
-			&.sm-small {
-				font-size: remCalc(14px);
-			}
-		}
-
-		&-sub {
-			@extend .sm-subhead-1;
-			font-size: remCalc(14px);
-		}
-	}
-
-	&-content {
-		padding: remCalc(16px) remCalc(16px) remCalc(24px) remCalc(16px);
-
-		@media #{$medium-up} {
-			padding: remCalc(24px);
 		}
 	}
 }

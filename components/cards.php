@@ -5,6 +5,7 @@ $keywords = 'material design, smaterial, cards';
 
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>
+
 <section class="sm-row">
 	<h2>Cards usage</h2>
 
@@ -15,15 +16,11 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="sm-row">
-	<h3>Basic cards structure</h3>
+	<h3>Card structures</h3>
 
 	<div class="sm-col sm-s12 sm-m6 sm-l3">
-		<div class="sm-card">
-			<div class="sm-card-image">
-				<img src="http://lorempixel.com/400/200/abstract" alt="example image">
-			</div>
-
-			<div class="sm-card-title">
+		<div class="sm-card sm-card-basic">
+			<div class="sm-card-basic-title">
 				<div class="sm-card-title-primary sm-large">Example primary</div>
 				<div class="sm-card-title-sub">Example sub title</div>
 			</div>
@@ -36,5 +33,6 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		</div>
 	</div>
 </section>
+
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.php';

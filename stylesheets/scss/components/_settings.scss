@@ -115,6 +115,17 @@ $flat-button-focus: $grey;
 $floating-button-background: $main-color;
 $floating-button-icon: $white;
 
+// Chips
+$chips-text: $black;
+$chips-text-hover: $white;
+$chips-background: $grey-300;
+$chips-background-hover: $grey-600;
+$chips-delete-cross: $chips-background;
+$chips-delete-cross-hover: $chips-background-hover;
+$chips-delete-background: $black;
+$chips-delete-background-hover: $chips-text-hover;
+
+
 /**************************************
  * Grid settings
  **************************************/

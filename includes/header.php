@@ -81,6 +81,7 @@
 						<li><a href="/components/appbar.php">Appbar</a></li>
 						<li><a href="/components/buttons.php">Buttons</a></li>
 						<li><a href="/components/cards.php">Cards</a></li>
+						<li><a href="/components/chips.php">Chips</a></li>
 					</ul>
 				</li>
 
