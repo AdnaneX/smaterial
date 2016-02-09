@@ -48,9 +48,9 @@
 		<nav>
 			<ul>
 				<li class="sm-sidenav-drawer">
-					<div class="sm-sidenav-drawer-img">
+					<figure class="sm-sidenav-drawer-img">
 						<img alt="SMaterial thumbnail" src="/images/SMaterial-icon.jpg">
-					</div>
+					</figure>
 
 					<div class="sm-sidenav-drawer-info">
 						<div class="sm-sidenav-drawer-name">

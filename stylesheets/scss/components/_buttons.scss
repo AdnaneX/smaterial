@@ -8,9 +8,8 @@
 button, input[type="button"], input[type="reset"], input[type="submit"], a {
 	&.sm-raised-button {
 		@extend .sm-z2, .sm-button;
-		@include transition(all 100ms ease-in-out);
+		@include transition(box-shadow 100ms ease-in-out);
 		color: $raised-button-color;
-		//color: rgba($black, .87);
 		background: $raised-button-background;
 		border: none;
 		min-width: remCalc(64px);
@@ -18,19 +17,11 @@ button, input[type="button"], input[type="reset"], input[type="submit"], a {
 		line-height: remCalc(36px);
 		padding: 0 remCalc(16px);
 		margin: remCalc(8px);
-		text-transform: uppercase;
 		text-decoration: none;
 		display: inline-block;
 		text-align: center;
 		cursor: pointer;
 		outline: none;
-
-		/*
-		&:hover {
-			background: darken($raised-button-background-hover, 12%);
-			color: $raised-button-color;
-		}
-        */
 
 		&:active {
 			@extend .sm-z8;
@@ -79,7 +70,7 @@ button, input[type="button"], input[type="reset"], input[type="submit"], a {
 
 	&.sm-flat-button {
 		@extend .sm-button;
-		@include transition(all 100ms ease-in-out);
+		//@include transition(all 100ms ease-in-out);
 		color: $flat-button-color;
 		//color: rgba($black, .87);
 		background: none;

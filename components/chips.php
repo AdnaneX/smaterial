@@ -10,7 +10,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	<h2>Chips usage</h2>
 
 	<p class="sm-col sm-s12 sm-m6">
-		You could use chips for something like tags or contacts
+		You could use chips for something like tags or contacts.
 	</p>
 </section>
 

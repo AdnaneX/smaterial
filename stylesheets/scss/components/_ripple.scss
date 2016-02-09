@@ -1,9 +1,29 @@
 .sm-hover-ripple {
+	z-index: 10;
+	overflow: hidden;
+	position: relative;
 
-	.sm-circle-hover {
-		&:hover {
-			background: rgba($black, .12);
-			@include border-radius(50%);
+	&:hover {
+		&:after {
+			@include transform(scale(1) translateZ(0));
+			@include transition(all .5s ease);
 		}
+	}
+
+	&:after {
+		content: "";
+		width: 90%;
+		height: 0;
+		padding-top: 85%;
+		object-fit: contain;
+		position: absolute;
+		top: 100%;
+		left: 50%;
+		margin: -45%;
+		opacity: 1;
+		border-radius: 50%;
+		@include transform(scale(0) translateZ(0));
+		@include transition(all .2s ease);
+		z-index: -1;
 	}
 }

@@ -12,11 +12,13 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	<p class="sm-col sm-s12 sm-m6">
 		The Roboto font is default for Material Design.
 		The font is included in the framework and is set as the default font.
+		If you would like to use Noto click <a href="https://www.google.com/get/noto/" target="_blank">here</a>.
 	</p>
 
 	<p class="sm-col sm-s12 sm-m6">
 		The Roboto font is available in a couple of font weights: 100 (<em>thin</em>),
 		300 (<em>light</em>), 400 (<em>regular</em>), 500 (<em>medium</em>), 700 (<em>bold</em>) and 900 (<em>black</em>).
+		The availability of font weights for The Noto font depends.
 	</p>
 
 	<p class="sm-col sm-s12 sm-m6">
