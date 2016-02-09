@@ -1,5 +1,5 @@
 /**************************************
- * Font settings
+ * Typography settings
  **************************************/
 
 // Font paths
@@ -106,6 +106,7 @@ $sidenav-full-title-color: $white;
 $raised-button-background: $main-color;
 $raised-button-background-hover: $main-color;
 $raised-button-color: $white;
+$raised-button-color-hover: $raised-button-color;
 $raised-icon-color: $white;
 
 $flat-button-color: $main-color;
@@ -124,7 +125,6 @@ $chips-delete-cross: $chips-background;
 $chips-delete-cross-hover: $chips-background-hover;
 $chips-delete-background: $black;
 $chips-delete-background-hover: $chips-text-hover;
-
 
 /**************************************
  * Grid settings

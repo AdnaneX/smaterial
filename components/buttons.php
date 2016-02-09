@@ -38,7 +38,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		<button class="sm-raised-button sm-raised-button-disabled">Disabled</button>
 		<button class="sm-raised-button sm-raised-button-dense">Dense</button>
 		<a href="#" class="sm-raised-button">Link</a>
-		<button class="sm-raised-button sm-hover-ripple">Hover ripple</button>
+		<button class="sm-raised-button sm-hover-ripple sm-ripple">Hover ripple</button>
 		<button class="sm-raised-button sm-hover-ripple"><i class="material-icons sm-left">home</i> Hover ripple</button>
 	</p>
 
@@ -67,6 +67,15 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 &lt;button class="sm-raised-button sm-raised-button-dense">Dense&lt;/button>
 
 &lt;a href="#" class="sm-raised-button">Link&lt;/a>
+
+&lt;button class="sm-raised-button sm-hover-ripple sm-ripple">
+  Hover ripple
+&lt;/button>
+
+&lt;button class="sm-raised-button sm-hover-ripple">
+  &lt;i class="material-icons sm-left">home&lt;/i>
+  Hover ripple
+&lt;/button>
 		</pre>
 	</code>
 </section>

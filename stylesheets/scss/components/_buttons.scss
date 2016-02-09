@@ -27,6 +27,10 @@ button, input[type="button"], input[type="reset"], input[type="submit"], a {
 			@extend .sm-z8;
 		}
 
+		&:hover {
+			color: $raised-button-color-hover;
+		}
+
 		.material-icons {
 			color: $raised-icon-color;
 			line-height: remCalc(36px);
