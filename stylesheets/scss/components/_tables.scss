@@ -1,0 +1,50 @@
+table {
+	border-collapse: separate;
+	border-spacing: remCalc(56px) 0;
+
+	thead {
+		th {
+			text-align: left;
+			font-size: remCalc(12px);
+			color: lighten($black, (100% - 54%));
+			font-weight: 500;
+			height: remCalc(56px);
+			line-height: remCalc(56px);
+
+			&:hover {
+				background: none;
+			}
+		}
+	}
+
+	tbody {
+		td {
+			text-align: left;
+			font-size: remCalc(13px);
+			color: lighten($black, (100% - 87%));
+			font-weight: normal;
+			height: remCalc(48px);
+			line-height: remCalc(56px);
+		}
+	}
+
+	tr {
+		padding: 0 remCalc(24px);
+	}
+
+	.sm-numeric-column {
+		text-align: right;
+	}
+
+	&.sm-table-hover {
+		tbody {
+			tr {
+				@include transition(background .2s ease-in-out);
+
+				&:hover {
+					background: $grey-200;
+				}
+			}
+		}
+	}
+}
