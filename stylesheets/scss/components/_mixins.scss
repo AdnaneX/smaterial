@@ -95,6 +95,14 @@
 	border-bottom-right-radius: $px;
 }
 
+@mixin opacity($settings) {
+	-webkit-opacity: $settings;
+	-moz-opacity: $settings;
+	-ms-opacity: $settings;
+	-o-opacity: $settings;
+	opacity: $settings;
+}
+
 // Typography
 @mixin font-size($fontSize: $font-size-initial) {
 	font-size: $fontSize+0px;

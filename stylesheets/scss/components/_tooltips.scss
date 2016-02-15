@@ -1,0 +1,38 @@
+/**************************************
+ * Tooltips
+ *
+ * http://www.google.com/design/spec/components/tooltips.html
+ **************************************/
+
+.sm-tooltip {
+	display: inline;
+	position: relative;
+
+	&:hover {
+		&:after {
+			content: attr(title);
+			background: $grey-700;
+			@include opacity(.90);
+			width: auto;
+			font-size: remCalc(14px);
+			font-weight: 500;
+			color: $white;
+			top: remCalc(24px);
+			left: 0;
+			height: remCalc(32px);
+			line-height: remCalc(32px);
+			padding: 0 remCalc(16px);
+			position: absolute;
+			white-space: nowrap;
+			z-index: 10;
+
+			@media #{$medium-up} {
+				font-size: remCalc(10px);
+				margin-top: remCalc(14px);
+				height: remCalc(22px);
+				line-height: remCalc(22px);
+				padding: 0 remCalc(8px);
+			}
+		}
+	}
+}
