@@ -1,0 +1,32 @@
+.sm-snackbar {
+	left: 0;
+	right: 0;
+	position: absolute;
+	bottom: 0;
+	height: $snackbar-height;
+	font-size: $snackbar-font;
+	padding: $snackbar-padding;
+	background: $snackbar-background;
+	color: $snackbar-font-color;
+	overflow: hidden;
+
+	@media #{$large-up} {
+		left: auto;
+		right: auto;
+		min-width: $snackbar-min-width;
+		max-width: $snackbar-max-width;
+		@include border-radius($snackbar-border-radius);
+	}
+
+	&-action {
+		@extend .sm-right;
+		font-size: $snackbar-font;
+		font-weight: $snackbar-action-font-weight;
+		text-transform: capitalize;
+		margin-left: $snackbar-action-small-left;
+
+		@media #{$large-up} {
+			margin-left: $snackbar-action-large-left;
+		}
+	}
+}

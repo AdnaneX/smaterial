@@ -1,4 +1,13 @@
 /**************************************
+ * Colors
+ **************************************/
+$main-color: $blue;
+$secondary-color: $lime;
+
+$link-color: $main-color;
+$link-hover: $secondary-color;
+
+/**************************************
  * Typography settings
  **************************************/
 
@@ -81,19 +90,67 @@ $letter-spacing-menu: 0.1; // Default 0.1
 $letter-spacing-button: 0.1; // Default 0.1
 
 /**************************************
- * Colors
+ * AppBar
  **************************************/
-$main-color: $blue;
-$secondary-color: $lime;
 
-$link-color: $main-color;
-$link-hover: $secondary-color;
+// Colors
+$appbar-background: $main-color; // Default $main-color
+$appbar-hover: $blue-700; // Default $blue-700
+$appbar-text: $white; // Default $white
+$appbar-title: $white; // Defaullt $white
 
-// Appbar
-$appbar-background: $main-color;
-$appbar-hover: $blue-700;
-$appbar-text: $white;
-$appbar-title: $white;
+// Height
+$appbar-small-height: remCalc(48px); // Default remCalc(48px)
+$appbar-medium-height: remCalc(56px); // Default remCalc(56px)
+$appbar-large-height: remCalc(64px); // Default remCalc(64px)
+
+/**************************************
+ * Chips
+ **************************************/
+
+$chips-text: $black;
+$chips-text-hover: $white;
+$chips-background: $grey-300;
+$chips-background-hover: $grey-600;
+$chips-delete-cross: $chips-background;
+$chips-delete-cross-hover: $chips-background-hover;
+$chips-delete-background: $black;
+$chips-delete-background-hover: $chips-text-hover;
+
+/**************************************
+ * Snackbars and toasts
+ **************************************/
+
+$snackbar-height: remCalc(48px); // Default remCalc(48px)
+$snackbar-font: remCalc(14px); // Default remCalc(14px)
+$snackbar-padding: remCalc(14px) remCalc(24px); // Default remCalc(14px) remCalc(24px)
+$snackbar-background: #323232; // Default #323232
+$snackbar-font-color: $white; // Default $white
+$snackbar-min-width: remCalc(288px); // Default remCalc(288px)
+$snackbar-max-width: remCalc(568px); // Default remCalc(568px)
+$snackbar-border-radius: remCalc(2px); // Default remCalc(2px)
+$snackbar-action-font-weight: 500; // Default 500
+$snackbar-action-small-left: remCalc(24px); // Default remCalc(24px)
+$snackbar-action-large-left: remCalc(48px); // Default remCalc(48px)
+
+/**************************************
+ * Tooltips
+ **************************************/
+
+$tooltip-background: $grey-700; // Default $grey-700
+$tooltip-font-color: $white; // Default $white
+$tooltip-opacity: .90; // Default .90
+$tooltip-small-font: remCalc(14px); // Default remCalc(14px)
+$tooltip-large-font: remCalc(10px); // Default remCalc(10px)
+$tooltip-font-weight: 500; // Default 500 (medium)
+$tooltip-small-top: remCalc(24px); // Default remCalc(24px)
+$tooltip-large-top: remCalc(14px); // Default remCalc(14px)
+$tooltip-small-height: remCalc(32px); // Default remCalc(32px)
+$tooltip-large-height: remCalc(22px); // Default remCalc(22px)
+$tooltip-small-padding: 0 remCalc(16px); // Default 0 remCalc(16px)
+$tooltip-large-padding: 0 remCalc(8px); // Default 0 remCalc(8px)
+$tooltip-z-index: 10; // Default 10
+
 
 // Sidenav
 $sidenav-background: $white;
@@ -116,15 +173,6 @@ $flat-button-focus: $grey;
 $floating-button-background: $main-color;
 $floating-button-icon: $white;
 
-// Chips
-$chips-text: $black;
-$chips-text-hover: $white;
-$chips-background: $grey-300;
-$chips-background-hover: $grey-600;
-$chips-delete-cross: $chips-background;
-$chips-delete-cross-hover: $chips-background-hover;
-$chips-delete-background: $black;
-$chips-delete-background-hover: $chips-text-hover;
 
 /**************************************
  * Grid settings

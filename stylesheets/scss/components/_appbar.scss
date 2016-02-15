@@ -10,27 +10,27 @@
 	color: $appbar-text;
 	background: $appbar-background;
 	width: 100%;
-	height: remCalc(48px);
+	height: $appbar-small-height;
 	line-height: normal;
 
 	@media #{$small-up} {
-		height: remCalc(56px);
+		height: $appbar-medium-height;
 	}
 
 	@media #{$medium-up} {
-		height: remCalc(64px);
+		height: $appbar-large-height;
 	}
 
 	> div {
-		height: remCalc(48px);
+		height: $appbar-small-height;
 		padding: 0 !important;
 
 		@media #{$small-up} {
-			height: remCalc(56px);
+			height: $appbar-medium-height;
 		}
 
 		@media #{$medium-up} {
-			height: remCalc(64px);
+			height: $appbar-large-height;
 		}
 
 		a {

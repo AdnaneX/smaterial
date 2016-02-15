@@ -82,6 +82,7 @@
 						<li><a href="/components/buttons.php">Buttons</a></li>
 						<li><a href="/components/cards.php">Cards</a></li>
 						<li><a href="/components/chips.php">Chips</a></li>
+						<li><a href="/components/snackbars-toasts.php">Snackbar & toasts</a></li>
 						<li><a href="/components/tables.php">Tables</a></li>
 						<li><a href="/components/tooltips.php">Tooltips</a></li>
 					</ul>

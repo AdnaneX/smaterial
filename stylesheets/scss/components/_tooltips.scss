@@ -12,26 +12,26 @@
 		&:after {
 			content: attr(title);
 			background: $grey-700;
-			@include opacity(.90);
+			@include opacity($tooltip-opacity);
 			width: auto;
-			font-size: remCalc(14px);
-			font-weight: 500;
-			color: $white;
-			top: remCalc(24px);
+			font-size: $tooltip-small-font;
+			font-weight: $tooltip-font-weight;
+			color: $tooltip-font-color;
+			top: $tooltip-small-top;
 			left: 0;
-			height: remCalc(32px);
-			line-height: remCalc(32px);
-			padding: 0 remCalc(16px);
+			height: $tooltip-small-height;
+			line-height: $tooltip-small-height;
+			padding: $tooltip-small-padding;
 			position: absolute;
 			white-space: nowrap;
-			z-index: 10;
+			z-index: $tooltip-z-index;
 
 			@media #{$medium-up} {
-				font-size: remCalc(10px);
-				margin-top: remCalc(14px);
-				height: remCalc(22px);
-				line-height: remCalc(22px);
-				padding: 0 remCalc(8px);
+				font-size: $tooltip-large-font;
+				top: $tooltip-large-top;
+				height: $tooltip-large-height;
+				line-height: $tooltip-large-height;
+				padding: $tooltip-large-padding;
 			}
 		}
 	}
