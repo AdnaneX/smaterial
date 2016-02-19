@@ -13,7 +13,6 @@ input[type="checkbox"] {
 				line-height: $selection-size;
 				margin-right: $selection-margin;
 				color: lighten($black, (100% - 54%));
-
 			}
 		}
 
@@ -88,6 +87,44 @@ input[type="radio"] {
 					}
 				}
 			}
+		}
+	}
+}
+
+.sm-switch {
+	input[type="checkbox"] {
+		display: none;
+
+		&:checked {
+			+ .sm-lever {
+				background: lighten($main-color, 50%);
+
+				&:after {
+					background: $main-color;
+					left: remCalc(30px);
+				}
+			}
+		}
+	}
+
+	.sm-lever {
+		width: remCalc(50px);
+		background: lighten($black, (100% - 26%));
+		height: remCalc(14px);
+		display: inline-block;
+		@include border-radius(remCalc(14px));
+		position: relative;
+		vertical-align: middle;
+
+		&:after {
+			width: remCalc(24px);
+			height: remCalc(24px);
+			@include border-radius(50%);
+			content: '';
+			background: $grey-50;
+			position: absolute;
+			@extend .sm-z1;
+			top: - remCalc(5px);
 		}
 	}
 }

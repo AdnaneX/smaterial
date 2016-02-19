@@ -54,10 +54,12 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 
 	<p class="sm-col sm-s12 sm-m6">
 		<div class="sm-switch">
-		    off
+			<label>
+				off
 				<input type="checkbox">
 				<span class="sm-lever"></span>
-			on
+				on
+			</label>
 		</div>
 	</p>
 </section>
