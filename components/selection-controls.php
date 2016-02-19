@@ -19,12 +19,16 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 
 	<p class="sm-col sm-s12 sm-m6">
 		<input type="checkbox" id="example" class="sm-checkbox"> <label for="example">Example</label>
+		<input type="checkbox" id="example3" class="sm-checkbox sm-checkbox-disabled"> <label for="example3">Example3</label>
 	</p>
 
 	<code class="sm-col sm-s12 sm-m6">
 		<pre>
 &lt;input type="checkbox" id="example" class="sm-checkbox">
 &lt;label for="example">Example&lt;/label>
+
+&lt;input type="checkbox" id="example3" class="sm-checkbox sm-checkbox-disabled">
+&lt;label for="example3">Example3&lt;/label>
 		</pre>
 	</code>
 </section>
@@ -49,7 +53,12 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	<h2>Switch</h2>
 
 	<p class="sm-col sm-s12 sm-m6">
-
+		<div class="sm-switch">
+		    off
+				<input type="checkbox">
+				<span class="sm-lever"></span>
+			on
+		</div>
 	</p>
 </section>
 <?php

@@ -7,20 +7,39 @@ input[type="checkbox"] {
 				@extend .material-icons;
 				display: inline-block;
 				content: 'check_box_outline_blank';
-				width: remCalc(18.2px);
-				height: remCalc(18.2px);
+				width: $selection-size;
+				height: $selection-size;
 				vertical-align: middle;
-				line-height: remCalc(18.2px);
-				margin-right: remCalc(20px);
+				line-height: $selection-size;
+				margin-right: $selection-margin;
+				color: lighten($black, (100% - 54%));
 
 			}
 		}
 
+		// TODO add hover
 		&:checked {
 			+ label {
 				&:before {
 					content: 'check_box';
-					color: $main-color;
+					color: $selection-color;
+				}
+			}
+		}
+
+		&-disabled {
+			+ label {
+				&:before {
+			 		color: lighten($black, (100% - 26%));
+				}
+			}
+
+			&:checked {
+				+ label {
+					&:before {
+						content: 'check_box';
+						color: lighten($black, (100% - 26%));
+					}
 				}
 			}
 		}
@@ -36,11 +55,11 @@ input[type="radio"] {
 				@extend .material-icons;
 				display: inline-block;
 				content: 'radio_button_unchecked';
-				width: remCalc(18.2px);
-				height: remCalc(18.2px);
+				width: $selection-size;
+				height: $selection-size;
 				vertical-align: middle;
-				line-height: remCalc(18.2px);
-				margin-right: remCalc(20px);
+				line-height: $selection-size;
+				margin-right: $selection-margin;
 
 			}
 		}
@@ -49,7 +68,24 @@ input[type="radio"] {
 			+ label {
 				&:before {
 					content: 'radio_button_checked';
-					color: $main-color;
+					color: $selection-color;
+				}
+			}
+		}
+
+		&-disabled {
+			+ label {
+				&:before {
+					color: lighten($black, (100% - 26%));
+				}
+			}
+
+			&:checked {
+				+ label {
+					&:before {
+						content: 'check_box';
+						color: lighten($black, (100% - 26%));
+					}
 				}
 			}
 		}

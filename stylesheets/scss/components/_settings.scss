@@ -118,6 +118,13 @@ $chips-delete-background: $black;
 $chips-delete-background-hover: $chips-text-hover;
 
 /**************************************
+ * Selection controls
+ **************************************/
+$selection-color: $main-color; // Default $main-color
+$selection-size: remCalc(18.2px); // Default remCalc(18.2px)
+$selection-margin: remCalc(20px); // Default remCalc(20px)
+
+/**************************************
  * Snackbars and toasts
  **************************************/
 
@@ -172,7 +179,6 @@ $flat-button-focus: $grey;
 
 $floating-button-background: $main-color;
 $floating-button-icon: $white;
-
 
 /**************************************
  * Grid settings
