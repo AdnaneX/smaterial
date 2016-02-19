@@ -1,0 +1,57 @@
+input[type="checkbox"] {
+	&.sm-checkbox {
+		display: none;
+
+		+ label {
+			&:before {
+				@extend .material-icons;
+				display: inline-block;
+				content: 'check_box_outline_blank';
+				width: remCalc(18.2px);
+				height: remCalc(18.2px);
+				vertical-align: middle;
+				line-height: remCalc(18.2px);
+				margin-right: remCalc(20px);
+
+			}
+		}
+
+		&:checked {
+			+ label {
+				&:before {
+					content: 'check_box';
+					color: $main-color;
+				}
+			}
+		}
+	}
+}
+
+input[type="radio"] {
+	&.sm-radio {
+		display: none;
+
+		+ label {
+			&:before {
+				@extend .material-icons;
+				display: inline-block;
+				content: 'radio_button_unchecked';
+				width: remCalc(18.2px);
+				height: remCalc(18.2px);
+				vertical-align: middle;
+				line-height: remCalc(18.2px);
+				margin-right: remCalc(20px);
+
+			}
+		}
+
+		&:checked {
+			+ label {
+				&:before {
+					content: 'radio_button_checked';
+					color: $main-color;
+				}
+			}
+		}
+	}
+}

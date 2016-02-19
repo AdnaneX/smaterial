@@ -3,6 +3,7 @@
  *
  * Some may be turned off by commenting them
  **************************************/
+
 @import 'components/mixins';
 @import 'components/functions'; // All functions
 @import 'components/colors'; // Color swatches
@@ -23,3 +24,5 @@
 @import 'components/tables'; // Used to style tables (can be turned off)
 @import 'components/tooltips'; // Used to style tooltips (can be turned off)
 @import 'components/snackbars'; // Used to style snackbars and toasts (can be turned off)
+@import 'components/sliders'; // Used to style sliders (can be turned off)
+@import 'components/selection'; // Used to style selection controls (checkbox, radio button, switch) (can be turned off)

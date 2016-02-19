@@ -1,0 +1,60 @@
+input[type="range"].sm-slider {
+	-webkit-appearance: none;
+	outline: none;
+	height: remCalc(2px);
+	background: lighten($black, (100% - 26%));
+
+	&:hover {
+		cursor: pointer;
+	}
+
+	&::-webkit-slider-runnable-track {
+		-webkit-appearance: none;
+		height: remCalc(2px);
+	}
+
+	&::-moz-range-track, ::-ms-track {
+		height: remCalc(2px);
+	}
+
+	&::-webkit-slider-thumb {
+		-webkit-appearance: none;
+		background: $white;
+		@include border-radius(50%);
+		height: remCalc(14px);
+		width: remCalc(14px);
+		border: remCalc(2px) solid lighten($black, (100% - 26%));
+		margin-top: - remCalc(7px);
+	}
+
+	&::-moz-range-thumb, ::-ms-thumb  {
+		background: $white;
+		@include border-radius(50%);
+		height: remCalc(14px);
+		width: remCalc(14px);
+		border: remCalc(2px) solid lighten($black, (100% - 26%));
+		margin-top: - remCalc(7px);
+	}
+
+	&:focus {
+		background: $main-color;
+
+		&::-webkit-slider-thumb, &::-moz-range-thumb, ::-ms-thumb {
+			-webkit-appearance: none;
+			background: $main-color;
+			border: remCalc(2px) solid $main-color;
+		}
+	}
+
+	&-disabled {
+		&::-webkit-slider-thumb {
+			-webkit-appearance: none;
+			background: lighten($black, (100% - 26%));
+			@include border-radius(50%);
+			height: remCalc(10px);
+			width: remCalc(10px);
+			border: remCalc(2px) solid lighten($black, (100% - 26%));
+			margin-top: - remCalc(5px);
+		}
+	}
+}
