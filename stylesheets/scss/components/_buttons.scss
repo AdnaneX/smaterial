@@ -8,15 +8,15 @@
 button, input[type="button"], input[type="reset"], input[type="submit"], a {
 	&.sm-raised-button {
 		@extend .sm-z2, .sm-button;
-		@include transition(box-shadow 100ms ease-in-out);
+		@include transition($raised-transition);
 		color: $raised-button-color;
 		background: $raised-button-background;
 		border: none;
-		min-width: remCalc(64px);
-		height: remCalc(36px);
-		line-height: remCalc(36px);
-		padding: 0 remCalc(16px);
-		margin: remCalc(8px);
+		min-width: $raised-min-width;
+		height: $raised-size;
+		line-height: $raised-size;
+		padding: $raised-padding;
+		margin: $raised-margin;
 		text-decoration: none;
 		display: inline-block;
 		text-align: center;
@@ -33,41 +33,41 @@ button, input[type="button"], input[type="reset"], input[type="submit"], a {
 
 		.material-icons {
 			color: $raised-icon-color;
-			line-height: remCalc(36px);
+			line-height: $raised-size;
 			vertical-align: middle;
-			height: remCalc(36px);
-			width: remCalc(36px);
+			height: $raised-size;
+			width: $raised-size;
 
 			&.sm-left {
-				margin-right: remCalc(8px);
+				margin-right: $raised-margin;
 			}
 
 			&.sm-right {
-				margin-left: remCalc(8px);
+				margin-left: $raised-margin;
 			}
 		}
 
 		&-dense {
-			height: remCalc(32px);
-			line-height: remCalc(32px);
-			font-size: remCalc(13px);
+			height: $raised-dense-size;
+			line-height: $raised-dense-size;
+			font-size: $raised-dense-font-size;
 
 			.material-icons {
-				line-height: remCalc(32px);
-				height: remCalc(32px);
-				width: remCalc(32px);
+				line-height: $raised-dense-size;
+				height: $raised-dense-size;
+				width: $raised-dense-size;
 			}
 		}
 
 		&-disabled {
-			background: rgba($black, .12);
-			color: rgba($black, .30);
+			background: $raised-disabled-background;
+			color: $raised-disabled-color;
 			@extend .sm-z0;
 
 			&:hover {
 				@extend .sm-z0;
-				color: rgba($black, .30);
-				background: rgba($black, .12);
+				background: $raised-disabled-background-hover;
+				color: $raised-disabled-color-hover;
 			}
 		}
 	}

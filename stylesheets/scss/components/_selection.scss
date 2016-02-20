@@ -1,3 +1,12 @@
+/**************************************
+ * Selection controls
+ *
+ * http://www.google.com/design/spec/components/selection-controls.html
+ * TODO add hovers
+ * TODO add radials for mobile
+ * TODO fix animation of thumb sliding
+ **************************************/
+
 input[type="checkbox"] {
 	&.sm-checkbox {
 		display: none;
@@ -7,22 +16,32 @@ input[type="checkbox"] {
 				@extend .material-icons;
 				display: inline-block;
 				content: 'check_box_outline_blank';
-				width: $selection-size;
-				height: $selection-size;
+				width: $checkbox-size;
+				height: $checkbox-size;
 				vertical-align: middle;
-				line-height: $selection-size;
-				margin-right: $selection-margin;
-				color: lighten($black, (100% - 54%));
+				line-height: $checkbox-size;
+				margin-right: $checkbox-margin;
+				color: $checkbox-color;
 			}
 		}
 
-		// TODO add hover
 		&:checked {
 			+ label {
 				&:before {
 					content: 'check_box';
-					color: $selection-color;
+					color: $checkbox-color-checked;
 				}
+
+				/*
+				@media #{$medium-down} {
+					&:after {
+						content: '';
+						background: $selection-radial-color;
+						width: $selection-radial-size;
+						height: $selection-radial-size;
+						@include border-radius(50%);
+					}
+				}*/
 			}
 		}
 
@@ -54,11 +73,11 @@ input[type="radio"] {
 				@extend .material-icons;
 				display: inline-block;
 				content: 'radio_button_unchecked';
-				width: $selection-size;
-				height: $selection-size;
+				width: $radio-size;
+				height: $radio-size;
 				vertical-align: middle;
-				line-height: $selection-size;
-				margin-right: $selection-margin;
+				line-height: $radio-size;
+				margin-right: $radio-margin;
 
 			}
 		}
@@ -67,7 +86,7 @@ input[type="radio"] {
 			+ label {
 				&:before {
 					content: 'radio_button_checked';
-					color: $selection-color;
+					color: $radio-color;
 				}
 			}
 		}
@@ -92,21 +111,6 @@ input[type="radio"] {
 }
 
 .sm-switch {
-	input[type="checkbox"] {
-		display: none;
-
-		&:checked {
-			+ .sm-lever {
-				background: lighten($main-color, 50%);
-
-				&:after {
-					background: $main-color;
-					left: remCalc(30px);
-				}
-			}
-		}
-	}
-
 	.sm-lever {
 		width: remCalc(50px);
 		background: lighten($black, (100% - 26%));
@@ -115,6 +119,7 @@ input[type="radio"] {
 		@include border-radius(remCalc(14px));
 		position: relative;
 		vertical-align: middle;
+		@include transition(background 300ms ease-in-out);
 
 		&:after {
 			width: remCalc(24px);
@@ -125,6 +130,22 @@ input[type="radio"] {
 			position: absolute;
 			@extend .sm-z1;
 			top: - remCalc(5px);
+			@include transition(background 300ms ease-in-out);
+		}
+	}
+
+	input[type="checkbox"] {
+		display: none;
+
+		&:checked {
+			+ .sm-lever {
+				background: $main-color;
+
+				&:after {
+					background: $main-color;
+					right: 0;
+				}
+			}
 		}
 	}
 }
