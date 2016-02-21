@@ -108,10 +108,10 @@ $appbar-large-height: remCalc(64px); // Default remCalc(64px)
  * Buttons
  **************************************/
 
-$raised-button-background: $main-color; // Default $main-color
-$raised-button-background-hover: $main-color; // Default $main-color
-$raised-button-color: $white; // Default $white
-$raised-button-color-hover: $raised-button-color; // Default $raised-button-color
+$raised-background: $main-color; // Default $main-color
+$raised-background-hover: $main-color; // Default $main-color
+$raised-color: $white; // Default $white
+$raised-color-hover: $raised-color; // Default $raised-color
 $raised-icon-color: $white; // Default $white
 $raised-min-width: remCalc(64px); // Default remCalc(64px)
 $raised-size: remCalc(32px); // Default remCalc(32px)
@@ -125,29 +125,43 @@ $raised-disabled-color: rgba($black, .30); // Default rgba($black, .30)
 $raised-disabled-background-hover: rgba($black, .12); // Default rgba($black, .12)
 $raised-disabled-color-hover: rgba($black, .30); // Default rgba($black, .30)
 
-$flat-button-color: $main-color; // Default $main-color
+$flat-color: $main-color; // Default $main-color
 $flat-icon-color: $main-color; // Default $main-color
-$flat-button-focus: $grey; // Default $grey
+$flat-focus: $grey; // Default $grey
+$flat-min-width: remCalc(88px); // Default remCalc(88px)
+$flat-size: remCalc(36px); // Default remCalc(36px)
+$flat-padding: 0 remCalc(16px); // Default 0 remCalc(16px)
+$flat-margin: remCalc(8px); // Default remCalc(8px)
+$flat-disabled-color: rgba($black, .26); // Default rgba($black, .26)
 
-$floating-button-background: $main-color; // Default $main-color
-$floating-button-icon: $white; // Default $white
+$floating-transition: all 100ms ease-in-out; // Default all 100ms ease-in-out
+$floating-background: $main-color; // Default $main-color
+$floating-icon: $white; // Default $white
+$floating-size: remCalc(56px); // Default remCalc(56px)
+$floating-icon-size: remCalc(24px); // Default remCalc(24px)
+$floating-mini-size: remCalc(40px); // Default remCalc(40px)
 
 /**************************************
  * Chips
  **************************************/
 
-$chips-text: $black; // Default $black
+$chips-text: lighten($black, (100% - 87%)); // Default lighten($black, (100% - 87%))
 $chips-text-hover: $white; // Default $white
+$chips-font-size: remCalc(13px); // Default remCalc(13px)
+$chips-font-weight: 500; // Default 500
+$chips-padding: 0 remCalc(12px); // Default 0 remCalc(12px)
+$chips-size: remCalc(32px); // Default remCalc(32px)
 $chips-background: $grey-300; // Default $grey-300
 $chips-background-hover: $grey-600; // Default $grey-600
 $chips-delete-cross: $chips-background; // Default $chips-background
 $chips-delete-cross-hover: $chips-background-hover; // Default $chips-background-hover
-$chips-delete-background: $black; // Default $black
+$chips-delete-background: rgba($black, .54); // Default rgba($black, .54)
 $chips-delete-background-hover: $chips-text-hover; // Default $chips-text-hover
 
 /**************************************
  * Selection controls
  **************************************/
+
 $checkbox-color: lighten($black, (100% - 54%));
 $checkbox-color-checked: $main-color; // Default $main-color
 $checkbox-size: remCalc(18.2px); // Default remCalc(18.2px)
@@ -203,7 +217,6 @@ $sidenav-hover: $main-color; // Default $main-color
 
 $sidenav-full-title-background: $main-color; // Default $main-color
 $sidenav-full-title-color: $white; // Default $white
-
 
 
 /**************************************

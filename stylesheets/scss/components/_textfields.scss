@@ -1,0 +1,47 @@
+/**************************************
+ * Text fields
+ *
+ * http://www.google.com/design/spec/components/text-fields.html
+ **************************************/
+
+.sm-input {
+	height: remCalc(72px);
+	padding: remCalc(16px) 0 remCalc(8px) 0;
+	position: relative;
+
+	input[type="text"], input[type="password"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="url"] {
+		width: 100%;
+		border: 0;
+		position: absolute;
+		font-size: remCalc(16px);
+		border-bottom: remCalc(2px) solid $grey;
+		outline: none;
+		padding: remCalc(8px) 0;
+		@include transition(all 300ms ease-in-out);
+		bottom: remCalc(8px);
+
+		&:active, &:focus {
+			border-bottom: remCalc(2px) solid $main-color;
+
+			+ label {
+				font-size: remCalc(12px);
+				color: $main-color;
+				bottom: remCalc(40px);
+			}
+		}
+	}
+
+	label {
+		color: $grey;
+		position: absolute;
+		bottom: remCalc(16px);
+		@include transition(all 300ms ease-in-out);
+		cursor: text;
+
+		&.sm-active {
+			font-size: remCalc(12px);
+			color: $grey;
+			bottom: remCalc(40px);
+		}
+	}
+}

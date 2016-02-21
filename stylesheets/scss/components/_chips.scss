@@ -2,18 +2,19 @@
  * Chips
  *
  * http://www.google.com/design/spec/components/chips.html
+  TODO change size of delete icon
  **************************************/
 
 .sm-chip {
-	@include border-radius(remCalc(32px));
+	@include border-radius($chips-size);
 	background: $chips-background;
-	color: lighten($chips-text, (100% - 87%));
-	font-size: remCalc(13px);
-	padding: 0 remCalc(12px);
-	height: remCalc(32px);
-	line-height: remCalc(32px);
+	color: $chips-text;
+	font-size: $chips-font-size;
+	padding: $chips-padding;
+	height: $chips-size;
+	line-height: $chips-size;
 	display: inline-block;
-	font-weight: 500;
+	font-weight: $chips-font-weight;
 
 	&-deletable {
 		.sm-chip-delete {
@@ -25,7 +26,7 @@
 			margin-left: remCalc(4px);
 			margin-right: remCalc(-8px);
 			color: $chips-delete-cross;
-			background: rgba($chips-delete-background, .54);
+			background: $chips-delete-background;
 
 			&:hover {
 				cursor: pointer;

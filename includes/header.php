@@ -86,6 +86,7 @@
 							<li><a href="/components/selection-controls.php">Selection controls</a></li>
 							<li><a href="/components/snackbars-toasts.php">Snackbar & toasts</a></li>
 							<li><a href="/components/tables.php">Tables</a></li>
+							<li><a href="/components/textfields.php">Text fields</a></li>
 							<li><a href="/components/tooltips.php">Tooltips</a></li>
 						</ul>
 					</li>
