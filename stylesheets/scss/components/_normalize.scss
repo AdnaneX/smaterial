@@ -41,7 +41,7 @@ html, body {
 		}
 
 		@media #{$medium-up} {
-			left: remCalc($sidenav-width + 10px);
+			left: $sidenav-width;
 			top: remCalc(64px);
 		}
 	}

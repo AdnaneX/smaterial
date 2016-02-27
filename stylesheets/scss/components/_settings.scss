@@ -193,6 +193,48 @@ $snackbar-action-small-left: remCalc(24px); // Default remCalc(24px)
 $snackbar-action-large-left: remCalc(48px); // Default remCalc(48px)
 
 /**************************************
+ * Sidenav
+ **************************************/
+$sidenav-background: $white; // Default $white
+$sidenav-padding: remCalc(16px) 0; // Default remCalc(16px) 0
+$sidenav-hover: $main-color; // Default $main-color
+$sidenav-width: remCalc(320px); // Default remCalc(320px)
+$sidenav-max-width: remCalc(400px); // Default remCalc(400px)
+$sidenav-small-width: remCalc(320px); // Default remCalc(320px)
+$sidenav-small-max-width: remCalc(320px); // Default remCalc(320px)
+$sidenav-small-margin-right: remCalc(56px); // Default remCalc(56px)
+
+$sidenav-full-small-top: $appbar-small-height; // Default $appbar-small-height
+$sidenav-full-medium-top: $appbar-medium-height; // Default $appbar-medium-height
+$sidenav-full-large-top: 0; // Default 0
+$sidenav-full-title-height: remCalc(64px); // Default remCalc(64px)
+$sidenav-full-title-size: remCalc(24px); // Default remCalc(24px)
+$sidenav-full-title-margin: remCalc(-16px) 0 0 0; // Default remCalc(-16px) 0 0 0
+$sidenav-full-title-background: $main-color !important; // Default $main-color
+$sidenav-full-title-color: $white; // Default $white
+$sidenav-full-profile-medium-margin: - remCalc(16px) 0 remCalc(8px) 0 !important; // Default - remCalc(16px) 0 remCalc(8px) 0 !important
+$sidenav-full-profile-large-margin: 0 0 remCalc(8px) 0 !important; // Default 0 0 remCalc(8px) 0 !important
+
+$sidenav-floating-small-top: $appbar-small-height; // Default $appbar-small-height
+$sidenav-floating-medium-top: remCalc(56px); // Default remCalc(56px)
+$sidenav-floating-large-top: remCalc(64px); // Default remCalc(64px)
+$sidenav-floating-z-index: 10; // Default 10
+
+$sidenav-right-max-width: 100%; // Default 100%
+$sidenav-right-small-top: $appbar-small-height; // Default $appbar-small-height
+$sidenav-right-medium-top: $appbar-medium-height; // Default $appbar-medium-height
+$sidenav-right-large-top: $appbar-large-height; // Default $appbar-large-height
+
+$sidenav-divider-margin: remCalc(8px) 0; // Default remCalc(8px) 0
+$sidenav-divider-height: remCalc(1px); // Default remCalc(1px)
+$sidenav-divider-background: lighten($black, (100% - 12%)); // Default lighten($black, (100% - 12%))
+
+$sidenav-subheader-color: lighten($black, (100% - 54%)); // Default
+
+$sidenav-profile-background: $secondary-color;
+
+
+/**************************************
  * Tooltips
  **************************************/
 
@@ -209,15 +251,6 @@ $tooltip-large-height: remCalc(22px); // Default remCalc(22px)
 $tooltip-small-padding: 0 remCalc(16px); // Default 0 remCalc(16px)
 $tooltip-large-padding: 0 remCalc(8px); // Default 0 remCalc(8px)
 $tooltip-z-index: 10; // Default 10
-
-
-// Sidenav
-$sidenav-background: $white; // Default $white
-$sidenav-hover: $main-color; // Default $main-color
-
-$sidenav-full-title-background: $main-color; // Default $main-color
-$sidenav-full-title-color: $white; // Default $white
-
 
 /**************************************
  * Grid settings
@@ -241,8 +274,3 @@ $gutter: 16px; // Default 16px
  **************************************/
 $icon-font-path: './components/fonts/icons/';
 
-/**************************************
- * Sidenav
- **************************************/
-$sidenav-width: 320px; // max 400px
-$sidenav-small-width: 320px; // max 320px

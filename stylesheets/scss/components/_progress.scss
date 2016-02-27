@@ -1,0 +1,60 @@
+/**************************************
+ * Progress & activity
+ *
+ * http://www.google.com/design/spec/components/progress-activity.html
+ **************************************/
+
+.sm-determinate {
+	width: 100%;
+	background: rgba($main-color, .4);
+	height: remCalc(5px);
+}
+
+.sm-progress {
+	background: $main-color;
+	@include transition(width 300ms ease-in-out);
+	height: 100%;
+	width: 0%;
+}
+
+.sm-indeterminate {
+	width: 100%;
+	background: rgba($main-color, .4);
+	height: remCalc(5px);
+	position: relative;
+	overflow: hidden;
+
+	.sm-progress {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		width: 60%;
+		@include animation(indeterminate 1.5s  cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite);
+		@include keyframes(indeterminate) {
+			0% {
+				width: 60%;
+				left: 0;
+			} /*
+
+			25% {
+				width: 60%;
+				left: 25%;
+			}
+
+			50% {
+				width: 60%;
+				left: 50%;
+			} */
+
+			75% {
+				width: 60%;
+				left: 75%;
+			}
+
+			100% {
+				width: 0%;
+				left: 100%;
+			}
+		}
+	}
+}

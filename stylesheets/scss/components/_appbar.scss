@@ -12,6 +12,8 @@
 	width: 100%;
 	height: $appbar-small-height;
 	line-height: normal;
+	position: relative;
+	z-index: 1;
 
 	@media #{$small-up} {
 		height: $appbar-medium-height;

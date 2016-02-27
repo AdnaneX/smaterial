@@ -1,5 +1,4 @@
 $(document).ready(function() {
-	// Toggle buttons
 	$('.sm-toggle-button').each(function() {
 		var $this = $(this),
 			$icon = $this.data('sm-toggle-icon');

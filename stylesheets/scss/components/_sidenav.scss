@@ -8,8 +8,8 @@
 
 .sm-sidenav {
 	position: absolute;
-	background: $white;
-	padding: remCalc(16px) 0;
+	background: $sidenav-background;
+	padding: $sidenav-padding;
 	bottom: 0;
 	overflow: auto;
 	@extend .sm-z16;
@@ -19,28 +19,28 @@
 		left: 0;
 
 		@media #{$medium-down} {
-			width: remCalc($sidenav-small-width);
-			max-width: remCalc(320px);
-			margin-right: remCalc(56px);
+			width:$sidenav-small-width;
+			max-width: $sidenav-small-max-width;
+			margin-right: $sidenav-small-margin-right;
 			display: none;
 		}
 
 		@media #{$medium-up} {
-			width: remCalc($sidenav-width);
-			max-width: remCalc(400px);
+			width: $sidenav-width;
+			max-width: $sidenav-max-width;
 			display: block;
 		}
 
 		// Full height sidenav
 		&-full {
-			top: remCalc(48px);
+			top: $sidenav-full-small-top;
 
 			@media #{$small-up} {
-				top: remCalc(56px);
+				top: $sidenav-full-medium-top;
 			}
 
 			@media #{$medium-up} {
-				top: 0;
+				top: $sidenav-full-large-top;
 			}
 
 			&-title {
@@ -50,47 +50,46 @@
 				@media #{$medium-up} {
 					background: $sidenav-full-title-background;
 					display: block;
-					height: remCalc(64px);
-					font-size: remCalc(24px);
-					margin-top: - remCalc(16px);
-					margin-bottom: 0;
+					height: $sidenav-full-title-height;
+					font-size: $sidenav-full-title-size;
+					margin: $sidenav-full-title-margin;
 					color: $sidenav-full-title-color;
 
 					h1, h2, h3, h4, h5, h6 {
 						padding: 0;
 						margin: 0;
-						font-size: remCalc(24px);
+						font-size: $sidenav-full-title-size;
 						color: $sidenav-full-title-color;
 					}
 
 					&:hover {
-						background: $sidenav-full-title-background !important;
+						background: $sidenav-full-title-background;
 					}
 				}
 			}
 
-			.sm-sidenav-drawer {
+			.sm-sidenav-profile {
 				@media #{$small-up} {
-					margin: - remCalc(16px) 0 remCalc(8px) 0 !important;
+					margin: $sidenav-full-profile-medium-margin;
 				}
 
 				@media #{$medium-up} {
-					margin: 0 0 remCalc(8px) 0 !important;
+					margin: $sidenav-full-profile-large-margin;
 				}
 			}
 		}
 
 		// Sidenav under navbar
 		&-floating {
-			top: remCalc(48px);
-			z-index: 10;
+			top: $sidenav-floating-small-top;
+			z-index: $sidenav-floating-z-index;
 
 			@media #{$small-up} {
-				top: remCalc(56px);
+				top: $sidenav-floating-medium-top;
 			}
 
 			@media #{$medium-up} {
-				top: remCalc(64px);
+				top: $sidenav-floating-large-top;
 			}
 
 			.sm-sidenav-left-full-title {
@@ -101,29 +100,28 @@
 
 	// Right navigation
 	&-right {
-		max-width: 100%;
+		max-width: $sidenav-right-max-width;
 		right: 0;
-		top: remCalc(48px);
+		top: $sidenav-right-small-top;
 
 		@media #{$small-up} {
-			top: remCalc(56px);
+			top: $sidenav-right-medium-top;
 		}
 
 		@media #{$medium-up} {
-			top: remCalc(64px);
+			top: $sidenav-right-large-top;
 		}
 	}
 
 	&-divider {
-		margin: remCalc(8px) 0;
-		height: remCalc(1px);
-		background: lighten($black, (100% - 12%)); //http://www.google.com/design/spec/components/dividers.html#dividers-types-of-dividers
+		margin: $sidenav-divider-margin;
+		height: $sidenav-divider-height;
+		background: $sidenav-divider-background;
 	}
 
 	&-subheader {
 		@extend .sm-subhead-1;
-		color: lighten($black, (100% - 54%));
-		//font-weight: 500;
+		color: $sidenav-subheader-color;
 
 		&:hover {
 			background: none !important;
@@ -150,18 +148,18 @@
 				background: $grey-200;
 			}
 
-			&.sm-sidenav-drawer {
+			&.sm-sidenav-profile {
 				@extend .sm-row;
 				margin: remCalc(-16px) 0 remCalc(8px) 0;
 				padding: remCalc(16px) remCalc(16px) remCalc(8px) remCalc(16px);
-				background: $lime;
+				background: $sidenav-profile-background;
 				height: auto;
 
 				div {
 					padding: 0 !important;
 				}
 
-				.sm-sidenav-drawer-img {
+				.sm-sidenav-profile-img {
 					@extend .sm-col, .sm-s12;
 					width: 100%;
 					height: remCalc(50px);
@@ -174,7 +172,7 @@
 					}
 				}
 
-				.sm-sidenav-drawer-info {
+				.sm-sidenav-profile-info {
 					@extend .sm-col, .sm-s8;
 					height: remCalc(56px);
 
@@ -188,16 +186,16 @@
 						line-height: remCalc(28px);
 					}
 
-					.sm-sidenav-drawer-name {
+					.sm-sidenav-profile-name {
 						font-weight: 500;
 					}
 
-					.sm-sidenav-drawer-email {
+					.sm-sidenav-profile-email {
 						font-weight: 400;
 					}
 				}
 
-				.sm-sidenav-drawer-button {
+				.sm-sidenav-profile-button {
 					@extend .sm-col, .sm-s4;
 					height: remCalc(56px);
 

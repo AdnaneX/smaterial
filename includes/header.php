@@ -29,7 +29,7 @@
 				<div class="sm-appbar-search">
 					<a href="#"><i class="material-icons">search</i></a>
 
-					<form action="" method="post">
+					<form action="<?= $_SERVER['SERVER_SELF']; ?>" method="post">
 						<input type="search" name="search">
 					</form>
 				</div>
@@ -47,22 +47,22 @@
 		<aside id="sm-sidenav" class="sm-sidenav sm-sidenav-left sm-sidenav-left-floating">
 			<nav>
 				<ul>
-					<li class="sm-sidenav-drawer">
-						<figure class="sm-sidenav-drawer-img">
+					<li class="sm-sidenav-profile">
+						<figure class="sm-sidenav-profile-img">
 							<img alt="SMaterial thumbnail" src="/images/SMaterial-icon.jpg">
 						</figure>
 
-						<div class="sm-sidenav-drawer-info">
-							<div class="sm-sidenav-drawer-name">
+						<div class="sm-sidenav-profile-info">
+							<div class="sm-sidenav-profile-name">
 								John Doe
 							</div>
 
-							<div class="sm-sidenav-drawer-email">
+							<div class="sm-sidenav-profile-email">
 								johndoe@gmail.com
 							</div>
 						</div>
 
-						<div class="sm-sidenav-drawer-button">
+						<div class="sm-sidenav-profile-button">
 							<a href="#"><i class="material-icons">arrow_drop_up</i></a>
 						</div>
 					</li>
@@ -82,8 +82,9 @@
 							<li><a href="/components/buttons.php">Buttons</a></li>
 							<li><a href="/components/cards.php">Cards</a></li>
 							<li><a href="/components/chips.php">Chips</a></li>
-							<li><a href="/components/sliders.php">Slider</a></li>
+							<li><a href="/components/progress-activity.php">Progress & activity</a></li>
 							<li><a href="/components/selection-controls.php">Selection controls</a></li>
+							<li><a href="/components/sliders.php">Slider</a></li>
 							<li><a href="/components/snackbars-toasts.php">Snackbar & toasts</a></li>
 							<li><a href="/components/tables.php">Tables</a></li>
 							<li><a href="/components/textfields.php">Text fields</a></li>

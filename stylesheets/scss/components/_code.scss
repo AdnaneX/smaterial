@@ -10,11 +10,6 @@
 }
 
 code, pre {
-	white-space: pre-wrap;
-	white-space: -moz-pre-wrap;
-	white-space: -pre-wrap;
-	white-space: -o-pre-wrap;
-	word-wrap: break-word;
 	background: $grey-300;
 	font-family: 'Source Code Pro', Monospaced;
 	padding: remCalc(5px);
@@ -23,5 +18,10 @@ code, pre {
 
 	pre {
 		display: block;
+		white-space: pre-wrap;
+		white-space: -moz-pre-wrap;
+		white-space: -pre-wrap;
+		white-space: -o-pre-wrap;
+		word-wrap: break-word;
 	}
 }

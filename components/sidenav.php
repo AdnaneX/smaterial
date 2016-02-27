@@ -1,7 +1,7 @@
 <?php
 $title = 'Sidenav';
-$description = 'Sidenav with drawer and icon support';
-$keywords = 'material design, smaterial, sidenav, drawer, profile';
+$description = 'Sidenav with profile and icon support';
+$keywords = 'material design, smaterial, sidenav, profile, profile';
 
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>
@@ -20,7 +20,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 
 	<p class="sm-col sm-s12 sm-m6">
 		When used on the left there are a couple more functions added.
-		There is a drawer or profile, the sidenav can also be used as fixed full height or floating.
+		There is a profile and the sidenav can also be used as fixed full height or floating.
 	</p>
 </section>
 
@@ -105,21 +105,21 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 &lt;aside id="sm-sidenav" class="sm-sidenav sm-sidenav-left sm-sidenav-left-floating">
   &lt;nav class="sm-sidenav sm-sidenav-left sm-sidenav-left-floating">
     &lt;ul>
-      &lt;li class="sm-sidenav-drawer">
-        &lt;div class="sm-sidenav-drawer-img">
+      &lt;li class="sm-sidenav-profile">
+        &lt;div class="sm-sidenav-profile-img">
           &lt;img alt="thumbnail" src="/images/thumb.jpg">
         &lt;/div>
 
-        &lt;div class="sm-sidenav-drawer-info">
-          &lt;div class="sm-sidenav-drawer-name">
+        &lt;div class="sm-sidenav-profile-info">
+          &lt;div class="sm-sidenav-profile-name">
             John Doe
 		  &lt;/div>
 
-          &lt;div class="sm-sidenav-drawer-email">
+          &lt;div class="sm-sidenav-profile-email">
             johndoe@gmail.com
           &lt;/div>
 
-          &lt;div class="sm-sidenav-drawer-button">
+          &lt;div class="sm-sidenav-profile-button">
            &lt;i class="material-icons">arrow_drop_up&lt;/i>
           &lt;/div>
         &lt;/div>
