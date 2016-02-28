@@ -1,4 +1,11 @@
-// Media query's
+/**************************************
+ * Grid
+ *
+ * http://www.google.com/design/spec/layout/responsive-ui.html
+ * TODO Add variables to settings
+ * TODO Add sm-xs column styling
+ * TODO Add sm-xl column styling
+ **************************************/
 $xsmall-only: "only screen and (min-width: 0px) and (max-width: #{$xsmall-screen})";
 $small-only: "only screen and (min-width: #{$xsmall-screen}) and (max-width: #{$small-screen})";
 $medium-only: "only screen and (min-width: #{$small-screen}) and (max-width: #{$medium-screen})";
@@ -59,7 +66,7 @@ $xlarge-down: "only screen and (max-width: #{$xlarge-screen})";
 
 	.sm-col {
 		float: left;
-		box-sizing: border-box;
+		@include box-sizing(border-box);
 		padding: 0 $gutter / 2;
 
 		@media #{$xsmall-up} {

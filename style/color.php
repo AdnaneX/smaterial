@@ -1740,5 +1740,14 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	</div>
 </section>
 
+<section class="sm-row">
+	<h3>Color settings</h3>
+
+	<p class="sm-col sm-s12 sm-m6">
+		You can easily change the colors you use. In the settings you can remove all colors you don't use.
+		In SCSS the variables for each color will remain accessible.
+	</p>
+</section>
+
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.php';

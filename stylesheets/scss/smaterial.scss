@@ -2,11 +2,12 @@
  * All components
  *
  * Some may be turned off by commenting them
+ * NOTE that some classes are extended and could there for cause problems when turned off
  **************************************/
 
 @import 'components/mixins'; // All mixins
 @import 'components/functions'; // All functions
-@import 'components/colors'; // Color swatches
+//@import 'components/colors'; // Color swatches currently moved into settings
 @import 'components/settings'; // All settings
 @import 'components/grid'; // Grid functionality
 @import 'components/normalize'; // Remove browser default styles add Material default styles

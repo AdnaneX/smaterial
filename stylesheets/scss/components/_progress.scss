@@ -2,25 +2,30 @@
  * Progress & activity
  *
  * http://www.google.com/design/spec/components/progress-activity.html
+ * TODO fix animation on indeterminate
+ * TODO fix buffer animation
  **************************************/
 
 .sm-determinate {
-	width: 100%;
-	background: rgba($main-color, .4);
+	width: $determinate-width;
+	background: $determinate-background;
 	height: remCalc(5px);
+	position: relative;
 }
 
 .sm-progress {
-	background: $main-color;
-	@include transition(width 300ms ease-in-out);
-	height: 100%;
+	background: $progress-background;
+	@include transition($progress-transition);
+	position: absolute;
+	top: 0;
+	bottom: 0;
 	width: 0%;
 }
 
 .sm-indeterminate {
-	width: 100%;
-	background: rgba($main-color, .4);
-	height: remCalc(5px);
+	width: $indeterminate-width;
+	background: $indeterminate-background;
+	height: $indeterminate-height;
 	position: relative;
 	overflow: hidden;
 
@@ -32,19 +37,17 @@
 		@include animation(indeterminate 1.5s  cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite);
 		@include keyframes(indeterminate) {
 			0% {
-				width: 60%;
+				width: 0%;
 				left: 0;
-			} /*
+			}
 
 			25% {
 				width: 60%;
-				left: 25%;
 			}
 
 			50% {
 				width: 60%;
-				left: 50%;
-			} */
+			}
 
 			75% {
 				width: 60%;
@@ -56,5 +59,36 @@
 				left: 100%;
 			}
 		}
+	}
+}
+
+.sm-buffer {
+	width: 100%;
+	height: remCalc(5px);
+	position: relative;
+
+	> div {
+		display: inline-block;
+	}
+
+	.sm-buffer-progress {
+		background: rgba($main-color, .4);
+		position: absolute;
+		top: 0;
+		bottom: 0;
+
+		.sm-progress {
+			position: absolute;
+			bottom: 0;
+			top: 0;
+		}
+	}
+
+	.sm-buffering {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		@include mask(url('data:image/svg+xml;base64, PD94bWwgdmVyc2lvbj0iMS4wIj8+PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTBweCIgdmlld1BvcnQ9IjAgMCAxMiA0IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGVsbGlwc2UgY3g9IjIiIGN5PSIyIiByeD0iMiIgcnk9IjIiPjwvZWxsaXBzZT48ZWxsaXBzZSBjeD0iMTQiIGN5PSIyIiByeD0iMiIgcnk9IjIiIGNsYXNzPSJsb2FkZXIiPjwvZWxsaXBzZT48L3N2Zz4='));
+		background-image: linear-gradient(to right,rgba(255,255,255,.7),rgba(255,255,255,.7)),linear-gradient(to right,$main-color,$main-color);
 	}
 }

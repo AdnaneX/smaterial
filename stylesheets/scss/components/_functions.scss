@@ -33,3 +33,11 @@
 		@return $number;
 	}
 }
+
+@function in_array($value, $array) {
+	@if index($array, $value) {
+		@return true;
+	} @else {
+		@return false;
+	}
+}

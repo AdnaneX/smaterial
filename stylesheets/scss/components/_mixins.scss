@@ -19,6 +19,14 @@
 	border-radius: $radius;
 }
 
+@mixin box-sizing($settings) {
+	-webkit-box-sizing: $settings;
+	-moz-box-sizing: $settings;
+	-ms-box-sizing: $settings;
+	-o-box-sizing: $settings;
+	box-sizing: $settings;
+}
+
 @mixin material-shadow($dp) {
 	$ambientY : $dp + unquote('px');
 	$ambientBlur: if($dp == 1, 3, $dp * 2) + unquote('px');
@@ -101,6 +109,13 @@
 	-ms-opacity: $settings;
 	-o-opacity: $settings;
 	opacity: $settings;
+}
+
+@mixin mask($settings) {
+	-webkit-mask: $settings;
+	-moz-mask: $settings;
+	-ms-mask: $settings;
+	-o-mask: $settings;
 }
 
 // Typography

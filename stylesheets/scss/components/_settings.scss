@@ -1,16 +1,48 @@
+/*
+ * TODO set all settings in variables here
+ * TODO Make variables consistent
+ * TODO Give variables a clearer name to what they do
+ * TODO Check all colors if it should be lighten(), or rgba()
+ * TODO Divide variables for each component
+ * TODO Add comment for divided variables
+ * TODO Add settings in documentation
+ * TODO Remove "@import 'colors'" to "smaterial.scss"
+ */
+
 /**************************************
  * Colors
  **************************************/
+/*
+ * Add / remove colors you would like to use
+ * NOTE In SCSS all color variables stay accessible
+ *
+ * All colors below
+ * 	$allowed-colors: (
+ 		'red', 'pink', 'purple', 'deep-purple', 'indigo', 'blue', 'light-blue', 'cyan', 'teal', 'green', 'light-green', 'lime',
+ 		'yellow', 'amber', 'orange', 'deep-orange', 'brown', 'grey', 'blue-grey', 'shades');
+ */
+
+$allowed-colors: (
+	'red', 'pink', 'purple', 'deep-purple', 'indigo', 'blue', 'light-blue', 'cyan', 'teal', 'green', 'light-green',
+	'lime', 'yellow', 'amber', 'orange', 'deep-orange', 'brown', 'grey', 'blue-grey', 'shades');
+
+@import 'colors';
+
 $main-color: $blue;
 $secondary-color: $lime;
 
 $link-color: $main-color;
 $link-hover: $secondary-color;
 
+
+/**************************************
+ * Global
+ **************************************/
+$select-background: $cyan-100;
+
 /**************************************
  * Typography settings
  **************************************/
-
 // Font paths
 $roboto-font-path: './components/fonts/Roboto/';
 
@@ -92,22 +124,25 @@ $letter-spacing-button: 0.1; // Default 0.1
 /**************************************
  * AppBar
  **************************************/
-
-// Colors
 $appbar-background: $main-color; // Default $main-color
 $appbar-hover: $blue-700; // Default $blue-700
 $appbar-text: $white; // Default $white
 $appbar-title: $white; // Defaullt $white
+$appbar-title-size: remCalc(24px); // Default remCalc(24px)
+$appbar-title-small-padding: remCalc(12px) 0 remCalc(12px) 0 !important; // Default remCalc(12px) 0 remCalc(12px) 0 !important
+$appbar-title-medium-padding: remCalc(20px) 0 remCalc(20px) 0 !important; // Default remCalc(20px) 0 remCalc(20px) 0 !important
 
-// Height
 $appbar-small-height: remCalc(48px); // Default remCalc(48px)
 $appbar-medium-height: remCalc(56px); // Default remCalc(56px)
 $appbar-large-height: remCalc(64px); // Default remCalc(64px)
 
+$appbar-icon-font-size: remCalc(32px); // Default remCalc(32px)
+$appbar-icon-small-padding: remCalc(8px); // Default remCalc(8px)
+$appbar-icon-medium-padding: remCalc(16px); // Default remCalc(16px);
+
 /**************************************
  * Buttons
  **************************************/
-
 $raised-background: $main-color; // Default $main-color
 $raised-background-hover: $main-color; // Default $main-color
 $raised-color: $white; // Default $white
@@ -144,7 +179,6 @@ $floating-mini-size: remCalc(40px); // Default remCalc(40px)
 /**************************************
  * Chips
  **************************************/
-
 $chips-text: lighten($black, (100% - 87%)); // Default lighten($black, (100% - 87%))
 $chips-text-hover: $white; // Default $white
 $chips-font-size: remCalc(13px); // Default remCalc(13px)
@@ -153,15 +187,33 @@ $chips-padding: 0 remCalc(12px); // Default 0 remCalc(12px)
 $chips-size: remCalc(32px); // Default remCalc(32px)
 $chips-background: $grey-300; // Default $grey-300
 $chips-background-hover: $grey-600; // Default $grey-600
+$chips-delete-size: remCalc(24px); // Default remCalc(24px)
 $chips-delete-cross: $chips-background; // Default $chips-background
 $chips-delete-cross-hover: $chips-background-hover; // Default $chips-background-hover
 $chips-delete-background: rgba($black, .54); // Default rgba($black, .54)
 $chips-delete-background-hover: $chips-text-hover; // Default $chips-text-hover
+$chips-delete-margin: 0 remCalc(-8px) 0 remCalc(4px); // Default 0 remCalc(-8px) 0 remCalc(4px)
+$chips-delete-transition: color 300ms ease-in-out unquote(',') background 300ms ease-in-out; // Default color 300ms ease-in-out unquote(',') background 300ms ease-in-out
+$chips-contact-margin: 0 remCalc(8px) 0 remCalc(-12px); // Default 0 remCalc(8px) 0 remCalc(-12px)
+$chips-contact-transition: box-shadow 100ms ease-in-out; // Default box-shadow 100ms ease-in-out
+
+/**************************************
+ * Progress & activity
+ **************************************/
+$determinate-width: 100%; // Default 100%
+$determinate-background: rgba($main-color, .4); // Default rgba($main-color, .4)
+$determinate-height: remCalc(5px); // Default remCalc(5px)
+
+$progress-background: $main-color; // Default $main-color
+$progress-transition: width 300ms ease-in-out; // Default width 300ms ease-in-out
+
+$indeterminate-width: $determinate-width; // Default $determinate-width
+$indeterminate-background: $determinate-background; // Default $determinate-background
+$indeterminate-height: $determinate-height; // Default $determinate-height
 
 /**************************************
  * Selection controls
  **************************************/
-
 $checkbox-color: lighten($black, (100% - 54%));
 $checkbox-color-checked: $main-color; // Default $main-color
 $checkbox-size: remCalc(18.2px); // Default remCalc(18.2px)
@@ -179,7 +231,6 @@ $selection-radial-size: 2.8rem; // Default 2.8rem
 /**************************************
  * Snackbars and toasts
  **************************************/
-
 $snackbar-height: remCalc(48px); // Default remCalc(48px)
 $snackbar-font: remCalc(14px); // Default remCalc(14px)
 $snackbar-padding: remCalc(14px) remCalc(24px); // Default remCalc(14px) remCalc(24px)
@@ -237,7 +288,6 @@ $sidenav-profile-background: $secondary-color;
 /**************************************
  * Tooltips
  **************************************/
-
 $tooltip-background: $grey-700; // Default $grey-700
 $tooltip-font-color: $white; // Default $white
 $tooltip-opacity: .90; // Default .90
@@ -255,7 +305,6 @@ $tooltip-z-index: 10; // Default 10
 /**************************************
  * Grid settings
  **************************************/
-
 // Break points
 $xsmall-screen: 480px; // Small mobile
 $small-screen: 960px; // Small tablet, medium mobile

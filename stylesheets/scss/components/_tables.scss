@@ -1,6 +1,16 @@
+/**************************************
+ * Tables
+ *
+ * http://www.google.com/design/spec/components/data-tables.html
+ * TODO Fix styling
+ **************************************/
+
 table {
-	border-collapse: separate;
-	border-spacing: remCalc(56px) 0;
+	border-collapse: collapse;
+
+	tr {
+		padding: 0 remCalc(24px);
+	}
 
 	thead {
 		th {
@@ -10,6 +20,8 @@ table {
 			font-weight: 500;
 			height: remCalc(56px);
 			line-height: remCalc(56px);
+			min-width: remCalc(56px);
+			@include box-sizing(border-box);
 
 			&:hover {
 				background: none;
@@ -19,21 +31,24 @@ table {
 
 	tbody {
 		td {
+			@include box-sizing(border-box);
 			text-align: left;
 			font-size: remCalc(13px);
 			color: lighten($black, (100% - 87%));
 			font-weight: normal;
 			height: remCalc(48px);
 			line-height: remCalc(56px);
+			min-width: remCalc(56px);
 		}
 	}
 
-	tr {
-		padding: 0 remCalc(24px);
+	.sm-numeric-col {
+		text-align: right;
 	}
 
-	.sm-numeric-column {
-		text-align: right;
+	.sm-checkbox-col {
+		width: remCalc(56px);
+		padding: remCalc(24px);
 	}
 
 	&.sm-table-hover {

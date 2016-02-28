@@ -3,7 +3,7 @@
 	<head>
 		<title><?= $title; ?> | SMaterial</title>
 
-		<link rel="stylesheet" href="/stylesheets/scss/smaterial.css"> <!-- Stylesheet -->
+		<link rel="stylesheet" href="/stylesheets/scss/smaterial.css">
 		<link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico">
 
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,6 +13,13 @@
 		<meta name="author" content="Derkjan Super">
 		<meta name="description" content="<?= $description; ?>">
 		<meta name="keyword" content="<?= $keywords; ?>">
+
+		<!-- Chrome, Firefox OS and Opera -->
+		<meta name="theme-color" content="#0D47A1">
+		<!-- Windows Phone -->
+		<meta name="msapplication-navbutton-color" content="#0D47A1">
+		<!-- iOS Safari -->
+		<meta name="apple-mobile-web-app-status-bar-style" content="#0D47A1">
 	</head>
 
 	<body>

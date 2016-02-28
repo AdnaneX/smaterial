@@ -5,7 +5,7 @@ $keywords = 'material design, smaterial, progress, activity, determinate, indete
 
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>
-<section div class="sm-row">
+<section class="sm-row">
 	<h2>Progress & activity usage</h2>
 
 	<p class="sm-col sm-s12 sm-m6">
@@ -46,6 +46,31 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	<div class="sm-col sm-s12 sm-m6">
 		<div class="sm-indeterminate">
 			 <div class="sm-progress"></div>
+		</div>
+	</div>
+
+	<code class="sm-col sm-s12 sm-m6">
+		<pre>
+&lt;div class="sm-indeterminate">
+  &lt;div class="sm-progress">&lt;/div>
+&lt;/div>
+		</pre>
+	</code>
+</section>
+
+<section class="sm-row">
+	<h3>Buffer</h3>
+
+	<p class="sm-col sm-s12 sm-m6">
+
+	</p>
+
+	<div class="sm-col sm-s12 sm-m6">
+		<div class="sm-buffer">
+			<div class="sm-buffer-progress" style="width: 50%;">
+				<div class="sm-progress" style="width: 90%;"></div>
+			</div>
+			<div class="sm-buffering" style="width: 50%; left: 50%;"></div>
 		</div>
 	</div>
 </section>

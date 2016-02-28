@@ -658,28 +658,30 @@ $colors: (
 );
 
 // Create classes for each color
-@each $color_name, $color in $colors {
-	@each $color_type, $color_value in $color {
-		@if $color_type == 'base' {
-			.sm-#{$color_name} {
-				background-color: $color_value;
-			}
-			.sm-#{$color_name}-text {
-				color: $color_value;
-			}
-		} @else if $color_name == 'shades' {
-			.sm-#{$color_type} {
-				background-color: $color_value;
-			}
-			.sm-#{$color_type}-text {
-				color: $color_value;
-			}
-		} @else {
-			.sm-#{$color_name}-#{$color_type} {
-				background-color: $color_value;
-			}
-			.sm-#{$color_name}-#{$color_type}-text {
-				color: $color_value;
+@each $color-name, $color in $colors {
+	@if( in_array( $color-name, $allowed-colors ) ) {
+		@each $color-type, $color_value in $color {
+			@if $color-type == 'base' {
+				.sm-#{$color-name} {
+					background-color: $color_value;
+				}
+				.sm-#{$color-name}-text {
+					color: $color_value;
+				}
+			} @else if $color-name == 'shades' {
+				.sm-#{$color-type} {
+					background-color: $color_value;
+				}
+				.sm-#{$color-type}-text {
+					color: $color_value;
+				}
+			} @else {
+				.sm-#{$color-name}-#{$color-type} {
+					background-color: $color_value;
+				}
+				.sm-#{$color-name}-#{$color-type}-text {
+					color: $color_value;
+				}
 			}
 		}
 	}

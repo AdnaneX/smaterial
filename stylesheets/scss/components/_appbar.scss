@@ -3,6 +3,9 @@
  *
  * http://www.google.com/design/spec/layout/structure.html#structure-app-bar
  * http://www.google.com/design/spec/layout/structure.html#structure-toolbars
+ * TODO add "more menu" functions
+ * TODO add search slide out input
+ * TODO fix icon hover backgrounds to circles
  **************************************/
 
 .sm-appbar {
@@ -41,29 +44,23 @@
 	}
 
 	.sm-appbar-nav {
-		@extend .sm-col, .sm-s1;
-
-		.material-icons {
-			@media #{$small-up} {
-				padding: remCalc(16px);
-			}
-		}
+		@extend .sm-col, .sm-s2, .sm-m1;
 	}
 
 	.sm-appbar-title {
-		@extend .sm-col, .sm-s7, .sm-title;
-		padding: remCalc(12px) 0 remCalc(12px) 0 !important;
-		font-size: remCalc(24px);
+		@extend .sm-col, .sm-s6, .sm-m7, .sm-title;
+		padding: $appbar-title-small-padding;
+		font-size: $appbar-title-size;
 		color: $appbar-title;
 
 		@media #{$small-up} {
-			padding: remCalc(20px) 0 remCalc(20px) 0 !important;
+			padding: $appbar-title-medium-padding;
 		}
 
 		h1, h2, h3, h4, h5, h6 {
 			padding: 0;
 			margin: 0;
-			font-size: remCalc(24px);
+			font-size: $appbar-title-size;
 			color: $appbar-title;
 			line-height: normal;
 		}
@@ -99,13 +96,13 @@
 	}
 
 	.material-icons {
-		font-size: remCalc(32px);
-		padding: remCalc(8px);
+		font-size: $appbar-icon-font-size;
+		padding: $appbar-icon-small-padding;
 		width: auto;
 		height: auto;
 
 		@media #{$small-up} {
-			padding: remCalc(16px);
+			padding: $appbar-icon-medium-padding;
 		}
 	}
 }

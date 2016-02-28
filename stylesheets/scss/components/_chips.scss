@@ -17,14 +17,16 @@
 	font-weight: $chips-font-weight;
 
 	&-deletable {
+		@include transition($chips-delete-transition);
+
 		.sm-chip-delete {
 			@include border-radius(50%);
+			@include transition($chips-delete-transition);
 			vertical-align: middle;
 			display: inline-block;
-			width: remCalc(24px);
-			height: remCalc(24px);
-			margin-left: remCalc(4px);
-			margin-right: remCalc(-8px);
+			width: $chips-delete-size;
+			height: $chips-delete-size;
+			margin: $chips-delete-margin;
 			color: $chips-delete-cross;
 			background: $chips-delete-background;
 
@@ -45,12 +47,13 @@
 	}
 
 	&-contact {
+		@include transition($chips-contact-transition unquote(',') $chips-delete-transition);
+
 		img {
-			margin-left: remCalc(-12px);
 			@include border-radius(50%);
-			height: remCalc(32px);
-			width: remCalc(32px);
-			margin-right: remCalc(8px);
+			height: $chips-size;
+			width: $chips-size;
+			margin: $chips-contact-margin;
 		}
 
 		&:hover {
