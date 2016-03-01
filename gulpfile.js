@@ -9,6 +9,7 @@ var gulp = require('gulp'),
 
 gulp.task('scripts', function() {
 	gulp.src('js/app/*.js')
+		.pipe(plumber())
 		.pipe(jshint())
 		.pipe(sourcemaps.init())
 			.pipe(concat('app.min.js'))
@@ -17,6 +18,7 @@ gulp.task('scripts', function() {
 		.pipe(gulp.dest('js'))
 
 	gulp.src('js/vendor/*.js')
+		.pipe(plumber())
 		.pipe(jshint())
 		.pipe(sourcemaps.init())
 		.pipe(concat('vendor.min.js'))

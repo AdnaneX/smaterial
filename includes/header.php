@@ -14,12 +14,9 @@
 		<meta name="description" content="<?= $description; ?>">
 		<meta name="keyword" content="<?= $keywords; ?>">
 
-		<!-- Chrome, Firefox OS and Opera -->
-		<meta name="theme-color" content="#0D47A1">
-		<!-- Windows Phone -->
-		<meta name="msapplication-navbutton-color" content="#0D47A1">
-		<!-- iOS Safari -->
-		<meta name="apple-mobile-web-app-status-bar-style" content="#0D47A1">
+		<meta name="theme-color" content="#2196F3">
+		<meta name="msapplication-navbutton-color" content="#2196F3">
+		<meta name="apple-mobile-web-app-status-bar-style" content="#2196F3">
 	</head>
 
 	<body>
@@ -97,6 +94,11 @@
 							<li><a href="/components/tables.php">Tables</a></li>
 							<li><a href="/components/textfields.php">Text fields</a></li>
 							<li><a href="/components/tooltips.php">Tooltips</a></li>
+						</ul>
+					</li>
+					<li class="sm-sidenav-dropdown">Resources <i class="material-icons sm-right">expand_less</i>
+						<ul>
+							<li><a href="/resources/notifications.php">Notifications</a></li>
 						</ul>
 					</li>
 					<li class="sm-no-hover">

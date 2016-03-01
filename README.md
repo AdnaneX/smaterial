@@ -4,6 +4,7 @@
 
 - Global
     - Add variables to settings
+    - Add badges
 - Appbar
     - Add "more menu" styling
     - Add "more menu" functions
