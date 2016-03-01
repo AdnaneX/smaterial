@@ -23,6 +23,8 @@ button, input[type="button"], input[type="reset"], input[type="submit"], a {
 		text-align: center;
 		cursor: pointer;
 		outline: none;
+		position: relative;
+		overflow: hidden;
 
 		&:active {
 			@extend .sm-z8;
@@ -84,11 +86,12 @@ button, input[type="button"], input[type="reset"], input[type="submit"], a {
 		padding: $flat-padding;
 		margin: $flat-margin;
 		outline: none;
-		text-transform: uppercase;
 		text-decoration: none;
 		display: inline-block;
 		text-align: center;
 		cursor: pointer;
+		position: relative;
+		overflow: hidden;
 
 		.material-icons {
 			color: $flat-icon-color;

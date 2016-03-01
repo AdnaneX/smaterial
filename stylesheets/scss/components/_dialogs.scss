@@ -1,0 +1,52 @@
+/**************************************
+ * Dialogs
+ *
+ * http://www.google.com/design/spec/components/dialogs.html
+ * TODO add more JavaScript functionality (close on click outside, open by JavaScript call)
+ **************************************/
+
+.sm-dialog {
+	display: none;
+	@extend .sm-z24;
+	width: auto;
+	position: fixed;
+	z-index: 4;
+	background: $white;
+	max-width: 50%;
+
+	@media #{$medium-up} {
+		max-width: 90%;
+	}
+
+	&.active {
+		display: block;
+	}
+
+	.sm-dialog-container {
+		padding: remCalc(24px);
+
+		.sm-dialog-title {
+			@extend .sm-title;
+			margin-bottom: remCalc(20px);
+		}
+	}
+
+	.sm-dialog-actions {
+		padding: remCalc(8px);
+		height: remCalc(52px);
+		float: right;
+
+		.sm-flat-button {
+			height: remCalc(36px);
+			line-height: remCalc(36px);
+			margin: 0 remCalc(4px);
+		}
+	}
+
+	&-fullscreen {
+		top: remCalc(20px);
+		bottom: remCalc(20px);
+		left: remCalc(20px);
+		right: remCalc(20px);
+	}
+}

@@ -89,6 +89,7 @@
 							<li><a href="/components/buttons.php">Buttons</a></li>
 							<li><a href="/components/cards.php">Cards</a></li>
 							<li><a href="/components/chips.php">Chips</a></li>
+							<li><a href="/components/dialogs.php">Dialogs</a></li>
 							<li><a href="/components/progress-activity.php">Progress & activity</a></li>
 							<li><a href="/components/selection-controls.php">Selection controls</a></li>
 							<li><a href="/components/sliders.php">Slider</a></li>

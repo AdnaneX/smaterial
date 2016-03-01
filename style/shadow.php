@@ -39,7 +39,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 				<td>24</td>
 				<td><code>.sm-z24</code></td>
 				<td>
-					<p><a href="">Dialog</a></p>
+					<p><a href="/components/dialogs.php">Dialog</a></p>
 					<p><a href="">Picker</a></p>
 				</td>
 				<td><div class="sm-z24 square"></div></td>
@@ -75,7 +75,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 				<td><code>.sm-z8</code></td>
 				<td>
 					<p><a href="">Menu</a></p>
-					<p><a href="">Card (picked up state)</a></p>
+					<p><a href="/components/cards.php">Card (picked up state)</a></p>
 					<p><a href="/components/buttons.php#sm-raised-button">Raised button (pressed state)</a></p>
 				</td>
 				<td><div class="sm-z8 square"></div></td>
@@ -85,7 +85,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 				<td><code>.sm-z6</code></td>
 				<td>
 					<p><a href="/components/buttons.php#sm-floating-button">Floating action button (FAB - resting elevation)</a></p>
-					<p><a href="">Snackbar</a></p>
+					<p><a href="/components/snackbars-toasts.php">Snackbar</a></p>
 				</td>
 				<td><div class="sm-z6 square"></div></td>
 			</tr>
@@ -110,7 +110,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 				<td>2</td>
 				<td><code>.sm-z2</code></td>
 				<td>
-					<p><a href="">Card (resting elevation)</a></p>
+					<p><a href="/components/cards.php">Card (resting elevation)</a></p>
 					<p><a href="/components/buttons.php#sm-raised-button">Raised button (resting elevation)</a></p>
 					<p><a href="">Quick entry / Search bar (resting elevation)</a></p>
 					<p><a href="/components/chips.php">Chips (contact chip hovered and pressed)</a></p>
@@ -121,7 +121,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 				<td>1</td>
 				<td><code>.sm-z1</code></td>
 				<td>
-					<p><a href="">Switch</a></p>
+					<p><a href="/components/selection-controls.php">Switch</a></p>
 				</td>
 				<td><div class="sm-z1 square"></div></td>
 			</tr>

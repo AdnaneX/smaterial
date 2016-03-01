@@ -1,0 +1,52 @@
+**SMaterial**
+
+**TODO**
+    - Global
+        - Add variables to settings
+    - Appbar
+        - Add "more menu" styling
+        - Add "more menu" functions
+        - Add search slide out
+        - Fix icon hover / click to circles
+    - Buttons
+        - Add dropdown buttons 
+    - Cards
+        - Add more styling to cards
+        - Add more varieties of cards
+    - Chips
+        - Change size of delete icon
+    - Dialogs
+        - Add more JavaScript functionality (open / close by JavaScript call)
+    - Grid
+        - Add xs-column styling
+        - Add xl-column styling
+    - Progress
+        - Fix buffer animation
+    - Selection
+        - Add hovers
+        - Add radials for mobile
+        - Add animation of thumb sliding
+    - Settings
+        - Make variables consistent
+        - Give variables a clearer name of what they do
+        - Check all colors for (lighten() or rgba())
+        - Divide variables for components
+        - Add comments for divided variables
+        - Add settings in documentation
+        - Move color import from "_settings.scss" to "smaterial.scss"
+    - Sidenav
+        - Make profile dropdown button
+        - Fix margin right on left menu for mobile. 56px between screen and menu
+    - Slider
+        - Fix styling
+    - Tables
+        - Fix styling
+        - Add table title
+        - Add pagination
+    - Text fields
+        - Fix label click on single-line input
+        - Add select
+        - Add autocomplete select
+        - Add autocomplete input
+        - Add slide out search
+        - Add dropdown search
