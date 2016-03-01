@@ -1,6 +1,7 @@
 **SMaterial**
 
 **TODO**
+
     - Global
         - Add variables to settings
     - Appbar
