@@ -5,11 +5,11 @@
 - Global
     - Add variables to settings
     - Add badges
+    - Fix mobile styling (in Chrome for Android when scrolling a page , at the bottom the page moves up with the title bar)
 - Appbar
     - Add "more menu" styling
     - Add "more menu" functions
     - Add search slide out
-    - Fix icon hover / click to circles
 - Buttons
     - Add dropdown buttons 
 - Cards

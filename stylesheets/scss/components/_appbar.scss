@@ -5,7 +5,6 @@
  * http://www.google.com/design/spec/layout/structure.html#structure-toolbars
  * TODO add "more menu" functions
  * TODO add search slide out input
- * TODO fix icon hover backgrounds to circles
  **************************************/
 
 .sm-appbar {
@@ -15,7 +14,7 @@
 	width: 100%;
 	height: $appbar-small-height;
 	line-height: normal;
-	position: relative;
+	position: fixed;
 	z-index: 1;
 
 	@media #{$small-up} {
@@ -26,9 +25,24 @@
 		height: $appbar-large-height;
 	}
 
+	.material-icons {
+		font-size: $appbar-icon-font-size;
+		padding: $appbar-icon-small-padding;
+		width: auto;
+		height: auto;
+
+		@media #{$small-up} {
+			padding: $appbar-icon-medium-padding;
+		}
+	}
+
 	> div {
 		height: $appbar-small-height;
 		padding: 0 !important;
+
+		a {
+			color: $appbar-text;
+		}
 
 		@media #{$small-up} {
 			height: $appbar-medium-height;
@@ -37,14 +51,15 @@
 		@media #{$medium-up} {
 			height: $appbar-large-height;
 		}
-
-		a {
-			color: $appbar-text;
-		}
 	}
 
 	.sm-appbar-nav {
 		@extend .sm-col, .sm-s2, .sm-m1;
+
+		a {
+			position: absolute;
+			overflow: hidden;
+		}
 	}
 
 	.sm-appbar-title {
@@ -68,12 +83,11 @@
 
 	.sm-appbar-actions {
 		@extend .sm-col, .sm-s3;
-		.material-icons {
-			float: right;
 
-			&:hover {
-				background: $appbar-hover;
-			}
+		a {
+			float: right;
+			position: relative;
+			overflow: hidden;
 		}
 
 		.sm-appbar-search {
@@ -86,23 +100,9 @@
 	.sm-appbar-menu {
 		@extend .sm-col, .sm-s1;
 
-		.material-icons {
-			float: right;
-
-			&:hover {
-				background: $appbar-hover;
-			}
-		}
-	}
-
-	.material-icons {
-		font-size: $appbar-icon-font-size;
-		padding: $appbar-icon-small-padding;
-		width: auto;
-		height: auto;
-
-		@media #{$small-up} {
-			padding: $appbar-icon-medium-padding;
+		a {
+			position: absolute;
+			overflow: hidden;
 		}
 	}
 }

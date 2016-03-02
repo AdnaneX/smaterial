@@ -22,7 +22,7 @@
 	<body>
 		<header class="sm-appbar">
 			<div class="sm-appbar-nav">
-				<a href="#" id="sm-nav-button" data-sm-trigger="sm-sidenav"><i class="material-icons">menu</i></a>
+				<a href="#" id="sm-nav-button" data-sm-trigger="sm-sidenav"><i class="material-icons sm-ripple">menu</i></a>
 			</div>
 
 			<div class="sm-appbar-title">
@@ -31,7 +31,7 @@
 
 			<div class="sm-appbar-actions">
 				<div class="sm-appbar-search">
-					<a href="#"><i class="material-icons">search</i></a>
+					<a href="#" class="sm-ripple"><i class="material-icons">search</i></a>
 
 					<form action="<?= $_SERVER['SERVER_SELF']; ?>" method="post">
 						<input type="search" name="search">
@@ -40,7 +40,7 @@
 			</div>
 
 			<div class="sm-appbar-menu">
-				<a href="#" id="sm-menu-button" class="sm-dropdown" data-sm-trigger="sm-nav-more"><i class="material-icons">more_vert</i></a>
+				<a href="#" id="sm-menu-button" class="sm-dropdown sm-ripple" data-sm-trigger="sm-nav-more"><i class="material-icons">more_vert</i></a>
 
 				<ul id="sm-nav-more">
 					<li>Example</li>
