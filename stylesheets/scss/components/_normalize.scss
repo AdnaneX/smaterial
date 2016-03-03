@@ -1,11 +1,13 @@
 /**************************************
- * Remove default styles
+ * Remove browser default styles
  **************************************/
 
 html, body {
 	margin: 0;
 	padding: 0;
+}
 
+body {
 	h1, h2, h3, h4, h5, h6 {
 		word-wrap: break-word;
 	}
@@ -48,6 +50,7 @@ html, body {
 		@media #{$medium-up} {
 			left: $sidenav-width;
 			top: remCalc(64px);
+			margin-left: remCalc(10px);
 		}
 	}
 
@@ -83,6 +86,7 @@ html, body {
 			color: lighten($black, (100% - 87%));
 			height: auto;
 			line-height: remCalc(48px);
+			padding: 0 remCalc(16px);
 
 			a {
 				font-weight: 500;

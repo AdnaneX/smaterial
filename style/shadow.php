@@ -50,7 +50,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 				<td>
 					<p><a href="/components/sidenav.php">Nav drawer (sidenav)</a></p>
 					<p><a href="/components/sidenav.php">Right drawer</a></p>
-					<p><a href="">Modal bottom sheet</a></p>
+					<p><a href="/components/bottom-sheet.php">Modal bottom sheet</a></p>
 				</td>
 				<td><div class="sm-z16 square"></div></td>
 			</tr>

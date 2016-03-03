@@ -4,12 +4,10 @@
  * https://www.google.com/design/spec/components/dividers.html#dividers-types-of-dividers
  * http://www.google.com/design/spec/layout/structure.html#structure-side-nav
  * http://www.google.com/design/spec/patterns/navigation-drawer.html
- * TODO Make profile drop down button
- * TODO Fix margin right on left menu for mobile
  */
 
 .sm-sidenav {
-	position: absolute;
+	position: fixed;
 	background: $sidenav-background;
 	padding: $sidenav-padding;
 	bottom: 0;

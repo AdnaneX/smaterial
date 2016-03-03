@@ -1,6 +1,6 @@
 <?php
 $title = 'Home';
-$description = 'Home of SMaterial. The CSS framework based on Googles Material Design';
+$description = 'Home of SMaterial. The (S)CSS framework based on Googles Material Design';
 $keywords = 'material design, smaterial, css framework';
 
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
@@ -15,7 +15,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="sm-row">
-	<article class="sm-col sm-s12 sm-m6">
+	<div class="sm-col sm-s12 sm-m6">
 		<div class="sm-col sm-s12 sm-center">
 			<i class="material-icons sm-blue-text sm-48">build</i>
 		</div>
@@ -29,9 +29,9 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 			For CSS there is always a prefix to prevent overwriting classes.
 			Because it's open-source feel free to <a href="https://github.com/SuperDJ/smaterial" target="_blank">commit</a> your additions and or problems.
 		</div>
-	</article>
+	</div>
 
-	<article class="sm-col sm-s12 sm-m6">
+	<div class="sm-col sm-s12 sm-m6">
 		<div class="sm-col sm-s12 sm-center">
 			<i class="material-icons sm-blue-text sm-48">accessibility</i>
 		</div>
@@ -44,7 +44,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 			Because the framework is based on Material Design users who are already familiar with Android will have no trouble
 			getting to know your website.
 		</div>
-	</article>
+	</div>
 </section>
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.php';

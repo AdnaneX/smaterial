@@ -3,13 +3,21 @@
 **TODO**
 
 - Global
+    - Add black theme support
     - Add variables to settings
     - Add badges
-    - Fix mobile styling (in Chrome for Android when scrolling a page , at the bottom the page moves up with the title bar)
+    - Fix mobile styling (in Chrome for Android when scrolling a page the title bar remains visible)
+    - Check all list styles to prevent duplicate styling and therefor load speed
+    - When an item can be triggered by clicking work with JavaScript to set an active class. 
+    Use 1 class for all triggers. With the active class make slideup and slidedown action
 - Appbar
     - Add "more menu" styling
     - Add "more menu" functions
     - Add search slide out
+- Bottom sheet
+    - Add music styling
+    - Fix position (it's now under sidenav)
+    - Fix shadow
 - Buttons
     - Add dropdown buttons 
 - Cards
@@ -39,6 +47,7 @@
 - Sidenav
     - Make profile dropdown button
     - Fix margin right on left menu for mobile. 56px between screen and menu
+    - Fix shadow
 - Slider
     - Fix styling
 - Tables
@@ -52,3 +61,5 @@
     - Add autocomplete input
     - Add slide out search
     - Add dropdown search
+- Normalize
+    - Add default list style

@@ -1,0 +1,98 @@
+/**************************************
+ * Bottom sheet / modal
+ *
+ * http://www.google.com/design/spec/components/bottom-sheets.html
+ **************************************/
+
+.sm-bottom-sheet {
+	@extend .sm-z16;
+	position: fixed;
+	background: $white;
+    z-index: 4;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: auto;
+	overflow: hidden;
+	padding: remCalc(8px) remCalc(16px);
+	font-weight: 400;
+	font-size: remCalc(16px);
+	display: none;
+
+	ul {
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+
+		li {
+			padding: 0;
+			font-weight: 400;
+			font-size: remCalc(16px);
+
+			.material-icons {
+				vertical-align: middle;
+				height: auto;
+				margin-right: remCalc(32px);
+				font-size: remCalc(24px);
+				color: lighten($black, 100% - 54%);
+			}
+		}
+	}
+
+	&-header {
+		padding: 0 remCalc(16px) remCalc(8px) remCalc(16px);
+
+		ul {
+			li {
+				&.sm-header {
+					height: remCalc(56px);
+					color: lighten($black, 100% - 54%);
+				}
+
+				&.sm-divider {
+					height: remCalc(1px);
+					background: lighten($black, 100% - 54%);
+					margin: remCalc(7px) remCalc(-16px) remCalc(8px) remCalc(-16px);
+				}
+			}
+		}
+	}
+
+	&-grid {
+		padding: remCalc(16px) remCalc(24px) remCalc(24px) remCalc(24px);
+
+		ul {
+			li {
+				height: remCalc(64px);
+				margin-bottom: remCalc(16px);
+
+				&:last-of-type {
+					margin-bottom: 0;
+				}
+
+				.sm-grid-item {
+					@extend .sm-col, .sm-s6, .sm-m4;
+					padding: 0;
+
+					.sm-grid-icon {
+						@extend .sm-center;
+
+						.material-icons {
+							vertical-align: middle;
+							height: auto;
+							font-size: remCalc(48px);
+							width: remCalc(48px);
+							margin: 0;
+						}
+					}
+
+					.sm-grid-content {
+						@extend .sm-center;
+						height: remCalc(16px);
+						line-height: remCalc(16px);
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,14 +1,3 @@
-/*
- * TODO set all settings in variables here
- * TODO Make variables consistent
- * TODO Give variables a clearer name to what they do
- * TODO Check all colors if it should be lighten(), or rgba()
- * TODO Divide variables for each component
- * TODO Add comment for divided variables
- * TODO Add settings in documentation
- * TODO Remove "@import 'colors'" to "smaterial.scss"
- */
-
 /**************************************
  * Colors
  **************************************/
@@ -38,7 +27,7 @@ $link-hover: $secondary-color;
 /**************************************
  * Global
  **************************************/
-$select-background: $cyan-100;
+$select-background: $cyan-a200;
 
 /**************************************
  * Typography settings

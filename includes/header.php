@@ -8,9 +8,9 @@
 
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<meta name="language" content="english">
-		<meta http-equiv="language" content="EN-US">
-		<meta name="author" content="Derkjan Super">
+		<meta charset="UTF-8">
+		<meta name="language" content="EN">
+		<meta name="author" content="SMaterial">
 		<meta name="description" content="<?= $description; ?>">
 		<meta name="keyword" content="<?= $keywords; ?>">
 
@@ -33,16 +33,16 @@
 				<div class="sm-appbar-search">
 					<a href="#" class="sm-ripple"><i class="material-icons">search</i></a>
 
-					<form action="<?= $_SERVER['SERVER_SELF']; ?>" method="post">
+					<form action="<?= $_SERVER['PHP_SELF']; ?>" method="post">
 						<input type="search" name="search">
 					</form>
 				</div>
 			</div>
 
 			<div class="sm-appbar-menu">
-				<a href="#" id="sm-menu-button" class="sm-dropdown sm-ripple" data-sm-trigger="sm-nav-more"><i class="material-icons">more_vert</i></a>
+				<a href="#" class="sm-nav-more sm-ripple" data-sm-trigger="sm-nav-more"><i class="material-icons">more_vert</i></a>
 
-				<ul id="sm-nav-more">
+				<ul class="sm-appbar-menu-more" id="sm-nav-more">
 					<li>Example</li>
 				</ul>
 			</div>
@@ -81,6 +81,7 @@
 					</li>
 					<li class="sm-sidenav-dropdown">Components <i class="material-icons sm-right">expand_less</i>
 						<ul>
+							<li><a href="/components/bottom-sheet.php">Bottom sheet</a></li>
 							<li><a href="/components/sidenav.php">Sidenav</a></li>
 							<li><a href="/components/appbar.php">Appbar</a></li>
 							<li><a href="/components/buttons.php">Buttons</a></li>

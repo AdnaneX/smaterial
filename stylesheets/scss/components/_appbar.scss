@@ -3,8 +3,6 @@
  *
  * http://www.google.com/design/spec/layout/structure.html#structure-app-bar
  * http://www.google.com/design/spec/layout/structure.html#structure-toolbars
- * TODO add "more menu" functions
- * TODO add search slide out input
  **************************************/
 
 .sm-appbar {
@@ -63,7 +61,7 @@
 	}
 
 	.sm-appbar-title {
-		@extend .sm-col, .sm-s6, .sm-m7, .sm-title;
+		@extend .sm-col, .sm-s5, .sm-m7, .sm-title;
 		padding: $appbar-title-small-padding;
 		font-size: $appbar-title-size;
 		color: $appbar-title;
@@ -98,11 +96,24 @@
 	}
 
 	.sm-appbar-menu {
-		@extend .sm-col, .sm-s1;
+		@extend .sm-col, .sm-s2, .sm-m1;
 
 		a {
 			position: absolute;
 			overflow: hidden;
+		}
+
+		&-more {
+			display: none;
+			@extend .sm-z9;
+			background: $white;
+			position: absolute;
+			top: remCalc(4px);
+			right: remCalc(4px);
+			width: auto;
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
 		}
 	}
 }
