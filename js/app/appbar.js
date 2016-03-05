@@ -1,4 +1,5 @@
 $(document).ready(function() {
+	// More menu trigger functions
 	$('.sm-nav-more').click(function() {
 		var $this = $(this),
 			$more = $('#'+$this.data('sm-trigger'));
@@ -19,5 +20,10 @@ $(document).ready(function() {
 				$more.slideUp();
 			}
 		}
+	});
+
+	// Search trigger functions
+	$('.sm-search-trigger').click(function() {
+		$('.sm-')
 	});
 });

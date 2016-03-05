@@ -20,6 +20,7 @@
     - Fix shadow
 - Buttons
     - Add dropdown buttons 
+    - Fix link button styling
 - Cards
     - Add more styling to cards
     - Add more varieties of cards
@@ -55,7 +56,8 @@
     - Add table title
     - Add pagination
 - Text fields
-    - Fix label click on single-line input
+    - Fix label click on single-line input (When clicked on label input not active)
+    - Fix icon color on single-line input when active color icon
     - Add select
     - Add autocomplete select
     - Add autocomplete input

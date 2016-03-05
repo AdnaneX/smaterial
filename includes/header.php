@@ -30,8 +30,8 @@
 			</div>
 
 			<div class="sm-appbar-actions">
-				<div class="sm-appbar-search">
-					<a href="#" class="sm-ripple"><i class="material-icons">search</i></a>
+				<div class="sm-search-input">
+					<a href="#" class="sm-ripple sm-search-trigger"><i class="material-icons">search</i></a>
 
 					<form action="<?= $_SERVER['PHP_SELF']; ?>" method="post">
 						<input type="search" name="search">
@@ -81,18 +81,21 @@
 					</li>
 					<li class="sm-sidenav-dropdown">Components <i class="material-icons sm-right">expand_less</i>
 						<ul>
-							<li><a href="/components/bottom-sheet.php">Bottom sheet</a></li>
-							<li><a href="/components/sidenav.php">Sidenav</a></li>
 							<li><a href="/components/appbar.php">Appbar</a></li>
+							<li><a href="/components/bottom-sheet.php">Bottom sheet</a></li>
 							<li><a href="/components/buttons.php">Buttons</a></li>
 							<li><a href="/components/cards.php">Cards</a></li>
 							<li><a href="/components/chips.php">Chips</a></li>
 							<li><a href="/components/dialogs.php">Dialogs</a></li>
+							<li><a href="/components/pickers.php">Pickers</a></li>
 							<li><a href="/components/progress-activity.php">Progress & activity</a></li>
 							<li><a href="/components/selection-controls.php">Selection controls</a></li>
+							<li><a href="/components/sidenav.php">Sidenav</a></li>
 							<li><a href="/components/sliders.php">Slider</a></li>
 							<li><a href="/components/snackbars-toasts.php">Snackbar & toasts</a></li>
+							<li><a href="/components/steppers.php">Steppers</a></li>
 							<li><a href="/components/tables.php">Tables</a></li>
+							<li><a href="/components/tabs.php">Tabs</a></li>
 							<li><a href="/components/textfields.php">Text fields</a></li>
 							<li><a href="/components/tooltips.php">Tooltips</a></li>
 						</ul>
@@ -100,8 +103,11 @@
 					<li class="sm-sidenav-dropdown">Resources <i class="material-icons sm-right">expand_less</i>
 						<ul>
 							<li><a href="/resources/notifications.php">Notifications</a></li>
+							<li><a href="/resources/templates.php">Templates</a></li>
+							<li><a href="/resources/links.php">Links</a></li>
 						</ul>
 					</li>
+					<li><a href="/showroom.php">Showroom</a></li>
 					<li class="sm-no-hover">
 						<div class="addthis_sharing_toolbox"></div>
 					</li>

@@ -179,7 +179,7 @@
 		}
 
 		&.sm-disabled {
-			border-bottom: remCalc(2px) dotted $grey
+			border-bottom: remCalc(2px) dotted $grey;
 		}
 	}
 
@@ -194,6 +194,25 @@
 
 		&.sm-active {
 			display: none;
+		}
+	}
+}
+
+input[type="text"], input[type="password"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="url"] {
+	&:required + label:after {
+		content: ' *';
+		@include transition(color 300ms ease-in-out);
+	}
+
+	&:active, &:focus {
+		&:required + label:after{
+			color: $red;
+		}
+	}
+
+	&.active {
+		&:required + label:after {
+			color: $red;
 		}
 	}
 }

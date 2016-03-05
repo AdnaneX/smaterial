@@ -11,6 +11,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	<p class="sm-col sm-s12 sm-m6">
 		There are numerous text fields you can use.
 		The textfields and the options you can use are listed below.
+		<strong>NOTE*</strong> that the label should always be below the input.
 	</p>
 </section>
 
@@ -76,6 +77,48 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
   &lt;input type="text" id="disabled" class="sm-disabled">
   &lt;label for="disabled">Disabled&lt;/label>
 &lt;/div>
+		</pre>
+	</code>
+</section>
+
+<section class="sm-row">
+	<h3>Form example</h3>
+
+	<div class="sm-col sm-s12 sm-m3">
+		<form action="<?= $_SERVER['PHP_SELF']; ?>" method="post">
+			<div class="sm-floating-input">
+				<input type="text" name="name" id="name" required>
+				<label for="name">Name</label>
+			</div>
+
+			<div class="sm-floating-input">
+				<input type="email" name="email" id="email" required>
+				<label for="email">Email</label>
+			</div>
+
+			<input type="submit" class="sm-raised-button">
+		</form>
+	</div>
+
+	<div class="sm-col sm-s12 sm-push-m3 sm-m6">
+		The <span class="sm-red-text">*</span> is automatically added by required fields but can easily be turned off.
+	</div>
+
+	<code class="sm-col sm-s12 sm-push-m3 sm-m6">
+		<pre>
+&lt;form action="" method="post">
+  &lt;div class="sm-floating-input">
+    &lt;input type="text" name="name" id="name" required>
+    &lt;label for="name">Name&lt;/label>
+  &lt;/div>
+
+  &lt;div class="sm-floating-input">
+    &lt;input type="email" name="email" id="email" required>
+    &lt;label for="email">Email&lt;/label>
+  &lt;/div>
+
+  &lt;input type="submit" class="sm-raised-button">
+&lt;/form>
 		</pre>
 	</code>
 </section>
