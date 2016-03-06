@@ -79,7 +79,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 			</tr>
 			<tr>
 				<td>.sm-label</td>
-				<td><a href="/components/form.php">Form labels</a></td>
+				<td><a href="/components/textfields.php">Form labels</a></td>
 			</tr>
 			<tr>
 				<td>.sm-menu</td>

@@ -9,6 +9,8 @@ input[type="checkbox"] {
 		display: none;
 
 		+ label {
+			position: relative;
+
 			&:before {
 				@extend .material-icons;
 				display: inline-block;
@@ -19,6 +21,8 @@ input[type="checkbox"] {
 				line-height: $checkbox-size;
 				margin-right: $checkbox-margin;
 				color: $checkbox-color;
+				z-index: 2;
+				position: inherit;
 			}
 		}
 
@@ -29,23 +33,32 @@ input[type="checkbox"] {
 					color: $checkbox-color-checked;
 				}
 
-				/*
+
 				@media #{$medium-down} {
 					&:after {
 						content: '';
 						background: $selection-radial-color;
 						width: $selection-radial-size;
 						height: $selection-radial-size;
+						left: -0.5rem;
+						position: absolute;
 						@include border-radius(50%);
+						z-index: 1;
 					}
-				}*/
+				}
+			}
+		}
+
+		&:focus {
+			+ label {
+
 			}
 		}
 
 		&-disabled {
 			+ label {
 				&:before {
-			 		color: lighten($black, (100% - 26%));
+			 		color: $checkbox-disabled-color;
 				}
 			}
 
@@ -53,7 +66,7 @@ input[type="checkbox"] {
 				+ label {
 					&:before {
 						content: 'check_box';
-						color: lighten($black, (100% - 26%));
+						color: $checkbox-disabled-color;
 					}
 				}
 			}
@@ -91,7 +104,7 @@ input[type="radio"] {
 		&-disabled {
 			+ label {
 				&:before {
-					color: lighten($black, (100% - 26%));
+					color: $radio-disabled-color;
 				}
 			}
 
@@ -99,7 +112,7 @@ input[type="radio"] {
 				+ label {
 					&:before {
 						content: 'check_box';
-						color: lighten($black, (100% - 26%));
+						color: $radio-disabled-color;
 					}
 				}
 			}
