@@ -17,7 +17,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	<h3>Style</h3>
 
 	<div class="sm-col sm-s12 sm-m6">
-		<h4>Color</h4>
+		<h4><a href="/style/color.php">Color</a></h4>
 
 		<ul>
 			<li><a href="http://www.google.com/design/spec/style/color.html#color-color-palette" target="_blank">Material Design color palette specs</a></li>
@@ -25,7 +25,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	</div>
 
 	<div class="sm-col sm-s12 sm-m6">
-		<h4>Icons</h4>
+		<h4><a href="/style/icons.php">Icons</a></h4>
 
 		<ul>
 			<li><a href="http://www.google.com/design/spec/style/icons.html" target="_blank">Material Design icons specs</a></li>
@@ -35,20 +35,20 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	</div>
 
 	<div class="sm-col sm-s12 sm-m6">
-		<h4>Shadows & elevation</h4>
+		<h4><a href="/style/shadow.php">Shadows & elevation</a></h4>
 
 		<ul>
 			<li><a href="http://www.google.com/design/spec/what-is-material/elevation-shadows.html" target="_blank">Material Design shadows & elevation specs</a></li>
-			<li><a href="https://jsfiddle.net/crkb906z/1/" target="_blank">Shadows based on</a></li>
+			<li><a href="https://jsfiddle.net/crkb906z/1/" target="_blank">Shadows based on fiddle</a></li>
 		</ul>
 	</div>
 
 	<div class="sm-col sm-s12 sm-m6">
-		<h4>Typography</h4>
+		<h4><a href="/style/typography.php">Typography</a></h4>
 
 		<ul>
 			<li><a href="http://www.google.com/design/spec/style/typography.html" target="_blank">Material Design typography specs</a></li>
-			<li><a href="http://codepen.io/zavoloklom/pen/IkaFL/" target="_blank">Typography based on</a></li>
+			<li><a href="http://codepen.io/zavoloklom/pen/IkaFL/" target="_blank">Typography based on pen</a></li>
 		</ul>
 	</div>
 </section>
@@ -57,11 +57,117 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	<h3>Components</h3>
 
 	<div class="sm-col sm-s12 sm-m6">
-		<h4>Appbar</h4>
+		<h4><a href="/components/appbar.php">Appbar</a></h4>
 
 		<ul>
-			<li><a href="http://www.google.com/design/spec/layout/structure.html#structure-app-bar" target="_blank">Material Design appbar spec</a></li>
-			<li><a href="http://www.google.com/design/spec/layout/structure.html#structure-toolbars" target="_blank">Material Design toolbar spec</a></li>
+			<li><a href="http://www.google.com/design/spec/layout/structure.html#structure-app-bar" target="_blank">Material Design appbar specs</a></li>
+			<li><a href="http://www.google.com/design/spec/layout/structure.html#structure-toolbars" target="_blank">Material Design toolbar specs</a></li>
+		</ul>
+	</div>
+
+	<div class="sm-col sm-s12 sm-m6">
+		<h4><a href="/components/bottom-sheet.php">Bottom sheet</a></h4>
+
+		<ul>
+			<li><a href="http://www.google.com/design/spec/components/bottom-sheets.html" target="_blank">Material Design bottom sheet specs</a></li>
+		</ul>
+	</div>
+
+	<div class="sm-col sm-s12 sm-m6">
+		<h4><a href="/components/buttons.php">Buttons</a></h4>
+
+		<ul>
+			<li><a href="http://www.google.com/design/spec/components/buttons.html" target="_blank">Material Design buttons specs</a></li>
+			<li><a href="http://www.google.com/design/spec/components/buttons-floating-action-button.html" target="_blank">Material Design floating action button specs</a></li>
+		</ul>
+	</div>
+
+	<div class="sm-col sm-s12 sm-m6">
+		<h4><a href="/components/cards.php">Cards</a></h4>
+
+		<ul>
+			<li><a href="http://www.google.com/design/spec/components/cards.html#cards-usage" target="_blank">Material Design cards specs</a></li>
+		</ul>
+	</div>
+
+	<div class="sm-col sm-s12 sm-m6">
+		<h4><a href="/components/chips.php">Chips</a></h4>
+
+		<ul>
+			<li><a href="http://www.google.com/design/spec/components/chips.html" target="_blank">Material Design chips specs</a></li>
+		</ul>
+	</div>
+
+	<div class="sm-col sm-s12 sm-m6">
+		<h4><a href="/components/dialogs.php">Dialogs</a></h4>
+
+		<ul>
+			<li><a href="http://www.google.com/design/spec/components/dialogs.html" target="_blank">Material Design dialog specs</a></li>
+		</ul>
+	</div>
+
+	<div class="sm-col sm-s12 sm-m6">
+		<h4><a href="/components/progress-activity.php">Progress & activity</a></h4>
+
+		<ul>
+			<li><a href="http://www.google.com/design/spec/components/progress-activity.html" target="_blank">Material Design progress & activity</a></li>
+		</ul>
+	</div>
+
+	<div class="sm-col sm-s12 sm-m6">
+		<h4><a href="/components/selection-controls.php">Selection controls</a></h4>
+
+		<ul>
+			<li><a href="http://www.google.com/design/spec/components/selection-controls.html" target="_blank">Material Design selection controls specs</a></li>
+		</ul>
+	</div>
+
+	<div class="sm-col sm-s12 sm-m6">
+		<h4><a href="/components/sidenav.php">Sidenav</a></h4>
+
+		<ul>
+			<li><a href="http://www.google.com/design/spec/layout/structure.html#structure-side-nav" target="_blank">Material Design side nav specs</a></li>
+			<li><a href="http://www.google.com/design/spec/patterns/navigation-drawer.html" target="_blank">Material Design navigation drawer specs</a></li>
+		</ul>
+	</div>
+
+	<div class="sm-col sm-s12 sm-m6">
+		<h4><a href="/components/sliders.php">Sliders</a></h4>
+
+		<ul>
+			<li><a href="http://www.google.com/design/spec/components/sliders.html" target="_blank">Material Design sliders specs</a></li>
+		</ul>
+	</div>
+
+	<div class="sm-col sm-s12 sm-m6">
+		<h4><a href="/components/snackbars-toasts.php">Snackbars & toasts</a></h4>
+
+		<ul>
+			<li><a href="http://www.google.com/design/spec/components/snackbars-toasts.html" target="_blank"></a>Material Design snackbars & toasts specs</li>
+		</ul>
+	</div>
+
+	<div class="sm-col sm-s12 sm-m6">
+		<h4><a href="/components/tables.php">Tables</a></h4>
+
+		<ul>
+			<li><a href="http://www.google.com/design/spec/components/data-tables.html" target="_blank">Material Design (data)tables specs</a></li>
+		</ul>
+	</div>
+
+	<div class="sm-col sm-s12 sm-m6">
+		<h4><a href="/components/textfields.php">Text fields</a></h4>
+
+		<ul>
+			<li><a href="http://www.google.com/design/spec/components/text-fields.html" target="_blank">Material Design text field specs</a></li>
+		</ul>
+	</div>
+
+	<div class="sm-col sm-s12 sm-m6">
+		<h4><a href="/components/tooltips.php">Tooltips</a></h4>
+
+		<ul>
+			<li><a href="http://www.google.com/design/spec/components/tooltips.html" target="_blank">Material Design tooltip specs</a></li>
 		</ul>
 	</div>
 </section>
