@@ -1,6 +1,6 @@
 <?php
 $title = 'Home';
-$description = 'Home of SMaterial. The (S)CSS framework based on Googles Material Design';
+$description = 'Home of SMaterial. The (S)CSS framework based on Google\'s Material Design';
 $keywords = 'material design, smaterial, css framework';
 
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
@@ -9,7 +9,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	<h2>SMaterial</h2>
 
 	<p class="sm-col sm-s12">
-		SMaterial is a <a href="http://www.google.com/design/spec/material-design/introduction.html" target="_blank">Googles Material Design</a> inspired CSS framework.
+		SMaterial is a <a href="http://www.google.com/design/spec/material-design/introduction.html" target="_blank">Google's Material Design</a> inspired CSS framework.
 		It is build as responsive mobile first and is easily changed with <a href="http://sass-lang.com/" target="_blank">SCSS</a> variables.
 	</p>
 </section>
@@ -27,7 +27,9 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		<div class="sm-col sm-s12">
 			The framework is build with SCSS and there for easy customizable with variables.
 			For CSS there is always a prefix to prevent overwriting classes.
-			Because it's open-source feel free to <a href="https://github.com/SuperDJ/smaterial" target="_blank">commit</a> your additions and or problems.
+			All actions that are done by JavaScript are made in vanilla js or with jQuery so you don't need to depend on other libraries or frameworks.
+			The use of <a href="http://gulpjs.com/" target="_blank">Gulp</a> should also speed up your development.
+			Because SMaterial is open-source feel free to <a href="https://github.com/SuperDJ/smaterial" target="_blank">commit</a> your additions and or problems.
 		</div>
 	</div>
 

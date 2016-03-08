@@ -1,6 +1,6 @@
 <?php
 $title = 'Selection controls';
-$description = 'Selection controls based on Googles Material Design';
+$description = 'Selection controls based on Google\'s Material Design';
 $keywords = 'material design, smaterial, selection controls, checkbox, radiobutton, switch';
 
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';

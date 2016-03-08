@@ -1,7 +1,7 @@
 <?php
 $title = 'Typography';
-$description = 'Typography of material design';
-$keywords = 'material design, smaterial, typography, roboto, noto, font';
+$description = 'Typography styled to match Google\'s Material Design';
+$keywords = 'material design, smaterial, typography, roboto, font';
 
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>

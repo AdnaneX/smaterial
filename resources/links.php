@@ -56,7 +56,14 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 <section class="sm-row">
 	<h3>Components</h3>
 
+	<div class="sm-col sm-s12 sm-m6">
+		<h4>Appbar</h4>
 
+		<ul>
+			<li><a href="http://www.google.com/design/spec/layout/structure.html#structure-app-bar" target="_blank">Material Design appbar spec</a></li>
+			<li><a href="http://www.google.com/design/spec/layout/structure.html#structure-toolbars" target="_blank">Material Design toolbar spec</a></li>
+		</ul>
+	</div>
 </section>
 
 <?php

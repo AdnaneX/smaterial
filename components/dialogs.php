@@ -1,6 +1,6 @@
 <?php
 $title = 'Dialogs';
-$description = 'Dialogs based on Googles Material Design';
+$description = 'Dialogs based on Google\'s Material Design';
 $keywords = 'material design, smaterial, dialogs';
 
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';

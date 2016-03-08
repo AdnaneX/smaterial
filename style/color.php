@@ -1,6 +1,6 @@
 <?php
 $title = 'Color';
-$description = 'Colors swatches of material design';
+$description = 'Colors swatches based on Google\'s Material Design';
 $keywords = 'material design, smaterial, color, swatches, material colors';
 
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';

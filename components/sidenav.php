@@ -1,6 +1,6 @@
 <?php
 $title = 'Sidenav';
-$description = 'Sidenav with profile and icon support';
+$description = 'Sidenav with profile and icon support based on Google\'s Material Design';
 $keywords = 'material design, smaterial, sidenav, profile, profile';
 
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';

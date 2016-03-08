@@ -10,7 +10,7 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta charset="UTF-8">
 		<meta name="language" content="EN">
-		<meta name="author" content="SMaterial">
+		<meta name="author" content="Derkjan Super">
 		<meta name="description" content="<?= $description; ?>">
 		<meta name="keyword" content="<?= $keywords; ?>">
 

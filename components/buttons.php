@@ -1,6 +1,6 @@
 <?php
 $title = 'Buttons';
-$description = 'Buttons based on Googles Material Design';
+$description = 'Buttons based on Google\'s Material Design';
 $keywords = 'material design, smaterial, buttons, floating button, flat button, raised button, icon toggle, floating, flat, raised';
 
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';

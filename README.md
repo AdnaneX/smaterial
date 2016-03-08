@@ -9,7 +9,7 @@
     - Fix mobile styling (in Chrome for Android when scrolling a page the title bar remains visible)
     - Check all list styles to prevent duplicate styling and therefor load speed
     - When an item can be triggered by clicking work with JavaScript to set an active class. 
-    Use 1 class for all triggers. With the active class make slideup and slidedown action
+    - Use 1 class for all triggers. With the active class make slideup and slidedown action
 - Appbar
     - Add "more menu" styling
     - Add "more menu" functions

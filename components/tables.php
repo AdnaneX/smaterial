@@ -1,6 +1,6 @@
 <?php
 $title = 'Tables';
-$description = 'Tables based on Googles Material Design';
+$description = 'Tables based on Google\'s Material Design';
 $keywords = 'material design, smaterial, tables, data tables';
 
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';

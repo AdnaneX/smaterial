@@ -1,6 +1,6 @@
 <?php
 $title = 'Bottom sheet';
-$description = 'Bottom sheet based on Googles Material Design';
+$description = 'Bottom sheet based on Google\'s Material Design';
 $keywords = 'material design, smaterial, bottom modal, bottom sheet, modal';
 
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';

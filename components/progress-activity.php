@@ -1,6 +1,6 @@
 <?php
 $title = 'Progress & activity';
-$description = 'Progress and activity indicators based on Googles Material Design';
+$description = 'Progress and activity indicators based on Google\'s Material Design';
 $keywords = 'material design, smaterial, progress, activity, determinate, indeterminate, buffer, circular';
 
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
