@@ -77,6 +77,9 @@
 							<li><a href="/style/icons.php">Icons</a></li>
 							<li><a href="/style/typography.php">Typography</a></li>
 							<li><a href="/style/shadow.php">Elevation and shadows</a></li>
+							<li><a href="/style/functions.php">Functions</a></li>
+							<li><a href="/style/mixins.php">Mixins</a></li>
+							<li><a href="/style/grid.php">Grid</a></li>
 						</ul>
 					</li>
 					<li class="sm-sidenav-dropdown">Components <i class="material-icons sm-right">expand_less</i>
@@ -88,11 +91,11 @@
 							<li><a href="/components/chips.php">Chips</a></li>
 							<li><a href="/components/dialogs.php">Dialogs</a></li>
 							<li><a href="/components/pickers.php">Pickers</a></li>
-							<li><a href="/components/progress-activity.php">Progress & activity</a></li>
+							<li><a href="/components/progress-activity.php">Progress &amp; activity</a></li>
 							<li><a href="/components/selection-controls.php">Selection controls</a></li>
 							<li><a href="/components/sidenav.php">Sidenav</a></li>
 							<li><a href="/components/sliders.php">Slider</a></li>
-							<li><a href="/components/snackbars-toasts.php">Snackbar & toasts</a></li>
+							<li><a href="/components/snackbars-toasts.php">Snackbar &amp; toasts</a></li>
 							<li><a href="/components/steppers.php">Steppers</a></li>
 							<li><a href="/components/tables.php">Tables</a></li>
 							<li><a href="/components/tabs.php">Tabs</a></li>

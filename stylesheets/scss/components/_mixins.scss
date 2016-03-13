@@ -1,13 +1,8 @@
 @mixin box-shadow($settings) {
-	// Mozilla
 	-moz-box-shadow: $settings;
-	// Chrome
 	-webkit-box-shadow: $settings;
-	// IE / Edge
 	-ms-box-shadow: $settings;
-	// Opera
 	-o-box-shadow: $settings;
-	// Normal
 	box-shadow: $settings;
 }
 

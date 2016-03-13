@@ -35,10 +35,10 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	</div>
 
 	<div class="sm-col sm-s12 sm-m6">
-		<h4><a href="/style/shadow.php">Shadows & elevation</a></h4>
+		<h4><a href="/style/shadow.php">Shadows &amp; elevation</a></h4>
 
 		<ul>
-			<li><a href="http://www.google.com/design/spec/what-is-material/elevation-shadows.html" target="_blank">Material Design shadows & elevation specs</a></li>
+			<li><a href="http://www.google.com/design/spec/what-is-material/elevation-shadows.html" target="_blank">Material Design shadows &amp; elevation specs</a></li>
 			<li><a href="https://jsfiddle.net/crkb906z/1/" target="_blank">Shadows based on fiddle</a></li>
 		</ul>
 	</div>
@@ -107,10 +107,10 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	</div>
 
 	<div class="sm-col sm-s12 sm-m6">
-		<h4><a href="/components/progress-activity.php">Progress & activity</a></h4>
+		<h4><a href="/components/progress-activity.php">Progress &amp; activity</a></h4>
 
 		<ul>
-			<li><a href="http://www.google.com/design/spec/components/progress-activity.html" target="_blank">Material Design progress & activity</a></li>
+			<li><a href="http://www.google.com/design/spec/components/progress-activity.html" target="_blank">Material Design progress &amp; activity</a></li>
 		</ul>
 	</div>
 
@@ -140,10 +140,10 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	</div>
 
 	<div class="sm-col sm-s12 sm-m6">
-		<h4><a href="/components/snackbars-toasts.php">Snackbars & toasts</a></h4>
+		<h4><a href="/components/snackbars-toasts.php">Snackbars &amp; toasts</a></h4>
 
 		<ul>
-			<li><a href="http://www.google.com/design/spec/components/snackbars-toasts.html" target="_blank"></a>Material Design snackbars & toasts specs</li>
+			<li><a href="http://www.google.com/design/spec/components/snackbars-toasts.html" target="_blank"></a>Material Design snackbars &amp; toasts specs</li>
 		</ul>
 	</div>
 
