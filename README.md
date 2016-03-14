@@ -1,6 +1,6 @@
-**SMaterial**
+# SMaterial
 
-**TODO**
+## TODO
 
 - Global
     - Add black theme support
@@ -10,6 +10,9 @@
     - Check all list styles to prevent duplicate styling and therefor load speed
     - When an item can be triggered by clicking work with JavaScript to set an active class. 
     - Use 1 class for all triggers. With the active class make slideup and slidedown action
+    - Future add less version
+    - Future add SMaterial CDN package
+    - Future add meteor js package
 - Appbar
     - Add "more menu" styling
     - Add "more menu" functions
@@ -63,5 +66,10 @@
     - Add autocomplete input
     - Add slide out search
     - Add dropdown search
+- Tooltips
+    - Fix tooltip position
 - Normalize
     - Add default list style
+- Gulp
+    - Split JavaScript vendor and app
+    - Add SCSS support

@@ -11,7 +11,9 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	<div class="sm-row">
 		<p class="sm-col sm-s12 sm-m6">
 			The notifications browser support is very limited. Only Chrome, FireFox and Opera support it. These notifications are only working on pc / laptop.
-			Maybe some day in the future push notifications can be added.
+			Maybe some day in the future
+			<a href="https://developers.google.com/web/fundamentals/getting-started/push-notifications/?hl=en" target="_blank">push</a>
+			notifications can be added.
 		</p>
 
 		<div class="sm-col sm-s12 sm-m6">
