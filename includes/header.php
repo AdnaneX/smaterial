@@ -85,6 +85,7 @@
 					<li class="sm-sidenav-dropdown">Components <i class="material-icons sm-right">expand_less</i>
 						<ul>
 							<li><a href="/components/appbar.php">Appbar</a></li>
+							<li><a href="/components/bottom-navigation.php">Bottom navigation</a></li>
 							<li><a href="/components/bottom-sheet.php">Bottom sheet</a></li>
 							<li><a href="/components/buttons.php">Buttons</a></li>
 							<li><a href="/components/cards.php">Cards</a></li>

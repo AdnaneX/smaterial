@@ -6,7 +6,7 @@
 .sm-snackbar {
 	left: 0;
 	right: 0;
-	position: absolute;
+	position: $snackbar-position;
 	bottom: 0;
 	height: $snackbar-height;
 	font-size: $snackbar-font;

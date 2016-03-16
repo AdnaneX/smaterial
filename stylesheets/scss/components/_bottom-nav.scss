@@ -1,0 +1,120 @@
+/**************************************
+ * Bottom navigation
+ *
+ * http://www.google.com/design/spec/components/bottom-navigation.html
+ **************************************/
+
+.sm-bottom-nav {
+	width: $bottom-nav-width-small;
+	background: $bottom-nav-background;
+	position: $bottom-nav-position;
+	@extend .sm-z8;
+	bottom: 0;
+
+	@media #{$medium-up} {
+		width: $bottom-nav-width-large;
+	}
+
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+
+		li {
+			display: inline-block;
+			text-align: center;
+			padding: 0;
+			line-height: normal;
+
+			a {
+				display: block;
+				max-width: $bottom-nav-item-max-width;
+				min-width: $bottom-nav-item-min-width-small;
+				padding: $bottom-nav-padding;
+				color: $white;
+				font-size: $bottom-nav-font-size;
+				line-height: normal;
+				height: $bottom-nav-height;
+
+				@media #{$medium-up} {
+					min-width: $bottom-nav-item-min-width-large;
+				}
+
+				&:hover {
+					color: $bottom-nav-font-color;
+				}
+
+				.material-icons {
+					width: $bottom-nav-icon-size;
+					height: $bottom-nav-icon-size;
+					font-size: $bottom-nav-icon-size;
+				}
+
+				&.sm-active {
+					padding: $bottom-nav-padding-active;
+					font-size: $bottom-nav-font-size-active;
+				}
+			}
+		}
+	}
+}
+
+.sm-bottom-shifting {
+	width: $bottom-shifting-width-small;
+	background: $bottom-shifting-background;
+	position: $bottom-shifting-position;
+	@extend .sm-z8;
+	bottom: 0;
+
+	@media #{$medium-up} {
+		width: $bottom-shifting-width-large;
+	}
+
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+
+		li {
+			display: inline-block;
+			text-align: center;
+			padding: 0;
+			line-height: normal;
+
+			a {
+				display: block;
+				max-width: $bottom-shifting-max-width;
+				min-width: $bottom-shifting-min-width;
+				padding: $bottom-shifting-padding;
+				color: $bottom-shifting-font-color;
+				line-height: normal;
+				height: $bottom-shifting-height;
+
+				&:hover {
+					color: $white;
+				}
+
+				.material-icons {
+					width: $bottom-shifting-icon-size;
+					height: $bottom-shifting-icon-size;
+					font-size: $bottom-shifting-icon-size;
+				}
+
+				.sm-content {
+					display: none;
+				}
+
+				&.sm-active {
+					padding: $bottom-shifting-padding-active;
+					font-size: $bottom-shifting-font-size;
+					max-width: $bottom-shifting-max-width-active;
+					min-width: $bottom-shifting-min-width-active;
+
+					.sm-content {
+						display: block;
+					}
+				}
+			}
+		}
+	}
+}

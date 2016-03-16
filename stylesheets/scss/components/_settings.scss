@@ -130,6 +130,39 @@ $appbar-icon-small-padding: remCalc(8px); // Default remCalc(8px)
 $appbar-icon-medium-padding: remCalc(16px); // Default remCalc(16px);
 
 /**************************************
+ * Bottom navigation
+ **************************************/
+$bottom-nav-width-small: 100%; // Default 100%;
+$bottom-nav-width-large: $bottom-nav-width-small; // Default $bottom-nav-width-small
+$bottom-nav-background: $main-color; // Default $main-color
+$bottom-nav-position: fixed; // Default fixed
+$bottom-nav-item-max-width: remCalc(168px); // Default remCalc(168px);
+$bottom-nav-item-min-width-small: remCalc(104px); // Default remCalc(104px)
+$bottom-nav-item-min-width-large: remCalc(120px); // Default remCalc(120px)
+$bottom-nav-padding: remCalc(8px) remCalc(12px) remCalc(10px) remCalc(12px); // Default remCalc(8px) remCalc(12px) remCalc(10px) remCalc(12px)
+$bottom-nav-padding-active: remCalc(6px) remCalc(12px) remCalc(10px) remCalc(12px); // Default remCalc(6px) remCalc(12px) remCalc(10px) remCalc(12px)
+$bottom-nav-font-size: remCalc(12px); // Default remCalc(12px)
+$bottom-nav-font-color: $white; // Default $white
+$bottom-nav-font-size-active: remCalc(14px); // Default remCalc(14px)
+$bottom-nav-height: remCalc(56px); // Default remCalc(56px)
+$bottom-nav-icon-size: remCalc(24px); // Default remCalc(24px)
+
+$bottom-shifting-width-small: $bottom-nav-width-small; // Default $bottom-nav-width-small
+$bottom-shifting-width-large: $bottom-nav-width-small; // Default $bottom-nav-width-small
+$bottom-shifting-background: $bottom-nav-background; // Default $bottom-nav-background
+$bottom-shifting-position: $bottom-nav-position; // Default $bottom-nav-position
+$bottom-shifting-max-width: remCalc(96px); // Default remCalc(96px)
+$bottom-shifting-max-width-active:  remCalc(168px); // Default remCalc(168px)
+$bottom-shifting-min-width: remCalc(64px); // Default remCalc(64px)
+$bottom-shifting-min-width-active: remCalc(96px); // Default remCalc(96px)
+$bottom-shifting-font-color: $bottom-nav-font-color; // Default $bottom-nav-font-color
+$bottom-shifting-height: $bottom-nav-height; // Default $bottom-nav-height
+$bottom-shifting-icon-size: $bottom-nav-icon-size; // Default $bottom-nav-icon-size
+$bottom-shifting-padding: remCalc(16px) 0; // Default remCalc(16px) 0
+$bottom-shifting-padding-active: remCalc(6px) 0 remCalc(10px) 0; // Default remCalc(6px) 0 remCalc(10px) 0
+$bottom-shifting-font-size: remCalc(14px); // Default remCalc(14px)
+
+/**************************************
  * Buttons
  **************************************/
 $raised-background: $main-color; // Default $main-color
@@ -222,6 +255,7 @@ $selection-radial-size: 2.8rem; // Default 2.8rem
 /**************************************
  * Snackbars and toasts
  **************************************/
+$snackbar-position: fixed; // Default fixed
 $snackbar-height: remCalc(48px); // Default remCalc(48px)
 $snackbar-font: remCalc(14px); // Default remCalc(14px)
 $snackbar-padding: remCalc(14px) remCalc(24px); // Default remCalc(14px) remCalc(24px)

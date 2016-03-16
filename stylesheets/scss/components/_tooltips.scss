@@ -18,6 +18,7 @@
 			font-weight: $tooltip-font-weight;
 			color: $tooltip-font-color;
 			top: $tooltip-small-top;
+			margin-top: $tooltip-small-top;
 			left: 0;
 			height: $tooltip-small-height;
 			line-height: $tooltip-small-height;
@@ -29,6 +30,7 @@
 			@media #{$medium-up} {
 				font-size: $tooltip-large-font;
 				top: $tooltip-large-top;
+				margin-top: $tooltip-large-top;
 				height: $tooltip-large-height;
 				line-height: $tooltip-large-height;
 				padding: $tooltip-large-padding;
