@@ -90,3 +90,25 @@
 		background-image: linear-gradient(to right,rgba(255,255,255,.7),rgba(255,255,255,.7)),linear-gradient(to right,$main-color,$main-color);
 	}
 }
+
+.sm-circular {
+	width: remCalc(100px);
+	height: remCalc(100px);
+	@include animation(rotate 2s linear infinite);
+
+	@include keyframes(rotate) {
+		100% {
+			@include transform(rotate(360deg));
+		}
+	}
+
+	svg {
+		circle {
+			stroke-dasharray: 1, 200;
+			stroke-dashoffset: 1;
+			stroke-linecap: round;
+			stroke-width: 2.5;
+
+		}
+	}
+}

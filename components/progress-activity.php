@@ -73,6 +73,33 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 			<div class="sm-buffering" style="width: 50%; left: 50%;"></div>
 		</div>
 	</div>
+
+	<code class="sm-col sm-s12 sm-m6">
+		<pre>
+&lt;div class="sm-buffer">
+  &lt;div class="sm-buffer-progress" style="width: 50%;">
+    &lt;div class="sm-progress" style="width: 90%;">&lt;/div>
+  &lt;/div>
+  &lt;div class="sm-buffering" style="width: 50%; left: 50%;">&lt;/div>
+&lt;/div>
+		</pre>
+	</code>
+</section>
+
+<section class="sm-col sm-s12 sm-m6">
+	<h3>Circular</h3>
+
+	<p class="sm-col sm-s12 sm-m6">
+
+	</p>
+
+	<div class="sm-col sm-s12 sm-m6">
+		<div class="sm-circular">
+			<svg >
+				<circle></circle>
+			</svg>
+		</div>
+	</div>
 </section>
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.php';

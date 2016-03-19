@@ -10,7 +10,8 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 
 	<p class="sm-col sm-s12 sm-m6">
 		You can use tooltips to give the user some extra info about a certain
-		<span class="sm-tooltip" title="delete, edit">action</span> or <span class="sm-tooltip" title="url: google.com">link</span>.
+		<a href="#"><span class="sm-tooltip" title="delete, edit">action</span></a> or
+		<a href="#"><span class="sm-tooltip" title="url: google.com">link</span></a>.
 	</p>
 
 	<p class="sm-col sm-s12 sm-m6">
