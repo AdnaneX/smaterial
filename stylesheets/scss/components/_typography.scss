@@ -5,85 +5,85 @@
  * http://codepen.io/zavoloklom/pen/IkaFL/
  **************************************/
 
-.sm-display-4 {
+.sc-display-4 {
 	@include font($font-size-display-4, $line-height-display-4, $letter-spacing-display-4);
 	font-weight: $font-weight-display-4;
 	color: lighten($black, (100% - 54%));
 	text-transform: inherit;
 }
-.sm-display-3 {
+.sc-display-3 {
 	@include font($font-size-display-3, $line-height-display-3, $letter-spacing-display-3);
 	font-weight: $font-weight-display-3;
 	color: lighten($black, (100% - 54%));
 	text-transform: inherit;
 }
-.sm-display-2 {
+.sc-display-2 {
 	@include font($font-size-display-2, $line-height-display-2, $letter-spacing-display-2);
 	font-weight: $font-weight-display-2;
 	color: lighten($black, (100% - 54%));
 	text-transform: inherit;
 }
-.sm-display-1 {
+.sc-display-1 {
 	@include font($font-size-display-1, $line-height-display-1, $letter-spacing-display-1);
 	font-weight: $font-weight-display-1;
 	color: lighten($black, (100% - 54%));
 	text-transform: inherit;
 }
-.sm-headline {
+.sc-headline {
 	@include font($font-size-headline, $line-height-headline, $letter-spacing-headline);
 	font-weight: $font-weight-headline;
 	color: lighten($black, (100% - 87%));
 	text-transform: inherit;
 }
-.sm-title {
+.sc-title {
 	@include font($font-size-title, $line-height-title, $letter-spacing-title);
 	font-weight: $font-weight-title;
 	color: lighten($black, (100% - 87%));
 	text-transform: inherit;
 }
-.sm-subhead-2 {
+.sc-subhead-2 {
 	@include font($font-size-subhead-2, $line-height-subhead-2, $letter-spacing-subhead-2);
 	font-weight: $font-weight-subhead-2;
 	color: lighten($black, (100% - 87%));
 	text-transform: inherit;
 }
-.sm-subhead-1 {
+.sc-subhead-1 {
 	@include font($font-size-subhead-1, $line-height-subhead-1, $letter-spacing-subhead-1);
 	font-weight: $font-weight-subhead-1;
 	color: lighten($black, (100% - 87%));
 	text-transform: inherit;
 }
-.sm-body-2 {
+.sc-body-2 {
 	@include font($font-size-body-2, $line-height-body-2, $letter-spacing-body-2);
 	font-weight: $font-weight-body-2;
 	color: lighten($black, (100% - 87%));
 	text-transform: inherit;
 }
-.sm-body-1 {
+.sc-body-1 {
 	@include font($font-size-body-1, $line-height-body-1, $letter-spacing-body-1);
 	font-weight: $font-weight-body-1;
 	color: lighten($black, (100% - 87%));
 	text-transform: inherit;
 }
-.sm-caption {
+.sc-caption {
 	@include font($font-size-caption, $line-height-caption, $letter-spacing-caption);
 	font-weight: $font-weight-caption;
 	color: lighten($black, (100% - 54%));
 	text-transform: inherit;
 }
-.sm-label {
+.sc-label {
 	@include font($font-size-label, $line-height-label, $letter-spacing-label);
 	font-weight: $font-weight-label;
 	color: lighten($black, (100% - 54%));
 	text-transform: inherit;
 }
-.sm-menu {
+.sc-menu {
 	@include font($font-size-menu, $line-height-menu, $letter-spacing-menu);
 	font-weight: $font-weight-menu;
 	color: lighten($black, (100% - 87%));
 	text-transform: inherit;
 }
-.sm-button {
+.sc-button {
 	@include font($font-size-button, $line-height-button, $letter-spacing-button);
 	font-weight: $font-weight-button;
 	color: lighten($black, (100% - 87%));
@@ -92,68 +92,68 @@
 
 // Font-size for device
 @media #{$small-down} {
-	.sm-subhead-2 {
+	.sc-subhead-2 {
 		@include font-size($font-size-dv-subhead);
 	}
-	.sm-subhead-1 {
+	.sc-subhead-1 {
 		@include font-size($font-size-dv-subhead);
 	}
-	.sm-body-2 {
+	.sc-body-2 {
 		@include font-size($font-size-dv-body);
 	}
-	.sm-body-1 {
+	.sc-body-1 {
 		@include font-size($font-size-dv-body);
 	}
-	.sm-menu {
+	.sc-menu {
 		@include font-size($font-size-dv-menu);
 	}
 }
 
-.sm-display-4, .sm-display-3, .sm-display-2, .sm-display-1  {
+.sc-display-4, .sc-display-3, .sc-display-2, .sc-display-1  {
 	margin: 0 0 $line-height-title/2+0px 0;
 	margin-bottom: $line-height-title/20+0rem;
 }
 
-.sm-headline, .sm-title, .sm-subhead-2, .sm-subhead-1, .sm-body-2, .sm-body-1, .sm-caption, .sm-label, .sm-menu, .sm-button {
+.sc-headline, .sc-title, .sc-subhead-2, .sc-subhead-1, .sc-body-2, .sc-body-1, .sc-caption, .sc-label, .sc-menu, .sc-button {
 	margin: 0 0 $line-height-body-1/2+0px 0;
 	margin-bottom: $line-height-body-1/20+0rem;
 }
 
 body {
-	@extend .sm-body-1;
+	@extend .sc-body-1;
 	font-family: 'Roboto', sans-serif, 'Helvetica Neue', Helvetica, Arial;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 
 	h1 {
-		@extend .sm-display-3;
+		@extend .sc-display-3;
 	}
 
 	h2 {
-		@extend .sm-display-2;
+		@extend .sc-display-2;
 	}
 
 	h3 {
-		@extend .sm-display-1;
+		@extend .sc-display-1;
 	}
 
 	h4 {
-		@extend .sm-headline;
+		@extend .sc-headline;
 	}
 
 	h5 {
-		@extend .sm-title;
+		@extend .sc-title;
 	}
 
 	h6 {
-		@extend .sm-subhead-1;
+		@extend .sc-subhead-1;
 	}
 
-	&.sm-text-large {
+	&.sc-text-large {
 		font-size: $font-size-large;
 	}
 
-	&.sm-text-small {
+	&.sc-text-small {
 		font-size: $font-size-small;
 	}
 }

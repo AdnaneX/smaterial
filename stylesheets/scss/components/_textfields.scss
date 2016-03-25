@@ -5,7 +5,7 @@
  **************************************/
 
 // Floating inputs
-.sm-floating-input {
+.sc-floating-input {
 	height: remCalc(72px);
 	padding: remCalc(16px) 0 remCalc(8px) 0;
 	position: relative;
@@ -31,7 +31,7 @@
 			}
 		}
 
-		&.sm-disabled {
+		&.sc-disabled {
 			border-bottom: remCalc(2px) dotted $grey
 		}
 	}
@@ -43,7 +43,7 @@
 		@include transition(all 300ms ease-in-out);
 		cursor: text;
 
-		&.sm-active {
+		&.sc-active {
 			font-size: remCalc(12px);
 			color: $grey;
 			bottom: remCalc(40px);
@@ -51,7 +51,7 @@
 	}
 }
 
-.sm-floating-dense-input {
+.sc-floating-dense-input {
 	height: remCalc(60px);
 	padding: remCalc(12px) 0 remCalc(4px) 0;
 	position: relative;
@@ -76,7 +76,7 @@
 			}
 		}
 
-		&.sm-disabled {
+		&.sc-disabled {
 			border-bottom: remCalc(2px) dotted $grey
 		}
 	}
@@ -89,7 +89,7 @@
 		@include transition(all 300ms ease-in-out);
 		cursor: text;
 
-		&.sm-active {
+		&.sc-active {
 			color: $grey;
 			bottom: remCalc(29px);
 		}
@@ -97,7 +97,7 @@
 }
 
 // Single line inputs
-.sm-single-input {
+.sc-single-input {
 	height: remCalc(48px);
 	padding: remCalc(16px) 0 remCalc(8px) 0;
 	position: relative;
@@ -125,7 +125,7 @@
 			}
 		}
 
-		&.sm-disabled {
+		&.sc-disabled {
 			border-bottom: remCalc(2px) dotted $grey
 		}
 	}
@@ -148,13 +148,13 @@
 		cursor: text;
 		display: block;
 
-		&.sm-active {
+		&.sc-active {
 			display: none;
 		}
 	}
 }
 
-.sm-single-dense-input {
+.sc-single-dense-input {
 	height: remCalc(40px);
 	padding: remCalc(12px) 0;
 	position: relative;
@@ -178,7 +178,7 @@
 			}
 		}
 
-		&.sm-disabled {
+		&.sc-disabled {
 			border-bottom: remCalc(2px) dotted $grey;
 		}
 	}
@@ -192,7 +192,7 @@
 		cursor: text;
 		display: block;
 
-		&.sm-active {
+		&.sc-active {
 			display: none;
 		}
 	}

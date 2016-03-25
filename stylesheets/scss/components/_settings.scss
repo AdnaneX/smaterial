@@ -309,7 +309,17 @@ $sidenav-subheader-color: lighten($black, (100% - 54%)); // Default
 
 $sidenav-profile-background: $secondary-color;
 
+$sidenav-font-weight: 500; // Default 500
+$sidenav-hover-background: $grey-200;
 
+$sidenav-profile-margin: remCalc(-16px) 0 remCalc(8px) 0; // Default remCalc(-16px) 0 remCalc(8px) 0
+$sidenav-profile-padding: remCalc(16px) remCalc(16px) remCalc(8px) remCalc(16px); // Default remCalc(16px) remCalc(16px) remCalc(8px) remCalc(16px)
+$sidenav-profile-img-size: remCalc(50px); // Default remCalc(50px)
+$sidenav-profile-img-margin: 0 0 remCalc(5px) 0;
+$sidenav-profile-info-total-height: remCalc(56px); // Default remCalc(56px)
+$sidenav-profile-info-height: $sidenav-profile-info-total-height / 2;
+$sidenav-profile-info-font-color: $white; // Default $white
+$sidenav-profile-info-font-size: remCalc(14px); // Default remCalc(14px)
 /**************************************
  * Tooltips
  **************************************/

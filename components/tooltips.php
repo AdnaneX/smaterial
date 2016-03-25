@@ -5,37 +5,37 @@ $keywords = 'material design, smaterial, tooltips';
 
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>
-<section class="sm-row">
+<section class="sc-row">
 	<h2>Tooltips usage</h2>
 
-	<p class="sm-col sm-s12 sm-m6">
+	<p class="sc-col sc-s12 sc-m6">
 		You can use tooltips to give the user some extra info about a certain
-		<a href="#"><span class="sm-tooltip" title="delete, edit">action</span></a> or
-		<a href="#"><span class="sm-tooltip" title="url: google.com">link</span></a>.
+		<a href="#"><span class="sc-tooltip" title="delete, edit">action</span></a> or
+		<a href="#"><span class="sc-tooltip" title="url: google.com">link</span></a>.
 	</p>
 
-	<p class="sm-col sm-s12 sm-m6">
-		Tooltips only need the class <code>.sm-tooltip</code> and the attribute <code>title</code> in order to work. Because of this it's easy
+	<p class="sc-col sc-s12 sc-m6">
+		Tooltips only need the class <code>.sc-tooltip</code> and the attribute <code>title</code> in order to work. Because of this it's easy
 		to add to a link or span.
 	</p>
 
-	<code class="sm-col sm-s12 sm-m6">
+	<code class="sc-col sc-s12 sc-m6">
 		<pre>
-&lt;span class="sm-tooltip" title="delete, edit">
+&lt;span class="sc-tooltip" title="delete, edit">
   action
 &lt;/span>
 
-&lt;a href="#" class="sm-tooltip" title="link">
+&lt;a href="#" class="sc-tooltip" title="link">
   link
 &lt;/a>
 		</pre>
 	</code>
 </section>
 
-<section class="sm-row">
+<section class="sc-row">
 	<h3>Settings</h3>
 
-	<table class="sm-col sm-s12 sm-m6">
+	<table class="sc-col sc-s12 sc-m6">
 		<thead>
 			<tr>
 				<th>Variable</th>

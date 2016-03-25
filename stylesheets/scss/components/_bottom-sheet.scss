@@ -4,8 +4,8 @@
  * http://www.google.com/design/spec/components/bottom-sheets.html
  **************************************/
 
-.sm-bottom-sheet {
-	@extend .sm-z16;
+.sc-bottom-sheet {
+	@extend .sc-z16;
 	position: fixed;
 	background: $white;
     z-index: 4;
@@ -44,12 +44,12 @@
 
 		ul {
 			li {
-				&.sm-header {
+				&.sc-header {
 					height: remCalc(56px);
 					color: lighten($black, 100% - 54%);
 				}
 
-				&.sm-divider {
+				&.sc-divider {
 					height: remCalc(1px);
 					background: lighten($black, 100% - 54%);
 					margin: remCalc(7px) remCalc(-16px) remCalc(8px) remCalc(-16px);
@@ -70,12 +70,12 @@
 					margin-bottom: 0;
 				}
 
-				.sm-grid-item {
-					@extend .sm-col, .sm-s6, .sm-m4;
+				.sc-grid-item {
+					@extend .sc-col, .sc-s6, .sc-m4;
 					padding: 0;
 
-					.sm-grid-icon {
-						@extend .sm-center;
+					.sc-grid-icon {
+						@extend .sc-center;
 
 						.material-icons {
 							vertical-align: middle;
@@ -86,8 +86,8 @@
 						}
 					}
 
-					.sm-grid-content {
-						@extend .sm-center;
+					.sc-grid-content {
+						@extend .sc-center;
 						height: remCalc(16px);
 						line-height: remCalc(16px);
 					}

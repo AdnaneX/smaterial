@@ -1,13 +1,13 @@
 $(document).ready(function() {
-	var $sidenav = $('#sm-sidenav');
+	var $sidenav = $('#sc-sidenav');
 
-	$sidenav.find('li.sm-sidenav-dropdown').each(function() {
+	$sidenav.find('li.sc-sidenav-dropdown').each(function() {
 		var $this = $(this),
 			$ul = $this.find('ul'),
 			$arrow = $this.find('.material-icons');
 
 		if( $arrow !== undefined ) {
-			$arrow.addClass('sm-arrow');
+			$arrow.addClass('sc-arrow');
 		}
 
 		// Hide ul element
@@ -30,8 +30,8 @@ $(document).ready(function() {
 		});
 	});
 
-	$('#sm-nav-button').click(function() {
-		var $trigger = $(this).data('sm-trigger');
+	$('#sc-nav-button').click(function() {
+		var $trigger = $(this).data('sc-trigger');
 
 		$('#' + $trigger).slideHorizontal();
 	});

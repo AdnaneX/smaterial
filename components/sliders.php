@@ -5,17 +5,17 @@ $keywords = 'material design, smaterial, slider';
 
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>
-<section class="sm-row">
+<section class="sc-row">
 	<h2>Slider usage</h2>
 
-	<p class="sm-col sm-s12 sm-m6">
+	<p class="sc-col sc-s12 sc-m6">
 
 	</p>
 
-	<p class="sm-col sm-s12 sm-m6">
-		<input type="range" class="sm-slider">
+	<p class="sc-col sc-s12 sc-m6">
+		<input type="range" class="sc-slider">
 
-		<input type="range" class="sm-slider sm-slider-disabled">
+		<input type="range" class="sc-slider sc-slider-disabled">
 	</p>
 </section>
 <?php

@@ -6,8 +6,8 @@
  **************************************/
 
 button, input[type="button"], input[type="reset"], input[type="submit"], a {
-	&.sm-raised-button {
-		@extend .sm-z2, .sm-button;
+	&.sc-raised-button {
+		@extend .sc-z2, .sc-button;
 		@include transition($raised-transition);
 		color: $raised-color;
 		background: $raised-background;
@@ -26,7 +26,7 @@ button, input[type="button"], input[type="reset"], input[type="submit"], a {
 		overflow: hidden;
 
 		&:active {
-			@extend .sm-z8;
+			@extend .sc-z8;
 		}
 
 		&:hover {
@@ -40,11 +40,11 @@ button, input[type="button"], input[type="reset"], input[type="submit"], a {
 			height: $raised-size;
 			width: $raised-size;
 
-			&.sm-left {
+			&.sc-left {
 				margin-right: $raised-margin;
 			}
 
-			&.sm-right {
+			&.sc-right {
 				margin-left: $raised-margin;
 			}
 		}
@@ -64,18 +64,18 @@ button, input[type="button"], input[type="reset"], input[type="submit"], a {
 		&-disabled {
 			background: $raised-disabled-background;
 			color: $raised-disabled-color;
-			@extend .sm-z0;
+			@extend .sc-z0;
 
 			&:hover {
-				@extend .sm-z0;
+				@extend .sc-z0;
 				background: $raised-disabled-background-hover;
 				color: $raised-disabled-color-hover;
 			}
 		}
 	}
 
-	&.sm-flat-button {
-		@extend .sm-button;
+	&.sc-flat-button {
+		@extend .sc-button;
 		color: $flat-color;
 		background: none;
 		border: none;
@@ -99,11 +99,11 @@ button, input[type="button"], input[type="reset"], input[type="submit"], a {
 			height: $flat-size;
 			width: $flat-size;
 
-			&.sm-left {
+			&.sc-left {
 				margin-right: $flat-margin;
 			}
 
-			&.sm-right {
+			&.sc-right {
 				margin-left: $flat-margin;
 			}
 		}
@@ -128,8 +128,8 @@ button, input[type="button"], input[type="reset"], input[type="submit"], a {
 }
 
 button, a {
-	&.sm-floating-button {
-		@extend .sm-z6;
+	&.sc-floating-button {
+		@extend .sc-z6;
 		@include transition($floating-transition);
 		@include border-radius(50%);
 		border: none;
@@ -144,7 +144,7 @@ button, a {
 		cursor: pointer;
 
 		&:hover {
-			@extend .sm-z12;
+			@extend .sc-z12;
 		}
 
 
@@ -163,7 +163,7 @@ button, a {
 	}
 }
 
-.sm-toggle-button {
+.sc-toggle-button {
 	border-radius: 50%;
 	border: none;
 	outline: none;

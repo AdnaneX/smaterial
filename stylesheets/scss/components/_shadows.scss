@@ -4,7 +4,7 @@
  * http://www.google.com/design/spec/what-is-material/elevation-shadows.html
  **************************************/
 
-.sm-z0 {
+.sc-z0 {
 	-moz-box-shadow: none !important;
 	-webkit-box-shadow: none !important;
 	-ms-box-shadow: none !important;
@@ -12,46 +12,46 @@
 	box-shadow: none !important;
 }
 
-.sm-z1 {
+.sc-z1 {
 	@include material-shadow(1);
 }
 
-.sm-z2 {
+.sc-z2 {
 	@include material-shadow(2);
 }
 
-.sm-z3 {
+.sc-z3 {
 	@include material-shadow(3);
 }
 
-.sm-z4 {
+.sc-z4 {
 	@include material-shadow(4);
 }
 
-.sm-z6 {
+.sc-z6 {
 	@include material-shadow(6);
 }
 
-.sm-z8 {
+.sc-z8 {
 	@include material-shadow(8);
 }
 
-.sm-z9 {
+.sc-z9 {
 	 @include material-shadow(9);
  }
 
-.sm-z10 {
+.sc-z10 {
 	@include material-shadow(10);
 }
 
-.sm-z12 {
+.sc-z12 {
 	@include material-shadow(12);
 }
 
-.sm-z16 {
+.sc-z16 {
 	@include material-shadow(16);
 }
 
-.sm-z24 {
+.sc-z24 {
 	@include material-shadow(24);
 }

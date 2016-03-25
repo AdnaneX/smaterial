@@ -3,7 +3,7 @@
  *
  * http://www.google.com/design/spec/components/snackbars-toasts.html
  **************************************/
-.sm-snackbar {
+.sc-snackbar {
 	left: 0;
 	right: 0;
 	position: $snackbar-position;
@@ -24,7 +24,7 @@
 	}
 
 	&-action {
-		@extend .sm-right;
+		@extend .sc-right;
 		font-size: $snackbar-font;
 		font-weight: $snackbar-action-font-weight;
 		text-transform: capitalize;

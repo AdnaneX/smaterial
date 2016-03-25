@@ -4,11 +4,11 @@
  * http://www.google.com/design/spec/components/bottom-navigation.html
  **************************************/
 
-.sm-bottom-nav {
+.sc-bottom-nav {
 	width: $bottom-nav-width-small;
 	background: $bottom-nav-background;
 	position: $bottom-nav-position;
-	@extend .sm-z8;
+	@extend .sc-z8;
 	bottom: 0;
 
 	@media #{$medium-up} {
@@ -50,7 +50,7 @@
 					font-size: $bottom-nav-icon-size;
 				}
 
-				&.sm-active {
+				&.sc-active {
 					padding: $bottom-nav-padding-active;
 					font-size: $bottom-nav-font-size-active;
 				}
@@ -59,11 +59,11 @@
 	}
 }
 
-.sm-bottom-shifting {
+.sc-bottom-shifting {
 	width: $bottom-shifting-width-small;
 	background: $bottom-shifting-background;
 	position: $bottom-shifting-position;
-	@extend .sm-z8;
+	@extend .sc-z8;
 	bottom: 0;
 
 	@media #{$medium-up} {
@@ -100,17 +100,17 @@
 					font-size: $bottom-shifting-icon-size;
 				}
 
-				.sm-content {
+				.sc-content {
 					display: none;
 				}
 
-				&.sm-active {
+				&.sc-active {
 					padding: $bottom-shifting-padding-active;
 					font-size: $bottom-shifting-font-size;
 					max-width: $bottom-shifting-max-width-active;
 					min-width: $bottom-shifting-min-width-active;
 
-					.sm-content {
+					.sc-content {
 						display: block;
 					}
 				}

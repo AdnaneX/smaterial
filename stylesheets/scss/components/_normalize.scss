@@ -54,19 +54,19 @@ body {
 		}
 	}
 
-	.sm-circle {
+	.sc-circle {
 		border-radius: 50%;
 	}
 
-	.sm-left {
+	.sc-left {
 		float: left;
 	}
 
-	.sm-right {
+	.sc-right {
 		float: right;
 	}
 
-	.sm-center {
+	.sc-center {
 		text-align: left;
 		vertical-align: middle;
 
@@ -81,7 +81,7 @@ body {
 
 	ul, ol {
 		li {
-			font-weight: 500;
+			font-weight: 400;
 			font-size: remCalc(14px);
 			color: lighten($black, (100% - 87%));
 			height: auto;
@@ -89,7 +89,7 @@ body {
 			padding: 0 remCalc(16px);
 
 			a {
-				font-weight: 500;
+				font-weight: 400;
 				font-size: remCalc(14px);
 				color: lighten($black, (100% - 87%));
 				height: remCalc(48px);

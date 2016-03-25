@@ -5,96 +5,96 @@ $keywords = 'material design, smaterial, progress, activity, determinate, indete
 
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>
-<section class="sm-row">
+<section class="sc-row">
 	<h2>Progress & activity usage</h2>
 
-	<p class="sm-col sm-s12 sm-m6">
+	<p class="sc-col sc-s12 sc-m6">
 		There are a couple of progress and activity indicator varieties.
 		The "determinate", "indeterminate", "buffer", "circular" and "circular on floating button".
 	</p>
 </section>
 
-<section class="sm-row">
+<section class="sc-row">
 	<h3>Determinate</h3>
 
-	<p class="sm-col sm-s12 sm-m6">
-		You can easily modify the determinate progress indicator by giving the <code>.sm-progress</code> the desired width.
+	<p class="sc-col sc-s12 sc-m6">
+		You can easily modify the determinate progress indicator by giving the <code>.sc-progress</code> the desired width.
 	</p>
 
-	<div class="sm-col sm-s12 sm-m6">
-		<div class="sm-determinate">
-			<div class="sm-progress" style="width: 10%"></div>
+	<div class="sc-col sc-s12 sc-m6">
+		<div class="sc-determinate">
+			<div class="sc-progress" style="width: 10%"></div>
 		</div>
 	</div>
 
-	<code class="sm-col sm-s12 sm-m6">
+	<code class="sc-col sc-s12 sc-m6">
 		<pre>
-&lt;div class="sm-determinate">
-  &lt;div class="sm-progress" style="width: 10%">&lt;/div>
+&lt;div class="sc-determinate">
+  &lt;div class="sc-progress" style="width: 10%">&lt;/div>
 &lt;/div>
 		</pre>
 	</code>
 </section>
 
-<section class="sm-row">
+<section class="sc-row">
 	<h3>Indeterminate</h3>
 
-	<p class="sm-col sm-s12 sm-m6">
+	<p class="sc-col sc-s12 sc-m6">
 		The indeterminate progress indicator will continue forever.
 	</p>
 
-	<div class="sm-col sm-s12 sm-m6">
-		<div class="sm-indeterminate">
-			 <div class="sm-progress"></div>
+	<div class="sc-col sc-s12 sc-m6">
+		<div class="sc-indeterminate">
+			 <div class="sc-progress"></div>
 		</div>
 	</div>
 
-	<code class="sm-col sm-s12 sm-m6">
+	<code class="sc-col sc-s12 sc-m6">
 		<pre>
-&lt;div class="sm-indeterminate">
-  &lt;div class="sm-progress">&lt;/div>
+&lt;div class="sc-indeterminate">
+  &lt;div class="sc-progress">&lt;/div>
 &lt;/div>
 		</pre>
 	</code>
 </section>
 
-<section class="sm-row">
+<section class="sc-row">
 	<h3>Buffer</h3>
 
-	<p class="sm-col sm-s12 sm-m6">
+	<p class="sc-col sc-s12 sc-m6">
 
 	</p>
 
-	<div class="sm-col sm-s12 sm-m6">
-		<div class="sm-buffer">
-			<div class="sm-buffer-progress" style="width: 50%;">
-				<div class="sm-progress" style="width: 90%;"></div>
+	<div class="sc-col sc-s12 sc-m6">
+		<div class="sc-buffer">
+			<div class="sc-buffer-progress" style="width: 50%;">
+				<div class="sc-progress" style="width: 90%;"></div>
 			</div>
-			<div class="sm-buffering" style="width: 50%; left: 50%;"></div>
+			<div class="sc-buffering" style="width: 50%; left: 50%;"></div>
 		</div>
 	</div>
 
-	<code class="sm-col sm-s12 sm-m6">
+	<code class="sc-col sc-s12 sc-m6">
 		<pre>
-&lt;div class="sm-buffer">
-  &lt;div class="sm-buffer-progress" style="width: 50%;">
-    &lt;div class="sm-progress" style="width: 90%;">&lt;/div>
+&lt;div class="sc-buffer">
+  &lt;div class="sc-buffer-progress" style="width: 50%;">
+    &lt;div class="sc-progress" style="width: 90%;">&lt;/div>
   &lt;/div>
-  &lt;div class="sm-buffering" style="width: 50%; left: 50%;">&lt;/div>
+  &lt;div class="sc-buffering" style="width: 50%; left: 50%;">&lt;/div>
 &lt;/div>
 		</pre>
 	</code>
 </section>
 
-<section class="sm-col sm-s12 sm-m6">
+<section class="sc-col sc-s12 sc-m6">
 	<h3>Circular</h3>
 
-	<p class="sm-col sm-s12 sm-m6">
+	<p class="sc-col sc-s12 sc-m6">
 
 	</p>
 
-	<div class="sm-col sm-s12 sm-m6">
-		<div class="sm-circular">
+	<div class="sc-col sc-s12 sc-m6">
+		<div class="sc-circular">
 			<svg >
 				<circle></circle>
 			</svg>

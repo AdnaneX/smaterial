@@ -1,8 +1,8 @@
 $(document).ready(function() {
-	$('.sm-dialog-trigger').click(function(e) {
+	$('.sc-dialog-trigger').click(function(e) {
 		e.preventDefault();
 		var $this = $(this),
-			$dialog = $('#'+$this.data('sm-trigger'));
+			$dialog = $('#'+$this.data('sc-trigger'));
 
 		if( $dialog.visible() ) {
 			$dialog.removeClass('active');
@@ -17,7 +17,7 @@ $(document).ready(function() {
 	});
 
 	$(document).mouseup(function (e) {
-		var $dialog = $('.sm-dialog');
+		var $dialog = $('.sc-dialog');
 
 		if( $dialog.visible() ) {
 			// if the target of the click isn't the $dialog nor a descendant of the $dialog

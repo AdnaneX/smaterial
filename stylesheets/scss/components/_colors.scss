@@ -662,24 +662,24 @@ $colors: (
 	@if( in_array( $color-name, $allowed-colors ) ) {
 		@each $color-type, $color_value in $color {
 			@if $color-type == 'base' {
-				.sm-#{$color-name} {
+				.sc-#{$color-name} {
 					background-color: $color_value;
 				}
-				.sm-#{$color-name}-text {
+				.sc-#{$color-name}-text {
 					color: $color_value;
 				}
 			} @else if $color-name == 'shades' {
-				.sm-#{$color-type} {
+				.sc-#{$color-type} {
 					background-color: $color_value;
 				}
-				.sm-#{$color-type}-text {
+				.sc-#{$color-type}-text {
 					color: $color_value;
 				}
 			} @else {
-				.sm-#{$color-name}-#{$color-type} {
+				.sc-#{$color-name}-#{$color-type} {
 					background-color: $color_value;
 				}
-				.sm-#{$color-name}-#{$color-type}-text {
+				.sc-#{$color-name}-#{$color-type}-text {
 					color: $color_value;
 				}
 			}

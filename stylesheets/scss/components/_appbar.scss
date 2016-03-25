@@ -5,8 +5,8 @@
  * http://www.google.com/design/spec/layout/structure.html#structure-toolbars
  **************************************/
 
-.sm-appbar {
-	@extend .sm-row, .sm-z4;
+.sc-appbar {
+	@extend .sc-row, .sc-z4;
 	color: $appbar-text;
 	background: $appbar-background;
 	width: 100%;
@@ -51,8 +51,8 @@
 		}
 	}
 
-	.sm-appbar-nav {
-		@extend .sm-col, .sm-s2, .sm-m1;
+	.sc-appbar-nav {
+		@extend .sc-col, .sc-s2, .sc-m1;
 
 		a {
 			position: absolute;
@@ -60,8 +60,8 @@
 		}
 	}
 
-	.sm-appbar-title {
-		@extend .sm-col, .sm-s5, .sm-m7, .sm-title;
+	.sc-appbar-title {
+		@extend .sc-col, .sc-s5, .sc-m7, .sc-title;
 		padding: $appbar-title-small-padding;
 		font-size: $appbar-title-size;
 		color: $appbar-title;
@@ -79,8 +79,8 @@
 		}
 	}
 
-	.sm-appbar-actions {
-		@extend .sm-col, .sm-s3;
+	.sc-appbar-actions {
+		@extend .sc-col, .sc-s3;
 
 		a {
 			float: right;
@@ -88,15 +88,15 @@
 			overflow: hidden;
 		}
 
-		.sm-search-input {
+		.sc-search-input {
 			input {
 				display: none;
 			}
 		}
 	}
 
-	.sm-appbar-menu {
-		@extend .sm-col, .sm-s2, .sm-m1;
+	.sc-appbar-menu {
+		@extend .sc-col, .sc-s2, .sc-m1;
 
 		a {
 			position: absolute;
@@ -105,7 +105,7 @@
 
 		&-more {
 			display: none;
-			@extend .sm-z9;
+			@extend .sc-z9;
 			background: $white;
 			position: absolute;
 			top: remCalc(4px);

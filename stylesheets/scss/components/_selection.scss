@@ -5,7 +5,7 @@
  **************************************/
 
 input[type="checkbox"] {
-	&.sm-checkbox {
+	&.sc-checkbox {
 		display: none;
 
 		+ label {
@@ -75,7 +75,7 @@ input[type="checkbox"] {
 }
 
 input[type="radio"] {
-	&.sm-radio {
+	&.sc-radio {
 		display: none;
 
 		+ label {
@@ -120,8 +120,8 @@ input[type="radio"] {
 	}
 }
 
-.sm-switch {
-	.sm-lever {
+.sc-switch {
+	.sc-lever {
 		width: remCalc(50px);
 		background: lighten($black, (100% - 26%));
 		height: remCalc(14px);
@@ -138,7 +138,7 @@ input[type="radio"] {
 			content: '';
 			background: $grey-50;
 			position: absolute;
-			@extend .sm-z1;
+			@extend .sc-z1;
 			top: - remCalc(5px);
 			@include transition(background 300ms ease-in-out);
 		}
@@ -148,7 +148,7 @@ input[type="radio"] {
 		display: none;
 
 		&:checked {
-			+ .sm-lever {
+			+ .sc-lever {
 				background: $main-color;
 
 				&:after {

@@ -5,18 +5,18 @@ $keywords = 'material design, smaterial, links';
 
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>
-<section class="sm-row">
+<section class="sc-row">
 	<h2>External links</h2>
 
-	<p class="sm-col sm-s12 sm-m6">
+	<p class="sc-col sc-s12 sc-m6">
 		You can find a list of all used links to create SMaterial here.
 	</p>
 </section>
 
-<section class="sm-row">
+<section class="sc-row">
 	<h3>Style</h3>
 
-	<div class="sm-col sm-s12 sm-m6">
+	<div class="sc-col sc-s12 sc-m6">
 		<h4><a href="/style/color.php">Color</a></h4>
 
 		<ul>
@@ -24,7 +24,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		</ul>
 	</div>
 
-	<div class="sm-col sm-s12 sm-m6">
+	<div class="sc-col sc-s12 sc-m6">
 		<h4><a href="/style/icons.php">Icons</a></h4>
 
 		<ul>
@@ -34,7 +34,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		</ul>
 	</div>
 
-	<div class="sm-col sm-s12 sm-m6">
+	<div class="sc-col sc-s12 sc-m6">
 		<h4><a href="/style/shadow.php">Shadows &amp; elevation</a></h4>
 
 		<ul>
@@ -43,7 +43,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		</ul>
 	</div>
 
-	<div class="sm-col sm-s12 sm-m6">
+	<div class="sc-col sc-s12 sc-m6">
 		<h4><a href="/style/typography.php">Typography</a></h4>
 
 		<ul>
@@ -53,10 +53,10 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	</div>
 </section>
 
-<section class="sm-row">
+<section class="sc-row">
 	<h3>Components</h3>
 
-	<div class="sm-col sm-s12 sm-m6">
+	<div class="sc-col sc-s12 sc-m6">
 		<h4><a href="/components/appbar.php">Appbar</a></h4>
 
 		<ul>
@@ -65,7 +65,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		</ul>
 	</div>
 
-	<div class="sm-col sm-s12 sm-m6">
+	<div class="sc-col sc-s12 sc-m6">
 		<h4><a href="/components/bottom-sheet.php">Bottom sheet</a></h4>
 
 		<ul>
@@ -73,7 +73,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		</ul>
 	</div>
 
-	<div class="sm-col sm-s12 sm-m6">
+	<div class="sc-col sc-s12 sc-m6">
 		<h4><a href="/components/buttons.php">Buttons</a></h4>
 
 		<ul>
@@ -82,7 +82,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		</ul>
 	</div>
 
-	<div class="sm-col sm-s12 sm-m6">
+	<div class="sc-col sc-s12 sc-m6">
 		<h4><a href="/components/cards.php">Cards</a></h4>
 
 		<ul>
@@ -90,7 +90,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		</ul>
 	</div>
 
-	<div class="sm-col sm-s12 sm-m6">
+	<div class="sc-col sc-s12 sc-m6">
 		<h4><a href="/components/chips.php">Chips</a></h4>
 
 		<ul>
@@ -98,7 +98,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		</ul>
 	</div>
 
-	<div class="sm-col sm-s12 sm-m6">
+	<div class="sc-col sc-s12 sc-m6">
 		<h4><a href="/components/dialogs.php">Dialogs</a></h4>
 
 		<ul>
@@ -106,7 +106,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		</ul>
 	</div>
 
-	<div class="sm-col sm-s12 sm-m6">
+	<div class="sc-col sc-s12 sc-m6">
 		<h4><a href="/components/progress-activity.php">Progress &amp; activity</a></h4>
 
 		<ul>
@@ -114,7 +114,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		</ul>
 	</div>
 
-	<div class="sm-col sm-s12 sm-m6">
+	<div class="sc-col sc-s12 sc-m6">
 		<h4><a href="/components/selection-controls.php">Selection controls</a></h4>
 
 		<ul>
@@ -122,7 +122,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		</ul>
 	</div>
 
-	<div class="sm-col sm-s12 sm-m6">
+	<div class="sc-col sc-s12 sc-m6">
 		<h4><a href="/components/sidenav.php">Sidenav</a></h4>
 
 		<ul>
@@ -131,7 +131,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		</ul>
 	</div>
 
-	<div class="sm-col sm-s12 sm-m6">
+	<div class="sc-col sc-s12 sc-m6">
 		<h4><a href="/components/sliders.php">Sliders</a></h4>
 
 		<ul>
@@ -139,7 +139,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		</ul>
 	</div>
 
-	<div class="sm-col sm-s12 sm-m6">
+	<div class="sc-col sc-s12 sc-m6">
 		<h4><a href="/components/snackbars-toasts.php">Snackbars &amp; toasts</a></h4>
 
 		<ul>
@@ -147,7 +147,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		</ul>
 	</div>
 
-	<div class="sm-col sm-s12 sm-m6">
+	<div class="sc-col sc-s12 sc-m6">
 		<h4><a href="/components/tables.php">Tables</a></h4>
 
 		<ul>
@@ -155,7 +155,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		</ul>
 	</div>
 
-	<div class="sm-col sm-s12 sm-m6">
+	<div class="sc-col sc-s12 sc-m6">
 		<h4><a href="/components/textfields.php">Text fields</a></h4>
 
 		<ul>
@@ -163,7 +163,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		</ul>
 	</div>
 
-	<div class="sm-col sm-s12 sm-m6">
+	<div class="sc-col sc-s12 sc-m6">
 		<h4><a href="/components/tooltips.php">Tooltips</a></h4>
 
 		<ul>

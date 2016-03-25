@@ -66,8 +66,6 @@
     - Add autocomplete input
     - Add slide out search
     - Add dropdown search
-- Tooltips
-    - Fix tooltip position
 - Normalize
     - Add default list style
 - Gulp

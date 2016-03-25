@@ -4,9 +4,9 @@
  * http://www.google.com/design/spec/components/dialogs.html
  **************************************/
 
-.sm-dialog {
+.sc-dialog {
 	display: none;
-	@extend .sm-z24;
+	@extend .sc-z24;
 	width: auto;
 	position: fixed;
 	z-index: 4;
@@ -21,21 +21,21 @@
 		display: block;
 	}
 
-	.sm-dialog-container {
+	.sc-dialog-container {
 		padding: remCalc(24px);
 
-		.sm-dialog-title {
-			@extend .sm-title;
+		.sc-dialog-title {
+			@extend .sc-title;
 			margin-bottom: remCalc(20px);
 		}
 	}
 
-	.sm-dialog-actions {
+	.sc-dialog-actions {
 		padding: remCalc(8px);
 		height: remCalc(52px);
 		float: right;
 
-		.sm-flat-button {
+		.sc-flat-button {
 			height: remCalc(36px);
 			line-height: remCalc(36px);
 			margin: 0 remCalc(4px);

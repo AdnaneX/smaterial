@@ -1,8 +1,8 @@
 $(document).ready(function() {
 	// More menu trigger functions
-	$('.sm-nav-more').click(function() {
+	$('.sc-nav-more').click(function() {
 		var $this = $(this),
-			$more = $('#'+$this.data('sm-trigger'));
+			$more = $('#'+$this.data('sc-trigger'));
 
 		if( $more.visible() ) {
 	   		$more.slideUp();
@@ -12,7 +12,7 @@ $(document).ready(function() {
 	});
 
 	$(document).mouseup(function (e) {
-		var $more = $('.sm-appbar-menu-more');
+		var $more = $('.sc-appbar-menu-more');
 
 		if( $more.visible() ) {
 			// if the target of the click isn't the $more nor a descendant of the $more
@@ -23,7 +23,7 @@ $(document).ready(function() {
 	});
 
 	// Search trigger functions
-	$('.sm-search-trigger').click(function() {
-		$('.sm-')
+	$('.sc-search-trigger').click(function() {
+		$('.sc-')
 	});
 });

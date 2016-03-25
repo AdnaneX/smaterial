@@ -6,73 +6,73 @@ $keywords = 'material design, smaterial, chips';
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>
 
-<section class="sm-row">
+<section class="sc-row">
 	<h2>Chips usage</h2>
 
-	<p class="sm-col sm-s12 sm-m6">
+	<p class="sc-col sc-s12 sc-m6">
 		You could use chips for something like tags or contacts.
 	</p>
 </section>
 
-<section class="sm-row">
+<section class="sc-row">
 	<h3>Chip examples</h3>
 
-	<p class="sm-col sm-s12 sm-m6">
-		There are a couple of chips. The normal (<code>.sm-chip</code>), the deletable (<code>.sm-chip .sm-chip-deletable</code>),
-		the contact (<code>.sm-chip .sm-chip-contact</code>) and the deletable contact (<code>.sm-chip .sm-chip-deletable .sm-chip-contact</code>).
+	<p class="sc-col sc-s12 sc-m6">
+		There are a couple of chips. The normal (<code>.sc-chip</code>), the deletable (<code>.sc-chip .sc-chip-deletable</code>),
+		the contact (<code>.sc-chip .sc-chip-contact</code>) and the deletable contact (<code>.sc-chip .sc-chip-deletable .sc-chip-contact</code>).
 	</p>
 
-	<div class="sm-col sm-s12 sm-m6">
-		<div class="sm-chip sm-chip-deletable">
+	<div class="sc-col sc-s12 sc-m6">
+		<div class="sc-chip sc-chip-deletable">
 			<span>John Doe</span>
-			<i class="material-icons sm-chip-delete">clear</i>
+			<i class="material-icons sc-chip-delete">clear</i>
 		</div>
 
-		<div class="sm-chip">
+		<div class="sc-chip">
 			<span>John Doe</span>
 		</div>
 
-		<div class="sm-chip sm-chip-contact sm-chip-deletable">
-			<img class="sm-left" src="http://lorempixel.com/32/32/abstract" alt="Chip contact example">
+		<div class="sc-chip sc-chip-contact sc-chip-deletable">
+			<img class="sc-left" src="http://lorempixel.com/32/32/abstract" alt="Chip contact example">
 			<span>John Doe</span>
-			<i class="material-icons sm-chip-delete">clear</i>
+			<i class="material-icons sc-chip-delete">clear</i>
 		</div>
 
-		<div class="sm-chip sm-chip-contact">
-			<img class="sm-left" src="http://lorempixel.com/32/32/abstract" alt="Chip contact example">
+		<div class="sc-chip sc-chip-contact">
+			<img class="sc-left" src="http://lorempixel.com/32/32/abstract" alt="Chip contact example">
 			<span>John Doe</span>
 		</div>
 	</div>
 
-	<code class="sm-col sm-s12 sm-m6">
+	<code class="sc-col sc-s12 sc-m6">
 		<pre>
-&lt;div class="sm-chip sm-chip-deletable">
+&lt;div class="sc-chip sc-chip-deletable">
   &lt;span>John Doe&lt;/span>
-  &lt;i class="material-icons sm-chip-delete">clear&lt;/i>
+  &lt;i class="material-icons sc-chip-delete">clear&lt;/i>
 &lt;/div>
 
-&lt;div class="sm-chip">
+&lt;div class="sc-chip">
   &lt;span>John Doe&lt;/span>
 &lt;/div>
 
-&lt;div class="sm-chip sm-chip-contact sm-chip-deletable">
-  &lt;img class="sm-left" src="" alt="">
+&lt;div class="sc-chip sc-chip-contact sc-chip-deletable">
+  &lt;img class="sc-left" src="" alt="">
   &lt;span>John Doe&lt;/span>
-  &lt;i class="material-icons sm-chip-delete">clear&lt;/i>
+  &lt;i class="material-icons sc-chip-delete">clear&lt;/i>
 &lt;/div>
 
-&lt;div class="sm-chip sm-chip-contact">
-  &lt;img class="sm-left" src="" alt="">
+&lt;div class="sc-chip sc-chip-contact">
+  &lt;img class="sc-left" src="" alt="">
   &lt;span>John Doe&lt;/span>
 &lt;/div>
 		</pre>
 	</code>
 </section>
 
-<section class="sm-row">
+<section class="sc-row">
 	<h3>Chip settings</h3>
 
-	<table class="sm-col sm-s12 sm-m6">
+	<table class="sc-col sc-s12 sc-m6">
 		<thead>
 			<tr>
 				<th>Variable</th>

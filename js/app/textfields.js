@@ -8,9 +8,9 @@ $(document).ready(function() {
 			$label = $this.parent('div').find('label');
 
 		if( $value != '' ) {
-			$label.addClass('sm-active');
+			$label.addClass('sc-active');
 		} else {
-			$label.removeClass('sm-active');
+			$label.removeClass('sc-active');
 		}
 	});
 
@@ -23,9 +23,9 @@ $(document).ready(function() {
 		console.log($label);
 
 		if( $value != '' ) {
-			$label.addClass('sm-active');
+			$label.addClass('sc-active');
 		} else {
-			$label.removeClass('sm-active');
+			$label.removeClass('sc-active');
 		}
 	});
 });

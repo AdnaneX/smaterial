@@ -6,13 +6,13 @@
  * http://www.google.com/design/spec/patterns/navigation-drawer.html
  */
 
-.sm-sidenav {
+.sc-sidenav {
 	position: fixed;
 	background: $sidenav-background;
 	padding: $sidenav-padding;
 	bottom: 0;
 	overflow: auto;
-	@extend .sm-z16;
+	@extend .sc-z16;
 
 	// Left navigation
 	&-left {
@@ -44,7 +44,7 @@
 			}
 
 			&-title {
-				@extend .sm-title;
+				@extend .sc-title;
 				display: none;
 
 				@media #{$medium-up} {
@@ -68,7 +68,7 @@
 				}
 			}
 
-			.sm-sidenav-profile {
+			.sc-sidenav-profile {
 				@media #{$small-up} {
 					margin: $sidenav-full-profile-medium-margin;
 				}
@@ -92,7 +92,7 @@
 				top: $sidenav-floating-large-top;
 			}
 
-			.sm-sidenav-left-full-title {
+			.sc-sidenav-left-full-title {
 				display: none;
 			}
 		}
@@ -120,7 +120,7 @@
 	}
 
 	&-subheader {
-		@extend .sm-subhead-1;
+		@extend .sc-subhead-1;
 		color: $sidenav-subheader-color;
 
 		&:hover {
@@ -128,7 +128,7 @@
 		}
 	}
 
-	.sm-no-hover {
+	.sc-no-hover {
 		background: none;
 
 		&:hover {
@@ -142,16 +142,16 @@
 		padding: 0;
 
 		li {
-			padding: 0 remCalc(16px);
+			font-weight: $sidenav-font-weight;
 
 			&:hover {
-				background: $grey-200;
+				background: $sidenav-hover-background;
 			}
 
-			&.sm-sidenav-profile {
-				@extend .sm-row;
-				margin: remCalc(-16px) 0 remCalc(8px) 0;
-				padding: remCalc(16px) remCalc(16px) remCalc(8px) remCalc(16px);
+			&.sc-sidenav-profile {
+				@extend .sc-row;
+				margin: $sidenav-profile-margin;
+				padding: $sidenav-profile-padding;
 				background: $sidenav-profile-background;
 				height: auto;
 
@@ -159,45 +159,45 @@
 					padding: 0 !important;
 				}
 
-				.sm-sidenav-profile-img {
-					@extend .sm-col, .sm-s12;
+				.sc-sidenav-profile-img {
+					@extend .sc-col, .sc-s12;
 					width: 100%;
-					height: remCalc(50px);
-					margin-bottom: remCalc(5px);
+					height: $sidenav-profile-img-size;
+					margin: $sidenav-profile-img-margin;
 
 					img {
-						@extend .sm-circle;
-						width: remCalc(50px);
-						height: remCalc(50px);
+						@extend .sc-circle;
+						width: $sidenav-profile-img-size;
+						height: $sidenav-profile-img-size;
 					}
 				}
 
-				.sm-sidenav-profile-info {
-					@extend .sm-col, .sm-s8;
-					height: remCalc(56px);
+				.sc-sidenav-profile-info {
+					@extend .sc-col, .sc-s8;
+					height: $sidenav-profile-info-totla-height;
 
 					> div {
-						@extend .sm-col, .sm-s12;
-						color: $white;
-						font-size: remCalc(14px);
+						@extend .sc-col, .sc-s12;
+						color: $sidenav-profile-info-font-color;
+						font-size: $sidenav-profile-info-font-size;
 						height: remCalc(28px);
 						width: 75%;
 						max-width: 75%;
 						line-height: remCalc(28px);
 					}
 
-					.sm-sidenav-profile-name {
+					.sc-sidenav-profile-name {
 						font-weight: 500;
 					}
 
-					.sm-sidenav-profile-email {
+					.sc-sidenav-profile-email {
 						font-weight: 400;
 					}
 				}
 
-				.sm-sidenav-profile-button {
-					@extend .sm-col, .sm-s4;
-					height: remCalc(56px);
+				.sc-sidenav-profile-button {
+					@extend .sc-col, .sc-s4;
+					height: $sidenav-profile-info-total-height;
 
 					a {
 						text-align: right;
@@ -213,18 +213,18 @@
 				}
 			}
 
-			&.sm-sidenav-dropdown {
+			&.sc-sidenav-dropdown {
 				height: auto;
 				cursor: pointer;
 
-				.sm-arrow {
+				.sc-arrow {
 					width: auto;
 					position: absolute;
 					right: remCalc(16px);
 				}
 			}
 
-			&.sm-sidenav-footer {
+			&.sc-sidenav-footer {
 				bottom: 0;
 			   	position: absolute;
 
@@ -235,6 +235,7 @@
 
 			a {
 				display: block;
+				font-weight: $sidenav-font-weight;
 
 				&:hover {
 					color: $sidenav-hover;

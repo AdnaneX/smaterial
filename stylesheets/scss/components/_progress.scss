@@ -4,14 +4,14 @@
  * http://www.google.com/design/spec/components/progress-activity.html
  **************************************/
 
-.sm-determinate {
+.sc-determinate {
 	width: $determinate-width;
 	background: $determinate-background;
 	height: remCalc(5px);
 	position: relative;
 }
 
-.sm-progress {
+.sc-progress {
 	background: $progress-background;
 	@include transition($progress-transition);
 	position: absolute;
@@ -20,14 +20,14 @@
 	width: 0%;
 }
 
-.sm-indeterminate {
+.sc-indeterminate {
 	width: $indeterminate-width;
 	background: $indeterminate-background;
 	height: $indeterminate-height;
 	position: relative;
 	overflow: hidden;
 
-	.sm-progress {
+	.sc-progress {
 		position: absolute;
 		top: 0;
 		bottom: 0;
@@ -60,7 +60,7 @@
 	}
 }
 
-.sm-buffer {
+.sc-buffer {
 	width: 100%;
 	height: remCalc(5px);
 	position: relative;
@@ -69,20 +69,20 @@
 		display: inline-block;
 	}
 
-	.sm-buffer-progress {
+	.sc-buffer-progress {
 		background: rgba($main-color, .4);
 		position: absolute;
 		top: 0;
 		bottom: 0;
 
-		.sm-progress {
+		.sc-progress {
 			position: absolute;
 			bottom: 0;
 			top: 0;
 		}
 	}
 
-	.sm-buffering {
+	.sc-buffering {
 		position: absolute;
 		top: 0;
 		bottom: 0;
@@ -91,7 +91,7 @@
 	}
 }
 
-.sm-circular {
+.sc-circular {
 	width: remCalc(100px);
 	height: remCalc(100px);
 	@include animation(rotate 2s linear infinite);

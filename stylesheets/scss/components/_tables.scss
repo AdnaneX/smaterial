@@ -41,16 +41,16 @@ table {
 		}
 	}
 
-	.sm-numeric-col {
+	.sc-numeric-col {
 		text-align: right;
 	}
 
-	.sm-checkbox-col {
+	.sc-checkbox-col {
 		width: remCalc(56px);
 		padding: remCalc(24px);
 	}
 
-	&.sm-table-hover {
+	&.sc-table-hover {
 		tbody {
 			tr {
 				@include transition(background .2s ease-in-out);

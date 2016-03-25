@@ -1,7 +1,7 @@
 $(document).ready(function() {
-	$('.sm-bottom-trigger').click(function() {
+	$('.sc-bottom-trigger').click(function() {
 		var $this = $(this),
-			$trigger = $('#'+$this.data('sm-trigger'));
+			$trigger = $('#'+$this.data('sc-trigger'));
 
 		if( $trigger.visible() ) {
 			$trigger.slideUp();

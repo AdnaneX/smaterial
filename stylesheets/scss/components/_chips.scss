@@ -4,7 +4,7 @@
  * http://www.google.com/design/spec/components/chips.html
  **************************************/
 
-.sm-chip {
+.sc-chip {
 	@include border-radius($chips-size);
 	background: $chips-background;
 	color: $chips-text;
@@ -18,7 +18,7 @@
 	&-deletable {
 		@include transition($chips-delete-transition);
 
-		.sm-chip-delete {
+		.sc-chip-delete {
 			@include border-radius(50%);
 			@include transition($chips-delete-transition);
 			vertical-align: middle;
@@ -38,7 +38,7 @@
 			background: $chips-background-hover;
 			color: $chips-text-hover;
 
-			.sm-chip-delete {
+			.sc-chip-delete {
 				color: $chips-delete-cross-hover;
 				background: $chips-delete-background-hover;
 			}
@@ -56,7 +56,7 @@
 		}
 
 		&:hover {
-			@extend .sm-z2;
+			@extend .sc-z2;
 		}
 	}
 }

@@ -1,6 +1,6 @@
 (function (window, $) {
 	$(function() {
-		$('.sm-ripple').click(function (event) {
+		$('.sc-ripple').click(function (event) {
 			event.preventDefault();
 
 			var $div = $('<div/>'),
@@ -8,8 +8,8 @@
 				xPos = event.pageX - btnOffset.left,
 				yPos = event.pageY - btnOffset.top;
 
-			$div.addClass('sm-ripple-effect');
-			var $ripple = $(".sm-ripple-effect");
+			$div.addClass('sc-ripple-effect');
+			var $ripple = $(".sc-ripple-effect");
 
 			$ripple.css("height", $(this).height());
 			$ripple.css("width", $(this).height());

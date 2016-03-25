@@ -4,15 +4,15 @@
  * http://www.google.com/design/spec/components/cards.html#cards-usage
  **************************************/
 
-.sm-card {
-	@extend .sm-z2;
+.sc-card {
+	@extend .sc-z2;
 	@include border-radius(2px);
 	width: 100%;
 	margin: remCalc(4px);
 
 	&-basic {
 		&-title {
-			@extend .sm-title;
+			@extend .sc-title;
 		}
 	}
 }
