@@ -1,7 +1,7 @@
 <?php
 $title = 'Home';
-$description = 'Home of SMaterial. The (S)CSS framework based on Google\'s Material Design';
-$keywords = 'material design, smaterial, css framework';
+$description = 'Home of SMaterial. The CSS framework based on Google\'s Material Design';
+$keywords = 'material design, smaterial, css framework, CSS, SCSS';
 
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>

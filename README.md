@@ -13,6 +13,7 @@
     - Future add less version
     - Future add SMaterial CDN package
     - Future add meteor js package
+    - Check for "- remCalc(..px)" and "remCalc(-..px)". All should be like the last one
 - Appbar
     - Add "more menu" styling
     - Add "more menu" functions
