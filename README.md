@@ -40,7 +40,6 @@
 - Selection
     - Add hovers
     - Add radials for mobile
-    - Add animation of thumb sliding
 - Settings
     - Make variables consistent
     - Give variables a clearer name of what they do

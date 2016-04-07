@@ -241,11 +241,10 @@ $checkbox-size: remCalc(18.2px); // Default remCalc(18.2px)
 $checkbox-margin: remCalc(20px); // Default remCalc(20px)
 $checkbox-disabled-color: lighten($black, (100% - 26%)); // Default lighten($black, (100% - 26%));
 
-$radio-color: $checkbox-color; // Default $main-color
+$radio-color: $main-color; // Default $main-color
 $radio-size: $checkbox-size; // Default remCalc(18.2px)
 $radio-margin: $checkbox-margin; // Default remCalc(20px)
 $radio-disabled-color: $checkbox-disabled-color; // Default $checkbox-disabled-color
-
 
 $selection-radial-color: rgba($checkbox-color-checked, .26); // Default rgba($checkbox-color, .26)
 $selection-radial-size: 2.8rem; // Default 2.8rem
