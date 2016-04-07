@@ -1,3 +1,7 @@
+<?php
+// Set to true this way no unnecessary code is loaded while testing
+define( 'TEST', false );
+?>
 <!DOCTYPE html>
 <html>
 	<head>

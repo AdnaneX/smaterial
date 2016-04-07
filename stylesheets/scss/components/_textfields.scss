@@ -4,48 +4,70 @@
  * http://www.google.com/design/spec/components/text-fields.html
  **************************************/
 
-// Floating inputs
-.sc-floating-input {
-	height: remCalc(72px);
-	padding: remCalc(16px) 0 remCalc(8px) 0;
-	position: relative;
-
-	input[type="text"], input[type="password"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="url"] {
+.sc-input {
+	input[type="text"], input[type="password"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="url"], textarea {
 		width: 100%;
 		border: 0;
 		position: absolute;
-		font-size: remCalc(16px);
 		border-bottom: remCalc(2px) solid $grey;
 		outline: none;
-		padding: remCalc(8px) 0;
 		@include transition(all 300ms ease-in-out);
-		bottom: remCalc(8px);
 
 		&:active, &:focus {
 			border-bottom: remCalc(2px) solid $main-color;
 
 			+ label {
-				font-size: remCalc(12px);
 				color: $main-color;
-				bottom: remCalc(40px);
 			}
 		}
 
-		&.sc-disabled {
-			border-bottom: remCalc(2px) dotted $grey
+		&:disabled {
+			border-bottom: remCalc(2px) dotted $grey;
 		}
 	}
 
 	label {
 		color: $grey;
 		position: absolute;
-		bottom: remCalc(16px);
 		@include transition(all 300ms ease-in-out);
 		cursor: text;
 
 		&.sc-active {
-			font-size: remCalc(12px);
 			color: $grey;
+		}
+	}
+
+	textarea {
+		font-family: inherit;
+		font-size: inherit;
+	}
+}
+
+// Floating inputs
+.sc-floating-input {
+	height: remCalc(72px);
+	padding: remCalc(16px) 0 remCalc(8px) 0;
+	position: relative;
+	@extend .sc-input;
+
+	input[type="text"], input[type="password"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="url"], textarea {
+		font-size: remCalc(16px);
+		padding: remCalc(8px) 0;
+		bottom: remCalc(8px);
+
+		&:active, &:focus {
+			+ label {
+				font-size: remCalc(12px);
+				bottom: remCalc(40px);
+			}
+		}
+	}
+
+	label {
+		bottom: remCalc(16px);
+
+		&.sc-active {
+			font-size: remCalc(12px);
 			bottom: remCalc(40px);
 		}
 	}
@@ -55,39 +77,23 @@
 	height: remCalc(60px);
 	padding: remCalc(12px) 0 remCalc(4px) 0;
 	position: relative;
+	@extend .sc-input;
 
 	input[type="text"], input[type="password"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="url"] {
-		width: 100%;
-		border: 0;
-		position: absolute;
 		font-size: remCalc(13px);
-		border-bottom: remCalc(2px) solid $grey;
-		outline: none;
 		padding: remCalc(4px) 0;
-		@include transition(all 300ms ease-in-out);
 		bottom: remCalc(12px);
 
 		&:active, &:focus {
-			border-bottom: remCalc(2px) solid $main-color;
-
 			+ label {
-				color: $main-color;
 				bottom: remCalc(29px);
 			}
-		}
-
-		&.sc-disabled {
-			border-bottom: remCalc(2px) dotted $grey
 		}
 	}
 
 	label {
-		color: $grey;
-		position: absolute;
 		bottom: remCalc(12px);
 		font-size: remCalc(13px);
-		@include transition(all 300ms ease-in-out);
-		cursor: text;
 
 		&.sc-active {
 			color: $grey;
@@ -101,16 +107,11 @@
 	height: remCalc(48px);
 	padding: remCalc(16px) 0 remCalc(8px) 0;
 	position: relative;
+	@extend .sc-input;
 
 	input[type="text"], input[type="password"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="url"] {
-		width: 100%;
-		border: 0;
-		position: absolute;
 		font-size: remCalc(16px);
-		border-bottom: remCalc(2px) solid $grey;
-		outline: none;
 		padding: remCalc(8px) 0;
-		@include transition(all 300ms ease-in-out);
 		bottom: remCalc(16px);
 
 		&:active, &:focus {
@@ -124,10 +125,6 @@
 				color: $main-color;
 			}
 		}
-
-		&.sc-disabled {
-			border-bottom: remCalc(2px) dotted $grey
-		}
 	}
 
 	.material-icons {
@@ -140,12 +137,8 @@
 	}
 
 	label {
-		color: $grey;
-		position: absolute;
 		bottom: remCalc(16px);
 		font-size: remCalc(16px);
-		@include transition(all 300ms ease-in-out);
-		cursor: text;
 		display: block;
 
 		&.sc-active {
@@ -158,16 +151,12 @@
 	height: remCalc(40px);
 	padding: remCalc(12px) 0;
 	position: relative;
+	@extend .sc-input;
 
 	input[type="text"], input[type="password"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="url"] {
-		width: 100%;
-		border: 0;
-		position: absolute;
 		font-size: remCalc(13px);
 		border-bottom: remCalc(2px) solid $grey;
-		outline: none;
 		padding: remCalc(4px) 0;
-		@include transition(all 300ms ease-in-out);
 		bottom: remCalc(12px);
 
 		&:active, &:focus {
@@ -177,20 +166,11 @@
 				display: none;
 			}
 		}
-
-		&.sc-disabled {
-			border-bottom: remCalc(2px) dotted $grey;
-		}
 	}
 
 	label {
-		color: $grey;
-		position: absolute;
 		bottom: remCalc(12px);
 		font-size: remCalc(13px);
-		@include transition(all 300ms ease-in-out);
-		cursor: text;
-		display: block;
 
 		&.sc-active {
 			display: none;
@@ -198,7 +178,7 @@
 	}
 }
 
-input[type="text"], input[type="password"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="url"] {
+input[type="text"], input[type="password"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="url"], textarea {
 	&:required + label:after {
 		content: ' *';
 		@include transition(color 300ms ease-in-out);

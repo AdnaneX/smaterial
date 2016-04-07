@@ -61,7 +61,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		</div>
 
 		<div class="sc-floating-input">
-			<input type="text" id="disabled" class="sc-disabled">
+			<input type="text" id="disabled" disabled>
 			<label for="disabled">Disabled</label>
 		</div>
 	</div>
@@ -74,7 +74,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 &lt;/div>
 
 &lt;div class="sc-floating-input">
-  &lt;input type="text" id="disabled" class="sc-disabled">
+  &lt;input type="text" id="disabled" disabled>
   &lt;label for="disabled">Disabled&lt;/label>
 &lt;/div>
 		</pre>
@@ -169,7 +169,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		</div>
 
 		<div class="sc-floating-dense-input">
-			<input type="text" id="disabled1" class="sc-disabled">
+			<input type="text" id="disabled1" disabled>
 			<label for="disabled1">Disabled</label>
 		</div>
 	</div>
@@ -182,7 +182,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 &lt;/div>
 
 &lt;div class="sc-floating-dense-input">
-  &lt;input type="text" id="disabled" class="sc-disabled">
+  &lt;input type="text" id="disabled" disabled>
   &lt;label for="disabled">Disabled&lt;/label>
 &lt;/div>
 		</pre>
@@ -209,7 +209,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		</div>
 
 		<div class="sc-single-input">
-			<input type="text" id="disabled2" class="sc-disabled">
+			<input type="text" id="disabled2" disabled>
 			<label for="disabled2">Disabled</label>
 		</div>
 	</div>
@@ -230,7 +230,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		</div>
 
 		<div class="sc-single-dense-input">
-			<input type="text" id="disabled3" class="sc-disabled">
+			<input type="text" id="disabled3" disabled>
 			<label for="disabled3">Disabled</label>
 		</div>
 	</div>
@@ -243,11 +243,26 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 &lt;/div>
 
 &lt;div class="sc-single-dense-input">
-  &lt;input type="text" id="disabled" class="sc-disabled">
+  &lt;input type="text" id="disabled" disabled>
   &lt;label for="disabled">Disabled&lt;/label>
 &lt;/div>
 		</pre>
 	</code>
+</section>
+
+<section class="sc-col sc-s12 sc-m6">
+	<h3>Textarea</h3>
+
+	<p class="sc-col sc-s12 sc-m6">
+		The textarea works the same as the textfields.
+	</p>
+
+	<div class="sc-col sc-s12 sc-m6">
+		<div class="sc-floating-input">
+			<textarea id="textarea"></textarea>
+			<label for="textarea">Text area</label>
+		</div>
+	</div>
 </section>
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.php';
