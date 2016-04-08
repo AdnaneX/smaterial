@@ -66,6 +66,7 @@
     - Add autocomplete input
     - Add slide out search
     - Add dropdown search
+    - Maybe set *-dense as mobile default
 - Normalize
     - Add default list style
 - Gulp

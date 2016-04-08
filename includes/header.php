@@ -66,7 +66,7 @@ define( 'TEST', false );
 							</div>
 
 							<div class="sc-sidenav-profile-email">
-								johndoe@gmail.com
+								johndoe&#64;gmail.com
 							</div>
 						</div>
 

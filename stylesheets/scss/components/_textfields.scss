@@ -6,40 +6,49 @@
 
 .sc-input {
 	input[type="text"], input[type="password"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="url"], textarea {
-		width: 100%;
+		width: $textfield-width;
 		border: 0;
-		position: absolute;
-		border-bottom: remCalc(2px) solid $grey;
+		position: $textfield-position;
+		border-bottom: $textfield-off-bottom;
 		outline: none;
-		@include transition(all 300ms ease-in-out);
+		@include transition($textfield-transition);
 
 		&:active, &:focus {
-			border-bottom: remCalc(2px) solid $main-color;
+			border-bottom: $textfield-focus-bottom;
 
 			+ label {
-				color: $main-color;
+				color: $textfield-focus-label;
 			}
 		}
 
 		&:disabled {
-			border-bottom: remCalc(2px) dotted $grey;
+			background: none;
+			border-bottom: $textfield-disabled-bottom;
+
+			&:active, &:focus {
+				border-bottom: $textfield-disabled-bottom;
+
+				+ label {
+					color: $grey;
+				}
+			}
 		}
 	}
 
 	label {
-		color: $grey;
-		position: absolute;
-		@include transition(all 300ms ease-in-out);
+		color: $textfield-label-color;
+		position: $textfield-label-position;
+		@include transition($textfield-transition);
 		cursor: text;
 
 		&.sc-active {
-			color: $grey;
+			color: $textfield-label-active-color;
 		}
 	}
 
 	textarea {
-		font-family: inherit;
-		font-size: inherit;
+		font-family: $textfield-textarea-font-family;
+		font-size: $textfield-textarea-font-size;
 	}
 }
 
@@ -180,19 +189,22 @@
 
 input[type="text"], input[type="password"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="url"], textarea {
 	&:required + label:after {
-		content: ' *';
-		@include transition(color 300ms ease-in-out);
+		@extend .material-icons;
+		vertical-align: $textfield-required-vertical-align;
+		content: $textfield-required-content;
+		font-size: $textfield-required-font-size;
+		@include transition($textfield-transition);
 	}
 
 	&:active, &:focus {
 		&:required + label:after{
-			color: $red;
+			color: $textfield-required-color;
 		}
 	}
 
 	&.active {
 		&:required + label:after {
-			color: $red;
+			color: $textfield-required-color;
 		}
 	}
 }

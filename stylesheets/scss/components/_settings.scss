@@ -115,7 +115,7 @@ $letter-spacing-button: 0.1; // Default 0.1
 $appbar-background: $main-color; // Default $main-color
 $appbar-hover: $blue-700; // Default $blue-700
 $appbar-text: $white; // Default $white
-$appbar-title: $white; // Defaullt $white
+$appbar-title: $white; // Default $white
 $appbar-title-size: remCalc(24px); // Default remCalc(24px)
 $appbar-title-small-padding: remCalc(12px) 0 remCalc(12px) 0 !important; // Default remCalc(12px) 0 remCalc(12px) 0 !important
 $appbar-title-medium-padding: remCalc(20px) 0 remCalc(20px) 0 !important; // Default remCalc(20px) 0 remCalc(20px) 0 !important
@@ -318,6 +318,28 @@ $sidenav-profile-info-total-height: remCalc(56px); // Default remCalc(56px)
 $sidenav-profile-info-height: $sidenav-profile-info-total-height / 2;
 $sidenav-profile-info-font-color: $white; // Default $white
 $sidenav-profile-info-font-size: remCalc(14px); // Default remCalc(14px)
+
+/**************************************
+ * Textfields
+ **************************************/
+$textfield-width: 100%; // Default 100%;
+$textfield-position: absolute; // Default absolute
+$textfield-off-bottom: remCalc(2px) solid $grey; // Default remCalc(2px) solid $grey
+$textfield-transition: all 300ms ease-in-out; // Default all 300ms ease-in-out
+$textfield-focus-bottom: remCalc(2px) solid $main-color; // Default remCalc(2px) solid $main-color
+$textfield-focus-label: $main-color; // Default $main-color
+$textfield-disabled-bottom: remCalc(2px) dotted $grey; // Default remCalc(2px) dotted $grey
+$textfield-label-color: $grey; // Default $grey
+$textfield-label-position: absolute; // Default absolute
+$textfield-label-active-color: $grey; // Default $grey
+$textfield-textarea-font-family: inherit; // Default inherit
+$textfield-textarea-font-size: inherit; // Default inherit
+$textfield-required-color: $red; // Default $red
+$textfield-required-content: ' star'; // Default ' star'
+$textfield-required-font-size: remCalc(7px); // Default remCalc(7px)
+$textfield-required-vertical-align: super; // Default super
+
+
 /**************************************
  * Tooltips
  **************************************/
@@ -355,4 +377,5 @@ $gutter: 16px; // Default 16px
  * Icons
  **************************************/
 $icon-font-path: './components/fonts/icons/';
+$icon-size: remCalc(#{$font-size-initial}px);
 

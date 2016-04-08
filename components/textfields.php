@@ -101,7 +101,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	</div>
 
 	<div class="sc-col sc-s12 sc-push-m3 sc-m6">
-		The <span class="sc-red-text">*</span> is automatically added by required fields but can easily be turned off.
+		The <span class="sc-red-text"><i class="material-icons">star</i></span>  is automatically added by required fields but can easily be turned off.
 	</div>
 
 	<code class="sc-col sc-s12 sc-push-m3 sc-m6">
