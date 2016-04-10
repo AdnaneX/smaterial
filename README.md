@@ -14,6 +14,7 @@
     - Future add SMaterial CDN package
     - Future add meteor js package
     - Check for "- remCalc(..px)" and "remCalc(-..px)". All should be like the last one
+    - Move global usable classes to _normailize.scss (.sc-no-hover, .sc-active) to name a few
 - Appbar
     - Add "more menu" styling
     - Add "more menu" functions
@@ -67,6 +68,7 @@
     - Add slide out search
     - Add dropdown search
     - Maybe set *-dense as mobile default
+    - Fix label for textarea
 - Normalize
     - Add default list style
 - Gulp

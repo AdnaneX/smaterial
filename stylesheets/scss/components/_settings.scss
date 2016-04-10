@@ -249,7 +249,6 @@ $radio-disabled-color: $checkbox-disabled-color; // Default $checkbox-disabled-c
 $selection-radial-color: rgba($checkbox-color-checked, .26); // Default rgba($checkbox-color, .26)
 $selection-radial-size: 2.8rem; // Default 2.8rem
 
-
 /**************************************
  * Snackbars and toasts
  **************************************/
@@ -269,6 +268,8 @@ $snackbar-action-large-left: remCalc(48px); // Default remCalc(48px)
 /**************************************
  * Sidenav
  **************************************/
+$sidenav-position: fixed; // Default fixed
+$sidenav-overflow: auto; // Default auto
 $sidenav-background: $white; // Default $white
 $sidenav-padding: remCalc(16px) 0; // Default remCalc(16px) 0
 $sidenav-hover: $main-color; // Default $main-color
@@ -277,6 +278,10 @@ $sidenav-max-width: remCalc(400px); // Default remCalc(400px)
 $sidenav-small-width: remCalc(320px); // Default remCalc(320px)
 $sidenav-small-max-width: remCalc(320px); // Default remCalc(320px)
 $sidenav-small-margin-right: remCalc(56px); // Default remCalc(56px)
+$sidenav-sub-list-margin: 0 0 0 remCalc(10px); // Default 0 0 0 remCalc(10px)
+$sidenav-icons-font-size: remCalc(22.4px); // Default remCalc(22.4px)
+$sidenav-icons-size: remCalc(48px); // Default remCalc(48px) Should be the same as default list item height
+$sidenav-icons-color: lighten($black, (100% - 54%)); // Default lighten($black, (100% - 54%))
 
 $sidenav-full-small-top: $appbar-small-height; // Default $appbar-small-height
 $sidenav-full-medium-top: $appbar-medium-height; // Default $appbar-medium-height
@@ -323,7 +328,8 @@ $sidenav-profile-info-font-size: remCalc(14px); // Default remCalc(14px)
  * Textfields
  **************************************/
 $textfield-width: 100%; // Default 100%;
-$textfield-position: absolute; // Default absolute
+$textfield-position: relative; // Default relative
+$textfield-input-position: absolute; // Default absolute
 $textfield-off-bottom: remCalc(2px) solid $grey; // Default remCalc(2px) solid $grey
 $textfield-transition: all 300ms ease-in-out; // Default all 300ms ease-in-out
 $textfield-focus-bottom: remCalc(2px) solid $main-color; // Default remCalc(2px) solid $main-color
@@ -339,6 +345,26 @@ $textfield-required-content: ' star'; // Default ' star'
 $textfield-required-font-size: remCalc(7px); // Default remCalc(7px)
 $textfield-required-vertical-align: super; // Default super
 
+$textfield-floating-height: remCalc(72px); // Default remCalc(72px)
+$textfield-floating-padding: remCalc(16px) 0 remCalc(8px) 0; // Default remCalc(16px) 0 remCalc(8px) 0
+$textfield-floating-input-font-size: remCalc(16px); // Default remCalc(16px)
+$textfield-floating-input-padding: remCalc(8px) 0; // Default remCalc(8px) 0
+$textfield-floating-input-bottom: remCalc(8px); // Default remCalc(8px)
+$textfield-floating-input-focus-label-font-size: remCalc(12px); // Default remCalc(12px)
+$textfield-floating-input-focus-label-bottom: remCalc(40px); // Default remCalc(40px)
+$textfield-floating-label-bottom: remCalc(16px); // Default remCalc(16px)
+$textfield-floating-label-active-font-size: remCalc(12px); // Default remCalc(12px)
+$textfield-floating-label-active-bottom: remCalc(40px); // Default remCalc(40px)
+
+$textfield-floating-dense-height: remCalc(60px); // Default remCalc(60px)
+$textfield-floating-dense-padding: remCalc(12px) 0 remCalc(4px) 0; // Default remCalc(12px) 0 remCalc(4px) 0
+$textfield-floating-dense-input-font-size: remCalc(13px); // Default remCalc(13px)
+$textfield-floating-dense-input-padding: remCalc(4px) 0; // Default remCalc(4px) 0
+$textfield-floating-dense-input-bottom: remCalc(12px); // Default remCalc(12px)
+$textfield-floating-dense-input-focus-label-bottom: remCalc(29px); // Default remCalc(29px)
+$textfield-floating-dense-label-bottom: remCalc(12px); // Default remCalc(12px)
+$textfield-floating-dense-label-active-font-size: remCalc(13px); // Default remCalc(13px)
+$textfield-floating-dense-label-active-bottom: remCalc(29px); // Default remCalc(29px)
 
 /**************************************
  * Tooltips
@@ -377,5 +403,5 @@ $gutter: 16px; // Default 16px
  * Icons
  **************************************/
 $icon-font-path: './components/fonts/icons/';
-$icon-size: remCalc(#{$font-size-initial}px);
+$icon-size: remCalc(24px);
 

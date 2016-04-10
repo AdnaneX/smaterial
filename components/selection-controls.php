@@ -68,6 +68,17 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		<div class="sc-switch">
 			<label>
 				off
+				<input type="checkbox">
+				<span class="sc-lever"></span>
+				on
+			</label>
+		</div>
+	</p>
+
+	<p class="sc-col sc-s12 sc-m6">
+		<div class="sc-switch">
+			<label>
+				off
 				<input type="checkbox" disabled>
 				<span class="sc-lever"></span>
 				on
@@ -81,6 +92,15 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
   &lt;label>
     off
     &lt;input type="checkbox">
+    &lt;span class="sc-lever">&lt;/span>
+    on
+  &lt;/label>
+&lt;/div>
+
+&lt;div class="sc-switch">
+  &lt;label>
+    off
+    &lt;input type="checkbox" disabled>
     &lt;span class="sc-lever">&lt;/span>
     on
   &lt;/label>

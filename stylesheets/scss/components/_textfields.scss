@@ -5,10 +5,12 @@
  **************************************/
 
 .sc-input {
+	position: $textfield-position;
+
 	input[type="text"], input[type="password"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="url"], textarea {
 		width: $textfield-width;
 		border: 0;
-		position: $textfield-position;
+		position: $textfield-input-position;
 		border-bottom: $textfield-off-bottom;
 		outline: none;
 		@include transition($textfield-transition);
@@ -54,30 +56,29 @@
 
 // Floating inputs
 .sc-floating-input {
-	height: remCalc(72px);
-	padding: remCalc(16px) 0 remCalc(8px) 0;
-	position: relative;
+	height: $textfield-floating-height;
+	padding: $textfield-floating-padding;
 	@extend .sc-input;
 
 	input[type="text"], input[type="password"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="url"], textarea {
-		font-size: remCalc(16px);
-		padding: remCalc(8px) 0;
-		bottom: remCalc(8px);
+		font-size: $textfield-floating-input-font-size;
+		padding: $textfield-floating-input-padding;
+		bottom: $textfield-floating-input-bottom;
 
 		&:active, &:focus {
 			+ label {
-				font-size: remCalc(12px);
-				bottom: remCalc(40px);
+				font-size: $textfield-floating-input-focus-label-font-size;
+				bottom: $textfield-floating-input-focus-label-bottom;
 			}
 		}
 	}
 
 	label {
-		bottom: remCalc(16px);
+		bottom: $textfield-floating-label-bottom;
 
 		&.sc-active {
-			font-size: remCalc(12px);
-			bottom: remCalc(40px);
+			font-size: $textfield-floating-label-active-font-size;
+			bottom: $textfield-floating-label-active-bottom;
 		}
 	}
 }
@@ -85,28 +86,26 @@
 .sc-floating-dense-input {
 	height: remCalc(60px);
 	padding: remCalc(12px) 0 remCalc(4px) 0;
-	position: relative;
 	@extend .sc-input;
 
 	input[type="text"], input[type="password"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="url"] {
-		font-size: remCalc(13px);
-		padding: remCalc(4px) 0;
-		bottom: remCalc(12px);
+		font-size: $textfield-floating-dense-input-font-size;
+		padding: $textfield-floating-dense-input-padding;
+		bottom: $textfield-floating-dense-input-bottom;
 
 		&:active, &:focus {
 			+ label {
-				bottom: remCalc(29px);
+				bottom: $textfield-floating-dense-input-focus-label-bottom;
 			}
 		}
 	}
 
 	label {
-		bottom: remCalc(12px);
-		font-size: remCalc(13px);
+		bottom: $textfield-floating-dense-label-bottom;
 
 		&.sc-active {
-			color: $grey;
-			bottom: remCalc(29px);
+			font-size: $textfield-floating-dense-label-active-font-size;
+			bottom: $textfield-floating-dense-label-active-bottom;
 		}
 	}
 }
@@ -115,7 +114,6 @@
 .sc-single-input {
 	height: remCalc(48px);
 	padding: remCalc(16px) 0 remCalc(8px) 0;
-	position: relative;
 	@extend .sc-input;
 
 	input[type="text"], input[type="password"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="url"] {
@@ -159,7 +157,6 @@
 .sc-single-dense-input {
 	height: remCalc(40px);
 	padding: remCalc(12px) 0;
-	position: relative;
 	@extend .sc-input;
 
 	input[type="text"], input[type="password"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="url"] {

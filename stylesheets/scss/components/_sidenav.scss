@@ -7,11 +7,11 @@
  */
 
 .sc-sidenav {
-	position: fixed;
+	position: $sidenav-position;
 	background: $sidenav-background;
 	padding: $sidenav-padding;
 	bottom: 0;
-	overflow: auto;
+	overflow: $sidenav-overflow;
 	@extend .sc-z16;
 
 	// Left navigation
@@ -201,9 +201,11 @@
 
 					a {
 						text-align: right;
+
 						.material-icons {
 							margin-top: remCalc(28px);
 							color: $white;
+							font-size: remCalc(23.8px);
 							height: remCalc(28px);
 							width: remCalc(28px);
 							vertical-align: middle;
@@ -247,16 +249,17 @@
 			}
 
 			.material-icons {
-				color: lighten($black, (100% - 54%));
-				line-height: remCalc(48px);
-				height: remCalc(48px);
-				width: remCalc(48px);
+				color: $sidenav-icons-color;
+				line-height: $sidenav-icons-size;
+				font-size: $sidenav-icons-font-size;
+				height: $sidenav-icons-size;
+				width: $sidenav-icons-size;
 				vertical-align: middle;
 			}
 		}
 
 		ul {
-			margin-left: remCalc(10px);
+			margin: $sidenav-sub-list-margin;
 		}
 	}
 }
