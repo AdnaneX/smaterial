@@ -25,31 +25,41 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 <section class="sc-row">
 	<h3>Columns</h3>
 
-	<p class="sc-col sc-s12 sc-m6">
-		There are 5 breakpoints <code>.sc-xs</code>, <code>.sc-s</code>, <code>.sc-m</code>, <code>.sc-l</code> and <code>.sc-xl</code>
-		to suit your needs. <strong>NOTE*</strong> that <code>.sc-xs</code> and <code>.sc-xl</code> are not jet completely supported.
-		In order to make the columns work you need to wrap it inside a <code>.sc-row</code>
-	</p>
+	<div class="sc-row">
+		<p class="sc-col sc-s12 sc-m6">
+			There are 5 breakpoints <code>.sc-xs</code>, <code>.sc-s</code>, <code>.sc-m</code>, <code>.sc-l</code> and <code>.sc-xl</code>
+			to suit your needs.
+			In order to make the columns work you need to wrap it inside a <code>.sc-row</code>
+		</p>
 
-	<code class="sc-col sc-s12 sc-m6">
-		<pre>
+		<code class="sc-col sc-s12 sc-m6">
+			<pre>
 &lt;div class="sc-row">
   &lt;div class="sc-col sc-s12 sc-m6">
     Example
   &lt;/div>
 &lt;/div>
-		</pre>
-	</code>
+			</pre>
+		</code>
+	</div>
+
+	<div class="sc-row">
+		<p class="sc-col sc-s12 sc-m6">
+			You can also use the row and columns in SCSS by simply extending the class.
+		</p>
+
+		<code class="sc-col sc-s12 sc-m6">
+			<pre>
+@extend .sc-col, .sc-s12, .sc-m6;
+			</pre>
+		</code>
+	</div>
 
 	<p class="sc-col sc-s12 sc-m6">
-		You can also use the row and columns in SCSS by simply extending the class.
+		To follow the <a href="//www.google.com/design/spec/layout/responsive-ui.html" target="_blank">Material Design</a>
+		specifications as closely as possible some breakpoints have different settings.
+		<code>.sc-xs</code> Only has 4 columns, <code>sc-s</code> has 8 to 12 columns depending on the width of the screen.
 	</p>
-
-	<code class="sc-col sc-s12 sc-m6">
-		<pre>
-@extend .sc-col, .sc-s12, .sc-m6;
-		</pre>
-	</code>
 </section>
 
 <section class="sc-row">
@@ -88,10 +98,14 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 
 	<p class="sc-col sc-s12 sc-m6">
 		If you want an element to be hidden for a certain device you can use the following classes:
-		<code>.sc-s-hidden</code>, <code>.sc-m-hidden</code> and <code>.sc-l-hidden</code>.
+		<code>.sc-xs-hidden</code>, <code>.sc-s-hidden</code>, <code>.sc-m-hidden</code>, <code>.sc-l-hidden</code> and <code>.sc-xl-hidden</code>.
 	</p>
 
 	<div class="sc-row">
+		<div class="sc-col sc-s2 sc-xs-hidden">
+			XSmall hidden
+		</div>
+
 		<div class="sc-col sc-s4 sc-s-hidden">
 			Small hidden
 		</div>
@@ -102,6 +116,10 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 
 		<div class="sc-col sc-s4 sc-l-hidden">
 			Large hidden
+		</div>
+
+		<div class="sc-col sc-s2 sc-xl-hidden">
+			XLarge hidden
 		</div>
 	</div>
 

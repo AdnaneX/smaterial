@@ -33,9 +33,6 @@
     - Change size of delete icon
 - Dialogs
     - Add more JavaScript functionality (open / close by JavaScript call)
-- Grid
-    - Add xs-column styling
-    - Add xl-column styling
 - Progress
     - Fix buffer animation
 - Selection

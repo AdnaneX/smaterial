@@ -3,7 +3,7 @@
  *
  * http://www.google.com/design/spec/layout/responsive-ui.html
  **************************************/
-$xsmall-only: "only screen and (min-width: 0px) and (max-width: #{$xsmall-screen})";
+$xsmall-only: "only screen and (max-width: #{$xsmall-screen})";
 $small-only: "only screen and (min-width: #{$xsmall-screen}) and (max-width: #{$small-screen})";
 $medium-only: "only screen and (min-width: #{$small-screen}) and (max-width: #{$medium-screen})";
 $large-only: "only screen and (min-width: #{$medium-screen}) and (max-width: #{$large-screen})";
@@ -33,7 +33,7 @@ $xlarge-down: "only screen and (max-width: #{$xlarge-screen})";
 		width: 70%;
 	}
 
-	&.row {
+	&.sc-row {
 		margin-left: (-1 * $gutter / 2);
 		margin-right: (-1 * $gutter / 2);
 
@@ -82,36 +82,34 @@ $xlarge-down: "only screen and (max-width: #{$xlarge-screen})";
 			position: relative;
 		}
 
-		@media #{$xsmall-only} {
-			$i: 1;
-			@while $i <= $xsmall-columns {
-				$percent: unquote( ( 100 / ( $xsmall-columns / $i ) ) + "%" );
-				&.sc-xs#{$i} {
-					width: $percent;
-					margin-left: auto;
-					left: auto;
-					right: auto;
-				}
-				$i: $i + 1;
+		$i: 1;
+		@while $i <= $xsmall-columns {
+			$percent: unquote( ( 100 / ( $xsmall-columns / $i ) ) + "%" );
+			&.sc-xs#{$i} {
+				width: $percent;
+				margin-left: auto;
+				left: auto;
+				right: auto;
 			}
-
-			$i: 1;
-			@while $i <= $xsmall-columns {
-				$percent: unquote( ( 100 / ( $xsmall-columns / $i ) ) + "%" );
-				&.sc-offset-xs#{$i} {
-					margin-left: $percent;
-				}
-				&.sc-pull-xs#{$i} {
-					right: $percent;
-				}
-				&.sc-push-xs#{$i} {
-					left: $percent;
-				}
-				$i: $i + 1;
-			}
+			$i: $i + 1;
 		}
 
-		@media #{$small-only} {
+		$i: 1;
+		@while $i <= $xsmall-columns {
+			$percent: unquote( ( 100 / ( $xsmall-columns / $i ) ) + "%" );
+			&.sc-offset-xs#{$i} {
+				margin-left: $percent;
+			}
+			&.sc-pull-xs#{$i} {
+				right: $percent;
+			}
+			&.sc-push-xs#{$i} {
+				left: $percent;
+			}
+			$i: $i + 1;
+		}
+
+		@media #{$small-up} {
 			// Change between 8 and 12 columns default
 			@media only screen and (max-width: 720px) {
 				$i: 1;
@@ -172,7 +170,7 @@ $xlarge-down: "only screen and (max-width: #{$xlarge-screen})";
 			}
 		}
 
-		@media #{$medium-only} {
+		@media #{$medium-up} {
 			$i: 1;
 			@while $i <= $columns {
 				$percent: unquote( ( 100 / ( $columns / $i ) ) + "%" );
@@ -201,7 +199,7 @@ $xlarge-down: "only screen and (max-width: #{$xlarge-screen})";
 			}
 		}
 
-		@media #{$large-only} {
+		@media #{$large-up} {
 			$i: 1;
 			@while $i <= $columns {
 				$percent: unquote( ( 100 / ( $columns / $i ) ) + "%" );

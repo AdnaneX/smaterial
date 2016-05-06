@@ -53,7 +53,7 @@ button, input[type="button"], input[type="reset"], input[type="submit"], a {
 			}
 		}
 
-		&-disabled {
+		&-disabled, &:disabled {
 			background: $raised-disabled-background;
 			color: $raised-disabled-color;
 			@extend .sc-z0;
@@ -96,19 +96,7 @@ button, input[type="button"], input[type="reset"], input[type="submit"], a {
 			}
 		}
 
-		/*&-dense {
-			height: remCalc(32px);
-			line-height: remCalc(32px);
-			font-size: remCalc(13px);
-
-			.material-icons {
-				line-height: remCalc(32px);
-				height: remCalc(32px);
-				width: remCalc(32px);
-			}
-		}*/
-
-		&-disabled {
+		&-disabled, &:disabled {
 			background: none;
 			color: $flat-disabled-color;
 		}
