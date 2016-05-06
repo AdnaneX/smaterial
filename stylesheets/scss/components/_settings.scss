@@ -393,11 +393,13 @@ $medium-screen: 1280px; // Large tablet
 $large-screen: 1600px; // Small desktop
 $xlarge-screen: 1920px; // "Normal" desktop
 
-// The amount of columns. Default: 12
+$xsmall-columns: 4; // Default 4
+$small-columns: 8; // Default 8
 $columns: 12; // Default 12
 
 // Gutter
 $gutter: 16px; // Default 16px
+$large-gutter: 24px; // Default 24px
 
 /**************************************
  * Icons

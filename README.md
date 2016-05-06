@@ -8,7 +8,7 @@
     - Add badges
     - Fix mobile styling (in Chrome for Android when scrolling a page the title bar remains visible)
     - Check all list styles to prevent duplicate styling and therefor load speed
-    - When an item can be triggered by clicking work with JavaScript to set an active class. 
+    - When an item can be triggered by clicking work with JavaScript to set an active class.
     - Use 1 class for all triggers. With the active class make slideup and slidedown action
     - Future add less version
     - Future add SMaterial CDN package
@@ -24,8 +24,8 @@
     - Fix position (it's now under sidenav)
     - Fix shadow
 - Buttons
-    - Add dropdown buttons 
-    - Fix link button styling
+    - Add dropdown buttons
+    - Add toggle button actions
 - Cards
     - Add more styling to cards
     - Add more varieties of cards

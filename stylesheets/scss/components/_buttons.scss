@@ -11,19 +11,11 @@ button, input[type="button"], input[type="reset"], input[type="submit"], a {
 		@include transition($raised-transition);
 		color: $raised-color;
 		background: $raised-background;
-		border: none;
 		min-width: $raised-min-width;
 		height: $raised-size;
 		line-height: $raised-size;
 		padding: $raised-padding;
 		margin: $raised-margin;
-		text-decoration: none;
-		display: inline-block;
-		text-align: center;
-		cursor: pointer;
-		outline: none;
-		position: relative;
-		overflow: hidden;
 
 		&:active {
 			@extend .sc-z8;
@@ -78,19 +70,15 @@ button, input[type="button"], input[type="reset"], input[type="submit"], a {
 		@extend .sc-button;
 		color: $flat-color;
 		background: none;
-		border: none;
 		min-width: $flat-min-width;
 		height: $flat-size;
 		line-height: $flat-size;
 		padding: $flat-padding;
 		margin: $flat-margin;
-		outline: none;
-		text-decoration: none;
-		display: inline-block;
-		text-align: center;
-		cursor: pointer;
-		position: relative;
-		overflow: hidden;
+
+		&:hover {
+			color: $flat-color;
+		}
 
 		.material-icons {
 			color: $flat-icon-color;
@@ -129,19 +117,13 @@ button, input[type="button"], input[type="reset"], input[type="submit"], a {
 
 button, a {
 	&.sc-floating-button {
-		@extend .sc-z6;
+		@extend .sc-z6, .sc-button;
 		@include transition($floating-transition);
 		@include border-radius(50%);
-		border: none;
-		outline: none;
 		width: $floating-size;
 		height: $floating-size;
 		background: $floating-background;
-		text-decoration: none;
-		display: inline-block;
-		text-align: center;
 		line-height: $floating-size;
-		cursor: pointer;
 
 		&:hover {
 			@extend .sc-z12;
@@ -164,18 +146,13 @@ button, a {
 }
 
 .sc-toggle-button {
+	@extend .sc-button;
 	border-radius: 50%;
-	border: none;
-	outline: none;
 	width: remCalc(40px);
 	height: remCalc(40px);
 	color: $floating-icon;
 	background: $floating-background;
-	text-decoration: none;
-	display: inline-block;
-	text-align: center;
 	line-height: remCalc(40px);
-	cursor: pointer;
 
 	.material-icons {
 		height: remCalc(24px);
@@ -183,4 +160,13 @@ button, a {
 		vertical-align: middle;
 		color: $floating-icon;
 	}
+}
+
+.sc-button {
+	cursor: pointer;
+	text-decoration: none;
+	border: none;
+	outline: none;
+	display: inline-block;
+	text-align: center;
 }

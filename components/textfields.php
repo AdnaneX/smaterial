@@ -1,6 +1,6 @@
 <?php
 $title = 'Text fields';
-$description = 'Tables based on Google\'s Material Design';
+$description = 'Text fields based on Google\'s Material Design';
 $keywords = 'material design, smaterial, text fields, input, select, textarea, autocomplete';
 
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
