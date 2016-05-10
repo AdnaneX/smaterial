@@ -67,12 +67,8 @@ body {
 	}
 
 	.sc-center {
-		text-align: left;
+		text-align: center;
 		vertical-align: middle;
-
-		@media #{$small-up} {
-			text-align: center;
-		}
 	}
 
 	/**********************************

@@ -202,7 +202,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 			<label for="example15">Example</label>
 		</div>
 
-		<div class="sc-single-input">
+		<div class="sc-single-input sc-icon">
 			<i class="material-icons">cloud</i>
 			<input type="text" id="example17">
 			<label for="example17">Icons</label>

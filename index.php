@@ -16,15 +16,15 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 
 <section class="sc-row">
 	<div class="sc-col sc-s12 sc-m6">
-		<div class="sc-col sc-s12 sc-center">
+		<div class="sc-row sc-center">
 			<i class="material-icons sc-blue-text sc-48">build</i>
 		</div>
 
-		<div class="sc-col sc-s12">
+		<div class="sc-row">
 			<h3 class="sc-center">Easy development</h3>
 		</div>
 
-		<div class="sc-col sc-s12">
+		<div class="sc-row">
 			The framework is build with SCSS and there for easy customizable with variables.
 			For CSS there is always a prefix to prevent overwriting classes.
 			All actions that are done by JavaScript are made in vanilla js or with jQuery so you don't need to depend on other libraries or frameworks.
@@ -34,15 +34,15 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	</div>
 
 	<div class="sc-col sc-s12 sc-m6">
-		<div class="sc-col sc-s12 sc-center">
+		<div class="sc-row sc-center">
 			<i class="material-icons sc-blue-text sc-48">accessibility</i>
 		</div>
 
-		<div class="sc-col sc-s12">
+		<div class="sc-row">
 			<h3 class="sc-center">User experience</h3>
 		</div>
 
-		<div class="sc-col sc-s12">
+		<div class="sc-row">
 			Because the framework is based on Material Design users who are already familiar with Android will have no trouble
 			getting to know your website.
 		</div>

@@ -1,0 +1,44 @@
+.sc-tabs {
+	@extend .sc-z4;
+	position: fixed;
+	top: $appbar-small-height;
+	background: $main-color;
+	z-index: 1;
+	left: $sidenav-width;
+
+	@media #{$small-up} {
+		top: $appbar-medium-height
+	}
+
+	@media #{$medium-up} {
+		top: $appbar-large-height;
+	}
+
+	.sc-tab {
+		max-width: remCalc(264px);
+		min-width: remCalc(72px);
+		padding: 0 remCalc(12px) remCalc(20px) remCalc(12px);
+		border-bottom: remCalc(2px) solid $main-color;
+		@include transition(border 300ms ease-in-out unquote(',') color 300ms ease-in-out);
+		text-transform: uppercase;
+		text-overflow: ellipsis;
+		word-wrap: break-word;
+		font-size: remCalc(14px);
+		font-weight: 500;
+		color: rgba($white, .7);
+		height: remCalc(48px);
+		line-height: remCalc(48px);
+		display: block;
+		float: left;
+
+		&:hover, &.sc-active {
+			border-bottom: remCalc(2px) solid $white;
+			color: $white;
+		}
+
+		@media #{$small-up} {
+			min-width: remCalc(160px);
+			text-align: center;
+		}
+	}
+}

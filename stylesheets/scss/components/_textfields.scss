@@ -32,6 +32,7 @@
 
 				+ label {
 					color: $grey;
+					display: block;
 				}
 			}
 		}
@@ -115,6 +116,18 @@
 	height: remCalc(48px);
 	padding: remCalc(16px) 0 remCalc(8px) 0;
 	@extend .sc-input;
+
+	&.sc-icon {
+		input[type="text"], input[type="password"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="url"] {
+			left: remCalc(48px - 16px);
+			right: 0;
+		}
+
+		label {
+			left: remCalc(48px - 16px);
+			right: 0;
+		}
+	}
 
 	input[type="text"], input[type="password"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="url"] {
 		font-size: remCalc(16px);

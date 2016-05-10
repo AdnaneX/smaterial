@@ -52,7 +52,8 @@
 	}
 
 	.sc-appbar-nav {
-		@extend .sc-col, .sc-s2, .sc-m1;
+		@extend .sc-col;
+		width: 19%;
 
 		a {
 			position: absolute;
@@ -61,7 +62,13 @@
 	}
 
 	.sc-appbar-title {
-		@extend .sc-col, .sc-s5, .sc-m7, .sc-title;
+		@extend .sc-col, .sc-title;
+		width: 71%;
+
+		@media #{$medium-up} {
+			width: 50%;
+		}
+
 		padding: $appbar-title-small-padding;
 		font-size: $appbar-title-size;
 		color: $appbar-title;
@@ -80,7 +87,13 @@
 	}
 
 	.sc-appbar-actions {
-		@extend .sc-col, .sc-s3;
+		display: none;
+		@extend .sc-col;
+
+		@media #{$medium-up} {
+			width: 27%;
+			display: block;
+		}
 
 		a {
 			float: right;
@@ -96,7 +109,8 @@
 	}
 
 	.sc-appbar-menu {
-		@extend .sc-col, .sc-s2, .sc-m1;
+		@extend .sc-col;
+		width: 4%;
 
 		a {
 			position: absolute;

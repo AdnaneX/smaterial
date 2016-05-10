@@ -52,6 +52,19 @@ define( 'TEST', false );
 			</div>
 		</header>
 
+		<?php
+		if( $_SERVER['PHP_SELF'] === '/components/tabs.php' ) {
+		?>
+			<div class="sc-tabs">
+				<a href="#" class="sc-tab">Tab 1</a>
+				<a href="#" class="sc-tab">Tab 2</a>
+				<a href="#" class="sc-tab">Tab 3</a>
+				<a href="#" class="sc-tab">Tab 4</a>
+			</div>
+		<?php
+		}
+		?>
+
 		<aside id="sc-sidenav" class="sc-sidenav sc-sidenav-left sc-sidenav-left-floating">
 			<nav>
 				<ul>
