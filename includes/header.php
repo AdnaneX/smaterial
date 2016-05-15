@@ -7,6 +7,7 @@ define( 'TEST', false );
 	<head>
 		<title><?= $title; ?> | SMaterial</title>
 
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 		<link rel="stylesheet" href="/stylesheets/scss/smaterial.css">
 		<link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico">
 

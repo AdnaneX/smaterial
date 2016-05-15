@@ -26,22 +26,15 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	<h2>Icon usage</h2>
 
 	<p class="sc-col sc-s12 sc-m6">
-		All icons are used the same. When a icon name has spaces use a "<code>_</code>" you can see this in the examples below.
+		In order to use the icons add the following line: <code>&lt;link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"></code>
+		in your <code>&lt;head></code> tag. To use an icon use the following code: <code>&lt;i class="material-icons">home&lt;/i></code>. The code should give you
+		this: <i class="material-icons">home</i> icon.
+		All icons are used the same. When a icon name has spaces use a "<code>_</code>" you can see this and the icons in the examples below.
 	</p>
 
 	<p class="sc-col sc-s12 sc-m6">
 		All icons are listed below in alphabetical order but you can also take a look <a href="https://design.google.com/icons/" target="_blank">here</a>.
 	</p>
-</section>
-
-
-<section class="sc-row">
-	<h3>Example</h3>
-
-	<code class="sc-col sc-s12 sc-m6">
-		&lt;i class="material-icons">home&lt;/i>
-		&lt;i class="material-icons">compare_arrows&lt;/i>
-	</code>
 </section>
 
 <section class="sc-row">
