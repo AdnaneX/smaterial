@@ -12,6 +12,67 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		To make your website responsive you can use a grid.
 		You can adjust breakpoints, gutter and column amount.
 	</p>
+
+	<table>
+		<thead>
+			<tr>
+				<th>Breakpoint</th>
+				<th>Window</th>
+				<th>Columns</th>
+				<th>Gutter</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>0</td>
+				<td>xs</td>
+				<td>4</td>
+				<td>16</td>
+			</tr>
+			<tr>
+				<td>480</td>
+				<td>xs</td>
+				<td>4</td>
+				<td>16</td>
+			</tr>
+			<tr>
+				<td>600</td>
+				<td>s</td>
+				<td>8</td>
+				<td>16</td>
+			</tr>
+			<tr>
+				<td>720</td>
+				<td>s</td>
+				<td>12</td>
+				<td>24</td>
+			</tr>
+		   	<tr>
+				<td>960</td>
+				<td>s</td>
+				<td>12</td>
+				<td>24</td>
+			</tr>
+			<tr>
+				<td>1280</td>
+				<td>m</td>
+				<td>12</td>
+				<td>24</td>
+			</tr>
+			<tr>
+				<td>1600</td>
+				<td>l</td>
+				<td>12</td>
+				<td>24</td>
+			</tr>
+			<tr>
+				<td>1920</td>
+				<td>xl</td>
+				<td>12</td>
+				<td>24</td>
+			</tr>
+		</tbody>
+	</table>
 </section>
 
 <section class="sc-row">

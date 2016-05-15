@@ -20,8 +20,6 @@ $(document).ready(function() {
 			$value = $this.val(),
 			$label = $this.parent('div').find('label');
 
-		console.log($label);
-
 		if( $value != '' ) {
 			$label.addClass('sc-active');
 		} else {
