@@ -111,6 +111,7 @@ $xlarge-down: "only screen and (max-width: #{$xlarge-screen})";
 
 		@media #{$small-up} {
 			// Change between 8 and 12 columns default
+			// Columns 8
 			@media only screen and (max-width: 720px) {
 				$i: 1;
 				@while $i <= $small-columns {
@@ -140,7 +141,8 @@ $xlarge-down: "only screen and (max-width: #{$xlarge-screen})";
 				}
 			}
 
-			@media only screen and (min-width: 720px) and (max-width: $medium-screen) {
+			// Columns 12
+			@media only screen and (min-width: 720px) {
 				$i: 1;
 				@while $i <= $columns {
 					$percent: unquote(( 100 / ( $columns / $i ) ) + "%");
