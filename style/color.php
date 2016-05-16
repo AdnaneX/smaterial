@@ -9,9 +9,14 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 <section class="sc-row">
 	<h2>Color usage</h2>
 
-	<p class="sc-col sc-s12">
+	<p class="sc-col sc-s12 sc-m6">
 		All of the below colors are used in the same way.
-		Both scss variables as css classes and color codes are named.
+		Both scss variables and css classes and color codes are named.
+	</p>
+
+	<p class="sc-col sc-s12 sc-m6">
+		You can easily change the colors you use. In the settings you can remove all colors you don't use <strong>NOTE*</strong> that you need to recompile with SCSS.
+		In SCSS the variables for each color will remain accessible. Therefore it's recommended to remove each color when using SCSS unless you need to use a class in HTML.
 	</p>
 </section>
 
@@ -1738,15 +1743,6 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 			<div class="sc-col sc-s6">.sc-white</div>
 		</div>
 	</div>
-</section>
-
-<section class="sc-row">
-	<h3>Color settings</h3>
-
-	<p class="sc-col sc-s12 sc-m6">
-		You can easily change the colors you use. In the settings you can remove all colors you don't use.
-		In SCSS the variables for each color will remain accessible.
-	</p>
 </section>
 
 <?php

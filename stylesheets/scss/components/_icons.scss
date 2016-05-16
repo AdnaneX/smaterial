@@ -4,10 +4,12 @@
  * http://www.google.com/design/spec/style/icons.html
  * https://design.google.com/icons/
  **************************************/
+
 .material-icons {
 	font-size: $icon-size;
 	width: $icon-size;
 	height: $icon-size;
+	vertical-align: $icon-align;
 
 	/* Support for all WebKit browsers. */
 	-webkit-font-smoothing: antialiased;

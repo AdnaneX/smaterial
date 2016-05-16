@@ -238,7 +238,7 @@ $indeterminate-height: $determinate-height; // Default $determinate-height
 $checkbox-color: lighten($black, (100% - 54%));
 $checkbox-color-checked: $main-color; // Default $main-color
 $checkbox-size: remCalc(18.2px); // Default remCalc(18.2px)
-$checkbox-margin: remCalc(20px); // Default remCalc(20px)
+$checkbox-margin: remCalc(2.8px); // Default remCalc(2.8px)
 $checkbox-disabled-color: lighten($black, (100% - 26%)); // Default lighten($black, (100% - 26%));
 
 $radio-color: $main-color; // Default $main-color
@@ -406,5 +406,6 @@ $large-gutter: 24px; // Default 24px
  * Icons
  **************************************/
 $icon-font-path: './components/fonts/icons/';
-$icon-size: remCalc(24px);
+$icon-size: remCalc(24px); // Default remCalc(24px)
+$icon-align: middle; // Default middle
 
