@@ -12,6 +12,10 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		SMaterial is a <a href="http://www.google.com/design/spec/material-design/introduction.html" target="_blank">Google's Material Design</a> inspired CSS framework.
 		It is build as responsive mobile first and is easily changed with <a href="http://sass-lang.com/" target="_blank">SCSS</a> variables.
 	</p>
+
+	<figure>
+		<img src="/images/responsive.jpg" alt="SMaterial responsive examples" title="Responsive examples">
+	</figure>
 </section>
 
 <section class="sc-row">

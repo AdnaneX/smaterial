@@ -23,6 +23,7 @@ body {
 		color: $link-color;
 		text-decoration: none;
 		outline: none;
+		@include transition(color 300ms ease-in-out);
 
 		&:hover {
 			color: $link-hover;
@@ -92,6 +93,14 @@ body {
 				line-height: remCalc(48px);
 			}
 		}
+	}
+}
+
+figure {
+	margin: 0;
+
+	img {
+		width: 100%;
 	}
 }
 

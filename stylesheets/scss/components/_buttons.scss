@@ -152,6 +152,7 @@ button, a {
 
 .sc-button {
 	cursor: pointer;
+	@include border-radius(remCalc(2px));
 	text-decoration: none;
 	border: none;
 	outline: none;

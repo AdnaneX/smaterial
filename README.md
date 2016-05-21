@@ -1,5 +1,10 @@
 # SMaterial
 
+## DONE
+
+- Tooltips
+- Snackbars & toasts
+
 ## TODO
 
 - Global
@@ -15,6 +20,7 @@
     - Future add meteor js package
     - Check for "- remCalc(..px)" and "remCalc(-..px)". All should be like the last one
     - Move global usable classes to _normailize.scss (.sc-no-hover, .sc-active) to name a few
+    - Add Material Design animations
 - Appbar
     - Add "more menu" styling
     - Add "more menu" functions
@@ -56,6 +62,8 @@
     - Fix styling
     - Add table title
     - Add pagination
+- Tabs
+    - Add mobile scrollable tabs
 - Text fields
     - Fix label click on single-line input (When clicked on label input not active)
     - Fix icon color on single-line input when active color icon

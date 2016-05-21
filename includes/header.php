@@ -57,10 +57,10 @@ define( 'TEST', false );
 		if( $_SERVER['PHP_SELF'] === '/components/tabs.php' ) {
 		?>
 			<div class="sc-tabs">
-				<a href="#" class="sc-tab">Tab 1</a>
-				<a href="#" class="sc-tab">Tab 2</a>
-				<a href="#" class="sc-tab">Tab 3</a>
-				<a href="#" class="sc-tab">Tab 4</a>
+				<a href="#" class="sc-tab-icon"><i class="material-icons">home</i> <span>Tab 1</span></a>
+				<a href="#" class="sc-tab-icon"><i class="material-icons">home</i> <span>Tab 2</span></a>
+				<a href="#" class="sc-tab-icon"><i class="material-icons">home</i> <span>Tab 3</span></a>
+				<a href="#" class="sc-tab-icon"><i class="material-icons">home</i> <span>Tab 4</span></a>
 			</div>
 		<?php
 		}

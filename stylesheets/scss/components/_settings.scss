@@ -254,7 +254,7 @@ $selection-radial-size: 2.8rem; // Default 2.8rem
  **************************************/
 $snackbar-position: fixed; // Default fixed
 $snackbar-height: remCalc(48px); // Default remCalc(48px)
-$snackbar-font: remCalc(14px); // Default remCalc(14px)
+$snackbar-font-size: remCalc(14px); // Default remCalc(14px)
 $snackbar-padding: remCalc(14px) remCalc(24px); // Default remCalc(14px) remCalc(24px)
 $snackbar-background: #323232; // Default #323232
 $snackbar-font-color: $white; // Default $white
@@ -262,8 +262,8 @@ $snackbar-min-width: remCalc(288px); // Default remCalc(288px)
 $snackbar-max-width: remCalc(568px); // Default remCalc(568px)
 $snackbar-border-radius: remCalc(2px); // Default remCalc(2px)
 $snackbar-action-font-weight: 500; // Default 500
-$snackbar-action-small-left: remCalc(24px); // Default remCalc(24px)
-$snackbar-action-large-left: remCalc(48px); // Default remCalc(48px)
+$snackbar-action-small-margin-left: remCalc(24px); // Default remCalc(24px)
+$snackbar-action-large-margin-left: remCalc(48px); // Default remCalc(48px)
 
 /**************************************
  * Sidenav

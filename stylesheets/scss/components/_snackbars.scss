@@ -9,7 +9,7 @@
 	position: $snackbar-position;
 	bottom: 0;
 	height: $snackbar-height;
-	font-size: $snackbar-font;
+	font-size: $snackbar-font-size;
 	padding: $snackbar-padding;
 	background: $snackbar-background;
 	color: $snackbar-font-color;
@@ -25,13 +25,13 @@
 
 	&-action {
 		@extend .sc-right;
-		font-size: $snackbar-font;
+		font-size: $snackbar-font-size;
 		font-weight: $snackbar-action-font-weight;
 		text-transform: capitalize;
-		margin-left: $snackbar-action-small-left;
+		margin-left: $snackbar-action-small-margin-left;
 
 		@media #{$large-up} {
-			margin-left: $snackbar-action-large-left;
+			margin-left: $snackbar-action-large-margin-left;
 		}
 	}
 }
