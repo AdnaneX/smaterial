@@ -42,7 +42,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		<button class="sc-raised-button sc-hover-ripple"><i class="material-icons sc-left">home</i> Hover ripple</button>
 	</p>
 
-	<code class="sc-col sc-s12 sc-m6">
+	<code class="sc-col sc-s12 sc-m6 sc-offset-m6">
 		<pre>
 &lt;button class="sc-raised-button">
   &lt;i class="material-icons sc-left">cloud&lt;/i>
@@ -99,7 +99,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		<a href="#" class="sc-flat-button">Link</a>
 	</p>
 
-	<code class="sc-col sc-s12 sc-m6">
+	<code class="sc-col sc-s12 sc-m6 sc-offset-m6">
 		<pre>
 &lt;button class="sc-flat-button">
   &lt;i class="material-icons sc-left">cloud&lt;/i>
@@ -141,7 +141,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		<a href="#" class="sc-floating-button"><i class="material-icons">home</i></a>
 	</p>
 
-	<code class="sc-col sc-s12 sc-m6">
+	<code class="sc-col sc-s12 sc-m6 sc-offset-m6">
 		<pre>
 &lt;button class="sc-floating-button">
   &lt;i class="material-icons">cloud&lt;/i>

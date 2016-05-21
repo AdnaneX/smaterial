@@ -165,7 +165,7 @@ $bottom-shifting-font-size: remCalc(14px); // Default remCalc(14px)
  * Buttons
  **************************************/
 $raised-background: $main-color; // Default $main-color
-$raised-background-hover: $main-color; // Default $main-color
+$raised-background-hover: darken($main-color, 12); // Default darken($main-color, 12)
 $raised-color: $white; // Default $white
 $raised-color-hover: $raised-color; // Default $raised-color
 $raised-icon-color: $white; // Default $white
@@ -173,11 +173,11 @@ $raised-min-width: remCalc(64px); // Default remCalc(64px)
 $raised-size: remCalc(32px); // Default remCalc(32px)
 $raised-padding: 0 remCalc(16px); // Default 0 remCalc(16px)
 $raised-margin: remCalc(8px); // Default remCalc(8px)
-$raised-transition: box-shadow 100ms ease-in-out; // Default box-shadow 100ms ease-in-out
+$raised-transition: box-shadow 100ms ease-in-out unquote(',') background 300ms ease-in-out; // Default box-shadow 100ms ease-in-out unquote(',') background 300ms ease-in-out
 $raised-dense-size: remCalc(32px); // Default remCalc(32px)
 $raised-dense-font-size: remCalc(13px); // Default remCalc(13px)
 $raised-disabled-background: rgba($black, .12); // Default rgba($black, .12)
-$raised-disabled-color: rgba($black, .30); // Default rgba($black, .30)
+$raised-disabled-color: rgba($black, .26); // Default rgba($black, .26)
 $raised-disabled-background-hover: rgba($black, .12); // Default rgba($black, .12)
 $raised-disabled-color-hover: rgba($black, .30); // Default rgba($black, .30)
 

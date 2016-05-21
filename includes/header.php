@@ -131,7 +131,6 @@ define( 'TEST', false );
 					</li>
 					<li><a href="/showroom.php">Showroom</a></li>
 					<li class="sc-no-hover">
-						<div class="addthis_sharing_toolbox"></div>
 					</li>
 				</ul>
 			</nav>

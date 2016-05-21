@@ -23,6 +23,7 @@ button, input[type="button"], input[type="reset"], input[type="submit"], a {
 
 		&:hover {
 			color: $raised-color-hover;
+			background: $raised-background-hover;
 		}
 
 		.material-icons {
@@ -107,7 +108,7 @@ button, a {
 	&.sc-floating-button {
 		@extend .sc-z6, .sc-button;
 		@include transition($floating-transition);
-		@include border-radius(50%);
+		@include border-radius(50% !important);
 		width: $floating-size;
 		height: $floating-size;
 		background: $floating-background;
@@ -135,7 +136,7 @@ button, a {
 
 .sc-toggle-button {
 	@extend .sc-button;
-	border-radius: 50%;
+	@include border-radius(50% !important);
 	width: remCalc(40px);
 	height: remCalc(40px);
 	color: $floating-icon;

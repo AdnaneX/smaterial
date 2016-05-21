@@ -11,6 +11,11 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	<p class="sc-col sc-s12 sc-m6">
 		The mixins are made to help you with for example prefixes.
 	</p>
+
+	<p class="sc-col sc-s12 sc-m6">
+		To use a comma in the parameter you have to unquote it. For example when you would like to add multiple transitions:
+		<code>@include transition(color .3s ease-in-out unquote(',') background .3ms ease-in-out)</code>.
+	</p>
 </section>
 
 <section class="sc-row">
@@ -18,7 +23,6 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 
 	<p class="sc-col sc-s12 sc-m6">
 		The <code>box-shadow()</code> mixin is used to make box-shadow styling with all the prefixes.
-		To separate the shadow settings use: <code>unquote(',')</code>.
 	</p>
 
 	<code class="sc-col sc-s12 sc-m6">
@@ -105,7 +109,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	<p class="sc-col sc-s12 sc-m6">
 		The <code>keyframes</code> can be used to create a specific animation.
 		The mixin adds all prefixes.
-		Between the round brackets you set the name between the curly brackets you set what needs to be done.
+		Between the round brackets "<code>()</code>" you set the name, between the curly brackets "<code>{}</code>" you set what needs to be done.
 	</p>
 
 	<code class="sc-col sc-s12 sc-m6">
