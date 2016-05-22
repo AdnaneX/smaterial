@@ -5,9 +5,13 @@ var gulp = require('gulp'),
 	sourcemaps = require('gulp-sourcemaps'),
 	uglify = require('gulp-uglify'),
 	watch = require('gulp-watch'),
-	plumber = require('gulp-plumber');
+	plumber = require('gulp-plumber'),
+	sass = require('gulp-sass'),
+	autoprefixer = require('gulp-autoprefixer'),
+	zip = require('gulp-zip');
 
-gulp.task('scripts', function() {
+// Compress app.js
+gulp.task('app', function() {
 	gulp.src('js/app/*.js')
 		.pipe(plumber())
 		.pipe(jshint())
@@ -16,7 +20,10 @@ gulp.task('scripts', function() {
 			.pipe(uglify())
 		.pipe(sourcemaps.write('sources'))
 		.pipe(gulp.dest('js'))
+});
 
+// Compress vendor.js
+gulp.task('vendor', function() {
 	gulp.src('js/vendor/*.js')
 		.pipe(plumber())
 		.pipe(jshint())
@@ -24,12 +31,45 @@ gulp.task('scripts', function() {
 		.pipe(concat('vendor.min.js'))
 		.pipe(uglify())
 		.pipe(sourcemaps.write('sources'))
-		.pipe(gulp.dest('js'))
+		.pipe(gulp.dest('js'));
 });
 
+// Compress .scss files
+gulp.task('sass', function() {
+	gulp.src('./stylesheets/scss/*.scss')
+		.pipe(sourcemaps.init())
+		.pipe(sass({
+			errLogToConsole: true,
+			outputStyle: 'compressed'
+		}).on('error', sass.logError))
+		.pipe(autoprefixer())
+		.pipe(sourcemaps.write('./'))
+		.pipe(gulp.dest('./stylesheets/scss/'));
+});
+
+// SCSS Zip all required files
+gulp.task('scss-zip', function() {
+	gulp.src(['js/*', 'stylesheets/*', 'index.php', 'includes/*', 'gulpfile.js', 'package.json'], {base: '.'})
+		.pipe(zip('smaterial-scss.zip'))
+		.pipe(gulp.dest('./'));
+});
+
+// CSS Zip all required files
+gulp.task('css-zip', function() {
+	gulp.src(['js/app.min.js', 'js/vendor.min.js', 'stylesheets/scss/smaterial.css', 'index.php', 'includes/*'], {base: '.'})
+		.pipe(zip('smaterial-css.zip'))
+		.pipe(gulp.dest('./'));
+});
+
+// Zip all required files
+gulp.task('zip', ['scss-zip', 'css-zip']);
+
+// Watch files for changes
 gulp.task('watch', function() {
-	gulp.watch('js/app/*.js', ['scripts']);
-	gulp.watch('js/vendor/*.js', ['scripts']);
+	gulp.watch('js/app/*.js', ['app']);
+	gulp.watch('js/vendor/*.js', ['vendor']);
+	gulp.watch('stylesheets/scss/*.scss', ['sass']);
+	gulp.watch('stylesheets/scss/components/*.scss', ['sass']);
 });
 
 gulp.task('default', ['watch']);

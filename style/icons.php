@@ -19,6 +19,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 
 	.icon-box .icon-name {
 		word-wrap: break-word;
+		margin-top: 20px;
 	}
 </style>
 

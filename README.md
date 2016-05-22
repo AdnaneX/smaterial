@@ -21,6 +21,8 @@
     - Check for "- remCalc(..px)" and "remCalc(-..px)". All should be like the last one
     - Move global usable classes to _normailize.scss (.sc-no-hover, .sc-active) to name a few
     - Add Material Design animations
+    - Add gulp files to SCSS package
+    - Add templates
 - Appbar
     - Add "more menu" styling
     - Add "more menu" functions
@@ -74,8 +76,7 @@
     - Add dropdown search
     - Maybe set *-dense as mobile default
     - Fix label for textarea
+- List
+    - Create separate file for list styling
 - Normalize
-    - Add default list style
 - Gulp
-    - Split JavaScript vendor and app
-    - Add SCSS support

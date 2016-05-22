@@ -112,6 +112,8 @@ $letter-spacing-button: 0.1; // Default 0.1
 /**************************************
  * AppBar
  **************************************/
+$appbar-position: fixed; // Default fixed
+$appbar-z-index: 1; // Default 1
 $appbar-background: $main-color; // Default $main-color
 $appbar-hover: $blue-700; // Default $blue-700
 $appbar-text: $white; // Default $white
@@ -128,6 +130,15 @@ $appbar-icon-font-size: remCalc(32px); // Default remCalc(32px)
 $appbar-icon-small-padding: remCalc(8px); // Default remCalc(8px)
 $appbar-icon-medium-padding: remCalc(16px); // Default remCalc(16px);
 
+$appbar-nav-width: 19%; // Default 19%
+$appbar-title-small-width: 71%; // Default 71%
+$appbar-title-medium-width: 50%; // Default 50%
+$appbar-actions-width: 27%; // Default 27%;
+$appbar-menu-width: 4%; // Default 4%
+
+$appbar-more-position: absolute; // Default absolute
+$appbar-more-top: remCalc(4px); // Default remCalc(4px)
+$appbar-more-right: $appbar-more-top; // Default remCalc(4px) / $appbar-more-top
 /**************************************
  * Bottom navigation
  **************************************/

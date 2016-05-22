@@ -4,7 +4,7 @@
  * https://www.google.com/design/spec/components/dividers.html#dividers-types-of-dividers
  * http://www.google.com/design/spec/layout/structure.html#structure-side-nav
  * http://www.google.com/design/spec/patterns/navigation-drawer.html
- */
+ **************************************/
 
 .sc-sidenav {
 	position: $sidenav-position;
@@ -143,6 +143,7 @@
 
 		li {
 			font-weight: $sidenav-font-weight;
+			@include transition(background 300ms ease-in-out);
 
 			&:hover {
 				background: $sidenav-hover-background;
@@ -239,7 +240,7 @@
 				display: block;
 				font-weight: $sidenav-font-weight;
 
-				&:hover {
+				&:hover, &.sc-active {
 					color: $sidenav-hover;
 
 					.material-icons {

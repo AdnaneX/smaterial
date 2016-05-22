@@ -8,9 +8,6 @@ RewriteRule .* ? [F,L]
 
 # Redirect url
 RewriteEngine on
+RewriteCond %{HTTP_HOST} ^159\.253\.0\.82$ [NC]
 RewriteCond %{HTTP_HOST} !^www.smaterial.dsuper.nl$ [NC]
 RewriteRule ^(.*)$ http://www.smaterial.dsuper.nl/$1 [L,R=301]
-
-# Redirect url
-RewriteCond %{HTTP_HOST} ^159\.253\.0\.82$ [NC]
-RewriteRule (.*) http://www.smaterial.dsuper.nl/$1 [L,R=301]

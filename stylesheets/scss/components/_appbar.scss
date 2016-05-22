@@ -12,8 +12,8 @@
 	width: 100%;
 	height: $appbar-small-height;
 	line-height: normal;
-	position: fixed;
-	z-index: 1;
+	position: $appbar-position;
+	z-index: $appbar-z-index;
 
 	@media #{$small-up} {
 		height: $appbar-medium-height;
@@ -40,6 +40,8 @@
 
 		a {
 			color: $appbar-text;
+			overflow: hidden;
+			position: absolute;
 		}
 
 		@media #{$small-up} {
@@ -53,20 +55,15 @@
 
 	.sc-appbar-nav {
 		@extend .sc-col;
-		width: 19%;
-
-		a {
-			position: absolute;
-			overflow: hidden;
-		}
+		width: $appbar-nav-width;
 	}
 
 	.sc-appbar-title {
 		@extend .sc-col, .sc-title;
-		width: 71%;
+		width: $appbar-title-small-width;
 
 		@media #{$medium-up} {
-			width: 50%;
+			width: $appbar-title-medium-width;
 		}
 
 		padding: $appbar-title-small-padding;
@@ -91,14 +88,13 @@
 		@extend .sc-col;
 
 		@media #{$medium-up} {
-			width: 27%;
+			width: $appbar-actions-width;
 			display: block;
 		}
 
 		a {
 			float: right;
 			position: relative;
-			overflow: hidden;
 		}
 
 		.sc-search-input {
@@ -110,20 +106,15 @@
 
 	.sc-appbar-menu {
 		@extend .sc-col;
-		width: 4%;
-
-		a {
-			position: absolute;
-			overflow: hidden;
-		}
+		width: $appbar-menu-width;
 
 		&-more {
 			display: none;
 			@extend .sc-z9;
 			background: $white;
-			position: absolute;
-			top: remCalc(4px);
-			right: remCalc(4px);
+			position: $appbar-more-position;
+			top: $appbar-more-top;
+			right: $appbar-more-right;
 			width: auto;
 			list-style-type: none;
 			margin: 0;

@@ -9,7 +9,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	<h2>SMaterial</h2>
 
 	<p class="sc-col sc-s12">
-		SMaterial is a <a href="http://www.google.com/design/spec/material-design/introduction.html" target="_blank">Google's Material Design</a> inspired CSS framework.
+		SMaterial the <a href="https://github.com/SuperDJ/smaterial" target="_blank">open-source</a> CSS framework which is inspired on <a href="http://www.google.com/design/spec/material-design/introduction.html" target="_blank">Google's Material Design</a>.
 		It is build as responsive mobile first and is easily changed with <a href="http://sass-lang.com/" target="_blank">SCSS</a> variables.
 	</p>
 

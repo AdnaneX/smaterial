@@ -35,4 +35,6 @@ $(document).ready(function() {
 
 		$('#' + $trigger).slideHorizontal();
 	});
+
+	$sidenav.find('.sc-active').closest('ul').show();
 });
