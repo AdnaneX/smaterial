@@ -1,7 +1,8 @@
 		</main>
 
-		<script type="text/javascript" src="/js/vendor.min.js"></script>
-		<script type="text/javascript" src="/js/app.min.js"></script>
+		<script src="/js/vendor.min.js"></script>
+		<script src="/js/app.min.js"></script>
+		<script src="/js/prism.js"></script>
 
 		<?php
 		if( TEST === false ) {

@@ -84,3 +84,5 @@
 - Normalize
 - Gulp
 - Bower
+- Prism.js
+	- Create Material Design style code highlighting

@@ -24,7 +24,7 @@ gulp.task('app', function() {
 
 // Compress vendor.js
 gulp.task('vendor', function() {
-	gulp.src(['js/vendor', 'bower_components/jquery/dist/jquery.min.js'])
+	gulp.src(['bower_components/jquery/dist/jquery.min.js', 'js/vendor'])
 		.pipe(plumber())
 		.pipe(jshint())
 		.pipe(sourcemaps.init())

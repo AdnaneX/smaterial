@@ -8,8 +8,10 @@ $file = str_replace( '.php', '', $_SERVER['PHP_SELF'] );
 	<head>
 		<title><?= $title; ?> | SMaterial</title>
 
+		<link rel="stylesheet" href="/stylesheets/prism.css">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-		<link rel="stylesheet" href="/stylesheets/scss/smaterial.css">
+		<link rel="stylesheet" href="/stylesheets/smaterial.css">
+
 		<link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico">
 
 		<meta name="viewport" content="width=device-width, initial-scale=1">

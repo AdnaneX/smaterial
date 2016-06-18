@@ -11,7 +11,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	<p class="sc-col sc-s12">
 		Smaterial comes in 2 different packages you can choose from.
 		You can make a choice depending on your skill levels and what you would like to do with SMaterial.
-		Both packages include the <a href="https://bower.io/" target="_blank">bower</a>.json file to manage other files required.
+		Both packages include the bower.json file to manage other files required.
 	</p>
 
 	<div class="sc-col sc-s12 sc-m6">
@@ -37,7 +37,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		<h4>Bower</h4>
 
 		<p class="sc-col scs12">
-			Do you prefer to use bower? Now you can. You can simply run the following command.
+			Do you prefer to use <a href="https://bower.io/" target="_blank">bower</a>? Now you can. You can simply run the following command: <code>bower install smaterial</code>.
 		</p>
 	</div>
 </section>
@@ -47,7 +47,80 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		You can get SMaterial up and running in a couple of different ways.
+		After you have downloaded one of the above packages or used one of the other options you can get started.
+		Of course you can use the code shown here.
+		You can also use the <code class="language-html">index.php</code> file and files included in the <code class="language-html">includes</code> folder provided in the packages.
+	</p>
 
+
+	<pre class="language-html sc-col sc-xs4 sc-s12 sc-m6">
+		<code>
+&lt;!DOCTYPE html>
+&lt;html>
+  &lt;head>
+    &lt;title>&lt;/title>
+
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1">
+    &lt;link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    &lt;link rel="stylesheet" href="/stylesheets/smaterial.css">
+  &lt;/head>
+
+  &lt;body>
+
+    &lt;script src="/js/vendor.min.js">&lt;/script>
+    &lt;script src="/js/app.min.js">&lt;/script>
+  &lt;/body>
+&lt;/html>
+		</code>
+	</pre>
+
+	<p class="sc-col sc-xs4 sc-s12 sc-m6">
+		The <code class="language-html">&lt;link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"></code>
+		is used to load the <a href="http://www.smaterial.dsuper.nl/style/icons.php">Material Design font icons</a>.
+
+		The <code class="language-html">vendor.min.js</code> currently only holds jQuery 3.
+		So if you prefer to load jQuery you can use <a href="https://developers.google.com/speed/libraries/#jquery" target="_blank">this</a>.
+		The <code class="language-html">vendor.min.js</code> file needs to be loaded before <code class="language-html">app.min.js</code>.
+	</p>
+</section>
+
+<section class="sc-row">
+	<h3>Gulp usage</h3>
+
+	<p class="sc-col sc-xs4 sc-s12 sc-m6">
+		With Gulp you can easily compress SCSS and JavaScript files. All "tasks" needed are included in the <code class="language-html">gulpfile.js</code>
+	</p>
+
+	<table class="sc-col sc-xs4 sc-s12 sc-m6">
+		<thead>
+			<tr>
+				<th>Task</th>
+				<th>Result</th>
+			</tr>
+		</thead>
+
+		<tbody>
+			<tr>
+				<td>gulp</td>
+				<td>Both SCSS and JavaScript files in <code class="language-html">js/app, js/vendor, stylesheets/scss, stylesheets/scss/components</code> are compressed on watch</td>
+			</tr>
+			<tr>
+				<td>gulp zip</td>
+				<td>Will zip all required files for both css and scss packages</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<p class="sc-col sc-xs4 sc-s12 sc-m6">
+		If you would like to add other js frameworks for example <a href="http://hammerjs.github.io/" target="_blank">hammer.js</a> you can add the necessary file(s) in <code class="language-html">js/vendor</code>.
+		If you create your own JavaScript files you can add these in <code class="language-html">js/app</code>. This way all files will be compressed into minified versions.
+		The same goes for SCSS files. If you add your own SCSS files in <code class="language-html">stylesheets/scss</code> these will also be compressed for you.
+		This can be achieved by just running gulp task.
+	</p>
+
+	<p class="sc-col sc-xs4 sc-s12 sc-m6">
+		If you add new files with bower you need to add the necessary files in the right files array.
+		JavaScript files in vendor task and SCSS files in scss task.
 	</p>
 </section>
 <?php
