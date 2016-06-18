@@ -24,7 +24,7 @@ gulp.task('app', function() {
 
 // Compress vendor.js
 gulp.task('vendor', function() {
-	gulp.src('js/vendor/*.js')
+	gulp.src(['js/vendor', 'bower_components/jquery/dist/jquery.min.js'])
 		.pipe(plumber())
 		.pipe(jshint())
 		.pipe(sourcemaps.init())
@@ -44,19 +44,19 @@ gulp.task('sass', function() {
 		}).on('error', sass.logError))
 		.pipe(autoprefixer())
 		.pipe(sourcemaps.write('./'))
-		.pipe(gulp.dest('./stylesheets/scss/'));
+		.pipe(gulp.dest('stylesheets'));
 });
 
 // SCSS Zip all required files
 gulp.task('scss-zip', function() {
-	gulp.src(['js/*', 'stylesheets/*', 'index.php', 'includes/*', 'gulpfile.js', 'package.json'], {base: '.'})
+	gulp.src(['js/*', 'js/*/**.js', 'stylesheets/*', 'stylesheets/*/**.scss', 'stylesheets/*/*/**.scss', 'stylesheets/*/*/*/**.ttf', 'bower.json', 'index.php', 'includes/*', 'gulpfile.js', 'package.json'], {base: '.'})
 		.pipe(zip('smaterial-scss.zip'))
 		.pipe(gulp.dest('./'));
 });
 
 // CSS Zip all required files
 gulp.task('css-zip', function() {
-	gulp.src(['js/app.min.js', 'js/vendor.min.js', 'stylesheets/scss/smaterial.css', 'index.php', 'includes/*'], {base: '.'})
+	gulp.src(['js/app.min.js', 'js/vendor.min.js', 'stylesheets/smaterial.css', 'index.php', 'bower.json', 'includes/*'], {base: '.'})
 		.pipe(zip('smaterial-css.zip'))
 		.pipe(gulp.dest('./'));
 });

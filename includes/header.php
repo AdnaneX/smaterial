@@ -89,7 +89,7 @@ $file = str_replace( '.php', '', $_SERVER['PHP_SELF'] );
 							<a href="#"><i class="material-icons">arrow_drop_up</i></a>
 						</div>
 					</li>
-					<li><a href="/"><i class="material-icons" <?php echo ( $file == '/home' ? 'class="sc-active"' : '' ); ?>>home</i> Home</a></li>
+					<li><a href="/"><i class="material-icons" <?php echo ( $file == '/index' ? 'class="sc-active"' : '' ); ?>>home</i> Home</a></li>
 					<li><a href="/getting-started.php" <?php echo ( $file == '/getting-started' ? 'class="sc-active"' : '' ); ?>><i class="material-icons">flag</i> Getting started</a></li>
 					<li class="sc-sidenav-dropdown">Style <i class="material-icons sc-right">expand_less</i>
 						<ul>

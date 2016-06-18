@@ -23,6 +23,8 @@
     - Add Material Design animations
     - Add gulp files to SCSS package
     - Add templates
+    - Complete table of contents
+    - Add flexbox usage
 - Appbar
     - Add "more menu" styling
     - Add "more menu" functions
@@ -76,7 +78,9 @@
     - Add dropdown search
     - Maybe set *-dense as mobile default
     - Fix label for textarea
+    - Add default text field
 - List
     - Create separate file for list styling
 - Normalize
 - Gulp
+- Bower

@@ -1,4 +1,46 @@
 /**************************************
+********** Table of Contents **********
+***************************************
+- Colors
+- Global
+- Typography
+	- Font path
+	- Typographic scale
+	- Typographic Scale for devices (max-width: 960px)
+	- Basic styles
+	- Line heights
+	- Tracking and kerning
+- Appbar
+	- Basic
+	- Colors
+	- Title
+	- Icons
+	- Element widths
+	- More menu
+- Bottom navigation
+	- Normal
+		- Basic
+		-
+	- Shifting
+- Bottom sheet
+- Buttons
+- Cards
+- Chips
+- Dialogs
+- Grid
+- Icons
+- Progress
+- Selection
+- Side navigation
+- Sliders
+- Snackbars & Toasts
+- Tables
+- Tabs
+- Text fields
+- Tooltips
+
+
+/**************************************
  * Colors
  **************************************/
 /*
@@ -112,40 +154,53 @@ $letter-spacing-button: 0.1; // Default 0.1
 /**************************************
  * AppBar
  **************************************/
+// Basic
 $appbar-position: fixed; // Default fixed
 $appbar-z-index: 1; // Default 1
-$appbar-background: $main-color; // Default $main-color
-$appbar-hover: $blue-700; // Default $blue-700
-$appbar-text: $white; // Default $white
-$appbar-title: $white; // Default $white
-$appbar-title-size: remCalc(24px); // Default remCalc(24px)
-$appbar-title-small-padding: remCalc(12px) 0 remCalc(12px) 0 !important; // Default remCalc(12px) 0 remCalc(12px) 0 !important
-$appbar-title-medium-padding: remCalc(20px) 0 remCalc(20px) 0 !important; // Default remCalc(20px) 0 remCalc(20px) 0 !important
-
 $appbar-small-height: remCalc(48px); // Default remCalc(48px)
 $appbar-medium-height: remCalc(56px); // Default remCalc(56px)
 $appbar-large-height: remCalc(64px); // Default remCalc(64px)
 
+// Colors
+$appbar-background: $main-color; // Default $main-color
+$appbar-text: $white; // Default $white
+$appbar-title: $white; // Default $white
+
+// Title
+$appbar-title-size: remCalc(24px); // Default remCalc(24px)
+$appbar-title-small-padding: remCalc(12px) 0 remCalc(12px) 0 !important; // Default remCalc(12px) 0 remCalc(12px) 0 !important
+$appbar-title-medium-padding: remCalc(20px) 0 remCalc(20px) 0 !important; // Default remCalc(20px) 0 remCalc(20px) 0 !important
+
+// Icons
 $appbar-icon-font-size: remCalc(32px); // Default remCalc(32px)
 $appbar-icon-small-padding: remCalc(8px); // Default remCalc(8px)
 $appbar-icon-medium-padding: remCalc(16px); // Default remCalc(16px);
 
+// Element widths
 $appbar-nav-width: 19%; // Default 19%
 $appbar-title-small-width: 71%; // Default 71%
 $appbar-title-medium-width: 50%; // Default 50%
 $appbar-actions-width: 27%; // Default 27%;
 $appbar-menu-width: 4%; // Default 4%
 
+// More menu
 $appbar-more-position: absolute; // Default absolute
 $appbar-more-top: remCalc(4px); // Default remCalc(4px)
 $appbar-more-right: $appbar-more-top; // Default remCalc(4px) / $appbar-more-top
 /**************************************
  * Bottom navigation
  **************************************/
+/******************
+ * Normal
+ ******************/
+// Basic
 $bottom-nav-width-small: 100%; // Default 100%;
 $bottom-nav-width-large: $bottom-nav-width-small; // Default $bottom-nav-width-small
 $bottom-nav-background: $main-color; // Default $main-color
 $bottom-nav-position: fixed; // Default fixed
+$bottom-nav-height: remCalc(56px); // Default remCalc(56px)
+
+// Items
 $bottom-nav-item-max-width: remCalc(168px); // Default remCalc(168px);
 $bottom-nav-item-min-width-small: remCalc(104px); // Default remCalc(104px)
 $bottom-nav-item-min-width-large: remCalc(120px); // Default remCalc(120px)
@@ -154,7 +209,6 @@ $bottom-nav-padding-active: remCalc(6px) remCalc(12px) remCalc(10px) remCalc(12p
 $bottom-nav-font-size: remCalc(12px); // Default remCalc(12px)
 $bottom-nav-font-color: $white; // Default $white
 $bottom-nav-font-size-active: remCalc(14px); // Default remCalc(14px)
-$bottom-nav-height: remCalc(56px); // Default remCalc(56px)
 $bottom-nav-icon-size: remCalc(24px); // Default remCalc(24px)
 
 $bottom-shifting-width-small: $bottom-nav-width-small; // Default $bottom-nav-width-small
