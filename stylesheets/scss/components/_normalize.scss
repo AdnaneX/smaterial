@@ -1,5 +1,7 @@
 /**************************************
  * Remove browser default styles
+ *
+ * https://material.google.com/motion/duration-easing.html
  **************************************/
 
 html, body {
@@ -23,7 +25,15 @@ body {
 		color: $link-color;
 		text-decoration: none;
 		outline: none;
-		@include transition(color 300ms ease-in-out);
+		@include transition(color 300ms cubic-bezier(0.4, 0.0, 0.2, 1));
+
+		@media #{$medium-up} {
+			@include transition(color 390ms cubic-bezier(0.4, 0.0, 0.2, 1));
+		}
+
+		@media #{$large-up} {
+			@include transition(color 200ms cubic-bezier(0.4, 0.0, 0.2, 1));
+		}
 
 		&:hover {
 			color: $link-hover;
@@ -48,10 +58,13 @@ body {
 
 		}
 
+		@media only screen and (min-width: 600px) {
+			padding: $large-gutter;
+		}
+
 		@media #{$medium-up} {
 			left: $sidenav-width;
 			top: remCalc(64px);
-			margin-left: remCalc(10px);
 		}
 	}
 

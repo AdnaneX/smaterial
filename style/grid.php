@@ -93,15 +93,15 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 			In order to make the columns work you need to wrap it inside a <code>.sc-row</code>
 		</p>
 
-		<code class="sc-col sc-s12 sc-m6">
-			<pre>
+		<pre class=" language-html sc-col sc-s12 sc-m6">
+			<code>
 &lt;div class="sc-row">
   &lt;div class="sc-col sc-s12 sc-m6">
     Example
   &lt;/div>
 &lt;/div>
-			</pre>
-		</code>
+			</code>
+		</pre>
 	</div>
 
 	<div class="sc-row">
@@ -131,8 +131,8 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		So <code>.sc-push-s</code>, <code>.sc-pull-s</code>, <code>.sc-offset-s</code> these examples are for small screen but they work with all sizes named before.
 	</p>
 
-	<code class="sc-col sc-s12 sc-m6">
-		<pre>
+	<pre class="language-html sc-col sc-s12 sc-m6">
+		<code>
 &lt;div class="sc-row">
 	&lt;div class="sc-col sc-s12 sc-m6 sc-offset-m6">
 		Example
@@ -150,8 +150,8 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
     Display 2
   &lt;/div>
 &lt;/div>
-		</pre>
-	</code>
+		</code>
+	</pre>
 </section>
 
 <section class="sc-row">
@@ -184,8 +184,8 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		</div>
 	</div>
 
-	<code class="sc-col s12 sc-m6 sc-offset-m6">
-		<pre>
+	<pre class="language-html sc-col s12 sc-m6 sc-offset-m6">
+		<code>
 &lt;div class="sc-col sc-s4 sc-s-hidden">
   Small hidden
 &lt;/div>
@@ -197,8 +197,8 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 &lt;div class="sc-col sc-s4 sc-l-hidden">
   Large hidden
 &lt;/div>
-		</pre>
-	</code>
+		</code>
+	</pre>
 </section>
 
 <section class="sc-row">

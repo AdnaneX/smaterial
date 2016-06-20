@@ -2,8 +2,8 @@
  * Slide an element horizontal
  * @return type description
  */
-$.fn.slideHorizontal = function() {
-	$(this).animate({width: 'toggle'});
+$.fn.slideHorizontal = function($transition, $speed) {
+	$(this).animate({width: 'toggle', transition: $transition}, $speed);
 	return $(this);
 };
 

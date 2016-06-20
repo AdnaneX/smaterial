@@ -15,16 +15,16 @@ $(document).ready(function() {
 
 		$this.click(function() {
 			if( $ul.visible() ) {
-				$ul.slideUp('swing');
+				$ul.animate({transition: 'cubic-bezier(0.4, 0.0, 0.2, 1)',height: 'toggle'}, 300);
 
 				if( $arrow !== undefined ) {
-					$arrow.rotate(0, 400, 'ease-in-out');
+					$arrow.rotate(0, 300, 'cubic-bezier(0.4, 0.0, 0.2, 1)');
 				}
 			} else {
-				$ul.slideDown('swing');
+				$ul.animate({transition: 'cubic-bezier(0.4, 0.0, 0.2, 1)',height: 'toggle'}, 300);
 
 				if( $arrow !== undefined ) {
-					$arrow.rotate(180, 400, 'ease-in-out');
+					$arrow.rotate(180, 300, 'cubic-bezier(0.4, 0.0, 0.2, 1)');
 				}
 			}
 		});
@@ -33,7 +33,7 @@ $(document).ready(function() {
 	$('#sc-nav-button').click(function() {
 		var $trigger = $(this).data('sc-trigger');
 
-		$('#' + $trigger).slideHorizontal();
+		$('#' + $trigger).slideHorizontal('cubic-bezier(0.4, 0.0, 0.2, 1)', 300);
 	});
 
 	$sidenav.find('.sc-active').closest('ul').show();

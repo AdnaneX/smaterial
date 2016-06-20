@@ -154,10 +154,28 @@
 				margin: $sidenav-profile-margin;
 				padding: $sidenav-profile-padding;
 				background: $sidenav-profile-background;
+				background-size: 100% 100%;
 				height: auto;
+				position: relative;
+
+				&:before {
+					content: '';
+					top: 0;
+					bottom: 0;
+					left: 0;
+					right: 0;
+					position: absolute;
+					background: -moz-linear-gradient($sidenav-profile-scrim);
+					background: -webkit-linear-gradient($sidenav-profile-scrim);
+					background: linear-gradient($sidenav-profile-scrim);
+				}
 
 				div {
 					padding: 0 !important;
+				}
+
+				.sc-sidenav-profile-img,.sc-sidenav-profile-info,.sc-sidenav-profile-button {
+					position: inherit;
 				}
 
 				.sc-sidenav-profile-img {

@@ -78,8 +78,10 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		The <code class="language-html">&lt;link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"></code>
 		is used to load the <a href="http://www.smaterial.dsuper.nl/style/icons.php">Material Design font icons</a>.
 
+		The line <code class="language-html">&lt;meta name="viewport" content="width=device-width, initial-scale=1"></code> makes the website responsive.
+
 		The <code class="language-html">vendor.min.js</code> currently only holds jQuery 3.
-		So if you prefer to load jQuery you can use <a href="https://developers.google.com/speed/libraries/#jquery" target="_blank">this</a>.
+		So if you prefer to load jQuery from an external source you can use <a href="https://developers.google.com/speed/libraries/#jquery" target="_blank">this</a>.
 		The <code class="language-html">vendor.min.js</code> file needs to be loaded before <code class="language-html">app.min.js</code>.
 	</p>
 </section>
@@ -112,7 +114,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	</table>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
-		If you would like to add other js frameworks for example <a href="http://hammerjs.github.io/" target="_blank">hammer.js</a> you can add the necessary file(s) in <code class="language-html">js/vendor</code>.
+		If you were to add other js frameworks for example <a href="http://hammerjs.github.io/" target="_blank">hammer.js</a> you can add the necessary file(s) in <code class="language-html">js/vendor</code>.
 		If you create your own JavaScript files you can add these in <code class="language-html">js/app</code>. This way all files will be compressed into minified versions.
 		The same goes for SCSS files. If you add your own SCSS files in <code class="language-html">stylesheets/scss</code> these will also be compressed for you.
 		This can be achieved by just running gulp task.
@@ -122,6 +124,23 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		If you add new files with bower you need to add the necessary files in the right files array.
 		JavaScript files in vendor task and SCSS files in scss task.
 	</p>
+</section>
+
+<section class="sc-row">
+	<h3>Other useful HTML</h3>
+
+	<p class="sc-col sc-xs4 sc-s12 sc-m6">
+		If you would like to complete the looks of your website you can add some additional HTML to it.
+		To color the browsers address bar use the code shown on the side in the <code class="language-html">&lt;head></code> tag.
+	</p>
+
+	<pre class="language-html sc-col sc-xs4 sc-s12 sc-m6">
+		<code>
+&lt;meta name="theme-color" content="#2196F3">
+&lt;meta name="msapplication-navbutton-color" content="#2196F3">
+&lt;meta name="apple-mobile-web-app-status-bar-style" content="#2196F3">
+		</code>
+	</pre>
 </section>
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.php';

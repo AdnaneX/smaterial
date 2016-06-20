@@ -74,7 +74,7 @@ $select-background: $cyan-a200;
  * Typography settings
  **************************************/
 // Font paths
-$roboto-font-path: './components/fonts/Roboto/';
+$roboto-font-path: '/stylesheets/scss/components/fonts/Roboto/';
 
 // Font size
 $font-size-initial: 14; //px Default 14 or 15
@@ -375,7 +375,7 @@ $sidenav-divider-background: lighten($black, (100% - 12%)); // Default lighten($
 
 $sidenav-subheader-color: lighten($black, (100% - 54%)); // Default
 
-$sidenav-profile-background: $secondary-color;
+$sidenav-profile-background: url('/images/drawer-background.jpg') no-repeat center;
 
 $sidenav-font-weight: 500; // Default 500
 $sidenav-hover-background: $grey-200;
@@ -388,6 +388,7 @@ $sidenav-profile-info-total-height: remCalc(56px); // Default remCalc(56px)
 $sidenav-profile-info-height: $sidenav-profile-info-total-height / 2;
 $sidenav-profile-info-font-color: $white; // Default $white
 $sidenav-profile-info-font-size: remCalc(14px); // Default remCalc(14px)
+$sidenav-profile-scrim: to top, rgba($grey-900, 0.4) 15%, rgba($white, 0) 33%; // Default to top, rgba($grey-900, 0.4) 15%, rgba($white, 0) 33%
 
 /**************************************
  * Textfields

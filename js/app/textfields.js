@@ -26,4 +26,10 @@ $(document).ready(function() {
 			$label.removeClass('sc-active');
 		}
 	});
+
+	// Fix bug that text filed not gets selected when label is clicked
+	$('label').click(function() {
+		var $id = $(this).attr('for');
+		$('#'+$id).trigger('click');
+	});
 });
