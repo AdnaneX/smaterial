@@ -15,12 +15,12 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	</p>
 
 	<p class="sc-col sc-s12 sc-m6">
-		Tooltips only need the class <code>.sc-tooltip</code> and the attribute <code>title</code> in order to work. Because of this it's easy
+		Tooltips only need the class <code class="language-css">.sc-tooltip</code> and the attribute <code class="language-css">title</code> in order to work. Because of this it's easy
 		to add to a link or span.
 	</p>
 
-	<code class="sc-col sc-s12 sc-m6">
-		<pre>
+	<pre class="language-html sc-col sc-s12 sc-m6 sc-offset-m6">
+		<code>
 &lt;span class="sc-tooltip" title="delete, edit">
   action
 &lt;/span>
@@ -28,8 +28,8 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 &lt;a href="#" class="sc-tooltip" title="link">
   link
 &lt;/a>
-		</pre>
-	</code>
+		</code>
+	</pre>
 </section>
 
 <section class="sc-row">

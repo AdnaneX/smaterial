@@ -23,8 +23,8 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		<input type="checkbox" id="example6" class="sc-checkbox" disabled checked> <label for="example6">Example6</label>
 	</p>
 
-	<code class="sc-col sc-s12 sc-m6">
-		<pre>
+	<pre class="language-html sc-col sc-s12 sc-m6">
+		<code>
 &lt;input type="checkbox" id="example" class="sc-checkbox">
 &lt;label for="example">Example&lt;/label>
 
@@ -33,8 +33,8 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 
 &lt;input type="checkbox" id="example" class="sc-checkbox" disabled checked>
 &lt;label for="example">Example&lt;/label>
-		</pre>
-	</code>
+		</code>
+	</pre>
 </section>
 
 <section class="sc-row">
@@ -47,8 +47,8 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		<input type="radio" id="example5" name="radio" class="sc-radio" disabled checked> <label for="example5">Example5</label>
 	</p>
 
-	<code class="sc-col sc-s12 sc-m6">
-		<pre>
+	<pre class="language-html sc-col sc-s12 sc-m6">
+		<code>
 &lt;input type="radio" id="example" class="sc-radio">
 &lt;label for="example">Example&lt;/label>
 
@@ -57,8 +57,8 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 
 &lt;input type="radio" id="example" class="sc-radio" disabled checked>
 &lt;label for="example">Example&lt;/label>
-		</pre>
-	</code>
+		</code>
+	</pre>
 </section>
 
 <section class="sc-row">
@@ -86,8 +86,8 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		</div>
 	</p>
 
-	<code class="sc-col sc-s12 sc-m6">
-		<pre>
+	<pre class="language-html sc-col sc-s12 sc-m6 sc-offset-m6">
+		<code>
 &lt;div class="sc-switch">
   &lt;label>
     off
@@ -105,8 +105,8 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
     on
   &lt;/label>
 &lt;/div>
-		</pre>
-	</code>
+		</code>
+	</pre>
 </section>
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.php';

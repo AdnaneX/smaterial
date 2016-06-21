@@ -35,20 +35,20 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 
 	<ul class="sc-col sc-s6">
 		<li>
-			<code>.sc-sidenav-left</code> to <code>.sc-sidenav-right</code>
+			<code class="language-css">.sc-sidenav-left</code> to <code class="language-css">.sc-sidenav-right</code>
 			(<em>Left is positioned left and slides in from left to right. Left also has a limited width
 				Right is positioned right and slides in from right to left. Right has no limited width</em>)
 		</li>
 		<li>
-			<code>.sc-sidenav-left-floating</code> to <code>.sc-sidenav-left-full</code>
+			<code class="language-css">.sc-sidenav-left-floating</code> to <code class="language-css">.sc-sidenav-left-full</code>
 			(<em>Floating is positioned under the appbar.
 				The full height is positioned over the appbar and is fixed on desktop but will appear under the appbar on smaller screens.</em>)
 		</li>
 	</ul>
 
 
-	<code class="sc-col sc-s12 sc-m6">
-		<pre>
+	<pre class="language-html sc-col sc-s12 sc-m6">
+		<code>
 &lt;aside id="sc-sidenav" class="sc-sidenav sc-sidenav-left sc-sidenav-left-floating">
   &lt;nav>
     &lt;ul>
@@ -62,16 +62,16 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
     &lt;/ul>
   &lt;/nav>
 &lt;/aside>
-		</pre>
-	</code>
+		</code>
+	</pre>
 
 	<p class="sc-col sc-s12 sc-m6">
 		In order to see a page title when using full height you can add the following to the sidenav:
 		<strong>Note:</strong> this title is only visible on large screens.
 	</p>
 
-	<code class="sc-col sc-s12 sc-m6">
-		<pre>
+	<pre class="language-html sc-col sc-s12 sc-m6">
+		<code>
 &lt;aside id="sc-sidenav" class="sc-sidenav sc-sidenav-left sc-sidenav-left-full">
   &lt;nav>
     &lt;ul>
@@ -88,8 +88,8 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
     &lt;/ul>
   &lt;/nav>
 &lt;/aside>
-		</pre>
-	</code>
+		</code>
+	</pre>
 </section>
 
 
@@ -100,8 +100,8 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		The best dimensions for the image are square. This way the image won't transform.
 	</p>
 
-	<code class="sc-col sc-s12 sc-m6">
-		<pre>
+	<pre class="language-html sc-col sc-s12 sc-m6">
+		<code>
 &lt;aside id="sc-sidenav" class="sc-sidenav sc-sidenav-left sc-sidenav-left-floating">
   &lt;nav class="sc-sidenav sc-sidenav-left sc-sidenav-left-floating">
     &lt;ul>
@@ -127,8 +127,8 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
     &lt;/ul>
   &lt;/nav>
 &lt;/aside
-		</pre>
-	</code>
+		</code>
+	</pre>
 </section>
 
 <section class="sc-row">
@@ -150,13 +150,13 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		The data-sc-trigger can be anything you gave the sidenav as id.
 	</p>
 
-	<code class="sc-col sc-s12 sc-m6">
-		<pre>
+	<pre class="language-html sc-col sc-s12 sc-m6">
+		<code>
 &lt;a href="#" id="sc-nav-button" data-sc-trigger="sc-sidenav">
   &lt;i class="material-icons">menu&lt;/i>
 &lt;/a>
-		</pre>
-	</code>
+		</code>
+	</pre>
 </section>
 
 <section class="sc-row">

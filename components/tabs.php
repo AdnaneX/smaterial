@@ -18,16 +18,16 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 
 	<p class="sc-col sc-s12 sc-m6"></p>
 
-	<code class="sc-col sc-s12 sc-m6">
-		<pre>
+	<pre class="language-html sc-col sc-s12 sc-m6">
+		<code>
 &lt;div class="sc-tabs">
   &lt;a href="#" class="sc-tab">Tab 1&lt;/a>
   &lt;a href="#" class="sc-tab">Tab 2&lt;/a>
   &lt;a href="#" class="sc-tab">Tab 3&lt;/a>
   &lt;a href="#" class="sc-tab">Tab 4&lt;/a>
 &lt;/div>
-		</pre>
-	</code>
+		</code>
+	</pre>
 </section>
 
 <section class="sc-row">

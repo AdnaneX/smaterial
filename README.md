@@ -25,6 +25,8 @@
     - Add templates
     - Complete table of contents
     - Add flexbox usage
+    - Add mobile, tablet, desktop different transitions
+    - Add screen width detect to js
 - Appbar
     - Add "more menu" styling
     - Add "more menu" functions
@@ -68,6 +70,7 @@
     - Add pagination
 - Tabs
     - Add mobile scrollable tabs
+    - Add icon tabs
 - Text fields
     - Fix label click on single-line input (When clicked on label input not active)
     - Fix icon color on single-line input when active color icon

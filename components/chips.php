@@ -44,8 +44,8 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		</div>
 	</div>
 
-	<code class="sc-col sc-s12 sc-m6">
-		<pre>
+	<pre class="language-html sc-col sc-s12 sc-m6">
+		<code>
 &lt;div class="sc-chip sc-chip-deletable">
   &lt;span>John Doe&lt;/span>
   &lt;i class="material-icons sc-chip-delete">clear&lt;/i>
@@ -65,8 +65,8 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
   &lt;img class="sc-left" src="" alt="">
   &lt;span>John Doe&lt;/span>
 &lt;/div>
-		</pre>
-	</code>
+		</code>
+	</pre>
 </section>
 
 <section class="sc-row">

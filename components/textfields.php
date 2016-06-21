@@ -66,8 +66,8 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		</div>
 	</div>
 
-	<code class="sc-col sc-s12 sc-m6">
-		<pre>
+	<pre class="language-html sc-col sc-s12 sc-m6">
+		<code>
 &lt;div class="sc-floating-input">
   &lt;input type="url" id="example">
   &lt;label for="example">Url&lt;/label>
@@ -77,8 +77,8 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
   &lt;input type="text" id="disabled" disabled>
   &lt;label for="disabled">Disabled&lt;/label>
 &lt;/div>
-		</pre>
-	</code>
+		</code>
+	</pre>
 </section>
 
 <section class="sc-row">
@@ -104,8 +104,8 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		The <span class="sc-red-text"><i class="material-icons">star</i></span>  is automatically added by required fields but can easily be turned off.
 	</div>
 
-	<code class="sc-col sc-s12 sc-push-m3 sc-m6">
-		<pre>
+	<pre class="language-html sc-col sc-s12 sc-m6">
+		<code>
 &lt;form action="" method="post">
   &lt;div class="sc-floating-input">
     &lt;input type="text" name="name" id="name" required>
@@ -119,8 +119,8 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 
   &lt;input type="submit" class="sc-raised-button">
 &lt;/form>
-		</pre>
-	</code>
+		</code>
+	</pre>
 </section>
 
 <section class="sc-row" id="floating-dense">
@@ -174,8 +174,8 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		</div>
 	</div>
 
-	<code class="sc-col sc-s12 sc-m6">
-		<pre>
+	<pre class="language-html sc-col sc-s12 sc-m6">
+		<code>
 &lt;div class="sc-floating-dense-input">
   &lt;input type="url" id="example7">
   &lt;label for="example">Url&lt;/label>
@@ -185,8 +185,8 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
   &lt;input type="text" id="disabled" disabled>
   &lt;label for="disabled">Disabled&lt;/label>
 &lt;/div>
-		</pre>
-	</code>
+		</code>
+	</pre>
 </section>
 
 <section class="sc-row" id="single-line">
@@ -235,8 +235,8 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		</div>
 	</div>
 
-	<code class="sc-col sc-s12 sc-m6">
-		<pre>
+	<pre class="language-html sc-col sc-s12 sc-m6">
+		<code>
 &lt;div class="sc-single-dense-input">
   &lt;input type="text" id="example">
   &lt;label for="example">Example&lt;/label>
@@ -246,8 +246,8 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
   &lt;input type="text" id="disabled" disabled>
   &lt;label for="disabled">Disabled&lt;/label>
 &lt;/div>
-		</pre>
-	</code>
+		</code>
+	</pre>
 </section>
 
 <section class="sc-col sc-s12 sc-m6">

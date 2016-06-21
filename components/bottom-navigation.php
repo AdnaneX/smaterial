@@ -19,8 +19,8 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 <section class="sc-row">
 	<h3>Default bottom navigation</h3>
 
-	<code class="sc-col sc-s12 sc-m6">
-		<pre>
+	<pre class="language-html sc-s12 sc-m6">
+		<code>
 &lt;nav class="sc-bottom-nav">
   &lt;ul>
     &lt;li>
@@ -52,15 +52,15 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
     &lt;/li>
   &lt;/ul>
 &lt;/nav>
-		</pre>
-	</code>
+		</code>
+	</pre>
 </section>
 
 <Section class="sc-row">
 	<h3>Shifting bottom navigation</h3>
 
-	<code class="sc-col sc-s12 sc-m6">
-		<pre>
+	<pre class="language-html sc-s12 sc-m6">
+		<code>
 &lt;nav class="sc-bottom-shifting">
   &lt;ul>
     &lt;li>
@@ -92,8 +92,8 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
     &lt;/li>
   &lt;/ul>
 &lt;/nav>
-		</pre>
-	</code>
+		</code>
+	</pre>
 </Section>
 
 <nav class="sc-bottom-nav">

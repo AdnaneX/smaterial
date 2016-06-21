@@ -8,7 +8,7 @@
 button, input[type="button"], input[type="reset"], input[type="submit"], a {
 	&.sc-raised-button {
 		@extend .sc-z2, .sc-button;
-		@include transition($raised-transition);
+		@include transition($raised-small-transition);
 		color: $raised-color;
 		background: $raised-background;
 		min-width: $raised-min-width;
@@ -16,6 +16,14 @@ button, input[type="button"], input[type="reset"], input[type="submit"], a {
 		line-height: $raised-size;
 		padding: $raised-padding;
 		margin: $raised-margin;
+
+		@media #{$medium-up} {
+			@include transition($raised-medium-transition);
+		}
+
+		@media #{$large-up} {
+			@include transition($raised-large-transition);
+		}
 
 		&:active {
 			@extend .sc-z8;

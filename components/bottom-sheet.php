@@ -31,8 +31,8 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		</ul>
 	</div>
 
-	<code class="sc-col sc-s12 sc-m6">
-		<pre>
+	<pre class="language-html sc-s12 sc-m6">
+		<code>
 &lt;div class="sc-bottom-sheet" id="default">
   &lt;ul>
     &lt;li>&lt;i class="material-icons">cloud&lt;/i> Upload&lt;/li>
@@ -40,8 +40,8 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
     &lt;li>&lt;i class="material-icons">print&lt;/i> Print&lt;/li>
   &lt;/ul>
 &lt;/div>
-		</pre>
-	</code>
+		</code>
+	</pre>
 </section>
 
 <section class="sc-row">
@@ -63,8 +63,8 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		</ul>
 	</div>
 
-	<code class="sc-col sc-s12 sc-m6">
-		<pre>
+	<pre class="language-html sc-s12 sc-m6">
+		<code>
 &lt;div class="sc-bottom-sheet sc-bottom-sheet-header" id="header">
   &lt;ul>
     &lt;li class="sc-header">Header&lt;/li>
@@ -74,8 +74,8 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
     &lt;li>&lt;i class="material-icons">print&lt;/i> Print&lt;/li>
   &lt;/ul>
 &lt;/div>
-		</pre>
-	</code>
+		</code>
+	</pre>
 </section>
 
 <section class="sc-row">
@@ -136,8 +136,8 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		</ul>
 	</div>
 
-	<code class="sc-col sc-s12 sc-m6">
-		<pre>
+	<pre class=" language-html sc-s12 sc-m6">
+		<code>
 &lt;div class="sc-bottom-sheet sc-bottom-sheet-grid" id="grid-icons">
   &lt;ul>
     &lt;li>
@@ -164,8 +164,8 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
     &lt;/li>
   &lt;/ul>
 &lt;/div>
-		</pre>
-	</code>
+		</code>
+	</pre>
 </section>
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.php';

@@ -16,11 +16,19 @@
 	font-weight: $chips-font-weight;
 
 	&-deletable {
-		@include transition($chips-delete-transition);
+		@include transition($chips-delete-small-transition);
+
+		@media #{$medium-up} {
+			@include transition($chips-delete-medium-transition);
+		}
+
+		@media #{$large-up} {
+			@include transition($chips-delete-large-transition);
+		}
 
 		.sc-chip-delete {
 			@include border-radius(50%);
-			@include transition($chips-delete-transition);
+			@include transition($chips-delete-small-transition);
 			vertical-align: middle;
 			display: inline-block;
 			width: $chips-delete-size;
@@ -28,6 +36,14 @@
 			margin: $chips-delete-margin;
 			color: $chips-delete-cross;
 			background: $chips-delete-background;
+
+			@media #{$medium-up} {
+				@include transition($chips-delete-medium-transition);
+			}
+
+			@media #{$large-up} {
+				@include transition($chips-delete-large-transition);
+			}
 
 			&:hover {
 				cursor: pointer;
@@ -46,7 +62,15 @@
 	}
 
 	&-contact {
-		@include transition($chips-contact-transition unquote(',') $chips-delete-transition);
+		@include transition($chips-contact-small-transition unquote(',') $chips-contact-small-transition);
+
+		@media #{$medium-up} {
+			@include transition($chips-contact-medium-transition unquote(',') $chips-contact-medium-transition);
+		}
+
+		@media #{$large-up} {
+			@include transition($chips-contact-large-transition unquote(',') $chips-contact-large-transition);
+		}
 
 		img {
 			@include border-radius(50%);

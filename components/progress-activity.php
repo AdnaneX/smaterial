@@ -27,13 +27,13 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		</div>
 	</div>
 
-	<code class="sc-col sc-s12 sc-m6">
-		<pre>
+	<pre class="language-html sc-col sc-s12 sc-m6">
+		<code>
 &lt;div class="sc-determinate">
   &lt;div class="sc-progress" style="width: 10%">&lt;/div>
 &lt;/div>
-		</pre>
-	</code>
+		</code>
+	</pre>
 </section>
 
 <section class="sc-row">
@@ -49,13 +49,13 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		</div>
 	</div>
 
-	<code class="sc-col sc-s12 sc-m6">
-		<pre>
+	<pre class="language-html sc-col sc-s12 sc-m6">
+		<code>
 &lt;div class="sc-indeterminate">
   &lt;div class="sc-progress">&lt;/div>
 &lt;/div>
-		</pre>
-	</code>
+		</code>
+	</pre>
 </section>
 
 <section class="sc-row">
@@ -74,16 +74,16 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		</div>
 	</div>
 
-	<code class="sc-col sc-s12 sc-m6">
-		<pre>
+	<pre class="language-html sc-col sc-s12 sc-m6">
+		<code>
 &lt;div class="sc-buffer">
   &lt;div class="sc-buffer-progress" style="width: 50%;">
     &lt;div class="sc-progress" style="width: 90%;">&lt;/div>
   &lt;/div>
   &lt;div class="sc-buffering" style="width: 50%; left: 50%;">&lt;/div>
 &lt;/div>
-		</pre>
-	</code>
+		</code>
+	</pre>
 </section>
 
 <section class="sc-col sc-s12 sc-m6">

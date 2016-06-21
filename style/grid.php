@@ -79,7 +79,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	<h3>Row</h3>
 
 	<p class="sc-col sc-s12 sc-m6">
-		You can use <code>.sc-row</code> so that it's all in one line.
+		You can use <code class="language-css">.sc-row</code> so that it's all in one line.
 	</p>
 </section>
 
@@ -88,9 +88,9 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 
 	<div class="sc-row">
 		<p class="sc-col sc-s12 sc-m6">
-			There are 5 breakpoints <code>.sc-xs</code>, <code>.sc-s</code>, <code>.sc-m</code>, <code>.sc-l</code> and <code>.sc-xl</code>
+			There are 5 breakpoints <code class="language-css">.sc-xs</code>, <code class="language-css">.sc-s</code>, <code class="language-css">.sc-m</code>, <code class="language-css">.sc-l</code> and <code class="language-css">.sc-xl</code>
 			to suit your needs.
-			In order to make the columns work you need to wrap it inside a <code>.sc-row</code>
+			In order to make the columns work you need to wrap it inside a <code class="language-css">.sc-row</code>
 		</p>
 
 		<pre class=" language-html sc-col sc-s12 sc-m6">
@@ -109,17 +109,17 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 			You can also use the row and columns in SCSS by simply extending the class.
 		</p>
 
-		<code class="sc-col sc-s12 sc-m6">
-			<pre>
+		<pre class="language-css sc-col sc-s12 sc-m6">
+			<code>
 @extend .sc-col, .sc-s12, .sc-m6;
-			</pre>
-		</code>
+			</code>
+		</pre>
 	</div>
 
 	<p class="sc-col sc-s12 sc-m6">
 		To follow the <a href="//www.google.com/design/spec/layout/responsive-ui.html" target="_blank">Material Design</a>
 		specifications as closely as possible some breakpoints have different settings.
-		<code>.sc-xs</code> Only has 4 columns, <code>sc-s</code> has 8 to 12 columns depending on the width of the screen.
+		<code class="language-css">.sc-xs</code> Only has 4 columns, <code class="language-css">sc-s</code> has 8 to 12 columns depending on the width of the screen.
 	</p>
 </section>
 
@@ -128,7 +128,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 
 	<p class="sc-col sc-s12 sc-m6">
 		You can also push, pull and offset which work the same as the columns.
-		So <code>.sc-push-s</code>, <code>.sc-pull-s</code>, <code>.sc-offset-s</code> these examples are for small screen but they work with all sizes named before.
+		So <code class="language-css">.sc-push-s</code>, <code class="language-css">.sc-pull-s</code>, <code class="language-css">.sc-offset-s</code> these examples are for small screen but they work with all sizes named before.
 	</p>
 
 	<pre class="language-html sc-col sc-s12 sc-m6">
@@ -159,7 +159,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 
 	<p class="sc-col sc-s12 sc-m6">
 		If you want an element to be hidden for a certain device you can use the following classes:
-		<code>.sc-xs-hidden</code>, <code>.sc-s-hidden</code>, <code>.sc-m-hidden</code>, <code>.sc-l-hidden</code> and <code>.sc-xl-hidden</code>.
+		<code class="language-css">.sc-xs-hidden</code class="language-css">, <code class="language-css">.sc-s-hidden</code class="language-css">, <code class="language-css">.sc-m-hidden</code>, <code class="language-css">.sc-l-hidden</code> and <code class="language-css">.sc-xl-hidden</code>.
 	</p>
 
 	<div class="sc-row">
@@ -210,7 +210,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	</p>
 
 	<p class="sc-col sc-s12 sc-m6">
-		You can use the media queries like the following example: <code>@media #{$medium-up}</code>.
+		You can use the media queries like the following example: <code class="language-css">@media #{$medium-up}</code>.
 	</p>
 
 	<ul class="sc-col sc-s12 sc-m6">

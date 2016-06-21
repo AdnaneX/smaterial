@@ -8,18 +8,30 @@
 	],
 	"license": "license.txt",
 	"keywords": [
+		"smaterial",
 		"material",
 		"design",
 		"css",
 		"framework"
 	],
 	"homepage": "http://www.smaterial.dsuper.nl/",
-		"ignore": [
+	"ignore": [
 		"**/.*",
 		"node_modules",
 		"bower_components",
 		"test",
-		"tests"
+		"tests",
+		"components/*",
+		"images/*",
+		"node_modules/*",
+		"resources/*",
+		"style/*",
+		".htaccess",
+		"getting-started.php",
+		"*.zip",
+		"*.txt",
+		"*.xml",
+		".md"
 	],
 	"dependencies": {
 		"jquery": "jquery/jquery#^3.0.0"

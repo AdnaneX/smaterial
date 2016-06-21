@@ -17,14 +17,14 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		You can also use toasts which similar to snackbars but they don't contain actions.
 	</p>
 
-	<code class="sc-col sc-s12 sc-m6 sc-offset-m6">
-		<pre>
+	<pre class="language-html sc-col sc-s12 sc-m6 sc-offset-m6">
+		<code>
 &lt;div class="sc-snackbar">
   This is a snackbar
   &lt;a href="#" class="sc-snackbar-action">Undo&lt;/a>
 &lt;/div>
-		</pre>
-	</code>
+		</code>
+	</pre>
 </section>
 
 <section class="sc-row">

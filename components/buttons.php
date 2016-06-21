@@ -42,8 +42,8 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		<button class="sc-raised-button sc-hover-ripple"><i class="material-icons sc-left">home</i> Hover ripple</button>
 	</p>
 
-	<code class="sc-col sc-s12 sc-m6 sc-offset-m6">
-		<pre>
+	<pre class="language-html sc-col sc-s12 sc-m6 sc-offset-m6">
+		<code>
 &lt;button class="sc-raised-button">
   &lt;i class="material-icons sc-left">cloud&lt;/i>
   Button example with icon left
@@ -76,8 +76,8 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
   &lt;i class="material-icons sc-left">home&lt;/i>
   Hover ripple
 &lt;/button>
-		</pre>
-	</code>
+		</code>
+	</pre>
 </section>
 
 <section class="sc-row" id="sc-flat-buttons">
@@ -99,8 +99,8 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		<a href="#" class="sc-flat-button">Link</a>
 	</p>
 
-	<code class="sc-col sc-s12 sc-m6 sc-offset-m6">
-		<pre>
+	<pre class="language-html sc-col sc-s12 sc-m6 sc-offset-m6">
+		<code>
 &lt;button class="sc-flat-button">
   &lt;i class="material-icons sc-left">cloud&lt;/i>
   Button example with icon left
@@ -124,8 +124,8 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 &lt;button class="sc-flat-button sc-flat-button-dense">Dense&lt;/button>
 
 &lt;a href="#" class="sc-flat-button">Link&lt;/a>
-		</pre>
-	</code>
+		</code>
+	</pre>
 </section>
 
 <section class="sc-row" id="sc-floating-button">
@@ -141,8 +141,8 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		<a href="#" class="sc-floating-button"><i class="material-icons">home</i></a>
 	</p>
 
-	<code class="sc-col sc-s12 sc-m6 sc-offset-m6">
-		<pre>
+	<pre class="language-html sc-col sc-s12 sc-m6 sc-offset-m6">
+		<code>
 &lt;button class="sc-floating-button">
   &lt;i class="material-icons">cloud&lt;/i>
 &lt;/button>
@@ -152,8 +152,8 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 &lt;/button>
 
 &lt;a href="#" class="sc-floating-button">&lt;i class="material-icons">home&lt;/i>&lt;/a>
-		</pre>
-	</code>
+		</code>
+	</pre>
 </section>
 
 <section class="sc-row">

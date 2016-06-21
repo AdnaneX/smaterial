@@ -69,6 +69,12 @@ $link-hover: $secondary-color;
  * Global
  **************************************/
 $select-background: $cyan-a200;
+$basic-transition: cubic-bezier(0.4, 0.0, 0.2, 1); // Default cubic-bezier(0.4, 0.0, 0.2, 1);
+$element-enter-transition: cubic-bezier(0.0, 0.0, 0.2, 1); // Default cubic-bezier(0.0, 0.0, 0.2, 1);
+$element-exit-transition: cubic-bezier(0.4, 0.0, 1, 1); // Default cubic-bezier(0.4, 0.0, 1, 1);
+$transition-small-duration: 300ms;
+$transition-medium-duration: 390ms;
+$transition-large-duration: 200ms;
 
 /**************************************
  * Typography settings
@@ -238,7 +244,9 @@ $raised-min-width: remCalc(64px); // Default remCalc(64px)
 $raised-size: remCalc(32px); // Default remCalc(32px)
 $raised-padding: 0 remCalc(16px); // Default 0 remCalc(16px)
 $raised-margin: remCalc(8px); // Default remCalc(8px)
-$raised-transition: box-shadow 100ms ease-in-out unquote(',') background 300ms ease-in-out; // Default box-shadow 100ms ease-in-out unquote(',') background 300ms ease-in-out
+$raised-small-transition: box-shadow $transition-small-duration $basic-transition unquote(',') background $transition-small-duration $basic-transition; // Default box-shadow $transition-small-duration $basic-transition unquote(',') background $transition-small-duration $basic-transition
+$raised-medium-transition: box-shadow $transition-medium-duration $basic-transition unquote(',') background $transition-medium-duration $basic-transition; // Default box-shadow $transition-medium-duration $basic-transition unquote(',') background $transition-medium-duration $basic-transition
+$raised-large-transition: box-shadow $transition-large-duration $basic-transition unquote(',') background $transition-large-duration $basic-transition; // Default box-shadow $transition-large-duration $basic-transition unquote(',') background $transition-large-duration $basic-transition
 $raised-dense-size: remCalc(32px); // Default remCalc(32px)
 $raised-dense-font-size: remCalc(13px); // Default remCalc(13px)
 $raised-disabled-background: rgba($black, .12); // Default rgba($black, .12)
@@ -279,9 +287,13 @@ $chips-delete-cross-hover: $chips-background-hover; // Default $chips-background
 $chips-delete-background: rgba($black, .54); // Default rgba($black, .54)
 $chips-delete-background-hover: $chips-text-hover; // Default $chips-text-hover
 $chips-delete-margin: 0 remCalc(-8px) 0 remCalc(4px); // Default 0 remCalc(-8px) 0 remCalc(4px)
-$chips-delete-transition: color 300ms ease-in-out unquote(',') background 300ms ease-in-out; // Default color 300ms ease-in-out unquote(',') background 300ms ease-in-out
+$chips-delete-small-transition: color $transition-small-duration $basic-transition unquote(',') background $transition-small-duration $basic-transition; // Default color $transition-small-duration $basic-transition unquote(',') background $transition-small-duration $basic-transition
+$chips-delete-medium-transition: color $transition-medium-duration $basic-transition unquote(',') background $transition-medium-duration $basic-transition; // Default color $transition-medium-duration $basic-transition unquote(',') background $transition-medium-duration $basic-transition
+$chips-delete-large-transition: color $transition-large-duration $basic-transition unquote(',') background $transition-large-duration $basic-transition; // Default color $transition-large-duration $basic-transition unquote(',') background $transition-large-duration $basic-transition
 $chips-contact-margin: 0 remCalc(8px) 0 remCalc(-12px); // Default 0 remCalc(8px) 0 remCalc(-12px)
-$chips-contact-transition: box-shadow 100ms ease-in-out; // Default box-shadow 100ms ease-in-out
+$chips-contact-small-transition: box-shadow $transition-small-duration $basic-transition; // Default box-shadow $transition-small-duration $basic-transition
+$chips-contact-medium-transition: box-shadow $transition-medium-duration $basic-transition; // Default box-shadow $transition-medium-duration $basic-transition
+$chips-contact-large-transition: box-shadow $transition-large-duration $basic-transition; // Default box-shadow $transition-large-duration $basic-transition
 
 /**************************************
  * Progress & activity
@@ -291,7 +303,7 @@ $determinate-background: rgba($main-color, .4); // Default rgba($main-color, .4)
 $determinate-height: remCalc(5px); // Default remCalc(5px)
 
 $progress-background: $main-color; // Default $main-color
-$progress-transition: width 300ms ease-in-out; // Default width 300ms ease-in-out
+$progress-transition: width 300ms $basic-transition; // Default width 300ms $basic-transition
 
 $indeterminate-width: $determinate-width; // Default $determinate-width
 $indeterminate-background: $determinate-background; // Default $determinate-background
