@@ -15,7 +15,6 @@
     - Check all list styles to prevent duplicate styling and therefor load speed
     - When an item can be triggered by clicking work with JavaScript to set an active class.
     - Use 1 class for all triggers. With the active class make slideup and slidedown action
-    - Future add less version
     - Future add SMaterial CDN package
     - Future add meteor js package
     - Check for "- remCalc(..px)" and "remCalc(-..px)". All should be like the last one
@@ -25,7 +24,7 @@
     - Add templates
     - Complete table of contents
     - Add flexbox usage
-    - Add mobile, tablet, desktop different transitions
+    - Add mobile, tablet, desktop different transitions (JavaScript)
     - Add screen width detect to js
 - Appbar
     - Add "more menu" styling

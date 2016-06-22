@@ -1,7 +1,7 @@
 {
 	"name": "smaterial",
 	"description": "SMaterial a CSS framework based on Google's Material Design",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"main": "",
 	"authors": [
 		"SuperDJ <super.derkjan@gmail.com>"
@@ -12,7 +12,9 @@
 		"material",
 		"design",
 		"css",
-		"framework"
+		"framework",
+		"responsive",
+		"front-end"
 	],
 	"homepage": "http://www.smaterial.dsuper.nl/",
 	"ignore": [
