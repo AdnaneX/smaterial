@@ -167,5 +167,21 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		</code>
 	</pre>
 </section>
+
+<section class="sc-row">
+	<h3>Music</h3>
+
+	<p class="sc-col sc-sx4 sc-s12 sc-m6">
+		You can also use a specific bottom sheet styled for music.
+	</p>
+
+	<div class="sc-bottom-sheet sc-bottom-sheet-music" id="music">
+		<figure>
+			<img src="/images/album-example.jpg">
+		</figure>
+		
+		
+	</div>
+</section>
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.php';

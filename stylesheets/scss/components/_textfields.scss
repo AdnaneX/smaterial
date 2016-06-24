@@ -4,6 +4,7 @@
  * http://www.google.com/design/spec/components/text-fields.html
  **************************************/
 
+// Some default styling
 .sc-input {
 	position: $textfield-position;
 
@@ -203,6 +204,7 @@ input[type="text"], input[type="password"], input[type="email"], input[type="num
 		vertical-align: $textfield-required-vertical-align;
 		content: $textfield-required-content;
 		font-size: $textfield-required-font-size;
+		font-family: 'Material Icons';
 		@include transition($textfield-transition);
 	}
 

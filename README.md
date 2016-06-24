@@ -20,10 +20,9 @@
     - Check for "- remCalc(..px)" and "remCalc(-..px)". All should be like the last one
     - Move global usable classes to _normailize.scss (.sc-no-hover, .sc-active) to name a few
     - Add Material Design animations
-    - Add gulp files to SCSS package
     - Add templates
     - Complete table of contents
-    - Add flexbox usage
+    - Add flexbox support
     - Add mobile, tablet, desktop different transitions (JavaScript)
     - Add screen width detect to js
 - Appbar
@@ -59,7 +58,7 @@
     - Move color import from "_settings.scss" to "smaterial.scss"
 - Sidenav
     - Make profile dropdown button
-    - Fix margin right on left menu for mobile. 56px between screen and menu
+    - Fix margin right on left menu for mobile. 56px between screen edge and menu
     - Fix shadow
 - Slider
     - Fix styling
@@ -78,7 +77,6 @@
     - Add autocomplete input
     - Add slide out search
     - Add dropdown search
-    - Maybe set *-dense as mobile default
     - Fix label for textarea
     - Add default text field
 - List

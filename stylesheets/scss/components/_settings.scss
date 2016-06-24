@@ -69,9 +69,10 @@ $link-hover: $secondary-color;
  * Global
  **************************************/
 $select-background: $cyan-a200;
-$basic-transition: cubic-bezier(0.4, 0.0, 0.2, 1); // Default cubic-bezier(0.4, 0.0, 0.2, 1);
-$element-enter-transition: cubic-bezier(0.0, 0.0, 0.2, 1); // Default cubic-bezier(0.0, 0.0, 0.2, 1);
-$element-exit-transition: cubic-bezier(0.4, 0.0, 1, 1); // Default cubic-bezier(0.4, 0.0, 1, 1);
+$basic-transition: cubic-bezier(0.4, 0.0, 0.2, 1); // Default cubic-bezier(0.4, 0.0, 0.2, 1)
+$element-enter-transition: cubic-bezier(0.0, 0.0, 0.2, 1); // Default cubic-bezier(0.0, 0.0, 0.2, 1)
+$element-exit-transition: cubic-bezier(0.4, 0.0, 1, 1); // Default cubic-bezier(0.4, 0.0, 1, 1)
+$returning-transition: cubic-bezier(0.0, 0.0, 0.2, 1); // Default cubic-bezier(0.0, 0.0, 0.2, 1)
 $transition-small-duration: 300ms;
 $transition-medium-duration: 390ms;
 $transition-large-duration: 200ms;

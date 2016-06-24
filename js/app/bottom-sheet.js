@@ -4,20 +4,18 @@ $(document).ready(function() {
 			$trigger = $('#'+$this.data('sc-trigger'));
 
 		if( $trigger.visible() ) {
-			$trigger.slideUp();
+			$trigger.hide();
 		} else {
-			$trigger.slideDown();
+			$trigger.show();
 		}
 
 		$(document).mouseup(function (e) {
 			if( $trigger.visible() ) {
 				// if the target of the click isn't the $trigger nor a descendant of the $trigger
 				if( !$trigger.is(e.target) && $trigger.has(e.target).length === 0 ) {
-					$trigger.slideDown();
+					$trigger.hide();
 				}
 			}
 		});
 	});
-
-
 });
