@@ -62,6 +62,9 @@
     - Fix shadow
 - Slider
     - Fix styling
+    - Add radials
+    - Align thumb and track center
+    - Different style for value 0 and up
 - Tables
     - Fix styling
     - Add table title

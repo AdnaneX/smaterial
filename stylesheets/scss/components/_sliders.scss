@@ -7,60 +7,131 @@
 input[type="range"].sc-slider {
 	-webkit-appearance: none;
 	outline: none;
-	height: remCalc(2px);
-	background: lighten($black, (100% - 26%));
+	height: $slider-track-height;
+	background: $slider-track-background-color;
 
 	&:hover {
 		cursor: pointer;
 	}
 
+	// Track
 	&::-webkit-slider-runnable-track {
 		-webkit-appearance: none;
-		height: remCalc(2px);
+		height: $slider-track-height;
+		@include transition($slider-track-small-transition);
+
+		@media #{$medium-up} {
+			@include transition($slider-track-medium-transition);
+		}
+
+		@media #{$large-up} {
+			@include transition($slider-track-large-transition);
+		}
+
+		&:focus, &:active {
+			background: $slider-track-active-background;
+		}
 	}
 
 	&::-moz-range-track, ::-ms-track {
-		height: remCalc(2px);
+		height: $slider-track-height;
+		@include transition($slider-track-small-transition);
+
+		@media #{$medium-up} {
+			@include transition($slider-track-medium-transition);
+		}
+
+		@media #{$large-up} {
+			@include transition($slider-track-large-transition);
+		}
+
+		&:focus, &:active {
+			background: $slider-track-active-background;
+		}
 	}
 
+	// Thumb
 	&::-webkit-slider-thumb {
 		-webkit-appearance: none;
 		background: $white;
 		@include border-radius(50%);
-		height: remCalc(14px);
-		width: remCalc(14px);
-		border: remCalc(2px) solid lighten($black, (100% - 26%));
-		margin-top: - remCalc(7px);
+		@include transition($slider-thumb-small-transition);
+		height: $slider-thumb-size;
+		width: $slider-thumb-size;
+		border: $slider-thumb-border;
+		margin: $slider-thumb-margin;
+
+		@media #{$medium-up} {
+			@include transition($slider-thumb-medium-transition);
+		}
+
+		@media #{$large-up} {
+			@include transition($slider-track-large-transition);
+		}
+
+		&:focus, &:active {
+			background: $slider-thumb-active-color;
+			border: $slider-thumb-active-border;
+			height: $slider-thumb-active-size;
+			width: $slider-thumb-active-size;
+			margin: $slider-thumb-active-margin;
+		}
 	}
 
 	&::-moz-range-thumb, ::-ms-thumb  {
 		background: $white;
 		@include border-radius(50%);
-		height: remCalc(14px);
-		width: remCalc(14px);
-		border: remCalc(2px) solid lighten($black, (100% - 26%));
-		margin-top: - remCalc(7px);
-	}
+		@include transition($slider-thumb-small-transition);
+		height: $slider-thumb-size;
+		width: $slider-thumb-size;
+		border: $slider-thumb-border;
+		margin: $slider-thumb-margin;
 
-	&:focus {
-		background: $main-color;
+		@media #{$medium-up} {
+			@include transition($slider-thumb-medium-transition);
+		}
 
-		&::-webkit-slider-thumb, &::-moz-range-thumb, ::-ms-thumb {
-			-webkit-appearance: none;
-			background: $main-color;
-			border: remCalc(2px) solid $main-color;
+		@media #{$large-up} {
+			@include transition($slider-track-large-transition);
+		}
+
+		&:focus, &:active {
+			background: $slider-thumb-active-color;
+			border: $slider-thumb-active-border;
+			height: $slider-thumb-active-size;
+			width: $slider-thumb-active-size;
+			margin: $slider-thumb-active-margin;
 		}
 	}
 
-	&-disabled {
+	&:disabled, &-disabled {
 		&::-webkit-slider-thumb {
 			-webkit-appearance: none;
-			background: lighten($black, (100% - 26%));
+			background: $slider-track-background-color;
 			@include border-radius(50%);
-			height: remCalc(10px);
-			width: remCalc(10px);
-			border: remCalc(2px) solid lighten($black, (100% - 26%));
-			margin-top: - remCalc(5px);
+			height: $slider-thumb-size;
+			width: $slider-thumb-size;
+			border: $slider-thumb-disabled-border;
+			margin: $slider-thumb-margin;
+		}
+
+		&::-moz-range-thumb, &::-ms-thumb {
+			background: $slider-track-background-color;
+			@include border-radius(50%);
+			height: $slider-thumb-size;
+			width: $slider-thumb-size;
+			border: $slider-thumb-disabled-border;
+			margin: $slider-thumb-margin;
+		}
+
+		&:active, &:focus {
+			&::-webkit-slider-runnable-track {
+				background: none;
+			}
+
+			&::-moz-range-track, ::-ms-track {
+				background: none;
+			}
 		}
 	}
 }
