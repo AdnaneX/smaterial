@@ -64,3 +64,22 @@ function empty( $value ) {
 		return false;
 	}
 }
+
+/**
+ * Return HTML of element as string
+ *
+ * @returns String
+ */
+$.fn.getHTML = function() {
+	var $this = $(this),
+		$outerHTML;
+
+	if( typeof $this.outerHTML !== 'undefined' ) {
+		$outerHTML = $this.outerHTML;
+	} else {
+		$outerHTML = $this.wrap('<div>').parent().html();
+		$this.unwrap();
+	}
+
+	return $outerHTML;
+}

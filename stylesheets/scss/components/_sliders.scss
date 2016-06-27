@@ -4,11 +4,12 @@
  * http://www.google.com/design/spec/components/sliders.html
  **************************************/
 
-input[type="range"].sc-slider {
+input[type="range"] {
 	-webkit-appearance: none;
 	outline: none;
 	height: $slider-track-height;
 	background: $slider-track-background-color;
+	margin: 0;
 
 	&:hover {
 		cursor: pointer;
@@ -33,7 +34,7 @@ input[type="range"].sc-slider {
 		}
 	}
 
-	&::-moz-range-track, ::-ms-track {
+	&::-moz-range-track, &::-ms-track {
 		height: $slider-track-height;
 		@include transition($slider-track-small-transition);
 
@@ -78,7 +79,7 @@ input[type="range"].sc-slider {
 		}
 	}
 
-	&::-moz-range-thumb, ::-ms-thumb  {
+	&::-moz-range-thumb, &::-ms-thumb  {
 		background: $white;
 		@include border-radius(50%);
 		@include transition($slider-thumb-small-transition);
@@ -104,7 +105,7 @@ input[type="range"].sc-slider {
 		}
 	}
 
-	&:disabled, &-disabled {
+	&:disabled {
 		&::-webkit-slider-thumb {
 			-webkit-appearance: none;
 			background: $slider-track-background-color;
@@ -132,6 +133,36 @@ input[type="range"].sc-slider {
 			&::-moz-range-track, ::-ms-track {
 				background: none;
 			}
+		}
+	}
+}
+
+.sc-range {
+	display: inline-block;
+
+	// Hide track
+	input[type="range"] {
+		&::-webkit-slider-runnable-track, &::-moz-range-track, &::-ms-track {
+			webkit-appearance: none;
+			//display: none;
+		}
+	}
+
+	.sc-range-track {
+		width: 100%;
+
+		> div {
+			height: $slider-track-height;
+			width: 50%;
+			display: inline-block;
+		}
+
+		.sc-range-track-before {
+			background: $slider-track-active-background;
+		}
+
+		.sc-range-track-after {
+			background: $slider-track-background-color;
 		}
 	}
 }

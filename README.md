@@ -12,19 +12,21 @@
     - Add variables to settings
     - Add badges
     - Fix mobile styling (in Chrome for Android when scrolling a page the title bar remains visible)
-    - Check all list styles to prevent duplicate styling and therefor load speed
+    - Check duplicate styling and therefor load speed
     - When an item can be triggered by clicking work with JavaScript to set an active class.
     - Use 1 class for all triggers. With the active class make slideup and slidedown action
     - Future add SMaterial CDN package
     - Future add meteor js package
     - Check for "- remCalc(..px)" and "remCalc(-..px)". All should be like the last one
-    - Move global usable classes to _normailize.scss (.sc-no-hover, .sc-active) to name a few
+    - Move global usable classes to _normailize.scss (.sc-no-hover, .sc-active, .sc-disabled) to name a few
     - Add Material Design animations
     - Add templates
     - Complete table of contents
     - Add flexbox support
     - Add mobile, tablet, desktop different transitions (JavaScript)
     - Add screen width detect to js
+    - Fix positions of <header>, <main>, <aside> to be more compatible with for example WordPress (<aside> goes over <header>, <main> slides up under <header>)
+    - Add default styles for various elements (eg. buttons, slider)
 - Appbar
     - Add "more menu" styling
     - Add "more menu" functions
@@ -65,6 +67,9 @@
     - Add radials
     - Align thumb and track center
     - Different style for value 0 and up
+    - Colors should be rgba but creates weird behaviour (like showing track trough thumb)
+    - Add before and after thumb color variation
+    - Add discrete styling
 - Tables
     - Fix styling
     - Add table title

@@ -407,7 +407,7 @@ $sidenav-profile-scrim: to top, rgba($grey-900, 0.4) 15%, rgba($white, 0) 33%; /
  * Sliders
  **************************************/
 // Track
-$slider-track-height: remCalc(2px); // Default remCalc(2px)
+$slider-track-height: remCalc(1.5px); // Default remCalc(2px)
 $slider-track-background-color: rgba($black, .26); // Default rgba($black, .26)
 $slider-track-small-transition: background $transition-small-duration $basic-transition; // Default background $transition-small-duration $basic-transition
 $slider-track-medium-transition: background $transition-medium-duration $basic-transition; // Default background $transition-medium-duration $basic-transition
@@ -422,7 +422,7 @@ $slider-thumb-size: remCalc(14px); // Default remCalc(14px);
 $slider-thumb-border: remCalc(2px) solid $slider-track-background-color; // Default remCalc(2px) solid $slider-background-color
 $slider-thumb-margin: remCalc(-6px) 0 0 0; // Default remCalc(-6px) 0 0 0
 $slider-thumb-active-color: $main-color; // Default $main-color
-$slider-thumb-active-border: remCalc(2px) solid $slider-thumb-active-color; // Default remCalc(2px) solid $slider-thumb-active-color
+$slider-thumb-active-border: $slider-track-height solid $slider-thumb-active-color; // Default remCalc(2px) solid $slider-thumb-active-color
 $slider-thumb-active-size: remCalc(16px); // Default remCalc(16px)
 $slider-thumb-active-margin: remCalc(-7px) 0 0 0; // Default remCalc(-7px) 0 0 0
 $slider-thumb-disabled-border: remCalc(2px) solid $white; // Default remCalc(2px) solid $white
