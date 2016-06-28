@@ -139,22 +139,30 @@ input[type="range"] {
 
 .sc-range {
 	display: inline-block;
-
+	position: relative;
 	// Hide track
 	input[type="range"] {
+		position: initial;
+		z-index: 1;
+		background: transparent;
+
 		&::-webkit-slider-runnable-track, &::-moz-range-track, &::-ms-track {
-			webkit-appearance: none;
-			//display: none;
+			&:focus, &:active {
+				background: transparent;
+			}
 		}
 	}
 
 	.sc-range-track {
+		//margin-top: remCalc(-27px);
 		width: 100%;
+		height: $slider-track-height;
+		position: initial;
+		z-index: 0;
 
 		> div {
-			height: $slider-track-height;
-			width: 50%;
 			display: inline-block;
+			height: 100%;
 		}
 
 		.sc-range-track-before {
@@ -163,6 +171,31 @@ input[type="range"] {
 
 		.sc-range-track-after {
 			background: $slider-track-background-color;
+		}
+	}
+
+	.sc-slider-bubble {
+		@include border-radius(50%);
+		background: $main-color;
+		color: $white;
+		width: $slider-bubble-size;
+		height: $slider-bubble-size;
+		text-align: center;
+		font-size: $slider-bubble-font-size;
+		position: absolute;
+		bottom: $slider-bubble-bottom;
+		margin: $slider-bubble-margin;
+
+		&:before {
+			content: '';
+			width: 0;
+			height: 0;
+			border-left: $slider-bubble-triangle-border;
+			border-right: $slider-bubble-triangle-border;
+			border-top: $slider-bubble-triangle-border-top;
+			top: remCalc(21px);
+			right: remCalc(3.5px);
+			position: absolute;
 		}
 	}
 }

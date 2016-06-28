@@ -63,13 +63,10 @@
     - Fix margin right on left menu for mobile. 56px between screen edge and menu
     - Fix shadow
 - Slider
-    - Fix styling
     - Add radials
-    - Align thumb and track center
     - Different style for value 0 and up
     - Colors should be rgba but creates weird behaviour (like showing track trough thumb)
-    - Add before and after thumb color variation
-    - Add discrete styling
+    - Add animations
 - Tables
     - Fix styling
     - Add table title
