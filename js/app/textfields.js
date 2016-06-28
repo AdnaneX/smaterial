@@ -27,7 +27,7 @@ $(document).ready(function() {
 		}
 	});
 
-	// Fix bug that text filed not gets selected when label is clicked
+	// Fix bug that text field isn't selected when label is clicked
 	$('label').click(function() {
 		var $id = $(this).attr('for');
 		$('#'+$id).trigger('click');
