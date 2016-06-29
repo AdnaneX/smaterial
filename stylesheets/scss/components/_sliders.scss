@@ -4,6 +4,59 @@
  * http://www.google.com/design/spec/components/sliders.html
  **************************************/
 
+// Added classes to extend to prevent duplicate code and is easier to maintain
+.sc-slider-track {
+	height: $slider-track-height;
+	@include transition($slider-track-small-transition);
+
+	@media #{$medium-up} {
+		@include transition($slider-track-medium-transition);
+	}
+
+	@media #{$large-up} {
+		@include transition($slider-track-large-transition);
+	}
+
+	&:focus, &:active {
+		background: $slider-track-active-background;
+	}
+}
+
+.sc-slider-thumb {
+	background: $slider-thumb-background;
+	@include border-radius(50%);
+	@include transition($slider-thumb-small-transition);
+	height: $slider-thumb-size;
+	width: $slider-thumb-size;
+	border: $slider-thumb-border;
+	margin: $slider-thumb-margin;
+
+	@media #{$medium-up} {
+		@include transition($slider-thumb-medium-transition);
+	}
+
+	@media #{$large-up} {
+		@include transition($slider-track-large-transition);
+	}
+
+	&:focus, &:active {
+		background: $slider-thumb-active-color;
+		border: $slider-thumb-active-border;
+		height: $slider-thumb-active-size;
+		width: $slider-thumb-active-size;
+		margin: $slider-thumb-active-margin;
+	}
+}
+
+.sc-slider-disabled-thumb {
+	background: $slider-track-background-color;
+	@include border-radius(50%);
+	height: $slider-thumb-size;
+	width: $slider-thumb-size;
+	border: $slider-thumb-disabled-border;
+	margin: $slider-thumb-margin;
+}
+
 input[type="range"] {
 	-webkit-appearance: none;
 	outline: none;
@@ -18,111 +71,31 @@ input[type="range"] {
 	// Track
 	&::-webkit-slider-runnable-track {
 		-webkit-appearance: none;
-		height: $slider-track-height;
-		@include transition($slider-track-small-transition);
-
-		@media #{$medium-up} {
-			@include transition($slider-track-medium-transition);
-		}
-
-		@media #{$large-up} {
-			@include transition($slider-track-large-transition);
-		}
-
-		&:focus, &:active {
-			background: $slider-track-active-background;
-		}
+		@extend .sc-slider-track;
 	}
 
 	&::-moz-range-track, &::-ms-track {
-		height: $slider-track-height;
-		@include transition($slider-track-small-transition);
-
-		@media #{$medium-up} {
-			@include transition($slider-track-medium-transition);
-		}
-
-		@media #{$large-up} {
-			@include transition($slider-track-large-transition);
-		}
-
-		&:focus, &:active {
-			background: $slider-track-active-background;
-		}
+		@extend .sc-slider-track;
 	}
 
 	// Thumb
 	&::-webkit-slider-thumb {
 		-webkit-appearance: none;
-		background: $white;
-		@include border-radius(50%);
-		@include transition($slider-thumb-small-transition);
-		height: $slider-thumb-size;
-		width: $slider-thumb-size;
-		border: $slider-thumb-border;
-		margin: $slider-thumb-margin;
-
-		@media #{$medium-up} {
-			@include transition($slider-thumb-medium-transition);
-		}
-
-		@media #{$large-up} {
-			@include transition($slider-track-large-transition);
-		}
-
-		&:focus, &:active {
-			background: $slider-thumb-active-color;
-			border: $slider-thumb-active-border;
-			height: $slider-thumb-active-size;
-			width: $slider-thumb-active-size;
-			margin: $slider-thumb-active-margin;
-		}
+		@extend .sc-slider-thumb;
 	}
 
 	&::-moz-range-thumb, &::-ms-thumb  {
-		background: $white;
-		@include border-radius(50%);
-		@include transition($slider-thumb-small-transition);
-		height: $slider-thumb-size;
-		width: $slider-thumb-size;
-		border: $slider-thumb-border;
-		margin: $slider-thumb-margin;
-
-		@media #{$medium-up} {
-			@include transition($slider-thumb-medium-transition);
-		}
-
-		@media #{$large-up} {
-			@include transition($slider-track-large-transition);
-		}
-
-		&:focus, &:active {
-			background: $slider-thumb-active-color;
-			border: $slider-thumb-active-border;
-			height: $slider-thumb-active-size;
-			width: $slider-thumb-active-size;
-			margin: $slider-thumb-active-margin;
-		}
+		@extend .sc-slider-thumb;
 	}
 
-	&:disabled {
+	&:disabled, &.sc-disabled {
 		&::-webkit-slider-thumb {
 			-webkit-appearance: none;
-			background: $slider-track-background-color;
-			@include border-radius(50%);
-			height: $slider-thumb-size;
-			width: $slider-thumb-size;
-			border: $slider-thumb-disabled-border;
-			margin: $slider-thumb-margin;
+			@extend .sc-slider-disabled-thumb;
 		}
 
 		&::-moz-range-thumb, &::-ms-thumb {
-			background: $slider-track-background-color;
-			@include border-radius(50%);
-			height: $slider-thumb-size;
-			width: $slider-thumb-size;
-			border: $slider-thumb-disabled-border;
-			margin: $slider-thumb-margin;
+			@extend .sc-slider-disabled-thumb;
 		}
 
 		&:active, &:focus {
@@ -142,23 +115,64 @@ input[type="range"] {
 	position: relative;
 	// Hide track
 	input[type="range"] {
-		position: initial;
-		z-index: 1;
+		position: relative;
+		z-index: 3;
 		background: transparent;
 
-		&::-webkit-slider-runnable-track, &::-moz-range-track, &::-ms-track {
+		// Track
+		&::-webkit-slider-runnable-track {
 			&:focus, &:active {
 				background: transparent;
 			}
 		}
+
+		&::-moz-range-track, &::-ms-track {
+			&:focus, &:active {
+				background: transparent;
+			}
+		}
+
+		&.sc-slider-discrete {
+			// Thumb
+			&::-webkit-slider-thumb {
+				background: $slider-thumb-hidden-color;
+				border: $slider-thumb-hidden-border;
+			}
+
+			&::-moz-range-thumb, &::-ms-thumb {
+				background: $slider-thumb-hidden-color;
+				border: $slider-thumb-hidden-border;
+			}
+		}
+
+		// When thumb over 0%
+		//&.sc-active {
+		//	&::-webkit-slider-thumb {
+		//		@include border-radius(50%);
+		//		background: $slider-thumb-active-color;
+		//		border: $slider-thumb-active-border;
+		//		height: $slider-thumb-active-size;
+		//		width: $slider-thumb-active-size;
+		//		margin: $slider-thumb-active-margin;
+		//	}
+		//
+		//	&::-moz-range-thumb, &::-ms-thumb {
+		//		@include border-radius(50%);
+		//		background: $slider-thumb-active-color;
+		//		border: $slider-thumb-active-border;
+		//		height: $slider-thumb-active-size;
+		//		width: $slider-thumb-active-size;
+		//		margin: $slider-thumb-active-margin;
+		//	}
+		//}/
 	}
 
 	.sc-range-track {
-		//margin-top: remCalc(-27px);
+		margin-top: remCalc(-27px);
 		width: 100%;
 		height: $slider-track-height;
-		position: initial;
-		z-index: 0;
+		position: relative;
+		z-index: 1;
 
 		> div {
 			display: inline-block;
@@ -174,28 +188,76 @@ input[type="range"] {
 		}
 	}
 
+	&:active, &:focus {
+		.sc-slider-bubble {
+			@include border-radius(50%);
+			background: $main-color;
+			color: $white;
+			width: $slider-bubble-active-size;
+			height: $slider-bubble-active-size;
+			text-align: center;
+			border: none;
+			font-size: $slider-bubble-active-font-size;
+			bottom: $slider-bubble-active-bottom;
+			margin: $slider-bubble-active-margin;
+
+			&:before {
+				border-left: $slider-bubble-active-triangle-border;
+				border-right: $slider-bubble-active-triangle-border;
+				border-top: $slider-bubble-active-triangle-border-top;
+				top: $slider-bubble-active-triangle-top;
+				right: $slider-bubble-active-triangle-right;
+			}
+		}
+	}
+
+	//&:disabled, &.sc-disabled {
+	//	.sc-range-track-before {
+	//		background: $slider-track-background-color;
+	//	}
+	//}
+
 	.sc-slider-bubble {
 		@include border-radius(50%);
-		background: $main-color;
-		color: $white;
-		width: $slider-bubble-size;
-		height: $slider-bubble-size;
-		text-align: center;
-		font-size: $slider-bubble-font-size;
-		position: absolute;
+		@include transition($slider-bubble-small-transition);
+		background: $slider-bubble-background;
+		color: $slider-bubble-font-color;
+		width: $slider-thumb-size;
+		height: $slider-thumb-size;
+		border: $slider-thumb-border;
+		font-size: 0;
+		position: $slider-bubble-position;
 		bottom: $slider-bubble-bottom;
 		margin: $slider-bubble-margin;
+		z-index: 2;
+
+		@media #{$medium-only} {
+			@include transition($slider-bubble-medium-transition);
+		}
+
+		@media #{$large-up} {
+			@include transition($slider-bubble-large-transition);
+		}
 
 		&:before {
+			@include transition($slider-bubble-triangle-small-transition);
 			content: '';
 			width: 0;
 			height: 0;
-			border-left: $slider-bubble-triangle-border;
-			border-right: $slider-bubble-triangle-border;
-			border-top: $slider-bubble-triangle-border-top;
-			top: remCalc(21px);
-			right: remCalc(3.5px);
-			position: absolute;
+			border-left: none;
+			border-right: none;
+			border-top: none;
+			top: 0;
+			right: 0;
+			position: $slider-bubble-position;
+
+			@media #{$medium-only} {
+				@include transition($slider-bubble-triangle-medium-transition);
+			}
+
+			@media #{$large-up} {
+				@include transition($slider-bubble-triangle-large-transition);
+			}
 		}
 	}
 }

@@ -213,7 +213,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		You can use the media queries like the following example: <code class="language-css">@media #{$medium-up}</code>.
 	</p>
 
-	<ul class="sc-col sc-s12 sc-m6">
+	<ul class="sc-col sc-s12 sc-m6 sc-offset-m6">
 		<li>$xsmall-only</li>
 		<li>$small-only</li>
 		<li>$medium-only</li>
@@ -236,6 +236,10 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 
 <section class="sc-row">
 	<h3>Grid settings</h3>
+
+	<p class="sc-col sc-xs4 sc-m6">
+		<strong>Note</strong> when changing the screen size you can / should change <code>grid.js</code> as well.
+	</p>
 
 	<table>
 		<thead>

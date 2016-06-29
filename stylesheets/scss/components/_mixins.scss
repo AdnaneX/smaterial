@@ -1,4 +1,4 @@
-@mixin box-shadow($settings) {
+@mixin box-shadow( $settings ) {
 	-moz-box-shadow: $settings;
 	-webkit-box-shadow: $settings;
 	-ms-box-shadow: $settings;
@@ -6,7 +6,7 @@
 	box-shadow: $settings;
 }
 
-@mixin border-radius($radius) {
+@mixin border-radius( $radius ) {
 	-webkit-border-radius: $radius;
 	-moz-border-radius: $radius;
 	-ms-border-radius: $radius;
@@ -14,7 +14,7 @@
 	border-radius: $radius;
 }
 
-@mixin box-sizing($settings) {
+@mixin box-sizing( $settings ) {
 	-webkit-box-sizing: $settings;
 	-moz-box-sizing: $settings;
 	-ms-box-sizing: $settings;
@@ -22,19 +22,19 @@
 	box-sizing: $settings;
 }
 
-@mixin material-shadow($dp) {
-	$ambientY : $dp + unquote('px');
-	$ambientBlur: if($dp == 1, 3, $dp * 2) + unquote('px');
-	$ambientAlpha : ($dp + 10 + ($dp / 9.38)) / 100;
+@mixin material-shadow( $dp) {
+	$ambientY : $dp + unquote( 'px' );
+	$ambientBlur: if( $dp == 1, 3, $dp * 2 ) + unquote( 'px' );
+	$ambientAlpha : ( $dp + 10 + ( $dp / 9.38 ) ) / 100;
 
-	$directY: if($dp < 10, if($dp % 2 == 0, $dp - (($dp / 2) - 1), ($dp - (($dp - 1) / 2))), $dp - 4) + unquote('px');
-	$directBlur: if($dp == 1, 3, $dp * 2) + unquote('px');
-	$directAlpha: (24 - decimal-round($dp / 10)) / 100;
+	$directY: if( $dp < 10, if( $dp % 2 == 0, $dp - ( ( $dp / 2 ) - 1 ), ( $dp - ( ( $dp - 1 ) / 2 ) ) ), $dp - 4 ) + unquote( 'px' );
+	$directBlur: if( $dp == 1, 3, $dp * 2 ) + unquote( 'px' );
+	$directAlpha: ( 24 - decimal-round( $dp / 10 ) ) / 100;
 
-	@include box-shadow(0 $ambientY $ambientBlur 0 rgba(0, 0, 0, $ambientAlpha) unquote(',') 0 $directY $directBlur 0 rgba(0, 0, 0, $directAlpha));
+	@include box-shadow( 0 $ambientY $ambientBlur 0 rgba(0, 0, 0, $ambientAlpha) unquote(',') 0 $directY $directBlur 0 rgba(0, 0, 0, $directAlpha) );
 }
 
-@mixin transition($settings) {
+@mixin transition( $settings ) {
 	-webkit-transition: $settings;
 	-moz-transition: $settings;
 	-ms-transition: $settings;
@@ -42,7 +42,7 @@
 	transition: $settings;
 }
 
-@mixin transform($settings) {
+@mixin transform( $settings ) {
 	-webkit-transform: $settings;
 	-moz-transform: $settings;
 	-ms-transform: $settings;
@@ -50,7 +50,7 @@
 	transform: $settings;
 }
 
-@mixin animation($settings) {
+@mixin animation( $settings ) {
 	-webkit-animation: $settings;
 	-moz-animation: $settings;
 	-ms-animation: $settings;
@@ -58,16 +58,12 @@
 	animation: $settings;
 }
 
-@mixin keyframes($name) {
+@mixin keyframes( $name ) {
 	@-webkit-keyframes #{$name} {
 		@content;
 	}
 
 	@-moz-keyframes #{$name} {
-		@content;
-	}
-
-	@-ms-keyframes #{$name} {
 		@content;
 	}
 
@@ -80,7 +76,7 @@
 	}
 }
 
-@mixin border-radius-top($px) {
+@mixin border-radius-top( $px ) {
 	-webkit-border-top-left-radius: $px;
 	-webkit-border-top-right-radius: $px;
 	-moz-border-radius-topleft: $px;
@@ -89,7 +85,7 @@
 	border-top-right-radius: $px;
 }
 
-@mixin border-radius-bottom($px) {
+@mixin border-radius-bottom( $px ) {
 	-webkit-border-bottom-left-radius: $px;
 	-webkit-border-bottom-right-radius: $px;
 	-moz-border-radius-bottomleft: $px;
@@ -98,7 +94,7 @@
 	border-bottom-right-radius: $px;
 }
 
-@mixin opacity($settings) {
+@mixin opacity( $settings ) {
 	-webkit-opacity: $settings;
 	-moz-opacity: $settings;
 	-ms-opacity: $settings;
@@ -106,7 +102,7 @@
 	opacity: $settings;
 }
 
-@mixin mask($settings) {
+@mixin mask( $settings ) {
 	-webkit-mask: $settings;
 	-moz-mask: $settings;
 	-ms-mask: $settings;
@@ -114,36 +110,36 @@
 }
 
 // Typography
-@mixin font-size($fontSize: $font-size-initial) {
+@mixin font-size( $fontSize: $font-size-initial ) {
 	font-size: $fontSize+0px;
-	font-size: ($fontSize/10)+0rem;
+	font-size: ( $fontSize/10 )+0rem;
 }
-@mixin line-height($leadingSize: $font-size-initial) {
+@mixin line-height( $leadingSize: $font-size-initial ) {
 	line-height: $leadingSize+0px;
-	line-height: ($leadingSize/10)+0rem;
+	line-height: ( $leadingSize/10 )+0rem;
 }
-@mixin letter-spacing($kerningSize: 0) {
+@mixin letter-spacing( $kerningSize: 0 ) {
 	letter-spacing: $kerningSize+0px;
-	letter-spacing: ($kerningSize/10)+0rem;
+	letter-spacing: ( $kerningSize/10 )+0rem;
 }
-@mixin font($fontSize, $leadingSize, $kerningSize) {
+@mixin font( $fontSize, $leadingSize, $kerningSize ) {
 	font-size: $fontSize+0px;
-	font-size: ($fontSize/10)+0rem;
+	font-size: ( $fontSize/10 )+0rem;
 	line-height: $leadingSize+0px;
-	line-height: ($leadingSize/10)+0rem;
+	line-height: ( $leadingSize/10 )+0rem;
 	letter-spacing: $kerningSize+0px;
-	letter-spacing: ($kerningSize/10)+0rem;
+	letter-spacing: ( $kerningSize/10 )+0rem;
 }
 
 // Waves
-@mixin waves-transition($transition) {
+@mixin waves-transition( $transition ) {
 	-webkit-transition: $transition;
 	-moz-transition: $transition;
 	-o-transition: $transition;
 	transition: $transition;
 }
 
-@mixin waves-transform($string) {
+@mixin waves-transform( $string ) {
 	-webkit-transform: $string;
 	-moz-transform: $string;
 	-ms-transform: $string;
@@ -151,7 +147,14 @@
 	transform: $string;
 }
 
-@mixin waves-box-shadow($shadow) {
+@mixin waves-box-shadow( $shadow ) {
 	-webkit-box-shadow: $shadow;
 	box-shadow: $shadow;
+}
+
+@mixin transition-delay( $setting ) {
+	-webkit-transition-delay: $setting;
+	-moz-transition-delay: $setting;
+	-ms-transition-delay: $setting;
+	transition-delay: $setting;
 }

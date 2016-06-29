@@ -209,6 +209,7 @@ body {
 	font-family: 'Roboto', sans-serif, 'Helvetica Neue', Helvetica, Arial;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
+	direction: ltr;
 
 	h1 {
 		@extend .sc-display-3;

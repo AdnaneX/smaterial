@@ -66,7 +66,7 @@
     - Add radials
     - Different style for value 0 and up
     - Colors should be rgba but creates weird behaviour (like showing track trough thumb)
-    - Add animations
+    - Fix click bug at end of range slider
 - Tables
     - Fix styling
     - Add table title

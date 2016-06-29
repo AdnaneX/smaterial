@@ -415,25 +415,80 @@ $slider-track-large-transition: background $transition-large-duration $basic-tra
 $slider-track-active-background: $main-color; // Default $main-color
 
 // Thumb
-$slider-thumb-small-transition: background $transition-small-duration $basic-transition unquote(',') border $transition-small-duration $basic-transition unquote(',') height $transition-small-duration $basic-transition unquote(',') width $transition-small-duration $basic-transition unquote(',') margin $transition-small-duration $basic-transition; // Default background $transition-small-duration $basic-transition unquote(',') border $transition-small-duration $basic-transition unquote(',') height $transition-small-duration $basic-transition unquote(',') width $transition-small-duration $basic-transition unquote(',') margin $transition-small-duration $basic-transition
-$slider-thumb-medium-transition: background $transition-medium-duration $basic-transition unquote(',') border $transition-medium-duration $basic-transition unquote(',') height $transition-medium-duration $basic-transition unquote(',') width $transition-medium-duration $basic-transition unquote(',') margin $transition-medium-duration $basic-transition; // Default background $transition-medium-duration $basic-transition unquote(',') border $transition-medium-duration $basic-transition unquote(',') height $transition-medium-duration $basic-transition unquote(',') width $transition-medium-duration $basic-transition unquote(',') margin $transition-medium-duration $basic-transition
-$slider-thumb-large-transition: background $transition-large-duration $basic-transition unquote(',') border $transition-large-duration $basic-transition unquote(',') height $transition-large-duration $basic-transition unquote(',') width $transition-large-duration $basic-transition unquote(',') margin $transition-large-duration $basic-transition; // Default background $transition-large-duration $basic-transition unquote(',') border $transition-large-duration $basic-transition unquote(',') height $transition-large-duration $basic-transition unquote(',') width $transition-large-duration $basic-transition unquote(',') margin $transition-large-duration $basic-transition
+$slider-thumb-small-transition: background $transition-small-duration $basic-transition unquote(',')
+								border $transition-small-duration $basic-transition unquote(',')
+								height $transition-small-duration $basic-transition unquote(',')
+								width $transition-small-duration $basic-transition unquote(',')
+								margin $transition-small-duration $basic-transition; // Default background $transition-small-duration $basic-transition unquote(',') border $transition-small-duration $basic-transition unquote(',') height $transition-small-duration $basic-transition unquote(',') width $transition-small-duration $basic-transition unquote(',') margin $transition-small-duration $basic-transition
+$slider-thumb-medium-transition: 	background $transition-medium-duration $basic-transition unquote(',')
+									border $transition-medium-duration $basic-transition unquote(',')
+									height $transition-medium-duration $basic-transition unquote(',')
+									width $transition-medium-duration $basic-transition unquote(',')
+									margin $transition-medium-duration $basic-transition; // Default background $transition-medium-duration $basic-transition unquote(',') border $transition-medium-duration $basic-transition unquote(',') height $transition-medium-duration $basic-transition unquote(',') width $transition-medium-duration $basic-transition unquote(',') margin $transition-medium-duration $basic-transition
+$slider-thumb-large-transition: background $transition-large-duration $basic-transition unquote(',')
+								border $transition-large-duration $basic-transition unquote(',')
+								height $transition-large-duration $basic-transition unquote(',')
+								width $transition-large-duration $basic-transition unquote(',')
+								margin $transition-large-duration $basic-transition; // Default background $transition-large-duration $basic-transition unquote(',') border $transition-large-duration $basic-transition unquote(',') height $transition-large-duration $basic-transition unquote(',') width $transition-large-duration $basic-transition unquote(',') margin $transition-large-duration $basic-transition
+$slider-thumb-background: $white;
 $slider-thumb-size: remCalc(14px); // Default remCalc(14px);
 $slider-thumb-border: remCalc(2px) solid $slider-track-background-color; // Default remCalc(2px) solid $slider-background-color
 $slider-thumb-margin: remCalc(-6px) 0 0 0; // Default remCalc(-6px) 0 0 0
 $slider-thumb-active-color: $main-color; // Default $main-color
-$slider-thumb-active-border: $slider-track-height solid $slider-thumb-active-color; // Default remCalc(2px) solid $slider-thumb-active-color
+$slider-thumb-active-border: remCalc(2px) solid $slider-thumb-active-color; // Default remCalc(2px) solid $slider-thumb-active-color
 $slider-thumb-active-size: remCalc(16px); // Default remCalc(16px)
 $slider-thumb-active-margin: remCalc(-7px) 0 0 0; // Default remCalc(-7px) 0 0 0
 $slider-thumb-disabled-border: remCalc(2px) solid $white; // Default remCalc(2px) solid $white
 
 // Bubble
-$slider-bubble-size: remCalc(25px); // Default remCalc(25px)
-$slider-bubble-margin: 0 0 0 $slider-bubble-size/2+0rem; // Default 0 0 0 $slider-bubble-size/2+0rem
-$slider-bubble-bottom: remCalc(14px); // Default remCalc(14px)
-$slider-bubble-font-size: remCalc(10.5px); // Default remCalc(10.5)
-$slider-bubble-triangle-border: remCalc(10px) solid transparent; // Default remCalc(10px) solid transparent
-$slider-bubble-triangle-border-top: remCalc(10px) solid $main-color; // Default
+$slider-bubble-active-size: remCalc(25px); // Default remCalc(25px)
+$slider-bubble-active-margin: 0 0 0 remCalc(-12.5px); // Default 0 0 0 $remCalc(-12.5px) // Value after - should be half of size
+$slider-bubble-active-bottom: remCalc(1.4px); // Default remCalc(1.4px)
+$slider-bubble-active-font-size: remCalc(10.5px); // Default remCalc(10.5)
+$slider-bubble-active-triangle-border: remCalc(10px) solid transparent; // Default remCalc(10px) solid transparent
+$slider-bubble-active-triangle-border-top: remCalc(10px) solid $main-color; // Default remCalc(10px) solid $main-color
+$slider-bubble-active-triangle-top: remCalc(21px); // Default remCalc(21px)
+$slider-bubble-active-triangle-right: remCalc(3.5px); // Default remCalc(3.5px)
+
+$slider-bubble-background: $slider-thumb-background; // Default $slider-thumb-background
+$slider-bubble-font-color: $white; // Default $white
+$slider-bubble-position: absolute; // Default absolute
+$slider-bubble-bottom: -#{$slider-bubble-active-size}; // Default -#{$slider-bubble-active-size}
+$slider-bubble-margin: 0; // Default 0 0 0 calc(#{-$slider-thumb-size}/2)
+$slider-bubble-small-transition: 	background $transition-small-duration $basic-transition unquote(',')
+									width $transition-small-duration $basic-transition unquote(',')
+									height $transition-small-duration $basic-transition unquote(',')
+									border $transition-small-duration $basic-transition unquote(',')
+									bottom $transition-small-duration $basic-transition unquote(',')
+									margin $transition-small-duration $basic-transition unquote(',');
+$slider-bubble-medium-transition:	background $transition-medium-duration $basic-transition unquote(',')
+									width $transition-medium-duration $basic-transition unquote(',')
+									height $transition-medium-duration $basic-transition unquote(',')
+									border $transition-medium-duration $basic-transition unquote(',')
+									bottom $transition-medium-duration $basic-transition unquote(',')
+									margin $transition-medium-duration $basic-transition unquote(',');
+$slider-bubble-large-transition:	background $transition-large-duration $basic-transition unquote(',')
+									width $transition-large-duration $basic-transition unquote(',')
+									height $transition-large-duration $basic-transition unquote(',')
+									border $transition-large-duration $basic-transition unquote(',')
+									bottom $transition-large-duration $basic-transition unquote(',')
+									margin $transition-large-duration $basic-transition unquote(',');
+
+$slider-bubble-triangle-small-transition: 	border-left $transition-small-duration $basic-transition unquote(',')
+											border-right $transition-small-duration $basic-transition unquote(',')
+											border-top $transition-small-duration $basic-transition unquote(',')
+											top $transition-small-duration $basic-transition unquote(',');
+$slider-bubble-triangle-medium-transition: 	border-left $transition-medium-duration $basic-transition unquote(',')
+											border-right $transition-medium-duration $basic-transition unquote(',')
+											border-top $transition-medium-duration $basic-transition unquote(',')
+											top $transition-medium-duration $basic-transition unquote(',');
+$slider-bubble-triangle-large-transition: 	border-left $transition-large-duration $basic-transition unquote(',')
+											border-right $transition-large-duration $basic-transition unquote(',')
+											border-top $transition-large-duration $basic-transition unquote(',')
+											top $transition-large-duration $basic-transition unquote(',');
+
+$slider-thumb-hidden-color: transparent; // Default transparent
+$slider-thumb-hidden-border: remCalc(2px) solid transparent;
 
 /**************************************
  * Textfields

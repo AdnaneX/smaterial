@@ -23,7 +23,5 @@ $(document).ready(function() {
 	});
 
 	// Search trigger functions
-	$('.sc-search-trigger').click(function() {
-		$('.sc-')
-	});
+
 });

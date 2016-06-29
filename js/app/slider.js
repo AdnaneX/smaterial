@@ -28,12 +28,24 @@ $(document).ready(function() {
 		$before.css('width', $percentage+'%');
 		$after.css('width', (100 - $percentage)+'%');
 
+		// If range slider is discrete add value in bubble
 		if( $this.hasClass('sc-slider-discrete') ) {
 			var $bubble = $this.parent('div').find('.sc-slider-bubble');
 			// Set value in bubble
 			$bubble.text($this.val());
 			$bubble.css('left', $percentage+'%');
 		}
+
+		// If thumb is over 0%
+		if( $percentage > 0 ) {
+			$this.addClass('sc-active');
+		} else {
+			$this.removeClass('sc-active');
+		}
 	});
 	$range.trigger('input');
+//
+// 	$('body').click(function(e) {
+// 		console.log(e.target);
+// 	});
 });

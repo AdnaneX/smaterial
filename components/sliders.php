@@ -18,7 +18,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		<input type="range">
 		<input type="range" disabled>
 		<input type="range" class="sc-slider">
-		<input type="range" class="sc-slider sc-disabled">
+		<input type="range" disabled class="sc-slider sc-disabled">
 		<input type="range" min="0" max="200" class="sc-slider sc-slider-discrete">
 	</p>
 
