@@ -63,7 +63,7 @@ body {
 		}
 
 		@media #{$medium-up} {
-			left: $sidenav-width;
+			left: $drawer-width;
 			top: remCalc(64px);
 		}
 	}

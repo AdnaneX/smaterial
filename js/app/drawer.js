@@ -1,7 +1,7 @@
 $(document).ready(function() {
-	var $sidenav = $('#sc-sidenav');
+	var $drawer = $('#sc-drawer');
 
-	$sidenav.find('li.sc-sidenav-dropdown').each(function() {
+	$drawer.find('li.sc-drawer-dropdown').each(function() {
 		var $this = $(this),
 			$ul = $this.find('ul'),
 			$arrow = $this.find('.material-icons');
@@ -36,5 +36,5 @@ $(document).ready(function() {
 		$('#' + $trigger).slideHorizontal('cubic-bezier(0.4, 0.0, 0.2, 1)', 300);
 	});
 
-	$sidenav.find('.sc-active').closest('ul').show();
+	$drawer.find('.sc-active').closest('ul').show();
 });

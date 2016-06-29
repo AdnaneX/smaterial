@@ -344,64 +344,64 @@ $snackbar-action-small-margin-left: remCalc(24px); // Default remCalc(24px)
 $snackbar-action-large-margin-left: remCalc(48px); // Default remCalc(48px)
 
 /**************************************
- * Sidenav
+ * Navigation drawer
  **************************************/
-$sidenav-position: fixed; // Default fixed
-$sidenav-overflow: auto; // Default auto
-$sidenav-background: $white; // Default $white
-$sidenav-padding: remCalc(16px) 0; // Default remCalc(16px) 0
-$sidenav-hover: $main-color; // Default $main-color
-$sidenav-width: remCalc(320px); // Default remCalc(320px)
-$sidenav-max-width: remCalc(400px); // Default remCalc(400px)
-$sidenav-small-width: remCalc(320px); // Default remCalc(320px)
-$sidenav-small-max-width: remCalc(320px); // Default remCalc(320px)
-$sidenav-small-margin-right: remCalc(56px); // Default remCalc(56px)
-$sidenav-sub-list-margin: 0 0 0 remCalc(10px); // Default 0 0 0 remCalc(10px)
-$sidenav-icons-font-size: remCalc(22.4px); // Default remCalc(22.4px)
-$sidenav-icons-size: remCalc(48px); // Default remCalc(48px) Should be the same as default list item height
-$sidenav-icons-color: lighten($black, (100% - 54%)); // Default lighten($black, (100% - 54%))
+$drawer-position: fixed; // Default fixed
+$drawer-overflow: auto; // Default auto
+$drawer-background: $white; // Default $white
+$drawer-padding: remCalc(16px) 0; // Default remCalc(16px) 0
+$drawer-hover: $main-color; // Default $main-color
+$drawer-width: remCalc(320px); // Default remCalc(320px)
+$drawer-max-width: remCalc(400px); // Default remCalc(400px)
+$drawer-small-width: remCalc(320px); // Default remCalc(320px)
+$drawer-small-max-width: remCalc(320px); // Default remCalc(320px)
+$drawer-small-margin-right: remCalc(56px); // Default remCalc(56px)
+$drawer-sub-list-margin: 0 0 0 remCalc(10px); // Default 0 0 0 remCalc(10px)
+$drawer-icons-font-size: remCalc(22.4px); // Default remCalc(22.4px)
+$drawer-icons-size: remCalc(48px); // Default remCalc(48px) Should be the same as default list item height
+$drawer-icons-color: lighten($black, (100% - 54%)); // Default lighten($black, (100% - 54%))
 
-$sidenav-full-small-top: $appbar-small-height; // Default $appbar-small-height
-$sidenav-full-medium-top: $appbar-medium-height; // Default $appbar-medium-height
-$sidenav-full-large-top: 0; // Default 0
-$sidenav-full-title-height: remCalc(64px); // Default remCalc(64px)
-$sidenav-full-title-size: remCalc(24px); // Default remCalc(24px)
-$sidenav-full-title-margin: remCalc(-16px) 0 0 0; // Default remCalc(-16px) 0 0 0
-$sidenav-full-title-background: $main-color !important; // Default $main-color
-$sidenav-full-title-color: $white; // Default $white
-$sidenav-full-profile-medium-margin: - remCalc(16px) 0 remCalc(8px) 0 !important; // Default - remCalc(16px) 0 remCalc(8px) 0 !important
-$sidenav-full-profile-large-margin: 0 0 remCalc(8px) 0 !important; // Default 0 0 remCalc(8px) 0 !important
+$drawer-full-small-top: $appbar-small-height; // Default $appbar-small-height
+$drawer-full-medium-top: $appbar-medium-height; // Default $appbar-medium-height
+$drawer-full-large-top: 0; // Default 0
+$drawer-full-title-height: remCalc(64px); // Default remCalc(64px)
+$drawer-full-title-size: remCalc(24px); // Default remCalc(24px)
+$drawer-full-title-margin: remCalc(-16px) 0 0 0; // Default remCalc(-16px) 0 0 0
+$drawer-full-title-background: $main-color !important; // Default $main-color
+$drawer-full-title-color: $white; // Default $white
+$drawer-full-profile-medium-margin: - remCalc(16px) 0 remCalc(8px) 0 !important; // Default - remCalc(16px) 0 remCalc(8px) 0 !important
+$drawer-full-profile-large-margin: 0 0 remCalc(8px) 0 !important; // Default 0 0 remCalc(8px) 0 !important
 
-$sidenav-floating-small-top: $appbar-small-height; // Default $appbar-small-height
-$sidenav-floating-medium-top: remCalc(56px); // Default remCalc(56px)
-$sidenav-floating-large-top: remCalc(64px); // Default remCalc(64px)
-$sidenav-floating-z-index: 3; // Default 3
+$drawer-floating-small-top: $appbar-small-height; // Default $appbar-small-height
+$drawer-floating-medium-top: remCalc(56px); // Default remCalc(56px)
+$drawer-floating-large-top: remCalc(64px); // Default remCalc(64px)
+$drawer-floating-z-index: 3; // Default 3
 
-$sidenav-right-max-width: 100%; // Default 100%
-$sidenav-right-small-top: $appbar-small-height; // Default $appbar-small-height
-$sidenav-right-medium-top: $appbar-medium-height; // Default $appbar-medium-height
-$sidenav-right-large-top: $appbar-large-height; // Default $appbar-large-height
+$drawer-right-max-width: 100%; // Default 100%
+$drawer-right-small-top: $appbar-small-height; // Default $appbar-small-height
+$drawer-right-medium-top: $appbar-medium-height; // Default $appbar-medium-height
+$drawer-right-large-top: $appbar-large-height; // Default $appbar-large-height
 
-$sidenav-divider-margin: remCalc(8px) 0; // Default remCalc(8px) 0
-$sidenav-divider-height: remCalc(1px); // Default remCalc(1px)
-$sidenav-divider-background: lighten($black, (100% - 12%)); // Default lighten($black, (100% - 12%))
+$drawer-divider-margin: remCalc(8px) 0; // Default remCalc(8px) 0
+$drawer-divider-height: remCalc(1px); // Default remCalc(1px)
+$drawer-divider-background: lighten($black, (100% - 12%)); // Default lighten($black, (100% - 12%))
 
-$sidenav-subheader-color: lighten($black, (100% - 54%)); // Default
+$drawer-subheader-color: lighten($black, (100% - 54%)); // Default
 
-$sidenav-profile-background: url('/images/drawer-background.jpg') no-repeat center;
+$drawer-profile-background: url('/images/drawer-background.jpg') no-repeat center;
 
-$sidenav-font-weight: 500; // Default 500
-$sidenav-hover-background: $grey-200;
+$drawer-font-weight: 500; // Default 500
+$drawer-hover-background: $grey-200;
 
-$sidenav-profile-margin: remCalc(-16px) 0 remCalc(8px) 0; // Default remCalc(-16px) 0 remCalc(8px) 0
-$sidenav-profile-padding: remCalc(16px) remCalc(16px) remCalc(8px) remCalc(16px); // Default remCalc(16px) remCalc(16px) remCalc(8px) remCalc(16px)
-$sidenav-profile-img-size: remCalc(50px); // Default remCalc(50px)
-$sidenav-profile-img-margin: 0 0 remCalc(5px) 0;
-$sidenav-profile-info-total-height: remCalc(56px); // Default remCalc(56px)
-$sidenav-profile-info-height: $sidenav-profile-info-total-height / 2;
-$sidenav-profile-info-font-color: $white; // Default $white
-$sidenav-profile-info-font-size: remCalc(14px); // Default remCalc(14px)
-$sidenav-profile-scrim: to top, rgba($grey-900, 0.4) 15%, rgba($white, 0) 33%; // Default to top, rgba($grey-900, 0.4) 15%, rgba($white, 0) 33%
+$drawer-profile-margin: remCalc(-16px) 0 remCalc(8px) 0; // Default remCalc(-16px) 0 remCalc(8px) 0
+$drawer-profile-padding: remCalc(16px) remCalc(16px) remCalc(8px) remCalc(16px); // Default remCalc(16px) remCalc(16px) remCalc(8px) remCalc(16px)
+$drawer-profile-img-size: remCalc(50px); // Default remCalc(50px)
+$drawer-profile-img-margin: 0 0 remCalc(5px) 0;
+$drawer-profile-info-total-height: remCalc(56px); // Default remCalc(56px)
+$drawer-profile-info-height: $drawer-profile-info-total-height / 2;
+$drawer-profile-info-font-color: $white; // Default $white
+$drawer-profile-info-font-size: remCalc(14px); // Default remCalc(14px)
+$drawer-profile-scrim: to top, rgba($grey-900, 0.4) 15%, rgba($white, 0) 33%; // Default to top, rgba($grey-900, 0.4) 15%, rgba($white, 0) 33%
 
 /**************************************
  * Sliders

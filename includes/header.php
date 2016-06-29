@@ -30,7 +30,7 @@ $file = str_replace( '.php', '', $_SERVER['PHP_SELF'] );
 	<body>
 		<header class="sc-appbar">
 			<div class="sc-appbar-nav">
-				<a href="#" id="sc-nav-button" data-sc-trigger="sc-sidenav"><i class="material-icons sc-ripple">menu</i></a>
+				<a href="#" id="sc-nav-button" data-sc-trigger="sc-drawer"><i class="material-icons sc-ripple">menu</i></a>
 			</div>
 
 			<div class="sc-appbar-title">
@@ -69,31 +69,31 @@ $file = str_replace( '.php', '', $_SERVER['PHP_SELF'] );
 		}
 		?>
 
-		<aside id="sc-sidenav" class="sc-sidenav sc-sidenav-left sc-sidenav-left-floating">
+		<aside id="sc-drawer" class="sc-drawer sc-drawer-left sc-drawer-left-floating">
 			<nav>
 				<ul>
-					<li class="sc-sidenav-profile">
-						<figure class="sc-sidenav-profile-img">
+					<li class="sc-drawer-profile">
+						<figure class="sc-drawer-profile-img">
 							<img alt="SMaterial thumbnail" src="/images/SMaterial-icon.jpg">
 						</figure>
 
-						<div class="sc-sidenav-profile-info">
-							<div class="sc-sidenav-profile-name">
+						<div class="sc-drawer-profile-info">
+							<div class="sc-drawer-profile-name">
 								John Doe
 							</div>
 
-							<div class="sc-sidenav-profile-email">
+							<div class="sc-drawer-profile-email">
 								johndoe&#64;gmail.com
 							</div>
 						</div>
 
-						<div class="sc-sidenav-profile-button">
+						<div class="sc-drawer-profile-button">
 							<a href="#"><i class="material-icons">arrow_drop_up</i></a>
 						</div>
 					</li>
 					<li><a href="/"><i class="material-icons" <?php echo ( $file == '/index' ? 'class="sc-active"' : '' ); ?>>home</i> Home</a></li>
 					<li><a href="/getting-started.php" <?php echo ( $file == '/getting-started' ? 'class="sc-active"' : '' ); ?>><i class="material-icons">flag</i> Getting started</a></li>
-					<li class="sc-sidenav-dropdown">Style <i class="material-icons sc-right">expand_less</i>
+					<li class="sc-drawer-dropdown">Style <i class="material-icons sc-right">expand_less</i>
 						<ul>
 							<li><a href="/style/color.php" <?php echo ( $file == '/style/color' ? 'class="sc-active"' : '' ); ?>>Color</a></li>
 							<li><a href="/style/icons.php" <?php echo ( $file == '/style/icons' ? 'class="sc-active"' : '' ); ?>>Icons</a></li>
@@ -104,7 +104,7 @@ $file = str_replace( '.php', '', $_SERVER['PHP_SELF'] );
 							<li><a href="/style/grid.php" <?php echo ( $file == '/style/grid' ? 'class="sc-active"' : '' ); ?>>Grid</a></li>
 						</ul>
 					</li>
-					<li class="sc-sidenav-dropdown">Components <i class="material-icons sc-right">expand_less</i>
+					<li class="sc-drawer-dropdown">Components <i class="material-icons sc-right">expand_less</i>
 						<ul>
 							<li><a href="/components/appbar.php" <?php echo ( $file == '/components/appbar' ? 'class="sc-active"' : '' ); ?>>Appbar</a></li>
 							<li><a href="/components/bottom-navigation.php" <?php echo ( $file == '/components/bottom-navigation' ? 'class="sc-active"' : '' ); ?>>Bottom navigation</a></li>
@@ -113,10 +113,10 @@ $file = str_replace( '.php', '', $_SERVER['PHP_SELF'] );
 							<li><a href="/components/cards.php" <?php echo ( $file == '/components/cards' ? 'class="sc-active"' : '' ); ?>>Cards</a></li>
 							<li><a href="/components/chips.php" <?php echo ( $file == '/components/chips' ? 'class="sc-active"' : '' ); ?>>Chips</a></li>
 							<li><a href="/components/dialogs.php" <?php echo ( $file == '/components/dialogs' ? 'class="sc-active"' : '' ); ?>>Dialogs</a></li>
+							<li><a href="/components/navigation-drawer.php" <?php echo ( $file == '/components/navigation-drawer' ? 'class="sc-active"' : '' ); ?>>Navigation drawer</a></li>
 							<li><a href="/components/pickers.php" <?php echo ( $file == '/components/pickers' ? 'class="sc-active"' : '' ); ?>>Pickers</a></li>
 							<li><a href="/components/progress-activity.php" <?php echo ( $file == '/components/progress-activity' ? 'class="sc-active"' : '' ); ?>>Progress &amp; activity</a></li>
 							<li><a href="/components/selection-controls.php" <?php echo ( $file == '/components/selection-controls' ? 'class="sc-active"' : '' ); ?>>Selection controls</a></li>
-							<li><a href="/components/sidenav.php" <?php echo ( $file == '/components/sidenav' ? 'class="sc-active"' : '' ); ?>>Sidenav</a></li>
 							<li><a href="/components/sliders.php" <?php echo ( $file == '/components/sliders' ? 'class="sc-active"' : '' ); ?>>Slider</a></li>
 							<li><a href="/components/snackbars-toasts.php" <?php echo ( $file == '/components/snackbars-toasts' ? 'class="sc-active"' : '' ); ?>>Snackbar &amp; toasts</a></li>
 							<li><a href="/components/steppers.php" <?php echo ( $file == '/components/steppers' ? 'class="sc-active"' : '' ); ?>>Steppers</a></li>
@@ -126,7 +126,7 @@ $file = str_replace( '.php', '', $_SERVER['PHP_SELF'] );
 							<li><a href="/components/tooltips.php" <?php echo ( $file == '/components/tooltips' ? 'class="sc-active"' : '' ); ?>>Tooltips</a></li>
 						</ul>
 					</li>
-					<li class="sc-sidenav-dropdown">Resources <i class="material-icons sc-right">expand_less</i>
+					<li class="sc-drawer-dropdown">Resources <i class="material-icons sc-right">expand_less</i>
 						<ul>
 							<li><a href="/resources/notifications.php" <?php echo ( $file == '/resources/notifications' ? 'class="sc-active"' : '' ); ?>>Notifications</a></li>
 							<li><a href="/resources/templates.php" <?php echo ( $file == '/resources/templates' ? 'class="sc-active"' : '' ); ?>>Templates</a></li>

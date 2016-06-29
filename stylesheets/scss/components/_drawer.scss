@@ -1,17 +1,17 @@
 /**************************************
- * Sidenav
+ * Navigation drawer
  *
  * https://www.google.com/design/spec/components/dividers.html#dividers-types-of-dividers
  * http://www.google.com/design/spec/layout/structure.html#structure-side-nav
  * http://www.google.com/design/spec/patterns/navigation-drawer.html
  **************************************/
 
-.sc-sidenav {
-	position: $sidenav-position;
-	background: $sidenav-background;
-	padding: $sidenav-padding;
+.sc-drawer {
+	position: $drawer-position;
+	background: $drawer-background;
+	padding: $drawer-padding;
 	bottom: 0;
-	overflow: $sidenav-overflow;
+	overflow: $drawer-overflow;
 	@extend .sc-z16;
 
 	// Left navigation
@@ -19,28 +19,28 @@
 		left: 0;
 
 		@media #{$medium-down} {
-			width:$sidenav-small-width;
-			max-width: $sidenav-small-max-width;
-			margin-right: $sidenav-small-margin-right;
+			width:$drawer-small-width;
+			max-width: $drawer-small-max-width;
+			margin-right: $drawer-small-margin-right;
 			display: none;
 		}
 
 		@media #{$medium-up} {
-			width: $sidenav-width;
-			max-width: $sidenav-max-width;
+			width: $drawer-width;
+			max-width: $drawer-max-width;
 			display: block;
 		}
 
-		// Full height sidenav
+		// Full height drawer
 		&-full {
-			top: $sidenav-full-small-top;
+			top: $drawer-full-small-top;
 
 			@media #{$small-up} {
-				top: $sidenav-full-medium-top;
+				top: $drawer-full-medium-top;
 			}
 
 			@media #{$medium-up} {
-				top: $sidenav-full-large-top;
+				top: $drawer-full-large-top;
 			}
 
 			&-title {
@@ -48,51 +48,51 @@
 				display: none;
 
 				@media #{$medium-up} {
-					background: $sidenav-full-title-background;
+					background: $drawer-full-title-background;
 					display: block;
-					height: $sidenav-full-title-height;
-					font-size: $sidenav-full-title-size;
-					margin: $sidenav-full-title-margin;
-					color: $sidenav-full-title-color;
+					height: $drawer-full-title-height;
+					font-size: $drawer-full-title-size;
+					margin: $drawer-full-title-margin;
+					color: $drawer-full-title-color;
 
 					h1, h2, h3, h4, h5, h6 {
 						padding: 0;
 						margin: 0;
-						font-size: $sidenav-full-title-size;
-						color: $sidenav-full-title-color;
+						font-size: $drawer-full-title-size;
+						color: $drawer-full-title-color;
 					}
 
 					&:hover {
-						background: $sidenav-full-title-background;
+						background: $drawer-full-title-background;
 					}
 				}
 			}
 
-			.sc-sidenav-profile {
+			.sc-drawer-profile {
 				@media #{$small-up} {
-					margin: $sidenav-full-profile-medium-margin;
+					margin: $drawer-full-profile-medium-margin;
 				}
 
 				@media #{$medium-up} {
-					margin: $sidenav-full-profile-large-margin;
+					margin: $drawer-full-profile-large-margin;
 				}
 			}
 		}
 
 		// Sidenav under navbar
 		&-floating {
-			top: $sidenav-floating-small-top;
-			z-index: $sidenav-floating-z-index;
+			top: $drawer-floating-small-top;
+			z-index: $drawer-floating-z-index;
 
 			@media #{$small-up} {
-				top: $sidenav-floating-medium-top;
+				top: $drawer-floating-medium-top;
 			}
 
 			@media #{$medium-up} {
-				top: $sidenav-floating-large-top;
+				top: $drawer-floating-large-top;
 			}
 
-			.sc-sidenav-left-full-title {
+			.sc-drawer-left-full-title {
 				display: none;
 			}
 		}
@@ -100,28 +100,28 @@
 
 	// Right navigation
 	&-right {
-		max-width: $sidenav-right-max-width;
+		max-width: $drawer-right-max-width;
 		right: 0;
-		top: $sidenav-right-small-top;
+		top: $drawer-right-small-top;
 
 		@media #{$small-up} {
-			top: $sidenav-right-medium-top;
+			top: $drawer-right-medium-top;
 		}
 
 		@media #{$medium-up} {
-			top: $sidenav-right-large-top;
+			top: $drawer-right-large-top;
 		}
 	}
 
 	&-divider {
-		margin: $sidenav-divider-margin;
-		height: $sidenav-divider-height;
-		background: $sidenav-divider-background;
+		margin: $drawer-divider-margin;
+		height: $drawer-divider-height;
+		background: $drawer-divider-background;
 	}
 
 	&-subheader {
 		@extend .sc-subhead-1;
-		color: $sidenav-subheader-color;
+		color: $drawer-subheader-color;
 
 		&:hover {
 			background: none !important;
@@ -142,18 +142,18 @@
 		padding: 0;
 
 		li {
-			font-weight: $sidenav-font-weight;
+			font-weight: $drawer-font-weight;
 			@include transition(background 300ms ease-in-out);
 
 			&:hover {
-				background: $sidenav-hover-background;
+				background: $drawer-hover-background;
 			}
 
-			&.sc-sidenav-profile {
+			&.sc-drawer-profile {
 				@extend .sc-row;
-				margin: $sidenav-profile-margin;
-				padding: $sidenav-profile-padding;
-				background: $sidenav-profile-background;
+				margin: $drawer-profile-margin;
+				padding: $drawer-profile-padding;
+				background: $drawer-profile-background;
 				background-size: 100% 100%;
 				height: auto;
 				position: relative;
@@ -165,58 +165,58 @@
 					left: 0;
 					right: 0;
 					position: absolute;
-					background: -moz-linear-gradient($sidenav-profile-scrim);
-					background: -webkit-linear-gradient($sidenav-profile-scrim);
-					background: linear-gradient($sidenav-profile-scrim);
+					background: -moz-linear-gradient($drawer-profile-scrim);
+					background: -webkit-linear-gradient($drawer-profile-scrim);
+					background: linear-gradient($drawer-profile-scrim);
 				}
 
 				div {
 					padding: 0 !important;
 				}
 
-				.sc-sidenav-profile-img,.sc-sidenav-profile-info,.sc-sidenav-profile-button {
+				.sc-drawer-profile-img,.sc-drawer-profile-info,.sc-drawer-profile-button {
 					position: inherit;
 				}
 
-				.sc-sidenav-profile-img {
+				.sc-drawer-profile-img {
 					@extend .sc-col, .sc-s12;
 					width: 100%;
-					height: $sidenav-profile-img-size;
-					margin: $sidenav-profile-img-margin;
+					height: $drawer-profile-img-size;
+					margin: $drawer-profile-img-margin;
 
 					img {
 						@extend .sc-circle;
-						width: $sidenav-profile-img-size;
-						height: $sidenav-profile-img-size;
+						width: $drawer-profile-img-size;
+						height: $drawer-profile-img-size;
 					}
 				}
 
-				.sc-sidenav-profile-info {
+				.sc-drawer-profile-info {
 					@extend .sc-col, .sc-s8;
-					height: $sidenav-profile-info-total-height;
+					height: $drawer-profile-info-total-height;
 
 					> div {
 						@extend .sc-col, .sc-s12;
-						color: $sidenav-profile-info-font-color;
-						font-size: $sidenav-profile-info-font-size;
+						color: $drawer-profile-info-font-color;
+						font-size: $drawer-profile-info-font-size;
 						height: remCalc(28px);
 						width: 75%;
 						max-width: 75%;
 						line-height: remCalc(28px);
 					}
 
-					.sc-sidenav-profile-name {
+					.sc-drawer-profile-name {
 						font-weight: 500;
 					}
 
-					.sc-sidenav-profile-email {
+					.sc-drawer-profile-email {
 						font-weight: 400;
 					}
 				}
 
-				.sc-sidenav-profile-button {
+				.sc-drawer-profile-button {
 					@extend .sc-col, .sc-s4;
-					height: $sidenav-profile-info-total-height;
+					height: $drawer-profile-info-total-height;
 
 					a {
 						text-align: right;
@@ -234,7 +234,7 @@
 				}
 			}
 
-			&.sc-sidenav-dropdown {
+			&.sc-drawer-dropdown {
 				height: auto;
 				cursor: pointer;
 
@@ -245,7 +245,7 @@
 				}
 			}
 
-			&.sc-sidenav-footer {
+			&.sc-drawer-footer {
 				bottom: 0;
 			   	position: absolute;
 
@@ -256,29 +256,29 @@
 
 			a {
 				display: block;
-				font-weight: $sidenav-font-weight;
+				font-weight: $drawer-font-weight;
 
 				&:hover, &.sc-active {
-					color: $sidenav-hover;
+					color: $drawer-hover;
 
 					.material-icons {
-						color: $sidenav-hover;
+						color: $drawer-hover;
 					}
 				}
 			}
 
 			.material-icons {
-				color: $sidenav-icons-color;
-				line-height: $sidenav-icons-size;
-				font-size: $sidenav-icons-font-size;
-				height: $sidenav-icons-size;
-				width: $sidenav-icons-size;
+				color: $drawer-icons-color;
+				line-height: $drawer-icons-size;
+				font-size: $drawer-icons-font-size;
+				height: $drawer-icons-size;
+				width: $drawer-icons-size;
 				vertical-align: middle;
 			}
 		}
 
 		ul {
-			margin: $sidenav-sub-list-margin;
+			margin: $drawer-sub-list-margin;
 		}
 	}
 }

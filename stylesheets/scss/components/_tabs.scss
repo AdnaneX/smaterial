@@ -4,7 +4,7 @@
 	top: $appbar-small-height;
 	background: $main-color;
 	z-index: 1;
-	left: $sidenav-width;
+	left: $drawer-width;
 
 	@media #{$small-up} {
 		top: $appbar-medium-height

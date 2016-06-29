@@ -33,7 +33,7 @@
     - Add search slide out
 - Bottom sheet
     - Add music styling
-    - Fix position (it's now under sidenav)
+    - Fix position (it's now under navigation drawer)
     - Fix shadow
 - Buttons
     - Add dropdown buttons
@@ -58,7 +58,7 @@
     - Add comments for divided variables
     - Add settings in documentation
     - Move color import from "_settings.scss" to "smaterial.scss"
-- Sidenav
+- Navigation drawer
     - Make profile dropdown button
     - Fix margin right on left menu for mobile. 56px between screen edge and menu
     - Fix shadow
