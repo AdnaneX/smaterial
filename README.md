@@ -64,9 +64,9 @@
     - Fix shadow
 - Slider
     - Add radials
-    - Different style for value 0 and up
     - Colors should be rgba but creates weird behaviour (like showing track trough thumb)
-    - Fix click bug at end of range slider
+    - Fix click bug at end of .sc-slider slider
+    - sc-slider-discrete bubble not working mobile
 - Tables
     - Fix styling
     - Add table title
@@ -89,4 +89,4 @@
 - Normalize
 - Gulp
 - Bower
-- Prism.js
+- Prism.js (not part of SMaterial only used to display code in website)

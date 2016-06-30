@@ -34,18 +34,26 @@ $(document).ready(function() {
 			// Set value in bubble
 			$bubble.text($this.val());
 			$bubble.css('left', $percentage+'%');
+
+			// If thumb is over 0%
+			if( $percentage > 0 ) {
+				$bubble.addClass('sc-not-null');
+			} else {
+				$bubble.removeClass('sc-not-null');
+			}
 		}
 
 		// If thumb is over 0%
 		if( $percentage > 0 ) {
-			$this.addClass('sc-active');
+			$this.addClass('sc-not-null');
 		} else {
-			$this.removeClass('sc-active');
+			$this.removeClass('sc-not-null');
+		}
+
+		// If slider is disabled
+		if( $this.hasClass('sc-disabled') || $this.attr('disabled') == 'disabled' ) {
+			$this.parent('div').addClass('sc-disabled');
 		}
 	});
 	$range.trigger('input');
-//
-// 	$('body').click(function(e) {
-// 		console.log(e.target);
-// 	});
 });
