@@ -317,9 +317,9 @@ input[type="range"] {
 		}
 
 		&.sc-not-null {
-			background: $main-color;
-			color: $white;
-			border: 2px solid $main-color;
+			background: $slider-bubble-not-null-background;
+			color: $slider-bubble-not-null-font-color;
+			border: $slider-bubble-not-null-border;
 			font-size: 0;
 		}
 	}
@@ -327,59 +327,59 @@ input[type="range"] {
 	&.sc-disabled {
 		input[type="range"] {
 			&::-webkit-slider-thumb {
-				background: $white;
-				border: 2px solid lighten($black, (100% - 26%));
+				background: $slider-disabled-thumb-background;
+				border: $slider-disabled-thumb-border;
 			}
 
 			&::-moz-range-thumb, &::-ms-thumb {
-				background: $white;
-				border: 2px solid lighten($black, (100% - 26%));
+				background: $slider-disabled-thumb-background;
+				border: $slider-disabled-thumb-border;
 			}
 
 			&.sc-not-null {
 				&::-webkit-slider-thumb {
-					background: lighten($black, (100% - 26%));
-					border: 2px solid $white;
+					background: $slider-thumb-disabled-not-null-background;
+					border: $slider-thumb-disabled-not-null-border;
 				}
 
 				&::-moz-range-thumb, &::-ms-thumb {
-					background: lighten($black, (100% - 26%));
-					border: 2px solid $white;
+					background: $slider-thumb-disabled-not-null-background;
+					border: $slider-thumb-disabled-not-null-border;
 				}
 			}
 
 			&.sc-slider-discrete {
 				// Thumb
 				&::-webkit-slider-thumb {
-					background: transparent;
-					border: remCalc(2px) solid transparent;
+					background: $slider-thumb-disabled-discrete-background;
+					border: $slider-thumb-disabled-discrete-border;
 				}
 
 				&::-moz-range-thumb, &::-ms-thumb {
-					background: transparent;
-					border: remCalc(2px) solid transparent;
+					background: $slider-thumb-disabled-discrete-background;
+					border: $slider-thumb-disabled-discrete-border;
 				}
 			}
 		}
 
 		.sc-range-track-before {
-			background: lighten($black, (100% - 26%));
+			background: $slider-range-track-before-disabled;
 		}
 
 		.sc-slider-bubble {
-			background: lighten($black, (100% - 26%));
-			border: remCalc(2px) solid $white;
+			background: $slider-bubble-disabled-background;
+			border: $slider-bubble-disabled-border;
 		}
 
 		&:active, &:focus {
 			.sc-slider-bubble {
-				background: lighten($black, (100% - 26%));
-				border: remCalc(2px) lighten($black, (100% - 26%));
+				background: $slider-bubble-active-disabled-background;
+				border: none;
 
 				&:before {
-					border-left: remCalc(10px) solid transparent;
-					border-right: remCalc(10px) solid transparent;
-					border-top: remCalc(10px) solid lighten($black, (100% - 26%));
+					border-left: $slider-triangle-active-disabled-border;
+					border-right: $slider-triangle-active-disabled-border;
+					border-top: $slider-triangle-active-disabled-border-top;
 				}
 			}
 		}

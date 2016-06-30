@@ -22,9 +22,10 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	</div>
 
 	<p class="sc-col sc-s12 sc-m6">
-		The notification function which is called in JavaScript takes 3 parameters (<code>$title, $options, $click</code>).
-		The <code>$title</code> speaks for itself. The <code>$click</code> parameter is used to handle click events on the notification.
-		For the <code>$options</code> I would advice you to take a look
+		The notification function which is called in JavaScript takes 3 parameters (<code class="language-javascript">$title, $options, $click</code>).
+		The <code class="language-javascript">$title</code class="language-javascript"> speaks for itself.
+		The <code class="language-javascript">$click</code> parameter is used to handle click events on the notification.
+		For the <code class="language-javascript">$options</code> I would advice you to take a look
 		<a href="https://developer.mozilla.org/en-US/docs/Web/API/notification" target="_blank">here</a>. But here is a list of supported options:
 	</p>
 
@@ -37,11 +38,11 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		</ul>
 	</div>
 
-	<code class="sc-col sc-s12 sc-m6">
-		<pre>
+	<pre class="language-javascript sc-col sc-s12 sc-m6">
+		<code>
 notification('Title', {body: 'Content', icon: 'icon_path'}, 'click-url.com')
-		</pre>
-	</code>
+		</code>
+	</pre>
 </section>
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.php';

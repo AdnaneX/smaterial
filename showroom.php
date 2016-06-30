@@ -67,3 +67,5 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		<button class="sc-raised-button">Submit <i class="material-icons">send</i></button>
 	</form>
 </section>
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.php';

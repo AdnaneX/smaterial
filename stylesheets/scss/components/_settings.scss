@@ -416,12 +416,15 @@ $slider-track-large-transition: background $transition-large-duration $basic-tra
 $slider-range-track-margin: remCalc(-27px) 0 0 0; // Default remCalc(-27px) 0 0 0
 $slider-range-track-before: $slider-track-active-background; // Default $slider-track-active-background
 $slider-range-track-after: $slider-track-background; // Default $slider-track-background
+$slider-range-track-before-disabled: $slider-track-background; // Default $slider-track-background
 
 // Thumb
 $slider-thumb-background: $white; // Default $white
 $slider-thumb-size: remCalc(14px); // Default remCalc(14px)
 $slider-thumb-border: remCalc(2px) solid $slider-track-background; // Default remCalc(2px) solid $slider-track-background
 $slider-thumb-margin: remCalc(-6px) 0 0 0; // Default remCalc(-6px) 0 0 0
+$slider-disabled-thumb-background: $white; // Default $white
+$slider-disabled-thumb-border: $slider-thumb-border; // Default $slider-thumb-border
 $slider-thumb-active-background: $slider-track-active-background; // Default $slider-track-active-background
 $slider-thumb-active-border: remCalc(2px) solid $slider-thumb-active-background; // Default remCalc(2px) solid $slider-thumb-active-background
 $slider-thumb-active-size: remCalc(16px); // Default remCalc(16px)
@@ -430,13 +433,17 @@ $slider-thumb-disabled-background: $slider-track-background; // Default $slider-
 $slider-thumb-disabled-size: $slider-thumb-size; // Default $slider-thumb-size
 $slider-thumb-disabled-border: remCalc(2px) solid $white; // Default remCalc(2px) solid $white
 $slider-thumb-disabled-margin: $slider-thumb-margin; // Default remCalc(-6px) 0 0 0
+$slider-thumb-disabled-not-null-background: $slider-thumb-disabled-background; // Default $slider-thumb-background
+$slider-thumb-disabled-not-null-border: $slider-thumb-disabled-border; // Default $slider-thumb-disabled-border
+$slider-thumb-disabled-discrete-background: transparent; // Default transparent
+$slider-thumb-disabled-discrete-border: remCalc(2px) solid $slider-thumb-disabled-discrete-background; // Default$slider-thumb-disabled-discrete-background
 $slider-thumb-not-null-background: $slider-thumb-active-background; // Default $slider-thumb-active-background
 $slider-thumb-not-null-border: $slider-thumb-active-border; // $slider-thumb-active-border
 $slider-thumb-not-null-size: $slider-thumb-size; // Default $slider-thumb-size
 $slider-thumb-not-null-margin: $slider-thumb-margin; // Default $slider-thumb-margin
 $slider-thumb-not-null-active-size: $slider-thumb-active-size; // Default $slider-thumb-active-size
 $slider-thumb-not-null-active-margin: $slider-thumb-active-margin; // Default $slider-thumb-active-margin
-$slider-discrete-thumb-hidden-background: transparent; // Default transparent
+$slider-discrete-thumb-hidden-background: $slider-thumb-disabled-discrete-background; // Default $slider-thumb-disabled-discrete-background
 $slider-discrete-thumb-hidden-border: remCalc(2px) solid $slider-discrete-thumb-hidden-background; // Default remCalc(2px) solid $slider-discrete-thumb-hidden-background
 $slider-thumb-small-transition: background $transition-small-duration $basic-transition unquote(',')
 								border $transition-small-duration $basic-transition unquote(',')
@@ -459,7 +466,12 @@ $slider-bubble-background: $black; // Default $black
 $slider-bubble-font-color: $white; // Default $white
 $slider-bubble-size: $slider-thumb-size; // Default $slider-thumb-size
 $slider-bubble-border: remCalc(2px) solid $slider-bubble-background; // Default remCalc(2px) solid $slider-bubble-background
-$slider-bubble-bottom: remCalc(-25px);
+$slider-bubble-bottom: remCalc(-25px); // Default remCalc(-25px)
+$slider-bubble-disabled-background: $slider-track-background; // Default $slider-track-background
+$slider-bubble-disabled-border: $slider-thumb-disabled-border;
+$slider-bubble-not-null-background: $slider-track-active-background; // Default $slider-track-active-background
+$slider-bubble-not-null-font-color: $slider-bubble-font-color; // Default $slider-bubble-font-color
+$slider-bubble-not-null-border: remCalc(2px) solid $slider-track-active-background; // Default remCalc(2px) solid $slider-track-active-background
 $slider-bubble-active-background: $slider-track-background; // Default $slider-track-background
 $slider-bubble-active-font-color: $slider-bubble-font-color; // Default $slider-bubble-font-color
 $slider-bubble-active-size: remCalc(25px); // Default remCalc(25px)
@@ -468,11 +480,14 @@ $slider-bubble-active-bottom: remCalc(1.4px); // Default remCalc(1.4px)
 $slider-bubble-active-margin: 0 0 0 remCalc(-12.5px); // Default 0 0 0 remCalc(-12.5px)
 $slider-bubble-active-not-null-background: $slider-track-active-background; // Default $slider-track-active-background
 $slider-bubble-active-not-null-font-size: $slider-bubble-active-font-size; // Default $slider-bubble-active-font-size
+$slider-bubble-active-disabled-background: $slider-track-background; // Default $slider-track-background
 $slider-triangle-active-border-hidden: remCalc(10px) solid transparent; // Default remCalc(10px) solid transparent
 $slider-triangle-active-border-top: remCalc(10px) solid $slider-track-background; // Default remCalc(10px) solid $slider-track-background
 $slider-triangle-active-top: remCalc(21px); // Default remCalc(21px)
 $slider-triangle-active-right: remCalc(3.5px); // Default remCalc(3.5px);
-$slider-triangle-active-not-null-border-top: remCalc(10px) solid $main-color; // Default remCalc(10px) solid $main-color
+$slider-triangle-active-not-null-border-top: remCalc(10px) solid $slider-track-active-background; // Default remCalc(10px) solid $slider-track-active-background
+$slider-triangle-active-disabled-border: $slider-triangle-active-border-hidden; // Default $slider-triangle-active-border-hidden
+$slider-triangle-active-disabled-border-top: remCalc(10px) solid $slider-track-background; // Default remCalc(10px) solid $slider-track-background
 
 $slider-bubble-small-transition: 	background $transition-small-duration $basic-transition unquote(',')
 									width $transition-small-duration $basic-transition unquote(',')
@@ -505,7 +520,6 @@ $slider-bubble-triangle-large-transition: 	border-left $transition-large-duratio
 											border-right $transition-large-duration $basic-transition unquote(',')
 											border-top $transition-large-duration $basic-transition unquote(',')
 											top $transition-large-duration $basic-transition unquote(',');
-
 
 /**************************************
  * Textfields
