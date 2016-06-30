@@ -34,7 +34,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 
 			if( empty( $errors ) ) {
 				$message = "Email: {$input['email']}, URL: {$input['url']}, name: {$input['name']}";
-				if( mail( 'super.derkjan@gmail.com', 'SMaterial website submit', $message ) ) {
+				if( mail( 'smaterial.dsuper.nl', 'SMaterial website submit', $message ) ) {
 					echo '<span class="sc-green-500-text">Successfully submitted</span>';
 				} else {
 					echo '<span class="sc-red-500-text">Something went wrong submitting your website</span>';

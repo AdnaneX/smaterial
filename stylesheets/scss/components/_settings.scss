@@ -407,11 +407,37 @@ $drawer-profile-scrim: to top, rgba($grey-900, 0.4) 15%, rgba($white, 0) 33%; //
  * Sliders
  **************************************/
 // Track
+$slider-track-height: remCalc(1.5px); // Default remCalc(1.5px)
+$slider-track-background: lighten($black, (100% - 26%)); // Default lighten($black, (100% - 26%));
+$slider-track-active-background: $main-color; // Default $main-color
 $slider-track-small-transition: background $transition-small-duration $basic-transition; // Default background $transition-small-duration $basic-transition
 $slider-track-medium-transition: background $transition-medium-duration $basic-transition; // Default background $transition-medium-duration $basic-transition
 $slider-track-large-transition: background $transition-large-duration $basic-transition; // Default background $transition-large-duration $basic-transition
+$slider-range-track-margin: remCalc(-27px) 0 0 0; // Default remCalc(-27px) 0 0 0
+$slider-range-track-before: $slider-track-active-background; // Default $slider-track-active-background
+$slider-range-track-after: $slider-track-background; // Default $slider-track-background
 
 // Thumb
+$slider-thumb-background: $white; // Default $white
+$slider-thumb-size: remCalc(14px); // Default remCalc(14px)
+$slider-thumb-border: remCalc(2px) solid $slider-track-background; // Default remCalc(2px) solid $slider-track-background
+$slider-thumb-margin: remCalc(-6px) 0 0 0; // Default remCalc(-6px) 0 0 0
+$slider-thumb-active-background: $slider-track-active-background; // Default $slider-track-active-background
+$slider-thumb-active-border: remCalc(2px) solid $slider-thumb-active-background; // Default remCalc(2px) solid $slider-thumb-active-background
+$slider-thumb-active-size: remCalc(16px); // Default remCalc(16px)
+$slider-thumb-active-margin: remCalc(-7px) 0 0 0; // Default remCalc(-7px) 0 0 0
+$slider-thumb-disabled-background: $slider-track-background; // Default $slider-track-background
+$slider-thumb-disabled-size: $slider-thumb-size; // Default $slider-thumb-size
+$slider-thumb-disabled-border: remCalc(2px) solid $white; // Default remCalc(2px) solid $white
+$slider-thumb-disabled-margin: $slider-thumb-margin; // Default remCalc(-6px) 0 0 0
+$slider-thumb-not-null-background: $slider-thumb-active-background; // Default $slider-thumb-active-background
+$slider-thumb-not-null-border: $slider-thumb-active-border; // $slider-thumb-active-border
+$slider-thumb-not-null-size: $slider-thumb-size; // Default $slider-thumb-size
+$slider-thumb-not-null-margin: $slider-thumb-margin; // Default $slider-thumb-margin
+$slider-thumb-not-null-active-size: $slider-thumb-active-size; // Default $slider-thumb-active-size
+$slider-thumb-not-null-active-margin: $slider-thumb-active-margin; // Default $slider-thumb-active-margin
+$slider-discrete-thumb-hidden-background: transparent; // Default transparent
+$slider-discrete-thumb-hidden-border: remCalc(2px) solid $slider-discrete-thumb-hidden-background; // Default remCalc(2px) solid $slider-discrete-thumb-hidden-background
 $slider-thumb-small-transition: background $transition-small-duration $basic-transition unquote(',')
 								border $transition-small-duration $basic-transition unquote(',')
 								height $transition-small-duration $basic-transition unquote(',')
@@ -427,6 +453,26 @@ $slider-thumb-large-transition: background $transition-large-duration $basic-tra
 								height $transition-large-duration $basic-transition unquote(',')
 								width $transition-large-duration $basic-transition unquote(',')
 								margin $transition-large-duration $basic-transition; // Default background $transition-large-duration $basic-transition unquote(',') border $transition-large-duration $basic-transition unquote(',') height $transition-large-duration $basic-transition unquote(',') width $transition-large-duration $basic-transition unquote(',') margin $transition-large-duration $basic-transition
+
+// Bubble
+$slider-bubble-background: $black; // Default $black
+$slider-bubble-font-color: $white; // Default $white
+$slider-bubble-size: $slider-thumb-size; // Default $slider-thumb-size
+$slider-bubble-border: remCalc(2px) solid $slider-bubble-background; // Default remCalc(2px) solid $slider-bubble-background
+$slider-bubble-bottom: remCalc(-25px);
+$slider-bubble-active-background: $slider-track-background; // Default $slider-track-background
+$slider-bubble-active-font-color: $slider-bubble-font-color; // Default $slider-bubble-font-color
+$slider-bubble-active-size: remCalc(25px); // Default remCalc(25px)
+$slider-bubble-active-font-size: remCalc(10px); // Default 10px
+$slider-bubble-active-bottom: remCalc(1.4px); // Default remCalc(1.4px)
+$slider-bubble-active-margin: 0 0 0 remCalc(-12.5px); // Default 0 0 0 remCalc(-12.5px)
+$slider-bubble-active-not-null-background: $slider-track-active-background; // Default $slider-track-active-background
+$slider-bubble-active-not-null-font-size: $slider-bubble-active-font-size; // Default $slider-bubble-active-font-size
+$slider-triangle-active-border-hidden: remCalc(10px) solid transparent; // Default remCalc(10px) solid transparent
+$slider-triangle-active-border-top: remCalc(10px) solid $slider-track-background; // Default remCalc(10px) solid $slider-track-background
+$slider-triangle-active-top: remCalc(21px); // Default remCalc(21px)
+$slider-triangle-active-right: remCalc(3.5px); // Default remCalc(3.5px);
+$slider-triangle-active-not-null-border-top: remCalc(10px) solid $main-color; // Default remCalc(10px) solid $main-color
 
 $slider-bubble-small-transition: 	background $transition-small-duration $basic-transition unquote(',')
 									width $transition-small-duration $basic-transition unquote(',')

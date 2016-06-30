@@ -7,8 +7,8 @@
 input[type="range"] {
 	-webkit-appearance: none;
 	outline: none;
-	height: remCalc(1.5px);
-	background: lighten($black, (100% - 26%));
+	height: $slider-track-height;
+	background: $slider-track-background;
 	margin: 0;
 
 	&:hover {
@@ -18,7 +18,7 @@ input[type="range"] {
 	// Track
 	&::-webkit-slider-runnable-track {
 		-webkit-appearance: none;
-		height: remCalc(1.5px);
+		height: $slider-track-height;
 		@include transition($slider-track-small-transition);
 
 		@media #{$medium-up} {
@@ -30,12 +30,12 @@ input[type="range"] {
 		}
 
 		&:focus, &:active {
-			background: $main-color;
+			background: $slider-track-active-background;
 		}
 	}
 
 	&::-moz-range-track, &::-ms-track {
-		height: remCalc(1.5px);
+		height: $slider-track-height;
 		@include transition($slider-track-small-transition);
 
 		@media #{$medium-up} {
@@ -47,20 +47,20 @@ input[type="range"] {
 		}
 
 		&:focus, &:active {
-			background: $main-color;
+			background: $slider-track-active-background;
 		}
 	}
 
 	// Thumb
 	&::-webkit-slider-thumb {
 		-webkit-appearance: none;
-		background: $white;
+		background: $slider-thumb-background;
 		@include border-radius(50%);
 		@include transition($slider-thumb-small-transition);
-		height: remCalc(14px);
-		width: remCalc(14px);
-		border: remCalc(2px) solid lighten($black, (100% - 26%));
-		margin: remCalc(-6px) 0 0 0;
+		height: $slider-thumb-size;
+		width: $slider-thumb-size;
+		border: $slider-thumb-border;
+		margin: $slider-thumb-margin;
 
 		@media #{$medium-up} {
 			@include transition($slider-thumb-medium-transition);
@@ -71,22 +71,22 @@ input[type="range"] {
 		}
 
 		&:focus, &:active {
-			background: $main-color;
-			border: remCalc(2px) solid $main-color;
-			height: remCalc(16px);
-			width: remCalc(16px);
-			margin: remCalc(-7px) 0 0 0;
+			background: $slider-thumb-active-background;
+			border: $slider-thumb-active-border;
+			height: $slider-thumb-active-size;
+			width: $slider-thumb-active-size;
+			margin: $slider-thumb-active-margin;
 		}
 	}
 
 	&::-moz-range-thumb, &::-ms-thumb  {
-		background: $white;
+		background: $slider-thumb-background;
 		@include border-radius(50%);
 		@include transition($slider-thumb-small-transition);
-		height: remCalc(14px);
-		width: remCalc(14px);
-		border: remCalc(2px) solid lighten($black, (100% - 26%));
-		margin: remCalc(-6px) 0 0 0;
+		height: $slider-thumb-size;
+		width: $slider-thumb-size;
+		border: $slider-thumb-border;
+		margin: $slider-thumb-margin;
 
 		@media #{$medium-up} {
 			@include transition($slider-thumb-medium-transition);
@@ -97,32 +97,32 @@ input[type="range"] {
 		}
 
 		&:focus, &:active {
-			background: $main-color;
-			border: remCalc(2px) solid $main-color;
-			height: remCalc(16px);
-			width: remCalc(16px);
-			margin: remCalc(-7px) 0 0 0;
+			background: $slider-thumb-active-background;
+			border: $slider-thumb-active-border;
+			height: $slider-thumb-active-size;
+			width: $slider-thumb-active-size;
+			margin: $slider-thumb-active-margin;
 		}
 	}
 
 	&:disabled, &.sc-disabled {
 		&::-webkit-slider-thumb {
 			-webkit-appearance: none;
-			background: lighten($black, (100% - 26%));
+			background: $slider-thumb-disabled-background;
 			@include border-radius(50%);
-			height: remCalc(14px);
-			width: remCalc(14px);
-			border: remCalc(2px) solid $white;
-			margin: remCalc(-6px) 0 0 0;
+			height: $slider-thumb-disabled-size;
+			width: $slider-thumb-disabled-size;
+			border: $slider-thumb-disabled-border;
+			margin: $slider-thumb-disabled-margin;
 		}
 
 		&::-moz-range-thumb, &::-ms-thumb {
-			background: lighten($black, (100% - 26%));
+			background: $slider-thumb-disabled-background;
 			@include border-radius(50%);
-			height: remCalc(14px);
-			width: remCalc(14px);
-			border: remCalc(2px) solid $white;
-			margin: remCalc(-6px) 0 0 0;
+			height: $slider-thumb-disabled-size;
+			width: $slider-thumb-disabled-size;
+			border: $slider-thumb-disabled-border;
+			margin: $slider-thumb-disabled-margin;
 		}
 
 		&:active, &:focus {
@@ -146,7 +146,7 @@ input[type="range"] {
 		z-index: 3;
 		background: transparent;
 
-		/// Track
+		// Track
 		&::-webkit-slider-runnable-track {
 			&:focus, &:active {
 				background: transparent;
@@ -162,24 +162,24 @@ input[type="range"] {
 		&.sc-slider-discrete {
 			// Thumb
 			&::-webkit-slider-thumb {
-				background: transparent;
-				border: remCalc(2px) solid transparent;
+				background: $slider-discrete-thumb-hidden-background;
+				border: $slider-discrete-thumb-hidden-border;
 			}
 
 			&::-moz-range-thumb, &::-ms-thumb {
-				background: transparent;
-				border: remCalc(2px) solid transparent;
+				background: $slider-discrete-thumb-hidden-background;
+				border: $slider-discrete-thumb-hidden-border;
 			}
 
 			&.sc-not-null {
 				&::-webkit-slider-thumb {
-					background: transparent;
-					border: remCalc(2px) solid transparent;
+					background: $slider-discrete-thumb-hidden-background;
+					border: $slider-discrete-thumb-hidden-border;
 				}
 
 				&::-moz-range-thumb, &::-ms-thumb {
-					background: transparent;
-					border: remCalc(2px) solid transparent;
+					background: $slider-discrete-thumb-hidden-background;
+					border: $slider-discrete-thumb-hidden-border;
 				}
 			}
 		}
@@ -188,40 +188,40 @@ input[type="range"] {
 		&.sc-not-null {
 			&::-webkit-slider-thumb {
 				@include border-radius(50%);
-				background: $main-color;
-				border: remCalc(2px) solid $main-color;
-				height: remCalc(14px);
-				width: remCalc(14px);
-				margin: remCalc(-6px) 0 0 0;
+				background: $slider-thumb-not-null-background;
+				border: $slider-thumb-not-null-border;
+				height: $slider-thumb-not-null-size;
+				width: $slider-thumb-not-null-size;
+				margin: $slider-thumb-not-null-margin;
 
 				&:active, &:focus {
-					height: remCalc(16px);
-					width: remCalc(16px);
-					margin: remCalc(-7px) 0 0 0;
+					height: $slider-thumb-not-null-active-size;
+					width: $slider-thumb-not-null-active-size;
+					margin: $slider-thumb-not-null-active-margin;
 				}
 			}
 
 			&::-moz-range-thumb, &::-ms-thumb {
 				@include border-radius(50%);
-				background: $main-color;
-				border: remCalc(2px) solid $main-color;
-				height: remCalc(14px);
-				width: remCalc(14px);
-				margin: remCalc(-6px) 0 0 0;
+				background: $slider-thumb-not-null-background;
+				border: $slider-thumb-not-null-border;
+				height: $slider-thumb-not-null-size;
+				width: $slider-thumb-not-null-size;
+				margin: $slider-thumb-not-null-margin;
 
 				&:active, &:focus {
-					height: remCalc(16px);
-					width: remCalc(16px);
-					margin: remCalc(-7px) 0 0 0;
+					height: $slider-thumb-not-null-active-size;
+					width: $slider-thumb-not-null-active-size;
+					margin: $slider-thumb-not-null-active-margin;
 				}
 			}
 		}
 	}
 
 	.sc-range-track {
-		margin-top: remCalc(-27px);
+		margin: $slider-range-track-margin;
 		width: 100%;
-		height: remCalc(1.5px);
+		height: $slider-track-height;
 		position: relative;
 		z-index: 1;
 
@@ -231,53 +231,43 @@ input[type="range"] {
 		}
 
 		.sc-range-track-before {
-			background: $main-color;
+			background: $slider-range-track-before;
 		}
 
 		.sc-range-track-after {
-			background: lighten($black, (100% - 26%));
+			background: $slider-range-track-after;
 		}
 	}
 
 	&:active, &:focus {
 		.sc-slider-bubble {
-			@include border-radius(50%);
-			background: lighten($black, (100% - 26%));
-			color: $white;
-			width: remCalc(25px);
-			height: remCalc(25px);
+			background: $slider-bubble-active-background;
+			color: $slider-bubble-active-font-color;
+			width: $slider-bubble-active-size;
+			height: $slider-bubble-active-size;
 			text-align: center;
 			border: none;
-			font-size: remCalc(10px);
-			bottom: remCalc(1.4px);
-			margin: 0 0 0 remCalc(-12.5px);
+			font-size: $slider-bubble-active-font-size;
+			bottom: $slider-bubble-active-bottom;
+			margin: $slider-bubble-active-margin;
 
 			&:before {
-				border-left: remCalc(10px) solid transparent;
-				border-right: remCalc(10px) solid transparent;
-				border-top: remCalc(10px) solid lighten($black, (100% - 26%));
-				top: remCalc(21px);
-				right: remCalc(3.5px);
+				border-left: $slider-triangle-active-border-hidden;
+				border-right: $slider-triangle-active-border-hidden;
+				border-top: $slider-triangle-active-border-top;
+				top: $slider-triangle-active-top;
+				right: $slider-triangle-active-right;
 			}
 
 			&.sc-not-null {
-				@include border-radius(50%);
-				background: $main-color;
-				color: $white;
-				width: remCalc(25px);
-				height: remCalc(25px);
-				text-align: center;
+				background: $slider-bubble-active-not-null-background;
 				border: none;
-				font-size: remCalc(10px);
-				bottom: remCalc(1.4px);
-				margin: 0 0 0 remCalc(-12.5px);
+				font-size: $slider-bubble-active-not-null-font-size;
 
 				&:before {
-					border-left: remCalc(10px) solid transparent;
-					border-right: remCalc(10px) solid transparent;
-					border-top: remCalc(10px) solid $main-color;
-					top: remCalc(21px);
-					right: remCalc(3.5px);
+					border-left: $slider-triangle-active-border-hidden;
+					border-right: $slider-triangle-active-border-hidden;
+					border-top: $slider-triangle-active-not-null-border-top;
 				}
 			}
 		}
@@ -286,14 +276,14 @@ input[type="range"] {
 	.sc-slider-bubble {
 		@include border-radius(50%);
 		@include transition($slider-bubble-small-transition);
-		background: $black;
-		color: $white;
-		width: remCalc(14px);
-		height: remCalc(14px);
-		border: remCalc(2px) solid $black;
+		background: $slider-bubble-background;
+		color: $slider-bubble-font-color;
+		width: $slider-bubble-size;
+		height: $slider-bubble-size;
+		border: $slider-bubble-border;
 		font-size: 0;
 		position: absolute;
-		bottom: remCalc(-25px);
+		bottom: $slider-bubble-bottom;
 		margin: 0;
 		z-index: 2;
 
@@ -327,47 +317,10 @@ input[type="range"] {
 		}
 
 		&.sc-not-null {
-			@include border-radius(50%);
-			@include transition($slider-bubble-small-transition);
 			background: $main-color;
 			color: $white;
-			width: remCalc(14px);
-			height: remCalc(14px);
 			border: 2px solid $main-color;
 			font-size: 0;
-			position: absolute;
-			bottom: remCalc(-25px);
-			margin: 0;
-			z-index: 2;
-
-			@media #{$medium-only} {
-				@include transition($slider-bubble-medium-transition);
-			}
-
-			@media #{$large-up} {
-				@include transition($slider-bubble-large-transition);
-			}
-
-			&:before {
-				@include transition($slider-bubble-triangle-small-transition);
-				content: '';
-				width: 0;
-				height: 0;
-				border-left: none;
-				border-right: none;
-				border-top: none;
-				top: 0;
-				right: 0;
-				position: absolute;
-
-				@media #{$medium-only} {
-					@include transition($slider-bubble-triangle-medium-transition);
-				}
-
-				@media #{$large-up} {
-					@include transition($slider-bubble-triangle-large-transition);
-				}
-			}
 		}
 	}
 
