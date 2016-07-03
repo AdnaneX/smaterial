@@ -14,7 +14,7 @@ $file = str_replace( '.php', '', $_SERVER['PHP_SELF'] );
 
 		<link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico">
 
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta charset="UTF-8">
 		<meta name="language" content="EN">
@@ -38,11 +38,14 @@ $file = str_replace( '.php', '', $_SERVER['PHP_SELF'] );
 			</div>
 
 			<div class="sc-appbar-actions">
-				<div class="sc-search-input">
-					<a href="#" class="sc-ripple sc-search-trigger"><i class="material-icons">search</i></a>
+				<a href="#" class="sc-ripple sc-search-trigger"><i class="material-icons">search</i></a>
 
+				<div class="sc-search-input">
 					<form action="<?= $_SERVER['PHP_SELF']; ?>" method="post">
-						<input type="search" name="search">
+						<div class="sc-single-input">
+							<input type="search" name="search" id="search">
+							<label for="search">Search</label>
+						</div>
 					</form>
 				</div>
 			</div>

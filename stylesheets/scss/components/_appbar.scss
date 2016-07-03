@@ -98,9 +98,11 @@
 		}
 
 		.sc-search-input {
-			input {
-				display: none;
-			}
+			@include border-radius(remCalc(2px));
+			display: none;
+			background: $white;
+			position: relative;
+			width: 100%;
 		}
 	}
 
@@ -109,8 +111,8 @@
 		width: $appbar-menu-width;
 
 		&-more {
-			display: none;
 			@extend .sc-z9;
+			display: none;
 			background: $white;
 			position: $appbar-more-position;
 			top: $appbar-more-top;

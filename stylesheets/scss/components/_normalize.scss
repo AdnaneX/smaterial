@@ -7,6 +7,7 @@
 html, body {
 	margin: 0;
 	padding: 0;
+	background: $background;
 }
 
 body {
@@ -69,7 +70,7 @@ body {
 	}
 
 	.sc-circle {
-		border-radius: 50%;
+		@include border-radius(50%);
 	}
 
 	.sc-left {
@@ -85,27 +86,13 @@ body {
 		vertical-align: middle;
 	}
 
-	/**********************************
-	 * Default list style
-	 **********************************/
-
-	ul, ol {
-		li {
-			font-weight: 400;
-			font-size: remCalc(14px);
-			color: lighten($black, (100% - 87%));
-			height: auto;
-			line-height: remCalc(48px);
-			padding: 0 remCalc(16px);
-
-			a {
-				font-weight: 400;
-				font-size: remCalc(14px);
-				color: lighten($black, (100% - 87%));
-				height: remCalc(48px);
-				line-height: remCalc(48px);
-			}
-		}
+	.sc-divider {
+		// https://material.google.com/components/dividers.html#dividers-types-of-dividers
+		height: remCalc(1px);
+		// Light theme
+		background: rgba($black, .12);
+		// Black theme
+		// background rgba($white, .12);
 	}
 }
 
@@ -113,7 +100,12 @@ figure {
 	margin: 0;
 
 	img {
-		width: 100%;
+		max-width: 100%;
 	}
+}
+
+img {
+	height: auto;
+	max-width: 100%;
 }
 

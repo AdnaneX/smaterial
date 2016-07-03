@@ -5,12 +5,55 @@
  **************************************/
 
 input[type="checkbox"] {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-o-appearance: none;
+	background: transparent;
+	border: remCalc(2px) solid lighten($black, (100% - 54%)); //rgba($black, .54)
+	width: remCalc(14px);
+	height: remCalc(14px);
+	vertical-align: middle;
+	cursor: pointer;
+	outline: none;
+	z-index: 1;
+	@include border-radius(remCalc(2px));
+	@include transition(border $transition-small-duration $basic-transition unquote(',') background $transition-small-duration $basic-transition);
+
+	&:after {
+		content: '';
+		position: absolute;
+		font-family: 'Material Icons';
+		@include transition(content $transition-large-duration $basic-transition);
+	}
+
+	&:checked {
+		border: remCalc(2px) solid $main-color; // rgba($main-color, 1)
+		background: $main-color; // rgba($main-color, 1)
+
+		&:after {
+			color: $white;
+			content: 'checkbox';
+		}
+	}
+
+	&:before {
+		@include border-radius(50%);
+		background: rgba($main-color, .1);
+		position: absolute;
+	}
+
+	&:disabled {
+		border: remCalc(2px) solid lighten($black, (100% - 26%)); // rgba($black, .26)
+
+		&:checked {
+			background: lighten($black, (100% - 26%)); // rgba($black, .26)
+		}
+	}
+
 	&.sc-checkbox {
 		display: none;
 
 		+ label {
-			position: relative;
-
 			&:before {
 				font-family: 'Material Icons';
 				display: inline-block;
@@ -21,8 +64,7 @@ input[type="checkbox"] {
 				line-height: $checkbox-size;
 				margin-right: $checkbox-margin;
 				color: $checkbox-color;
-				z-index: 2;
-				position: inherit;
+				@include transition(content $transition-small-duration $basic-transition);
 			}
 		}
 
@@ -32,33 +74,13 @@ input[type="checkbox"] {
 					content: 'check_box';
 					color: $checkbox-color-checked;
 				}
-
-
-				@media #{$medium-down} {
-					&:after {
-						content: '';
-						background: $selection-radial-color;
-						width: $selection-radial-size;
-						height: $selection-radial-size;
-						left: -0.5rem;
-						position: absolute;
-						@include border-radius(50%);
-						z-index: 1;
-					}
-				}
-			}
-		}
-
-		&:focus {
-			+ label {
-
 			}
 		}
 
 		&:disabled {
 			+ label {
 				&:before {
-			 		color: $checkbox-disabled-color;
+					color: $checkbox-disabled-color;
 				}
 			}
 
@@ -88,6 +110,7 @@ input[type="radio"] {
 				vertical-align: middle;
 				line-height: $radio-size;
 				margin-right: $radio-margin;
+				@include transition(content $transition-small-duration $basic-transition unquote(',') color $transition-small-duration $basic-transition);
 			}
 		}
 
@@ -129,7 +152,7 @@ input[type="radio"] {
 		@include border-radius(remCalc(14px));
 		position: relative;
 		vertical-align: middle;
-		@include transition(background 300ms ease-in-out);
+		@include transition(background $transition-small-duration $basic-transition);
 
 		// Thumb
 		&:after {
@@ -141,7 +164,7 @@ input[type="radio"] {
 			position: absolute;
 			@extend .sc-z1;
 			top: remCalc(-5px);
-			@include transition(background 300ms ease-in-out);
+			@include transition(background $transition-small-duration $basic-transition unquote(',') right $transition-small-duration $basic-transition);
 		}
 	}
 

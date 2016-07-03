@@ -47,9 +47,11 @@
     - Add more JavaScript functionality (open / close by JavaScript call)
 - Progress
     - Fix buffer animation
+    - Circle progress
 - Selection
     - Add hovers
     - Add radials for mobile
+    - Add support for FireFox and IE / Edge
 - Settings
     - Make variables consistent
     - Give variables a clearer name of what they do
@@ -61,7 +63,6 @@
 - Navigation drawer
     - Make profile dropdown button
     - Fix margin right on left menu for mobile. 56px between screen edge and menu
-    - Fix shadow
 - Slider
     - Add radials
     - Colors should be rgba but creates weird behaviour (like showing track trough thumb)

@@ -68,14 +68,15 @@ $link-hover: $secondary-color;
 /**************************************
  * Global
  **************************************/
-$select-background: $cyan-a200;
+$select-background: $cyan-a200; // Default $cyan-a200
 $basic-transition: cubic-bezier(0.4, 0.0, 0.2, 1); // Default cubic-bezier(0.4, 0.0, 0.2, 1)
 $element-enter-transition: cubic-bezier(0.0, 0.0, 0.2, 1); // Default cubic-bezier(0.0, 0.0, 0.2, 1)
 $element-exit-transition: cubic-bezier(0.4, 0.0, 1, 1); // Default cubic-bezier(0.4, 0.0, 1, 1)
 $returning-transition: cubic-bezier(0.0, 0.0, 0.2, 1); // Default cubic-bezier(0.0, 0.0, 0.2, 1)
-$transition-small-duration: 300ms;
-$transition-medium-duration: 390ms;
-$transition-large-duration: 200ms;
+$transition-small-duration: 300ms; // Default 300ms
+$transition-medium-duration: 390ms; // Default 390ms
+$transition-large-duration: 200ms; // Default 200ms
+$background: $white; // Default $white
 
 /**************************************
  * Typography settings
@@ -194,6 +195,7 @@ $appbar-menu-width: 4%; // Default 4%
 $appbar-more-position: absolute; // Default absolute
 $appbar-more-top: remCalc(4px); // Default remCalc(4px)
 $appbar-more-right: $appbar-more-top; // Default remCalc(4px) / $appbar-more-top
+
 /**************************************
  * Bottom navigation
  **************************************/
@@ -232,6 +234,37 @@ $bottom-shifting-icon-size: $bottom-nav-icon-size; // Default $bottom-nav-icon-s
 $bottom-shifting-padding: remCalc(16px) 0; // Default remCalc(16px) 0
 $bottom-shifting-padding-active: remCalc(6px) 0 remCalc(10px) 0; // Default remCalc(6px) 0 remCalc(10px) 0
 $bottom-shifting-font-size: remCalc(14px); // Default remCalc(14px)
+
+/**************************************
+ * Bottom sheet
+ **************************************/
+$bottom-sheet-small-transition: height $transition-small-duration $returning-transition; // Default height $transition-small-duration $returning-transition
+$bottom-sheet-medium-transition: height $transition-medium-duration $returning-transition; // Default height $transition-medium-duration $returning-transition
+$bottom-sheet-large-transition: height $transition-large-duration $returning-transition; // Default height $transition-large-duration $returning-transition
+$bottom-sheet-position: fixed; // Default fixed
+$bottom-sheet-background: $white;
+$bottom-sheet-z-index: 4; // Default 4
+$bottom-sheet-padding: remCalc(8px) remCalc(16px); // Default remCalc(8px) remCalc(16px)
+$bottom-sheet-font-weight: 400; // Default 400
+$bottom-sheet-font-size: remCalc(16px); // Default remCalc(16px)
+
+$bottom-sheet-icons-margin: remCalc(32px); // Default renCalc(32px)
+$bottom-sheet-icons-size: remCalc(24px); // Default remCalc(24px)
+$bottom-sheet-icons-color: lighten($black, 100% - 54%); // Default lighten($black, 100% - 54%)
+
+// Header
+$bottom-sheet-header-padding: 0 remCalc(16px) remCalc(8px) remCalc(16px); // Default 0 remCalc(16px) remCalc(8px) remCalc(16px)
+$bottom-sheet-header-height: remCalc(56px); // Default remCalc(56px)
+$bottom-sheet-header-font-color: lighten($black, 100% - 54%); // Default lighten($black, 100% - 54%)
+$bottom-sheet-header-divider-margin: remCalc(7px) remCalc(-16px) remCalc(8px) remCalc(-16px); // Default remCalc(7px) remCalc(-16px) remCalc(8px) remCalc(-16px)
+
+// Grid
+$bottom-sheet-grid-padding: remCalc(16px) remCalc(24px) remCalc(24px) remCalc(24px); // Default remCalc(16px) remCalc(24px) remCalc(24px) remCalc(24px)
+$bottom-sheet-grid-height: remCalc(64px); // Default remCalc(64px)
+$bottom-sheet-grid-margin: 0 0 remCalc(16px) 0; // Default 0 0 remCalc(16px) 0
+$bottom-sheet-grid-last-margin: 0; // Default 0
+$bottom-sheet-grid-icon-size: remCalc(48px); // Default remCalc(48px)
+$bottom-sheet-grid-content-size: remCalc(16px); // Default remCalc(16px)
 
 /**************************************
  * Buttons

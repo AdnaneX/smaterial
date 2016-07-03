@@ -22,6 +22,12 @@ $(document).ready(function() {
 		}
 	});
 
-	// Search trigger functions
 
 });
+// Search trigger functions
+var $searchTrigger = document.getElementsByClassName('sc-search-trigger'),
+	$searchBox = document.getElementsByClassName('sc-search-input');
+
+$searchTrigger.onclick = function() {
+	$searchBox.style.display = 'block';
+}

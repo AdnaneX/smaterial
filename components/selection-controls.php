@@ -5,7 +5,7 @@ $keywords = 'material design, smaterial, selection controls, checkbox, radiobutt
 
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>
-<section class="sc-row">
+<section class="sc-row" xmlns="http://www.w3.org/1999/html">
 	<h2>Selection controls usage</h2>
 
 	<p class="sc-col sc-s12 sc-m6">
@@ -17,22 +17,26 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 <section class="sc-row">
 	<h3>Checkbox</h3>
 
+	<p class="sc-col sc-xs4 sc-s12 sc-m6">
+		Checkboxes can be used without the need of using additional classes. They support the Material Design as default styling.
+		Checkboxes can also be used on it's own so there is also no need to add a label.
+		To accommodate for other browsers than Chrome you do need to add a class <code class="language-css">.sc-checkbox</code>.
+	</p>
+
 	<p class="sc-col sc-s12 sc-m6">
-		<input type="checkbox" id="example" class="sc-checkbox"> <label for="example">Example</label>
-		<input type="checkbox" id="example3" class="sc-checkbox" disabled> <label for="example3">Example3</label>
-		<input type="checkbox" id="example6" class="sc-checkbox" disabled checked> <label for="example6">Example6</label>
+		<input type="checkbox" id="test"><label for="test">Test</label>
+		<input type="checkbox" id="test1" checked><label for="test1">Test1</label>
+		<input type="checkbox" id="example" disabled><label for="example">Example</label>
+		<input type="checkbox" id="example0" disabled checked><label for="example0">Example1</label>
+		<input type="checkbox" id="test2" class="sc-checkbox"><label for="test2">Other browser</label>
 	</p>
 
 	<pre class="language-html sc-col sc-s12 sc-m6">
 		<code>
-&lt;input type="checkbox" id="example" class="sc-checkbox">
-&lt;label for="example">Example&lt;/label>
-
-&lt;input type="checkbox" id="example" class="sc-checkbox" disabled>
-&lt;label for="example">Example&lt;/label>
-
-&lt;input type="checkbox" id="example" class="sc-checkbox" disabled checked>
-&lt;label for="example">Example&lt;/label>
+&lt;input type="checkbox" id="test">&lt;label for="test">Test&lt;/label>
+&lt;input type="checkbox" id="test1" checked>&lt;label for="test1">Test1&lt;/label>
+&lt;input type="checkbox" id="example" disabled>&lt;label for="example">Example&lt;/label>
+&lt;input type="checkbox" id="example1" disabled checked>&lt;label for="example1">Example1&lt;/label>
 		</code>
 	</pre>
 </section>

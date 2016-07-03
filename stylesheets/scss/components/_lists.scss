@@ -1,0 +1,28 @@
+/**************************************
+ * Lists
+ *
+ * https://material.google.com/components/lists.html#
+ **************************************/
+
+ol, ul {
+	padding: 0;
+	margin: 0;
+	list-style-stype: none;
+
+	li {
+		font-weight: 400;
+		font-size: remCalc(14px);
+		color: lighten($black, (100% - 87%));
+		height: auto;
+		line-height: remCalc(48px);
+		padding: 0 remCalc(16px);
+
+		a {
+			font-weight: 400;
+			font-size: remCalc(14px);
+			color: lighten($black, (100% - 87%));
+			height: remCalc(48px);
+			line-height: remCalc(48px);
+		}
+	}
+}

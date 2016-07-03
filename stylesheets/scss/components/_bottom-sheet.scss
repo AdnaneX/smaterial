@@ -6,26 +6,30 @@
 
 .sc-bottom-sheet {
 	@extend .sc-z16;
-	@include transition(height $transition-small-duration $returning-transition);
-	position: fixed;
+	@include transition($bottom-sheet-small-transition);
+	position: $bottom-sheet-position;
 	background: $white;
-    z-index: 4;
+    z-index: $bottom-sheet-z-index;
 	bottom: 0;
 	left: 0;
 	right: 0;
 	height: auto;
 	overflow: hidden;
-	padding: remCalc(8px) remCalc(16px);
-	font-weight: 400;
-	font-size: remCalc(16px);
+	padding: $bottom-sheet-padding;
+	font-weight: $bottom-sheet-font-weight;
+	font-size: $bottom-sheet-font-size;
 	display: none;
+	width: 100%;
+	margin: 0 auto;
 
-	@media #{$medium-up} {
-		@include transition(height $transition-medium-duration $returning-transition);
+	@media #{$medium-only} {
+		@include transition($bottom-sheet-medium-transition);
+		width: 60%;
 	}
 
 	@media #{$large-up} {
-		@include transition(height $transition-large-duration $returning-transition);
+		@include transition($bottom-sheet-large-transition);
+		width: 40%;
 	}
 
 	ul {
@@ -35,48 +39,46 @@
 
 		li {
 			padding: 0;
-			font-weight: 400;
-			font-size: remCalc(16px);
+			font-weight: $bottom-sheet-font-weight;
+			font-size: $bottom-sheet-font-size;
 
 			.material-icons {
 				vertical-align: middle;
 				height: auto;
-				margin-right: remCalc(32px);
-				font-size: remCalc(24px);
-				color: lighten($black, 100% - 54%);
+				margin-right: $bottom-sheet-icons-margin;
+				font-size: $bottom-sheet-icons-size;
+				color: $bottom-sheet-icons-color;
 			}
 		}
 	}
 
 	&-header {
-		padding: 0 remCalc(16px) remCalc(8px) remCalc(16px);
+		padding: $bottom-sheet-header-padding;
 
 		ul {
 			li {
 				&.sc-header {
-					height: remCalc(56px);
-					color: lighten($black, 100% - 54%);
+					height: $bottom-sheet-header-height;
+					color: $bottom-sheet-header-font-color;
 				}
 
 				&.sc-divider {
-					height: remCalc(1px);
-					background: lighten($black, 100% - 54%);
-					margin: remCalc(7px) remCalc(-16px) remCalc(8px) remCalc(-16px);
+					margin: $bottom-sheet-header-divider-margin;
 				}
 			}
 		}
 	}
 
 	&-grid {
-		padding: remCalc(16px) remCalc(24px) remCalc(24px) remCalc(24px);
+		padding: $bottom-sheet-grid-padding;
 
 		ul {
 			li {
-				height: remCalc(64px);
-				margin-bottom: remCalc(16px);
+				height: $bottom-sheet-grid-height;
+				margin-bottom: $bottom-sheet-grid-margin;
 
 				&:last-of-type {
-					margin-bottom: 0;
+					margin-bottom: $bottom-sheet-grid-last-margin;
 				}
 
 				.sc-grid-item {
@@ -89,26 +91,52 @@
 						.material-icons {
 							vertical-align: middle;
 							height: auto;
-							font-size: remCalc(48px);
-							width: remCalc(48px);
+							font-size: $bottom-sheet-grid-icon-size;
+							width: $bottom-sheet-grid-icon-size;
 							margin: 0;
 						}
 					}
 
 					.sc-grid-content {
 						@extend .sc-center;
-						height: remCalc(16px);
-						line-height: remCalc(16px);
+						height: $bottom-sheet-grid-content-size;
+						line-height: $bottom-sheet-grid-content-size;
 					}
 				}
 			}
 		}
 	}
 
+	/*
 	&-music {
+		//@extend .sc-row;
+		padding: 0;
+		height: remCalc(48px);
+		//margin: 0;
+
 		figure {
-			padding: 0;
-			margin: 0;
+			//@extend .sc-col, .sc-xs1, .sc-s2, .sc-m1;
+			padding: 0 !important;
+			margin: remCalc(-4px) 0 0 0;
+			width: remCalc(50px);
+			height: remCalc(50px);
+			float: left;
+			position: fixed;
 		}
-	}
+
+		.sc-info {
+			float: left;
+			margin: remCalc(2px) 0 0 remCalc(10px);
+			//@extend .sc-col, .sc-xs2, .sc-s4, .sc-m8;
+
+			.sc-band, .sc-track {
+				width: 50%;
+				//@extend .sc-col, .sc-xs4, .sc-s12;
+			}
+
+			.sc-band {
+				font-size: remCalc(20px);
+			}
+		}
+	} */
 }
