@@ -1,5 +1,20 @@
 # SMaterial
 
+## Contributing
+### Requirements
+In order to contribute you need to have a installed a couple of programs. The programs used to create SMaterial are the following:
+Git, SASS, Gulp. Want to know how to install those programs I would advise you to visit the corresponding website.
+
+### Getting started
+To get up and running you need to fork this repository to your own git.
+After downloading the your newly created repository run "npm install" in your console / terminal.
+This will install files listed in package.json.
+After all files have installed you can just run "grunt" in your console / terminal.
+This command will compress js and scss files.
+
+### Creating a pull request
+After making your changes please describe what you have changed. This will speed up the process of merging your PR.
+
 ## DONE
 
 - Tooltips
@@ -27,6 +42,7 @@
     - Add screen width detect to js
     - Fix positions of <header>, <main>, <aside> to be more compatible with for example WordPress (<aside> goes over <header>, <main> slides up under <header>)
     - Add default styles for various elements (eg. buttons, slider)
+    - Add support for IE and FireFox
 - Appbar
     - Add "more menu" styling
     - Add "more menu" functions
@@ -51,11 +67,10 @@
 - Selection
     - Add hovers
     - Add radials for mobile
-    - Add support for FireFox and IE / Edge
 - Settings
     - Make variables consistent
     - Give variables a clearer name of what they do
-    - Check all colors for (lighten() or rgba())
+    - Check all colors for (lighten() / darken() or rgba()) where possible
     - Divide variables for components
     - Add comments for divided variables
     - Add settings in documentation
@@ -90,4 +105,4 @@
 - Normalize
 - Gulp
 - Bower
-- Prism.js (not part of SMaterial only used to display code in website)
+- Prism.js (not part of SMaterial only used to display code in documentation)

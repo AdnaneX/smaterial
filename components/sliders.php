@@ -12,6 +12,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		There are a couple of different sliders you can use with different styling.
 		There is the default slider and the slider which adds more elements with JS.
 		The default slider is made to only use the HTML5 <code class="language-html">&lt;input type="range"></code>.
+		The sliders look the best in Chrome. FireFox and IE / Edge are still a work in process.
 	</p>
 
 	<p class="sc-col sc-s12 sc-m6">

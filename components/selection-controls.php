@@ -29,6 +29,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		<input type="checkbox" id="example" disabled><label for="example">Example</label>
 		<input type="checkbox" id="example0" disabled checked><label for="example0">Example1</label>
 		<input type="checkbox" id="test2" class="sc-checkbox"><label for="test2">Other browser</label>
+		<input type="checkbox" id="test3" class="sc-checkbox" checked disabled><label for="test3">Other browser</label>
 	</p>
 
 	<pre class="language-html sc-col sc-s12 sc-m6">

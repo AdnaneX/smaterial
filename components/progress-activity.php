@@ -62,7 +62,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	<h3>Buffer</h3>
 
 	<p class="sc-col sc-s12 sc-m6">
-
+		The buffer progressbar is still a work in process.
 	</p>
 
 	<div class="sc-col sc-s12 sc-m6">
@@ -90,7 +90,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	<h3>Circular</h3>
 
 	<p class="sc-col sc-s12 sc-m6">
-
+		Work in process.
 	</p>
 
 	<div class="sc-col sc-s12 sc-m6">
