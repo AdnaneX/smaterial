@@ -57,15 +57,7 @@ input[type="checkbox"] {
 			height: remCalc(28px);
 			line-height: remCalc(28px);
 
-			&:after {
-				@include transition(content $transition-large-duration $basic-transition);
-				content: '';
-				position: absolute;
-				font-family: 'Material Icons';
-				left: 0;
-				border: none;
-			}
-
+			// Border
 			&:before {
 				@include border-radius(remCalc(2px));
 				@include transition(border $transition-small-duration $basic-transition unquote(',') background $transition-small-duration $basic-transition);
@@ -81,6 +73,16 @@ input[type="checkbox"] {
 				top: remCalc(7px);
 				box-sizing: border-box;
 				left: 0;
+			}
+
+			// Check
+			&:after {
+				@include transition(content $transition-large-duration $basic-transition);
+				content: '';
+				position: absolute;
+				font-family: 'Material Icons';
+				left: 0;
+				border: none;
 			}
 		}
 
@@ -123,28 +125,97 @@ input[type="checkbox"] {
 }
 
 input[type="radio"] {
+	@include border-radius(50%);
+	@include transition(border $transition-small-duration $basic-transition);
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-o-appearance: none;
+	border: remCalc(2px) solid lighten($black, (100% - 54%));
+	background: transparent;
+	width: remCalc(14px);
+	height: remCalc(14px);
+	outline: none;
+	position: relative;
+	cursor: pointer;
+
+	&:after {
+		@include transition(background $transition-small-duration $basic-transition);
+		@include border-radius(50%);
+		position: absolute;
+		content: '';
+		border: none;
+		background: transparent;
+		width: remCalc(7px);
+		height: remCalc(7px);
+		top: remCalc(2px);
+		left: remCalc(2px);
+	}
+
+	&:checked {
+		border: remCalc(2px) solid $main-color;
+
+		&:after {
+			background: $main-color;
+		}
+	}
+
+	&:disabled {
+		border: remCalc(2px) solid lighten($black, (100% - 26%));
+
+		&:checked {
+			&:after {
+				background: lighten($black, (100% - 26%));
+			}
+		}
+	}
+
 	&.sc-radio {
-		display: none;
+		position: absolute;
+		opacity: 0;
+		margin: remCalc(7px) 0 0 0;
 
 		+ label {
+			position: relative;
+			padding-left: remCalc(21px);
+			cursor: pointer;
+			display: inline-block;
+			height: remCalc(28px);
+			line-height: remCalc(28px);
+
 			&:before {
-				font-family: 'Material Icons';
-				display: inline-block;
-				content: 'radio_button_unchecked';
-				width: $radio-size;
-				height: $radio-size;
-				vertical-align: middle;
-				line-height: $radio-size;
-				margin-right: $radio-margin;
-				@include transition(content $transition-small-duration $basic-transition unquote(',') color $transition-small-duration $basic-transition);
+				@include border-radius(50%);
+				@include transition(border $transition-small-duration $basic-transition);
+				border: remCalc(2px) solid lighten($black, (100% - 54%));
+				background: transparent;
+				width: remCalc(14px);
+				height: remCalc(14px);
+				position: absolute;
+				content: '';
+				left: 0;
+				top: remCalc(7px);
+			}
+
+			&:after {
+				@include transition(background $transition-small-duration $basic-transition);
+				@include border-radius(50%);
+				content: '';
+				background: transparent;
+				width: remCalc(9px);
+				height: remCalc(9px);
+				top: remCalc(11px);
+				left: remCalc(4px);
+				position: absolute;
 			}
 		}
 
 		&:checked {
 			+ label {
 				&:before {
-					content: 'radio_button_checked';
-					color: $radio-color;
+					border: remCalc(2px) solid $main-color;
+				}
+
+				&:after {
+					background: $main-color;
 				}
 			}
 		}
@@ -152,15 +223,14 @@ input[type="radio"] {
 		&:disabled {
 			+ label {
 				&:before {
-					color: $radio-disabled-color;
+					border: remCalc(2px) solid lighten($black, (100% - 26%));
 				}
 			}
 
 			&:checked {
 				+ label {
-					&:before {
-						content: 'radio_button_checked';
-						color: $radio-disabled-color;
+					&:after {
+						background: lighten($black, (100% - 26%));
 					}
 				}
 			}
