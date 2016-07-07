@@ -137,8 +137,6 @@ $file = str_replace( '.php', '', $_SERVER['PHP_SELF'] );
 						</ul>
 					</li>
 					<li><a href="/showroom.php" <?php echo ( $file == '/showroom' ? 'class="sc-active"' : '' ); ?>><i class="material-icons">photo_album</i> Showroom</a></li>
-					<li class="sc-no-hover">
-					</li>
 				</ul>
 			</nav>
 		</aside>

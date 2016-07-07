@@ -19,7 +19,7 @@ gulp.task('app', function() {
 			.pipe(concat('app.min.js'))
 			.pipe(uglify())
 		.pipe(sourcemaps.write('sources'))
-		.pipe(gulp.dest('js'))
+		.pipe(gulp.dest('js'));
 });
 
 // Compress vendor.js

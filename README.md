@@ -7,10 +7,27 @@ Git, SASS, Gulp. Want to know how to install those programs I would advise you t
 
 ### Getting started
 To get up and running you need to fork this repository to your own git.
-After downloading the your newly created repository run "npm install" in your console / terminal.
+After downloading the your newly created repository run `npm install` in your console / terminal.
 This will install files listed in package.json.
-After all files have installed you can just run "grunt" in your console / terminal.
+After all files have installed you can just run `grunt` in your console / terminal.
 This command will compress js and scss files.
+
+### PHP files
+The website uses PHP files to make working with the menu, headers and footers a lot easier.
+
+To use PHP file you'll need to have a localhost or other server.
+I would advice to use a localhost (PHP build in server, wamp, xamp or usbwebserver) since this isn't online and therefor private to you only.
+
+After that all you need to do is change `define( 'TEST', false );` to `define( 'TEST', true );`. You can find this in
+`includes/header.php`. This makes sure that some files aren't loaded for example Google Analytics.
+
+#### Don't like to use PHP
+If you don't like to use PHP there is a option to use HTML but it requires a bit of work.
+You have to copy all HTML from `includes/header.html` and replace all PHP code of the file you want to change.
+The PHP code you have to delete are the first 7 lines.
+After replacing the header you need to replace the footer as well.
+The footer is everything from `includes/footer.html` and you need to replace it with the last 2 lines of the file.
+You also have to rename / copy the working file to a `*.html` file.
 
 ### Creating a pull request
 After making your changes please describe what you have changed. This will speed up the process of merging your PR.
