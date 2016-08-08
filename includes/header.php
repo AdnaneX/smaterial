@@ -4,7 +4,7 @@ define( 'TEST', false );
 $file = str_replace( '.php', '', $_SERVER['PHP_SELF'] );
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
 		<title><?= $title; ?> | SMaterial</title>
 
@@ -16,7 +16,6 @@ $file = str_replace( '.php', '', $_SERVER['PHP_SELF'] );
 
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<meta charset="UTF-8">
 		<meta name="language" content="EN">
 		<meta name="author" content="Derkjan Super">
 		<meta name="description" content="<?= $description; ?>">
@@ -94,8 +93,8 @@ $file = str_replace( '.php', '', $_SERVER['PHP_SELF'] );
 							<a href="#"><i class="material-icons">arrow_drop_up</i></a>
 						</div>
 					</li>
-					<li><a href="/"><i class="material-icons" <?php echo ( $file == '/index' ? 'class="sc-active"' : '' ); ?>>home</i> Home</a></li>
-					<li><a href="/getting-started.php" <?php echo ( $file == '/getting-started' ? 'class="sc-active"' : '' ); ?>><i class="material-icons">flag</i> Getting started</a></li>
+					<li><a href="/" <?php echo ( $file == '/index' || $file == '/' ? 'class="sc-active"' : '' ); ?>><i class="material-icons <?php echo ( $file == '/index' || $file == '/' ? 'sc-active' : '' ); ?>">home</i> Home</a></li>
+					<li><a href="/getting-started.php" <?php echo ( $file == '/getting-started' ? 'class="sc-active"' : '' ); ?>><i class="material-icons <?php echo ( $file == '/getting-started' ? 'sc-active' : '' ); ?>">flag</i> Getting started</a></li>
 					<li class="sc-drawer-dropdown">Style <i class="material-icons sc-right">expand_less</i>
 						<ul>
 							<li><a href="/style/color.php" <?php echo ( $file == '/style/color' ? 'class="sc-active"' : '' ); ?>>Color</a></li>

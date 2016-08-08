@@ -6,7 +6,7 @@ $keywords = 'material design, smaterial, SCSS mixins';
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>
 <section class="sc-row">
-	<h2>SCSS mixins</h2>
+	<h2>SCSS mixins usage</h2>
 
 	<p class="sc-col sc-s12 sc-m6">
 		The mixins are made to help you with for example prefixes.
@@ -27,8 +27,8 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 
 	<pre class="language-css sc-col sc-s12 sc-m6">
 		<code>
-@include box-shadow(0 16px 32px 0 rgba(0,0,0,0.27706));
-@include box-shadow(0 16px 32px 0 rgba(0,0,0,0.27706) unquote(',') 0 12px 32px 0 rgba(0,0,0,0.224));
+@include box-shadow(0 16px 32px 0 rgba(0, 0, 0, 0.27706));
+@include box-shadow(0 16px 32px 0 rgba(0, 0, 0, 0.27706) unquote(',') 0 12px 32px 0 rgba(0, 0, 0, 0.224));
 		</code>
 	</pre>
 </section>
@@ -37,10 +37,10 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	<h3>border-radius()</h3>
 
 	<p class="sc-col sc-s12 sc-m6">
-		The <code class="language-css">border-radius()</code> mixins is use to add all prefixes for the border-radius.
+		The <code class="language-css">border-radius()</code> mixin is used to add all prefixes for the border-radius.
 	</p>
 
-	<pre class="language-css sc-s12 sc-m6">
+	<pre class="language-css sc-col sc-s12 sc-m6">
 		<code>
 @include border-radius(50%);
 		</code>
@@ -51,10 +51,10 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	<h3>box-sizing()</h3>
 
 	<p class="sc-col sc-s12 sc-m6">
-		The <code class="language-css">box-sizing()</code> mixins is use to add all prefixes for the box-sizing.
+		The <code class="language-css">box-sizing()</code> mixin is used to add all prefixes for the box-sizing.
 	</p>
 
-	<pre class="language-css sc-s12 sc-m6">
+	<pre class="language-css sc-col sc-s12 sc-m6">
 		<code>
 @include box-sizing(border-box);
 		</code>
@@ -65,10 +65,10 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	<h3>transition()</h3>
 
 	<p class="sc-col sc-s12 sc-m6">
-		The <code class="language-css">transition()</code> mixins is use to add all prefixes for the transition.
+		The <code class="language-css">transition()</code> mixin is used to add all prefixes for the transition.
 	</p>
 
-	<pre class="language-css sc-s12 sc-m6">
+	<pre class="language-css sc-col sc-s12 sc-m6">
 		<code>
 @include transition(height 300ms ease-in-out);
 		</code>
@@ -79,10 +79,10 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	<h3>transform()</h3>
 
 	<p class="sc-col sc-s12 sc-m6">
-		The <code class="language-css">transform()</code> mixins is use to add all prefixes for the transform.
+		The <code class="language-css">transform()</code> mixin is used to add all prefixes for the transform.
 	</p>
 
-	<pre class="language-css sc-s12 sc-m6">
+	<pre class="language-css sc-col sc-s12 sc-m6">
 		<code>
 @include transform(rotate(7deg));
 		</code>
@@ -93,10 +93,10 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	<h3>animation()</h3>
 
 	<p class="sc-col sc-s12 sc-m6">
-		The <code class="language-css">animation()</code> mixins is use to add all prefixes for the animation.
+		The <code class="language-css">animation()</code> mixin is used to add all prefixes for the animation.
 	</p>
 
-	<pre class="language-css sc-s12 sc-m6">
+	<pre class="language-css sc-col sc-s12 sc-m6">
 		<code>
 @include animation(myMove 5s infinite);
 		</code>
@@ -112,7 +112,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		Between the round brackets "<code class="language-css">()</code>" you set the name, between the curly brackets "<code class="language-css">{}</code>" you set what needs to be done.
 	</p>
 
-	<pre class="language-css sc-s12 sc-m6">
+	<pre class="language-css sc-col sc-s12 sc-m6">
 		<code>
 @include keyframes(myMove) {
   0%, 50%, 100% {
@@ -123,6 +123,92 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
     @include transform(scale(.98) translateZ(0));
   }
 }
+		</code>
+	</pre>
+</section>
+
+<section class="sc-row">
+	<h3>border-top-left-radius</h3>
+
+	<p class="sc-col sc-s12 sc-m6">
+		The <code class="language-css">border-top-left-radius()</code> mixin is used to add all prefixes to the border radius.
+	</p>
+
+	<pre class="language-css sc-col sc-s12 sc-m6">
+		<code>
+@include border-top-left-radius(10px);
+		</code>
+	</pre>
+</section>
+
+<section class="sc-row">
+	<h3>border-top-right-radius</h3>
+
+	<p class="sc-col sc-s12 sc-m6">
+		The <code class="language-css">border-top-right-radius()</code> mixin is used to add all prefixes to the border radius.
+	</p>
+
+	<pre class="language-css sc-col sc-s12 sc-m6">
+		<code>
+@include border-top-right-radius(10px);
+		</code>
+	</pre>
+</section>
+
+<section class="sc-row">
+	<h3>border-radius-top</h3>
+
+	<p class="sc-col sc-s12 sc-m6">
+		The <code class="language-css">border-radius-top()</code> mixin is used to add all prefixes to the top border radius.
+		This mixing includes both <code class="language-css">border-top-right-radius()</code> and <code class="language-css">border-top-left-radius()</code>
+	</p>
+
+	<pre class="language-css sc-col sc-s12 sc-m6">
+		<code>
+@include border-radius-top(10px);
+		</code>
+	</pre>
+</section>
+
+<section class="sc-row">
+	<h3>border-bottom-left-radius</h3>
+
+	<p class="sc-col sc-s12 sc-m6">
+		The <code class="language-css">border-bottom-left-radius()</code> mixin is used to add all prefixes to the border radius.
+	</p>
+
+	<pre class="language-css sc-col sc-s12 sc-m6">
+		<code>
+@include border-bottom-left-radius(10px);
+		</code>
+	</pre>
+</section>
+
+<section class="sc-row">
+	<h3>border-bottom-right-radius</h3>
+
+	<p class="sc-col sc-s12 sc-m6">
+		The <code class="language-css">border-bottom-right-radius()</code> mixin is used to add all prefixes to the border radius.
+	</p>
+
+	<pre class="language-css sc-col sc-s12 sc-m6">
+		<code>
+@include border-bottom-right-radius(10px);
+		</code>
+	</pre>
+</section>
+
+<section class="sc-row">
+	<h3>border-radius-bottom</h3>
+
+	<p class="sc-col sc-s12 sc-m6">
+		The <code class="language-css">border-radius-bottom()</code> mixin is used to add all prefixes to the bottom border radius.
+		This mixing includes both <code class="language-css">border-bottom-right-radius()</code> and <code class="language-css">border-bottom-left-radius()</code>.
+	</p>
+
+	<pre class="language-css sc-col sc-s12 sc-m6">
+		<code>
+@include border-radius-bottom(10px);
 		</code>
 	</pre>
 </section>

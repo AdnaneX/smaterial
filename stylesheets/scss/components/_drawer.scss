@@ -21,7 +21,7 @@
 		@media #{$medium-down} {
 			width:$drawer-small-width;
 			max-width: $drawer-small-max-width;
-			margin-right: $drawer-small-margin-right;
+			right: $drawer-small-margin-right;
 			display: none;
 		}
 
@@ -192,7 +192,7 @@
 				}
 
 				.sc-drawer-profile-info {
-					@extend .sc-col, .sc-s8;
+					@extend .sc-col, .sc-xs3, .sc-s8;
 					height: $drawer-profile-info-total-height;
 
 					> div {
@@ -215,7 +215,7 @@
 				}
 
 				.sc-drawer-profile-button {
-					@extend .sc-col, .sc-s4;
+					@extend .sc-col, .sc-xs1, .sc-s4;
 					height: $drawer-profile-info-total-height;
 
 					a {

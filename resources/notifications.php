@@ -1,7 +1,7 @@
 <?php
 $title = 'Notifications';
 $description = 'Easy to use notifications in your SMaterial project';
-$keywords = 'material design, smaterial, notifications';
+$keywords = 'material design, smaterial, notifications function';
 
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>

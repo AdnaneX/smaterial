@@ -42,7 +42,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	</pre>
 </section>
 
-<section class="sc-row">
+<section class="sc-row" id="radio">
 	<h2>Radio buttons</h2>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">

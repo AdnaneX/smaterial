@@ -108,6 +108,10 @@ button, input[type="button"], input[type="reset"], input[type="submit"], a {
 		&-disabled, &:disabled {
 			background: none;
 			color: $flat-disabled-color;
+
+			&:hover {
+				color: $flat-disabled-color;
+			}
 		}
 	}
 }

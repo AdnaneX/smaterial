@@ -119,6 +119,8 @@ After making your changes please describe what you have changed. This will speed
     - Add default text field
 - List
     - Create separate file for list styling
+- Notifications
+    - Add notifications styling: https://material.google.com/patterns/notifications.html
 - Normalize
 - Gulp
 - Bower

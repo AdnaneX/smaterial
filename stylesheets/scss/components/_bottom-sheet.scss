@@ -75,10 +75,10 @@
 		ul {
 			li {
 				height: $bottom-sheet-grid-height;
-				margin-bottom: $bottom-sheet-grid-margin;
+				margin: $bottom-sheet-grid-margin;
 
 				&:last-of-type {
-					margin-bottom: $bottom-sheet-grid-last-margin;
+					margin: $bottom-sheet-grid-last-margin;
 				}
 
 				.sc-grid-item {

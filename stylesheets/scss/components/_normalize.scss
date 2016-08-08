@@ -19,8 +19,7 @@ body {
 		word-wrap: break-word;
 	}
 
-	::-moz-selection { background: $select-background; }
-	::selection { background: $select-background; }
+	::selection, ::-moz-selection { background: $select-background; }
 
 	* {
 		@include box-sizing(border-box);
