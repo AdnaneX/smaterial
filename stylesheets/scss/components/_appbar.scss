@@ -1,0 +1,125 @@
+/**************************************
+ * AppBar
+ *
+ * http://www.google.com/design/spec/layout/structure.html#structure-app-bar
+ * http://www.google.com/design/spec/layout/structure.html#structure-toolbars
+ **************************************/
+
+.sc-appbar {
+	@extend .sc-row;
+	@include material-shadow(4);
+	background: $appbar-background;
+	color: $appbar-text;
+	height: $appbar-small-height;
+	line-height: normal;
+	position: $appbar-position;
+	width: 100%;
+	z-index: $appbar-z-index;
+
+	@media #{$small-up} {
+		height: $appbar-medium-height;
+	}
+
+	@media #{$medium-up} {
+		height: $appbar-large-height;
+	}
+
+	.material-icons {
+		font-size: $appbar-icon-font-size;
+		height: auto;
+		padding: $appbar-icon-small-padding;
+		width: auto;
+
+		@media #{$small-up} {
+			padding: $appbar-icon-medium-padding;
+		}
+	}
+
+	> div {
+		height: $appbar-small-height;
+		padding: 0 !important;
+
+		a {
+			color: $appbar-text;
+			overflow: hidden;
+			position: absolute;
+		}
+
+		@media #{$small-up} {
+			height: $appbar-medium-height;
+		}
+
+		@media #{$medium-up} {
+			height: $appbar-large-height;
+		}
+	}
+
+	.sc-appbar-nav {
+		@extend .sc-col;
+		width: $appbar-nav-width;
+	}
+
+	.sc-appbar-title {
+		@extend .sc-col;
+		padding: $appbar-title-small-padding;
+
+		@media #{$medium-up} {
+			width: $appbar-title-medium-width;
+		}
+
+		width: $appbar-title-small-width;
+		@include font($font-size-title, 0, $font-weight-title, $line-height-title, $appbar-title, $letter-spacing-title);
+
+		@media #{$small-up} {
+			padding: $appbar-title-medium-padding;
+		}
+
+		h1, h2, h3, h4, h5, h6 {
+			line-height: normal;
+			margin: 0;
+			@include font($font-size-title, 0, $font-weight-title, $line-height-title, $appbar-title, $letter-spacing-title);
+			padding: 0;
+		}
+	}
+
+	.sc-appbar-actions {
+		display: none;
+		@extend .sc-col;
+
+		@media #{$medium-up} {
+			width: $appbar-actions-width;
+			display: block;
+		}
+
+		a {
+			float: right;
+			position: relative;
+		}
+
+		.sc-search-input {
+			@include border-radius(rem-calc(2px));
+			background: $white;
+			display: none;
+			position: relative;
+			width: 100%;
+		}
+	}
+
+	.sc-appbar-menu {
+		@extend .sc-col;
+		width: $appbar-menu-width;
+
+		&-more {
+			@include material-shadow(9);
+			background: $white;
+			display: none;
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			position: $appbar-more-position;
+			right: $appbar-more-right;
+			top: $appbar-more-top;
+			width: auto;
+		}
+	}
+}

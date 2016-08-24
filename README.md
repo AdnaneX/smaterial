@@ -41,7 +41,7 @@ After making your changes please describe what you have changed. This will speed
 ## TODO
 
 - Global
-	- Delete class "sc-" prefix to save more than 80kb?
+    - Delete class "sc-" prefix to save more than 80kb?
     - Add black theme support
     - Add variables to settings
     - Add badges
