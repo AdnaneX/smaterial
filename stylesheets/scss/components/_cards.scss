@@ -5,10 +5,10 @@
  **************************************/
 
 .sc-card {
-	@extend .sc-z2;
+	@include material-shadow(2);
 	@include border-radius(2px);
+	margin: rem-calc(4px);
 	width: 100%;
-	margin: remCalc(4px);
 
 	&-basic {
 		&-title {

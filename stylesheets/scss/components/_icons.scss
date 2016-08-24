@@ -7,9 +7,9 @@
 
 .material-icons {
 	font-size: $icon-size;
-	width: $icon-size;
 	height: $icon-size;
 	vertical-align: $icon-align;
+	width: $icon-size;
 
 	/* Support for all WebKit browsers. */
 	-webkit-font-smoothing: antialiased;
@@ -23,19 +23,19 @@
 	font-feature-settings: 'liga';
 
 	&.sc-18 {
-		font-size: remCalc(18px);
+		font-size: rem-calc(18px);
 	}
 
 	&.sc-24 {
-		font-size: remCalc(24px);
+		font-size: rem-calc(24px);
 	}
 
 	&.sc-36 {
-		font-size: remCalc(36px);
+		font-size: rem-calc(36px);
 	}
 
 	&.sc-48 {
-		font-size: remCalc(48px);
+		font-size: rem-calc(48px);
 	}
 }
 

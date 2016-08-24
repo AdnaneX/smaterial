@@ -1,10 +1,10 @@
 .sc-tabs {
-	@extend .sc-z4;
+	@include material-shadow(4);
+	background: $main-color;
+	left: $drawer-width;
 	position: fixed;
 	top: $appbar-small-height;
-	background: $main-color;
 	z-index: 1;
-	left: $drawer-width;
 
 	@media #{$small-up} {
 		top: $appbar-medium-height
@@ -15,66 +15,66 @@
 	}
 
 	.sc-tab {
-		max-width: remCalc(264px);
-		min-width: remCalc(72px);
-		padding: 0 remCalc(12px) remCalc(20px) remCalc(12px);
-		border-bottom: remCalc(2px) solid $main-color;
-		@include transition(border 300ms ease-in-out unquote(',') color 300ms ease-in-out);
-		text-transform: uppercase;
-		text-overflow: ellipsis;
-		word-wrap: break-word;
-		font-size: remCalc(14px);
-		font-weight: 500;
+		border-bottom: rem-calc(2px) solid $main-color;
 		color: rgba($white, .7);
-		height: remCalc(48px);
-		line-height: remCalc(48px);
 		display: block;
 		float: left;
+		@include transition(border 300ms ease-in-out unquote(',') color 300ms ease-in-out);
+		font-size: rem-calc(14px);
+		font-weight: 500;
+		height: rem-calc(48px);
+		line-height: rem-calc(48px);
+		max-width: rem-calc(264px);
+		min-width: rem-calc(72px);
+		padding: 0 rem-calc(12px) rem-calc(20px) rem-calc(12px);
+		text-overflow: ellipsis;
+		text-transform: uppercase;
+		word-wrap: break-word;
 
 		&:hover, &.sc-active {
-			border-bottom: remCalc(2px) solid $white;
+			border-bottom: rem-calc(2px) solid $white;
 			color: $white;
 		}
 
 		@media #{$small-up} {
-			min-width: remCalc(160px);
+			min-width: rem-calc(160px);
 			text-align: center;
 		}
 	}
 
 	.sc-tab-icon {
-		max-width: remCalc(264px);
-		min-width: remCalc(72px);
-		height: remCalc(72px);
-		border-bottom: remCalc(2px) solid $main-color;
-		@include transition(border 300ms ease-in-out unquote(',') color 300ms ease-in-out);
-		text-transform: uppercase;
-		text-overflow: ellipsis;
-		word-wrap: break-word;
-		font-size: remCalc(14px);
-		font-weight: 500;
+		border-bottom: rem-calc(2px) solid $main-color;
 		color: rgba($white, .7);
-		line-height: remCalc(48px);
 		display: block;
 		float: left;
+		@include transition(border 300ms ease-in-out unquote(',') color 300ms ease-in-out);
+		font-size: rem-calc(14px);
+		font-weight: 500;
+		height: rem-calc(72px);
+		line-height: rem-calc(48px);
+		max-width: rem-calc(264px);
+		min-width: rem-calc(72px);
+		text-overflow: ellipsis;
+		text-transform: uppercase;
+		word-wrap: break-word;
 
 		span {
+			padding: rem-calc(10px) 0 rem-calc(16px) 0;
 			width: 100%;
-			padding: remCalc(10px) 0 remCalc(16px) 0;
 		}
 
 		.material-icons {
-			width: remCalc(24px);
-			height: remCalc(24px);
+			height: rem-calc(24px);
+			width: rem-calc(24px);
 		}
 
 		&:hover, &.sc-active {
-			border-bottom: remCalc(2px) solid $white;
+			border-bottom: rem-calc(2px) solid $white;
 			color: $white;
 		}
 
 		@media #{$small-up} {
-			min-width: remCalc(160px);
+			min-width: rem-calc(160px);
 			text-align: center;
 		}
 	}

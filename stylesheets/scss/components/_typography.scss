@@ -6,238 +6,60 @@
  * https://www.google.com/fonts
  **************************************/
 
-@font-face {
-	font-family: "Roboto";
-	src: url('#{$roboto-font-path}Roboto-Thin.ttf');
-	font-weight: 100;
-	font-style: normal;
-}
+// Load requested fonts
+@import './fonts/fonts';
 
-@font-face {
-	font-family: "Roboto";
-	src: url('#{$roboto-font-path}Roboto-ThinItalic.ttf');
-	font-weight: 100;
-	font-style: italic;
+.sc-display-4, h1 {
+	@include font($font-size-display-4, 0, $font-weight-display-4, $line-height-display-4, $font-color-display-4, $letter-spacing-display-4);
 }
-
-@font-face {
-	font-family: "Roboto";
-	src: url('#{$roboto-font-path}Roboto-Light.ttf');
-	font-weight: 300;
-	font-style: normal;
+.sc-display-3, h2 {
+	@include font($font-size-display-3, 0, $font-weight-display-3, $line-height-display-3, $font-color-display-3, $letter-spacing-display-3);
 }
-
-@font-face {
-	font-family: "Roboto";
-	src: url('#{$roboto-font-path}Roboto-LightItalic.ttf');
-	font-weight: 300;
-	font-style: italic;
+.sc-display-2, h3 {
+	@include font($font-size-display-2, 0, $font-weight-display-2, $line-height-display-2, $font-color-display-2, $letter-spacing-display-2);
 }
-
-@font-face {
-	font-family: "Roboto";
-	src: url('#{$roboto-font-path}Roboto-Regular.ttf');
-	font-weight: 400;
-	font-style: normal;
+.sc-display-1, h4 {
+	@include font($font-size-display-1, 0, $font-weight-display-1, $line-height-display-1, $font-color-display-1, $letter-spacing-display-1);
 }
-
-@font-face {
-	font-family: "Roboto";
-	src: url('#{$roboto-font-path}Roboto-Italic.ttf');
-	font-weight: 400;
-	font-style: italic;
+.sc-headline, h5 {
+	@include font($font-size-headline, 0, $font-weight-headline, $line-height-headline, $font-color-headline, $letter-spacing-headline);
 }
-
-@font-face {
-	font-family: "Roboto";
-	src: url('#{$roboto-font-path}Roboto-Medium.ttf');
-	font-weight: 500;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: "Roboto";
-	src: url('#{$roboto-font-path}Roboto-MediumItalic.ttf');
-	font-weight: 500;
-	font-style: italic;
-}
-
-@font-face {
-	font-family: "Roboto";
-	src: url('#{$roboto-font-path}Roboto-Bold.ttf');
-	font-weight: 700;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: "Roboto";
-	src: url('#{$roboto-font-path}Roboto-BoldItalic.ttf');
-	font-weight: 700;
-	font-style: italic;
-}
-
-@font-face {
-	font-family: "Roboto";
-	src: url('#{$roboto-font-path}Roboto-Black.ttf');
-	font-weight: 900;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: "Roboto";
-	src: url('#{$roboto-font-path}Roboto-BlackItalic.ttf');
-	font-weight: 900;
-	font-style: italic;
-}
-
-.sc-display-4 {
-	@include font($font-size-display-4, $line-height-display-4, $letter-spacing-display-4);
-	font-weight: $font-weight-display-4;
-	color: lighten($black, (100% - 54%));
-	text-transform: inherit;
-}
-.sc-display-3 {
-	@include font($font-size-display-3, $line-height-display-3, $letter-spacing-display-3);
-	font-weight: $font-weight-display-3;
-	color: lighten($black, (100% - 54%));
-	text-transform: inherit;
-}
-.sc-display-2 {
-	@include font($font-size-display-2, $line-height-display-2, $letter-spacing-display-2);
-	font-weight: $font-weight-display-2;
-	color: lighten($black, (100% - 54%));
-	text-transform: inherit;
-}
-.sc-display-1 {
-	@include font($font-size-display-1, $line-height-display-1, $letter-spacing-display-1);
-	font-weight: $font-weight-display-1;
-	color: lighten($black, (100% - 54%));
-	text-transform: inherit;
-}
-.sc-headline {
-	@include font($font-size-headline, $line-height-headline, $letter-spacing-headline);
-	font-weight: $font-weight-headline;
-	color: lighten($black, (100% - 87%));
-	text-transform: inherit;
-}
-.sc-title {
-	@include font($font-size-title, $line-height-title, $letter-spacing-title);
-	font-weight: $font-weight-title;
-	color: lighten($black, (100% - 87%));
-	text-transform: inherit;
+.sc-title, h6 {
+	@include font($font-size-title, 0, $font-weight-title, $line-height-title, $font-color-title, $letter-spacing-title);
 }
 .sc-subhead-2 {
-	@include font($font-size-subhead-2, $line-height-subhead-2, $letter-spacing-subhead-2);
-	font-weight: $font-weight-subhead-2;
-	color: lighten($black, (100% - 87%));
-	text-transform: inherit;
+	@include font($font-size-subhead-2, $font-size-small-subhead, $font-weight-subhead-2, $line-height-subhead-2, $font-color-subhead, $letter-spacing-subhead-2);
 }
 .sc-subhead-1 {
-	@include font($font-size-subhead-1, $line-height-subhead-1, $letter-spacing-subhead-1);
-	font-weight: $font-weight-subhead-1;
-	color: lighten($black, (100% - 87%));
-	text-transform: inherit;
+	@include font($font-size-subhead-1, $font-size-small-subhead, $font-weight-subhead-1, $line-height-subhead-1, $font-color-subhead, $letter-spacing-subhead-1);
 }
 .sc-body-2 {
-	@include font($font-size-body-2, $line-height-body-2, $letter-spacing-body-2);
-	font-weight: $font-weight-body-2;
-	color: lighten($black, (100% - 87%));
-	text-transform: inherit;
+	@include font($font-size-body-2, $font-size-small-body, $font-weight-body-2, $line-height-body-2, $font-color-body-2, $letter-spacing-body-2);
 }
 .sc-body-1 {
-	@include font($font-size-body-1, $line-height-body-1, $letter-spacing-body-1);
-	font-weight: $font-weight-body-1;
-	color: lighten($black, (100% - 87%));
-	text-transform: inherit;
+	@include font($font-size-body-1, $font-size-small-body, $font-weight-body-1, $line-height-body-1, $font-color-body-1, $letter-spacing-body-1);
 }
 .sc-caption {
-	@include font($font-size-caption, $line-height-caption, $letter-spacing-caption);
-	font-weight: $font-weight-caption;
-	color: lighten($black, (100% - 54%));
-	text-transform: inherit;
+	@include font($font-size-caption, 0, $font-weight-caption, $line-height-caption, $font-color-caption, $letter-spacing-caption);
 }
-.sc-label {
-	@include font($font-size-label, $line-height-label, $letter-spacing-label);
-	font-weight: $font-weight-label;
-	color: lighten($black, (100% - 54%));
-	text-transform: inherit;
+.sc-label, label {
+	@include font($font-size-label, 0, $font-weight-label, $line-height-label, $font-color-label, $letter-spacing-label);
 }
 .sc-menu {
-	@include font($font-size-menu, $line-height-menu, $letter-spacing-menu);
-	font-weight: $font-weight-menu;
-	color: lighten($black, (100% - 87%));
-	text-transform: inherit;
+	@include font($font-size-menu, 0, $font-weight-menu, $line-height-menu, $font-color-menu, $letter-spacing-menu);
 }
-.sc-button {
-	@include font($font-size-button, $line-height-button, $letter-spacing-button);
-	font-weight: $font-weight-button;
-	color: lighten($black, (100% - 87%));
-	text-transform: uppercase;
-}
-
-// Font-size for device
-@media #{$small-down} {
-	.sc-subhead-2 {
-		@include font-size($font-size-dv-subhead);
-	}
-	.sc-subhead-1 {
-		@include font-size($font-size-dv-subhead);
-	}
-	.sc-body-2 {
-		@include font-size($font-size-dv-body);
-	}
-	.sc-body-1 {
-		@include font-size($font-size-dv-body);
-	}
-	.sc-menu {
-		@include font-size($font-size-dv-menu);
-	}
-}
-
-.sc-display-4, .sc-display-3, .sc-display-2, .sc-display-1  {
-	margin: 0 0 $line-height-title/20+0rem 0;
-}
-
-.sc-headline, .sc-title, .sc-subhead-2, .sc-subhead-1, .sc-body-2, .sc-body-1, .sc-caption, .sc-label, .sc-menu, .sc-button {
-	margin: 0 0 $line-height-body-1/20+0rem 0;
+.sc-button, button {
+	@include font($font-size-button, 0, $font-weight-button, $line-height-button, $font-color-button, $letter-spacing-button, uppercase);
 }
 
 body {
-	@extend .sc-body-1;
+	@include font($font-size-body-1, $font-size-small-body, $font-weight-body-1, $line-height-body-1, $font-color-body-1, $letter-spacing-body-1);
+	direction: $text-direction;
 	font-family: 'Roboto', sans-serif, 'Helvetica Neue', Helvetica, Arial;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
-	direction: ltr;
+}
 
-	h1 {
-		@extend .sc-display-3;
-	}
-
-	h2 {
-		@extend .sc-display-2;
-	}
-
-	h3 {
-		@extend .sc-display-1;
-	}
-
-	h4 {
-		@extend .sc-headline;
-	}
-
-	h5 {
-		@extend .sc-title;
-	}
-
-	h6 {
-		@extend .sc-subhead-1;
-	}
-
-	&.sc-text-large {
-		font-size: $font-size-large;
-	}
-
-	&.sc-text-small {
-		font-size: $font-size-small;
-	}
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
 }

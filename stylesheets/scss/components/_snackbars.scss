@@ -4,16 +4,16 @@
  * http://www.google.com/design/spec/components/snackbars-toasts.html
  **************************************/
 .sc-snackbar {
-	left: 0;
-	right: 0;
-	position: $snackbar-position;
-	bottom: 0;
-	height: $snackbar-height;
-	font-size: $snackbar-font-size;
-	padding: $snackbar-padding;
 	background: $snackbar-background;
+	bottom: 0;
 	color: $snackbar-font-color;
+	font-size: $snackbar-font-size;
+	height: $snackbar-height;
+	left: 0;
 	overflow: hidden;
+	padding: $snackbar-padding;
+	position: $snackbar-position;
+	right: 0;
 
 	@media #{$large-up} {
 		left: auto;
@@ -27,8 +27,8 @@
 		@extend .sc-right;
 		font-size: $snackbar-font-size;
 		font-weight: $snackbar-action-font-weight;
-		text-transform: capitalize;
 		margin-left: $snackbar-action-small-margin-left;
+		text-transform: capitalize;
 
 		@media #{$large-up} {
 			margin-left: $snackbar-action-large-margin-left;

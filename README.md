@@ -34,12 +34,14 @@ After making your changes please describe what you have changed. This will speed
 
 ## DONE
 
+- Chips
 - Tooltips
 - Snackbars & toasts
 
 ## TODO
 
 - Global
+	- Delete class "sc-" prefix to save more than 80kb?
     - Add black theme support
     - Add variables to settings
     - Add badges
@@ -49,7 +51,7 @@ After making your changes please describe what you have changed. This will speed
     - Use 1 class for all triggers. With the active class make slideup and slidedown action
     - Future add SMaterial CDN package
     - Future add meteor js package
-    - Check for "- remCalc(..px)" and "remCalc(-..px)". All should be like the last one
+    - Check for "- rem-calc(..px)" and "rem-calc(-..px)". All should be like the last one
     - Move global usable classes to _normailize.scss (.sc-no-hover, .sc-active, .sc-disabled) to name a few
     - Add Material Design animations
     - Add templates
@@ -60,6 +62,7 @@ After making your changes please describe what you have changed. This will speed
     - Fix positions of <header>, <main>, <aside> to be more compatible with for example WordPress (<aside> goes over <header>, <main> slides up under <header>)
     - Add default styles for various elements (eg. buttons, slider)
     - Add support for IE and FireFox
+    - Add Hammer.js for a better mobile experience(Optional)
 - Appbar
     - Add "more menu" styling
     - Add "more menu" functions
@@ -75,7 +78,6 @@ After making your changes please describe what you have changed. This will speed
     - Add more styling to cards
     - Add more varieties of cards
 - Chips
-    - Change size of delete icon
 - Dialogs
     - Add more JavaScript functionality (open / close by JavaScript call)
 - Progress
@@ -121,6 +123,7 @@ After making your changes please describe what you have changed. This will speed
     - Create separate file for list styling
 - Notifications
     - Add notifications styling: https://material.google.com/patterns/notifications.html
+    - Fix max-height to something which works automatically
 - Normalize
 - Gulp
 - Bower

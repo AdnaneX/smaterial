@@ -22,10 +22,10 @@
 	box-sizing: $settings;
 }
 
-@mixin material-shadow( $dp) {
-	$ambientY : $dp + unquote( 'px' );
+@mixin material-shadow( $dp ) {
+	$ambientY: $dp + unquote( 'px' );
 	$ambientBlur: if( $dp == 1, 3, $dp * 2 ) + unquote( 'px' );
-	$ambientAlpha : ( $dp + 10 + ( $dp / 9.38 ) ) / 100;
+	$ambientAlpha: ( $dp + 10 + ( $dp / 9.38 ) ) / 100;
 
 	$directY: if( $dp < 10, if( $dp % 2 == 0, $dp - ( ( $dp / 2 ) - 1 ), ( $dp - ( ( $dp - 1 ) / 2 ) ) ), $dp - 4 ) + unquote( 'px' );
 	$directBlur: if( $dp == 1, 3, $dp * 2 ) + unquote( 'px' );
@@ -120,24 +120,25 @@
 	mask: $settings;
 }
 
-// Typography
-@mixin font-size( $fontSize: $font-size-initial ) {
-	font-size: $fontSize+0px;
-	font-size: ( $fontSize/10 )+0rem;
+@mixin filter( $settings ) {
+	webkit-filter: $settings;
+	-moz-filter: $settings;
+	-o-filter: $settings;
+	-ms-filter: $settings;
+	filter: $settings;
 }
-@mixin line-height( $leadingSize: $font-size-initial ) {
+
+/*
+// Typography
+@mixin font-size( $fontSize ) {
+	font-size: $fontSize+0px;
+	font-size: ;
+}
+@mixin line-height( $leadingSize ) {
 	line-height: $leadingSize+0px;
 	line-height: ( $leadingSize/10 )+0rem;
 }
 @mixin letter-spacing( $kerningSize: 0 ) {
-	letter-spacing: $kerningSize+0px;
-	letter-spacing: ( $kerningSize/10 )+0rem;
-}
-@mixin font( $fontSize, $leadingSize, $kerningSize ) {
-	font-size: $fontSize+0px;
-	font-size: ( $fontSize/10 )+0rem;
-	line-height: $leadingSize+0px;
-	line-height: ( $leadingSize/10 )+0rem;
 	letter-spacing: $kerningSize+0px;
 	letter-spacing: ( $kerningSize/10 )+0rem;
 }
@@ -162,10 +163,67 @@
 	-webkit-box-shadow: $shadow;
 	box-shadow: $shadow;
 }
+*/
 
 @mixin transition-delay( $setting ) {
 	-webkit-transition-delay: $setting;
 	-moz-transition-delay: $setting;
 	-ms-transition-delay: $setting;
 	transition-delay: $setting;
+}
+
+@mixin button( $border-radius ) {
+	cursor: pointer;
+	@include border-radius( $border-radius );
+	text-decoration: none;
+	border: none;
+	outline: none;
+	display: inline-block;
+	text-align: center;
+}
+
+@mixin font( $font-size, $small-font-size, $weight, $leading, $color, $tracking, $transform: inherit ) {
+	font-size: $font-size+0px;
+	font-size: rem-calc($font-size+0px);
+
+	line-height: $leading+0px;
+	line-height: rem-calc($leading+0px);
+
+	letter-spacing: $tracking+0px;
+	letter-spacing: rem-calc($tracking+0px);
+
+	font-weight: $weight;
+	color: $color;
+	text-transform: $transform;
+
+	@if( $small-font-size > 0 ) {
+		@media #{$medium-down} {
+			font-size: $small-font-size+0px;
+			font-size: rem-calc($small-font-size+0px);
+		}
+	}
+}
+
+@mixin scrollbar() {
+	::-webkit-scrollbar, ::-webkit-scrollbar-track {
+		background: transparent;
+	}
+
+	::-webkit-scrollbar-button, ::-webkit-scrollbar-corner, ::-webkit-resizer {
+		display: none;
+	}
+
+	::-webkit-scrollbar {
+		height: rem-calc(3px);
+		width: rem-calc(3px);
+
+		@media #{$small-up} {
+			height: rem-calc(10px);
+			width: rem-calc(10px);
+		}
+	}
+
+	::-webkit-scrollbar-thumb {
+		background: rgba($black, .2);
+	}
 }

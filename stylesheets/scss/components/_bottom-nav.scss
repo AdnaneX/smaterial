@@ -5,11 +5,11 @@
  **************************************/
 
 .sc-bottom-nav {
-	width: $bottom-nav-width-small;
 	background: $bottom-nav-background;
-	position: $bottom-nav-position;
-	@extend .sc-z8;
 	bottom: 0;
+	position: $bottom-nav-position;
+	@include material-shadow(8);
+	width: $bottom-nav-width-small;
 
 	@media #{$medium-up} {
 		width: $bottom-nav-width-large;
@@ -22,19 +22,19 @@
 
 		li {
 			display: inline-block;
-			text-align: center;
-			padding: 0;
 			line-height: normal;
+			padding: 0;
+			text-align: center;
 
 			a {
+				color: $white;
 				display: block;
+				font-size: $bottom-nav-font-size;
+				height: $bottom-nav-height;
+				line-height: normal;
 				max-width: $bottom-nav-item-max-width;
 				min-width: $bottom-nav-item-min-width-small;
 				padding: $bottom-nav-padding;
-				color: $white;
-				font-size: $bottom-nav-font-size;
-				line-height: normal;
-				height: $bottom-nav-height;
 
 				@media #{$medium-up} {
 					min-width: $bottom-nav-item-min-width-large;
@@ -45,14 +45,14 @@
 				}
 
 				.material-icons {
-					width: $bottom-nav-icon-size;
-					height: $bottom-nav-icon-size;
 					font-size: $bottom-nav-icon-size;
+					height: $bottom-nav-icon-size;
+					width: $bottom-nav-icon-size;
 				}
 
 				&.sc-active {
-					padding: $bottom-nav-padding-active;
 					font-size: $bottom-nav-font-size-active;
+					padding: $bottom-nav-padding-active;
 				}
 			}
 		}
@@ -60,11 +60,11 @@
 }
 
 .sc-bottom-shifting {
-	width: $bottom-shifting-width-small;
 	background: $bottom-shifting-background;
-	position: $bottom-shifting-position;
-	@extend .sc-z8;
 	bottom: 0;
+	position: $bottom-shifting-position;
+	@include material-shadow(8);
+	width: $bottom-shifting-width-small;
 
 	@media #{$medium-up} {
 		width: $bottom-shifting-width-large;
@@ -77,27 +77,27 @@
 
 		li {
 			display: inline-block;
-			text-align: center;
-			padding: 0;
 			line-height: normal;
+			padding: 0;
+			text-align: center;
 
 			a {
+				color: $bottom-shifting-font-color;
 				display: block;
+				height: $bottom-shifting-height;
+				line-height: normal;
 				max-width: $bottom-shifting-max-width;
 				min-width: $bottom-shifting-min-width;
 				padding: $bottom-shifting-padding;
-				color: $bottom-shifting-font-color;
-				line-height: normal;
-				height: $bottom-shifting-height;
 
 				&:hover {
 					color: $white;
 				}
 
 				.material-icons {
-					width: $bottom-shifting-icon-size;
-					height: $bottom-shifting-icon-size;
 					font-size: $bottom-shifting-icon-size;
+					height: $bottom-shifting-icon-size;
+					width: $bottom-shifting-icon-size;
 				}
 
 				.sc-content {
@@ -105,10 +105,10 @@
 				}
 
 				&.sc-active {
-					padding: $bottom-shifting-padding-active;
 					font-size: $bottom-shifting-font-size;
 					max-width: $bottom-shifting-max-width-active;
 					min-width: $bottom-shifting-min-width-active;
+					padding: $bottom-shifting-padding-active;
 
 					.sc-content {
 						display: block;

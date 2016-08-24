@@ -8,7 +8,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 <section class="sc-row">
 	<h2>Bottom navigation usage</h2>
 
-	<p class="sc-col sc-s12 sc-m6">
+	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		You can use the bottom navigation to easily switch between top-level views in a single tap.
 		There are two types of bottom navigation you can use (default and shifting)
 	</p>
@@ -19,7 +19,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 <section class="sc-row">
 	<h3>Default bottom navigation</h3>
 
-	<pre class="language-html sc-s12 sc-m6">
+	<pre class="language-html sc-xs4 sc-s12 sc-m6">
 		<code>
 &lt;nav class="sc-bottom-nav">
   &lt;ul>
@@ -59,7 +59,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 <Section class="sc-row">
 	<h3>Shifting bottom navigation</h3>
 
-	<pre class="language-html sc-s12 sc-m6">
+	<pre class="language-html sc-xs4 sc-s12 sc-m6">
 		<code>
 &lt;nav class="sc-bottom-shifting">
   &lt;ul>

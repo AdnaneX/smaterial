@@ -5,13 +5,13 @@
  **************************************/
 
 .sc-dialog {
-	display: none;
-	@extend .sc-z24;
-	width: auto;
-	position: fixed;
-	z-index: 4;
+	@include material-shadow(24);
 	background: $white;
+	display: none;
 	max-width: 50%;
+	position: fixed;
+	width: auto;
+	z-index: 4;
 
 	@media #{$medium-up} {
 		max-width: 90%;
@@ -22,30 +22,30 @@
 	}
 
 	.sc-dialog-container {
-		padding: remCalc(24px);
+		padding: rem-calc(24px);
 
 		.sc-dialog-title {
 			@extend .sc-title;
-			margin-bottom: remCalc(20px);
+			margin-bottom: rem-calc(20px);
 		}
 	}
 
 	.sc-dialog-actions {
-		padding: remCalc(8px);
-		height: remCalc(52px);
 		float: right;
+		height: rem-calc(52px);
+		padding: rem-calc(8px);
 
 		.sc-flat-button {
-			height: remCalc(36px);
-			line-height: remCalc(36px);
-			margin: 0 remCalc(4px);
+			height: rem-calc(36px);
+			line-height: rem-calc(36px);
+			margin: 0 rem-calc(4px);
 		}
 	}
 
 	&-fullscreen {
-		top: remCalc(20px);
-		bottom: remCalc(20px);
-		left: remCalc(20px);
-		right: remCalc(20px);
+		bottom: rem-calc(20px);
+		left: rem-calc(20px);
+		right: rem-calc(20px);
+		top: rem-calc(20px);
 	}
 }

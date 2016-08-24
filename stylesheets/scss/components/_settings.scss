@@ -59,8 +59,8 @@ $allowed-colors: (
 
 @import 'colors';
 
-$main-color: $blue;
-$secondary-color: $lime;
+$main-color: $indigo;
+$secondary-color: $blue;
 
 $link-color: $main-color;
 $link-hover: $secondary-color;
@@ -78,18 +78,17 @@ $transition-small-duration: 300ms; // Default 300ms
 $transition-medium-duration: 390ms; // Default 390ms
 $transition-large-duration: 200ms; // Default 200ms
 $background: $white; // Default $white
+$text-direction: ltr; // Default either ltr or rtl
 
 /**************************************
  * Typography settings
  **************************************/
 // Font paths
 $roboto-font-path: '/stylesheets/scss/components/fonts/Roboto/';
+$noto-font-path: '/stylesheets/scss/components/fonts/Noto/';
 
 // Font size
-$font-size-initial: 14; //px Default 14 or 15
-$font-size: 62.5%; // Default 62.5%
-$font-size-large: 75%; // Default 75%
-$font-size-small: 50%; // Default 50%
+$font-size: 14; //px Default 14 or 15
 
 // Typographic Scale
 $font-size-display-4: 112; // Default 112
@@ -108,30 +107,29 @@ $font-size-menu: 13; // Default 13
 $font-size-button: 14; // Default 14
 
 // Typographic Scale for devices (max-width: 960px)
-$font-size-dv-subhead: 16; // Default  16
-$font-size-dv-body: 14; // Default 14
-$font-size-dv-menu: 14; // Default 14
+$font-size-small-subhead: 16; // Default  16
+$font-size-small-body: 14; // Default 14
 
 // Basic Styles
-$font-weight-display-4: 100; // Default 100
-$font-weight-display-3: 300; // Default 300
-$font-weight-display-2: 300; // Default 300
-$font-weight-display-1: 300; // Default 300
-$font-weight-headline: 300; // Default 300
-$font-weight-title: 400; // Default 400
+$font-weight-display-4: 300; // Default 300
+$font-weight-display-3: 400; // Default 400
+$font-weight-display-2: 400; // Default 400
+$font-weight-display-1: 400; // Default 400
+$font-weight-headline: 400; // Default 400
+$font-weight-title: 500; // Default 500
 $font-weight-subhead-2: 400; // Default 400
 $font-weight-subhead-1: 300; // Default 300
-$font-weight-body-2: 400; // Default 400
-$font-weight-body-1: 300; // Default 300
-$font-weight-caption: 300; // Default 300
+$font-weight-body-2: 500; // Default 500
+$font-weight-body-1: 400; // Default 400
+$font-weight-caption: 400; // Default 400
 $font-weight-label: 300; // Default 300
 $font-weight-menu: 400; // Default 400
-$font-weight-button: 400; // Default 400
+$font-weight-button: 500; // Default 500
 
 // Line Height
 $line-height-display-4: 128; // Default 128
 $line-height-display-3: 84; // Default 84
-$line-height-display-2: 48; // Default 48
+$line-height-display-2: 64; // Default 48 According to Google specs 48 but 64 looks better
 $line-height-display-1: 40; // Default 40
 $line-height-headline: 32; // Default 32
 $line-height-title: 28; // Default 28
@@ -160,15 +158,29 @@ $letter-spacing-label: 0.1; // Default 0.1
 $letter-spacing-menu: 0.1; // Default 0.1
 $letter-spacing-button: 0.1; // Default 0.1
 
+// Color
+$font-color-display-4: rgba($black, .54); // Default rgba($black, .54)
+$font-color-display-3: $font-color-display-4; // Default $font-color-display-4
+$font-color-display-2: $font-color-display-4; // Default $font-color-display-4
+$font-color-display-1: $font-color-display-4; // Default $font-color-display-4
+$font-color-headline: rgba($black, .87); // Default rgba($black, .87)
+$font-color-title: $font-color-headline; // Default $font-color-headline
+$font-color-subhead: $font-color-headline; // Default $font-color-headline
+$font-color-body-2: $font-color-headline; // Default $font-color-headline
+$font-color-body-1: $font-color-headline; // Default $font-color-headline
+$font-color-caption: $font-color-display-4; // Default $font-color-display-4
+$font-color-label: $font-color-display-4; // Default $font-color-display-4
+$font-color-menu: $font-color-headline; // Default $font-color-headline
+$font-color-button: $font-color-headline; // Default $font-color-headline
 /**************************************
  * AppBar
  **************************************/
 // Basic
 $appbar-position: fixed; // Default fixed
 $appbar-z-index: 1; // Default 1
-$appbar-small-height: remCalc(48px); // Default remCalc(48px)
-$appbar-medium-height: remCalc(56px); // Default remCalc(56px)
-$appbar-large-height: remCalc(64px); // Default remCalc(64px)
+$appbar-small-height: rem-calc(48px); // Default rem-calc(48px)
+$appbar-medium-height: rem-calc(56px); // Default rem-calc(56px)
+$appbar-large-height: rem-calc(64px); // Default rem-calc(64px)
 
 // Colors
 $appbar-background: $main-color; // Default $main-color
@@ -176,14 +188,13 @@ $appbar-text: $white; // Default $white
 $appbar-title: $white; // Default $white
 
 // Title
-$appbar-title-size: remCalc(24px); // Default remCalc(24px)
-$appbar-title-small-padding: remCalc(12px) 0 remCalc(12px) 0 !important; // Default remCalc(12px) 0 remCalc(12px) 0 !important
-$appbar-title-medium-padding: remCalc(20px) 0 remCalc(20px) 0 !important; // Default remCalc(20px) 0 remCalc(20px) 0 !important
+$appbar-title-small-padding: rem-calc(12px) 0 rem-calc(12px) 0 !important; // Default rem-calc(12px) 0 rem-calc(12px) 0 !important
+$appbar-title-medium-padding: rem-calc(20px) 0 rem-calc(20px) 0 !important; // Default rem-calc(20px) 0 rem-calc(20px) 0 !important
 
 // Icons
-$appbar-icon-font-size: remCalc(32px); // Default remCalc(32px)
-$appbar-icon-small-padding: remCalc(8px); // Default remCalc(8px)
-$appbar-icon-medium-padding: remCalc(16px); // Default remCalc(16px);
+$appbar-icon-font-size: rem-calc(32px); // Default rem-calc(32px)
+$appbar-icon-small-padding: rem-calc(8px); // Default rem-calc(8px)
+$appbar-icon-medium-padding: rem-calc(16px); // Default rem-calc(16px);
 
 // Element widths
 $appbar-nav-width: 19%; // Default 19%
@@ -194,8 +205,8 @@ $appbar-menu-width: 4%; // Default 4%
 
 // More menu
 $appbar-more-position: absolute; // Default absolute
-$appbar-more-top: remCalc(4px); // Default remCalc(4px)
-$appbar-more-right: $appbar-more-top; // Default remCalc(4px) / $appbar-more-top
+$appbar-more-top: rem-calc(4px); // Default rem-calc(4px)
+$appbar-more-right: $appbar-more-top; // Default rem-calc(4px) / $appbar-more-top
 
 /**************************************
  * Bottom navigation
@@ -208,33 +219,33 @@ $bottom-nav-width-small: 100%; // Default 100%;
 $bottom-nav-width-large: $bottom-nav-width-small; // Default $bottom-nav-width-small
 $bottom-nav-background: $main-color; // Default $main-color
 $bottom-nav-position: fixed; // Default fixed
-$bottom-nav-height: remCalc(56px); // Default remCalc(56px)
+$bottom-nav-height: rem-calc(56px); // Default rem-calc(56px)
 
 // Items
-$bottom-nav-item-max-width: remCalc(168px); // Default remCalc(168px);
-$bottom-nav-item-min-width-small: remCalc(104px); // Default remCalc(104px)
-$bottom-nav-item-min-width-large: remCalc(120px); // Default remCalc(120px)
-$bottom-nav-padding: remCalc(8px) remCalc(12px) remCalc(10px) remCalc(12px); // Default remCalc(8px) remCalc(12px) remCalc(10px) remCalc(12px)
-$bottom-nav-padding-active: remCalc(6px) remCalc(12px) remCalc(10px) remCalc(12px); // Default remCalc(6px) remCalc(12px) remCalc(10px) remCalc(12px)
-$bottom-nav-font-size: remCalc(12px); // Default remCalc(12px)
+$bottom-nav-item-max-width: rem-calc(168px); // Default rem-calc(168px);
+$bottom-nav-item-min-width-small: rem-calc(104px); // Default rem-calc(104px)
+$bottom-nav-item-min-width-large: rem-calc(120px); // Default rem-calc(120px)
+$bottom-nav-padding: rem-calc(8px) rem-calc(12px) rem-calc(10px) rem-calc(12px); // Default rem-calc(8px) rem-calc(12px) rem-calc(10px) rem-calc(12px)
+$bottom-nav-padding-active: rem-calc(6px) rem-calc(12px) rem-calc(10px) rem-calc(12px); // Default rem-calc(6px) rem-calc(12px) rem-calc(10px) rem-calc(12px)
+$bottom-nav-font-size: rem-calc(12px); // Default rem-calc(12px)
 $bottom-nav-font-color: $white; // Default $white
-$bottom-nav-font-size-active: remCalc(14px); // Default remCalc(14px)
-$bottom-nav-icon-size: remCalc(24px); // Default remCalc(24px)
+$bottom-nav-font-size-active: rem-calc(14px); // Default rem-calc(14px)
+$bottom-nav-icon-size: rem-calc(24px); // Default rem-calc(24px)
 
 $bottom-shifting-width-small: $bottom-nav-width-small; // Default $bottom-nav-width-small
 $bottom-shifting-width-large: $bottom-nav-width-small; // Default $bottom-nav-width-small
 $bottom-shifting-background: $bottom-nav-background; // Default $bottom-nav-background
 $bottom-shifting-position: $bottom-nav-position; // Default $bottom-nav-position
-$bottom-shifting-max-width: remCalc(96px); // Default remCalc(96px)
-$bottom-shifting-max-width-active:  remCalc(168px); // Default remCalc(168px)
-$bottom-shifting-min-width: remCalc(64px); // Default remCalc(64px)
-$bottom-shifting-min-width-active: remCalc(96px); // Default remCalc(96px)
+$bottom-shifting-max-width: rem-calc(96px); // Default rem-calc(96px)
+$bottom-shifting-max-width-active:  rem-calc(168px); // Default rem-calc(168px)
+$bottom-shifting-min-width: rem-calc(64px); // Default rem-calc(64px)
+$bottom-shifting-min-width-active: rem-calc(96px); // Default rem-calc(96px)
 $bottom-shifting-font-color: $bottom-nav-font-color; // Default $bottom-nav-font-color
 $bottom-shifting-height: $bottom-nav-height; // Default $bottom-nav-height
 $bottom-shifting-icon-size: $bottom-nav-icon-size; // Default $bottom-nav-icon-size
-$bottom-shifting-padding: remCalc(16px) 0; // Default remCalc(16px) 0
-$bottom-shifting-padding-active: remCalc(6px) 0 remCalc(10px) 0; // Default remCalc(6px) 0 remCalc(10px) 0
-$bottom-shifting-font-size: remCalc(14px); // Default remCalc(14px)
+$bottom-shifting-padding: rem-calc(16px) 0; // Default rem-calc(16px) 0
+$bottom-shifting-padding-active: rem-calc(6px) 0 rem-calc(10px) 0; // Default rem-calc(6px) 0 rem-calc(10px) 0
+$bottom-shifting-font-size: rem-calc(14px); // Default rem-calc(14px)
 
 /**************************************
  * Bottom sheet
@@ -245,27 +256,27 @@ $bottom-sheet-large-transition: height $transition-large-duration $returning-tra
 $bottom-sheet-position: fixed; // Default fixed
 $bottom-sheet-background: $white;
 $bottom-sheet-z-index: 4; // Default 4
-$bottom-sheet-padding: remCalc(8px) remCalc(16px); // Default remCalc(8px) remCalc(16px)
+$bottom-sheet-padding: rem-calc(8px) rem-calc(16px); // Default rem-calc(8px) rem-calc(16px)
 $bottom-sheet-font-weight: 400; // Default 400
-$bottom-sheet-font-size: remCalc(16px); // Default remCalc(16px)
+$bottom-sheet-font-size: rem-calc(16px); // Default rem-calc(16px)
 
-$bottom-sheet-icons-margin: remCalc(32px); // Default renCalc(32px)
-$bottom-sheet-icons-size: remCalc(24px); // Default remCalc(24px)
+$bottom-sheet-icons-margin: rem-calc(32px); // Default renCalc(32px)
+$bottom-sheet-icons-size: rem-calc(24px); // Default rem-calc(24px)
 $bottom-sheet-icons-color: lighten($black, 100% - 54%); // Default lighten($black, 100% - 54%)
 
 // Header
-$bottom-sheet-header-padding: 0 remCalc(16px) remCalc(8px) remCalc(16px); // Default 0 remCalc(16px) remCalc(8px) remCalc(16px)
-$bottom-sheet-header-height: remCalc(56px); // Default remCalc(56px)
+$bottom-sheet-header-padding: 0 rem-calc(16px) rem-calc(8px) rem-calc(16px); // Default 0 rem-calc(16px) rem-calc(8px) rem-calc(16px)
+$bottom-sheet-header-height: rem-calc(56px); // Default rem-calc(56px)
 $bottom-sheet-header-font-color: lighten($black, 100% - 54%); // Default lighten($black, 100% - 54%)
-$bottom-sheet-header-divider-margin: remCalc(7px) remCalc(-16px) remCalc(8px) remCalc(-16px); // Default remCalc(7px) remCalc(-16px) remCalc(8px) remCalc(-16px)
+$bottom-sheet-header-divider-margin: rem-calc(7px) rem-calc(-16px) rem-calc(8px) rem-calc(-16px); // Default rem-calc(7px) rem-calc(-16px) rem-calc(8px) rem-calc(-16px)
 
 // Grid
-$bottom-sheet-grid-padding: remCalc(16px) remCalc(24px) remCalc(24px) remCalc(24px); // Default remCalc(16px) remCalc(24px) remCalc(24px) remCalc(24px)
-$bottom-sheet-grid-height: remCalc(64px); // Default remCalc(64px)
-$bottom-sheet-grid-margin: 0 0 remCalc(16px) 0; // Default 0 0 remCalc(16px) 0
+$bottom-sheet-grid-padding: rem-calc(16px) rem-calc(24px) rem-calc(24px) rem-calc(24px); // Default rem-calc(16px) rem-calc(24px) rem-calc(24px) rem-calc(24px)
+$bottom-sheet-grid-height: rem-calc(64px); // Default rem-calc(64px)
+$bottom-sheet-grid-margin: 0 0 rem-calc(16px) 0; // Default 0 0 rem-calc(16px) 0
 $bottom-sheet-grid-last-margin: 0; // Default 0
-$bottom-sheet-grid-icon-size: remCalc(48px); // Default remCalc(48px)
-$bottom-sheet-grid-content-size: remCalc(16px); // Default remCalc(16px)
+$bottom-sheet-grid-icon-size: rem-calc(48px); // Default rem-calc(48px)
+$bottom-sheet-grid-content-size: rem-calc(16px); // Default rem-calc(16px)
 
 /**************************************
  * Buttons
@@ -275,15 +286,15 @@ $raised-background-hover: darken($main-color, 12); // Default darken($main-color
 $raised-color: $white; // Default $white
 $raised-color-hover: $raised-color; // Default $raised-color
 $raised-icon-color: $white; // Default $white
-$raised-min-width: remCalc(64px); // Default remCalc(64px)
-$raised-size: remCalc(32px); // Default remCalc(32px)
-$raised-padding: 0 remCalc(16px); // Default 0 remCalc(16px)
-$raised-margin: remCalc(8px); // Default remCalc(8px)
+$raised-min-width: rem-calc(64px); // Default rem-calc(64px)
+$raised-size: rem-calc(32px); // Default rem-calc(32px)
+$raised-padding: 0 rem-calc(16px); // Default 0 rem-calc(16px)
+$raised-margin: rem-calc(8px); // Default rem-calc(8px)
 $raised-small-transition: box-shadow $transition-small-duration $basic-transition unquote(',') background $transition-small-duration $basic-transition; // Default box-shadow $transition-small-duration $basic-transition unquote(',') background $transition-small-duration $basic-transition
 $raised-medium-transition: box-shadow $transition-medium-duration $basic-transition unquote(',') background $transition-medium-duration $basic-transition; // Default box-shadow $transition-medium-duration $basic-transition unquote(',') background $transition-medium-duration $basic-transition
 $raised-large-transition: box-shadow $transition-large-duration $basic-transition unquote(',') background $transition-large-duration $basic-transition; // Default box-shadow $transition-large-duration $basic-transition unquote(',') background $transition-large-duration $basic-transition
-$raised-dense-size: remCalc(32px); // Default remCalc(32px)
-$raised-dense-font-size: remCalc(13px); // Default remCalc(13px)
+$raised-dense-size: rem-calc(32px); // Default rem-calc(32px)
+$raised-dense-font-size: rem-calc(13px); // Default rem-calc(13px)
 $raised-disabled-background: rgba($black, .12); // Default rgba($black, .12)
 $raised-disabled-color: rgba($black, .26); // Default rgba($black, .26)
 $raised-disabled-background-hover: rgba($black, .12); // Default rgba($black, .12)
@@ -292,40 +303,41 @@ $raised-disabled-color-hover: rgba($black, .30); // Default rgba($black, .30)
 $flat-color: $main-color; // Default $main-color
 $flat-icon-color: $main-color; // Default $main-color
 $flat-focus: $grey; // Default $grey
-$flat-min-width: remCalc(88px); // Default remCalc(88px)
-$flat-size: remCalc(36px); // Default remCalc(36px)
-$flat-padding: 0 remCalc(16px); // Default 0 remCalc(16px)
-$flat-margin: remCalc(8px); // Default remCalc(8px)
+$flat-min-width: rem-calc(88px); // Default rem-calc(88px)
+$flat-size: rem-calc(36px); // Default rem-calc(36px)
+$flat-padding: 0 rem-calc(16px); // Default 0 rem-calc(16px)
+$flat-margin: rem-calc(8px); // Default rem-calc(8px)
 $flat-disabled-color: rgba($black, .26); // Default rgba($black, .26)
 
 $floating-transition: all 100ms ease-in-out; // Default all 100ms ease-in-out
 $floating-background: $main-color; // Default $main-color
 $floating-icon: $white; // Default $white
-$floating-size: remCalc(56px); // Default remCalc(56px)
-$floating-icon-size: remCalc(24px); // Default remCalc(24px)
-$floating-mini-size: remCalc(40px); // Default remCalc(40px)
+$floating-size: rem-calc(56px); // Default rem-calc(56px)
+$floating-icon-size: rem-calc(24px); // Default rem-calc(24px)
+$floating-mini-size: rem-calc(40px); // Default rem-calc(40px)
 
 /**************************************
  * Chips
  **************************************/
-$chips-text: lighten($black, (100% - 87%)); // Default lighten($black, (100% - 87%))
+$chips-text: $font-color-headline; // Default $font-color-headline
 $chips-text-hover: $white; // Default $white
-$chips-font-size: remCalc(13px); // Default remCalc(13px)
-$chips-font-weight: 500; // Default 500
-$chips-padding: 0 remCalc(12px); // Default 0 remCalc(12px)
-$chips-size: remCalc(32px); // Default remCalc(32px)
-$chips-background: $grey-300; // Default $grey-300
+$chips-font-size: rem-calc(13px); // Default rem-calc(13px)
+$chips-font-weight: 400; // Default 400
+$chips-padding: 0 rem-calc(12px); // Default 0 rem-calc(12px)
+$chips-size: rem-calc(32px); // Default rem-calc(32px)
+$chips-background: $grey-200; // Default $grey-200
 $chips-background-hover: $grey-600; // Default $grey-600
-$chips-delete-size: remCalc(24px); // Default remCalc(24px)
+$chips-delete-size: rem-calc(15px); // Default rem-calc(15px)
 $chips-delete-cross: $chips-background; // Default $chips-background
 $chips-delete-cross-hover: $chips-background-hover; // Default $chips-background-hover
 $chips-delete-background: rgba($black, .54); // Default rgba($black, .54)
 $chips-delete-background-hover: $chips-text-hover; // Default $chips-text-hover
-$chips-delete-margin: 0 remCalc(-8px) 0 remCalc(4px); // Default 0 remCalc(-8px) 0 remCalc(4px)
+$chips-delete-margin: 0 rem-calc(-8px) 0 rem-calc(4px); // Default 0 rem-calc(-8px) 0 rem-calc(4px)
 $chips-delete-small-transition: color $transition-small-duration $basic-transition unquote(',') background $transition-small-duration $basic-transition; // Default color $transition-small-duration $basic-transition unquote(',') background $transition-small-duration $basic-transition
 $chips-delete-medium-transition: color $transition-medium-duration $basic-transition unquote(',') background $transition-medium-duration $basic-transition; // Default color $transition-medium-duration $basic-transition unquote(',') background $transition-medium-duration $basic-transition
 $chips-delete-large-transition: color $transition-large-duration $basic-transition unquote(',') background $transition-large-duration $basic-transition; // Default color $transition-large-duration $basic-transition unquote(',') background $transition-large-duration $basic-transition
-$chips-contact-margin: 0 remCalc(8px) 0 remCalc(-12px); // Default 0 remCalc(8px) 0 remCalc(-12px)
+$chips-contact-margin: 0 rem-calc(8px) 0 rem-calc(-12px); // Default 0 rem-calc(8px) 0 rem-calc(-12px)
+$chips-contact-font-size: rem-calc(14px); // Default rem-calc(14px)
 $chips-contact-small-transition: box-shadow $transition-small-duration $basic-transition; // Default box-shadow $transition-small-duration $basic-transition
 $chips-contact-medium-transition: box-shadow $transition-medium-duration $basic-transition; // Default box-shadow $transition-medium-duration $basic-transition
 $chips-contact-large-transition: box-shadow $transition-large-duration $basic-transition; // Default box-shadow $transition-large-duration $basic-transition
@@ -335,7 +347,7 @@ $chips-contact-large-transition: box-shadow $transition-large-duration $basic-tr
  **************************************/
 $determinate-width: 100%; // Default 100%
 $determinate-background: rgba($main-color, .4); // Default rgba($main-color, .4)
-$determinate-height: remCalc(5px); // Default remCalc(5px)
+$determinate-height: rem-calc(5px); // Default rem-calc(5px)
 
 $progress-background: $main-color; // Default $main-color
 $progress-transition: width 300ms $basic-transition; // Default width 300ms $basic-transition
@@ -349,13 +361,13 @@ $indeterminate-height: $determinate-height; // Default $determinate-height
  **************************************/
 $checkbox-color: lighten($black, (100% - 54%));
 $checkbox-color-checked: $main-color; // Default $main-color
-$checkbox-size: remCalc(18.2px); // Default remCalc(18.2px)
-$checkbox-margin: remCalc(2.8px); // Default remCalc(2.8px)
+$checkbox-size: rem-calc(18.2px); // Default rem-calc(18.2px)
+$checkbox-margin: rem-calc(2.8px); // Default rem-calc(2.8px)
 $checkbox-disabled-color: lighten($black, (100% - 26%)); // Default lighten($black, (100% - 26%));
 
 $radio-color: $main-color; // Default $main-color
-$radio-size: $checkbox-size; // Default remCalc(18.2px)
-$radio-margin: $checkbox-margin; // Default remCalc(20px)
+$radio-size: $checkbox-size; // Default rem-calc(18.2px)
+$radio-margin: $checkbox-margin; // Default rem-calc(20px)
 $radio-disabled-color: $checkbox-disabled-color; // Default $checkbox-disabled-color
 
 $selection-radial-color: rgba($checkbox-color-checked, .26); // Default rgba($checkbox-color, .26)
@@ -365,17 +377,17 @@ $selection-radial-size: 2.8rem; // Default 2.8rem
  * Snackbars and toasts
  **************************************/
 $snackbar-position: fixed; // Default fixed
-$snackbar-height: remCalc(48px); // Default remCalc(48px)
-$snackbar-font-size: remCalc(14px); // Default remCalc(14px)
-$snackbar-padding: remCalc(14px) remCalc(24px); // Default remCalc(14px) remCalc(24px)
+$snackbar-height: rem-calc(48px); // Default rem-calc(48px)
+$snackbar-font-size: rem-calc(14px); // Default rem-calc(14px)
+$snackbar-padding: rem-calc(14px) rem-calc(24px); // Default rem-calc(14px) rem-calc(24px)
 $snackbar-background: #323232; // Default #323232
 $snackbar-font-color: $white; // Default $white
-$snackbar-min-width: remCalc(288px); // Default remCalc(288px)
-$snackbar-max-width: remCalc(568px); // Default remCalc(568px)
-$snackbar-border-radius: remCalc(2px); // Default remCalc(2px)
+$snackbar-min-width: rem-calc(288px); // Default rem-calc(288px)
+$snackbar-max-width: rem-calc(568px); // Default rem-calc(568px)
+$snackbar-border-radius: rem-calc(2px); // Default rem-calc(2px)
 $snackbar-action-font-weight: 500; // Default 500
-$snackbar-action-small-margin-left: remCalc(24px); // Default remCalc(24px)
-$snackbar-action-large-margin-left: remCalc(48px); // Default remCalc(48px)
+$snackbar-action-small-margin-left: rem-calc(24px); // Default rem-calc(24px)
+$snackbar-action-large-margin-left: rem-calc(48px); // Default rem-calc(48px)
 
 /**************************************
  * Navigation drawer
@@ -383,32 +395,32 @@ $snackbar-action-large-margin-left: remCalc(48px); // Default remCalc(48px)
 $drawer-position: fixed; // Default fixed
 $drawer-overflow: auto; // Default auto
 $drawer-background: $white; // Default $white
-$drawer-padding: remCalc(16px) 0; // Default remCalc(16px) 0
+$drawer-padding: rem-calc(16px) 0; // Default rem-calc(16px) 0
 $drawer-hover: $main-color; // Default $main-color
-$drawer-width: remCalc(320px); // Default remCalc(320px)
-$drawer-max-width: remCalc(400px); // Default remCalc(400px)
-$drawer-small-width: remCalc(320px); // Default remCalc(320px)
-$drawer-small-max-width: remCalc(320px); // Default remCalc(320px)
-$drawer-small-margin-right: remCalc(56px); // Default remCalc(56px)
-$drawer-sub-list-margin: 0 0 0 remCalc(10px); // Default 0 0 0 remCalc(10px)
-$drawer-icons-font-size: remCalc(22.4px); // Default remCalc(22.4px)
-$drawer-icons-size: remCalc(48px); // Default remCalc(48px) Should be the same as default list item height
+$drawer-width: rem-calc(320px); // Default rem-calc(320px)
+$drawer-max-width: rem-calc(400px); // Default rem-calc(400px)
+$drawer-small-width: rem-calc(320px); // Default rem-calc(320px)
+$drawer-small-max-width: rem-calc(320px); // Default rem-calc(320px)
+$drawer-small-margin-right: rem-calc(56px); // Default rem-calc(56px)
+$drawer-sub-list-margin: 0 0 0 rem-calc(10px); // Default 0 0 0 rem-calc(10px)
+$drawer-icons-font-size: rem-calc(22.4px); // Default rem-calc(22.4px)
+$drawer-icons-size: rem-calc(48px); // Default rem-calc(48px) Should be the same as default list item height
 $drawer-icons-color: lighten($black, (100% - 54%)); // Default lighten($black, (100% - 54%))
 
 $drawer-full-small-top: $appbar-small-height; // Default $appbar-small-height
 $drawer-full-medium-top: $appbar-medium-height; // Default $appbar-medium-height
 $drawer-full-large-top: 0; // Default 0
-$drawer-full-title-height: remCalc(64px); // Default remCalc(64px)
-$drawer-full-title-size: remCalc(24px); // Default remCalc(24px)
-$drawer-full-title-margin: remCalc(-16px) 0 0 0; // Default remCalc(-16px) 0 0 0
+$drawer-full-title-height: rem-calc(64px); // Default rem-calc(64px)
+$drawer-full-title-size: rem-calc(24px); // Default rem-calc(24px)
+$drawer-full-title-margin: rem-calc(-16px) 0 0 0; // Default rem-calc(-16px) 0 0 0
 $drawer-full-title-background: $main-color !important; // Default $main-color
 $drawer-full-title-color: $white; // Default $white
-$drawer-full-profile-medium-margin: - remCalc(16px) 0 remCalc(8px) 0 !important; // Default - remCalc(16px) 0 remCalc(8px) 0 !important
-$drawer-full-profile-large-margin: 0 0 remCalc(8px) 0 !important; // Default 0 0 remCalc(8px) 0 !important
+$drawer-full-profile-medium-margin: - rem-calc(16px) 0 rem-calc(8px) 0 !important; // Default - rem-calc(16px) 0 rem-calc(8px) 0 !important
+$drawer-full-profile-large-margin: 0 0 rem-calc(8px) 0 !important; // Default 0 0 rem-calc(8px) 0 !important
 
 $drawer-floating-small-top: $appbar-small-height; // Default $appbar-small-height
-$drawer-floating-medium-top: remCalc(56px); // Default remCalc(56px)
-$drawer-floating-large-top: remCalc(64px); // Default remCalc(64px)
+$drawer-floating-medium-top: rem-calc(56px); // Default rem-calc(56px)
+$drawer-floating-large-top: rem-calc(64px); // Default rem-calc(64px)
 $drawer-floating-z-index: 3; // Default 3
 
 $drawer-right-max-width: 100%; // Default 100%
@@ -416,8 +428,8 @@ $drawer-right-small-top: $appbar-small-height; // Default $appbar-small-height
 $drawer-right-medium-top: $appbar-medium-height; // Default $appbar-medium-height
 $drawer-right-large-top: $appbar-large-height; // Default $appbar-large-height
 
-$drawer-divider-margin: remCalc(8px) 0; // Default remCalc(8px) 0
-$drawer-divider-height: remCalc(1px); // Default remCalc(1px)
+$drawer-divider-margin: rem-calc(8px) 0; // Default rem-calc(8px) 0
+$drawer-divider-height: rem-calc(1px); // Default rem-calc(1px)
 $drawer-divider-background: lighten($black, (100% - 12%)); // Default lighten($black, (100% - 12%))
 
 $drawer-subheader-color: lighten($black, (100% - 54%)); // Default
@@ -427,50 +439,50 @@ $drawer-profile-background: url('/images/drawer-background.jpg') no-repeat cente
 $drawer-font-weight: 500; // Default 500
 $drawer-hover-background: $grey-200;
 
-$drawer-profile-margin: remCalc(-16px) 0 remCalc(8px) 0; // Default remCalc(-16px) 0 remCalc(8px) 0
-$drawer-profile-padding: remCalc(16px) remCalc(16px) remCalc(8px) remCalc(16px); // Default remCalc(16px) remCalc(16px) remCalc(8px) remCalc(16px)
-$drawer-profile-img-size: remCalc(50px); // Default remCalc(50px)
-$drawer-profile-img-margin: 0 0 remCalc(5px) 0;
-$drawer-profile-info-total-height: remCalc(56px); // Default remCalc(56px)
+$drawer-profile-margin: rem-calc(-16px) 0 rem-calc(8px) 0; // Default rem-calc(-16px) 0 rem-calc(8px) 0
+$drawer-profile-padding: rem-calc(16px) rem-calc(16px) rem-calc(8px) rem-calc(16px); // Default rem-calc(16px) rem-calc(16px) rem-calc(8px) rem-calc(16px)
+$drawer-profile-img-size: rem-calc(50px); // Default rem-calc(50px)
+$drawer-profile-img-margin: 0 0 rem-calc(5px) 0;
+$drawer-profile-info-total-height: rem-calc(56px); // Default rem-calc(56px)
 $drawer-profile-info-height: $drawer-profile-info-total-height / 2;
 $drawer-profile-info-font-color: $white; // Default $white
-$drawer-profile-info-font-size: remCalc(14px); // Default remCalc(14px)
+$drawer-profile-info-font-size: rem-calc(14px); // Default rem-calc(14px)
 $drawer-profile-scrim: to top, rgba($grey-900, 0.4) 15%, rgba($white, 0) 33%; // Default to top, rgba($grey-900, 0.4) 15%, rgba($white, 0) 33%
 
 /**************************************
  * Sliders
  **************************************/
 // Track
-$slider-track-height: remCalc(1.5px); // Default remCalc(1.5px)
+$slider-track-height: rem-calc(1.5px); // Default rem-calc(1.5px)
 $slider-track-background: lighten($black, (100% - 26%)); // Default lighten($black, (100% - 26%));
 $slider-track-active-background: $main-color; // Default $main-color
 $slider-track-small-transition: background $transition-small-duration $basic-transition; // Default background $transition-small-duration $basic-transition
 $slider-track-medium-transition: background $transition-medium-duration $basic-transition; // Default background $transition-medium-duration $basic-transition
 $slider-track-large-transition: background $transition-large-duration $basic-transition; // Default background $transition-large-duration $basic-transition
-$slider-range-track-margin: remCalc(-27px) 0 0 0; // Default remCalc(-27px) 0 0 0
+$slider-range-track-margin: rem-calc(-27px) 0 0 0; // Default rem-calc(-27px) 0 0 0
 $slider-range-track-before: $slider-track-active-background; // Default $slider-track-active-background
 $slider-range-track-after: $slider-track-background; // Default $slider-track-background
 $slider-range-track-before-disabled: $slider-track-background; // Default $slider-track-background
 
 // Thumb
 $slider-thumb-background: $white; // Default $white
-$slider-thumb-size: remCalc(14px); // Default remCalc(14px)
-$slider-thumb-border: remCalc(2px) solid $slider-track-background; // Default remCalc(2px) solid $slider-track-background
-$slider-thumb-margin: remCalc(-6px) 0 0 0; // Default remCalc(-6px) 0 0 0
+$slider-thumb-size: rem-calc(14px); // Default rem-calc(14px)
+$slider-thumb-border: rem-calc(2px) solid $slider-track-background; // Default rem-calc(2px) solid $slider-track-background
+$slider-thumb-margin: rem-calc(-6px) 0 0 0; // Default rem-calc(-6px) 0 0 0
 $slider-disabled-thumb-background: $white; // Default $white
 $slider-disabled-thumb-border: $slider-thumb-border; // Default $slider-thumb-border
 $slider-thumb-active-background: $slider-track-active-background; // Default $slider-track-active-background
-$slider-thumb-active-border: remCalc(2px) solid $slider-thumb-active-background; // Default remCalc(2px) solid $slider-thumb-active-background
-$slider-thumb-active-size: remCalc(16px); // Default remCalc(16px)
-$slider-thumb-active-margin: remCalc(-7px) 0 0 0; // Default remCalc(-7px) 0 0 0
+$slider-thumb-active-border: rem-calc(2px) solid $slider-thumb-active-background; // Default rem-calc(2px) solid $slider-thumb-active-background
+$slider-thumb-active-size: rem-calc(16px); // Default rem-calc(16px)
+$slider-thumb-active-margin: rem-calc(-7px) 0 0 0; // Default rem-calc(-7px) 0 0 0
 $slider-thumb-disabled-background: $slider-track-background; // Default $slider-track-background
 $slider-thumb-disabled-size: $slider-thumb-size; // Default $slider-thumb-size
-$slider-thumb-disabled-border: remCalc(2px) solid $white; // Default remCalc(2px) solid $white
-$slider-thumb-disabled-margin: $slider-thumb-margin; // Default remCalc(-6px) 0 0 0
+$slider-thumb-disabled-border: rem-calc(2px) solid $white; // Default rem-calc(2px) solid $white
+$slider-thumb-disabled-margin: $slider-thumb-margin; // Default rem-calc(-6px) 0 0 0
 $slider-thumb-disabled-not-null-background: $slider-thumb-disabled-background; // Default $slider-thumb-background
 $slider-thumb-disabled-not-null-border: $slider-thumb-disabled-border; // Default $slider-thumb-disabled-border
 $slider-thumb-disabled-discrete-background: transparent; // Default transparent
-$slider-thumb-disabled-discrete-border: remCalc(2px) solid $slider-thumb-disabled-discrete-background; // Default$slider-thumb-disabled-discrete-background
+$slider-thumb-disabled-discrete-border: rem-calc(2px) solid $slider-thumb-disabled-discrete-background; // Default$slider-thumb-disabled-discrete-background
 $slider-thumb-not-null-background: $slider-thumb-active-background; // Default $slider-thumb-active-background
 $slider-thumb-not-null-border: $slider-thumb-active-border; // $slider-thumb-active-border
 $slider-thumb-not-null-size: $slider-thumb-size; // Default $slider-thumb-size
@@ -478,7 +490,7 @@ $slider-thumb-not-null-margin: $slider-thumb-margin; // Default $slider-thumb-ma
 $slider-thumb-not-null-active-size: $slider-thumb-active-size; // Default $slider-thumb-active-size
 $slider-thumb-not-null-active-margin: $slider-thumb-active-margin; // Default $slider-thumb-active-margin
 $slider-discrete-thumb-hidden-background: $slider-thumb-disabled-discrete-background; // Default $slider-thumb-disabled-discrete-background
-$slider-discrete-thumb-hidden-border: remCalc(2px) solid $slider-discrete-thumb-hidden-background; // Default remCalc(2px) solid $slider-discrete-thumb-hidden-background
+$slider-discrete-thumb-hidden-border: rem-calc(2px) solid $slider-discrete-thumb-hidden-background; // Default rem-calc(2px) solid $slider-discrete-thumb-hidden-background
 $slider-thumb-small-transition: background $transition-small-duration $basic-transition unquote(',')
 								border $transition-small-duration $basic-transition unquote(',')
 								height $transition-small-duration $basic-transition unquote(',')
@@ -499,29 +511,29 @@ $slider-thumb-large-transition: background $transition-large-duration $basic-tra
 $slider-bubble-background: $black; // Default $black
 $slider-bubble-font-color: $white; // Default $white
 $slider-bubble-size: $slider-thumb-size; // Default $slider-thumb-size
-$slider-bubble-border: remCalc(2px) solid $slider-bubble-background; // Default remCalc(2px) solid $slider-bubble-background
-$slider-bubble-bottom: remCalc(-25px); // Default remCalc(-25px)
+$slider-bubble-border: rem-calc(2px) solid $slider-bubble-background; // Default rem-calc(2px) solid $slider-bubble-background
+$slider-bubble-bottom: rem-calc(-25px); // Default rem-calc(-25px)
 $slider-bubble-disabled-background: $slider-track-background; // Default $slider-track-background
 $slider-bubble-disabled-border: $slider-thumb-disabled-border;
 $slider-bubble-not-null-background: $slider-track-active-background; // Default $slider-track-active-background
 $slider-bubble-not-null-font-color: $slider-bubble-font-color; // Default $slider-bubble-font-color
-$slider-bubble-not-null-border: remCalc(2px) solid $slider-track-active-background; // Default remCalc(2px) solid $slider-track-active-background
+$slider-bubble-not-null-border: rem-calc(2px) solid $slider-track-active-background; // Default rem-calc(2px) solid $slider-track-active-background
 $slider-bubble-active-background: $slider-track-background; // Default $slider-track-background
 $slider-bubble-active-font-color: $slider-bubble-font-color; // Default $slider-bubble-font-color
-$slider-bubble-active-size: remCalc(25px); // Default remCalc(25px)
-$slider-bubble-active-font-size: remCalc(10px); // Default 10px
-$slider-bubble-active-bottom: remCalc(1.4px); // Default remCalc(1.4px)
-$slider-bubble-active-margin: 0 0 0 remCalc(-12.5px); // Default 0 0 0 remCalc(-12.5px)
+$slider-bubble-active-size: rem-calc(25px); // Default rem-calc(25px)
+$slider-bubble-active-font-size: rem-calc(10px); // Default 10px
+$slider-bubble-active-bottom: rem-calc(1.4px); // Default rem-calc(1.4px)
+$slider-bubble-active-margin: 0 0 0 rem-calc(-12.5px); // Default 0 0 0 rem-calc(-12.5px)
 $slider-bubble-active-not-null-background: $slider-track-active-background; // Default $slider-track-active-background
 $slider-bubble-active-not-null-font-size: $slider-bubble-active-font-size; // Default $slider-bubble-active-font-size
 $slider-bubble-active-disabled-background: $slider-track-background; // Default $slider-track-background
-$slider-triangle-active-border-hidden: remCalc(10px) solid transparent; // Default remCalc(10px) solid transparent
-$slider-triangle-active-border-top: remCalc(10px) solid $slider-track-background; // Default remCalc(10px) solid $slider-track-background
-$slider-triangle-active-top: remCalc(21px); // Default remCalc(21px)
-$slider-triangle-active-right: remCalc(3.5px); // Default remCalc(3.5px);
-$slider-triangle-active-not-null-border-top: remCalc(10px) solid $slider-track-active-background; // Default remCalc(10px) solid $slider-track-active-background
+$slider-triangle-active-border-hidden: rem-calc(10px) solid transparent; // Default rem-calc(10px) solid transparent
+$slider-triangle-active-border-top: rem-calc(10px) solid $slider-track-background; // Default rem-calc(10px) solid $slider-track-background
+$slider-triangle-active-top: rem-calc(21px); // Default rem-calc(21px)
+$slider-triangle-active-right: rem-calc(3.5px); // Default rem-calc(3.5px);
+$slider-triangle-active-not-null-border-top: rem-calc(10px) solid $slider-track-active-background; // Default rem-calc(10px) solid $slider-track-active-background
 $slider-triangle-active-disabled-border: $slider-triangle-active-border-hidden; // Default $slider-triangle-active-border-hidden
-$slider-triangle-active-disabled-border-top: remCalc(10px) solid $slider-track-background; // Default remCalc(10px) solid $slider-track-background
+$slider-triangle-active-disabled-border-top: rem-calc(10px) solid $slider-track-background; // Default rem-calc(10px) solid $slider-track-background
 
 $slider-bubble-small-transition: 	background $transition-small-duration $basic-transition unquote(',')
 									width $transition-small-duration $basic-transition unquote(',')
@@ -561,11 +573,11 @@ $slider-bubble-triangle-large-transition: 	border-left $transition-large-duratio
 $textfield-width: 100%; // Default 100%;
 $textfield-position: relative; // Default relative
 $textfield-input-position: absolute; // Default absolute
-$textfield-off-bottom: remCalc(2px) solid $grey; // Default remCalc(2px) solid $grey
+$textfield-off-bottom: rem-calc(2px) solid $grey; // Default rem-calc(2px) solid $grey
 $textfield-transition: all 300ms ease-in-out; // Default all 300ms ease-in-out
-$textfield-focus-bottom: remCalc(2px) solid $main-color; // Default remCalc(2px) solid $main-color
+$textfield-focus-bottom: rem-calc(2px) solid $main-color; // Default rem-calc(2px) solid $main-color
 $textfield-focus-label: $main-color; // Default $main-color
-$textfield-disabled-bottom: remCalc(2px) dotted $grey; // Default remCalc(2px) dotted $grey
+$textfield-disabled-bottom: rem-calc(2px) dotted $grey; // Default rem-calc(2px) dotted $grey
 $textfield-label-color: $grey; // Default $grey
 $textfield-label-position: absolute; // Default absolute
 $textfield-label-active-color: $grey; // Default $grey
@@ -573,29 +585,29 @@ $textfield-textarea-font-family: inherit; // Default inherit
 $textfield-textarea-font-size: inherit; // Default inherit
 $textfield-required-color: $red; // Default $red
 $textfield-required-content: ' star'; // Default ' star'
-$textfield-required-font-size: remCalc(7px); // Default remCalc(7px)
+$textfield-required-font-size: rem-calc(7px); // Default rem-calc(7px)
 $textfield-required-vertical-align: super; // Default super
 
-$textfield-floating-height: remCalc(72px); // Default remCalc(72px)
-$textfield-floating-padding: remCalc(16px) 0 remCalc(8px) 0; // Default remCalc(16px) 0 remCalc(8px) 0
-$textfield-floating-input-font-size: remCalc(16px); // Default remCalc(16px)
-$textfield-floating-input-padding: remCalc(8px) 0; // Default remCalc(8px) 0
-$textfield-floating-input-bottom: remCalc(8px); // Default remCalc(8px)
-$textfield-floating-input-focus-label-font-size: remCalc(12px); // Default remCalc(12px)
-$textfield-floating-input-focus-label-bottom: remCalc(40px); // Default remCalc(40px)
-$textfield-floating-label-bottom: remCalc(16px); // Default remCalc(16px)
-$textfield-floating-label-active-font-size: remCalc(12px); // Default remCalc(12px)
-$textfield-floating-label-active-bottom: remCalc(40px); // Default remCalc(40px)
+$textfield-floating-height: rem-calc(72px); // Default rem-calc(72px)
+$textfield-floating-padding: rem-calc(16px) 0 rem-calc(8px) 0; // Default rem-calc(16px) 0 rem-calc(8px) 0
+$textfield-floating-input-font-size: rem-calc(16px); // Default rem-calc(16px)
+$textfield-floating-input-padding: rem-calc(8px) 0; // Default rem-calc(8px) 0
+$textfield-floating-input-bottom: rem-calc(8px); // Default rem-calc(8px)
+$textfield-floating-input-focus-label-font-size: rem-calc(12px); // Default rem-calc(12px)
+$textfield-floating-input-focus-label-bottom: rem-calc(40px); // Default rem-calc(40px)
+$textfield-floating-label-bottom: rem-calc(16px); // Default rem-calc(16px)
+$textfield-floating-label-active-font-size: rem-calc(12px); // Default rem-calc(12px)
+$textfield-floating-label-active-bottom: rem-calc(40px); // Default rem-calc(40px)
 
-$textfield-floating-dense-height: remCalc(60px); // Default remCalc(60px)
-$textfield-floating-dense-padding: remCalc(12px) 0 remCalc(4px) 0; // Default remCalc(12px) 0 remCalc(4px) 0
-$textfield-floating-dense-input-font-size: remCalc(13px); // Default remCalc(13px)
-$textfield-floating-dense-input-padding: remCalc(4px) 0; // Default remCalc(4px) 0
-$textfield-floating-dense-input-bottom: remCalc(12px); // Default remCalc(12px)
-$textfield-floating-dense-input-focus-label-bottom: remCalc(29px); // Default remCalc(29px)
-$textfield-floating-dense-label-bottom: remCalc(12px); // Default remCalc(12px)
-$textfield-floating-dense-label-active-font-size: remCalc(13px); // Default remCalc(13px)
-$textfield-floating-dense-label-active-bottom: remCalc(29px); // Default remCalc(29px)
+$textfield-floating-dense-height: rem-calc(60px); // Default rem-calc(60px)
+$textfield-floating-dense-padding: rem-calc(12px) 0 rem-calc(4px) 0; // Default rem-calc(12px) 0 rem-calc(4px) 0
+$textfield-floating-dense-input-font-size: rem-calc(13px); // Default rem-calc(13px)
+$textfield-floating-dense-input-padding: rem-calc(4px) 0; // Default rem-calc(4px) 0
+$textfield-floating-dense-input-bottom: rem-calc(12px); // Default rem-calc(12px)
+$textfield-floating-dense-input-focus-label-bottom: rem-calc(29px); // Default rem-calc(29px)
+$textfield-floating-dense-label-bottom: rem-calc(12px); // Default rem-calc(12px)
+$textfield-floating-dense-label-active-font-size: rem-calc(13px); // Default rem-calc(13px)
+$textfield-floating-dense-label-active-bottom: rem-calc(29px); // Default rem-calc(29px)
 
 /**************************************
  * Tooltips
@@ -603,15 +615,15 @@ $textfield-floating-dense-label-active-bottom: remCalc(29px); // Default remCalc
 $tooltip-background: $grey-700; // Default $grey-700
 $tooltip-font-color: $white; // Default $white
 $tooltip-opacity: .90; // Default .90
-$tooltip-small-font: remCalc(14px); // Default remCalc(14px)
-$tooltip-large-font: remCalc(10px); // Default remCalc(10px)
+$tooltip-small-font: rem-calc(14px); // Default rem-calc(14px)
+$tooltip-large-font: rem-calc(10px); // Default rem-calc(10px)
 $tooltip-font-weight: 500; // Default 500 (medium)
-$tooltip-small-top: remCalc(24px); // Default remCalc(24px)
-$tooltip-large-top: remCalc(14px); // Default remCalc(14px)
-$tooltip-small-height: remCalc(32px); // Default remCalc(32px)
-$tooltip-large-height: remCalc(22px); // Default remCalc(22px)
-$tooltip-small-padding: 0 remCalc(16px); // Default 0 remCalc(16px)
-$tooltip-large-padding: 0 remCalc(8px); // Default 0 remCalc(8px)
+$tooltip-small-top: rem-calc(24px); // Default rem-calc(24px)
+$tooltip-large-top: rem-calc(14px); // Default rem-calc(14px)
+$tooltip-small-height: rem-calc(32px); // Default rem-calc(32px)
+$tooltip-large-height: rem-calc(22px); // Default rem-calc(22px)
+$tooltip-small-padding: 0 rem-calc(16px); // Default 0 rem-calc(16px)
+$tooltip-large-padding: 0 rem-calc(8px); // Default 0 rem-calc(8px)
 $tooltip-z-index: 10; // Default 10
 
 /**************************************
@@ -637,6 +649,5 @@ $large-gutter: 24px; // Default 24px
  * Icons
  **************************************/
 $icon-font-path: './components/fonts/icons/';
-$icon-size: remCalc(24px); // Default remCalc(24px)
+$icon-size: rem-calc(24px); // Default rem-calc(24px)
 $icon-align: middle; // Default middle
-

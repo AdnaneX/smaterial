@@ -1,7 +1,13 @@
-@function remCalc($size, $font-size : $font-size-initial) {
+@function rem-calc($size, $font-size : $font-size) {
 	$font-size: $font-size + 0px;
 	$remSize: $size / $font-size;
 	@return #{$remSize}rem;
+}
+
+@function emCalc($size, $font-size : $font-size) {
+	$font-size: $font-size + 0px;
+	$emSize: $size / $font-size;
+	@return #{$emSize}em;
 }
 
 @function decimal-round ($number, $digits: 0, $mode: round) {
@@ -34,7 +40,7 @@
 	}
 }
 
-@function in_array($value, $array) {
+@function in-array($value, $array) {
 	@if index($array, $value) {
 		@return true;
 	} @else {

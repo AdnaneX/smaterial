@@ -7,12 +7,12 @@
  **************************************/
 
 .sc-drawer {
-	position: $drawer-position;
+	@include material-shadow(16);
 	background: $drawer-background;
-	padding: $drawer-padding;
 	bottom: 0;
 	overflow: $drawer-overflow;
-	@extend .sc-z16;
+	padding: $drawer-padding;
+	position: $drawer-position;
 
 	// Left navigation
 	&-left {
@@ -113,10 +113,10 @@
 		}
 	}
 
-	&-divider {
-		margin: $drawer-divider-margin;
-		height: $drawer-divider-height;
+	.sc-divider {
 		background: $drawer-divider-background;
+		height: $drawer-divider-height;
+		margin: $drawer-divider-margin;
 	}
 
 	&-subheader {
@@ -151,23 +151,23 @@
 
 			&.sc-drawer-profile {
 				@extend .sc-row;
-				margin: $drawer-profile-margin;
-				padding: $drawer-profile-padding;
 				background: $drawer-profile-background;
 				background-size: 100% 100%;
 				height: auto;
+				margin: $drawer-profile-margin;
+				padding: $drawer-profile-padding;
 				position: relative;
 
 				&:before {
-					content: '';
-					top: 0;
-					bottom: 0;
-					left: 0;
-					right: 0;
-					position: absolute;
 					background: -moz-linear-gradient($drawer-profile-scrim);
 					background: -webkit-linear-gradient($drawer-profile-scrim);
 					background: linear-gradient($drawer-profile-scrim);
+					bottom: 0;
+					content: '';
+					left: 0;
+					position: absolute;
+					right: 0;
+					top: 0;
 				}
 
 				div {
@@ -180,14 +180,14 @@
 
 				.sc-drawer-profile-img {
 					@extend .sc-col, .sc-s12;
-					width: 100%;
 					height: $drawer-profile-img-size;
 					margin: $drawer-profile-img-margin;
+					width: 100%;
 
 					img {
 						@extend .sc-circle;
-						width: $drawer-profile-img-size;
 						height: $drawer-profile-img-size;
+						width: $drawer-profile-img-size;
 					}
 				}
 
@@ -199,10 +199,10 @@
 						@extend .sc-col, .sc-s12;
 						color: $drawer-profile-info-font-color;
 						font-size: $drawer-profile-info-font-size;
-						height: remCalc(28px);
-						width: 75%;
+						height: rem-calc(28px);
+						line-height: rem-calc(28px);
 						max-width: 75%;
-						line-height: remCalc(28px);
+						width: 75%;
 					}
 
 					.sc-drawer-profile-name {
@@ -222,35 +222,54 @@
 						text-align: right;
 
 						.material-icons {
-							margin-top: remCalc(28px);
 							color: $white;
-							font-size: remCalc(23.8px);
-							height: remCalc(28px);
-							width: remCalc(28px);
+							font-size: rem-calc(23.8px);
+							height: rem-calc(28px);
+							line-height: rem-calc(28px);
+							margin-top: rem-calc(28px);
 							vertical-align: middle;
-							line-height: remCalc(28px);
+							width: rem-calc(28px);
 						}
 					}
 				}
 			}
 
 			&.sc-drawer-dropdown {
-				height: auto;
 				cursor: pointer;
+				height: auto;
 
 				.sc-arrow {
-					width: auto;
 					position: absolute;
-					right: remCalc(16px);
+					right: rem-calc(16px);
+					width: auto;
+					@include transition(all $transition-small-duration $basic-transition);
+
+					@media #{$medium-only} {
+						@include transition(all $transition-medium-duration $basic-transition);
+					}
+
+					@media #{$medium-up} {
+						@include transition(all $transition-large-duration $basic-transition);
+					}
 				}
-			}
 
-			&.sc-drawer-footer {
-				bottom: 0;
-			   	position: absolute;
+				ul {
+					visibility: hidden;
+					opacity: 0;
+					max-height: 0;
+					@include transition(visibility $transition-small-duration $basic-transition unquote(',') opacity $transition-small-duration $basic-transition unquote(',') max-height $transition-small-duration $basic-transition);
+				}
 
-				&:hover {
-					background: none;
+				&.sc-expanded {
+					.sc-arrow {
+						@include transform(rotate(180deg));
+					}
+
+					ul {
+						visibility: visible;
+						opacity: 1;
+						max-height: 100%;
+					}
 				}
 			}
 
@@ -269,11 +288,11 @@
 
 			.material-icons {
 				color: $drawer-icons-color;
-				line-height: $drawer-icons-size;
 				font-size: $drawer-icons-font-size;
 				height: $drawer-icons-size;
-				width: $drawer-icons-size;
+				line-height: $drawer-icons-size;
 				vertical-align: middle;
+				width: $drawer-icons-size;
 			}
 		}
 

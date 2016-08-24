@@ -10,22 +10,11 @@ $(document).ready(function() {
 			$arrow.addClass('sc-arrow');
 		}
 
-		// Hide ul element
-		$ul.hide();
-
 		$this.click(function() {
-			if( $ul.visible() ) {
-				$ul.animate({transition: 'cubic-bezier(0.4, 0.0, 0.2, 1)',height: 'toggle'}, 300);
-
-				if( $arrow !== undefined ) {
-					$arrow.rotate(0, 300, 'cubic-bezier(0.4, 0.0, 0.2, 1)');
-				}
+			if( $this.hasClass('sc-expanded') ) {
+				$this.removeClass('sc-expanded');
 			} else {
-				$ul.animate({transition: 'cubic-bezier(0.4, 0.0, 0.2, 1)',height: 'toggle'}, 300);
-
-				if( $arrow !== undefined ) {
-					$arrow.rotate(180, 300, 'cubic-bezier(0.4, 0.0, 0.2, 1)');
-				}
+				$this.addClass('sc-expanded');
 			}
 		});
 	});

@@ -9,11 +9,11 @@
 	position: $textfield-position;
 
 	input[type="text"], input[type="password"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="url"], textarea {
-		width: $textfield-width;
 		border: 0;
-		position: $textfield-input-position;
 		border-bottom: $textfield-off-bottom;
 		outline: none;
+		position: $textfield-input-position;
+		width: $textfield-width;
 		@include transition($textfield-transition);
 
 		&:active, &:focus {
@@ -41,9 +41,9 @@
 
 	label {
 		color: $textfield-label-color;
-		position: $textfield-label-position;
-		@include transition($textfield-transition);
 		cursor: text;
+		@include transition($textfield-transition);
+		position: $textfield-label-position;
 
 		&.sc-active {
 			color: $textfield-label-active-color;
@@ -63,14 +63,14 @@
 	@extend .sc-input;
 
 	input[type="text"], input[type="password"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="url"], textarea {
+		bottom: $textfield-floating-input-bottom;
 		font-size: $textfield-floating-input-font-size;
 		padding: $textfield-floating-input-padding;
-		bottom: $textfield-floating-input-bottom;
 
 		&:active, &:focus {
 			+ label {
-				font-size: $textfield-floating-input-focus-label-font-size;
 				bottom: $textfield-floating-input-focus-label-bottom;
+				font-size: $textfield-floating-input-focus-label-font-size;
 			}
 		}
 	}
@@ -79,21 +79,21 @@
 		bottom: $textfield-floating-label-bottom;
 
 		&.sc-active {
-			font-size: $textfield-floating-label-active-font-size;
 			bottom: $textfield-floating-label-active-bottom;
+			font-size: $textfield-floating-label-active-font-size;
 		}
 	}
 }
 
 .sc-floating-dense-input {
-	height: remCalc(60px);
-	padding: remCalc(12px) 0 remCalc(4px) 0;
+	height: rem-calc(60px);
+	padding: rem-calc(12px) 0 rem-calc(4px) 0;
 	@extend .sc-input;
 
 	input[type="text"], input[type="password"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="url"] {
+		bottom: $textfield-floating-dense-input-bottom;
 		font-size: $textfield-floating-dense-input-font-size;
 		padding: $textfield-floating-dense-input-padding;
-		bottom: $textfield-floating-dense-input-bottom;
 
 		&:active, &:focus {
 			+ label {
@@ -106,37 +106,37 @@
 		bottom: $textfield-floating-dense-label-bottom;
 
 		&.sc-active {
-			font-size: $textfield-floating-dense-label-active-font-size;
 			bottom: $textfield-floating-dense-label-active-bottom;
+			font-size: $textfield-floating-dense-label-active-font-size;
 		}
 	}
 }
 
 // Single line inputs
 .sc-single-input {
-	height: remCalc(48px);
-	padding: remCalc(16px) 0 remCalc(8px) 0;
+	height: rem-calc(48px);
+	padding: rem-calc(16px) 0 rem-calc(8px) 0;
 	@extend .sc-input;
 
 	&.sc-icon {
 		input[type="text"], input[type="password"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="url"] {
-			left: remCalc(48px - 16px);
+			left: rem-calc(48px - 16px);
 			right: 0;
 		}
 
 		label {
-			left: remCalc(48px - 16px);
+			left: rem-calc(48px - 16px);
 			right: 0;
 		}
 	}
 
 	input[type="text"], input[type="password"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="url"] {
-		font-size: remCalc(16px);
-		padding: remCalc(8px) 0;
-		bottom: remCalc(16px);
+		bottom: rem-calc(16px);
+		font-size: rem-calc(16px);
+		padding: rem-calc(8px) 0;
 
 		&:active, &:focus {
-			border-bottom: remCalc(2px) solid $main-color;
+			border-bottom: rem-calc(2px) solid $main-color;
 
 			+ label {
 				display: none;
@@ -149,18 +149,18 @@
 	}
 
 	.material-icons {
-		height: remCalc(48px - 16px);
-		width: remCalc(48px - 16px);
-		font-size: remCalc(24px);
-		padding: remCalc(16px);
+		font-size: rem-calc(24px);
+		height: rem-calc(48px - 16px);
+		margin-top: rem-calc(-16px);
+		padding: rem-calc(16px);
 		position: inherit;
-		margin-top: remCalc(-16px);
+		width: rem-calc(48px - 16px);
 	}
 
 	label {
-		bottom: remCalc(16px);
-		font-size: remCalc(16px);
+		bottom: rem-calc(16px);
 		display: block;
+		font-size: rem-calc(16px);
 
 		&.sc-active {
 			display: none;
@@ -169,18 +169,18 @@
 }
 
 .sc-single-dense-input {
-	height: remCalc(40px);
-	padding: remCalc(12px) 0;
+	height: rem-calc(40px);
+	padding: rem-calc(12px) 0;
 	@extend .sc-input;
 
 	input[type="text"], input[type="password"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="url"] {
-		font-size: remCalc(13px);
-		border-bottom: remCalc(2px) solid $grey;
-		padding: remCalc(4px) 0;
-		bottom: remCalc(12px);
+		border-bottom: rem-calc(2px) solid $grey;
+		bottom: rem-calc(12px);
+		font-size: rem-calc(13px);
+		padding: rem-calc(4px) 0;
 
 		&:active, &:focus {
-			border-bottom: remCalc(2px) solid $main-color;
+			border-bottom: rem-calc(2px) solid $main-color;
 
 			+ label {
 				display: none;
@@ -189,8 +189,8 @@
 	}
 
 	label {
-		bottom: remCalc(12px);
-		font-size: remCalc(13px);
+		bottom: rem-calc(12px);
+		font-size: rem-calc(13px);
 
 		&.sc-active {
 			display: none;
@@ -201,10 +201,10 @@
 input[type="text"], input[type="password"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="url"], textarea {
 	&:required + label:after {
 		@extend .material-icons;
-		vertical-align: $textfield-required-vertical-align;
 		content: $textfield-required-content;
-		font-size: $textfield-required-font-size;
 		font-family: 'Material Icons';
+		font-size: $textfield-required-font-size;
+		vertical-align: $textfield-required-vertical-align;
 		@include transition($textfield-transition);
 	}
 

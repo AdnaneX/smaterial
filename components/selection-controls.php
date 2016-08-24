@@ -8,7 +8,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 <section class="sc-row" xmlns="http://www.w3.org/1999/html">
 	<h2>Selection controls usage</h2>
 
-	<p class="sc-col sc-s12 sc-m6">
+	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		You can choose a couple of selection controls.
 		The selection controls you can choose from are listed below
 	</p>
@@ -24,7 +24,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		To accommodate for other browsers than Chrome you do need to add a class <code class="language-css">.sc-checkbox</code>.
 	</p>
 
-	<p class="sc-col sc-s12 sc-m6">
+	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		<input type="checkbox" id="test"><label for="test">Test</label>
 		<input type="checkbox" id="test1" checked><label for="test1">Test1</label>
 		<input type="checkbox" id="example" disabled><label for="example">Example</label>
@@ -50,7 +50,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		However to support other browsers you need to add an additional class <code class="language-css">.sc-radio</code>.
 	</p>
 
-	<p class="sc-col sc-s12 sc-m6">
+	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		<input type="radio" id="test4" name="radio"><label for="test4">Test4</label>
 		<input type="radio" id="test5" name="radio" disabled><label for="test5">Test5</label>
 		<input type="radio" id="example2" name="radio" class="sc-radio"><label for="example2">Example2</label>
@@ -74,7 +74,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		The switch is usually used when there is only a need for 1 <a href="#checkbox">checkbox</a>.
 	</p>
 
-	<p class="sc-col sc-s12 sc-m6">
+	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		<div class="sc-switch">
 			<label>
 				off
@@ -85,7 +85,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		</div>
 	</p>
 
-	<p class="sc-col sc-s12 sc-m6">
+	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		<div class="sc-switch">
 			<label>
 				off

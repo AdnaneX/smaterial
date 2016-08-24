@@ -67,7 +67,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		</code>
 	</pre>
 
-	<p class="sc-col sc-s12 sc-m6">
+	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		In order to see a page title when using full height you can add the following to the drawer:
 		<strong>Note:</strong> this title is only visible on large screens.
 	</p>
@@ -98,7 +98,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 <section class="sc-row">
 	<h4>Drawer / profile</h4>
 
-	<p class="sc-col sc-s12 sc-m6">
+	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		The best dimensions for the image are square. This way the image won't transform.
 	</p>
 
@@ -136,18 +136,18 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 <section class="sc-row">
 	<h3>Navigation drawer trigger</h3>
 
-	<p class="sc-col sc-s12 sc-m6">
+	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		To show the menu on mobile or tablet you can add a trigger button.
 	</p>
 
-	<p class="sc-col sc-s12 sc-m6">
+	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		The trigger button could look like this:
 		<a href="#" id="sc-nav-button" data-sc-trigger="sc-drawer">
 			<i class="material-icons">menu</i>
 		</a>
 	</p>
 
-	<p class="sc-col sc-s12 sc-m6">
+	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		The id and data-sc-trigger are required.
 		The data-sc-trigger can be anything you gave the drawer as id.
 	</p>
@@ -164,7 +164,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 <section class="sc-row">
 	<h3>Settings</h3>
 
-	<p class="sc-col sc-s12">
+	<p class="sc-col sc-xs4 sc-s12">
 		You can change the settings of the navigation drawer in _settings.scss.
 	</p>
 

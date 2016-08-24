@@ -8,12 +8,12 @@
 	@include border-radius($chips-size);
 	background: $chips-background;
 	color: $chips-text;
+	display: inline-block;
 	font-size: $chips-font-size;
-	padding: $chips-padding;
+	font-weight: $chips-font-weight;
 	height: $chips-size;
 	line-height: $chips-size;
-	display: inline-block;
-	font-weight: $chips-font-weight;
+	padding: $chips-padding;
 
 	&-deletable {
 		@include transition($chips-delete-small-transition);
@@ -29,19 +29,22 @@
 		.sc-chip-delete {
 			@include border-radius(50%);
 			@include transition($chips-delete-small-transition);
-			vertical-align: middle;
+			background: $chips-delete-background;
+			color: $chips-delete-cross;
 			display: inline-block;
-			width: $chips-delete-size;
+			font-size: rem-calc(13px);
 			height: $chips-delete-size;
 			margin: $chips-delete-margin;
-			color: $chips-delete-cross;
-			background: $chips-delete-background;
+			line-height: $chips-delete-size;
+			text-align: center;
+			vertical-align: middle;
+			width: $chips-delete-size;
 
-			@media #{$medium-up} {
+			@media #{$medium-only} {
 				@include transition($chips-delete-medium-transition);
 			}
 
-			@media #{$large-up} {
+			@media #{$medium-up} {
 				@include transition($chips-delete-large-transition);
 			}
 
@@ -55,32 +58,34 @@
 			color: $chips-text-hover;
 
 			.sc-chip-delete {
-				color: $chips-delete-cross-hover;
 				background: $chips-delete-background-hover;
+				color: $chips-delete-cross-hover;
 			}
 		}
 	}
 
 	&-contact {
+		font-size: $chips-contact-font-size;
+
 		@include transition($chips-contact-small-transition unquote(',') $chips-contact-small-transition);
 
-		@media #{$medium-up} {
+		@media #{$medium-only} {
 			@include transition($chips-contact-medium-transition unquote(',') $chips-contact-medium-transition);
 		}
 
-		@media #{$large-up} {
+		@media #{$medium-up} {
 			@include transition($chips-contact-large-transition unquote(',') $chips-contact-large-transition);
 		}
 
 		img {
 			@include border-radius(50%);
 			height: $chips-size;
-			width: $chips-size;
 			margin: $chips-contact-margin;
+			width: $chips-size;
 		}
 
 		&:hover {
-			@extend .sc-z2;
+			@include material-shadow(2);
 		}
 	}
 }

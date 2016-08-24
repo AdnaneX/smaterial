@@ -7,38 +7,40 @@
 
 button, input[type="button"], input[type="reset"], input[type="submit"], a {
 	&.sc-raised-button {
-		@extend .sc-z2, .sc-button;
+		@include font($font-size-button, 0, $font-weight-button, $line-height-button, $font-color-button, $letter-spacing-button, uppercase);
+		@include button( rem-calc(2px) );
 		@include transition($raised-small-transition);
-		color: $raised-color;
+		@include material-shadow(2);
 		background: $raised-background;
-		min-width: $raised-min-width;
+		color: $raised-color;
 		height: $raised-size;
 		line-height: $raised-size;
-		padding: $raised-padding;
 		margin: $raised-margin;
+		min-width: $raised-min-width;
+		padding: $raised-padding;
 
 		@media #{$medium-up} {
 			@include transition($raised-medium-transition);
 		}
 
-		@media #{$large-up} {
+		@media #{$medium-up} {
 			@include transition($raised-large-transition);
 		}
 
 		&:active {
-			@extend .sc-z8;
+			@include material-shadow(8);
 		}
 
 		&:hover {
-			color: $raised-color-hover;
 			background: $raised-background-hover;
+			color: $raised-color-hover;
 		}
 
 		.material-icons {
 			color: $raised-icon-color;
+			height: $raised-size;
 			line-height: $raised-size;
 			vertical-align: middle;
-			height: $raised-size;
 			width: $raised-size;
 
 			&.sc-left {
@@ -51,13 +53,13 @@ button, input[type="button"], input[type="reset"], input[type="submit"], a {
 		}
 
 		&-dense {
+			font-size: $raised-dense-font-size;
 			height: $raised-dense-size;
 			line-height: $raised-dense-size;
-			font-size: $raised-dense-font-size;
 
 			.material-icons {
-				line-height: $raised-dense-size;
 				height: $raised-dense-size;
+				line-height: $raised-dense-size;
 				width: $raised-dense-size;
 			}
 		}
@@ -65,10 +67,10 @@ button, input[type="button"], input[type="reset"], input[type="submit"], a {
 		&-disabled, &:disabled {
 			background: $raised-disabled-background;
 			color: $raised-disabled-color;
-			@extend .sc-z0;
+			@include material-shadow(0);
 
 			&:hover {
-				@extend .sc-z0;
+				@include material-shadow(0);
 				background: $raised-disabled-background-hover;
 				color: $raised-disabled-color-hover;
 			}
@@ -77,13 +79,14 @@ button, input[type="button"], input[type="reset"], input[type="submit"], a {
 
 	&.sc-flat-button {
 		@extend .sc-button;
-		color: $flat-color;
+		@include button( rem-calc(2px) );
 		background: none;
-		min-width: $flat-min-width;
+		color: $flat-color;
 		height: $flat-size;
 		line-height: $flat-size;
-		padding: $flat-padding;
 		margin: $flat-margin;
+		min-width: $flat-min-width;
+		padding: $flat-padding;
 
 		&:hover {
 			color: $flat-color;
@@ -91,9 +94,9 @@ button, input[type="button"], input[type="reset"], input[type="submit"], a {
 
 		.material-icons {
 			color: $flat-icon-color;
+			height: $flat-size;
 			line-height: $flat-size;
 			vertical-align: middle;
-			height: $flat-size;
 			width: $flat-size;
 
 			&.sc-left {
@@ -118,57 +121,98 @@ button, input[type="button"], input[type="reset"], input[type="submit"], a {
 
 button, a {
 	&.sc-floating-button {
-		@extend .sc-z6, .sc-button;
+		@include font($font-size-button, 0, $font-weight-button, $line-height-button, $font-color-button, $letter-spacing-button, uppercase);
+		@include button( 50% );
 		@include transition($floating-transition);
-		@include border-radius(50% !important);
-		width: $floating-size;
-		height: $floating-size;
+		@include material-shadow(6);
 		background: $floating-background;
+		height: $floating-size;
 		line-height: $floating-size;
+		width: $floating-size;
 
 		&:hover {
-			@extend .sc-z12;
+			@include material-shadow(12);
 		}
 
 
 		.material-icons {
-			height: $floating-icon-size;
-			width: $floating-icon-size;
-			vertical-align: middle;
 			color: $floating-icon;
+			height: $floating-icon-size;
+			vertical-align: middle;
+			width: $floating-icon-size;
 		}
 
 		&-mini {
-			width: $floating-mini-size;
 			height: $floating-mini-size;
 			line-height: $floating-mini-size;
+			width: $floating-mini-size;
 		}
 	}
 }
 
 .sc-toggle-button {
-	@extend .sc-button;
-	@include border-radius(50% !important);
-	width: remCalc(40px);
-	height: remCalc(40px);
-	color: $floating-icon;
+	@include button( 50% );
 	background: $floating-background;
-	line-height: remCalc(40px);
+	color: $floating-icon;
+	height: rem-calc(40px);
+	line-height: rem-calc(40px);
+	width: rem-calc(40px);
 
 	.material-icons {
-		height: remCalc(24px);
-		width: remCalc(24px);
-		vertical-align: middle;
 		color: $floating-icon;
+		height: rem-calc(24px);
+		vertical-align: middle;
+		width: rem-calc(24px);
 	}
 }
 
-.sc-button {
-	cursor: pointer;
-	@include border-radius(remCalc(2px));
-	text-decoration: none;
-	border: none;
-	outline: none;
-	display: inline-block;
-	text-align: center;
+.sc-hover-ripple {
+	overflow: hidden;
+	position: relative;
+	z-index: 1;
+
+	&:hover {
+		&:after {
+			@include animation(beat 3s ease-in-out infinite);
+
+			@include keyframes(beat) {
+				0%, 50%, 100% {
+					@include transform(scale(1) translateZ(0));
+				}
+				25%, 75% {
+					@include transform(scale(.98) translateZ(0));
+				}
+			}
+		}
+
+		&:before {
+			background: rgba($black, .12);
+			content: "";
+			height: 100%;
+			margin: 0px -50%;
+			position: absolute;
+			width: 150%;
+			z-index: -2;
+		}
+	}
+
+
+
+	&:after {
+		background: $main-color;
+		border-radius: 50%;
+		content: "";
+		height: 0;
+		left: 50%;
+		margin: -45%;
+		opacity: 1;
+		padding-top: 70%;
+		position: absolute;
+		top: 100%;
+		width: 90%;
+		z-index: -1;
+		@include transform(scale(0) translateZ(0));
+		@include transition(all .2s ease-in-out);
+		object-fit: contain;
+	}
 }

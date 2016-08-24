@@ -15,7 +15,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		The sliders look the best in Chrome. FireFox and IE / Edge are still a work in process.
 	</p>
 
-	<p class="sc-col sc-s12 sc-m6">
+	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		The disabled styling can be activated in 2 ways.
 		You can give the range the attribute <code class="language-html">disabled</code> and or you give
 		it the class <code class="language-css">.sc-slider-disabled</code>.
@@ -24,7 +24,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		When the value is at zero you get a different style compared to a value which is higher than or equal to 1.
 	</p>
 
-	<p class="sc-col sc-s12 sc-m6">
+	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		<input type="range">
 		<input type="range" disabled>
 		<input type="range" class="sc-slider">
@@ -35,7 +35,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	</p>
 
 	<pre class="language-html sc-col sc-xs4 sc-s12 sc-m6">
-		<code>
+	<code>
 &lt;input type="range">
 &lt;input type="range" disabled>
 &lt;input type="range" class="sc-slider">
@@ -43,8 +43,8 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 &lt;input type="range" disabled class="sc-slider">
 &lt;input type="range" min="0" max="200" class="sc-slider sc-slider-discrete">
 &lt;input type="range" disabled class="sc-slider sc-slider-discrete">
-		</code>
-	</pre>
+	</code>
+</pre>
 </section>
 
 <section class="sc-row">
@@ -55,14 +55,14 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		Adding the class will give more customizing abilities. Of course for both ways there is also disabled styling.
 	</p>
 
-	 <pre class="language-html sc-col sc-xs4 sc-s12 sc-m6">
-		<code>
+	<pre class="language-html sc-col sc-xs4 sc-s12 sc-m6">
+	<code>
 &lt;input type="range">
 &lt;input type="range" disabled>
 &lt;input type="range" class="sc-slider">
 &lt;input type="range" disabled class="sc-slider">
-		</code>
-	</pre>
+	</code>
+</pre>
 </section>
 
 <section class="sc-row">

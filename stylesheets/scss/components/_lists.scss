@@ -5,24 +5,24 @@
  **************************************/
 
 ol, ul {
-	padding: 0;
-	margin: 0;
 	list-style-type: none;
+	margin: 0;
+	padding: 0;
 
 	li {
-		font-weight: 400;
-		font-size: remCalc(14px);
 		color: lighten($black, (100% - 87%));
+		font-size: rem-calc(14px);
+		font-weight: 400;
 		height: auto;
-		line-height: remCalc(48px);
-		padding: 0 remCalc(16px);
+		line-height: rem-calc(48px);
+		padding: 0 rem-calc(16px);
 
 		a {
-			font-weight: 400;
-			font-size: remCalc(14px);
 			color: lighten($black, (100% - 87%));
-			height: remCalc(48px);
-			line-height: remCalc(48px);
+			font-size: rem-calc(14px);
+			font-weight: 400;
+			height: rem-calc(48px);
+			line-height: rem-calc(48px);
 		}
 	}
 }

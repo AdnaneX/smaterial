@@ -8,18 +8,18 @@ table {
 	border-collapse: collapse;
 
 	tr {
-		padding: 0 remCalc(24px);
+		padding: 0 rem-calc(24px);
 	}
 
 	thead {
 		th {
-			text-align: left;
-			font-size: remCalc(12px);
 			color: lighten($black, (100% - 54%));
+			font-size: rem-calc(12px);
 			font-weight: 500;
-			height: remCalc(56px);
-			line-height: remCalc(56px);
-			min-width: remCalc(56px);
+			height: rem-calc(56px);
+			line-height: rem-calc(56px);
+			min-width: rem-calc(56px);
+			text-align: left;
 			@include box-sizing(border-box);
 
 			&:hover {
@@ -31,13 +31,13 @@ table {
 	tbody {
 		td {
 			@include box-sizing(border-box);
-			text-align: left;
-			font-size: remCalc(13px);
 			color: lighten($black, (100% - 87%));
+			font-size: rem-calc(13px);
 			font-weight: normal;
-			height: remCalc(48px);
-			line-height: remCalc(56px);
-			min-width: remCalc(56px);
+			height: rem-calc(48px);
+			line-height: rem-calc(56px);
+			min-width: rem-calc(56px);
+			text-align: left;
 		}
 	}
 
@@ -46,8 +46,8 @@ table {
 	}
 
 	.sc-checkbox-col {
-		width: remCalc(56px);
-		padding: remCalc(24px);
+		padding: rem-calc(24px);
+		width: rem-calc(56px);
 	}
 
 	&.sc-table-hover {

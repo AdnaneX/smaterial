@@ -8,7 +8,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 <section class="sc-row">
 	<h2>Text fields</h2>
 
-	<p class="sc-col sc-s12 sc-m6">
+	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		There are numerous text fields you can use.
 		The textfields and the options you can use are listed below.
 		<strong>NOTE*</strong> that the label should always be below the input.
@@ -18,11 +18,11 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 <section class="sc-row" id="floating">
 	<h3>Floating input</h3>
 
-	<p class="sc-col sc-s12 sc-m6">
+	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		The floating input is most commonly used for forms.
 	</p>
 
-	<div class="sc-col sc-s12 sc-m3">
+	<div class="sc-col sc-xs4 sc-s12 sc-m3">
 		<div class="sc-floating-input">
 			<input type="text" id="example">
 			<label for="example">Example</label>
@@ -44,7 +44,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		</div>
 	</div>
 
-	<div class="sc-col sc-s12 sc-m3">
+	<div class="sc-col sc-xs4 sc-s12 sc-m3">
 		<div class="sc-floating-input">
 			<input type="search" id="example5">
 			<label for="example5">Search</label>
@@ -84,7 +84,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 <section class="sc-row">
 	<h3>Form example</h3>
 
-	<div class="sc-col sc-s12 sc-m3">
+	<div class="sc-col sc-xs4 sc-s12 sc-m3">
 		<form action="<?= $_SERVER['PHP_SELF']; ?>" method="post">
 			<div class="sc-floating-input">
 				<input type="text" name="name" id="name" required>
@@ -100,7 +100,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		</form>
 	</div>
 
-	<div class="sc-col sc-s12 sc-push-m3 sc-m6">
+	<div class="sc-col sc-xs4 sc-s12 sc-push-m3 sc-m6">
 		The <span class="sc-red-text"><i class="material-icons">star</i></span>  is automatically added by required fields but can easily be turned off.
 	</div>
 
@@ -126,11 +126,11 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 <section class="sc-row" id="floating-dense">
 	<h3>Floating dense input</h3>
 
-	<p class="sc-col sc-s12 sc-m6">
+	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		Compared to the "<a href="#floating">floating input</a>" the floating dense input is a bit smaller.
 	</p>
 
-	<div class="sc-col sc-s12 sc-m3">
+	<div class="sc-col sc-xs4 sc-s12 sc-m3">
 		<div class="sc-floating-dense-input">
 			<input type="text" id="example8">
 			<label for="example8">Example</label>
@@ -152,7 +152,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		</div>
 	</div>
 
-	<div class="sc-col sc-s12 sc-m3">
+	<div class="sc-col sc-xs4 sc-s12 sc-m3">
 		<div class="sc-floating-dense-input">
 			<input type="search" id="example12">
 			<label for="example12">Search</label>
@@ -192,11 +192,11 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 <section class="sc-row" id="single-line">
 	<h3>Single line-textfield</h3>
 
-	<p class="sc-col sc-s12 sc-m6">
+	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		The single line text fields can also have an icon. These are more commonly used when used in a tight area.
 	</p>
 
-	<div class="sc-col sc-s12 sc-m3">
+	<div class="sc-col sc-xs4 sc-s12 sc-m3">
 		<div class="sc-single-input">
 			<input type="text" id="example15">
 			<label for="example15">Example</label>
@@ -218,12 +218,12 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 <section class="sc-row" id="single-line-dense">
 	<h3>Single dense line-textfield</h3>
 
-	<p class="sc-col sc-s12 sc-m6">
+	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		The single dense line-text fields can also have an icon but are smaller than "<a href="#single-line">single line-textfields</a>".
 		These are more commonly used when used in a tight area.
 	</p>
 
-	<div class="sc-col sc-s12 sc-m3">
+	<div class="sc-col sc-xs4 sc-s12 sc-m3">
 		<div class="sc-single-dense-input">
 			<input type="text" id="example16">
 			<label for="example16">Example</label>
@@ -250,14 +250,14 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	</pre>
 </section>
 
-<section class="sc-col sc-s12 sc-m6">
+<section class="sc-col sc-xs4 sc-s12 sc-m6">
 	<h3>Textarea</h3>
 
-	<p class="sc-col sc-s12 sc-m6">
+	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		The textarea works the same as the textfields.
 	</p>
 
-	<div class="sc-col sc-s12 sc-m6">
+	<div class="sc-col sc-xs4 sc-s12 sc-m6">
 		<div class="sc-floating-input">
 			<textarea id="textarea"></textarea>
 			<label for="textarea">Text area</label>

@@ -15,7 +15,6 @@
 @import 'components/shadows'; // Shadow depths
 @import 'components/typography'; // Typography
 @import 'components/icons'; // Icons with their shadow (can be turned off)
-@import 'components/ripple'; // Used to create ripple effect (can be turned off)
 
 // Components
 @import 'components/appbar'; // Top menu bar (can be turned off)
@@ -27,6 +26,7 @@
 @import 'components/dialogs'; // Used to style dialog (can be turned off)
 @import 'components/drawer'; // Navigation drawer (can be turned off)
 @import 'components/lists'; // Lists (can be turned off)
+@import 'components/notifications'; // Notifications style (can be turned off)
 @import 'components/progress'; // Used to style progress and activity indicators (can be turned off)
 @import 'components/selection'; // Used to style selection controls (checkbox, radio button, switch) (can be turned off)
 @import 'components/sliders'; // Used to style sliders (can be turned off)

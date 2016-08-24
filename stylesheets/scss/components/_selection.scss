@@ -5,30 +5,30 @@
  **************************************/
 
 input[type="checkbox"] {
-	@include border-radius(remCalc(2px));
+	@include border-radius(rem-calc(2px));
 	@include transition(border $transition-small-duration $basic-transition unquote(',') background $transition-small-duration $basic-transition);
+	background: transparent;
+	border: rem-calc(2px) solid lighten($black, (100% - 54%));
+	cursor: pointer;
+	height: rem-calc(14px);
+	outline: none; //rgba($black, .54)
+	vertical-align: middle;
+	width: rem-calc(14px);
+	z-index: 1;
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	-o-appearance: none;
-	background: transparent;
-	border: remCalc(2px) solid lighten($black, (100% - 54%)); //rgba($black, .54)
-	width: remCalc(14px);
-	height: remCalc(14px);
-	vertical-align: middle;
-	cursor: pointer;
-	outline: none;
-	z-index: 1;
 
 	&:after {
 		@include transition(content $transition-large-duration $basic-transition);
 		content: '';
-		position: absolute;
 		font-family: 'Material Icons';
+		position: absolute;
 	}
 
 	&:checked {
-		border: remCalc(2px) solid $main-color; // rgba($main-color, 1)
 		background: $main-color; // rgba($main-color, 1)
+		border: rem-calc(2px) solid $main-color; // rgba($main-color, 1)
 
 		&:after {
 			color: $white;
@@ -37,7 +37,7 @@ input[type="checkbox"] {
 	}
 
 	&:disabled {
-		border: remCalc(2px) solid lighten($black, (100% - 26%)); // rgba($black, .26)
+		border: rem-calc(2px) solid lighten($black, (100% - 26%)); // rgba($black, .26)
 
 		&:checked {
 			background: lighten($black, (100% - 26%)); // rgba($black, .26)
@@ -45,56 +45,56 @@ input[type="checkbox"] {
 	}
 
 	&.sc-checkbox {
-		position: absolute;
+		margin: rem-calc(7px) 0 0 0;
 		opacity: 0;
-		margin: remCalc(7px) 0 0 0;
+		position: absolute;
 
 		+ label {
-			position: relative;
-			padding-left: remCalc(21px);
 			cursor: pointer;
 			display: inline-block;
-			height: remCalc(28px);
-			line-height: remCalc(28px);
+			height: rem-calc(28px);
+			line-height: rem-calc(28px);
+			padding-left: rem-calc(21px);
+			position: relative;
 
 			// Border
 			&:before {
-				@include border-radius(remCalc(2px));
+				@include border-radius(rem-calc(2px));
 				@include transition(border $transition-small-duration $basic-transition unquote(',') background $transition-small-duration $basic-transition);
-				content: '';
 				background: transparent;
-				border: remCalc(2px) solid lighten($black, (100% - 54%)); //rgba($black, .54)
-				width: remCalc(14px);
-				height: remCalc(14px);
-				vertical-align: middle;
+				border: rem-calc(2px) solid lighten($black, (100% - 54%));
+				box-sizing: border-box; //rgba($black, .54)
+				content: '';
 				cursor: pointer;
+				height: rem-calc(14px);
+				left: 0;
 				outline: none;
 				position: absolute;
-				top: remCalc(7px);
-				box-sizing: border-box;
-				left: 0;
+				top: rem-calc(7px);
+				vertical-align: middle;
+				width: rem-calc(14px);
 			}
 
 			// Check
 			&:after {
 				@include transition(content $transition-large-duration $basic-transition);
+				border: none;
 				content: '';
-				position: absolute;
 				font-family: 'Material Icons';
 				left: 0;
-				border: none;
+				position: absolute;
 			}
 		}
 
 		&:checked {
 			+ label {
 				&:before {
-					border: remCalc(2px) solid $main-color; // rgba($main-color, 1)
 					background: $main-color; // rgba($main-color, 1)
+					border: rem-calc(2px) solid $main-color; // rgba($main-color, 1)
 				}
 
 				&:after {
-					@include border-radius(remCalc(2px));
+					@include border-radius(rem-calc(2px));
 					color: $white;
 					content: 'checkbox' !important;
 				}
@@ -104,7 +104,7 @@ input[type="checkbox"] {
 		&:disabled {
 			+ label {
 				&:before {
-					border: remCalc(2px) solid lighten($black, (100% - 26%)); // rgba($black, .26)
+					border: rem-calc(2px) solid lighten($black, (100% - 26%)); // rgba($black, .26)
 				}
 			}
 
@@ -127,32 +127,32 @@ input[type="checkbox"] {
 input[type="radio"] {
 	@include border-radius(50%);
 	@include transition(border $transition-small-duration $basic-transition);
+	background: transparent;
+	border: rem-calc(2px) solid lighten($black, (100% - 54%));
+	cursor: pointer;
+	height: rem-calc(14px);
+	outline: none;
+	position: relative;
+	width: rem-calc(14px);
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	-o-appearance: none;
-	border: remCalc(2px) solid lighten($black, (100% - 54%));
-	background: transparent;
-	width: remCalc(14px);
-	height: remCalc(14px);
-	outline: none;
-	position: relative;
-	cursor: pointer;
 
 	&:after {
 		@include transition(background $transition-small-duration $basic-transition);
 		@include border-radius(50%);
-		position: absolute;
-		content: '';
-		border: none;
 		background: transparent;
-		width: remCalc(7px);
-		height: remCalc(7px);
-		top: remCalc(2px);
-		left: remCalc(2px);
+		border: none;
+		content: '';
+		height: rem-calc(7px);
+		left: rem-calc(2px);
+		position: absolute;
+		top: rem-calc(2px);
+		width: rem-calc(7px);
 	}
 
 	&:checked {
-		border: remCalc(2px) solid $main-color;
+		border: rem-calc(2px) solid $main-color;
 
 		&:after {
 			background: $main-color;
@@ -160,7 +160,7 @@ input[type="radio"] {
 	}
 
 	&:disabled {
-		border: remCalc(2px) solid lighten($black, (100% - 26%));
+		border: rem-calc(2px) solid lighten($black, (100% - 26%));
 
 		&:checked {
 			&:after {
@@ -170,48 +170,48 @@ input[type="radio"] {
 	}
 
 	&.sc-radio {
-		position: absolute;
+		margin: rem-calc(7px) 0 0 0;
 		opacity: 0;
-		margin: remCalc(7px) 0 0 0;
+		position: absolute;
 
 		+ label {
-			position: relative;
-			padding-left: remCalc(21px);
 			cursor: pointer;
 			display: inline-block;
-			height: remCalc(28px);
-			line-height: remCalc(28px);
+			height: rem-calc(28px);
+			line-height: rem-calc(28px);
+			padding-left: rem-calc(21px);
+			position: relative;
 
 			&:before {
 				@include border-radius(50%);
 				@include transition(border $transition-small-duration $basic-transition);
-				border: remCalc(2px) solid lighten($black, (100% - 54%));
 				background: transparent;
-				width: remCalc(14px);
-				height: remCalc(14px);
-				position: absolute;
+				border: rem-calc(2px) solid lighten($black, (100% - 54%));
 				content: '';
+				height: rem-calc(14px);
 				left: 0;
-				top: remCalc(7px);
+				position: absolute;
+				top: rem-calc(7px);
+				width: rem-calc(14px);
 			}
 
 			&:after {
 				@include transition(background $transition-small-duration $basic-transition);
 				@include border-radius(50%);
-				content: '';
 				background: transparent;
-				width: remCalc(9px);
-				height: remCalc(9px);
-				top: remCalc(11px);
-				left: remCalc(4px);
+				content: '';
+				height: rem-calc(9px);
+				left: rem-calc(4px);
 				position: absolute;
+				top: rem-calc(11px);
+				width: rem-calc(9px);
 			}
 		}
 
 		&:checked {
 			+ label {
 				&:before {
-					border: remCalc(2px) solid $main-color;
+					border: rem-calc(2px) solid $main-color;
 				}
 
 				&:after {
@@ -223,7 +223,7 @@ input[type="radio"] {
 		&:disabled {
 			+ label {
 				&:before {
-					border: remCalc(2px) solid lighten($black, (100% - 26%));
+					border: rem-calc(2px) solid lighten($black, (100% - 26%));
 				}
 			}
 
@@ -241,25 +241,25 @@ input[type="radio"] {
 .sc-switch {
 	// Track
 	.sc-lever {
-		width: remCalc(50px);
 		background: lighten($black, (100% - 26%));
-		height: remCalc(14px);
 		display: inline-block;
-		@include border-radius(remCalc(14px));
+		height: rem-calc(14px);
 		position: relative;
+		@include border-radius(rem-calc(14px));
 		vertical-align: middle;
+		width: rem-calc(50px);
 		@include transition(background $transition-small-duration $basic-transition);
 
 		// Thumb
 		&:after {
-			width: remCalc(24px);
-			height: remCalc(24px);
-			@include border-radius(50%);
-			content: '';
+			@include material-shadow(1);
 			background: $grey-50;
+			content: '';
+			@include border-radius(50%);
+			height: rem-calc(24px);
 			position: absolute;
-			@extend .sc-z1;
-			top: remCalc(-5px);
+			top: rem-calc(-5px);
+			width: rem-calc(24px);
 			@include transition(background $transition-small-duration $basic-transition unquote(',') right $transition-small-duration $basic-transition);
 		}
 	}

@@ -57,15 +57,13 @@ $xlarge-down: "only screen and (max-width: #{$xlarge-screen})";
 }
 
 .sc-row {
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: 20px;
+	margin: 0 auto rem-calc(20px) auto;
 
 	// Clear floating children
 	&:after {
+		clear: both;
 		content: "";
 		display: table;
-		clear: both;
 	}
 
 	.sc-col {

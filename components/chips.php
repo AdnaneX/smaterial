@@ -6,45 +6,45 @@ $keywords = 'material design, smaterial, chips';
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>
 
-<section class="sc-row">
-	<h2>Chips usage</h2>
+	<section class="sc-row">
+		<h2>Chips usage</h2>
 
-	<p class="sc-col sc-s12 sc-m6">
-		You could use chips for something like tags or contacts.
-	</p>
-</section>
+		<p class="sc-col sc-xs4 sc-s12 sc-m6">
+			You could use chips for something like tags or contacts.
+		</p>
+	</section>
 
-<section class="sc-row">
-	<h3>Chip examples</h3>
+	<section class="sc-row">
+		<h3>Chip examples</h3>
 
-	<p class="sc-col sc-s12 sc-m6">
+		<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		There are a couple of chips. The normal (<code>.sc-chip</code>), the deletable (<code>.sc-chip .sc-chip-deletable</code>),
 		the contact (<code>.sc-chip .sc-chip-contact</code>) and the deletable contact (<code>.sc-chip .sc-chip-deletable .sc-chip-contact</code>).
-	</p>
+		</p>
 
-	<div class="sc-col sc-s12 sc-m6">
-		<div class="sc-chip sc-chip-deletable">
-			<span>John Doe</span>
-			<i class="material-icons sc-chip-delete">clear</i>
+		<div class="sc-col sc-xs4 sc-s12 sc-m6">
+			<div class="sc-chip sc-chip-deletable">
+				<span>John Doe</span>
+				<i class="material-icons sc-chip-delete">clear</i>
+			</div>
+
+			<div class="sc-chip">
+				<span>John Doe</span>
+			</div>
+
+			<div class="sc-chip sc-chip-contact sc-chip-deletable">
+				<img class="sc-left" src="/images/profile-icon.jpg" alt="Chip contact example">
+				<span>John Doe</span>
+				<i class="material-icons sc-chip-delete">clear</i>
+			</div>
+
+			<div class="sc-chip sc-chip-contact">
+				<img class="sc-left" src="/images/profile-icon.jpg" alt="Chip contact example">
+				<span>John Doe</span>
+			</div>
 		</div>
 
-		<div class="sc-chip">
-			<span>John Doe</span>
-		</div>
-
-		<div class="sc-chip sc-chip-contact sc-chip-deletable">
-			<img class="sc-left" src="http://lorempixel.com/32/32/abstract" alt="Chip contact example">
-			<span>John Doe</span>
-			<i class="material-icons sc-chip-delete">clear</i>
-		</div>
-
-		<div class="sc-chip sc-chip-contact">
-			<img class="sc-left" src="http://lorempixel.com/32/32/abstract" alt="Chip contact example">
-			<span>John Doe</span>
-		</div>
-	</div>
-
-	<pre class="language-html sc-col sc-s12 sc-m6">
+		<pre class="language-html sc-col sc-s12 sc-m6">
 		<code>
 &lt;div class="sc-chip sc-chip-deletable">
   &lt;span>John Doe&lt;/span>
@@ -67,20 +67,20 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 &lt;/div>
 		</code>
 	</pre>
-</section>
+	</section>
 
-<section class="sc-row">
-	<h3>Chip settings</h3>
+	<section class="sc-row">
+		<h3>Chip settings</h3>
 
-	<table class="sc-col sc-s12 sc-m6">
-		<thead>
+		<table class="sc-col sc-xs4 sc-s12 sc-m6">
+			<thead>
 			<tr>
 				<th>Variable</th>
 				<th>Options</th>
 				<th>Result</th>
 			</tr>
-		</thead>
-		<tbody>
+			</thead>
+			<tbody>
 			<tr>
 				<td>$chips-text</td>
 				<td>Change to color or variable</td>
@@ -121,9 +121,54 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 				<td>Change to color or variable</td>
 				<td>Changes the delete cross background when hovered and deletable</td>
 			</tr>
-		</tbody>
-	</table>
-</section>
+			<tr>
+				<td>$chips-delete-margin</td>
+				<td>Integer / variable</td>
+				<td>Changes the delete icon margin</td>
+			</tr>
+			<tr>
+				<td>$chips-delete-small-transition</td>
+				<td>Transition properties</td>
+				<td>Changes the transition for the delete icon on small screens
+			</tr>
+			<tr>
+				<td>$chips-delete-medium-transition</td>
+				<td>Transition properties</td>
+				<td>Changes the transition for the delete icon on medium screens
+			</tr>
+			<tr>
+				<td>$chips-delete-large-transition</td>
+				<td>Transition properties</td>
+				<td>Changes the transition for the delete icon on large screens
+			</tr>
+			<tr>
+				<td>$chips-contact-margin</td>
+				<td>Integer / variable</td>
+				<td>Changes the margin for contact chip</td>
+			</tr>
+			<tr>
+				<td>$chips-contact-font-size</td>
+				<td>Integer / variable</td>
+				<td>Changes the contact chip font size</td>
+			</tr>
+			<tr>
+				<td>$chips-contact-small-transition</td>
+				<td>Transition properties</td>
+				<td>Changes the contact chip transition on small screen</td>
+			</tr>
+			<tr>
+				<td>$chips-contact-medium-transition</td>
+				<td>Transition properties</td>
+				<td>Changes the contact chip transition on medium screen</td>
+			</tr>
+			<tr>
+				<td>$chips-contact-large-transition</td>
+				<td>Transition properties</td>
+				<td>Changes the contact chip transition on large screen</td>
+			</tr>
+			</tbody>
+		</table>
+	</section>
 
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.php';

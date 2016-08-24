@@ -10,21 +10,21 @@
 
 	&:hover {
 		&:after {
-			content: attr(title);
 			background: $grey-700;
+			color: $tooltip-font-color;
 			@include opacity($tooltip-opacity);
-			width: auto;
+			content: attr(title);
 			font-size: $tooltip-small-font;
 			font-weight: $tooltip-font-weight;
-			color: $tooltip-font-color;
-			top: $tooltip-small-top;
-			margin-top: $tooltip-small-top;
-			left: 0;
 			height: $tooltip-small-height;
+			left: 0;
 			line-height: $tooltip-small-height;
+			margin-top: $tooltip-small-top;
 			padding: $tooltip-small-padding;
 			position: absolute;
+			top: $tooltip-small-top;
 			white-space: nowrap;
+			width: auto;
 			z-index: $tooltip-z-index;
 
 			@media #{$medium-up} {

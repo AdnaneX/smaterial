@@ -16,3 +16,13 @@ function notification( $title, $options, $click ) {
 		});
 	}
 }
+
+$('.sc-notification').click(function() {
+	var $this = $(this);
+
+	if( $this.hasClass('sc-expanded') ) {
+		$this.removeClass('sc-expanded');
+	} else {
+		$this.addClass('sc-expanded');
+	}
+});

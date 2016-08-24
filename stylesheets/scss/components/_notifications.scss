@@ -1,0 +1,308 @@
+/**************************************
+ * Notifications
+ *
+ *  https://material.google.com/patterns/notifications.html
+ **************************************/
+
+.sc-notification {
+	@include material-shadow(3);
+	@include border-radius(rem-calc(2px));
+	float: left;
+	position: relative;
+	width: auto;
+	max-width: 100%;
+	background: $white;
+	cursor: pointer;
+
+	&-header {
+		padding: rem-calc(8px) rem-calc(8px) 0 rem-calc(8px);
+		width: 100%;
+
+		> div {
+			display: inline-block;
+		}
+
+		.sc-separator {
+			&:after {
+				content: '\25CF'; // \2022
+				color: rgba($black, .54);
+				padding: rem-calc(5px);
+			}
+		}
+
+		&-app-icon .material-icons {
+			font-size: 1rem;
+			height: auto;
+			width: rem-calc(18px);
+		}
+
+		&-text, &-timestamp {
+			color: rgba($black, .54);
+		}
+
+		&-expand .material-icons {
+			font-size: 1rem;
+			height: auto;
+			width: auto;
+			@include transition(all $transition-small-duration $basic-transition);
+
+			@media #{$medium-only} {
+				@include transition(all $transition-medium-duration $basic-transition);
+
+			}
+
+			@media #{$medium-up} {
+				@include transition(all $transition-large-duration $basic-transition);
+			}
+		}
+	}
+
+	&-content {
+		padding: rem-calc(5px) rem-calc(8px) rem-calc(10px) rem-calc(8px);
+
+		&-title, .sc-subject {
+		 	color: rgba($black, .87);
+			font-weight: 500;
+		}
+
+		&-text {
+			color: rgba($black, .54);
+		}
+	}
+
+	&-actions {
+		background: transparent;
+		@include transition(visibility $transition-small-duration $basic-transition unquote(',') opacity $transition-small-duration $basic-transition unquote(',') max-height $transition-small-duration $basic-transition unquote(',') background $transition-small-duration $basic-transition);
+		visibility: hidden;
+		@include opacity(0);
+		max-height: 0;
+
+		@media #{$medium-only} {
+			@include transition(visibility $transition-medium-duration $basic-transition unquote(',') opacity $transition-medium-duration $basic-transition unquote(',') max-height $transition-medium-duration $basic-transition unquote(',') background $transition-medium-duration $basic-transition);
+		}
+
+		@media #{$medium-up} {
+			@include transition(visibility $transition-large-duration $basic-transition unquote(',') opacity $transition-large-duration $basic-transition unquote(',') max-height $transition-large-duration $basic-transition unquote(',') background $transition-large-duration $basic-transition);
+		}
+
+		> * {
+			display: inline-block;
+			margin: 0 !important;
+			visibility: hidden;
+			@include opacity(0);
+			@include transition(visibility $transition-small-duration $basic-transition unquote(',') opacity $transition-small-duration $basic-transition);
+
+			@media #{$medium-only} {
+				@include transition(visibility $transition-medium-duration $basic-transition unquote(',') opacity $transition-medium-duration $basic-transition);
+			}
+
+			@media #{$medium-up} {
+				@include transition(visibility $transition-large-duration $basic-transition unquote(',') opacity $transition-large-duration $basic-transition);
+			}
+		}
+	}
+
+	&.sc-standard {
+		.sc-notification-content {
+			position: relative;
+
+			> div {
+				width: 75%;
+			}
+
+			img {
+				position: absolute;
+				right: rem-calc(8px);
+				top: rem-calc(5px);
+				max-width: 25%;
+				@include border-radius(50%);
+				width: rem-calc(40px);
+				height: rem-calc(40px);
+			}
+		}
+	}
+
+	&.sc-big-text {
+		.sc-notification-content {
+			position: relative;
+
+			&-text {
+				visibility: hidden;
+				@include opacity(0);
+				max-height: 0;
+			}
+
+			img {
+				position: absolute;
+				top: rem-calc(5px);
+				right: rem-calc(8px);
+				@include border-radius(50%);
+				width: rem-calc(40px);
+				height: rem-calc(40px);
+
+			}
+		}
+	}
+
+	&.sc-big-picture {
+		.sc-notification-content {
+			position: relative;
+
+			&-text {
+				img {
+					max-width: 100%;
+					width: 0;
+					@include opacity(0);
+					visibility: hidden;
+					@include transition(opacity $transition-small-duration $basic-transition $transition-small-duration unquote(',') visibility $transition-small-duration $basic-transition $transition-small-duration);
+
+					@media #{$medium-only} {
+						@include transition(opacity $transition-medium-duration $basic-transition $transition-medium-duration unquote(',') visibility $transition-medium-duration $basic-transition $transition-medium-duration);
+					}
+
+					@media #{$medium-up} {
+						@include transition(opacity $transition-large-duration $basic-transition $transition-large-duration unquote(',') visibility $transition-large-duration $basic-transition $transition-large-duration);
+					}
+				}
+			}
+
+			> img {
+				position: absolute;
+				top: rem-calc(5px);
+				right: rem-calc(8px);
+				width: rem-calc(40px);
+				height: rem-calc(40px);
+				@include opacity(1);
+				@include transition(opacity $transition-small-duration $basic-transition);
+
+				@media #{$medium-only} {
+					@include transition(opacity $transition-medium-duration $basic-transition);
+				}
+
+				@media #{$medium-up} {
+					@include transition(opacity $transition-large-duration $basic-transition);
+				}
+			}
+		}
+	}
+
+	&.sc-progress {
+		.sc-notification-content {
+			.sc-notification-content-title, .sc-notification-content-text {
+				display: inline-block;
+				width: 50%;
+			}
+
+			.sc-notification-content-text {
+				text-align: right;
+				float: right;
+			}
+		}
+	}
+
+	&.sc-media {
+		width: rem-calc(400px);
+
+		.sc-notification-content {
+			position: relative;
+
+			.sc-actions {
+				position: absolute;
+				top: rem-calc(5px);
+				right: rem-calc(48px);
+				text-align: right;
+				width: rem-calc(138px);
+
+				.material-icons {
+					color: rgba($black, .54);
+					font-size: rem-calc(35px);
+					width: rem-calc(35px);
+					height: rem-calc(35px);
+					line-height: rem-calc(44px);
+
+					&:first-of-type, &:last-of-type {
+						visibility: hidden;
+						@include opacity(0);
+						width: 0;
+					}
+				}
+			}
+
+			img {
+				position: absolute;
+				top: rem-calc(5px);
+				right: rem-calc(8px);
+				width: rem-calc(40px);
+				height: rem-calc(40px);
+			}
+		}
+	}
+
+	&.sc-expanded {
+		.sc-notification-actions {
+			visibility: visible;
+			@include opacity(1);
+			max-height: rem-calc(2000px);
+			background: $grey-200;
+
+			> * {
+				visibility: visible;
+				@include opacity(1);
+			}
+		}
+
+		.sc-notification-header-expand {
+			.material-icons {
+				@include transform(rotate(180deg));
+			}
+		}
+
+		&.sc-big-text {
+			.sc-notification-content-text {
+				visibility: visible;
+				@include opacity(1);
+				max-height: rem-calc(2000px);
+			}
+		}
+
+		&.sc-big-picture {
+			.sc-notification-content {
+				&-text {
+					img {
+						visibility: visible;
+						@include opacity(1);
+						width: 100%;
+					}
+				}
+
+				> img {
+					@include opacity(0);
+				}
+			}
+		}
+
+		&.sc-media {
+			.sc-notification-content {
+				.sc-actions {
+					top: rem-calc(44px);
+					left: rem-calc();
+					right: auto;
+					width: rem-calc((5*35)+0px);
+
+					.material-icons {
+						&:first-of-type, &:last-of-type {
+							width: rem-calc(35px);
+							visibility: visible;
+							@include opacity(1);
+						}
+					}
+				}
+
+				img {
+					width: rem-calc(92px);
+					height: rem-calc(92px);
+				}
+			}
+		}
+	}
+}

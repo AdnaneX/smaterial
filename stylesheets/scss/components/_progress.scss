@@ -5,38 +5,35 @@
  **************************************/
 
 .sc-determinate {
-	width: $determinate-width;
 	background: $determinate-background;
-	height: remCalc(5px);
+	height: rem-calc(5px);
 	position: relative;
+	width: $determinate-width;
 }
 
-.sc-progress {
+.sc-progressbar {
 	background: $progress-background;
 	@include transition($progress-transition);
+	bottom: 0;
 	position: absolute;
 	top: 0;
-	bottom: 0;
 	width: 0%;
 }
 
 .sc-indeterminate {
-	width: $indeterminate-width;
 	background: $indeterminate-background;
 	height: $indeterminate-height;
-	position: relative;
 	overflow: hidden;
+	position: relative;
+	width: $indeterminate-width;
 
-	.sc-progress {
-		position: absolute;
-		top: 0;
-		bottom: 0;
+	.sc-progressbar {
 		width: 60%;
 		@include animation(indeterminate 1.5s  cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite);
 		@include keyframes(indeterminate) {
 			0% {
-				width: 0%;
 				left: 0;
+				width: 0%;
 			}
 
 			25% {
@@ -48,22 +45,22 @@
 			}
 
 			75% {
-				width: 60%;
 				left: 75%;
+				width: 60%;
 			}
 
 			100% {
-				width: 0%;
 				left: 100%;
+				width: 0%;
 			}
 		}
 	}
 }
 
 .sc-buffer {
-	width: 100%;
-	height: remCalc(5px);
+	height: rem-calc(5px);
 	position: relative;
+	width: 100%;
 
 	> div {
 		display: inline-block;
@@ -71,29 +68,24 @@
 
 	.sc-buffer-progress {
 		background: rgba($main-color, .4);
+		bottom: 0;
 		position: absolute;
 		top: 0;
-		bottom: 0;
-
-		.sc-progress {
-			position: absolute;
-			bottom: 0;
-			top: 0;
-		}
 	}
 
 	.sc-buffering {
-		position: absolute;
-		top: 0;
-		bottom: 0;
-		@include mask(url('data:image/svg+xml;base64, PD94bWwgdmVyc2lvbj0iMS4wIj8+PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTBweCIgdmlld1BvcnQ9IjAgMCAxMiA0IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGVsbGlwc2UgY3g9IjIiIGN5PSIyIiByeD0iMiIgcnk9IjIiPjwvZWxsaXBzZT48ZWxsaXBzZSBjeD0iMTQiIGN5PSIyIiByeD0iMiIgcnk9IjIiIGNsYXNzPSJsb2FkZXIiPjwvZWxsaXBzZT48L3N2Zz4='));
 		background-image: linear-gradient(to right,rgba(255,255,255,.7),rgba(255,255,255,.7)),linear-gradient(to right,$main-color,$main-color);
+		bottom: 0;
+		position: absolute;
+		@include mask(url('data:image/svg+xml;base64, PD94bWwgdmVyc2lvbj0iMS4wIj8+PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTBweCIgdmlld1BvcnQ9IjAgMCAxMiA0IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGVsbGlwc2UgY3g9IjIiIGN5PSIyIiByeD0iMiIgcnk9IjIiPjwvZWxsaXBzZT48ZWxsaXBzZSBjeD0iMTQiIGN5PSIyIiByeD0iMiIgcnk9IjIiIGNsYXNzPSJsb2FkZXIiPjwvZWxsaXBzZT48L3N2Zz4='));
+		top: 0;
 	}
 }
 
 .sc-circular {
-	width: remCalc(100px);
-	height: remCalc(100px);
+	height: rem-calc(100px);
+	width: rem-calc(100px);
+
 	@include animation(rotate 2s linear infinite);
 
 	@include keyframes(rotate) {
@@ -102,13 +94,7 @@
 		}
 	}
 
-	svg {
-		circle {
-			stroke-dasharray: 1, 200;
-			stroke-dashoffset: 1;
-			stroke-linecap: round;
-			stroke-width: 2.5;
+	&-determinate {
 
-		}
 	}
 }
