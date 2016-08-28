@@ -7,7 +7,7 @@ $(document).ready(function() {
 			$value = $this.val(),
 			$label = $this.parent('div').find('label');
 
-		if( $value != '' ) {
+		if( !empty($value) ) {
 			$label.addClass('sc-active');
 		} else {
 			$label.removeClass('sc-active');
@@ -20,7 +20,7 @@ $(document).ready(function() {
 			$value = $this.val(),
 			$label = $this.parent('div').find('label');
 
-		if( $value != '' ) {
+		if( !empty($value) ) {
 			$label.addClass('sc-active');
 		} else {
 			$label.removeClass('sc-active');

@@ -109,7 +109,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 				You can also use the row and columns in SCSS by simply extending the class.
 			</p>
 
-			<pre class="language-css sc-col sc-s12 sc-m6">
+			<pre class="language-css sc-col sc-xs4 sc-s12 sc-m6">
 			<code>
 @extend .sc-col, .sc-s12, .sc-m6;
 			</code>

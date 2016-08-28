@@ -1,6 +1,6 @@
 <?php
 $title = 'Color';
-$description = 'Colors swatches based on Google\'s Material Design. How to use material design colors in your website.';
+$description = 'Colors swatches based on Google\'s Material Design. How to use Material Design colors in your website.';
 $keywords = 'material design, smaterial, color, swatches, material colors';
 
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
@@ -11,7 +11,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 
 		<p class="sc-col sc-xs4 sc-s12 sc-m6">
 			All of the below colors are used in the same way.
-			Both scss variables and css classes and color codes are named.
+			Both SCSS variables and css classes and color codes are named.
 		</p>
 
 		<p class="sc-col sc-xs4 sc-s12 sc-m6">

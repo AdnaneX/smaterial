@@ -14,7 +14,15 @@
 		outline: none;
 		position: $textfield-input-position;
 		width: $textfield-width;
-		@include transition($textfield-transition);
+		@include transition($textfield-small-transition);
+
+		@media #{$medium-only} {
+			@include transition($textfield-medium-transition);
+		}
+
+		@media #{$medium-up} {
+			@include transition($textfield-large-transition);
+		}
 
 		&:active, &:focus {
 			border-bottom: $textfield-focus-bottom;
@@ -42,8 +50,17 @@
 	label {
 		color: $textfield-label-color;
 		cursor: text;
-		@include transition($textfield-transition);
 		position: $textfield-label-position;
+
+		@include transition($textfield-small-transition);
+
+		@media #{$medium-only} {
+			@include transition($textfield-medium-transition);
+		}
+
+		@media #{$medium-up} {
+			@include transition($textfield-large-transition);
+		}
 
 		&.sc-active {
 			color: $textfield-label-active-color;
@@ -205,7 +222,15 @@ input[type="text"], input[type="password"], input[type="email"], input[type="num
 		font-family: 'Material Icons';
 		font-size: $textfield-required-font-size;
 		vertical-align: $textfield-required-vertical-align;
-		@include transition($textfield-transition);
+		@include transition($textfield-small-transition);
+
+		@media #{$medium-only} {
+			@include transition($textfield-medium-transition);
+		}
+
+		@media #{$medium-up} {
+			@include transition($textfield-large-transition);
+		}
 	}
 
 	&:active, &:focus {

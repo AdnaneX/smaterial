@@ -574,7 +574,9 @@ $textfield-width: 100%; // Default 100%;
 $textfield-position: relative; // Default relative
 $textfield-input-position: absolute; // Default absolute
 $textfield-off-bottom: rem-calc(2px) solid $grey; // Default rem-calc(2px) solid $grey
-$textfield-transition: all 300ms ease-in-out; // Default all 300ms ease-in-out
+$textfield-small-transition: all $transition-small-duration $basic-transition; // Default all $transition-small-duration $basic-transition
+$textfield-medium-transition: all $transition-medium-duration $basic-transition; // Default all $transition-medium-duration $basic-transition
+$textfield-large-transition: all $transition-large-duration $basic-transition; // Default all $transition-large-duration $basic-transition
 $textfield-focus-bottom: rem-calc(2px) solid $main-color; // Default rem-calc(2px) solid $main-color
 $textfield-focus-label: $main-color; // Default $main-color
 $textfield-disabled-bottom: rem-calc(2px) dotted $grey; // Default rem-calc(2px) dotted $grey

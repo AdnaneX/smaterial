@@ -75,7 +75,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 			<td>
 				<p><a href="">Menu</a></p>
 				<p><a href="/components/cards.php">Card (picked up state)</a></p>
-				<p><a href="/components/buttons.php#sc-raised-button">Raised button (pressed state)</a></p>
+				<p><a href="/components/buttons.php#raised-button">Raised button (pressed state)</a></p>
 			</td>
 			<td><div class="sc-z8 square"></div></td>
 		</tr>
@@ -110,7 +110,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 			<td><code>.sc-z2</code></td>
 			<td>
 				<p><a href="/components/cards.php">Card (resting elevation)</a></p>
-				<p><a href="/components/buttons.php#sc-raised-button">Raised button (resting elevation)</a></p>
+				<p><a href="/components/buttons.php#raised-button">Raised button (resting elevation)</a></p>
 				<p><a href="">Quick entry / Search bar (resting elevation)</a></p>
 				<p><a href="/components/chips.php">Chips (contact chip hovered and pressed)</a></p>
 			</td>

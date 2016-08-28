@@ -20,7 +20,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		</p>
 	</section>
 
-	<section class="sc-row" id="sc-raised-button">
+	<section class="sc-row" id="raised-button">
 		<h3>Raised button</h3>
 
 		<p class="sc-col sc-xs4 sc-s12 sc-m6">
@@ -80,7 +80,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	</pre>
 	</section>
 
-	<section class="sc-row" id="sc-flat-buttons">
+	<section class="sc-row" id="flat-button">
 		<h3>Flat button</h3>
 
 		<p class="sc-col sc-xs4 sc-s12 sc-m6">
