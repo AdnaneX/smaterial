@@ -112,7 +112,6 @@
 		&-more {
 			@include material-shadow(9);
 			background: $white;
-			display: none;
 			list-style-type: none;
 			margin: 0;
 			padding: 0;
@@ -120,6 +119,42 @@
 			right: $appbar-more-right;
 			top: $appbar-more-top;
 			width: auto;
+			visibility: hidden;
+			@include opacity(0);
+			max-height: 0;
+			max-width: 0;
+			@include transition(
+					visibility $transition-small-duration $basic-transition unquote(',')
+					opacity $transition-small-duration $basic-transition unquote(',')
+					max-height $transition-small-duration $basic-transition unquote(',')
+					max-width $transition-small-duration $basic-transition
+			);
+
+			@media #{$medium-only} {
+				@include transition(
+						visibility $transition-medium-duration $basic-transition unquote(',')
+						opacity $transition-medium-duration $basic-transition unquote(',')
+						max-height $transition-medium-duration $basic-transition unquote(',')
+						max-width $transition-medium-duration $basic-transition
+				);
+			}
+
+			@media #{$medium-up} {
+				@include transition(
+						visibility $transition-large-duration $basic-transition unquote(',')
+						opacity $transition-large-duration $basic-transition unquote(',')
+						max-height $transition-large-duration $basic-transition unquote(',')
+						max-width $transition-large-duration $basic-transition
+				);
+			}
+
+
+			&.sc-expanded {
+				visibility: visible;
+				@include opacity(1);
+				max-height: rem-calc(1000px);
+				max-width: rem-calc(300px);
+			}
 		}
 	}
 }

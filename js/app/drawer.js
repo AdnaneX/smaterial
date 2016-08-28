@@ -20,9 +20,14 @@ $(document).ready(function() {
 	});
 
 	$('#sc-nav-button').click(function() {
-		var $trigger = $(this).data('sc-trigger');
+		var $trigger = $(this).data('sc-trigger'),
+			$drawer = $('#' + $trigger);
 
-		$('#' + $trigger).slideHorizontal('cubic-bezier(0.4, 0.0, 0.2, 1)', 300);
+		if( $drawer.hasClass('sc-expanded') ) {
+			$drawer.removeClass('sc-expanded');
+		} else {
+			$drawer.addClass('sc-expanded');
+		}
 	});
 
 	$drawer.find('.sc-active').closest('ul').show();

@@ -238,29 +238,81 @@ input[type="radio"] {
 	}
 }
 
+
+$switch-track-height: rem-calc(12px);
+$switch-track-width: rem-calc(24px);
+$switch-thumb-size: rem-calc(14px);
+$switch-thumb-top: calc( ( #{$switch-track-height} - #{$switch-thumb-size} ) / 2 );
+$switch-thumb-left: calc( #{$switch-track-width} - #{$switch-thumb-size} );
+$switch-thumb-radial-size: calc( #{$switch-thumb-size} * 2 );
+$switch-thumb-radial-top: calc( ( #{$switch-track-height} - #{$switch-thumb-radial-size} ) / 2 );
+$switch-thumb-radial-left: calc( #{$switch-thumb-size} / -2 );
+$switch-thumb-radial-left-active: calc( #{$switch-thumb-left} - ( #{$switch-thumb-size} / 2 ) );
+
 .sc-switch {
 	// Track
 	.sc-lever {
-		background: lighten($black, (100% - 26%));
+		background: rgba($black, .38);
 		display: inline-block;
-		height: rem-calc(14px);
+		height: $switch-track-height;
 		position: relative;
-		@include border-radius(rem-calc(14px));
+		@include border-radius($switch-track-height);
 		vertical-align: middle;
-		width: rem-calc(50px);
+		width: $switch-track-width;
+		margin: calc( #{$switch-thumb-radial-size} / 2 ); // To accommodate for radial
 		@include transition(background $transition-small-duration $basic-transition);
+
+		@media #{$medium-only} {
+			@include transition(background $transition-medium-duration $basic-transition);
+		}
+
+		@media #{$medium-up} {
+			@include transition(background $transition-large-duration $basic-transition);
+			margin: 0;
+		}
 
 		// Thumb
 		&:after {
 			@include material-shadow(1);
-			background: $grey-50;
+			background: rgba($grey-50, 1); //$grey-50
 			content: '';
 			@include border-radius(50%);
-			height: rem-calc(24px);
+			height: $switch-thumb-size;
 			position: absolute;
-			top: rem-calc(-5px);
-			width: rem-calc(24px);
-			@include transition(background $transition-small-duration $basic-transition unquote(',') right $transition-small-duration $basic-transition);
+			top: $switch-thumb-top;
+			width: $switch-thumb-size;
+			left: 0;
+			@include transition(background $transition-small-duration $basic-transition unquote(',') left $transition-small-duration $basic-transition);
+
+			@media #{$medium-only} {
+				@include transition(background $transition-medium-duration $basic-transition unquote(',') left $transition-medium-duration $basic-transition);
+			}
+
+			@media #{$medium-up} {
+				@include transition(background $transition-large-duration $basic-transition unquote(',') left $transition-large-duration $basic-transition);
+			}
+		}
+
+		// Radial
+		@media #{$medium-down} {
+			&:before {
+				content: '';
+				width: $switch-thumb-radial-size;
+				height: $switch-thumb-radial-size;
+				@include border-radius(50%);
+				left: $switch-thumb-radial-left;
+				position: absolute;
+				top: $switch-thumb-radial-top;
+				@include transition(background $transition-small-duration $basic-transition);
+
+				@media #{$medium-only} {
+					@include transition(background $transition-medium-duration $basic-transition);
+				}
+			}
+
+			&:active:before, &:focus:before {
+				background: rgba($grey-400, .2);
+			}
 		}
 	}
 
@@ -270,12 +322,20 @@ input[type="radio"] {
 		&:checked {
 			// Track
 			+ .sc-lever {
-				background: $main-color;
+				background: rgba($main-color, .5);
 
 				// Thumb
 				&:after {
 					background: $main-color;
-					right: 0;
+					left: $switch-thumb-left;
+				}
+
+				// Radial
+				@media #{$medium-down} {
+					&:active:before, &:focus:before {
+						left: $switch-thumb-radial-left-active;
+						background: rgba($main-color, .2);
+					}
 				}
 			}
 		}
@@ -288,6 +348,13 @@ input[type="radio"] {
 				// Thumb
 				&:after {
 					background: rgba($grey-400, 1);
+				}
+
+				// Radial
+				@media #{$medium-down} {
+					&:active:before, &:focus:before {
+						background: rgba($grey-400, .2);
+					}
 				}
 			}
 		}

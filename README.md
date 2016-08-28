@@ -63,6 +63,7 @@ After making your changes please describe what you have changed. This will speed
     - Add default styles for various elements (eg. buttons, slider)
     - Add support for IE and FireFox
     - Add Hammer.js for a better mobile experience(Optional)
+    - Less options in settings file. Only important options. All other "options" only in the same file at the top after comment before styling
 - Appbar
     - Add "more menu" styling
     - Add "more menu" functions

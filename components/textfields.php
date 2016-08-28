@@ -66,7 +66,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		</div>
 	</div>
 
-	<pre class="language-html sc-col sc-s12 sc-m6">
+	<pre class="language-html sc-col sc-xs4 sc-s12 sc-m6 sc-offset-m6">
 		<code>
 &lt;div class="sc-floating-input">
   &lt;input type="url" id="example">
@@ -104,7 +104,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		The <span class="sc-red-text"><i class="material-icons">star</i></span>  is automatically added by required fields but can easily be turned off.
 	</div>
 
-	<pre class="language-html sc-col sc-s12 sc-m6">
+	<pre class="language-html sc-col sc-s12 sc-push-m3 sc-m6">
 		<code>
 &lt;form action="" method="post">
   &lt;div class="sc-floating-input">
@@ -174,7 +174,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		</div>
 	</div>
 
-	<pre class="language-html sc-col sc-s12 sc-m6">
+	<pre class="language-html sc-col sc-xs4 sc-s12 sc-m6 sc-offset-m6">
 		<code>
 &lt;div class="sc-floating-dense-input">
   &lt;input type="url" id="example7">
@@ -235,7 +235,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		</div>
 	</div>
 
-	<pre class="language-html sc-col sc-s12 sc-m6">
+	<pre class="language-html sc-col sc-xs4 sc-s12 sc-m6 sc-offset-m6">
 		<code>
 &lt;div class="sc-single-dense-input">
   &lt;input type="text" id="example">

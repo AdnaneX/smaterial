@@ -4,10 +4,10 @@ $(document).ready(function() {
 		var $this = $(this),
 			$more = $('#'+$this.data('sc-trigger'));
 
-		if( $more.visible() ) {
-	   		$more.slideUp();
+		if( $more.hasClass('sc-expanded') ) {
+	   		$more.removeClass('sc-expanded');
 		} else {
-			$more.slideDown();
+			$more.addClass('sc-expanded');
 		}
 	});
 
@@ -17,7 +17,7 @@ $(document).ready(function() {
 		if( $more.visible() ) {
 			// if the target of the click isn't the $more nor a descendant of the $more
 			if( !$more.is(e.target) && $more.has(e.target).length === 0 ) {
-				$more.slideUp();
+				$more.removeClass('sc-expanded');
 			}
 		}
 	});

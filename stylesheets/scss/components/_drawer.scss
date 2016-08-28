@@ -17,18 +17,19 @@
 	// Left navigation
 	&-left {
 		left: 0;
+		width: $drawer-small-width;
+		max-width: $drawer-small-max-width;
+		margin: 0 0 0 -103%;
+		@include transition(margin $transition-small-duration $basic-transition);
 
-		@media #{$medium-down} {
-			width:$drawer-small-width;
-			max-width: $drawer-small-max-width;
-			right: $drawer-small-margin-right;
-			display: none;
+		@media #{$medium-only} {
+			@include transition(margin $transition-medium-duration $basic-transition);
 		}
 
 		@media #{$medium-up} {
 			width: $drawer-width;
 			max-width: $drawer-max-width;
-			display: block;
+			margin: 0;
 		}
 
 		// Full height drawer
@@ -95,6 +96,11 @@
 			.sc-drawer-left-full-title {
 				display: none;
 			}
+		}
+
+		// Sliding effect
+		&.sc-expanded {
+			margin: 0;
 		}
 	}
 

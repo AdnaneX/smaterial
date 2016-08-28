@@ -183,13 +183,8 @@
 }
 
 @mixin font( $font-size, $small-font-size, $weight, $leading, $color, $tracking, $transform: inherit ) {
-	font-size: $font-size+0px;
 	font-size: rem-calc($font-size+0px);
-
-	line-height: $leading+0px;
 	line-height: rem-calc($leading+0px);
-
-	letter-spacing: $tracking+0px;
 	letter-spacing: rem-calc($tracking+0px);
 
 	font-weight: $weight;
@@ -198,7 +193,6 @@
 
 	@if( $small-font-size > 0 ) {
 		@media #{$medium-down} {
-			font-size: $small-font-size+0px;
 			font-size: rem-calc($small-font-size+0px);
 		}
 	}
