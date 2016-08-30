@@ -4,58 +4,50 @@
  * http://www.google.com/design/spec/components/chips.html
  **************************************/
 
+
+$chips-size: rem-calc(32px); // Default rem-calc(32px)
+$chips-font-size: rem-calc(13px);
+$chips-delete-size: rem-calc(15px); // Default rem-calc(15px)
+
 .sc-chip {
 	@include border-radius($chips-size);
 	background: $chips-background;
-	color: $chips-text;
+	color: $chips-font-color;
 	display: inline-block;
 	font-size: $chips-font-size;
-	font-weight: $chips-font-weight;
+	font-weight: 400;
 	height: $chips-size;
 	line-height: $chips-size;
-	padding: $chips-padding;
+	padding: 0 rem-calc(12px);
 
 	&-deletable {
-		@include transition($chips-delete-small-transition);
-
-		@media #{$medium-up} {
-			@include transition($chips-delete-medium-transition);
-		}
-
-		@media #{$large-up} {
-			@include transition($chips-delete-large-transition);
-		}
-
 		.sc-chip-delete {
 			@include border-radius(50%);
-			@include transition($chips-delete-small-transition);
+			@include transition(color $transition-small-duration $basic-transition unquote(',') background $transition-small-duration $basic-transition);
 			background: $chips-delete-background;
 			color: $chips-delete-cross;
 			display: inline-block;
-			font-size: rem-calc(13px);
 			height: $chips-delete-size;
-			margin: $chips-delete-margin;
+			margin: 0 rem-calc(-8px) 0 rem-calc(4px);
 			line-height: $chips-delete-size;
 			text-align: center;
 			vertical-align: middle;
 			width: $chips-delete-size;
+			font-size: $chips-font-size;
+			cursor: pointer;
 
 			@media #{$medium-only} {
-				@include transition($chips-delete-medium-transition);
+				@include transition(color $transition-medium-duration $basic-transition unquote(',') background $transition-medium-duration $basic-transition);
 			}
 
 			@media #{$medium-up} {
-				@include transition($chips-delete-large-transition);
-			}
-
-			&:hover {
-				cursor: pointer;
+				@include transition(color $transition-large-duration $basic-transition unquote(',') background $transition-large-duration $basic-transition);
 			}
 		}
 
 		&:hover {
 			background: $chips-background-hover;
-			color: $chips-text-hover;
+			color: $chips-font-hover-color;
 
 			.sc-chip-delete {
 				background: $chips-delete-background-hover;
@@ -65,23 +57,22 @@
 	}
 
 	&-contact {
-		font-size: $chips-contact-font-size;
+		font-size: rem-calc(14px);
 
-		@include transition($chips-contact-small-transition unquote(',') $chips-contact-small-transition);
+		@include transition(box-shadow $transition-small-duration $basic-transition);
 
 		@media #{$medium-only} {
-			@include transition($chips-contact-medium-transition unquote(',') $chips-contact-medium-transition);
+			@include transition(box-shadow $transition-medium-duration $basic-transition);
 		}
 
 		@media #{$medium-up} {
-			@include transition($chips-contact-large-transition unquote(',') $chips-contact-large-transition);
+			@include transition(box-shadow $transition-large-duration $basic-transition);
 		}
 
 		img {
 			@include border-radius(50%);
-			height: $chips-size;
-			margin: $chips-contact-margin;
-			width: $chips-size;
+			@include square($chips-size);
+			margin: 0 rem-calc(8px) 0 rem-calc(-12px);
 		}
 
 		&:hover {

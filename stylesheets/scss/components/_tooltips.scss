@@ -4,33 +4,40 @@
  * http://www.google.com/design/spec/components/tooltips.html
  **************************************/
 
+$tooltip-small-top: rem-calc(24px); // Default rem-calc(24px)
+$tooltip-large-top: rem-calc(14px); // Default rem-calc(14px)
+$tooltip-small-height: rem-calc(32px); // Default rem-calc(32px)
+$tooltip-large-height: rem-calc(22px); // Default rem-calc(22px)
+$tooltip-small-padding: 0 rem-calc(16px); // Default 0 rem-calc(16px)
+$tooltip-large-padding: 0 rem-calc(8px); // Default 0 rem-calc(8px)
+
 .sc-tooltip {
 	display: inline;
 	position: relative;
 
 	&:hover {
 		&:after {
-			background: $grey-700;
-			color: $tooltip-font-color;
-			@include opacity($tooltip-opacity);
+			background: $chips-background;
+			color: $chips-font-color;
+			@include opacity(.9);
 			content: attr(title);
-			font-size: $tooltip-small-font;
-			font-weight: $tooltip-font-weight;
+			font-size: rem-calc(14px);
+			font-weight: 500;
 			height: $tooltip-small-height;
 			left: 0;
 			line-height: $tooltip-small-height;
-			margin-top: $tooltip-small-top;
+			margin: $tooltip-small-top 0 0 0;
 			padding: $tooltip-small-padding;
 			position: absolute;
 			top: $tooltip-small-top;
 			white-space: nowrap;
 			width: auto;
-			z-index: $tooltip-z-index;
+			z-index: 10;
 
 			@media #{$medium-up} {
-				font-size: $tooltip-large-font;
+				font-size: rem-calc(10px);
 				top: $tooltip-large-top;
-				margin-top: $tooltip-large-top;
+				margin: $tooltip-large-top 0 0 0;
 				height: $tooltip-large-height;
 				line-height: $tooltip-large-height;
 				padding: $tooltip-large-padding;

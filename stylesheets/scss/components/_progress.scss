@@ -4,16 +4,19 @@
  * http://www.google.com/design/spec/components/progress-activity.html
  **************************************/
 
-.sc-determinate {
-	background: $determinate-background;
+.sc-determinate, .sc-indeterminate, .sc-buffer {
+	width: 100%;
 	height: rem-calc(5px);
 	position: relative;
-	width: $determinate-width;
+}
+
+.sc-determinate {
+	background: $progressbar-background;
 }
 
 .sc-progressbar {
 	background: $progress-background;
-	@include transition($progress-transition);
+	@include transition(width $transition-small-duration $basic-transition);
 	bottom: 0;
 	position: absolute;
 	top: 0;
@@ -21,11 +24,8 @@
 }
 
 .sc-indeterminate {
-	background: $indeterminate-background;
-	height: $indeterminate-height;
+	background: $progressbar-background;
 	overflow: hidden;
-	position: relative;
-	width: $indeterminate-width;
 
 	.sc-progressbar {
 		width: 60%;
@@ -58,16 +58,14 @@
 }
 
 .sc-buffer {
-	height: rem-calc(5px);
-	position: relative;
-	width: 100%;
+	overflow: hidden;
 
 	> div {
 		display: inline-block;
 	}
 
 	.sc-buffer-progress {
-		background: rgba($main-color, .4);
+		background: $progressbar-background;
 		bottom: 0;
 		position: absolute;
 		top: 0;
@@ -79,6 +77,16 @@
 		position: absolute;
 		@include mask(url('data:image/svg+xml;base64, PD94bWwgdmVyc2lvbj0iMS4wIj8+PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTBweCIgdmlld1BvcnQ9IjAgMCAxMiA0IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGVsbGlwc2UgY3g9IjIiIGN5PSIyIiByeD0iMiIgcnk9IjIiPjwvZWxsaXBzZT48ZWxsaXBzZSBjeD0iMTQiIGN5PSIyIiByeD0iMiIgcnk9IjIiIGNsYXNzPSJsb2FkZXIiPjwvZWxsaXBzZT48L3N2Zz4='));
 		top: 0;
+		@include animation(buffer 1.5s infinite);
+		@include keyframes(buffer) {
+			0% {
+				width: 200%;
+				left: 0;
+			}
+			100% {
+				left: 100%;
+			}
+		}
 	}
 }
 

@@ -11,98 +11,14 @@ html, body {
 }
 
 html {
-	//font-size: #{$font-size}px; // TODO should be turned on but off looks better
+	// Firefox only
+	@-moz-document url-prefix() {
+		font-size: #{$font-size}px; // TODO should be turned on but off looks better
+	}
 }
 
 label {
 	cursor: pointer;
-}
-
-body {
-	h1, h2, h3, h4, h5, h6 {
-		word-wrap: break-word;
-	}
-
-	@include scrollbar();
-
-	::selection, ::-moz-selection { background: $select-background; }
-
-	* {
-		@include box-sizing(border-box);
-	}
-
-	a {
-		color: $link-color;
-		outline: none;
-		text-decoration: none;
-		@include transition(color 300ms cubic-bezier(0.4, 0.0, 0.2, 1));
-
-		@media #{$medium-up} {
-			@include transition(color 390ms cubic-bezier(0.4, 0.0, 0.2, 1));
-		}
-
-		@media #{$large-up} {
-			@include transition(color 200ms cubic-bezier(0.4, 0.0, 0.2, 1));
-		}
-
-		&:hover {
-			color: $link-hover;
-		}
-
-		img {
-			outline: none;
-		}
-	}
-
-	main {
-		bottom: 0;
-		left: 0;
-		overflow: auto;
-		padding: rem-calc($gutter);
-		position: fixed;
-		right: 0;
-		top: rem-calc(48px);
-
-		@media #{$small-up} {
-			top: rem-calc(56px);
-
-		}
-
-		@media only screen and (min-width: 600px) {
-			padding: $large-gutter;
-		}
-
-		@media #{$medium-up} {
-			left: $drawer-width;
-			top: rem-calc(64px);
-		}
-	}
-
-	.sc-circle {
-		@include border-radius(50%);
-	}
-
-	.sc-left {
-		float: left;
-	}
-
-	.sc-right {
-		float: right;
-	}
-
-	.sc-center {
-		text-align: center;
-		vertical-align: middle;
-	}
-
-	.sc-divider {
-		// https://material.google.com/components/dividers.html#dividers-types-of-dividers
-		background: rgba($black, .12);
-		// Light theme
-		height: rem-calc(1px);
-		// Black theme
-		// background rgba($white, .12);
-	}
 }
 
 figure {
@@ -139,3 +55,85 @@ img {
 	}*/
 }
 
+h1, h2, h3, h4, h5, h6 {
+	word-wrap: break-word;
+}
+
+@include scrollbar();
+
+::selection, ::-moz-selection {
+	background: $select-background;
+}
+
+* {
+	@include box-sizing(border-box);
+}
+
+a {
+	color: $link-color;
+	outline: none;
+	text-decoration: none;
+	@include transition(color 300ms cubic-bezier(0.4, 0.0, 0.2, 1));
+
+	@media #{$medium-up} {
+		@include transition(color 390ms cubic-bezier(0.4, 0.0, 0.2, 1));
+	}
+
+	@media #{$large-up} {
+		@include transition(color 200ms cubic-bezier(0.4, 0.0, 0.2, 1));
+	}
+
+	&:hover {
+		color: $link-hover;
+	}
+
+	img {
+		outline: none;
+	}
+}
+
+main {
+	bottom: 0;
+	left: 0;
+	overflow: auto;
+	padding: rem-calc($gutter);
+	position: fixed;
+	right: 0;
+	top: rem-calc(48px);
+
+	@media #{$small-up} {
+		top: rem-calc(56px);
+
+	}
+
+	@media only screen and (min-width: 600px) {
+		padding: $large-gutter;
+	}
+
+	@media #{$medium-up} {
+		left: $drawer-width;
+		top: rem-calc(64px);
+	}
+}
+
+.sc-circle {
+	@include border-radius(50%);
+}
+
+.sc-left {
+	float: left;
+}
+
+.sc-right {
+	float: right;
+}
+
+.sc-center {
+	text-align: center;
+	vertical-align: middle;
+}
+
+.sc-divider {
+	background: if( $theme == light, rgba($black, .12), rgba($white, .12) );
+	height: rem-calc(1px);
+}

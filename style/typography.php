@@ -59,15 +59,15 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		</tr>
 		<tr>
 			<td>.sc-subhead-2</td>
-			<td></td>
+			<td><span class="sc-subhead2">Example</span></td>
 		</tr>
 		<tr>
 			<td>.sc-subhead-1</td>
-			<td></td>
+			<td><span class="sc-subhead1">Example</span></td>
 		</tr>
 		<tr>
 			<td>.sc-body-2</td>
-			<td></td>
+			<td><span class="sc-body-2">Example</span></td>
 		</tr>
 		<tr>
 			<td>.sc-body-1</td>
@@ -75,15 +75,15 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		</tr>
 		<tr>
 			<td>.sc-caption</td>
-			<td></td>
+			<td><span class="sc-caption">Example</span></td>
 		</tr>
 		<tr>
 			<td>.sc-label</td>
-			<td><a href="/components/textfields.php">Form labels</a></td>
+			<td><label><a href="/components/textfields.php">Form labels</a></label></td>
 		</tr>
 		<tr>
 			<td>.sc-menu</td>
-			<td></td>
+			<td><span class="sc-menu">Example</span></td>
 		</tr>
 		<tr>
 			<td>.sc-button</td>
@@ -107,342 +107,84 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 
 		<tbody>
 		<tr>
-			<th colspan="3">Font size</th>
+			<td>$roboto-font-path</td>
+			<td>Font file path</td>
+			<td>Changes the location of the font path</td>
 		</tr>
 		<tr>
-			<td>$font-size-initial</td>
-			<td>Variable / integer</td>
-			<td>The value from which everything else is calculated</td>
+			<td>$noto-font-path</td>
+			<td>Font file path</td>
+			<td>Changes the location of the font path</td>
 		</tr>
 		<tr>
 			<td>$font-size</td>
-			<td>Variable / percentage</td>
-			<td>Font size percentage</td>
+			<td>Integer</td>
+			<td>The initial size from which everything else is calculated</td>
 		</tr>
 		<tr>
-			<td>$font-size-large</td>
-			<td>Variable / percentage</td>
-			<td>Font size percentage for large text<code class="language-css">sc-text-large</code></td>
+			<td>$font-color-display-4</td>
+			<td>Color / variable</td>
+			<td>changes the color of display 4</td>
 		</tr>
 		<tr>
-			<td>$font-size-small</td>
-			<td>Variable / percentage</td>
-			<td>Font size percentage for small text <code class="language-css">sc-text-small</code></td>
+			<td>$font-color-display-3</td>
+			<td>Color / variable</td>
+			<td>changes the color of display 3</td>
 		</tr>
-
 		<tr>
-			<th colspan="3">Typographic Scale</th>
+			<td>$font-color-display-2</td>
+			<td>Color / variable</td>
+			<td>changes the color of display 2</td>
 		</tr>
 		<tr>
-			<td>$font-size-display-4</td>
-			<td>Variable / integer</td>
-			<td>Font size of display 4</td>
+			<td>$font-color-display-1</td>
+			<td>Color / variable</td>
+			<td>changes the color of display 1</td>
 		</tr>
 		<tr>
-			<td>$font-size-display-3</td>
-			<td>Variable / integer</td>
-			<td>Font size of display 3</td>
+			<td>$font-color-headline</td>
+			<td>Color / variable</td>
+			<td>changes the color of headline</td>
 		</tr>
 		<tr>
-			<td>$font-size-display-2</td>
-			<td>Variable / integer</td>
-			<td>Font size of display 2</td>
+			<td>$font-color-title</td>
+			<td>Color / variable</td>
+			<td>changes the color of title</td>
 		</tr>
 		<tr>
-			<td>$font-size-display-1</td>
-			<td>Variable / integer</td>
-			<td>Font size of display 1</td>
+			<td>$font-color-subhead</td>
+			<td>Color / variable</td>
+			<td>changes the color of subhead</td>
 		</tr>
 		<tr>
-			<td>$font-size-headline</td>
-			<td>Variable / integer</td>
-			<td>Font size of headlines</td>
+			<td>$font-color-body-2</td>
+			<td>Color / variable</td>
+			<td>changes the color of body 2</td>
 		</tr>
 		<tr>
-			<td>$font-size-title</td>
-			<td>Variable / integer</td>
-			<td>Font size of titles</td>
+			<td>$font-color-body-1</td>
+			<td>Color / variable</td>
+			<td>changes the color of body 1</td>
 		</tr>
 		<tr>
-			<td>$font-size-subhead-2</td>
-			<td>Variable / integer</td>
-			<td>Font size of subhead 2</td>
+			<td>$font-color-caption</td>
+			<td>Color / variable</td>
+			<td>changes the color of caption</td>
 		</tr>
 		<tr>
-			<td>$font-size-subhead-1</td>
-			<td>Variable / integer</td>
-			<td>Font size of subhead 1</td>
+			<td>$font-color-label</td>
+			<td>Color / variable</td>
+			<td>changes the color of label</td>
 		</tr>
 		<tr>
-			<td>$font-size-body-2</td>
-			<td>Variable / integer</td>
-			<td>Font size of body 2</td>
+			<td>$font-color-menu</td>
+			<td>Color / variable</td>
+			<td>changes the color of menu</td>
 		</tr>
 		<tr>
-			<td>$font-size-body-1</td>
-			<td>Variable / integer</td>
-			<td>Font size of body 1</td>
-		</tr>
-		<tr>
-			<td>$font-size-caption</td>
-			<td>Variable / integer</td>
-			<td>Font size of captions</td>
-		</tr>
-		<tr>
-			<td>$font-size-label</td>
-			<td>Variable / integer</td>
-			<td>Font size of labels</td>
-		</tr>
-		<tr>
-			<td>$font-size-menu</td>
-			<td>Variable / integer</td>
-			<td>Font size of menu items</td>
-		</tr>
-		<tr>
-			<td>$font-size-button</td>
-			<td>Variable / integer</td>
-			<td>Font size of buttons</td>
-		</tr>
-
-		<tr>
-			<th colspan="3">Typographic Scale for devices (max-width: 960px)</th>
-		</tr>
-		<tr>
-			<td>$font-size-dv-subhead</td>
-			<td>Variable / integer</td>
-			<td>Font size of subheads</td>
-		</tr>
-		<tr>
-			<td>$font-size-dv-body</td>
-			<td>Variable / integer</td>
-			<td>Font size of body</td>
-		</tr>
-		<tr>
-			<td>$font-size-dv-menu</td>
-			<td>Variable / integer</td>
-			<td>Font size of menu items</td>
-		</tr>
-
-		<tr>
-			<th colspan="3">Basic Styles</th>
-		</tr>
-		<tr>
-			<td>$font-weight-display-4</td>
-			<td>Variable / integer</td>
-			<td>Font weight of display 4</td>
-		</tr>
-		<tr>
-			<td>$font-weight-display-3</td>
-			<td>Variable / integer</td>
-			<td>Font weight of display 3</td>
-		</tr>
-		<tr>
-			<td>$font-weight-display-2</td>
-			<td>Variable / integer</td>
-			<td>Font weight of display 2</td>
-		</tr>
-		<tr>
-			<td>$font-weight-display-1</td>
-			<td>Variable / integer</td>
-			<td>Font weight of display 1</td>
-		</tr>
-		<tr>
-			<td>$font-weight-headline</td>
-			<td>Variable / integer</td>
-			<td>Font weight of headlines</td>
-		</tr>
-		<tr>
-			<td>$font-weight-title</td>
-			<td>Variable / integer</td>
-			<td>Font weight of titles</td>
-		</tr>
-		<tr>
-			<td>$font-weight-subhead-2</td>
-			<td>Variable / integer</td>
-			<td>Font weight of subhead 2</td>
-		</tr>
-		<tr>
-			<td>$font-weight-subhead-1</td>
-			<td>Variable / integer</td>
-			<td>Font weight of subhead 1</td>
-		</tr>
-		<tr>
-			<td>$font-weight-body-2</td>
-			<td>Variable / integer</td>
-			<td>Font weight of body 2</td>
-		</tr>
-		<tr>
-			<td>$font-weight-body-1</td>
-			<td>Variable / integer</td>
-			<td>Font weight of body 1</td>
-		</tr>
-		<tr>
-			<td>$font-weight-caption</td>
-			<td>Variable / integer</td>
-			<td>Font weight of captions</td>
-		</tr>
-		<tr>
-			<td>$font-weight-label</td>
-			<td>Variable / integer</td>
-			<td>Font weight of labels</td>
-		</tr>
-		<tr>
-			<td>$font-weight-menu</td>
-			<td>Variable / integer</td>
-			<td>Font weight of menu items</td>
-		</tr>
-		<tr>
-			<td>$font-weight-button</td>
-			<td>Variable / integer</td>
-			<td>Font weight of buttons</td>
-		</tr>
-
-		<tr>
-			<th colspan="3">Line Height</th>
-		</tr>
-		<tr>
-			<td>$line-height-display-4</td>
-			<td>Variable / integer</td>
-			<td>Line height of display 4</td>
-		</tr>
-		<tr>
-			<td>$line-height-display-3</td>
-			<td>Variable / integer</td>
-			<td>Line height of display 3</td>
-		</tr>
-		<tr>
-			<td>$line-height-display-2</td>
-			<td>Variable / integer</td>
-			<td>Line height of display 2</td>
-		</tr>
-		<tr>
-			<td>$line-height-display-1</td>
-			<td>Variable / integer</td>
-			<td>Line height of display 1</td>
-		</tr>
-		<tr>
-			<td>$line-height-headline</td>
-			<td>Variable / integer</td>
-			<td>Line height of headlines</td>
-		</tr>
-		<tr>
-			<td>$line-height-title</td>
-			<td>Variable / integer</td>
-			<td>Line height of titles</td>
-		</tr>
-		<tr>
-			<td>$line-height-subhead-2</td>
-			<td>Variable / integer</td>
-			<td>Line height of subhead 2</td>
-		</tr>
-		<tr>
-			<td>$line-height-subhead-1</td>
-			<td>Variable / integer</td>
-			<td>Line height of subhead 1</td>
-		</tr>
-		<tr>
-			<td>$line-height-body-2</td>
-			<td>Variable / integer</td>
-			<td>Line height of body 2</td>
-		</tr>
-		<tr>
-			<td>$line-height-body-1</td>
-			<td>Variable / integer</td>
-			<td>Line height of body 1</td>
-		</tr>
-		<tr>
-			<td>$line-height-caption</td>
-			<td>Variable / integer</td>
-			<td>Line height of captions</td>
-		</tr>
-		<tr>
-			<td>$line-height-label</td>
-			<td>Variable / integer</td>
-			<td>Line height of labels</td>
-		</tr>
-		<tr>
-			<td>$line-height-menu</td>
-			<td>Variable / integer</td>
-			<td>Line height of menu items</td>
-		</tr>
-		<tr>
-			<td>$line-height-button</td>
-			<td>Variable / integer</td>
-			<td>Line height of buttons</td>
-		</tr>
-
-		<tr>
-			<th colspan="3">Tracking and kerning</th>
-		</tr>
-		<tr>
-			<td>$letter-spacing-display-4</td>
-			<td>Variable / integer</td>
-			<td>Letter spacing of display 4</td>
-		</tr>
-		<tr>
-			<td>$letter-spacing-display-3</td>
-			<td>Variable / integer</td>
-			<td>Letter spacing of display 3</td>
-		</tr>
-		<tr>
-			<td>$letter-spacing-display-2</td>
-			<td>Variable / integer</td>
-			<td>Letter spacing of display 2</td>
-		</tr>
-		<tr>
-			<td>$letter-spacing-display-1</td>
-			<td>Variable / integer</td>
-			<td>Letter spacing of display 1</td>
-		</tr>
-		<tr>
-			<td>$letter-spacing-headline</td>
-			<td>Variable / integer</td>
-			<td>Letter spacing of headlines</td>
-		</tr>
-		<tr>
-			<td>$letter-spacing-title</td>
-			<td>Variable / integer</td>
-			<td>Letter spacing of titles</td>
-		</tr>
-		<tr>
-			<td>$letter-spacing-subhead-2</td>
-			<td>Variable / integer</td>
-			<td>Letter spacing of subhead 2</td>
-		</tr>
-		<tr>
-			<td>$letter-spacing-subhead-1</td>
-			<td>Variable / integer</td>
-			<td>Letter spacing of subhead 1</td>
-		</tr>
-		<tr>
-			<td>$letter-spacing-body-2</td>
-			<td>Variable / integer</td>
-			<td>Letter spacing of body 2</td>
-		</tr>
-		<tr>
-			<td>$letter-spacing-body-1</td>
-			<td>Variable / integer</td>
-			<td>Letter spacing of body 1</td>
-		</tr>
-		<tr>
-			<td>$letter-spacing-caption</td>
-			<td>Variable / integer</td>
-			<td>Letter spacing of captions</td>
-		</tr>
-		<tr>
-			<td>$letter-spacing-label</td>
-			<td>Variable / integer</td>
-			<td>Letter spacing of labels</td>
-		</tr>
-		<tr>
-			<td>$letter-spacing-menu</td>
-			<td>Variable / integer</td>
-			<td>Letter spacing of menh items</td>
-		</tr>
-		<tr>
-			<td>$letter-spacing-button</td>
-			<td>Variable / integer</td>
-			<td>Letter spacing of buttons</td>
+			<td>$font-color-button</td>
+			<td>Color / variable</td>
+			<td>changes the color of button</td>
 		</tr>
 		</tbody>
 	</table>

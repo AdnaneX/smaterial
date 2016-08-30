@@ -220,5 +220,19 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		</code>
 	</pre>
 </section>
+
+<section class="sc-row">
+	<h3>square</h3>
+
+	<p class="sc-col sc-xs4 sc-s12 sc-m6">
+		The <code class="language-css">square()</code> mixin is used to give both width and height equal value.
+	</p>
+
+	<pre class="language-css sc-col sc-xs4 sc-s12 sc-m6">
+		<code>
+@include square(12px);
+		</code>
+	</pre>
+</section>
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.php';

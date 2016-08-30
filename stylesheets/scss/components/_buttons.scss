@@ -5,26 +5,40 @@
  * http://www.google.com/design/spec/components/buttons-floating-action-button.html
  **************************************/
 
+$raised-size: rem-calc(36px); // Default rem-calc(32px)
+$raised-dense-size: rem-calc(32px); // Default rem-calc(32px)
+
+$flat-size: rem-calc(36px); // Default rem-calc(36px)
+
 button, input[type="button"], input[type="reset"], input[type="submit"], a {
 	&.sc-raised-button {
 		@include font($font-size-button, 0, $font-weight-button, $line-height-button, $font-color-button, $letter-spacing-button, uppercase);
 		@include button( rem-calc(2px) );
-		@include transition($raised-small-transition);
+		@include transition(
+				box-shadow $transition-small-duration $basic-transition unquote(',')
+				background $transition-small-duration $basic-transition
+		);
 		@include material-shadow(2);
 		background: $raised-background;
-		color: $raised-color;
+		color: $raised-font-color;
 		height: $raised-size;
 		line-height: $raised-size;
-		margin: $raised-margin;
-		min-width: $raised-min-width;
-		padding: $raised-padding;
+		min-width: rem-calc(88px);
+		padding: 0 rem-calc(16px);
 
-		@media #{$medium-up} {
-			@include transition($raised-medium-transition);
+		@media #{$medium-only} {
+			@include transition(
+					box-shadow $transition-medium-duration $basic-transition unquote(',')
+					background $transition-medium-duration $basic-transition
+			);
 		}
 
 		@media #{$medium-up} {
-			@include transition($raised-large-transition);
+			@include material-shadow(0);
+			@include transition(
+					box-shadow $transition-large-duration $basic-transition unquote(',')
+					background $transition-large-duration $basic-transition
+			);
 		}
 
 		&:active {
@@ -32,64 +46,69 @@ button, input[type="button"], input[type="reset"], input[type="submit"], a {
 		}
 
 		&:hover {
+			color: $raised-font-color;
 			background: $raised-background-hover;
-			color: $raised-color-hover;
+
+			// Add shadow overlay
+			//&:before {
+			//	position: absolute;
+			//	@include border-radius(rem-calc(2px));
+			//	top: 0;
+			//	left: 0;
+			//	right: 0;
+			//	bottom: 0;
+			//	content: '';
+			//	background: rgba($black, .12);
+			//}
 		}
 
 		.material-icons {
 			color: $raised-icon-color;
-			height: $raised-size;
+			@include square($raised-size);
 			line-height: $raised-size;
 			vertical-align: middle;
-			width: $raised-size;
-
-			&.sc-left {
-				margin-right: $raised-margin;
-			}
-
-			&.sc-right {
-				margin-left: $raised-margin;
-			}
 		}
 
 		&-dense {
-			font-size: $raised-dense-font-size;
+			font-size: rem-calc(13px);
 			height: $raised-dense-size;
 			line-height: $raised-dense-size;
 
 			.material-icons {
-				height: $raised-dense-size;
+				@include square($raised-dense-size);
 				line-height: $raised-dense-size;
-				width: $raised-dense-size;
 			}
 		}
 
 		&-disabled, &:disabled {
 			background: $raised-disabled-background;
-			color: $raised-disabled-color;
+			color: $raised-disabled-font-color;
 			@include material-shadow(0);
 
 			&:hover {
 				@include material-shadow(0);
-				background: $raised-disabled-background-hover;
-				color: $raised-disabled-color-hover;
+				background: $raised-disabled-background;
+				color: $raised-disabled-font-color;
 			}
 		}
 	}
 
 	&.sc-flat-button {
-		@extend .sc-button;
-		@include button( rem-calc(2px) );
+		@include button(rem-calc(2px));
+		@include font($font-size-button, 0, $font-weight-button, $line-height-button, $font-color-button, $letter-spacing-button, uppercase);
 		background: none;
 		color: $flat-color;
 		height: $flat-size;
 		line-height: $flat-size;
-		margin: $flat-margin;
-		min-width: $flat-min-width;
-		padding: $flat-padding;
+		min-width: rem-calc(64px);
+		padding: 0 rem-calc(16px);
 
 		&:hover {
 			color: $flat-color;
+		}
+
+		&:active {
+			background: $flat-active-background;
 		}
 
 		.material-icons {
@@ -98,14 +117,6 @@ button, input[type="button"], input[type="reset"], input[type="submit"], a {
 			line-height: $flat-size;
 			vertical-align: middle;
 			width: $flat-size;
-
-			&.sc-left {
-				margin-right: $flat-margin;
-			}
-
-			&.sc-right {
-				margin-left: $flat-margin;
-			}
 		}
 
 		&-disabled, &:disabled {
@@ -119,16 +130,19 @@ button, input[type="button"], input[type="reset"], input[type="submit"], a {
 	}
 }
 
+$floating-size: rem-calc(56px); // Default rem-calc(56px)
+$floating-icon-size: rem-calc(24px); // Default rem-calc(24px)
+$floating-mini-size: rem-calc(40px); // Default rem-calc(40px)
+
 button, a {
 	&.sc-floating-button {
 		@include font($font-size-button, 0, $font-weight-button, $line-height-button, $font-color-button, $letter-spacing-button, uppercase);
 		@include button( 50% );
-		@include transition($floating-transition);
+		@include transition(box-shadow $transition-small-duration $basic-transition);
 		@include material-shadow(6);
+		@include square($floating-size);
 		background: $floating-background;
-		height: $floating-size;
 		line-height: $floating-size;
-		width: $floating-size;
 
 		&:hover {
 			@include material-shadow(12);
@@ -136,33 +150,32 @@ button, a {
 
 
 		.material-icons {
-			color: $floating-icon;
-			height: $floating-icon-size;
+			@include square($floating-icon-size);
+			color: $floating-icon-color;
 			vertical-align: middle;
-			width: $floating-icon-size;
 		}
 
 		&-mini {
-			height: $floating-mini-size;
+			@include square($floating-mini-size);
 			line-height: $floating-mini-size;
-			width: $floating-mini-size;
 		}
 	}
 }
 
+$toggle-size: rem-calc(40px);
+$toggle-icon-size: rem-calc(24px);
+
 .sc-toggle-button {
 	@include button( 50% );
+	@include square($toggle-size);
 	background: $floating-background;
-	color: $floating-icon;
-	height: rem-calc(40px);
-	line-height: rem-calc(40px);
-	width: rem-calc(40px);
+	color: $floating-icon-color;
+	line-height: $toggle-size;
 
 	.material-icons {
-		color: $floating-icon;
-		height: rem-calc(24px);
+		@include square($toggle-icon-size);
+		color: $floating-icon-color;
 		vertical-align: middle;
-		width: rem-calc(24px);
 	}
 }
 

@@ -30,5 +30,5 @@ $(document).ready(function() {
 		}
 	});
 
-	$drawer.find('.sc-active').closest('ul').show();
+	$drawer.find('.sc-active').closest('ul').closest('li').addClass('sc-expanded');
 });

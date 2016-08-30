@@ -121,51 +121,6 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 				<td>Change to color or variable</td>
 				<td>Changes the delete cross background when hovered and deletable</td>
 			</tr>
-			<tr>
-				<td>$chips-delete-margin</td>
-				<td>Integer / variable</td>
-				<td>Changes the delete icon margin</td>
-			</tr>
-			<tr>
-				<td>$chips-delete-small-transition</td>
-				<td>Transition properties</td>
-				<td>Changes the transition for the delete icon on small screens
-			</tr>
-			<tr>
-				<td>$chips-delete-medium-transition</td>
-				<td>Transition properties</td>
-				<td>Changes the transition for the delete icon on medium screens
-			</tr>
-			<tr>
-				<td>$chips-delete-large-transition</td>
-				<td>Transition properties</td>
-				<td>Changes the transition for the delete icon on large screens
-			</tr>
-			<tr>
-				<td>$chips-contact-margin</td>
-				<td>Integer / variable</td>
-				<td>Changes the margin for contact chip</td>
-			</tr>
-			<tr>
-				<td>$chips-contact-font-size</td>
-				<td>Integer / variable</td>
-				<td>Changes the contact chip font size</td>
-			</tr>
-			<tr>
-				<td>$chips-contact-small-transition</td>
-				<td>Transition properties</td>
-				<td>Changes the contact chip transition on small screen</td>
-			</tr>
-			<tr>
-				<td>$chips-contact-medium-transition</td>
-				<td>Transition properties</td>
-				<td>Changes the contact chip transition on medium screen</td>
-			</tr>
-			<tr>
-				<td>$chips-contact-large-transition</td>
-				<td>Transition properties</td>
-				<td>Changes the contact chip transition on large screen</td>
-			</tr>
 			</tbody>
 		</table>
 	</section>

@@ -1,4 +1,10 @@
 # SMaterial
+SMaterial is made to follow the Material Design guidelines as close as possible. 
+SMaterial should be easy to use for both developers as the customers they serve.
+
+Being easy for developers means that SMaterial comes bundled with everyday technologies that speed up a developers workflow.
+SMaterial doesn't only come with everyday technologies but it also provides way to make integration easier.
+This for example means use a language like json that can be used with various other languages like PHP.
 
 ## Contributing
 ### Requirements

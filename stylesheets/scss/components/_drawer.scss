@@ -260,6 +260,7 @@
 				}
 
 				ul {
+					display: none;
 					visibility: hidden;
 					opacity: 0;
 					max-height: 0;
@@ -272,6 +273,7 @@
 					}
 
 					ul {
+						display: block;
 						visibility: visible;
 						opacity: 1;
 						max-height: 100%;

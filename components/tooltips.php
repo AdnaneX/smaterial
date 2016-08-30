@@ -54,61 +54,6 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 			<td>Color / variable</td>
 			<td>Changes the font color</td>
 		</tr>
-		<tr>
-			<td>$tooltip-opacity</td>
-			<td>Variable / integer</td>
-			<td>Changes the opacity of the tooltip</td>
-		</tr>
-		<tr>
-			<td>$tooltip-small-font</td>
-			<td>Variable / integer</td>
-			<td>Changes the font size for small screens</td>
-		</tr>
-		<tr>
-			<td>$tooltip-large-font</td>
-			<td>Variable / integer</td>
-			<td>Changes the font size for large screens</td>
-		</tr>
-		<tr>
-			<td>$tooltip-font-weight</td>
-			<td>Variable / integer</td>
-			<td>Changes the font weight</td>
-		</tr>
-		<tr>
-			<td>$tooltip-small-top</td>
-			<td>Variable / integer</td>
-			<td>Changes the top margin for small screens</td>
-		</tr>
-		<tr>
-			<td>$tooltip-large-top</td>
-			<td>Variable / integer</td>
-			<td>Changes the top margin for large screens</td>
-		</tr>
-		<tr>
-			<td>$tooltip-small-height</td>
-			<td>Variable / integer</td>
-			<td>Changes the height for small screens</td>
-		</tr>
-		<tr>
-			<td>$tooltip-large-height</td>
-			<td>Variable / integer</td>
-			<td>Changes the height for large screens</td>
-		</tr>
-		<tr>
-			<td>$tooltip-small-padding</td>
-			<td>Variable / integer</td>
-			<td>Changes the padding for small screens</td>
-		</tr>
-		<tr>
-			<td>$tooltip-large-padding</td>
-			<td>Variable / integer</td>
-			<td>Changes the padding for large screens</td>
-		</tr>
-		<tr>
-			<td>$tooltip-z-index</td>
-			<td>Variable / integer</td>
-			<td>Changes the z-index of the tooltip</td>
-		</tr>
 		</tbody>
 	</table>
 </section>

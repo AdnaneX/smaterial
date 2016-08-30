@@ -43,26 +43,6 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 
 		<tbody>
 		<tr>
-			<td>$snackbar-position</td>
-			<td>Variable / text</td>
-			<td>Change the position</td>
-		</tr>
-		<tr>
-			<td>$snackbar-height</td>
-			<td>Variable / integer</td>
-			<td>Change the height</td>
-		</tr>
-		<tr>
-			<td>$snackbar-font-size</td>
-			<td>Variable / integer</td>
-			<td>Change the font size</td>
-		</tr>
-		<tr>
-			<td>$snackbar-padding</td>
-			<td>Variable / integer</td>
-			<td>Change the padding</td>
-		</tr>
-		<tr>
 			<td>$snackbar-background</td>
 			<td>Variable / color code</td>
 			<td>Change background color</td>
@@ -72,35 +52,6 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 			<td>Variable / color code</td>
 			<td>Change font color</td>
 		</tr>
-		<tr>
-			<td>$snackbar-min-width</td>
-			<td>Variable / integer</td>
-			<td>Change the minimum width for <a href="/style/grid.php">large</a> and bigger screens</td>
-		</tr>
-		<tr>
-			<td>$snackbar-max-width</td>
-			<td>Variable / integer</td>
-			<td>Change the maximum width for <a href="/style/grid.php">large</a> and bigger screens</td>
-		</tr>
-		<tr>
-			<td>$snackbar-border-radius</td>
-			<td>Variable / integer</td>
-			<td>Change how round the corners are</td>
-		</tr>
-		<tr>
-			<td>$snackbar-action-font-weight</td>
-			<td>Variable / integer</td>
-			<td>Change font weight of actions</td>
-		</tr>
-		<tr>
-			<td>$snackbar-action-small-margin-left</td>
-			<td>Variable / integer</td>
-			<td>Change the left margin for actions</td>
-		</tr>
-		<tr>
-			<td>$snackbar-action-large-margin-left</td>
-			<td>Variable / integer</td>
-			<td>Change the left margin for actions</td>
 		</tr>
 		</tbody>
 	</table>

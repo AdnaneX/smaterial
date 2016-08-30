@@ -23,12 +23,12 @@
 }
 
 @mixin material-shadow( $dp ) {
-	$ambientY: $dp + unquote( 'px' );
-	$ambientBlur: if( $dp == 1, 3, $dp * 2 ) + unquote( 'px' );
+	$ambientY: rem-calc( $dp + 0px );
+	$ambientBlur: rem-calc( if( $dp == 1, 3, $dp * 2 ) + 0px );
 	$ambientAlpha: ( $dp + 10 + ( $dp / 9.38 ) ) / 100;
 
-	$directY: if( $dp < 10, if( $dp % 2 == 0, $dp - ( ( $dp / 2 ) - 1 ), ( $dp - ( ( $dp - 1 ) / 2 ) ) ), $dp - 4 ) + unquote( 'px' );
-	$directBlur: if( $dp == 1, 3, $dp * 2 ) + unquote( 'px' );
+	$directY: rem-calc( if( $dp < 10, if( $dp % 2 == 0, $dp - ( ( $dp / 2 ) - 1 ), ( $dp - ( ( $dp - 1 ) / 2 ) ) ), $dp - 4 ) + 0px );
+	$directBlur: rem-calc( if( $dp == 1, 3, $dp * 2 ) + 0px );
 	$directAlpha: ( 24 - decimal-round( $dp / 10 ) ) / 100;
 
 	@include box-shadow( 0 $ambientY $ambientBlur 0 rgba(0, 0, 0, $ambientAlpha) unquote(',') 0 $directY $directBlur 0 rgba(0, 0, 0, $directAlpha) );
@@ -128,43 +128,6 @@
 	filter: $settings;
 }
 
-/*
-// Typography
-@mixin font-size( $fontSize ) {
-	font-size: $fontSize+0px;
-	font-size: ;
-}
-@mixin line-height( $leadingSize ) {
-	line-height: $leadingSize+0px;
-	line-height: ( $leadingSize/10 )+0rem;
-}
-@mixin letter-spacing( $kerningSize: 0 ) {
-	letter-spacing: $kerningSize+0px;
-	letter-spacing: ( $kerningSize/10 )+0rem;
-}
-
-// Waves
-@mixin waves-transition( $transition ) {
-	-webkit-transition: $transition;
-	-moz-transition: $transition;
-	-o-transition: $transition;
-	transition: $transition;
-}
-
-@mixin waves-transform( $string ) {
-	-webkit-transform: $string;
-	-moz-transform: $string;
-	-ms-transform: $string;
-	-o-transform: $string;
-	transform: $string;
-}
-
-@mixin waves-box-shadow( $shadow ) {
-	-webkit-box-shadow: $shadow;
-	box-shadow: $shadow;
-}
-*/
-
 @mixin transition-delay( $setting ) {
 	-webkit-transition-delay: $setting;
 	-moz-transition-delay: $setting;
@@ -180,6 +143,8 @@
 	outline: none;
 	display: inline-block;
 	text-align: center;
+	position: relative;
+	text-rendering: optimizeLegibility;
 }
 
 @mixin font( $font-size, $small-font-size, $weight, $leading, $color, $tracking, $transform: inherit ) {
@@ -208,16 +173,19 @@
 	}
 
 	::-webkit-scrollbar {
-		height: rem-calc(3px);
-		width: rem-calc(3px);
+		@include square(rem-calc(3px));
 
 		@media #{$small-up} {
-			height: rem-calc(10px);
-			width: rem-calc(10px);
+			@include square(rem-calc(10px));
 		}
 	}
 
 	::-webkit-scrollbar-thumb {
 		background: rgba($black, .2);
 	}
+}
+
+@mixin square( $setting ) {
+	width: $setting;
+	height: $setting;
 }

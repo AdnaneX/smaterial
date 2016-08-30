@@ -31,3 +31,5 @@ var $searchTrigger = document.getElementsByClassName('sc-search-trigger'),
 $searchTrigger.onclick = function() {
 	$searchBox.style.display = 'block';
 }
+
+var $appbar = $('.sc-appbar');
