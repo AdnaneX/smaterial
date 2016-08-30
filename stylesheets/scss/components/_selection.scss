@@ -11,12 +11,11 @@ input[type="checkbox"] {
 	border: rem-calc(2px) solid lighten($black, (100% - 54%));
 	cursor: pointer;
 	height: rem-calc(14px);
-	outline: none; //rgba($black, .54)
+	outline: none;
 	vertical-align: middle;
 	width: rem-calc(14px);
 	z-index: 1;
 	-webkit-appearance: none;
-	-moz-appearance: none;
 	-o-appearance: none;
 
 	&:after {
@@ -135,7 +134,6 @@ input[type="radio"] {
 	position: relative;
 	width: rem-calc(14px);
 	-webkit-appearance: none;
-	-moz-appearance: none;
 	-o-appearance: none;
 
 	&:after {
