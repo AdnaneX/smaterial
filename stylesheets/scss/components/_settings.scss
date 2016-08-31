@@ -4,20 +4,13 @@
 - Colors
 - Global
 - Typography
-	- Font path
+	- Font paths
+	- Font size
 	- Colors
 - Appbar
 	- Basic
 	- Colors
-	- Title
-	- Icons
-	- Element widths
-	- More menu
 - Bottom navigation
-	- Normal
-		- Basic
-		-
-	- Shifting
 - Bottom sheet
 - Buttons
 - Cards
@@ -26,7 +19,10 @@
 - Grid
 - Icons
 - Progress
-- Selection
+- Selection controls
+	- Checkbox
+	- Radio button
+	- Switch
 - Navigation drawer / sidebar
 - Sliders
 - Snackbars & Toasts
@@ -86,7 +82,7 @@ $noto-font-path: '/stylesheets/scss/components/fonts/Noto/';
 // Font size
 $font-size: 14; //px Default 14 or 15
 
-// Color
+// Colors
 $font-color-display-4: rgba($black, .54); // Default rgba($black, .54)
 $font-color-display-3: $font-color-display-4; // Default $font-color-display-4
 $font-color-display-2: $font-color-display-4; // Default $font-color-display-4
@@ -117,78 +113,21 @@ $appbar-title: $white; // Default $white
 /**************************************
  * Bottom navigation
  **************************************/
-/******************
- * Normal
- ******************/
-// Basic
-$bottom-nav-width-small: 100%; // Default 100%;
-$bottom-nav-width-large: $bottom-nav-width-small; // Default $bottom-nav-width-small
 $bottom-nav-background: $main-color; // Default $main-color
-$bottom-nav-position: fixed; // Default fixed
-$bottom-nav-height: rem-calc(56px); // Default rem-calc(56px)
-
-// Items
-$bottom-nav-item-max-width: rem-calc(168px); // Default rem-calc(168px);
-$bottom-nav-item-min-width-small: rem-calc(104px); // Default rem-calc(104px)
-$bottom-nav-item-min-width-large: rem-calc(120px); // Default rem-calc(120px)
-$bottom-nav-padding: rem-calc(8px) rem-calc(12px) rem-calc(10px) rem-calc(12px); // Default rem-calc(8px) rem-calc(12px) rem-calc(10px) rem-calc(12px)
-$bottom-nav-padding-active: rem-calc(6px) rem-calc(12px) rem-calc(10px) rem-calc(12px); // Default rem-calc(6px) rem-calc(12px) rem-calc(10px) rem-calc(12px)
-$bottom-nav-font-size: rem-calc(12px); // Default rem-calc(12px)
 $bottom-nav-font-color: $white; // Default $white
-$bottom-nav-font-size-active: rem-calc(14px); // Default rem-calc(14px)
-$bottom-nav-icon-size: rem-calc(24px); // Default rem-calc(24px)
-
-$bottom-shifting-width-small: $bottom-nav-width-small; // Default $bottom-nav-width-small
-$bottom-shifting-width-large: $bottom-nav-width-small; // Default $bottom-nav-width-small
-$bottom-shifting-background: $bottom-nav-background; // Default $bottom-nav-background
-$bottom-shifting-position: $bottom-nav-position; // Default $bottom-nav-position
-$bottom-shifting-max-width: rem-calc(96px); // Default rem-calc(96px)
-$bottom-shifting-max-width-active:  rem-calc(168px); // Default rem-calc(168px)
-$bottom-shifting-min-width: rem-calc(64px); // Default rem-calc(64px)
-$bottom-shifting-min-width-active: rem-calc(96px); // Default rem-calc(96px)
-$bottom-shifting-font-color: $bottom-nav-font-color; // Default $bottom-nav-font-color
-$bottom-shifting-height: $bottom-nav-height; // Default $bottom-nav-height
-$bottom-shifting-icon-size: $bottom-nav-icon-size; // Default $bottom-nav-icon-size
-$bottom-shifting-padding: rem-calc(16px) 0; // Default rem-calc(16px) 0
-$bottom-shifting-padding-active: rem-calc(6px) 0 rem-calc(10px) 0; // Default rem-calc(6px) 0 rem-calc(10px) 0
-$bottom-shifting-font-size: rem-calc(14px); // Default rem-calc(14px)
 
 /**************************************
  * Bottom sheet
  **************************************/
-$bottom-sheet-small-transition: height $transition-small-duration $returning-transition; // Default height $transition-small-duration $returning-transition
-$bottom-sheet-medium-transition: height $transition-medium-duration $returning-transition; // Default height $transition-medium-duration $returning-transition
-$bottom-sheet-large-transition: height $transition-large-duration $returning-transition; // Default height $transition-large-duration $returning-transition
-$bottom-sheet-position: fixed; // Default fixed
-$bottom-sheet-background: $white;
-$bottom-sheet-z-index: 4; // Default 4
-$bottom-sheet-padding: rem-calc(8px) rem-calc(16px); // Default rem-calc(8px) rem-calc(16px)
-$bottom-sheet-font-weight: 400; // Default 400
-$bottom-sheet-font-size: rem-calc(16px); // Default rem-calc(16px)
-
-$bottom-sheet-icons-margin: rem-calc(32px); // Default renCalc(32px)
-$bottom-sheet-icons-size: rem-calc(24px); // Default rem-calc(24px)
-$bottom-sheet-icons-color: lighten($black, 100% - 54%); // Default lighten($black, 100% - 54%)
-
-// Header
-$bottom-sheet-header-padding: 0 rem-calc(16px) rem-calc(8px) rem-calc(16px); // Default 0 rem-calc(16px) rem-calc(8px) rem-calc(16px)
-$bottom-sheet-header-height: rem-calc(56px); // Default rem-calc(56px)
-$bottom-sheet-header-font-color: lighten($black, 100% - 54%); // Default lighten($black, 100% - 54%)
-$bottom-sheet-header-divider-margin: rem-calc(7px) rem-calc(-16px) rem-calc(8px) rem-calc(-16px); // Default rem-calc(7px) rem-calc(-16px) rem-calc(8px) rem-calc(-16px)
-
-// Grid
-$bottom-sheet-grid-padding: rem-calc(16px) rem-calc(24px) rem-calc(24px) rem-calc(24px); // Default rem-calc(16px) rem-calc(24px) rem-calc(24px) rem-calc(24px)
-$bottom-sheet-grid-height: rem-calc(64px); // Default rem-calc(64px)
-$bottom-sheet-grid-margin: 0 0 rem-calc(16px) 0; // Default 0 0 rem-calc(16px) 0
-$bottom-sheet-grid-last-margin: 0; // Default 0
-$bottom-sheet-grid-icon-size: rem-calc(48px); // Default rem-calc(48px)
-$bottom-sheet-grid-content-size: rem-calc(16px); // Default rem-calc(16px)
+$bottom-sheet-background: $white; // Default $white
+$bottom-sheet-font-color: rgba($black, .87); // Default rgba($black, .87)
+$bottom-sheet-header-font-color: rgba($black, .54); // Default rgba($black, .54)
+$bottom-sheet-icons-color: $bottom-sheet-header-font-color; // Default $bottom-sheet-header-font-color
 
 /**************************************
  * Buttons
  **************************************/
 $raised-background: $main-color; // Default $main-color
-$raised-background-hover: color($main-color, 700); // Default color($main-color, 700)
 $raised-font-color: $white; // Default $white
 $raised-icon-color: $raised-font-color; // Default $raised-font-color
 $raised-disabled-background: if( $theme == light, rgba($black, .12), rgba($white, .12) ); // Default if( $theme == light, rgba($black, .12), rgba($white, .12) )
@@ -231,12 +170,14 @@ $circular-color4: $orange;
 /**************************************
  * Selection controls
  **************************************/
+// Checkbox
 $checkbox-color: lighten($black, (100% - 54%));
 $checkbox-color-checked: $main-color; // Default $main-color
 $checkbox-size: rem-calc(18.2px); // Default rem-calc(18.2px)
 $checkbox-margin: rem-calc(2.8px); // Default rem-calc(2.8px)
 $checkbox-disabled-color: lighten($black, (100% - 26%)); // Default lighten($black, (100% - 26%));
 
+// Radio button
 $radio-color: $main-color; // Default $main-color
 $radio-size: $checkbox-size; // Default rem-calc(18.2px)
 $radio-margin: $checkbox-margin; // Default rem-calc(20px)
@@ -263,17 +204,7 @@ $snackbar-font-color: $white; // Default $white
 /**************************************
  * Navigation drawer
  **************************************/
-$drawer-position: fixed; // Default fixed
-$drawer-overflow: auto; // Default auto
-$drawer-background: $white; // Default $white
-$drawer-padding: rem-calc(16px) 0; // Default rem-calc(16px) 0
 $drawer-hover: $main-color; // Default $main-color
-$drawer-width: rem-calc(320px); // Default rem-calc(320px)
-$drawer-max-width: rem-calc(400px); // Default rem-calc(400px)
-$drawer-small-width: rem-calc(320px); // Default rem-calc(320px)
-$drawer-small-max-width: rem-calc(320px); // Default rem-calc(320px)
-$drawer-small-margin-right: rem-calc(56px); // Default rem-calc(56px)
-$drawer-sub-list-margin: 0 0 0 rem-calc(10px); // Default 0 0 0 rem-calc(10px)
 $drawer-icons-font-size: rem-calc(22.4px); // Default rem-calc(22.4px)
 $drawer-icons-size: rem-calc(48px); // Default rem-calc(48px) Should be the same as default list item height
 $drawer-icons-color: lighten($black, (100% - 54%)); // Default lighten($black, (100% - 54%))
@@ -286,7 +217,7 @@ $drawer-full-title-size: rem-calc(24px); // Default rem-calc(24px)
 $drawer-full-title-margin: rem-calc(-16px) 0 0 0; // Default rem-calc(-16px) 0 0 0
 $drawer-full-title-background: $main-color !important; // Default $main-color
 $drawer-full-title-color: $white; // Default $white
-$drawer-full-profile-medium-margin: - rem-calc(16px) 0 rem-calc(8px) 0 !important; // Default - rem-calc(16px) 0 rem-calc(8px) 0 !important
+$drawer-full-profile-medium-margin: rem-calc(-16px) 0 rem-calc(8px) 0 !important; // Default rem-calc(-16px) 0 rem-calc(8px) 0 !important
 $drawer-full-profile-large-margin: 0 0 rem-calc(8px) 0 !important; // Default 0 0 rem-calc(8px) 0 !important
 
 $drawer-floating-small-top: $appbar-small-height; // Default $appbar-small-height

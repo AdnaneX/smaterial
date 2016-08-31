@@ -111,7 +111,7 @@ main {
 	}
 
 	@media #{$medium-up} {
-		left: $drawer-width;
+		left: rem-calc(320px);
 		top: rem-calc(64px);
 	}
 }

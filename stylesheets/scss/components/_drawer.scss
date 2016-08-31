@@ -10,15 +10,15 @@
 	@include material-shadow(16);
 	background: $drawer-background;
 	bottom: 0;
-	overflow: $drawer-overflow;
-	padding: $drawer-padding;
-	position: $drawer-position;
+	overflow: auto;
+	padding: rem-calc(16px) 0;
+	position: fixed;
 
 	// Left navigation
 	&-left {
 		left: 0;
-		width: $drawer-small-width;
-		max-width: $drawer-small-max-width;
+		width: rem-calc(320px);
+		max-width: rem-calc(320px);
 		margin: 0 0 0 -103%;
 		@include transition(margin $transition-small-duration $basic-transition);
 
@@ -27,8 +27,8 @@
 		}
 
 		@media #{$medium-up} {
-			width: $drawer-width;
-			max-width: $drawer-max-width;
+			width: rem-calc(320px);
+			max-width: rem-calc(400px);
 			margin: 0;
 		}
 
@@ -296,6 +296,7 @@
 
 			.material-icons {
 				color: $drawer-icons-color;
+				@include square();
 				font-size: $drawer-icons-font-size;
 				height: $drawer-icons-size;
 				line-height: $drawer-icons-size;
@@ -305,7 +306,7 @@
 		}
 
 		ul {
-			margin: $drawer-sub-list-margin;
+			margin: 0 0 0 rem-calc(10px);
 		}
 	}
 }

@@ -5,6 +5,12 @@ $keywords = 'material design, smaterial, bottom navigation, bottom menu, bottom 
 
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>
+<style>
+	.sc-bottom-shifting, .sc-bottom-nav {
+		display: none;
+	}
+</style>
+
 <section class="sc-row">
 	<h2>Bottom navigation usage</h2>
 
@@ -12,12 +18,14 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		You can use the bottom navigation to easily switch between top-level views in a single tap.
 		There are two types of bottom navigation you can use (default and shifting)
 	</p>
-
-
 </section>
 
 <section class="sc-row">
 	<h3>Default bottom navigation</h3>
+
+	<p class="sc-col sc-xs4 sc-s12 sc-m6">
+		<button class="sc-raised-button" id="bottom-nav-button">Show</button>
+	</p>
 
 	<pre class="language-html sc-xs4 sc-s12 sc-m6">
 		<code>
@@ -59,6 +67,10 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 <Section class="sc-row">
 	<h3>Shifting bottom navigation</h3>
 
+	<p class="sc-col sc-xs4 sc-s12 sc-m6">
+		<button class="sc-raised-button" id="shifting-nav-button">Show</button>
+	</p>
+
 	<pre class="language-html sc-xs4 sc-s12 sc-m6">
 		<code>
 &lt;nav class="sc-bottom-shifting">
@@ -96,7 +108,34 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	</pre>
 </Section>
 
-<nav class="sc-bottom-nav">
+<section class="sc-row">
+	<h3>Settings</h3>
+
+	<table>
+		<thead>
+			<tr>
+				<th>Variable</th>
+				<th>Options</th>
+				<th>Result</th>
+			</tr>
+		</thead>
+
+		<tbody>
+			<tr>
+				<td>$bottom-nav-background</td>
+				<td>Color / variable</td>
+				<td>Changes the background color</td>
+			</tr>
+			<tr>
+				<td>$bottom-nav-font-color</td>
+				<td>Color / variable</td>
+				<td>Changes the font color</td>
+			</tr>
+		</tbody>
+	</table>
+</section>
+
+<nav class="sc-bottom-nav" id="bottom-nav">
 	<ul>
 		<li>
 			<a href="#">
@@ -128,7 +167,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	</ul>
 </nav>
 
-<nav class="sc-bottom-shifting">
+<nav class="sc-bottom-shifting" id="shifting-nav">
 	<ul>
 		<li>
 			<a href="#">
@@ -159,5 +198,28 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		</li>
 	</ul>
 </nav>
+
+<script>
+	var $nav = document.getElementById('bottom-nav'),
+		$shifting = document.getElementById('shifting-nav'),
+		$navButton = document.getElementById('bottom-nav-button'),
+		$shiftingButton = document.getElementById('shifting-nav-button');
+
+	$navButton.onclick = function() {
+		if( $nav.style.display == 'none' ) {
+			$nav.style.display = 'block';
+		} else {
+			$nav.style.display = 'none';
+		}
+	}
+
+	$shiftingButton.onclick = function() {
+		if( $shifting.style.display == 'none' ) {
+			$shifting.style.display = 'block';
+		} else {
+			$shifting.style.display = 'none';
+		}
+	}
+</script>
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.php';

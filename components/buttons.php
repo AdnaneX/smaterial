@@ -236,22 +236,17 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		<tr>
 			<td>$flat-color</td>
 			<td>Variable / color</td>
-			<td>Change flat font color</td>
+			<td>Change font color</td>
 		</tr>
 		<tr>
 			<td>$flat-icon-color</td>
 			<td>Variable / color</td>
-			<td></td>
+			<td>Changes the icon color</td>
 		</tr>
 		<tr>
 			<td>$flat-disabled-color</td>
 			<td>Variable / color</td>
 			<td>Changes the disabled font color</td>
-		</tr>
-		<tr>
-			<td>$floating-transition</td>
-			<td></td>
-			<td>Changes transition</td>
 		</tr>
 		<tr>
 			<td>$floating-background</td>

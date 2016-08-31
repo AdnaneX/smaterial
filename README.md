@@ -46,33 +46,29 @@ After making your changes please describe what you have changed. This will speed
 
 ## TODO
 
-- Global
+- Global 
     - Delete class "sc-" prefix to save more than 80kb?
-    - Add black theme support
-    - Add variables to settings
-    - Add badges
     - Fix mobile styling (in Chrome for Android when scrolling a page the title bar remains visible)
     - Check duplicate styling and therefor load speed
     - When an item can be triggered by clicking work with JavaScript to set an active class.
     - Use 1 class for all triggers. With the active class make slideup and slidedown action
-    - Future add SMaterial CDN package
-    - Future add meteor js package
-    - Check for "- rem-calc(..px)" and "rem-calc(-..px)". All should be like the last one
     - Move global usable classes to _normailize.scss (.sc-no-hover, .sc-active, .sc-disabled) to name a few
+    - Fix max-height max-width to something which works automatically. This applies to several components where these properties are animated 
     - Add Material Design animations
-    - Add templates
-    - Complete table of contents
     - Add flexbox support
-    - Add mobile, tablet, desktop different transitions (JavaScript)
-    - Add screen width detect to js
-    - Fix positions of <header>, <main>, <aside> to be more compatible with for example WordPress (<aside> goes over <header>, <main> slides up under <header>)
-    - Add default styles for various elements (eg. buttons, slider)
+    - Fix positions of &lt;header>, &lt;main>, &lt;aside> to be more compatible with for example WordPress (&lt;aside> goes over &lt;header>, &lt;main> slides up under &lt;header>)
     - Add support for IE and FireFox
     - Add Hammer.js for a better mobile experience(Optional)
-    - Less options in settings file. Only important options. All other "options" only in the same file at the top after comment before styling
+    - Future
+		- Add SMaterial CDN package
+		- Add meteor js package
+		- (re)Add to bower 
+    	- Add templates
+    - Components
+        - Pickers
+		- Expansion panels
+		- Add badges
 - Appbar
-    - Add "more menu" styling
-    - Add "more menu" functions
     - Add search slide out
 - Bottom sheet
     - Add music styling
@@ -92,15 +88,18 @@ After making your changes please describe what you have changed. This will speed
 - Selection
     - Add hovers
     - Add radials for mobile
-- Settings
+- Settings                   
+    - Less options in settings file. Only important options. All other "options" only in the same file at the top after comment before styling     
+    - Complete table of contents
     - Make variables consistent
     - Give variables a clearer name of what they do
     - Check all colors for (lighten() / darken() or rgba()) where possible
-    - Divide variables for components
-    - Add comments for divided variables
     - Add settings in documentation
-    - Move color import from "_settings.scss" to "smaterial.scss"
+    - Move color import from "_settings.scss" to "smaterial.scss" 
+    - Add black theme support
+    - Add variables to settings
 - Navigation drawer
+    - Make more options (Permanent, Persistent, Mini variant, Temporary) 
     - Make profile dropdown button
     - Profile should consist of less nested div 
     - Profile background image should be dynamically changed (img tag)
@@ -131,7 +130,6 @@ After making your changes please describe what you have changed. This will speed
     - Create separate file for list styling
 - Notifications
     - Add notifications styling: https://material.google.com/patterns/notifications.html
-    - Fix max-height to something which works automatically
 - Normalize
 - Gulp
 - Bower

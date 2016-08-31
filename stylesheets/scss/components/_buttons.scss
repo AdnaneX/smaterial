@@ -43,23 +43,29 @@ button, input[type="button"], input[type="reset"], input[type="submit"], a {
 
 		&:active {
 			@include material-shadow(8);
+
+			@if $theme == dark {
+				background: color($raised-background, 700);
+			}
 		}
 
 		&:hover {
 			color: $raised-font-color;
-			background: $raised-background-hover;
 
 			// Add shadow overlay
-			//&:before {
-			//	position: absolute;
-			//	@include border-radius(rem-calc(2px));
-			//	top: 0;
-			//	left: 0;
-			//	right: 0;
-			//	bottom: 0;
-			//	content: '';
-			//	background: rgba($black, .12);
-			//}
+			&:before {
+				position: absolute;
+				@include border-radius(rem-calc(2px));
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				content: '';
+				background: rgba($black, .12);
+				@media #{$medium-up} {
+					@include material-shadow(2);
+				}
+			}
 		}
 
 		.material-icons {

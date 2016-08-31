@@ -4,10 +4,17 @@
  * http://www.google.com/design/spec/components/bottom-sheets.html
  **************************************/
 
+
+$bottom-sheet-font-weight: 400; // Default 400
+$bottom-sheet-font-size: rem-calc(16px); // Default rem-calc(16px)
+$bottom-sheet-icons-size: rem-calc(24px); // Default rem-calc(24px)
+$bottom-sheet-grid-icon-size: rem-calc(48px); // Default rem-calc(48px)
+$bottom-sheet-grid-content-size: rem-calc(16px); // Default rem-calc(16px)
+
 .sc-bottom-sheet {
-	@include transition($bottom-sheet-small-transition);
+	@include transition(height $transition-small-duration $returning-transition);
 	@include material-shadow(16);
-	background: $white;
+	background: $bottom-sheet-background;
 	bottom: 0;
     display: none;
 	font-size: $bottom-sheet-font-size;
@@ -16,19 +23,20 @@
 	left: 0;
 	margin: 0 auto;
 	overflow: hidden;
-	padding: $bottom-sheet-padding;
-	position: $bottom-sheet-position;
+	padding: rem-calc(8px) rem-calc(16px);
+	position: fixed;
 	right: 0;
 	width: 100%;
-	z-index: $bottom-sheet-z-index;
+	color: $bottom-sheet-font-color;
+	z-index: 4;
 
 	@media #{$medium-only} {
-		@include transition($bottom-sheet-medium-transition);
+		@include transition(height $transition-medium-duration $returning-transition);
 		width: 60%;
 	}
 
-	@media #{$large-up} {
-		@include transition($bottom-sheet-large-transition);
+	@media #{$medium-up} {
+		@include transition(height $transition-large-duration $returning-transition);
 		width: 40%;
 	}
 
@@ -45,40 +53,40 @@
 			.material-icons {
 				color: $bottom-sheet-icons-color;
 				font-size: $bottom-sheet-icons-size;
-				height: auto;
-				margin-right: $bottom-sheet-icons-margin;
+				@include square($bottom-sheet-icons-size);
+				margin: 0 rem-calc(32px) 0 0 ;
 				vertical-align: middle;
 			}
 		}
 	}
 
 	&-header {
-		padding: $bottom-sheet-header-padding;
+		padding: 0 rem-calc(16px) rem-calc(8px) rem-calc(16px);
 
 		ul {
 			li {
 				&.sc-header {
 					color: $bottom-sheet-header-font-color;
-					height: $bottom-sheet-header-height;
+					height: rem-calc(56px);
 				}
 
 				&.sc-divider {
-					margin: $bottom-sheet-header-divider-margin;
+					margin: rem-calc(7px) rem-calc(-16px) rem-calc(8px) rem-calc(-16px);
 				}
 			}
 		}
 	}
 
 	&-grid {
-		padding: $bottom-sheet-grid-padding;
+		padding: rem-calc(16px) rem-calc(24px) rem-calc(24px) rem-calc(24px);
 
 		ul {
 			li {
-				height: $bottom-sheet-grid-height;
-				margin: $bottom-sheet-grid-margin;
+				height: rem-calc(64px);
+				margin: 0 0 rem-calc(16px) 0;
 
 				&:last-of-type {
-					margin: $bottom-sheet-grid-last-margin;
+					margin: 0;
 				}
 
 				.sc-grid-item {
@@ -90,10 +98,9 @@
 
 						.material-icons {
 							font-size: $bottom-sheet-grid-icon-size;
-							height: auto;
+							@include square($bottom-sheet-grid-icon-size);
 							margin: 0;
 							vertical-align: middle;
-							width: $bottom-sheet-grid-icon-size;
 						}
 					}
 
