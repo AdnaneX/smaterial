@@ -204,6 +204,7 @@ $snackbar-font-color: $white; // Default $white
 /**************************************
  * Navigation drawer
  **************************************/
+$drawer-background: $white; // Default $white
 $drawer-hover: $main-color; // Default $main-color
 $drawer-icons-font-size: rem-calc(22.4px); // Default rem-calc(22.4px)
 $drawer-icons-size: rem-calc(48px); // Default rem-calc(48px) Should be the same as default list item height

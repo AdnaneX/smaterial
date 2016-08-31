@@ -296,12 +296,10 @@
 
 			.material-icons {
 				color: $drawer-icons-color;
-				@include square();
+				@include square($drawer-icons-size);
 				font-size: $drawer-icons-font-size;
-				height: $drawer-icons-size;
 				line-height: $drawer-icons-size;
 				vertical-align: middle;
-				width: $drawer-icons-size;
 			}
 		}
 

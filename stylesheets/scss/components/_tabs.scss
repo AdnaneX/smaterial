@@ -1,7 +1,7 @@
 .sc-tabs {
 	@include material-shadow(4);
 	background: $main-color;
-	left: $drawer-width;
+	left: rem-calc(320px);
 	position: fixed;
 	top: $appbar-small-height;
 	z-index: 1;

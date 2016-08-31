@@ -3,7 +3,6 @@ $(document).ready(function() {
 
 	$drawer.find('li.sc-drawer-dropdown').each(function() {
 		var $this = $(this),
-			$ul = $this.find('ul'),
 			$arrow = $this.find('.material-icons');
 
 		if( $arrow !== undefined ) {
