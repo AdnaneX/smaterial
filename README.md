@@ -89,7 +89,6 @@ After making your changes please describe what you have changed. This will speed
     - Add more JavaScript functionality (open / close by JavaScript call)
 - Progress
     - Fix buffer animation
-    - Circle progress
 - Selection
     - Add hovers
     - Add radials for mobile
@@ -103,6 +102,8 @@ After making your changes please describe what you have changed. This will speed
     - Move color import from "_settings.scss" to "smaterial.scss"
 - Navigation drawer
     - Make profile dropdown button
+    - Profile should consist of less nested div 
+    - Profile background image should be dynamically changed (img tag)
     - Fix margin right on left menu for mobile. 56px between screen edge and menu
 - Slider
     - Add radials
@@ -125,7 +126,7 @@ After making your changes please describe what you have changed. This will speed
     - Add slide out search
     - Add dropdown search
     - Fix label for textarea
-    - Add default text field
+    - Add text field fallback
 - List
     - Create separate file for list styling
 - Notifications

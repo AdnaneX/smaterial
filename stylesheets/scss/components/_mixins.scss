@@ -189,3 +189,10 @@
 	width: $setting;
 	height: $setting;
 }
+
+@mixin transform-origin( $setting ) {
+	-webkit-transform-origin: $setting;
+	-moz-transform-origin: $setting;
+	-ms-transform-origin: $setting;
+	-o-transform-origin: $setting;
+}

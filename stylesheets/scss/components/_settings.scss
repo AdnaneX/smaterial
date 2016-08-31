@@ -220,6 +220,14 @@ $chips-delete-background-hover: $chips-font-hover-color; // Default $chips-font-
 $progressbar-background: rgba($main-color, .4); // Default rgba($main-color, .4)
 $progress-background: $main-color; // Default $main-color
 
+// Circular
+$circular-width: rem-calc(50px); // Default rem-calc(50px)
+$circular-path-width: rem-calc(5px); // Default rem-calc(5px)
+$circular-color1: $red;
+$circular-color2: $green;
+$circular-color3: $indigo;
+$circular-color4: $orange;
+
 /**************************************
  * Selection controls
  **************************************/

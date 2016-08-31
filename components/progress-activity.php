@@ -44,16 +44,12 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	</p>
 
 	<div class="sc-col sc-xs4 sc-s12 sc-m6">
-		<div class="sc-indeterminate">
-			 <div class="sc-progressbar"></div>
-		</div>
+		<div class="sc-indeterminate"></div>
 	</div>
 
 	<pre class="language-html sc-col sc-s12 sc-m6">
 		<code>
-&lt;div class="sc-indeterminate">
-  &lt;div class="sc-progressbar">&lt;/div>
-&lt;/div>
+&lt;div class="sc-indeterminate">&lt;/div>
 		</code>
 	</pre>
 </section>
@@ -86,20 +82,22 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	</pre>
 </section>
 
-<section class="sc-col sc-xs4 sc-s12 sc-m6">
+<section class="sc-row">
 	<h3>Circular</h3>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
-		Work in process.
+		The circular progress can easily be changed in SCSS. You can change the width of the loader and the color(s).
 	</p>
 
 	<div class="sc-col sc-xs4 sc-s12 sc-m6">
-		<div class="sc-circular">
-			<svg >
-				<circle></circle>
-			</svg>
-		</div>
+		<div class="sc-circular"></div>
 	</div>
+
+	<pre class="language-html sc-col sc-xs4 sc-s12 sc-m6 sc-offset-m6">
+		<code>
+&lt;div class="sc-circular">&lt;/div>
+		</code>
+	</pre>
 </section>
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.php';
