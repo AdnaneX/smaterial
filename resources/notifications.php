@@ -350,5 +350,18 @@ notification('Title', {body: 'Content', icon: 'icon_path'}, 'click-url.com')
 		</div>
 	</div>
 </section>
+
+<section class="sc-row">
+	<h3>Settings</h3>
+
+	<table class="sc-col sc-xs4 sc-s12 sc-m6">
+		<thead>
+		<tr>
+			<th>Variable</th>
+			<th></th>
+		</tr>
+		</thead>
+	</table>
+</section>
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.php';

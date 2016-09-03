@@ -171,17 +171,9 @@ $circular-color4: $orange;
  * Selection controls
  **************************************/
 // Checkbox
-$checkbox-color: lighten($black, (100% - 54%));
-$checkbox-color-checked: $main-color; // Default $main-color
-$checkbox-size: rem-calc(18.2px); // Default rem-calc(18.2px)
-$checkbox-margin: rem-calc(2.8px); // Default rem-calc(2.8px)
-$checkbox-disabled-color: lighten($black, (100% - 26%)); // Default lighten($black, (100% - 26%));
-
-// Radio button
-$radio-color: $main-color; // Default $main-color
-$radio-size: $checkbox-size; // Default rem-calc(18.2px)
-$radio-margin: $checkbox-margin; // Default rem-calc(20px)
-$radio-disabled-color: $checkbox-disabled-color; // Default $checkbox-disabled-color
+$checkbox-border-color: if( $theme == light, rgba($black, .54), rgba($white, .7) );
+$checkbox-active-background: rgba($main-color, 1);
+$checkbox-disabled-background: if( $theme == light, rgba($black, .26), rgba($white, .3) );
 
 // Switch
 $switch-track-background: if( $theme == light, rgba($black, .38), rgba($white, .3) ); // Default if( $theme == light, rgba($black, .38), rgba($white, .3) )

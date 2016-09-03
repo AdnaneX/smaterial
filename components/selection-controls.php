@@ -25,11 +25,10 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	</p>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
-		<input type="checkbox" id="test"><label for="test">Test</label>
-		<input type="checkbox" id="test1" checked><label for="test1">Test1</label>
-		<input type="checkbox" id="example" disabled><label for="example">Example</label>
-		<input type="checkbox" id="example0" disabled checked><label for="example0">Example1</label>
-		<input type="checkbox" id="test2" class="sc-checkbox"><label for="test2">Other browser</label>
+		<input type="checkbox" class="sc-checkbox" id="test"></label><label for="test">Test</label>
+		<input type="checkbox" class="sc-checkbox" id="test1" checked></label><label for="test1">Test1</label>
+		<input type="checkbox" class="sc-checkbox" id="test2" disabled></label><label for="test2">Test2</label>
+		<input type="checkbox" class="sc-checkbox" id="test3" disabled checked></label><label for="test3">Test3</label>
 	</p>
 
 	<pre class="language-html sc-col sc-s12 sc-m6">

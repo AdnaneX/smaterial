@@ -4,235 +4,87 @@
  * http://www.google.com/design/spec/components/selection-controls.html
  **************************************/
 
-input[type="checkbox"] {
-	@include border-radius(rem-calc(2px));
-	@include transition(border $transition-small-duration $basic-transition unquote(',') background $transition-small-duration $basic-transition);
-	background: transparent;
-	border: rem-calc(2px) solid lighten($black, (100% - 54%));
-	cursor: pointer;
-	height: rem-calc(14px);
-	outline: none;
-	vertical-align: middle;
-	width: rem-calc(14px);
-	z-index: 1;
-	-webkit-appearance: none;
-	-o-appearance: none;
+$checkbox-size: rem-calc($font-size-body-1+0px);
 
-	&:after {
-		@include transition(content $transition-large-duration $basic-transition);
+input[type="checkbox"].sc-checkbox, input[type="radio"].sc-radio {
+	@include opacity(0);
+	left: -102%;
+	position: absolute;
+
+	// Off
+	+ label:before {
 		content: '';
+		display: inline-block;
+		background: transparent;
+		border: rem-calc(2px) solid $checkbox-border-color;
+		@include square($checkbox-size);
+		@include border-radius(rem-calc(2px));
 		font-family: 'Material Icons';
-		position: absolute;
-	}
+		position: relative;
+		vertical-align: middle;
+		font-weight: 400;
+		left: 0;
+		line-height: $checkbox-size;
+		@include transition(all $transition-small-duration $basic-transition);
+		margin: 0 calc(#{$checkbox-size} * -2 ) 0 0;
 
-	&:checked {
-		background: $main-color; // rgba($main-color, 1)
-		border: rem-calc(2px) solid $main-color; // rgba($main-color, 1)
-
-		&:after {
-			color: $white;
-			content: 'checkbox';
+		@media #{$medium-up} {
+			margin: 0 calc(#{$checkbox-size} / 2) 0 0;
 		}
 	}
 
-	&:disabled {
-		border: rem-calc(2px) solid lighten($black, (100% - 26%)); // rgba($black, .26)
-
-		&:checked {
-			background: lighten($black, (100% - 26%)); // rgba($black, .26)
-		}
+	// On
+	&:checked + label:before {
+		background: $checkbox-active-background;
+		border: rem-calc(2px) solid $checkbox-active-background;
+		content: '\E5CA';
+		color: $background;
 	}
 
-	&.sc-checkbox {
-		margin: rem-calc(7px) 0 0 0;
-		opacity: 0;
-		position: absolute;
+	// Disabled off
+	&:disabled + label:before {
+		border: rem-calc(2px) solid $checkbox-disabled-background;
+	}
 
-		+ label {
-			cursor: pointer;
+	// Disabled on
+	&:disabled:checked + label:before {
+		background: $checkbox-disabled-background;
+	}
+
+	// Radial
+	/*@media #{$medium-down} {
+		&:active + label:after {
 			display: inline-block;
-			height: rem-calc(28px);
-			line-height: rem-calc(28px);
-			padding-left: rem-calc(21px);
+			content: '';
+			@include square(calc(#{$checkbox-size} * 2));
+			@include border-radius(50%);
 			position: relative;
-
-			// Border
-			&:before {
-				@include border-radius(rem-calc(2px));
-				@include transition(border $transition-small-duration $basic-transition unquote(',') background $transition-small-duration $basic-transition);
-				background: transparent;
-				border: rem-calc(2px) solid lighten($black, (100% - 54%));
-				box-sizing: border-box; //rgba($black, .54)
-				content: '';
-				cursor: pointer;
-				height: rem-calc(14px);
-				left: 0;
-				outline: none;
-				position: absolute;
-				top: rem-calc(7px);
-				vertical-align: middle;
-				width: rem-calc(14px);
-			}
-
-			// Check
-			&:after {
-				@include transition(content $transition-large-duration $basic-transition);
-				border: none;
-				content: '';
-				font-family: 'Material Icons';
-				left: 0;
-				position: absolute;
-			}
+			top: $checkbox-size;
+			left: calc(#{$checkbox-size} * -2);
+			background: rgba($black, .2);
 		}
 
-		&:checked {
-			+ label {
-				&:before {
-					background: $main-color; // rgba($main-color, 1)
-					border: rem-calc(2px) solid $main-color; // rgba($main-color, 1)
-				}
-
-				&:after {
-					@include border-radius(rem-calc(2px));
-					color: $white;
-					content: 'checkbox' !important;
-				}
-			}
+		&:checked:active + label:after {
+			background: rgba($main-color, .2);
 		}
-
-		&:disabled {
-			+ label {
-				&:before {
-					border: rem-calc(2px) solid lighten($black, (100% - 26%)); // rgba($black, .26)
-				}
-			}
-
-			&:checked {
-				+ label {
-					&:before {
-						background: lighten($black, (100% - 26%)); // rgba($black, .26)
-					}
-
-					&:after {
-						color: $white;
-						content: 'checkbox';
-					}
-				}
-			}
-		}
-	}
+	}*/
 }
 
-input[type="radio"] {
-	@include border-radius(50%);
-	@include transition(border $transition-small-duration $basic-transition);
-	background: transparent;
-	border: rem-calc(2px) solid lighten($black, (100% - 54%));
-	cursor: pointer;
-	height: rem-calc(14px);
-	outline: none;
-	position: relative;
-	width: rem-calc(14px);
-	-webkit-appearance: none;
-	-o-appearance: none;
-
-	&:after {
-		@include transition(background $transition-small-duration $basic-transition);
+input[type="radio"].sc-radio {
+	// Off
+	+ label:before {
+		background: none;
+		color: $checkbox-border-color;
 		@include border-radius(50%);
-		background: transparent;
 		border: none;
-		content: '';
-		height: rem-calc(7px);
-		left: rem-calc(2px);
-		position: absolute;
-		top: rem-calc(2px);
-		width: rem-calc(7px);
+		content: '\e836';
 	}
 
-	&:checked {
-		border: rem-calc(2px) solid $main-color;
-
-		&:after {
-			background: $main-color;
-		}
-	}
-
-	&:disabled {
-		border: rem-calc(2px) solid lighten($black, (100% - 26%));
-
-		&:checked {
-			&:after {
-				background: lighten($black, (100% - 26%));
-			}
-		}
-	}
-
-	&.sc-radio {
-		margin: rem-calc(7px) 0 0 0;
-		opacity: 0;
-		position: absolute;
-
-		+ label {
-			cursor: pointer;
-			display: inline-block;
-			height: rem-calc(28px);
-			line-height: rem-calc(28px);
-			padding-left: rem-calc(21px);
-			position: relative;
-
-			&:before {
-				@include border-radius(50%);
-				@include transition(border $transition-small-duration $basic-transition);
-				background: transparent;
-				border: rem-calc(2px) solid lighten($black, (100% - 54%));
-				content: '';
-				height: rem-calc(14px);
-				left: 0;
-				position: absolute;
-				top: rem-calc(7px);
-				width: rem-calc(14px);
-			}
-
-			&:after {
-				@include transition(background $transition-small-duration $basic-transition);
-				@include border-radius(50%);
-				background: transparent;
-				content: '';
-				height: rem-calc(9px);
-				left: rem-calc(4px);
-				position: absolute;
-				top: rem-calc(11px);
-				width: rem-calc(9px);
-			}
-		}
-
-		&:checked {
-			+ label {
-				&:before {
-					border: rem-calc(2px) solid $main-color;
-				}
-
-				&:after {
-					background: $main-color;
-				}
-			}
-		}
-
-		&:disabled {
-			+ label {
-				&:before {
-					border: rem-calc(2px) solid lighten($black, (100% - 26%));
-				}
-			}
-
-			&:checked {
-				+ label {
-					&:after {
-						background: lighten($black, (100% - 26%));
-					}
-				}
-			}
-		}
+	// On
+	&:checked + label:before {
+		background: transparent;
+		color: $checkbox-active-background;
+		content: '\e837';
 	}
 }
 
