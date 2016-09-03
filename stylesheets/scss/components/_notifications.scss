@@ -209,6 +209,16 @@ $notification-image-size: rem-calc(40px);
 
 		.sc-notification-content {
 			position: relative;
+			@include transition(height $transition-small-duration $basic-transition);
+
+			@media #{$medium-only} {
+				@include transition(height $transition-medium-duration $basic-transition);
+
+			}
+
+			@media #{$medium-up} {
+				@include transition(height $transition-large-duration $basic-transition);
+			}
 
 			.sc-actions {
 				left: auto;
@@ -232,7 +242,7 @@ $notification-image-size: rem-calc(40px);
 					@include square($notification-media-icon-size);
 					color: rgba($black, .54);
 					font-size: $notification-media-icon-size;
-					line-height: rem-calc(44px);
+					line-height: calc((#{rem-calc($line-height-body-1+0px)} * 2));
 
 					&:first-of-type, &:last-of-type {
 						visibility: hidden;
@@ -317,6 +327,7 @@ $notification-image-size: rem-calc(40px);
 		&.sc-media {
 			.sc-notification-content {
 				height: calc( (#{rem-calc($line-height-body-1+0px)} * 2) + #{$notification-media-icon-size} + #{$notification-content-top} + #{$notification-content-bottom});
+
 				.sc-actions {
 					left: $notification-content-sides;
 					text-align: left;
