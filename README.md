@@ -129,7 +129,7 @@ After making your changes please describe what you have changed. This will speed
 - List
     - Create separate file for list styling
 - Notifications
-    - Add notifications styling: https://material.google.com/patterns/notifications.html
+    - Fix wobble on header expand rotation
 - Normalize
 - Gulp
 - Bower

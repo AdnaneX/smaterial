@@ -30,4 +30,15 @@ $(document).ready(function() {
 	});
 
 	$drawer.find('.sc-active').closest('ul').closest('li').addClass('sc-expanded');
+
+	// Close drawer on outside click
+	$(document).mouseup(function (e) {
+		var $drawerContainer = $('.sc-drawer-container');
+		if( $drawerContainer.visible() ) {
+			// if the target of the click isn't the $drawer nor a descendant of the $drawer
+			if( !$drawer.is(e.target) && $drawer.has(e.target).length === 0 ) {
+				$drawer.removeClass('sc-expanded');
+			}
+		}
+	});
 });

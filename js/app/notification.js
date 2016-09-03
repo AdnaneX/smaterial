@@ -17,8 +17,8 @@ function notification( $title, $options, $click ) {
 	}
 }
 
-$('.sc-notification').click(function() {
-	var $this = $(this);
+$('.sc-notification-header-expand').click(function() {
+	var $this = $(this).closest('.sc-notification');
 
 	if( $this.hasClass('sc-expanded') ) {
 		$this.removeClass('sc-expanded');
