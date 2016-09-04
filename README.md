@@ -78,15 +78,13 @@ After making your changes please describe what you have changed. This will speed
     - Add dropdown buttons
     - Add toggle button actions
 - Cards
-    - Add more styling to cards
-    - Add more varieties of cards
+    - Add card templates
 - Chips
 - Dialogs
     - Add more JavaScript functionality (open / close by JavaScript call)
 - Progress
     - Fix buffer animation
 - Selection
-    - Add hovers
     - Add radials for mobile
 - Settings                   
     - Less options in settings file. Only important options. All other "options" only in the same file at the top after comment before styling     

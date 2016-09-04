@@ -171,9 +171,9 @@ $circular-color4: $orange;
  * Selection controls
  **************************************/
 // Checkbox
-$checkbox-border-color: if( $theme == light, rgba($black, .54), rgba($white, .7) );
-$checkbox-active-background: rgba($main-color, 1);
-$checkbox-disabled-background: if( $theme == light, rgba($black, .26), rgba($white, .3) );
+$selection-color: if( $theme == light, rgba($black, .54), rgba($white, .7) );
+$selection-active-color: rgba(color($main-color, 500), 1);
+$selection-disabled-color: if( $theme == light, rgba($black, .26), rgba($white, .3) );
 
 // Switch
 $switch-track-background: if( $theme == light, rgba($black, .38), rgba($white, .3) ); // Default if( $theme == light, rgba($black, .38), rgba($white, .3) )
@@ -194,7 +194,8 @@ $notification-background: $background; // $background
 /**************************************
  * Snackbars and toasts
  **************************************/
-$snackbar-background: rgba(#323232, 1); // Default rgba(#323232, 1)
+$snackbar-color-code: #323232;
+$snackbar-background: rgba($snackbar-color-code, 1); // Default rgba($snackbar-color-code, 1)
 $snackbar-font-color: $white; // Default $white
 
 /**************************************

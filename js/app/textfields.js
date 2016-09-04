@@ -30,6 +30,11 @@ $(document).ready(function() {
 	// Fix bug that text field isn't selected when label is clicked
 	$('label').click(function() {
 		var $id = $(this).attr('for');
+
+		if ($('#'+$id).is(':checkbox')) {
+			return;
+		}
+
 		$('#'+$id).trigger('click');
 	});
 });

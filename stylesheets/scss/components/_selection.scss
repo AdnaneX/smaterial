@@ -4,51 +4,62 @@
  * http://www.google.com/design/spec/components/selection-controls.html
  **************************************/
 
-$checkbox-size: rem-calc($font-size-body-1+0px);
+$selection-size: rem-calc($font-size-body-1+0px);
 
 input[type="checkbox"].sc-checkbox, input[type="radio"].sc-radio {
 	@include opacity(0);
 	left: -102%;
 	position: absolute;
 
+	+ label {
+		padding: 0 rem-calc(5px) 0 rem-calc(10px);
+
+		&:before {
+			content: '';
+			display: inline-block;
+			background: transparent;
+			border: rem-calc(2px) solid $selection-color;
+			@include square($selection-size);
+			font-family: 'Material Icons';
+			position: relative;
+			vertical-align: middle;
+			left: 0;
+			line-height: $selection-size;
+		}
+	}
+}
+
+input[type="checkbox"].sc-checkbox {
 	// Off
 	+ label:before {
-		content: '';
-		display: inline-block;
-		background: transparent;
-		border: rem-calc(2px) solid $checkbox-border-color;
-		@include square($checkbox-size);
 		@include border-radius(rem-calc(2px));
-		font-family: 'Material Icons';
-		position: relative;
-		vertical-align: middle;
-		font-weight: 400;
-		left: 0;
-		line-height: $checkbox-size;
 		@include transition(all $transition-small-duration $basic-transition);
-		margin: 0 calc(#{$checkbox-size} * -2 ) 0 0;
+
+		@media #{$medium-only} {
+			@include transition(all $transition-medium-duration $basic-transition);
+		}
 
 		@media #{$medium-up} {
-			margin: 0 calc(#{$checkbox-size} / 2) 0 0;
+			@include transition(all $transition-large-duration $basic-transition);
 		}
 	}
 
 	// On
 	&:checked + label:before {
-		background: $checkbox-active-background;
-		border: rem-calc(2px) solid $checkbox-active-background;
+		background: $selection-active-color;
+		border: rem-calc(2px) solid $selection-active-color;
 		content: '\E5CA';
 		color: $background;
 	}
 
 	// Disabled off
 	&:disabled + label:before {
-		border: rem-calc(2px) solid $checkbox-disabled-background;
+		border: rem-calc(2px) solid $selection-disabled-color;
 	}
 
 	// Disabled on
 	&:disabled:checked + label:before {
-		background: $checkbox-disabled-background;
+		background: $selection-disabled-color;
 	}
 
 	// Radial
@@ -56,11 +67,11 @@ input[type="checkbox"].sc-checkbox, input[type="radio"].sc-radio {
 		&:active + label:after {
 			display: inline-block;
 			content: '';
-			@include square(calc(#{$checkbox-size} * 2));
+			@include square(calc(#{$selection-size} * 2));
 			@include border-radius(50%);
 			position: relative;
-			top: $checkbox-size;
-			left: calc(#{$checkbox-size} * -2);
+			top: $selection-size;
+			left: calc(#{$selection-size} * -2);
 			background: rgba($black, .2);
 		}
 
@@ -72,19 +83,65 @@ input[type="checkbox"].sc-checkbox, input[type="radio"].sc-radio {
 
 input[type="radio"].sc-radio {
 	// Off
-	+ label:before {
-		background: none;
-		color: $checkbox-border-color;
-		@include border-radius(50%);
-		border: none;
-		content: '\e836';
+	+ label {
+		&:before {
+			@include border-radius(50%);
+			@include transition(all $transition-small-duration $basic-transition);
+
+			@media #{$medium-only} {
+				@include transition(all $transition-medium-duration $basic-transition);
+			}
+
+			@media #{$medium-up} {
+				@include transition(all $transition-large-duration $basic-transition);
+			}
+		}
+
+		&:after {
+			display: inline-block;
+			position: relative;
+			top: calc( (#{$selection-size} / 3) * -1);
+			left: calc( (#{$selection-size} / 3) * -2);
+			@include square(0);
+			content: '';
+			@include border-radius(50%);
+
+			@include transition(all $transition-small-duration $basic-transition);
+
+			@media #{$medium-only} {
+				@include transition(all $transition-medium-duration $basic-transition);
+			}
+
+			@media #{$medium-up} {
+				@include transition(all $transition-large-duration $basic-transition);
+			}
+		}
 	}
 
 	// On
-	&:checked + label:before {
-		background: transparent;
-		color: $checkbox-active-background;
-		content: '\e837';
+	&:checked + label {
+		&:before {
+			border: rem-calc(2px) solid $selection-active-color;
+		}
+
+		&:after {
+			background: $selection-active-color;
+			top: rem-calc(1px);
+			left: calc( #{$selection-size} * -1);
+			@include square(calc( (#{$selection-size} / 3) * 2 ));
+			margin: 0 calc( (#{$selection-size} / 3) * -2 ) 0 0;
+		}
+	}
+
+
+	// Disabled off
+	&:disabled + label:before {
+		border: rem-calc(2px) solid $selection-disabled-color;
+	}
+
+	// Disabled on
+	&:disabled:checked + label:after {
+		background: $selection-disabled-color;
 	}
 }
 

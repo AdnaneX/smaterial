@@ -4,7 +4,7 @@
 	@return #{$remSize}rem;
 }
 
-@function emCalc( $size, $font-size : $font-size ) {
+@function em-calc( $size, $font-size : $font-size ) {
 	$font-size: $font-size + 0px;
 	$emSize: $size / $font-size;
 	@return #{$emSize}em;
@@ -41,7 +41,7 @@
 }
 
 @function in-array( $value, $array ) {
-	@if index($array, $value) {
+	@if index( $array, $value ) {
 		@return true;
 	} @else {
 		@return false;

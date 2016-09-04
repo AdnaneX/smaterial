@@ -58,7 +58,6 @@ $chips-delete-size: rem-calc(15px); // Default rem-calc(15px)
 
 	&-contact {
 		font-size: rem-calc(14px);
-
 		@include transition(box-shadow $transition-small-duration $basic-transition);
 
 		@media #{$medium-only} {

@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	var $selection = $('input[type="checkbox"], input[type="radio"]');
+	var $selection = $('.sc-checkbox, .sc-radio');
 
 	$selection.each(function() {
 		var $this = $(this),
