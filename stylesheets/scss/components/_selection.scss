@@ -33,14 +33,20 @@ input[type="checkbox"].sc-checkbox {
 	// Off
 	+ label:before {
 		@include border-radius(rem-calc(2px));
-		@include transition(all $transition-small-duration $basic-transition);
+		@include transition(background $transition-small-duration $basic-transition unquote(',')
+							content $transition-small-duration $basic-transition unquote(',')
+							border $transition-small-duration $basic-transition);
 
 		@media #{$medium-only} {
-			@include transition(all $transition-medium-duration $basic-transition);
+			@include transition(background $transition-medium-duration $basic-transition unquote(',')
+								content $transition-medium-duration $basic-transition unquote(',')
+								border $transition-medium-duration $basic-transition);
 		}
 
 		@media #{$medium-up} {
-			@include transition(all $transition-large-duration $basic-transition);
+			@include transition(background $transition-large-duration $basic-transition unquote(',')
+								content $transition-large-duration $basic-transition unquote(',')
+								border $transition-large-duration $basic-transition);
 		}
 	}
 
@@ -60,6 +66,10 @@ input[type="checkbox"].sc-checkbox {
 	// Disabled on
 	&:disabled:checked + label:before {
 		background: $selection-disabled-color;
+		border: none;
+		@include square( calc( #{$selection-size} + #{rem-calc(4px)} ) );
+		line-height: calc( #{$selection-size} + #{rem-calc(4px)} );
+		text-align: center;
 	}
 
 	// Radial
