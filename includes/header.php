@@ -71,7 +71,7 @@ $file = str_replace( '.php', '', $_SERVER['PHP_SELF'] );
 		}
 		?>
 
-		<aside id="sc-drawer" class="sc-drawer sc-drawer-left sc-drawer-left-floating  sc-expanded">
+		<aside id="sc-drawer" class="sc-drawer sc-drawer-left sc-drawer-left-floating">
 			<nav class="sc-drawer-container sc-drawer-permanent-full-height">
 				<ul>
 					<li class="sc-drawer-profile">

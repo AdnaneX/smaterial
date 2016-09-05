@@ -368,48 +368,12 @@ $slider-bubble-triangle-large-transition: 	border-left $transition-large-duratio
 											top $transition-large-duration $basic-transition unquote(',');
 
 /**************************************
- * Textfields
+ * Text fields
  **************************************/
-$textfield-width: 100%; // Default 100%;
-$textfield-position: relative; // Default relative
-$textfield-input-position: absolute; // Default absolute
-$textfield-off-bottom: rem-calc(2px) solid $grey; // Default rem-calc(2px) solid $grey
-$textfield-small-transition: all $transition-small-duration $basic-transition; // Default all $transition-small-duration $basic-transition
-$textfield-medium-transition: all $transition-medium-duration $basic-transition; // Default all $transition-medium-duration $basic-transition
-$textfield-large-transition: all $transition-large-duration $basic-transition; // Default all $transition-large-duration $basic-transition
-$textfield-focus-bottom: rem-calc(2px) solid $main-color; // Default rem-calc(2px) solid $main-color
-$textfield-focus-label: $main-color; // Default $main-color
-$textfield-disabled-bottom: rem-calc(2px) dotted $grey; // Default rem-calc(2px) dotted $grey
-$textfield-label-color: $grey; // Default $grey
-$textfield-label-position: absolute; // Default absolute
-$textfield-label-active-color: $grey; // Default $grey
-$textfield-textarea-font-family: inherit; // Default inherit
-$textfield-textarea-font-size: inherit; // Default inherit
+$textfield-off-color: $grey; // $grey
+$textfield-on-color: $main-color; // Default $main-color
+$textfield-disabled-color: $textfield-off-color; // Default $textfield-off-color
 $textfield-required-color: $red; // Default $red
-$textfield-required-content: ' star'; // Default ' star'
-$textfield-required-font-size: rem-calc(7px); // Default rem-calc(7px)
-$textfield-required-vertical-align: super; // Default super
-
-$textfield-floating-height: rem-calc(72px); // Default rem-calc(72px)
-$textfield-floating-padding: rem-calc(16px) 0 rem-calc(8px) 0; // Default rem-calc(16px) 0 rem-calc(8px) 0
-$textfield-floating-input-font-size: rem-calc(16px); // Default rem-calc(16px)
-$textfield-floating-input-padding: rem-calc(8px) 0; // Default rem-calc(8px) 0
-$textfield-floating-input-bottom: rem-calc(8px); // Default rem-calc(8px)
-$textfield-floating-input-focus-label-font-size: rem-calc(12px); // Default rem-calc(12px)
-$textfield-floating-input-focus-label-bottom: rem-calc(40px); // Default rem-calc(40px)
-$textfield-floating-label-bottom: rem-calc(16px); // Default rem-calc(16px)
-$textfield-floating-label-active-font-size: rem-calc(12px); // Default rem-calc(12px)
-$textfield-floating-label-active-bottom: rem-calc(40px); // Default rem-calc(40px)
-
-$textfield-floating-dense-height: rem-calc(60px); // Default rem-calc(60px)
-$textfield-floating-dense-padding: rem-calc(12px) 0 rem-calc(4px) 0; // Default rem-calc(12px) 0 rem-calc(4px) 0
-$textfield-floating-dense-input-font-size: rem-calc(13px); // Default rem-calc(13px)
-$textfield-floating-dense-input-padding: rem-calc(4px) 0; // Default rem-calc(4px) 0
-$textfield-floating-dense-input-bottom: rem-calc(12px); // Default rem-calc(12px)
-$textfield-floating-dense-input-focus-label-bottom: rem-calc(29px); // Default rem-calc(29px)
-$textfield-floating-dense-label-bottom: rem-calc(12px); // Default rem-calc(12px)
-$textfield-floating-dense-label-active-font-size: rem-calc(13px); // Default rem-calc(13px)
-$textfield-floating-dense-label-active-bottom: rem-calc(29px); // Default rem-calc(29px)
 
 /**************************************
  * Tooltips

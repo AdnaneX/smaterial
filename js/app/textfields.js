@@ -31,10 +31,16 @@ $(document).ready(function() {
 	$('label').click(function() {
 		var $id = $(this).attr('for');
 
-		if ($('#'+$id).is(':checkbox')) {
-			return;
-		}
+		if( $id != undefined ) {
+			if( $( '#' + $id ).is( ':checkbox, :radio' ) ) {
+				return;
+			}
 
-		$('#'+$id).trigger('click');
+			$( '#' + $id ).trigger( 'click' );
+		}
+	});
+
+	$('.sc-floating-input textarea, .sc-floating-dense-input textarea').keyup(function() {
+
 	});
 });

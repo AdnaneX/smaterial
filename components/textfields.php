@@ -10,8 +10,15 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		There are numerous text fields you can use.
-		The textfields and the options you can use are listed below.
+		The text fields and the options you can use are listed below.
 		<strong>NOTE*</strong> that the label should always be below the input.
+	</p>
+
+	<p class="sc-col sc-xs4 sc-s12 sc-m6">
+		If you are looking for a date or time picker take a look at <a href="/components/pickers.php">pickers</a>.
+		if you need to use <code class="language-html">&lt;select></code> take a look at <a href=""></a>.
+		If you are looking for <code class="language-html">&lt;input type="range"></code> take a look at <a href="/components/sliders.php">sliders</a>.
+		<strong>Note*</strong> These elements are under construction.
 	</p>
 </section>
 
@@ -203,9 +210,9 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		</div>
 
 		<div class="sc-single-input sc-icon">
-			<i class="material-icons">cloud</i>
 			<input type="text" id="example17">
 			<label for="example17">Icons</label>
+			<i class="material-icons">cloud</i>
 		</div>
 
 		<div class="sc-single-input">
@@ -216,7 +223,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="sc-row" id="single-line-dense">
-	<h3>Single dense line-textfield</h3>
+	<h3>Single dense line text field</h3>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		The single dense line-text fields can also have an icon but are smaller than "<a href="#single-line">single line-textfields</a>".
@@ -232,6 +239,12 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		<div class="sc-single-dense-input">
 			<input type="text" id="disabled3" disabled>
 			<label for="disabled3">Disabled</label>
+		</div>
+
+		<div class="sc-single-dense-input sc-icon">
+			<input type="text" id="test">
+			<label for="test">Test</label>
+			<i class="material-icons">cloud</i>
 		</div>
 	</div>
 
@@ -250,11 +263,11 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	</pre>
 </section>
 
-<section class="sc-col sc-xs4 sc-s12 sc-m6">
+<section class="sc-row">
 	<h3>Textarea</h3>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
-		The textarea works the same as the textfields.
+		The textarea works the same as the floating text fields. Textarea also supports a dense styling.
 	</p>
 
 	<div class="sc-col sc-xs4 sc-s12 sc-m6">
@@ -263,6 +276,42 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 			<label for="textarea">Text area</label>
 		</div>
 	</div>
+</section>
+
+<section class="sc-row">
+	<h3>Settings</h3>
+
+	<table>
+		<thead>
+		<tr>
+			<th>Variable</th>
+			<th>Options</th>
+			<th>Result</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr>
+			<td>$textfield-off-color</td>
+			<td>Variable / color</td>
+			<td>Changes the color of label, border bottom and icon when text field isn't active</td>
+		</tr>
+		<tr>
+			<td>$textfield-on-color</td>
+			<td>Variable / color</td>
+			<td>Changes the color of label, border bottom and icon when text field is active</td>
+		</tr>
+		<tr>
+			<td>$textfield-disabled-color</td>
+			<td>Variable / color</td>
+			<td>Changes the color of label, border bottom and icon when text field disabled</td>
+		</tr>
+		<tr>
+			<td>$textfield-required-color</td>
+			<td>Variable / color</td>
+			<td>Changes the color of the required star</td>
+		</tr>
+		</tbody>
+	</table>
 </section>
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.php';
