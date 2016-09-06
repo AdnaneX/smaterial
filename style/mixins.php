@@ -234,5 +234,37 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		</code>
 	</pre>
 </section>
+
+<section class="sc-row">
+	<h3>range-thumb</h3>
+
+	<p class="sc-col sc-xs4 sc-s12 sc-m6">
+		The <code class="language-css">range-thumb()</code> mixing is used to add all prefixes for the range thumb.
+	</p>
+
+	<pre class="language-css sc-col sc-xs4 sc-s12 sc-m6">
+		<code>
+@include range-thumb() {
+  // Styling goes here
+}
+		</code>
+	</pre>
+</section>
+
+	<section class="sc-row">
+		<h3>range-track</h3>
+
+		<p class="sc-col sc-xs4 sc-s12 sc-m6">
+			The <code class="language-css">range-track()</code> mixing is used to add all prefixes for the range track.
+		</p>
+
+		<pre class="language-css sc-col sc-xs4 sc-s12 sc-m6">
+		<code>
+@include range-track() {
+  // Styling goes here
+}
+		</code>
+	</pre>
+	</section>
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.php';

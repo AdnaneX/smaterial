@@ -196,3 +196,47 @@
 	-ms-transform-origin: $setting;
 	-o-transform-origin: $setting;
 }
+
+@mixin appearance( $setting ) {
+ 	-webkit-appearance: $setting;
+	-moz-appearance: $setting;
+	appearance: $setting;
+}
+
+@mixin range-track() {
+	&::-webkit-slider-runnable-track {
+		@content;
+	}
+
+	&::-moz-range-track {
+		@content;
+	}
+
+	&::-ms-track {
+		@content;
+	}
+}
+
+@mixin range-thumb() {
+	&::-webkit-slider-thumb {
+		@content;
+	}
+
+	&::-moz-range-thumb {
+		@content;
+	}
+
+	&::-ms-thumb {
+		@content;
+	}
+}
+
+@mixin selection() {
+	::-moz-selection {
+		@content;
+	}
+
+	::selection {
+		@content;
+	}
+}

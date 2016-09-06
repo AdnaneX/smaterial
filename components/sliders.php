@@ -12,7 +12,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		There are a couple of different sliders you can use with different styling.
 		There is the default slider and the slider which adds more elements with JS.
 		The default slider is made to only use the HTML5 <code class="language-html">&lt;input type="range"></code>.
-		The sliders look the best in Chrome. FireFox and IE / Edge are still a work in process.
+		The sliders look the best in Chrome. FireFox is still a work in process.
 	</p>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
@@ -25,8 +25,6 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	</p>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
-		<input type="range">
-		<input type="range" disabled>
 		<input type="range" class="sc-slider">
 		<input type="range" disabled value="0" class="sc-slider">
 		<input type="range" disabled class="sc-slider">
@@ -36,8 +34,6 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 
 	<pre class="language-html sc-col sc-xs4 sc-s12 sc-m6">
 	<code>
-&lt;input type="range">
-&lt;input type="range" disabled>
 &lt;input type="range" class="sc-slider">
 &lt;input type="range" disabled value="0" class="sc-slider">
 &lt;input type="range" disabled class="sc-slider">

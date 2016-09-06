@@ -40,7 +40,26 @@ $(document).ready(function() {
 		}
 	});
 
-	$('.sc-floating-input textarea, .sc-floating-dense-input textarea').keyup(function() {
+	$('textarea').each(function () {
+		var $parent = '';
 
+		if( this.closest('.sc-floating-input') != null ) {
+			$parent = this.closest('.sc-floating-input');
+		} else if( this.closest('.sc-floating-dense-input') != null ) {
+			$parent = this.closest('.sc-floating-dense-input');
+		}
+		this.setAttribute( 'style', 'height:' + (this.scrollHeight) + 'px;overflow-y:hidden;' );
+	}).on('input', function () {
+		var $parent = '';
+
+		if( this.closest('.sc-floating-input') != null ) {
+			$parent = this.closest('.sc-floating-input');
+		} else if( this.closest('.sc-floating-dense-input') != null ) {
+			$parent = this.closest('.sc-floating-dense-input');
+		}
+
+		$parent.style.height = 'auto';
+		this.style.height = 'auto';
+		this.style.height = (this.scrollHeight) + 'px';
 	});
 });

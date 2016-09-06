@@ -109,19 +109,19 @@ $textfield-floating-label-font-size: rem-calc(12px); // Default rem-calc(12px);
 
 		&:active, &:focus {
 			+ label {
-				bottom: calc(#{$textfield-floating-padding} + #{$textfield-floating-font-size} + #{$textfield-floating-divider});
+				top: $textfield-floating-padding;
 				font-size: $textfield-floating-label-font-size;
 			}
 		}
 	}
 
 	label {
-		bottom: $textfield-floating-padding;
+		top: calc(#{$textfield-floating-padding} + #{$textfield-floating-font-size} + #{$textfield-floating-divider});
 		font-size: $textfield-floating-font-size;
 		font-weight: 400;
 
 		&.sc-active {
-			bottom: calc(#{$textfield-floating-padding} + #{$textfield-floating-font-size} + #{$textfield-floating-divider});
+			top: $textfield-floating-padding;
 			font-size: $textfield-floating-label-font-size;
 		}
 	}
@@ -145,19 +145,19 @@ $textfield-floating-dense-label-font-size: rem-calc(12px); // Default rem-calc(1
 
 		&:active, &:focus {
 			+ label {
-				bottom: calc(#{$textfield-floating-dense-padding} + #{$textfield-floating-dense-font-size} + #{$textfield-floating-dense-divider});
+				top: $textfield-floating-dense-padding;
 				font-size: $textfield-floating-dense-label-font-size;
 			}
 		}
 	}
 
 	label {
-		bottom: $textfield-floating-dense-padding;
+		top: calc(#{$textfield-floating-dense-padding} + #{$textfield-floating-dense-font-size} + #{$textfield-floating-dense-divider});
 		font-size: $textfield-floating-dense-font-size;
 		font-weight: 400;
 
 		&.sc-active {
-			bottom: calc(#{$textfield-floating-dense-padding} + #{$textfield-floating-dense-font-size} + #{$textfield-floating-dense-divider});
+			top: $textfield-floating-dense-padding;
 			font-size: $textfield-floating-dense-label-font-size;
 		}
 	}
