@@ -47,6 +47,9 @@ input[type="range"] {
 		@include opacity(0);
 	}
 
+	&::-ms-tooltip {
+		display: none;
+	}
 
 	@include range-thumb() {
 		@include square($slider-thumb-size);
@@ -92,12 +95,6 @@ input[type="range"] {
 			background: $slider-off-color;
 			border: $slider-track-height solid $background;
 		}
-		/*&::-webkit-slider-thumb {
-
-			@include border-radius(50%);
-
-			-webkit-appearance: none;
-		}*/
 
 		&:active, &:focus {
 			@include range-track() {
@@ -274,7 +271,7 @@ input[type="range"] {
 		}
 	}
 
-	&:disabled, &.sc-disabled {
+	&:disabled {
 		input[type="range"] {
 			@include range-thumb() {
 				background: $slider-thumb-background;

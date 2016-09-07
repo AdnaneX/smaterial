@@ -100,7 +100,7 @@ $font-color-button: $font-color-headline; // Default $font-color-headline
 /**************************************
  * AppBar
  **************************************/
-// Basic (Don't change these, they influence the drawer (sidenav) as well)
+// Basic (Don't change these, they influence the drawer (sidenav) and tabs as well)
 $appbar-small-height: rem-calc(48px); // Default rem-calc(48px)
 $appbar-medium-height: rem-calc(56px); // Default rem-calc(56px)
 $appbar-large-height: rem-calc(64px); // Default rem-calc(64px)
@@ -262,6 +262,14 @@ $slider-bubble-background: $black; // Default $black
 $slider-bubble-font-color: $white; // Default $white
 
 /**************************************
+ * Tabs
+ **************************************/
+$tab-color: $main-color; // Default $main-color
+$tab-font-color: rgba($white, .7); // Default rgba($white, .7)
+$tab-font-on-color: $white; // Default $white
+$tab-indicator-on-color: $white; // Default $white
+
+/**************************************
  * Text fields
  **************************************/
 $textfield-off-color: $grey; // $grey
@@ -272,7 +280,7 @@ $textfield-required-color: $red; // Default $red
 /**************************************
  * Tooltips
  **************************************/
-$tooltip-background: $grey-700; // Default $grey-700
+$tooltip-background: rgba($grey-700, .9); // Default rgba($grey-700, .9)
 $tooltip-font-color: $white; // Default $white
 
 /**************************************

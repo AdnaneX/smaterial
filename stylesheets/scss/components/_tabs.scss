@@ -1,81 +1,83 @@
+/**************************************
+ * Tabs
+ *
+ * https://material.google.com/components/tabs.html
+ **************************************/
+$tab-indicator-size: rem-calc(2px);
+
 .sc-tabs {
 	@include material-shadow(4);
-	background: $main-color;
-	left: rem-calc(320px);
+	background: $tab-color;
+	overflow: hidden;
 	position: fixed;
 	top: $appbar-small-height;
+	width: 100%;
 	z-index: 1;
 
-	@media #{$small-up} {
+	@media #{$medium-only} {
 		top: $appbar-medium-height
 	}
 
 	@media #{$medium-up} {
+		left: rem-calc(320px);
 		top: $appbar-large-height;
 	}
 
-	.sc-tab {
-		border-bottom: rem-calc(2px) solid $main-color;
-		color: rgba($white, .7);
+	.sc-tab, .sc-tab-icon, .sc-tab-icon-text {
+		border-bottom: $tab-indicator-size solid $tab-color;
+		color: $tab-font-color;
 		display: block;
 		float: left;
-		@include transition(border 300ms ease-in-out unquote(',') color 300ms ease-in-out);
 		font-size: rem-calc(14px);
 		font-weight: 500;
-		height: rem-calc(48px);
-		line-height: rem-calc(48px);
 		max-width: rem-calc(264px);
 		min-width: rem-calc(72px);
-		padding: 0 rem-calc(12px) rem-calc(20px) rem-calc(12px);
+		text-align: center;
 		text-overflow: ellipsis;
 		text-transform: uppercase;
 		word-wrap: break-word;
+		@include transition(border $transition-small-duration $basic-transition unquote(',') color $transition-small-duration $basic-transition);
+
+		@media #{$medium-only} {
+			@include transition(border $transition-medium-duration $basic-transition unquote(',') color $transition-medium-duration $basic-transition);
+		}
+
+		@media #{$medium-up} {
+			min-width: rem-calc(160px);
+			@include transition(border $transition-large-duration $basic-transition unquote(',') color $transition-large-duration $basic-transition);
+		}
 
 		&:hover, &.sc-active {
-			border-bottom: rem-calc(2px) solid $white;
-			color: $white;
-		}
-
-		@media #{$small-up} {
-			min-width: rem-calc(160px);
-			text-align: center;
-		}
-	}
-
-	.sc-tab-icon {
-		border-bottom: rem-calc(2px) solid $main-color;
-		color: rgba($white, .7);
-		display: block;
-		float: left;
-		@include transition(border 300ms ease-in-out unquote(',') color 300ms ease-in-out);
-		font-size: rem-calc(14px);
-		font-weight: 500;
-		height: rem-calc(72px);
-		line-height: rem-calc(48px);
-		max-width: rem-calc(264px);
-		min-width: rem-calc(72px);
-		text-overflow: ellipsis;
-		text-transform: uppercase;
-		word-wrap: break-word;
-
-		span {
-			padding: rem-calc(10px) 0 rem-calc(16px) 0;
-			width: 100%;
+			border-bottom: $tab-indicator-size solid $tab-indicator-on-color;
+			color: $tab-font-on-color;
 		}
 
 		.material-icons {
-			height: rem-calc(24px);
-			width: rem-calc(24px);
+			@include square(rem-calc(24px));
+			font-size: rem-calc(24px);
 		}
+	}
 
-		&:hover, &.sc-active {
-			border-bottom: rem-calc(2px) solid $white;
-			color: $white;
-		}
+	.sc-tab {
+		height: rem-calc(48px);
+		line-height: rem-calc(48px);
+		padding: 0 rem-calc(12px) rem-calc(20px) rem-calc(12px);
+	}
 
-		@media #{$small-up} {
-			min-width: rem-calc(160px);
-			text-align: center;
+	.sc-tab-icon {
+		height: rem-calc(48px);
+		line-height: rem-calc(48px);
+		padding: 0 0 rem-calc(12px) 0;
+	}
+
+	.sc-tab-icon-text {
+		height: rem-calc(72px);
+		padding: rem-calc(10px) 0 rem-calc(16px) 0;
+
+		span {
+			display: block;
+			margin: rem-calc(10px) 0 0 0;
+			width: 100%;
 		}
 	}
 }

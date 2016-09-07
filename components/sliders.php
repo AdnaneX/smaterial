@@ -12,19 +12,19 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		There are a couple of different sliders you can use with different styling.
 		There is the default slider and the slider which adds more elements with JS.
 		The default slider is made to only use the HTML5 <code class="language-html">&lt;input type="range"></code>.
-		The sliders look the best in Chrome. FireFox is still a work in process.
-	</p>
-
-	<p class="sc-col sc-xs4 sc-s12 sc-m6">
-		The disabled styling can be activated in 2 ways.
-		You can give the range the attribute <code class="language-html">disabled</code> and or you give
-		it the class <code class="language-css">.sc-slider-disabled</code>.
-		When using <code class="language-css">.sc-slider</code> class you also get different styling for range track lower and upper parts.
+		The sliders look the best in Chrome and Firefox. Both browsers support styling without additional classes but won't support all styling.
+		When using <code class="language-css">.sc-slider</code> class you get different styling for range track lower and upper parts.
 		You also get different styling depending on value.
-		When the value is at zero you get a different style compared to a value which is higher than or equal to 1.
+		When you also use the <code class="language-css">sc-slider-discrete</code> you get the bubble as well.
+		For IE/ Edge the <code class="language-css">sc-slider-discrete</code> will work the best.
 	</p>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
+		The disabled styling is also supported.
+	</p>
+
+	<p class="sc-col sc-xs4 sc-s12 sc-m6">
+		<input type="range">
 		<input type="range" class="sc-slider">
 		<input type="range" disabled value="0" class="sc-slider">
 		<input type="range" disabled class="sc-slider">

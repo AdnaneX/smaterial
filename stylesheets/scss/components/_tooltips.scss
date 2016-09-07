@@ -15,32 +15,39 @@ $tooltip-large-padding: 0 rem-calc(8px); // Default 0 rem-calc(8px)
 	display: inline;
 	position: relative;
 
+	&:after {
+		background: $tooltip-background;
+		color: $tooltip-font-color;
+		font-size: rem-calc(14px);
+		font-weight: 500;
+		height: $tooltip-small-height;
+		left: 0;
+		line-height: $tooltip-small-height;
+		margin: 0;
+		padding: $tooltip-small-padding;
+		position: absolute;
+		top: 0;
+		white-space: nowrap;
+		width: auto;
+		z-index: 10;
+
+		@media #{$medium-up} {
+			font-size: rem-calc(10px);
+			height: $tooltip-large-height;
+			line-height: $tooltip-large-height;
+			padding: $tooltip-large-padding;
+		}
+	}
+
 	&:hover {
 		&:after {
-			background: $chips-background;
-			color: $chips-font-color;
-			@include opacity(.9);
 			content: attr(title);
-			font-size: rem-calc(14px);
-			font-weight: 500;
-			height: $tooltip-small-height;
-			left: 0;
-			line-height: $tooltip-small-height;
-			margin: $tooltip-small-top 0 0 0;
-			padding: $tooltip-small-padding;
-			position: absolute;
 			top: $tooltip-small-top;
-			white-space: nowrap;
-			width: auto;
-			z-index: 10;
+			margin: $tooltip-small-top 0 0 0;
 
 			@media #{$medium-up} {
-				font-size: rem-calc(10px);
 				top: $tooltip-large-top;
 				margin: $tooltip-large-top 0 0 0;
-				height: $tooltip-large-height;
-				line-height: $tooltip-large-height;
-				padding: $tooltip-large-padding;
 			}
 		}
 	}
