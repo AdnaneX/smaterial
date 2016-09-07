@@ -7,12 +7,89 @@
 .sc-card {
 	@include material-shadow(2);
 	@include border-radius(2px);
-	margin: rem-calc(4px);
+	margin: rem-calc(8px);
 	width: 100%;
+	padding: 0;
+	@include transition(box-shadow $transition-small-duration $basic-transition);
 
-	&-basic {
-		&-title {
-			@extend .sc-title;
+	&:hover {
+		@include material-shadow(8);
+	}
+
+	@media #{$medium-only} {
+		@include transition(box-shadow $transition-medium-duration $basic-transition);
+	}
+
+	@media #{$medium-up} {
+		@include transition(box-shadow $transition-large-duration $basic-transition);
+		@include material-shadow(0);
+	}
+
+	&-actions {
+		padding: rem-calc(8px);
+
+		> * {
+			margin: 0 rem-calc(8px) rem-calc(4px) 0;
+
+			&:last-of-type {
+				margin: 0 0 rem-calc(4px) 0;
+			}
+		}
+	}
+
+	&-primary {
+		padding-left: rem-calc(16px);
+		padding-right: rem-calc(16px);
+		padding-top: rem-calc(24px);
+		padding-bottom: rem-calc(24px);
+		font-size: rem-calc(24px);
+
+		&-small {
+			font-size: rem-calc(14px);
+			padding-top: rem-calc(16px);
+		}
+
+		&-additional {
+			padding-bottom: rem-calc(16px);
+		}
+
+		#{$medium-up} {
+			padding: rem-calc(16px) rem-calc(24px);
+		}
+
+		.sc-subhead-1 {
+			font-size: rem-calc(14px);
+			color: rgba($black, .54);
+
+		}
+	}
+
+	&-supporting {
+		font-size: rem-calc(14px);
+		padding-top: rem-calc(16px);
+		padding-left: rem-calc(16px);
+		padding-right: rem-calc(16px);
+		padding-bottom: rem-calc(24px);
+
+		&-additional {
+			padding-bottom: rem-calc(16px);
+		}
+
+		@media #{$medium-up} {
+			padding-left: rem-calc(24px);
+			padding-right: rem-calc(24px);
+		}
+	}
+
+	img {
+		width: 100%;
+
+		&.sc-card-top {
+			@include border-radius-top(rem-calc(2px));
+		}
+
+		&.sc-card-background {
+			@include border-radius(rem-calc(2px));
 		}
 	}
 }

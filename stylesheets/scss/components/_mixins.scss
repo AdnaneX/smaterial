@@ -93,7 +93,7 @@
 	@include border-top-right-radius( $px );
 }
 
-@mixin border-top-left-radius( $px ) {
+@mixin border-bottom-left-radius( $px ) {
 	-webkit-border-bottom-left-radius: $px;
 	-moz-border-radius-bottomleft: $px;
 	border-bottom-left-radius: $px;
