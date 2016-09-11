@@ -10,6 +10,7 @@
 	margin: rem-calc(8px);
 	width: 100%;
 	padding: 0;
+	position: relative;
 	@include transition(box-shadow $transition-small-duration $basic-transition);
 
 	&:hover {
@@ -59,8 +60,8 @@
 
 		.sc-subhead-1 {
 			font-size: rem-calc(14px);
-			color: rgba($black, .54);
-
+			color: rgba($black, .38);
+			font-weight: 400;
 		}
 	}
 
@@ -90,6 +91,26 @@
 
 		&.sc-card-background {
 			@include border-radius(rem-calc(2px));
+			height: 100%;
+		}
+
+		&.sc-card-avatar {
+			float: left;
+			@include border-radius(50%);
+			margin: rem-calc(16px);
+			@include square( calc( #{rem-calc(72px)} - (#{rem-calc(16px)} * 2) ) );
+		}
+	}
+
+	.sc-card-content {
+		@include border-radius-bottom(2px);
+		background: rgba($black, .54);
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+
+		div {
+			color: $white;
 		}
 	}
 }

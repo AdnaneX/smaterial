@@ -71,8 +71,6 @@ After making your changes please describe what you have changed. This will speed
 - Appbar
     - Add search slide out
 - Bottom sheet
-    - Add music styling
-    - Fix position (it's now under navigation drawer)
     - Fix shadow
 - Buttons
     - Add dropdown buttons
@@ -113,10 +111,7 @@ After making your changes please describe what you have changed. This will speed
     - Add pagination
 - Tabs
     - Add mobile scrollable tabs
-    - Add icon tabs
 - Text fields
-    - Fix label click on single-line input (When clicked on label input not active)
-    - Fix icon color on single-line input when active color icon
     - Add select
     - Add autocomplete select
     - Add autocomplete input

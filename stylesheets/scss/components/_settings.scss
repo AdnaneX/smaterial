@@ -61,6 +61,7 @@ $link-hover: $secondary-color;
  * Global
  **************************************/
 $theme: light; // Default either light or dark
+$typography: english; // Default english, dense or tall
 $select-background: $cyan-a200; // Default $cyan-a200
 $basic-transition: cubic-bezier(0.4, 0.0, 0.2, 1); // Default cubic-bezier(0.4, 0.0, 0.2, 1)
 $element-enter-transition: cubic-bezier(0.0, 0.0, 0.2, 1); // Default cubic-bezier(0.0, 0.0, 0.2, 1)
@@ -83,11 +84,11 @@ $noto-font-path: '/stylesheets/scss/components/fonts/Noto/';
 $font-size: 14; //px Default 14 or 15
 
 // Colors
-$font-color-display-4: rgba($black, .54); // Default rgba($black, .54)
+$font-color-display-4: if( $theme == light, rgba($black, .54), rgba($white, .54) ); // Default rgba($black, .54)
 $font-color-display-3: $font-color-display-4; // Default $font-color-display-4
 $font-color-display-2: $font-color-display-4; // Default $font-color-display-4
 $font-color-display-1: $font-color-display-4; // Default $font-color-display-4
-$font-color-headline: rgba($black, .87); // Default rgba($black, .87)
+$font-color-headline: if( $theme == light, rgba($black, .87), rgba($white, .87) ); // Default rgba($black, .87)
 $font-color-title: $font-color-headline; // Default $font-color-headline
 $font-color-subhead: $font-color-headline; // Default $font-color-headline
 $font-color-body-2: $font-color-headline; // Default $font-color-headline
@@ -154,6 +155,11 @@ $chips-delete-background: rgba($black, .54); // Default rgba($black, .54)
 $chips-delete-background-hover: $chips-font-hover-color; // Default $chips-font-hover-color
 
 /**************************************
+ * Pickers
+ **************************************/
+$picker-color: $main-color;
+
+/**************************************
  * Progress & activity
  **************************************/
 $progressbar-background: rgba($main-color, .4); // Default rgba($main-color, .4)
@@ -190,13 +196,6 @@ $switch-thumb-radial-disabled-background: rgba($grey-400, .2); // Default rgba($
 * Notifications
 ***************************************/
 $notification-background: $background; // $background
-
-/**************************************
- * Snackbars and toasts
- **************************************/
-$snackbar-color-code: #323232;
-$snackbar-background: rgba($snackbar-color-code, 1); // Default rgba($snackbar-color-code, 1)
-$snackbar-font-color: $white; // Default $white
 
 /**************************************
  * Navigation drawer
@@ -260,6 +259,22 @@ $slider-on-color: $main-color; // Default $main-color
 // Bubble
 $slider-bubble-background: $black; // Default $black
 $slider-bubble-font-color: $white; // Default $white
+
+/**************************************
+ * Snackbars and toasts
+ **************************************/
+$snackbar-color-code: #323232;
+$snackbar-background: rgba($snackbar-color-code, 1); // Default rgba($snackbar-color-code, 1)
+$snackbar-font-color: $white; // Default $white
+
+/**************************************
+ * Steppers
+ **************************************/
+$stepper-circle-off-color: rgba($black, .38); // Default rgba($black, .38)
+$stepper-circle-on-color: $main-color; // Default $main-color
+$stepper-circle-font-color: $white; // Default $white
+$stepper-step-off-font-color: rgba($black, .38); // Default rgba($black, .38)
+$stepper-step-on-font-color: rgba($black, .87); // Default rgba($black, .87)
 
 /**************************************
  * Tabs

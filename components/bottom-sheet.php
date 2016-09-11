@@ -15,7 +15,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="sc-row">
-	<h3>Default bottom modal / sheet</h3>
+	<h3>Default</h3>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		If you click on the button you can see the default bottom sheet / modal in action.
@@ -45,7 +45,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="sc-row">
-	<h3>Header bottom modal / sheet</h3>
+	<h3>Header</h3>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		If you click on the button you can see the header bottom sheet / modal in action.
@@ -79,7 +79,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="sc-row">
-	<h3>Grid icons bottom sheet / modal</h3>
+	<h3>Grid icons</h3>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		If you click on the button you can see the grid icons bottom sheet / modal in action.
@@ -168,7 +168,6 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	</pre>
 </section>
 
-<!--
 <section class="sc-row">
 	<h3>Music</h3>
 
@@ -177,18 +176,48 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		<button type="button" class="sc-raised-button sc-bottom-trigger" data-sc-trigger="music">Music</button>
 	</p>
 
+	<pre class="language-html sc-col sc-xs4 sc-s12 sc-m6">
+		<code>
+&lt;div class="sc-bottom-sheet sc-bottom-sheet-music" id="music">
+  &lt;img src="/">
+
+  &lt;div class="sc-determinate">
+    &lt;div class="sc-progressbar" style="width:10%">&lt;/div>
+  &lt;/div>
+
+  &lt;div class="sc-info">
+    &lt;div class="sc-band">Queen&lt;/div>
+    &lt;div class="sc-track">Bohemian Rhapsody&lt;/div>
+  &lt;/div>
+
+  &lt;div class="sc-controls">
+    &lt;i class="material-icons">fast_rewind&lt;/i>
+    &lt;i class="material-icons">play_arrow&lt;/i>
+    &lt;i class="material-icons">fast_forward&lt;/i>
+  &lt;/div>
+&lt;/div>
+		</code>
+	</pre>
+
 	<div class="sc-bottom-sheet sc-bottom-sheet-music" id="music">
-		<figure>
-			<img src="/images/album-example.jpg">
-		</figure>
+		<img src="/images/album-example.jpg">
+
+		<div class="sc-determinate">
+			<div class="sc-progressbar" style="width:10%"></div>
+		</div>
 
 		<div class="sc-info">
 			<div class="sc-band">Queen</div>
 			<div class="sc-track">Bohemian Rhapsody</div>
 		</div>
+
+		<div class="sc-controls">
+			<i class="material-icons">fast_rewind</i>
+			<i class="material-icons">play_arrow</i>
+			<i class="material-icons">fast_forward</i>
+		</div>
 	</div>
 </section>
--->
 
 <section class="sc-row">
 	<h3>Settings</h3>

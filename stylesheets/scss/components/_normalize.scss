@@ -32,6 +32,7 @@ figure {
 img {
 	height: auto;
 	max-width: 100%;
+	display: block;
 	/*
 	@include animation(img-loader $transition-small-duration $element-enter-transition);
 

@@ -21,6 +21,9 @@ $medium-down: "only screen and (max-width: #{$medium-screen})";
 $large-down: "only screen and (max-width: #{$large-screen})";
 $xlarge-down: "only screen and (max-width: #{$xlarge-screen})";
 
+$portrait: "only screen and (orientation: portrait)";
+$landscape: "only screen and (orientation: landscape)";
+
 .sc-container {
 	margin: 0 auto;
 	width: 90%;

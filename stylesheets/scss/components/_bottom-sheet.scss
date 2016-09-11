@@ -4,25 +4,26 @@
  * http://www.google.com/design/spec/components/bottom-sheets.html
  **************************************/
 
-
 $bottom-sheet-font-weight: 400; // Default 400
 $bottom-sheet-font-size: rem-calc(16px); // Default rem-calc(16px)
 $bottom-sheet-icons-size: rem-calc(24px); // Default rem-calc(24px)
 $bottom-sheet-grid-icon-size: rem-calc(48px); // Default rem-calc(48px)
 $bottom-sheet-grid-content-size: rem-calc(16px); // Default rem-calc(16px)
+$bottom-sheet-music-image-size: rem-calc(52.5px); // Default rem-calc(42.5px)
+$bottom-sheet-music-height: rem-calc(50px); // Default rem-calc(40px)
 
 .sc-bottom-sheet {
-	@include transition(height $transition-small-duration $returning-transition);
+	@include transition(margin $transition-small-duration $basic-transition);
 	@include material-shadow(16);
 	background: $bottom-sheet-background;
 	bottom: 0;
-    display: none;
+    display: block;
 	font-size: $bottom-sheet-font-size;
 	font-weight: $bottom-sheet-font-weight;
+	margin: 0 auto -102% auto;
 	height: auto;
 	left: 0;
-	margin: 0 auto;
-	overflow: hidden;
+	overflow: inherit;
 	padding: rem-calc(8px) rem-calc(16px);
 	position: fixed;
 	right: 0;
@@ -31,13 +32,18 @@ $bottom-sheet-grid-content-size: rem-calc(16px); // Default rem-calc(16px)
 	z-index: 4;
 
 	@media #{$medium-only} {
-		@include transition(height $transition-medium-duration $returning-transition);
+		@include transition(margin $transition-medium-duration $basic-transition);
 		width: 60%;
 	}
 
 	@media #{$medium-up} {
-		@include transition(height $transition-large-duration $returning-transition);
+		@include transition(margin $transition-large-duration $basic-transition);
 		width: 40%;
+		@include border-radius-top(rem-calc(2px));
+	}
+
+	&.sc-expanded {
+		margin: 0 auto;
 	}
 
 	ul {
@@ -114,36 +120,81 @@ $bottom-sheet-grid-content-size: rem-calc(16px); // Default rem-calc(16px)
 		}
 	}
 
-	/*
 	&-music {
-		//@extend .sc-row;
-		padding: 0;
-		height: rem-calc(48px);
-		//margin: 0;
+		height: $bottom-sheet-music-height;
 
-		figure {
-			//@extend .sc-col, .sc-xs1, .sc-s2, .sc-m1;
-			padding: 0 !important;
-			margin: rem-calc(-4px) 0 0 0;
-			width: rem-calc(50px);
-			height: rem-calc(50px);
-			float: left;
-			position: fixed;
+		img {
+			@include square($bottom-sheet-music-image-size);
+			position: absolute;
+			top: calc( #{$bottom-sheet-music-height} - #{$bottom-sheet-music-image-size} );
+			left: 0;
+		}
+
+		.sc-determinate {
+			background: transparent;
+			top: calc( #{$bottom-sheet-music-height} - #{$bottom-sheet-music-image-size} );
+			left: $bottom-sheet-music-image-size;
+			right: 0;
+			position: absolute;
+			width: calc(100% - #{$bottom-sheet-music-image-size});
 		}
 
 		.sc-info {
-			float: left;
-			margin: rem-calc(2px) 0 0 rem-calc(10px);
-			//@extend .sc-col, .sc-xs2, .sc-s4, .sc-m8;
+			position: absolute;
+			top: rem-calc(5px);
+			padding: 0 rem-calc(10px);
+			left: $bottom-sheet-music-image-size;
+			width: 75%;
+			line-height: $bottom-sheet-music-height;
 
-			.sc-band, .sc-track {
+			@media #{$medium-up} {
 				width: 50%;
-				//@extend .sc-col, .sc-xs4, .sc-s12;
 			}
 
 			.sc-band {
-				font-size: rem-calc(20px);
+				font-size: rem-calc(16px);
+			}
+
+			.sc-track {
+				font-size: rem-calc(14px);
+				color: rgba($black, .38);
+			}
+
+			> div {
+				width: 100%;
+
+				@media #{$medium-down} {
+					float: left;
+					width: auto;
+				}
 			}
 		}
-	} */
+
+		.sc-controls {
+			width: calc(100% - 75% - #{$bottom-sheet-music-image-size});
+			position: absolute;
+			left: calc(#{$bottom-sheet-music-image-size} + 50%);
+			top: rem-calc(5px);
+			line-height: $bottom-sheet-music-height;
+
+			.material-icons {
+				width: calc(100% / 3.1); // TODO fix somehow
+				height: 100%;
+				text-align: center;
+				color: rgba($black, .54);
+			}
+
+			@media #{$medium-down} {
+				width: calc(100% - 50% - #{$bottom-sheet-music-image-size});
+
+				.material-icons:first-of-type, .material-icons:last-of-type {
+					display: none;
+				}
+
+				.material-icons {
+					width: 100%;
+				}
+			}
+		}
+	}
 }

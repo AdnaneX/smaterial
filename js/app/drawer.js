@@ -31,7 +31,7 @@ $(document).ready(function() {
 
 	$drawer.find('.sc-active').closest('ul').closest('li').addClass('sc-expanded');
 
-	// Close drawer on outside click
+	/*// Close drawer on outside click
 	$(document).mouseup(function (e) {
 		var $drawerContainer = $('.sc-drawer-container');
 		if( $drawerContainer.visible() ) {
@@ -40,5 +40,5 @@ $(document).ready(function() {
 				$drawer.removeClass('sc-expanded');
 			}
 		}
-	});
+	});*/
 });
