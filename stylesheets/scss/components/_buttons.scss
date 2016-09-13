@@ -140,31 +140,39 @@ $floating-size: rem-calc(56px); // Default rem-calc(56px)
 $floating-icon-size: rem-calc(24px); // Default rem-calc(24px)
 $floating-mini-size: rem-calc(40px); // Default rem-calc(40px)
 
-button, a {
-	&.sc-floating-button {
-		@include font($font-size-button, 0, $font-weight-button, $line-height-button, $font-color-button, $letter-spacing-button, uppercase);
-		@include button( 50% );
-		@include transition(box-shadow $transition-small-duration $basic-transition);
-		@include material-shadow(6);
-		@include square($floating-size);
-		background: $floating-background;
-		line-height: $floating-size;
+.sc-floating-button {
+	@include font($font-size-button, 0, $font-weight-button, $line-height-button, $font-color-button, $letter-spacing-button, uppercase);
+	@include button( 50% );
+	@include transition(box-shadow $transition-small-duration $basic-transition);
+	@include material-shadow(6);
+	@include square($floating-size);
+	background: $floating-background;
+	line-height: $floating-size;
+	position: relative;
 
-		&:hover {
-			@include material-shadow(12);
-		}
+	&:hover {
+		@include material-shadow(12);
+	}
 
 
-		.material-icons {
-			@include square($floating-icon-size);
-			color: $floating-icon-color;
-			vertical-align: middle;
-		}
+	.material-icons {
+		@include square($floating-icon-size);
+		color: $floating-icon-color;
+		vertical-align: middle;
+	}
 
-		&-mini {
-			@include square($floating-mini-size);
-			line-height: $floating-mini-size;
-		}
+	&-mini {
+		@include square($floating-mini-size);
+		line-height: $floating-mini-size;
+	}
+
+
+
+	ul li {
+		@include border-radius(50%);
+		visibility: hidden;
+		@include opacity(0);
+		@include square( calc( (#{$floating-size} / 10 ) * 7 ) );
 	}
 }
 

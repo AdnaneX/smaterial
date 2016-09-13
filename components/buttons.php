@@ -142,9 +142,18 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	</p>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
-		<button class="sc-floating-button"><i class="material-icons">cloud</i></button>
-		<button class="sc-floating-button sc-floating-button-mini"><i class="material-icons">cloud</i></button>
-		<a href="#" class="sc-floating-button"><i class="material-icons">home</i></a>
+		<div class="sc-floating-button"><i class="material-icons">cloud</i></div>
+		<div class="sc-floating-button sc-floating-button-mini"><i class="material-icons">cloud</i></div>
+
+		<div href="#" class="sc-floating-button">
+			<i class="material-icons">cloud</i>
+
+			<ul>
+				<li><i class="material-icons">file_upload</i></li>
+				<li><i class="material-icons">file_download</i></li>
+				<li><img src="/images/profile-icon.jpg"></li>
+			</ul>
+		</div>
 	</p>
 
 	<pre class="language-html sc-col sc-s12 sc-m6 sc-offset-m6">
