@@ -47,8 +47,8 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 			<td>16</td>
 			<td><code>.sc-z16</code></td>
 			<td>
-				<p><a href="/components/navigation-drawer.php">Nav drawer (sidenav)</a></p>
-				<p><a href="/components/navigation-drawer.php">Right drawer</a></p>
+				<p><a href="/patterns/navigation-drawer.php">Nav drawer (sidenav)</a></p>
+				<p><a href="/patterns/navigation-drawer.php">Right drawer</a></p>
 				<p><a href="/components/bottom-sheet.php">Modal bottom sheet</a></p>
 			</td>
 			<td><div class="sc-z16 square"></div></td>

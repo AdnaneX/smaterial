@@ -1,7 +1,7 @@
 <?php
-$title = 'Grid';
-$description = 'Grid responsive based on Google\'s Material Design';
-$keywords = 'material design, smaterial, grid, push, pull, offset, columns, hidden';
+$title = 'Responsive UI';
+$description = 'Responsive UI (Grid) based on Google\'s Material Design';
+$keywords = 'material design, smaterial, grid, push, pull, offset, columns, hidden, responsive';
 
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>
@@ -237,11 +237,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	<section class="sc-row">
 		<h3>Grid settings</h3>
 
-		<p class="sc-col sc-xs4 sc-m6">
-			<strong>Note</strong> when changing the screen size you can / should change <code>grid.js</code> as well.
-		</p>
-
-		<table>
+		<table class="sc-col sc-xs4 sc-s12 sc-m6">
 			<thead>
 			<tr>
 				<th>Variable</th>

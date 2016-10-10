@@ -358,9 +358,18 @@ notification('Title', {body: 'Content', icon: 'icon_path'}, 'click-url.com')
 		<thead>
 		<tr>
 			<th>Variable</th>
-			<th></th>
+			<th>Options</th>
+			<th>Result</th>
 		</tr>
 		</thead>
+
+		<tbody>
+		<tr>
+			<td>$notification-background</td>
+			<td>Color / variable</td>
+			<td>Changes the notification background</td>
+		</tr>
+		</tbody>
 	</table>
 </section>
 <?php

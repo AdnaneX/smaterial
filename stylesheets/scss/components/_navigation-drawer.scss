@@ -1,17 +1,32 @@
+/**************************************
+ * Navigation drawer
+ *
+ * https://material.google.com/patterns/navigation-drawer.html
+ **************************************/
+
 $drawer-padding: rem-calc(16px);
 $drawer-item-height: rem-calc(48px);
 $drawer-icon-size: rem-calc(24px);
+$drawer-small-width: rem-calc(280px);
+$drawer-medium-width: rem-calc(320px);
+$drawer-profile-img: rem-calc(40px);
+$drawer-profile-top: $drawer-padding;
+$drawer-profile-content-height: rem-calc(56px);
+$drawer-profile-bottom-padding: rem-calc(8px);
 
 .sc-drawer {
 	position: fixed;
 	left: 0;
 	top: 0;
-	width: 100%;
+	width: $drawer-small-width;
 	height: 100%;
 	overflow: hidden;
-	z-index: 3;
 
-	@media #{$medium-down} {
+	@media #{$medium-only} {
+		width: $drawer-medium-width;
+	}
+
+	/*@media #{$medium-down} {
 		&:before {
 			content: '';
 			display: block;
@@ -24,8 +39,7 @@ $drawer-icon-size: rem-calc(24px);
 			@include opacity(0);
 			@include transition(opacity $transition-small-duration $element-enter-transition);
 		}
-	}
-
+	}*/
 
 	&-container {
 		position: relative;
@@ -33,44 +47,261 @@ $drawer-icon-size: rem-calc(24px);
 		bottom: 0;
 		overflow: auto;
 		background: $drawer-background;
-		max-width: rem-calc(280px);
+		width: 100%;
 
 		@media #{$medium-only} {
-			max-width: rem-calc(320px);
 			@include transition(transform $transition-medium-duration $element-enter-transition);
 		}
 
 		@media #{$medium-up} {
-			//max-width: rem-calc(400px);
 			@include transition(transform $transition-large-duration $element-enter-transition);
 		}
 	}
 
-	&-permanent {
-		&-full-height {
+	@media #{$medium-up} {
+		&-permanent {
+			&-full-height {
+				top: 0;
+				border-right: rem-calc(1px) solid if($theme == light, rgba($black, .12), rgba($white, .12));
+				z-index: 3;
+
+				.sc-drawer-header {
+					border-bottom: rem-calc(1px) solid if($theme == light, rgba($black, .12), rgba($white, .12));
+					height: $appbar-small-height;
+
+					@media #{$medium-only} {
+						height: $appbar-medium-height;
+					}
+
+					@media #{$medium-up} {
+						height: $appbar-large-height;
+					}
+
+					&:hover {
+						background: none;
+					}
+				}
+			}
+
+			&-clipped {
+				top: $appbar-small-height;
+				z-index: 1;
+				border-right: rem-calc(1px) solid if($theme == light, rgba($black, .12), rgba($white, .12));
+
+				@media #{$medium-only} {
+					top: $appbar-medium-height;
+				}
+
+				@media #{$medium-up} {
+					top: $appbar-large-height;
+				}
+
+				li:first-of-type {
+					margin: $drawer-profile-bottom-padding 0 0 0;
+				}
+			}
+
+			&-floating {
+				top: $appbar-small-height;
+				z-index: 1;
+
+				@media #{$medium-only} {
+					top: $appbar-medium-height;
+				}
+
+				@media #{$medium-up} {
+					top: $appbar-large-height;
+				}
+
+				li:first-of-type {
+					margin: $drawer-profile-bottom-padding 0 0 0;
+				}
+			}
+		}
+	}
+
+	@media #{$small-up} {
+		&-persistent {
+			margin: 0 0 0 -102%;
 			top: 0;
 			border-right: rem-calc(1px) solid if($theme == light, rgba($black, .12), rgba($white, .12));
-		}
+			z-index: 3;
+			@include transition(margin $transition-small-duration $basic-transition);
 
-		&-clipped {
+			@media #{$medium-only} {
+				@include transition(margin $transition-medium-duration $basic-transition);
+			}
 
-		}
+			@media #{$medium-up} {
+				@include transition(margin $transition-large-duration $basic-transition);
+			}
 
-		&-floating {
+			.sc-drawer-header {
+				position: relative;
+				height: $appbar-small-height;
+				line-height: $appbar-small-height;
+				margin: 0 0 $drawer-profile-bottom-padding 0;
+				border-bottom: rem-calc(1px) solid if($theme == light, rgba($black, .12), rgba($white, .12));
 
+				@media #{$medium-only} {
+					height: $appbar-medium-height;
+					line-height: $appbar-medium-height;
+				}
+
+				@media #{$medium-up} {
+					height: $appbar-large-height;
+					line-height: $appbar-large-height;
+				}
+
+				&:hover {
+					background: none;
+				}
+
+				> * {
+					float: left;
+				}
+
+				.sc-drawer-profile-img {
+					@include square($drawer-icon-size);
+					margin: 0 calc(#{rem-calc(72px)} - #{$drawer-icon-size} - #{$drawer-padding}) 0 0;
+					@include border-radius(50%);
+					border: rem-calc(1px) solid if($theme == light, rgba($black, .12), rgba($white, .12));
+					top: 50%;
+					position: inherit;
+					@include transform(translate(0, -50%));
+				}
+			}
+
+			&.sc-expanded {
+				margin: 0;
+			}
 		}
 	}
 
-	&-persistent {
+	 /*&-persistent-mini {
+		 top: $appbar-small-height;
 
-	}
+		 // Add extra width for scrollbar TODO somehow fix it
+		 width: calc( (#{$drawer-padding} * 2) + #{$drawer-icon-size} + #{rem-calc(3px)});
 
-	 &-mini {
+		 @media #{$small-up} {
+			 width: calc( (#{$drawer-padding} * 2) + #{$drawer-icon-size} + #{rem-calc(10px)});
+		 }
 
-	 }
+		 @media #{$medium-only} {
+			 top: $appbar-medium-height;
+		 }
 
-	&-temporary {
+		 @media #{$medium-up} {
+			 top: $appbar-large-height;
+		 }
 
+		 li:first-of-type {
+			 margin: rem-calc(8px) 0 0 0;
+		 }
+
+		 .sc-divider, .sc-arrow, .sc-drawer-profile-name, .sc-drawer-profile-dropdown, .sc-text {
+			 display: none;
+		 }
+
+		 .sc-drawer-header {
+			 height: rem-calc(48px);
+			 line-height: rem-calc(48px);
+
+			 .sc-drawer-profile-img {
+				 @include square($drawer-icon-size);
+				 margin: 0 calc(#{rem-calc(72px)} - #{$drawer-icon-size} - #{$drawer-padding}) 0 0;
+				 @include border-radius(50%);
+				 border: rem-calc(1px) solid if($theme == light, rgba($black, .12), rgba($white, .12));
+				 top: 50%;
+				 position: inherit;
+				 @include transform(translate(0, -50%));
+			 }
+		 }
+
+		 &.sc-expanded {
+			 width: 100%;
+			 top: 0;
+			 border-right: rem-calc(1px) solid if($theme == light, rgba($black, .12), rgba($white, .12));
+			 z-index: 3;
+
+			 .sc-drawer-header {
+				 position: relative;
+				 height: $appbar-small-height;
+				 line-height: $appbar-small-height;
+				 margin: 0 0 rem-calc(8px) 0;
+				 border-bottom: rem-calc(1px) solid if($theme == light, rgba($black, .12), rgba($white, .12));
+
+				 @media #{$medium-only} {
+					 height: $appbar-medium-height;
+					 line-height: $appbar-medium-height;
+				 }
+
+				 @media #{$medium-up} {
+					 height: $appbar-large-height;
+					 line-height: $appbar-large-height;
+				 }
+
+				 &:hover {
+					 background: none;
+				 }
+
+				 > * {
+					 float: left;
+				 }
+			}
+		}
+	 }*/
+
+	@media #{$medium-down} {
+		&-temporary {
+			top: 0;
+			z-index: 3;
+			@include material-shadow(16);
+
+			.sc-drawer-header {
+				padding: 0 0 $drawer-profile-bottom-padding 0;
+				height: calc(#{$drawer-padding} + #{$drawer-profile-img} + #{$drawer-profile-content-height} + #{$drawer-profile-bottom-padding});
+
+				.sc-drawer-profile-background {
+					top: 0;
+					left: 0;
+					width: 100%;
+				}
+
+				.sc-drawer-profile-background, .sc-drawer-profile-img, .sc-drawer-profile-name, .sc-drawer-profile-email {
+					position: absolute;
+				}
+
+				.sc-drawer-profile-img {
+					top: $drawer-padding;
+					left: $drawer-padding;
+					@include square($drawer-profile-img);
+					@include border-radius(50%);
+				}
+
+				.sc-drawer-profile-name, .sc-drawer-profile-email {
+					line-height: calc(#{$drawer-profile-content-height} / 2);
+					left: $drawer-padding;
+					height: calc(#{$drawer-profile-content-height} / 2);
+					color: $white;
+				}
+
+				.sc-drawer-profile-name {
+					top: calc(#{$drawer-profile-img} + #{$drawer-padding});
+					font-size: rem-calc(14px);
+					font-weight: 500;
+					right: 0;
+				}
+
+				.sc-drawer-profile-email {
+					top: calc(#{$drawer-profile-img} + #{$drawer-padding} + (#{$drawer-profile-content-height} / 2));
+					font-size: rem-calc(14px);
+					font-weight: 400;
+					right: rem-calc(24px);
+				}
+			}
+		}
 	}
 
 	&.sc-expanded {
@@ -96,6 +327,7 @@ $drawer-icon-size: rem-calc(24px);
 		height: $drawer-item-height;
 		display: block;
 		padding: 0 $drawer-padding;
+		position: relative;
 
 		&:hover {
 			background: $grey-200;
@@ -112,6 +344,10 @@ $drawer-icon-size: rem-calc(24px);
 				background: transparent;
 			}
 		}
+	}
+
+	ul li ul a {
+		font-weight: 400;
 	}
 
 	a {
@@ -136,10 +372,18 @@ $drawer-icon-size: rem-calc(24px);
 	.material-icons {
 		@include square($drawer-icon-size);
 		font-size: $drawer-icon-size;
-		line-height: $drawer-icon-size;
 		vertical-align: middle;
 		color: rgba($black, .54);
 		margin: 0 calc(#{rem-calc(72px)} - #{$drawer-padding} - #{$drawer-icon-size}) 0 0;
+		@include transition(color $transition-small-duration $basic-transition);
+
+		@media #{$medium-only} {
+			@include transition(color $transition-medium-duration $basic-transition);
+		}
+
+		@media #{$medium-up} {
+			@include transition(color $transition-large-duration $basic-transition);
+		}
 	}
 
 	.sc-drawer-dropdown {
@@ -183,10 +427,7 @@ $drawer-icon-size: rem-calc(24px);
 	.sc-arrow {
 		position: absolute;
 		right: rem-calc(16px);
-		@include square($drawer-icon-size);
-		font-size: $drawer-icon-size;
-		line-height: $drawer-icon-size;
-		vertical-align: middle;
+		top: calc( (#{$drawer-item-height} - (#{$drawer-item-height} / 2)) - (#{$drawer-icon-size} / 2) );
 		margin: 0;
 		@include transition(all $transition-small-duration $basic-transition);
 
@@ -196,6 +437,16 @@ $drawer-icon-size: rem-calc(24px);
 
 		@media #{$medium-up} {
 			@include transition(all $transition-large-duration $basic-transition);
+		}
+	}
+
+	.sc-divider {
+		margin: rem-calc(8px) 0;
+		height: rem-calc(1px);
+		background: if($theme == light, rgba($black, .12), rgba($white, .12));
+
+		&:hover {
+			background: none;
 		}
 	}
 }

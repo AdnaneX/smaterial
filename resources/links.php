@@ -35,7 +35,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	</div>
 
 	<div class="sc-col sc-xs4 sc-s12 sc-m6">
-		<h4><a href="/style/shadow.php">Shadows &amp; elevation</a></h4>
+		<h4><a href="/smaterial/shadow.php">Shadows &amp; elevation</a></h4>
 
 		<ul>
 			<li><a href="http://www.google.com/design/spec/what-is-material/elevation-shadows.html" target="_blank">Material Design shadows &amp; elevation specs</a></li>
@@ -183,7 +183,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	<h3>Resources</h3>
 
 	<div class="sc-col sc-xs4 sc-s12 sc-m6">
-		<h4><a href="/resources/notifications.php">Notifications</a></h4>
+		<h4><a href="/patterns/notifications.php">Notifications</a></h4>
 
 		<ul>
 			<li><a href="https://material.google.com/patterns/notifications.html" target="_blank">Material Design notification specs</a></li>

@@ -8,7 +8,7 @@
 // Style
 @import 'components/mixins'; // All mixins
 @import 'components/functions'; // All functions
-//@import 'components/colors'; // Color swatches currently moved into settings
+@import 'components/colors'; // Color swatches currently moved into settings
 @import 'components/settings'; // All settings
 @import 'components/grid'; // Grid functionality
 @import 'components/normalize'; // Remove browser default styles add Material default styles
@@ -25,8 +25,8 @@
 @import 'components/chips'; // Used to style chips (can be turned off)
 @import 'components/dialogs'; // Used to style dialog (can be turned off)
 @import 'components/expansion-panels'; // Used to style expansion panels (can be turned off)
-@import 'components/drawer'; // Navigation drawer (can be turned off)
-//@import 'components/navigation-drawer'; // Used to style navigation drawer (can be turned off)
+//@import 'components/drawer'; // Navigation drawer (can be turned off)
+@import 'components/navigation-drawer'; // Used to style navigation drawer (can be turned off)
 @import 'components/lists'; // Used to style lists (can be turned off)
 @import 'components/notifications'; // Notifications style (can be turned off)
 @import 'components/pickers'; // Used to style date and time picker (can be turned off)
@@ -39,3 +39,4 @@
 @import 'components/tabs'; // Used to style tabs (can be turned off)
 @import 'components/textfields'; // Used to style input (can be turned off)
 @import 'components/tooltips'; // Used to style tooltips (can be turned off)
+@import 'components/colors-create'; // Used to create colors(can be turned off)

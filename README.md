@@ -52,11 +52,11 @@ After making your changes please describe what you have changed. This will speed
     - Check duplicate styling and therefor load speed
     - When an item can be triggered by clicking work with JavaScript to set an active class.
     - Use 1 class for all triggers. With the active class make slideup and slidedown action
-    - Move global usable classes to _normailize.scss (.sc-no-hover, .sc-active, .sc-disabled) to name a few
+    - Move global usable classes to `_normailize.scss` (`.sc-no-hover, .sc-active, .sc-disabled`) to name a few
     - Fix max-height max-width to something which works automatically. This applies to several components where these properties are animated 
     - Add Material Design animations
     - Add flexbox support
-    - Fix positions of &lt;header>, &lt;main>, &lt;aside> to be more compatible with for example WordPress (&lt;aside> goes over &lt;header>, &lt;main> slides up under &lt;header>)
+    - Fix positions of `<header>`, `<main>`, `<aside>` to be more compatible with for example WordPress (`<aside>` goes over `<header>`, `<main>` slides up under `<header>`)
     - Add support for IE and FireFox
     - Add Hammer.js for a better mobile experience(Optional)
     - Future
@@ -66,7 +66,6 @@ After making your changes please describe what you have changed. This will speed
     	- Add templates
     - Components
         - Pickers
-		- Expansion panels
 		- Add badges
 - Appbar
     - Add search slide out
@@ -89,21 +88,20 @@ After making your changes please describe what you have changed. This will speed
     - Complete table of contents
     - Make variables consistent
     - Give variables a clearer name of what they do
-    - Check all colors for (lighten() / darken() or rgba()) where possible
-    - Add settings in documentation
-    - Move color import from "_settings.scss" to "smaterial.scss" 
+    - Check all colors for (`lighten()` / `darken()` or `rgba()`) where possible
+    - Add settings in documentation 
     - Add black theme support
     - Add variables to settings
 - Navigation drawer
-    - Make more options (Permanent, Persistent, Mini variant, Temporary) 
+    - Add persistent mini
     - Make profile dropdown button
-    - Profile should consist of less nested div 
-    - Profile background image should be dynamically changed (img tag)
+    - Profile background image should be able to be dynamically changed (img tag)
     - Fix margin right on left menu for mobile. 56px between screen edge and menu
+    - Fix click outside menu on large screens
 - Slider
     - Add radials
     - Colors should be rgba but creates weird behaviour (like showing track trough thumb)
-    - Fix click bug at end of .sc-slider slider
+    - Fix click bug at end of `.sc-slider` slider
     - sc-slider-discrete bubble not working mobile
 - Tables
     - Fix styling

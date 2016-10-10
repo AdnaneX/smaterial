@@ -32,7 +32,7 @@ $appbar-more-margin: rem-calc(4px); // Default rem-calc(4px)
 	line-height: normal;
 	position: fixed;
 	width: 100%;
-	z-index: 1;
+	z-index: 2;
 
 	@media #{$small-up} {
 		height: $appbar-medium-height;

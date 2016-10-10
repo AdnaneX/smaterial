@@ -17,7 +17,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		<h3>Default dialog</h3>
 
 		<p class="sc-col sc-xs4 sc-s12 sc-m6">
-			<button type="button" class="sc-raised-button sc-dialog-trigger sc-ripple" data-sc-trigger="default">Default</button>
+			<button type="button" class="sc-raised-button sc-dialog-trigger" data-sc-trigger="default">Default</button>
 		</p>
 
 		<div class="sc-col sc-xs4 sc-s12 sc-m6">
@@ -46,7 +46,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		<h3>Fullscreen dialog</h3>
 
 		<p class="sc-col sc-xs4 sc-s12 sc-m6">
-			<button type="button" class="sc-raised-button sc-dialog-trigger sc-ripple" data-sc-trigger="fullscreen">Full screen</button>
+			<button type="button" class="sc-raised-button sc-dialog-trigger" data-sc-trigger="fullscreen">Full screen</button>
 		</p>
 
 		<div class="sc-dialog sc-dialog-fullscreen" id="fullscreen">

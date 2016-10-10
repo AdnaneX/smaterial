@@ -31,6 +31,9 @@
 		"images",
 		"includes",
 		"resources",
-		"style"
+		"style",
+		"smaterial",
+		"layout",
+		"patterns"
 	]
 }

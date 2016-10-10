@@ -1,6 +1,6 @@
 <?php
-$title = 'Home';
-$description = 'Home of SMaterial. The CSS framework based on Google\'s Material Design';
+$title = 'Introduction';
+$description = 'Introduction of SMaterial. The CSS framework based on Google\'s Material Design';
 $keywords = 'material design, smaterial, css framework, CSS, SCSS';
 
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
@@ -22,7 +22,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 <section class="sc-row">
 	<div class="sc-col sc-xs4 sc-s12 sc-m6">
 		<div class="sc-row sc-center">
-			<i class="material-icons sc-blue-text sc-48">build</i>
+			<i class="material-icons sc-cyan-text sc-48">build</i>
 		</div>
 
 		<div class="sc-row">
@@ -40,7 +40,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 
 	<div class="sc-col sc-xs4 sc-s12 sc-m6">
 		<div class="sc-row sc-center">
-			<i class="material-icons sc-blue-text sc-48">accessibility</i>
+			<i class="material-icons sc-cyan-text sc-48">accessibility</i>
 		</div>
 
 		<div class="sc-row">

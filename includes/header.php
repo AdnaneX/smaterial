@@ -2,6 +2,40 @@
 // Set to true this way no unnecessary code is loaded while testing
 define( 'TEST', false );
 $file = str_replace( '.php', '', $_SERVER['PHP_SELF'] );
+
+$colors = array('smaterial' => array(
+					'color' => '#00BCD4',
+					'highlight' => '#00B8D4'
+				),
+				'style' => array(
+					'color' => '#00897B',
+					'highlight' => '#00BFA5'
+				),
+				'layout' => array(
+					'color' => '#AD1457',
+					'highlight' => '#C51162'
+				),
+				'components' => array(
+					'color' => '#3949AB',
+					'highlight' => '#304FFE'
+				),
+				'patterns' => array(
+					'color' => '#FB8C00',
+					'highlight' => '#FF6D00'
+				),
+				'resources' => array(
+					'color' => '#039BE5',
+					'highlight' => '#0091EA'
+				)
+);
+
+if( $file == '/index' || $file == '/' ) {
+	$folder = 'smaterial';
+} else {
+	$folder = explode( '/', $_SERVER['PHP_SELF'] )[1];
+}
+$color = $colors[$folder]['color'];
+$highlight = $colors[$folder]['highlight'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,7 +46,9 @@ $file = str_replace( '.php', '', $_SERVER['PHP_SELF'] );
 		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 		<link rel="stylesheet" href="/stylesheets/smaterial.css">
 
-		<link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico">
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+		<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+		<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
 
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -21,19 +57,51 @@ $file = str_replace( '.php', '', $_SERVER['PHP_SELF'] );
 		<meta name="description" content="<?= $description; ?>">
 		<meta name="keyword" content="<?= $keywords; ?>">
 
-		<meta name="theme-color" content="#2196F3">
-		<meta name="msapplication-navbutton-color" content="#2196F3">
-		<meta name="apple-mobile-web-app-status-bar-style" content="#2196F3">
+		<meta property="og:type" content="article">
+		<meta property="og:title" content="<?= $title; ?> | SMaterial">
+		<meta property="og:site_name" content="SMaterial">
+		<meta property="article:section" content="<?php echo $title.' - '.ucfirst($folder); ?>">
+
+		<meta name="theme-color" content="<?php echo $color; ?>">
+		<meta name="msapplication-navbutton-color" content="<?php echo $color; ?>">
+		<meta name="apple-mobile-web-app-status-bar-style" content="<?php echo $color; ?>">
+
+		<style>
+			.sc-appbar {
+				background: <?php echo $color; ?>;
+			}
+
+			main h1, main h2, main h3, main h4, main h5, main h6, main a {
+				color: <?php echo $color; ?>;
+			}
+
+			main a:hover {
+				color: <?php echo $highlight; ?>;
+			}
+
+			.sc-drawer .sc-active, .sc-drawer a:hover, .sc-drawer a:hover .material-icons {
+				color: <?php echo $color; ?> !important;
+			}
+
+			.sc-raised-button {
+				color: white !important;
+				background: <?php echo $color; ?> !important;
+			}
+
+			.sc-drawer-permanent-full-height .sc-drawer-header img {
+				height: 100%;
+			}
+		</style>
 	</head>
 
 	<body>
 		<header class="sc-appbar">
 			<div class="sc-appbar-nav">
-				<a href="#" id="sc-nav-button" data-sc-trigger="sc-drawer"><i class="material-icons sc-ripple">menu</i></a>
+				<a href="#"><i class="material-icons sc-trigger" data-sc-trigger="sc-drawer">menu</i></a>
 			</div>
 
 			<div class="sc-appbar-title">
-				<h1><?= $title; ?></h1>
+				<h1><?php echo '<span class="sc-xs-hidden sc-s-hidden">'.ucfirst( $folder ).' -</span> '.$title; ?></h1>
 			</div>
 
 			<div class="sc-appbar-actions">
@@ -50,7 +118,7 @@ $file = str_replace( '.php', '', $_SERVER['PHP_SELF'] );
 			</div>
 
 			<div class="sc-appbar-menu">
-				<a href="#" class="sc-nav-more sc-ripple" data-sc-trigger="sc-nav-more"><i class="material-icons">more_vert</i></a>
+				<a href="#" class="sc-nav-more sc-trigger" data-sc-trigger="sc-nav-more"><i class="material-icons">more_vert</i></a>
 
 				<ul class="sc-appbar-menu-more" id="sc-nav-more">
 					<li>Example</li>
@@ -71,12 +139,25 @@ $file = str_replace( '.php', '', $_SERVER['PHP_SELF'] );
 		}
 		?>
 
-		<aside id="sc-drawer" class="sc-drawer sc-drawer-left sc-drawer-left-floating">
-			<nav class="sc-drawer-container sc-drawer-permanent-full-height">
+		<aside id="sc-drawer" class="sc-drawer sc-drawer-permanent-full-height sc-drawer-temporary">
+			<nav class="sc-drawer-container">
 				<ul>
-					<li class="sc-drawer-profile">
+					<!--<li class="sc-drawer-header">
+						<img src="/images/profile-icon.jpg" alt="SMaterial profile example" class="sc-drawer-profile-img">
+						<span class="sc-drawer-profile-name">John</span>
+						<span class="sc-drawer-profile-dropdown"><i class="material-icons">arrow_drop_down</i></span>
+						<span class="sc-trigger" data-sc-trigger="sc-drawer"><i class="material-icons sc-arrow">chevron_left</i></span>
+					</li>-->
+					<li class="sc-drawer-header">
+						<img src="/images/logo.svg" alt="SMalterial logo">
+						<img src="/images/drawer-background.jpg" class="sc-drawer-profile-background">
+						<img src="/images/profile-icon.jpg" class="sc-drawer-profile-img">
+						<div class="sc-drawer-profile-name">John Doe</div>
+						<div class="sc-drawer-profile-email">johndoe&#64;gmail.com</div>
+					</li>
+					<!--<li class="sc-drawer-profile">
 						<figure class="sc-drawer-profile-img">
-							<img alt="SMaterial thumbnail" src="/images/SMaterial-icon.jpg">
+							<img alt="SMaterial thumbnail" src="/images/Icon.png" alt="SMaterial icon">
 						</figure>
 
 						<div class="sc-drawer-profile-info">
@@ -92,21 +173,25 @@ $file = str_replace( '.php', '', $_SERVER['PHP_SELF'] );
 						<div class="sc-drawer-profile-button">
 							<a href="#"><i class="material-icons">arrow_drop_up</i></a>
 						</div>
+					</li>-->
+					<li class="sc-drawer-dropdown">SMaterial <i class="material-icons">expand_more</i>
+						<ul>
+							<li><a href="/" <?php echo ( $file == '/index' || $file == '/' ? 'class="sc-active"' : '' ); ?>>Introduction</a></li>
+							<li><a href="/smaterial/getting-started.php" <?php echo ( $file == '/smaterial/getting-started' ? 'class="sc-active"' : '' ); ?>>Getting started</a></li>
+							<li><a href="/smaterial/shadow.php" <?php echo ( $file == '/smaterial/shadow' ? 'class="sc-active"' : '' ); ?>>Elevation and shadows</a></li>
+							<li><a href="/smaterial/news.php" <?php echo ( $file == '/smaterial/new' ? 'class="sc-active"' : '' ); ?>>What's new</a></li>
+						</ul>
 					</li>
-					<li><a href="/" <?php echo ( $file == '/index' || $file == '/' ? 'class="sc-active"' : '' ); ?>><i class="material-icons <?php echo ( $file == '/index' || $file == '/' ? 'sc-active' : '' ); ?>">home</i> Home</a></li>
-					<li><a href="/getting-started.php" <?php echo ( $file == '/getting-started' ? 'class="sc-active"' : '' ); ?>><i class="material-icons <?php echo ( $file == '/getting-started' ? 'sc-active' : '' ); ?>">flag</i> Getting started</a></li>
-					<li class="sc-drawer-dropdown">Style <i class="material-icons sc-right">expand_more</i>
+					<li class="sc-drawer-dropdown">Style <i class="material-icons">expand_more</i>
 						<ul>
 							<li><a href="/style/color.php" <?php echo ( $file == '/style/color' ? 'class="sc-active"' : '' ); ?>>Color</a></li>
 							<li><a href="/style/icons.php" <?php echo ( $file == '/style/icons' ? 'class="sc-active"' : '' ); ?>>Icons</a></li>
 							<li><a href="/style/typography.php" <?php echo ( $file == '/style/typography' ? 'class="sc-active"' : '' ); ?>>Typography</a></li>
-							<li><a href="/style/shadow.php" <?php echo ( $file == '/style/shadow' ? 'class="sc-active"' : '' ); ?>>Elevation and shadows</a></li>
 							<li><a href="/style/functions.php" <?php echo ( $file == '/style/functions' ? 'class="sc-active"' : '' ); ?>>Functions</a></li>
 							<li><a href="/style/mixins.php" <?php echo ( $file == '/style/mixins' ? 'class="sc-active"' : '' ); ?>>Mixins</a></li>
-							<li><a href="/style/grid.php" <?php echo ( $file == '/style/grid' ? 'class="sc-active"' : '' ); ?>>Grid</a></li>
 						</ul>
 					</li>
-					<li class="sc-drawer-dropdown">Components <i class="material-icons sc-right">expand_more</i>
+					<li class="sc-drawer-dropdown">Components <i class="material-icons">expand_more</i>
 						<ul>
 							<li><a href="/components/appbar.php" <?php echo ( $file == '/components/appbar' ? 'class="sc-active"' : '' ); ?>>Appbar</a></li>
 							<li><a href="/components/bottom-navigation.php" <?php echo ( $file == '/components/bottom-navigation' ? 'class="sc-active"' : '' ); ?>>Bottom navigation</a></li>
@@ -116,7 +201,6 @@ $file = str_replace( '.php', '', $_SERVER['PHP_SELF'] );
 							<li><a href="/components/chips.php" <?php echo ( $file == '/components/chips' ? 'class="sc-active"' : '' ); ?>>Chips</a></li>
 							<li><a href="/components/dialogs.php" <?php echo ( $file == '/components/dialogs' ? 'class="sc-active"' : '' ); ?>>Dialogs</a></li>
 							<li><a href="/components/expansion-panels.php" <?php echo ( $file == '/components/expansion-panels' ? 'class="sc-active"' : '' ); ?>>Expansion panels</a></li>
-							<li><a href="/components/navigation-drawer.php" <?php echo ( $file == '/components/navigation-drawer' ? 'class="sc-active"' : '' ); ?>>Navigation drawer</a></li>
 							<li><a href="/components/pickers.php" <?php echo ( $file == '/components/pickers' ? 'class="sc-active"' : '' ); ?>>Pickers</a></li>
 							<li><a href="/components/progress-activity.php" <?php echo ( $file == '/components/progress-activity' ? 'class="sc-active"' : '' ); ?>>Progress &amp; activity</a></li>
 							<li><a href="/components/selection-controls.php" <?php echo ( $file == '/components/selection-controls' ? 'class="sc-active"' : '' ); ?>>Selection controls</a></li>
@@ -129,14 +213,24 @@ $file = str_replace( '.php', '', $_SERVER['PHP_SELF'] );
 							<li><a href="/components/tooltips.php" <?php echo ( $file == '/components/tooltips' ? 'class="sc-active"' : '' ); ?>>Tooltips</a></li>
 						</ul>
 					</li>
-					<li class="sc-drawer-dropdown">Resources <i class="material-icons sc-right">expand_more</i>
+					<li class="sc-drawer-dropdown">Layout <i class="material-icons">expand_more</i>
 						<ul>
-							<li><a href="/resources/notifications.php" <?php echo ( $file == '/resources/notifications' ? 'class="sc-active"' : '' ); ?>>Notifications</a></li>
-							<li><a href="/resources/templates.php" <?php echo ( $file == '/resources/templates' ? 'class="sc-active"' : '' ); ?>>Templates</a></li>
-							<li><a href="/resources/links.php" <?php echo ( $file == '/resources/links' ? 'class="sc-active"' : '' ); ?>>Links</a></li>
+							<li><a href="/layout/grid.php" <?php echo ( $file == '/layout/grid' ? 'class="sc-active"' : '' ); ?>>Grid</a></li>
 						</ul>
 					</li>
-					<li><a href="/showroom.php" <?php echo ( $file == '/showroom' ? 'class="sc-active"' : '' ); ?>><i class="material-icons">photo_album</i> Showroom</a></li>
+					<li class="sc-drawer-dropdown">Patterns <i class="material-icons">expand_more</i>
+						<ul>
+							<li><a href="/patterns/navigation-drawer.php" <?php echo ( $file == '/patterns/navigation-drawer' ? 'class="sc-active"' : '' ); ?>>Navigation drawer</a></li>
+							<li><a href="/patterns/notifications.php" <?php echo ( $file == '/patterns/notifications' ? 'class="sc-active"' : '' ); ?>>Notifications</a></li>
+						</ul>
+					</li>
+					<li class="sc-drawer-dropdown">Resources <i class="material-icons">expand_more</i>
+						<ul>
+							<li><a href="/resources/templates.php" <?php echo ( $file == '/resources/templates' ? 'class="sc-active"' : '' ); ?>>Templates</a></li>
+							<li><a href="/resources/links.php" <?php echo ( $file == '/resources/links' ? 'class="sc-active"' : '' ); ?>>Links</a></li>
+							<li><a href="/resources/showroom.php" <?php echo ( $file == '/resources/showroom' ? 'class="sc-active"' : '' ); ?>>Showroom</a></li>
+						</ul>
+					</li>
 				</ul>
 			</nav>
 		</aside>

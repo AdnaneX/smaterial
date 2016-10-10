@@ -18,7 +18,9 @@ $(document).ready(function() {
 		});
 	});
 
-	$('#sc-nav-button').click(function() {
+	$drawer.find('.sc-active').closest('ul').closest('li').addClass('sc-expanded');
+
+	/*$('#sc-nav-button').click(function() {
 		var $trigger = $(this).data('sc-trigger'),
 			$drawer = $('#' + $trigger);
 
@@ -27,9 +29,7 @@ $(document).ready(function() {
 		} else {
 			$drawer.addClass('sc-expanded');
 		}
-	});
-
-	$drawer.find('.sc-active').closest('ul').closest('li').addClass('sc-expanded');
+	});*/
 
 	/*// Close drawer on outside click
 	$(document).mouseup(function (e) {
