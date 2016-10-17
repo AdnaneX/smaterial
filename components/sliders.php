@@ -1,7 +1,7 @@
 <?php
 $title = 'Slider';
 $description = 'Slider based on Google\'s Material Design';
-$keywords = 'material design, smaterial, slider, discrete slider';
+$keywords = 'slider, discrete slider';
 
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>

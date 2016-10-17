@@ -1,7 +1,7 @@
 <?php
 $title = 'Color';
 $description = 'Colors swatches based on Google\'s Material Design. How to use Material Design colors in your website.';
-$keywords = 'material design, smaterial, color, swatches, material colors';
+$keywords = 'color, swatches, material colors';
 
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>

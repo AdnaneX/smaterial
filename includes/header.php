@@ -36,6 +36,8 @@ if( $file == '/index' || $file == '/' ) {
 }
 $color = $colors[$folder]['color'];
 $highlight = $colors[$folder]['highlight'];
+
+$keywords .= ', smaterial, css, scss, material design';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -139,39 +141,40 @@ $highlight = $colors[$folder]['highlight'];
 		}
 		?>
 
-		<aside id="sc-drawer" class="sc-drawer sc-drawer-permanent-full-height sc-drawer-temporary">
+		<aside id="sc-drawer" class="sc-drawer sc-drawer-permanent-full-height">
 			<nav class="sc-drawer-container">
 				<ul>
+					<div class="sc-drawer-header">
+						<img src="/images/logo.svg" alt="SMalterial logo">
+					</div>
 					<!--<li class="sc-drawer-header">
 						<img src="/images/profile-icon.jpg" alt="SMaterial profile example" class="sc-drawer-profile-img">
 						<span class="sc-drawer-profile-name">John</span>
-						<span class="sc-drawer-profile-dropdown"><i class="material-icons">arrow_drop_down</i></span>
-						<span class="sc-trigger" data-sc-trigger="sc-drawer"><i class="material-icons sc-arrow">chevron_left</i></span>
+						<div id="sc-drawer-profile-more" class="sc-drawer-profile-more">
+							<i class="material-icons sc-trigger" data-sc-trigger="sc-drawer-profile-more">arrow_drop_down</i>
+
+							<ul>
+								<li><a href="#">Facebook</a></li>
+								<li><a href="#">Google Plus</a></li>
+								<li><a href="#">Add account</a></li>
+							</ul>
+						</div>
+						<span><i class="material-icons sc-arrow sc-trigger" data-sc-trigger="sc-drawer">chevron_left</i></span>
 					</li>-->
-					<li class="sc-drawer-header">
-						<img src="/images/logo.svg" alt="SMalterial logo">
+					<!--<li class="sc-drawer-header">
 						<img src="/images/drawer-background.jpg" class="sc-drawer-profile-background">
+						<div class="sc-scrim"></div>
 						<img src="/images/profile-icon.jpg" class="sc-drawer-profile-img">
 						<div class="sc-drawer-profile-name">John Doe</div>
 						<div class="sc-drawer-profile-email">johndoe&#64;gmail.com</div>
-					</li>
-					<!--<li class="sc-drawer-profile">
-						<figure class="sc-drawer-profile-img">
-							<img alt="SMaterial thumbnail" src="/images/Icon.png" alt="SMaterial icon">
-						</figure>
+						<div class="sc-drawer-profile-more">
+							<i class="material-icons sc-arrow sc-trigger" data-sc-trigger="sc-drawer">arrow_drop_down</i>
 
-						<div class="sc-drawer-profile-info">
-							<div class="sc-drawer-profile-name">
-								John Doe
-							</div>
-
-							<div class="sc-drawer-profile-email">
-								johndoe&#64;gmail.com
-							</div>
-						</div>
-
-						<div class="sc-drawer-profile-button">
-							<a href="#"><i class="material-icons">arrow_drop_up</i></a>
+							<ul>
+								<li><a href="#">Facebook</a></li>
+								<li><a href="#">Google Plus</a></li>
+								<li><a href="#">Add account</a></li>
+							</ul>
 						</div>
 					</li>-->
 					<li class="sc-drawer-dropdown">SMaterial <i class="material-icons">expand_more</i>
@@ -199,6 +202,7 @@ $highlight = $colors[$folder]['highlight'];
 							<li><a href="/components/buttons.php" <?php echo ( $file == '/components/buttons' ? 'class="sc-active"' : '' ); ?>>Buttons</a></li>
 							<li><a href="/components/cards.php" <?php echo ( $file == '/components/cards' ? 'class="sc-active"' : '' ); ?>>Cards</a></li>
 							<li><a href="/components/chips.php" <?php echo ( $file == '/components/chips' ? 'class="sc-active"' : '' ); ?>>Chips</a></li>
+							<li><a href="/components/data-tables.php" <?php echo ( $file == '/components/data-tables' ? 'class="sc-active"' : '' ); ?>>Data tables</a></li>
 							<li><a href="/components/dialogs.php" <?php echo ( $file == '/components/dialogs' ? 'class="sc-active"' : '' ); ?>>Dialogs</a></li>
 							<li><a href="/components/expansion-panels.php" <?php echo ( $file == '/components/expansion-panels' ? 'class="sc-active"' : '' ); ?>>Expansion panels</a></li>
 							<li><a href="/components/pickers.php" <?php echo ( $file == '/components/pickers' ? 'class="sc-active"' : '' ); ?>>Pickers</a></li>
@@ -207,7 +211,6 @@ $highlight = $colors[$folder]['highlight'];
 							<li><a href="/components/sliders.php" <?php echo ( $file == '/components/sliders' ? 'class="sc-active"' : '' ); ?>>Slider</a></li>
 							<li><a href="/components/snackbars-toasts.php" <?php echo ( $file == '/components/snackbars-toasts' ? 'class="sc-active"' : '' ); ?>>Snackbar &amp; toasts</a></li>
 							<li><a href="/components/steppers.php" <?php echo ( $file == '/components/steppers' ? 'class="sc-active"' : '' ); ?>>Steppers</a></li>
-							<li><a href="/components/tables.php" <?php echo ( $file == '/components/tables' ? 'class="sc-active"' : '' ); ?>>Tables</a></li>
 							<li><a href="/components/tabs.php" <?php echo ( $file == '/components/tabs' ? 'class="sc-active"' : '' ); ?>>Tabs</a></li>
 							<li><a href="/components/textfields.php" <?php echo ( $file == '/components/textfields' ? 'class="sc-active"' : '' ); ?>>Text fields</a></li>
 							<li><a href="/components/tooltips.php" <?php echo ( $file == '/components/tooltips' ? 'class="sc-active"' : '' ); ?>>Tooltips</a></li>

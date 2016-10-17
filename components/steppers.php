@@ -1,7 +1,7 @@
 <?php
 $title = 'Steppers';
 $description = 'Steppers based on Google\'s Material Design. Steppers display a sequence of numbered steps. Steppers can be used for navigation';
-$keywords = 'material design, smaterial, steps, steppers, breadcrumbs';
+$keywords = 'steps, steppers, breadcrumbs';
 
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>

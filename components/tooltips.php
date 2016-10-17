@@ -1,7 +1,7 @@
 <?php
 $title = 'Tooltips';
-$description = 'Tooltips based on Googles Material Design';
-$keywords = 'material design, smaterial, tooltips';
+$description = 'Tooltips based on Google\'s Material Design';
+$keywords = 'tooltips';
 
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>

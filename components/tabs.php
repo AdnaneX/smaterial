@@ -1,7 +1,7 @@
 <?php
 $title = 'Tabs';
 $description = 'Tabs based on Google\'s Material Design';
-$keywords = 'material design, smaterial, tabs';
+$keywords = 'tabs';
 
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>

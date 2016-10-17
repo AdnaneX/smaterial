@@ -1,0 +1,70 @@
+/**************************************
+ * Tables
+ *
+ * http://www.google.com/design/spec/components/data-tables.html
+ **************************************/
+
+$table-header-size: rem-calc(56px);
+$table-content-size: rem-calc(48px);
+$table-column-padding: rem-calc(56px);
+$table-first-column-padding: rem-calc(24px);
+$table-checkbox-size: rem-calc(18px);
+
+table {
+	border-collapse: collapse;
+
+	thead th {
+		color: rgba($black, .54);
+		font-size: rem-calc(12px);
+		font-weight: 500;
+		height: $table-header-size;
+		line-height: $table-header-size;
+		text-align: left;
+		margin: 0 $table-column-padding 0 0;
+		@include box-sizing(border-box);
+
+		&:last-of-type {
+			padding: 0 $table-first-column-padding 0 0;
+		}
+
+		&:hover {
+			background: none;
+		}
+	}
+
+	tbody td {
+		@include box-sizing(border-box);
+		color: rgba($black, .87);
+		font-size: rem-calc(13px);
+		font-weight: 400;
+		height: $table-content-size;
+		line-height: $table-content-size;
+		text-align: left;
+
+		&:last-of-type {
+			padding: 0 $table-first-column-padding 0 0;
+		}
+	}
+
+	.sc-numeric-col {
+		text-align: right;
+	}
+
+	.sc-checkbox-col {
+		padding: 0 $table-first-column-padding;
+
+		input[type="checkbox"].sc-checkbox + label {
+			padding: 0;
+		}
+	}
+
+	&.sc-table-hover {
+		tbody tr {
+			@include transition(background .2s ease-in-out);
+
+			&:hover {
+				background: $grey-200;
+			}
+		}
+	}
+}

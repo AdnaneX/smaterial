@@ -1,7 +1,7 @@
 <?php
 $title = 'Getting started';
 $description = 'How to get started with SMaterial';
-$keywords = 'material design, smaterial, getting started, starting, how to use';
+$keywords = 'getting started, starting, how to use';
 
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>

@@ -1,7 +1,7 @@
 <?php
 $title = 'SCSS mixins';
 $description = 'SCSS mixins to help you make styling easier. Mixins are used for repetitive code and prefixing';
-$keywords = 'material design, smaterial, SCSS mixins';
+$keywords = 'SCSS mixins';
 
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>

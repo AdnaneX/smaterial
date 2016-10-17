@@ -1,12 +1,16 @@
 <?php
 $title = 'Pickers';
 $description = 'Date and time pickers based on Google\'s Material Design. Time picker will adjust to user preference (12 / 24 hour notation)';
-$keywords = 'material design, smaterial, date picker, time picker';
+$keywords = 'date picker, time picker';
 
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>
 <section class="sc-row">
 	<h2>Pickers usage</h2>
+
+	<p class="sc-col sc-xs4 sc-s12 sc-m6">
+		Pickers are still in development.
+	</p>
 </section>
 
 <section class="sc-row">

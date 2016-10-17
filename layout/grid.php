@@ -1,7 +1,7 @@
 <?php
 $title = 'Responsive UI';
 $description = 'Responsive UI (Grid) based on Google\'s Material Design';
-$keywords = 'material design, smaterial, grid, push, pull, offset, columns, hidden, responsive';
+$keywords = ' grid, push, pull, offset, columns, hidden, responsive';
 
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>

@@ -1,7 +1,7 @@
 <?php
 $title = 'Notifications';
 $description = 'Notifications that are based Google\'s Material Design. The notifications have been styled according to Android Nougat';
-$keywords = 'material design, smaterial, notifications function, Android Nougat, Nougat, Android 7, Android N';
+$keywords = 'notifications function, Android Nougat, Nougat, Android 7, Android N';
 
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>

@@ -21,19 +21,11 @@ This command will compress js and scss files.
 ### PHP files
 The website uses PHP files to make working with the menu, headers and footers a lot easier.
 
-To use PHP file you'll need to have a localhost or other server.
+To use PHP files you'll need to have a localhost or other server.
 I would advice to use a localhost (PHP build in server, wamp, xamp or usbwebserver) since this isn't online and therefor private to you only.
 
 After that all you need to do is change `define( 'TEST', false );` to `define( 'TEST', true );`. You can find this in
 `includes/header.php`. This makes sure that some files aren't loaded for example Google Analytics.
-
-#### Don't like to use PHP
-If you don't like to use PHP there is a option to use HTML but it requires a bit of work.
-You have to copy all HTML from `includes/header.html` and replace all PHP code of the file you want to change.
-The PHP code you have to delete are the first 7 lines.
-After replacing the header you need to replace the footer as well.
-The footer is everything from `includes/footer.html` and you need to replace it with the last 2 lines of the file.
-You also have to rename / copy the working file to a `*.html` file.
 
 ### Creating a pull request
 After making your changes please describe what you have changed. This will speed up the process of merging your PR.
@@ -77,6 +69,11 @@ After making your changes please describe what you have changed. This will speed
 - Cards
     - Add card templates
 - Chips
+- Data tables
+    - Fix styling
+    - Add table title
+    - Add pagination
+    - Add class automation
 - Dialogs
     - Add more JavaScript functionality (open / close by JavaScript call)
 - Progress
@@ -94,19 +91,13 @@ After making your changes please describe what you have changed. This will speed
     - Add variables to settings
 - Navigation drawer
     - Add persistent mini
-    - Make profile dropdown button
-    - Profile background image should be able to be dynamically changed (img tag)
-    - Fix margin right on left menu for mobile. 56px between screen edge and menu
-    - Fix click outside menu on large screens
+    - Fix styling for profile more
+    - Add overlay on mobile
 - Slider
     - Add radials
     - Colors should be rgba but creates weird behaviour (like showing track trough thumb)
     - Fix click bug at end of `.sc-slider` slider
     - sc-slider-discrete bubble not working mobile
-- Tables
-    - Fix styling
-    - Add table title
-    - Add pagination
 - Tabs
     - Add mobile scrollable tabs
 - Text fields

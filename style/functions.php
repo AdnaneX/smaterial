@@ -1,7 +1,7 @@
 <?php
 $title = 'SCSS Functions';
 $description = 'SCSS functions to help you make styling easier. Functions are mainly used for repetitive tasks.';
-$keywords = 'material design, smaterial, SCSS functions, calculate px to rem';
+$keywords = 'SCSS functions, calculate px to rem';
 
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>

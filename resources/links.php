@@ -1,7 +1,7 @@
 <?php
 $title = 'Links';
 $description = 'Links that are used to create the SMaterial project';
-$keywords = 'material design, smaterial, links';
+$keywords = 'links';
 
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>

@@ -1,7 +1,7 @@
 <?php
 $title = 'Snackbars &amp; toasts';
 $description = 'Snackbars &amp; toasts based on Google\'s Material Design';
-$keywords = 'material design, smaterial, snackbars, toasts';
+$keywords = 'snackbars, toasts';
 
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>

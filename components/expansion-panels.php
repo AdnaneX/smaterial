@@ -1,7 +1,7 @@
 <?php
 $title = 'Expansion panels';
 $description = 'Expansion panels based on Google\'s Material Design';
-$keywords = 'material design, smaterial, expansion panels';
+$keywords = 'expansion panels';
 
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>

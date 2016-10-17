@@ -1,7 +1,7 @@
 <?php
 $title = 'Appbar';
 $description = 'Appbar with search and more menu based on Google\'s Material Design';
-$keywords = 'material design, smaterial, appbar, search, search slide out, more menu';
+$keywords = 'appbar, search, search slide out, more menu';
 
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>

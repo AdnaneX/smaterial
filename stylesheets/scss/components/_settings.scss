@@ -199,51 +199,6 @@ $notification-background: $background; // $background
  **************************************/
 $drawer-background: $background; // Default $background
 $drawer-hover: $main-color; // Default $main-color
-$drawer-icons-font-size: rem-calc(22.4px); // Default rem-calc(22.4px)
-$drawer-icons-size: rem-calc(48px); // Default rem-calc(48px) Should be the same as default list item height
-$drawer-icons-color: lighten($black, (100% - 54%)); // Default lighten($black, (100% - 54%))
-
-$drawer-full-small-top: $appbar-small-height; // Default $appbar-small-height
-$drawer-full-medium-top: $appbar-medium-height; // Default $appbar-medium-height
-$drawer-full-large-top: 0; // Default 0
-$drawer-full-title-height: rem-calc(64px); // Default rem-calc(64px)
-$drawer-full-title-size: rem-calc(24px); // Default rem-calc(24px)
-$drawer-full-title-margin: rem-calc(-16px) 0 0 0; // Default rem-calc(-16px) 0 0 0
-$drawer-full-title-background: $main-color !important; // Default $main-color
-$drawer-full-title-color: $white; // Default $white
-$drawer-full-profile-medium-margin: rem-calc(-16px) 0 rem-calc(8px) 0 !important; // Default rem-calc(-16px) 0 rem-calc(8px) 0 !important
-$drawer-full-profile-large-margin: 0 0 rem-calc(8px) 0 !important; // Default 0 0 rem-calc(8px) 0 !important
-
-$drawer-floating-small-top: $appbar-small-height; // Default $appbar-small-height
-$drawer-floating-medium-top: rem-calc(56px); // Default rem-calc(56px)
-$drawer-floating-large-top: rem-calc(64px); // Default rem-calc(64px)
-$drawer-floating-z-index: 3; // Default 3
-
-$drawer-right-max-width: 100%; // Default 100%
-$drawer-right-small-top: $appbar-small-height; // Default $appbar-small-height
-$drawer-right-medium-top: $appbar-medium-height; // Default $appbar-medium-height
-$drawer-right-large-top: $appbar-large-height; // Default $appbar-large-height
-
-$drawer-divider-margin: rem-calc(8px) 0; // Default rem-calc(8px) 0
-$drawer-divider-height: rem-calc(1px); // Default rem-calc(1px)
-$drawer-divider-background: lighten($black, (100% - 12%)); // Default lighten($black, (100% - 12%))
-
-$drawer-subheader-color: lighten($black, (100% - 54%)); // Default
-
-$drawer-profile-background: url('/images/drawer-background.jpg') no-repeat center;
-
-$drawer-font-weight: 500; // Default 500
-$drawer-hover-background: $grey-200;
-
-$drawer-profile-margin: rem-calc(-16px) 0 rem-calc(8px) 0; // Default rem-calc(-16px) 0 rem-calc(8px) 0
-$drawer-profile-padding: rem-calc(16px) rem-calc(16px) rem-calc(8px) rem-calc(16px); // Default rem-calc(16px) rem-calc(16px) rem-calc(8px) rem-calc(16px)
-$drawer-profile-img-size: rem-calc(50px); // Default rem-calc(50px)
-$drawer-profile-img-margin: 0 0 rem-calc(5px) 0;
-$drawer-profile-info-total-height: rem-calc(56px); // Default rem-calc(56px)
-$drawer-profile-info-height: $drawer-profile-info-total-height / 2;
-$drawer-profile-info-font-color: $white; // Default $white
-$drawer-profile-info-font-size: rem-calc(14px); // Default rem-calc(14px)
-$drawer-profile-scrim: to top, rgba($grey-900, 0.4) 15%, rgba($white, 0) 33%; // Default to top, rgba($grey-900, 0.4) 15%, rgba($white, 0) 33%
 
 /**************************************
  * Sliders

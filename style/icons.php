@@ -1,7 +1,7 @@
 <?php
 $title = 'Icons';
 $description = 'Icons that are used for Google\'s Material Design. How to use material design icons in your website.';
-$keywords = 'material design, smaterial, icons, font icons';
+$keywords = 'icons, font icons';
 
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>

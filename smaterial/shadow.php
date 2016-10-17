@@ -1,7 +1,7 @@
 <?php
 $title = 'Elevation and shadows';
 $description = 'Elevation and shadows styled to match Google\'s Material Design';
-$keywords = 'material design, smaterial, elevation, shadows';
+$keywords = 'elevation, shadows';
 
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>

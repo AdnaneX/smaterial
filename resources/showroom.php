@@ -1,7 +1,7 @@
 <?php
 $title = 'Showroom';
 $description = 'See what other users have made with SMaterial. Or show your own creativity\'s';
-$keywords = 'material design, smaterial, showroom, show';
+$keywords = 'showroom, show';
 
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>
