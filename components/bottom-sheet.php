@@ -20,7 +20,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		If you click on the button you can see the default bottom sheet / modal in action.
 
-		<button type="button" class="sc-raised-button sc-bottom-trigger" data-sc-trigger="default">Default</button>
+		<button type="button" class="sc-raised-button sc-trigger" data-sc-trigger="default">Default</button>
 	</p>
 
 	<div class="sc-bottom-sheet" id="default">
@@ -50,7 +50,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		If you click on the button you can see the header bottom sheet / modal in action.
 
-		<button type="button" class="sc-raised-button sc-bottom-trigger" data-sc-trigger="header">Header</button>
+		<button type="button" class="sc-raised-button sc-trigger" data-sc-trigger="header">Header</button>
 	</p>
 
 	<div class="sc-bottom-sheet sc-bottom-sheet-header" id="header">
@@ -84,7 +84,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		If you click on the button you can see the grid icons bottom sheet / modal in action.
 
-	<button type="button" class="sc-raised-button sc-bottom-trigger" data-sc-trigger="grid-icons">Grid icons</button>
+	<button type="button" class="sc-raised-button sc-trigger" data-sc-trigger="grid-icons">Grid icons</button>
 	</p>
 
 	<div class="sc-bottom-sheet sc-bottom-sheet-grid" id="grid-icons">
@@ -173,7 +173,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 
 	<p class="sc-col sc-sx4 sc-s12 sc-m6">
 		You can also use a specific bottom sheet styled for music.
-		<button type="button" class="sc-raised-button sc-bottom-trigger" data-sc-trigger="music">Music</button>
+		<button type="button" class="sc-raised-button sc-trigger" data-sc-trigger="music">Music</button>
 	</p>
 
 	<pre class="language-html sc-col sc-xs4 sc-s12 sc-m6">

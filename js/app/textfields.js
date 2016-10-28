@@ -37,6 +37,11 @@ $(document).ready(function() {
 			}
 
 			$( '#' + $id ).trigger( 'click' );
+			/*if( $( '#' + $id ).attr('input') == 'checkbox' || $( '#' + $id ).attr('input') == 'radio' ) {
+				return;
+			} else {
+				$( '#' + $id ).trigger( 'click' );
+			}*/
 		}
 	});
 

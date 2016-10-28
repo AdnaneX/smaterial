@@ -5,26 +5,18 @@
  * http://www.google.com/design/spec/layout/structure.html#structure-toolbars
  **************************************/
 // Title
-$appbar-title-small-padding: rem-calc(12px) 0 rem-calc(12px) 0 !important; // Default rem-calc(12px) 0 rem-calc(12px) 0 !important
-$appbar-title-medium-padding: rem-calc(20px) 0 rem-calc(20px) 0 !important; // Default rem-calc(20px) 0 rem-calc(20px) 0 !important
+$appbar-title-small-padding: rem-calc(12px) 0 rem-calc(12px) rem-calc(16px); // Default rem-calc(12px) 0 rem-calc(12px) 0
+$appbar-title-medium-padding: rem-calc(20px) 0 rem-calc(20px) rem-calc(24px); // Default rem-calc(20px) 0 rem-calc(20px) 0
 
 // Icons
 $appbar-icon-font-size: rem-calc(32px); // Default rem-calc(32px)
 $appbar-icon-small-padding: rem-calc(8px); // Default rem-calc(8px)
 $appbar-icon-medium-padding: rem-calc(16px); // Default rem-calc(16px);
 
-// Element widths
-$appbar-nav-width: 19%; // Default 19%
-$appbar-title-small-width: 71%; // Default 71%
-$appbar-title-medium-width: 50%; // Default 50%
-$appbar-actions-width: 27%; // Default 27%;
-$appbar-menu-width: 4%; // Default 4%
-
 // More menu
 $appbar-more-margin: rem-calc(4px); // Default rem-calc(4px)
 
 .sc-appbar {
-	@extend .sc-row;
 	@include material-shadow(4);
 	background: $appbar-background;
 	color: $appbar-text;
@@ -55,7 +47,8 @@ $appbar-more-margin: rem-calc(4px); // Default rem-calc(4px)
 
 	> div {
 		height: $appbar-small-height;
-		padding: 0 !important;
+		float: left;
+		position: absolute;
 
 		a {
 			color: $appbar-text;
@@ -73,23 +66,30 @@ $appbar-more-margin: rem-calc(4px); // Default rem-calc(4px)
 	}
 
 	.sc-appbar-nav {
-		@extend .sc-col;
-		width: $appbar-nav-width;
+		left: 0;
+		@include square($appbar-small-height);
+
+		@media #{$small-up} {
+			@include square($appbar-medium-height);
+		}
+
+		@media #{$medium-up} {
+			@include square($appbar-large-height);
+		}
 	}
 
 	.sc-appbar-title {
-		@extend .sc-col;
+		left: $appbar-small-height;
 		padding: $appbar-title-small-padding;
-
-		@media #{$medium-up} {
-			width: $appbar-title-medium-width;
-		}
-
-		width: $appbar-title-small-width;
 		@include font($font-size-title, 0, $font-weight-title, $line-height-title, $appbar-title, $letter-spacing-title);
 
 		@media #{$small-up} {
 			padding: $appbar-title-medium-padding;
+			left: $drawer-small-width;
+		}
+
+		@media #{$medium-only} {
+			left: $drawer-medium-width;
 		}
 
 		h1, h2, h3, h4, h5, h6 {
@@ -102,10 +102,13 @@ $appbar-more-margin: rem-calc(4px); // Default rem-calc(4px)
 
 	.sc-appbar-actions {
 		display: none;
-		@extend .sc-col;
+		right: $appbar-small-height;
+
+		@media #{$small-up} {
+			right: $appbar-medium-height;
+		}
 
 		@media #{$medium-up} {
-			width: $appbar-actions-width;
 			display: block;
 		}
 
@@ -124,8 +127,16 @@ $appbar-more-margin: rem-calc(4px); // Default rem-calc(4px)
 	}
 
 	.sc-appbar-menu {
-		@extend .sc-col;
-		width: $appbar-menu-width;
+		@include square($appbar-small-height);
+		right: 0;
+
+		@media #{$small-up} {
+			@include square($appbar-medium-height);
+		}
+
+		@media #{$medium-up} {
+			@include square($appbar-large-height);
+		}
 
 		&-more {
 			@include material-shadow(9);

@@ -32,7 +32,10 @@ After making your changes please describe what you have changed. This will speed
 
 ## DONE
 
+- Bottom navigation
+- Bottom sheet
 - Chips
+- Tabs
 - Tooltips
 - Snackbars & toasts
 
@@ -61,8 +64,9 @@ After making your changes please describe what you have changed. This will speed
 		- Add badges
 - Appbar
     - Add search slide out
+    - Redo styling
+- Bottom navigation
 - Bottom sheet
-    - Fix shadow
 - Buttons
     - Add dropdown buttons
     - Add toggle button actions
@@ -99,7 +103,6 @@ After making your changes please describe what you have changed. This will speed
     - Fix click bug at end of `.sc-slider` slider
     - sc-slider-discrete bubble not working mobile
 - Tabs
-    - Add mobile scrollable tabs
 - Text fields
     - Add select
     - Add autocomplete select

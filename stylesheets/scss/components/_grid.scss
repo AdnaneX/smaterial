@@ -4,16 +4,16 @@
  * http://www.google.com/design/spec/layout/responsive-ui.html
  **************************************/
 $xsmall-only: "only screen and (max-width: #{$xsmall-screen})";
-$small-only: "only screen and (min-width: #{$xsmall-screen}) and (max-width: #{$small-screen})";
-$medium-only: "only screen and (min-width: #{$small-screen}) and (max-width: #{$medium-screen})";
-$large-only: "only screen and (min-width: #{$medium-screen}) and (max-width: #{$large-screen})";
-$xlarge-only: "only screen and (min-width: #{$large-screen}) and (max-width: #{$xlarge-screen})";
+$small-only: "only screen and (min-width: #{$xsmall-screen} + 1px) and (max-width: #{$small-screen})";
+$medium-only: "only screen and (min-width: #{$small-screen} + 1px) and (max-width: #{$medium-screen})";
+$large-only: "only screen and (min-width: #{$medium-screen} + 1px) and (max-width: #{$large-screen})";
+$xlarge-only: "only screen and (min-width: #{$large-screen} + 1px) and (max-width: #{$xlarge-screen})";
 
-$xsmall-up: "only screen and (min-width: #{$xsmall-screen})";
-$small-up: "only screen and (min-width: #{$small-screen})";
-$medium-up: "only screen and (min-width: #{$medium-screen})";
-$large-up: "only screen and (min-width: #{$large-screen})";
-$xlarge-up: "only screen and (min-width: #{$xlarge-screen})";
+$xsmall-up: "only screen and (min-width: #{$xsmall-screen} + 1px)";
+$small-up: "only screen and (min-width: #{$small-screen} + 1px)";
+$medium-up: "only screen and (min-width: #{$medium-screen} + 1px)";
+$large-up: "only screen and (min-width: #{$large-screen} + 1px)";
+$xlarge-up: "only screen and (min-width: #{$xlarge-screen} + 1px)";
 
 $xsmall-down: "only screen and (max-width: #{$xsmall-screen})";
 $small-down: "only screen and (max-width: #{$small-screen})";

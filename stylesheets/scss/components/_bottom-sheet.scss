@@ -31,6 +31,16 @@ $bottom-sheet-music-height: rem-calc(50px); // Default rem-calc(40px)
 	color: $bottom-sheet-font-color;
 	z-index: 4;
 
+	/*@media #{$medium-down} {
+		&:before {
+			position: absolute;
+			top: 0;
+			left: 0;
+			@include square(100%);
+			background: rgba($black, .2);
+		}
+	}*/
+
 	@media #{$medium-only} {
 		@include transition(margin $transition-medium-duration $basic-transition);
 		width: 60%;

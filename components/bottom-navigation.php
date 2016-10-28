@@ -5,11 +5,6 @@ $keywords = 'bottom navigation, bottom menu, bottom shifting';
 
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>
-<style>
-	.sc-bottom-shifting, .sc-bottom-nav {
-		display: none;
-	}
-</style>
 
 <section class="sc-row">
 	<h2>Bottom navigation usage</h2>
@@ -24,7 +19,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	<h3>Default bottom navigation</h3>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
-		<button class="sc-raised-button" id="bottom-nav-button">Show</button>
+		<button class="sc-raised-button sc-trigger" data-sc-trigger="bottom-nav">Show</button>
 	</p>
 
 	<pre class="language-html sc-xs4 sc-s12 sc-m6">
@@ -68,7 +63,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	<h3>Shifting bottom navigation</h3>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
-		<button class="sc-raised-button" id="shifting-nav-button">Show</button>
+		<button class="sc-raised-button sc-trigger" data-sc-trigger="shifting-nav">Show</button>
 	</p>
 
 	<pre class="language-html sc-xs4 sc-s12 sc-m6">
@@ -198,28 +193,5 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		</li>
 	</ul>
 </nav>
-
-<script>
-	var $nav = document.getElementById('bottom-nav'),
-		$shifting = document.getElementById('shifting-nav'),
-		$navButton = document.getElementById('bottom-nav-button'),
-		$shiftingButton = document.getElementById('shifting-nav-button');
-
-	$navButton.onclick = function() {
-		if( $nav.style.display == 'none' ) {
-			$nav.style.display = 'block';
-		} else {
-			$nav.style.display = 'none';
-		}
-	}
-
-	$shiftingButton.onclick = function() {
-		if( $shifting.style.display == 'none' ) {
-			$shifting.style.display = 'block';
-		} else {
-			$shifting.style.display = 'none';
-		}
-	}
-</script>
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.php';

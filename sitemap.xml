@@ -1,133 +1,280 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-    <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
     <url>
-        <loc>http://smaterial.dsuper.nl/</loc>
-        <changefreq>weekly</changefreq>
+        <loc>http://smaterial.dsuper.nl</loc>
+        <lastmod>2016-10-17</lastmod>
+        <changefreq>monthly</changefreq>
+
+        <priority>0.5</priority>
     </url>
     <url>
-        <loc>http://smaterial.dsuper.nl/getting-started.php</loc>
-        <changefreq>weekly</changefreq>
+        <loc>http://smaterial.dsuper.nl/</loc>
+        <lastmod>2016-10-17</lastmod>
+        <changefreq>monthly</changefreq>
+
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>http://smaterial.dsuper.nl/smaterial/getting-started.php</loc>
+        <lastmod>2016-10-17</lastmod>
+        <changefreq>monthly</changefreq>
+
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>http://smaterial.dsuper.nl/smaterial/shadow.php</loc>
+        <lastmod>2016-10-17</lastmod>
+        <changefreq>monthly</changefreq>
+
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>http://smaterial.dsuper.nl/smaterial/news.php</loc>
+        <lastmod>2016-10-17</lastmod>
+        <changefreq>monthly</changefreq>
+
+        <priority>0.5</priority>
     </url>
     <url>
         <loc>http://smaterial.dsuper.nl/style/color.php</loc>
-        <changefreq>weekly</changefreq>
+        <lastmod>2016-10-17</lastmod>
+        <changefreq>monthly</changefreq>
+
+        <priority>0.5</priority>
     </url>
     <url>
         <loc>http://smaterial.dsuper.nl/style/icons.php</loc>
-        <changefreq>weekly</changefreq>
+        <lastmod>2016-10-17</lastmod>
+        <changefreq>monthly</changefreq>
+
+        <priority>0.5</priority>
     </url>
     <url>
         <loc>http://smaterial.dsuper.nl/style/typography.php</loc>
-        <changefreq>weekly</changefreq>
-    </url>
-    <url>
-        <loc>http://smaterial.dsuper.nl/style/shadow.php</loc>
-        <changefreq>weekly</changefreq>
+        <lastmod>2016-10-17</lastmod>
+        <changefreq>monthly</changefreq>
+
+        <priority>0.5</priority>
     </url>
     <url>
         <loc>http://smaterial.dsuper.nl/style/functions.php</loc>
-        <changefreq>weekly</changefreq>
+        <lastmod>2016-10-17</lastmod>
+        <changefreq>monthly</changefreq>
+
+        <priority>0.5</priority>
     </url>
     <url>
         <loc>http://smaterial.dsuper.nl/style/mixins.php</loc>
-        <changefreq>weekly</changefreq>
-    </url>
-    <url>
-        <loc>http://smaterial.dsuper.nl/style/grid.php</loc>
-        <changefreq>weekly</changefreq>
+        <lastmod>2016-10-17</lastmod>
+        <changefreq>monthly</changefreq>
+
+        <priority>0.5</priority>
     </url>
     <url>
         <loc>http://smaterial.dsuper.nl/components/appbar.php</loc>
-        <changefreq>weekly</changefreq>
+        <lastmod>2016-10-17</lastmod>
+        <changefreq>monthly</changefreq>
+
+        <priority>0.5</priority>
     </url>
     <url>
         <loc>http://smaterial.dsuper.nl/components/bottom-navigation.php</loc>
-        <changefreq>weekly</changefreq>
+        <lastmod>2016-10-17</lastmod>
+        <changefreq>monthly</changefreq>
+
+        <priority>0.5</priority>
     </url>
     <url>
         <loc>http://smaterial.dsuper.nl/components/bottom-sheet.php</loc>
-        <changefreq>weekly</changefreq>
+        <lastmod>2016-10-17</lastmod>
+        <changefreq>monthly</changefreq>
+
+        <priority>0.5</priority>
     </url>
     <url>
         <loc>http://smaterial.dsuper.nl/components/buttons.php</loc>
-        <changefreq>weekly</changefreq>
+        <lastmod>2016-10-17</lastmod>
+        <changefreq>monthly</changefreq>
+
+        <priority>0.5</priority>
     </url>
     <url>
         <loc>http://smaterial.dsuper.nl/components/cards.php</loc>
-        <changefreq>weekly</changefreq>
+        <lastmod>2016-10-17</lastmod>
+        <changefreq>monthly</changefreq>
+
+        <priority>0.5</priority>
     </url>
     <url>
         <loc>http://smaterial.dsuper.nl/components/chips.php</loc>
-        <changefreq>weekly</changefreq>
+        <lastmod>2016-10-17</lastmod>
+        <changefreq>monthly</changefreq>
+
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>http://smaterial.dsuper.nl/components/data-tables.php</loc>
+        <lastmod>2016-10-17</lastmod>
+        <changefreq>monthly</changefreq>
+
+        <priority>0.5</priority>
     </url>
     <url>
         <loc>http://smaterial.dsuper.nl/components/dialogs.php</loc>
-        <changefreq>weekly</changefreq>
+        <lastmod>2016-10-17</lastmod>
+        <changefreq>monthly</changefreq>
+
+        <priority>0.5</priority>
     </url>
     <url>
-        <loc>http://smaterial.dsuper.nl/components/navigation-drawer.php</loc>
-        <changefreq>weekly</changefreq>
+        <loc>http://smaterial.dsuper.nl/components/expansion-panels.php</loc>
+        <lastmod>2016-10-17</lastmod>
+        <changefreq>monthly</changefreq>
+
+        <priority>0.5</priority>
     </url>
     <url>
         <loc>http://smaterial.dsuper.nl/components/pickers.php</loc>
-        <changefreq>weekly</changefreq>
+        <lastmod>2016-10-17</lastmod>
+        <changefreq>monthly</changefreq>
+
+        <priority>0.5</priority>
     </url>
     <url>
         <loc>http://smaterial.dsuper.nl/components/progress-activity.php</loc>
-        <changefreq>weekly</changefreq>
+        <lastmod>2016-10-17</lastmod>
+        <changefreq>monthly</changefreq>
+
+        <priority>0.5</priority>
     </url>
     <url>
         <loc>http://smaterial.dsuper.nl/components/selection-controls.php</loc>
-        <changefreq>weekly</changefreq>
+        <lastmod>2016-10-17</lastmod>
+        <changefreq>monthly</changefreq>
+
+        <priority>0.5</priority>
     </url>
     <url>
         <loc>http://smaterial.dsuper.nl/components/sliders.php</loc>
-        <changefreq>weekly</changefreq>
+        <lastmod>2016-10-17</lastmod>
+        <changefreq>monthly</changefreq>
+
+        <priority>0.5</priority>
     </url>
     <url>
         <loc>http://smaterial.dsuper.nl/components/snackbars-toasts.php</loc>
-        <changefreq>weekly</changefreq>
+        <lastmod>2016-10-17</lastmod>
+        <changefreq>monthly</changefreq>
+
+        <priority>0.5</priority>
     </url>
     <url>
         <loc>http://smaterial.dsuper.nl/components/steppers.php</loc>
-        <changefreq>weekly</changefreq>
-    </url>
-    <url>
-        <loc>http://smaterial.dsuper.nl/components/tables.php</loc>
-        <changefreq>weekly</changefreq>
+        <lastmod>2016-10-17</lastmod>
+        <changefreq>monthly</changefreq>
+
+        <priority>0.5</priority>
     </url>
     <url>
         <loc>http://smaterial.dsuper.nl/components/tabs.php</loc>
-        <changefreq>weekly</changefreq>
+        <lastmod>2016-10-17</lastmod>
+        <changefreq>monthly</changefreq>
+
+        <priority>0.5</priority>
     </url>
     <url>
         <loc>http://smaterial.dsuper.nl/components/textfields.php</loc>
-        <changefreq>weekly</changefreq>
+        <lastmod>2016-10-17</lastmod>
+        <changefreq>monthly</changefreq>
+
+        <priority>0.5</priority>
     </url>
     <url>
         <loc>http://smaterial.dsuper.nl/components/tooltips.php</loc>
-        <changefreq>weekly</changefreq>
+        <lastmod>2016-10-17</lastmod>
+        <changefreq>monthly</changefreq>
+
+        <priority>0.5</priority>
     </url>
     <url>
-        <loc>http://smaterial.dsuper.nl/resources/notifications.php</loc>
-        <changefreq>weekly</changefreq>
+        <loc>http://smaterial.dsuper.nl/layout/grid.php</loc>
+        <lastmod>2016-10-17</lastmod>
+        <changefreq>monthly</changefreq>
+
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>http://smaterial.dsuper.nl/patterns/navigation-drawer.php</loc>
+        <lastmod>2016-10-17</lastmod>
+        <changefreq>monthly</changefreq>
+
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>http://smaterial.dsuper.nl/patterns/notifications.php</loc>
+        <lastmod>2016-10-17</lastmod>
+        <changefreq>monthly</changefreq>
+
+        <priority>0.5</priority>
     </url>
     <url>
         <loc>http://smaterial.dsuper.nl/resources/templates.php</loc>
-        <changefreq>weekly</changefreq>
+        <lastmod>2016-10-17</lastmod>
+        <changefreq>monthly</changefreq>
+
+        <priority>0.5</priority>
     </url>
     <url>
         <loc>http://smaterial.dsuper.nl/resources/links.php</loc>
-        <changefreq>weekly</changefreq>
+        <lastmod>2016-10-17</lastmod>
+        <changefreq>monthly</changefreq>
+
+        <priority>0.5</priority>
     </url>
     <url>
-        <loc>http://smaterial.dsuper.nl/showroom.php</loc>
-        <changefreq>weekly</changefreq>
+        <loc>http://smaterial.dsuper.nl/resources/showroom.php</loc>
+        <lastmod>2016-10-17</lastmod>
+        <changefreq>monthly</changefreq>
+
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>http://smaterial.dsuper.nl/smaterial-css.zip</loc>
+        <lastmod>2016-10-17</lastmod>
+        <changefreq>monthly</changefreq>
+
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>http://smaterial.dsuper.nl/smaterial-scss.zip</loc>
+        <lastmod>2016-10-17</lastmod>
+        <changefreq>monthly</changefreq>
+
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>http://smaterial.dsuper.nl/www.google.com/design/spec/layout/responsive-ui.html</loc>
+        <lastmod>2016-10-17</lastmod>
+        <changefreq>monthly</changefreq>
+
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>http://smaterial.dsuper.nl/components/sidenav.php</loc>
+        <lastmod>2016-10-17</lastmod>
+        <changefreq>monthly</changefreq>
+
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>http://smaterial.dsuper.nl/components/tables.php</loc>
+        <lastmod>2016-10-17</lastmod>
+        <changefreq>monthly</changefreq>
+
+        <priority>0.5</priority>
     </url>
 </urlset>

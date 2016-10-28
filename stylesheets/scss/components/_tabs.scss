@@ -4,30 +4,46 @@
  * https://material.google.com/components/tabs.html
  **************************************/
 $tab-indicator-size: rem-calc(2px);
+$tab-height: rem-calc(48px);
+$tab-icon-size: rem-calc(24px);
+$tab-icon-text-height: rem-calc(72px);
+$tab-padding: rem-calc(12px);
 
 .sc-tabs {
 	@include material-shadow(4);
 	background: $tab-color;
-	overflow: hidden;
+	overflow: auto;
+	overflow-y: hidden;
 	position: fixed;
 	top: $appbar-small-height;
 	width: 100%;
-	z-index: 1;
+	z-index: 2;
+	left: 0;
+	right: 0;
+	white-space: nowrap;
 
 	@media #{$medium-only} {
-		top: $appbar-medium-height
+		width: calc(100% - #{$drawer-medium-width} + #{rem-calc(1px)});
+		left: calc(#{$drawer-medium-width} - #{rem-calc(1px)});
+		top: $appbar-medium-height;
 	}
 
 	@media #{$medium-up} {
-		left: rem-calc(320px);
+		overflow: hidden;
+		width: calc(100% - #{$drawer-small-width} + #{rem-calc(1px)});
+		left: calc(#{$drawer-small-width} - #{rem-calc(1px)});
 		top: $appbar-large-height;
+
+		&:hover {
+			overflow: auto;
+			overflow-y: hidden;
+		}
 	}
 
 	.sc-tab, .sc-tab-icon, .sc-tab-icon-text {
 		border-bottom: $tab-indicator-size solid $tab-color;
 		color: $tab-font-color;
-		display: block;
-		float: left;
+		display: inline-block;
 		font-size: rem-calc(14px);
 		font-weight: 500;
 		max-width: rem-calc(264px);
@@ -53,26 +69,26 @@ $tab-indicator-size: rem-calc(2px);
 		}
 
 		.material-icons {
-			@include square(rem-calc(24px));
-			font-size: rem-calc(24px);
+			@include square($tab-icon-size);
+			font-size: $tab-icon-size;
 		}
 	}
 
 	.sc-tab {
-		height: rem-calc(48px);
-		line-height: rem-calc(48px);
-		padding: 0 rem-calc(12px) rem-calc(20px) rem-calc(12px);
+		height: $tab-height;
+		line-height: $tab-height;
+		padding: 0 $tab-padding rem-calc(20px) $tab-padding;
 	}
 
 	.sc-tab-icon {
-		height: rem-calc(48px);
-		line-height: rem-calc(48px);
-		padding: 0 0 rem-calc(12px) 0;
+		height: $tab-height;
+		line-height: $tab-height;
+		padding: 0 $tab-indicator-size rem-calc(12px) $tab-indicator-size;
 	}
 
 	.sc-tab-icon-text {
 		height: rem-calc(72px);
-		padding: rem-calc(10px) 0 rem-calc(16px) 0;
+		padding: rem-calc(10px) $tab-padding rem-calc(16px) $tab-padding;
 
 		span {
 			display: block;

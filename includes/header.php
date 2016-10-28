@@ -132,10 +132,10 @@ $keywords .= ', smaterial, css, scss, material design';
 		if( $_SERVER['PHP_SELF'] === '/components/tabs.php' ) {
 			?>
 			<div class="sc-tabs">
-				<a href="#" class="sc-tab-icon-text"><i class="material-icons">home</i><span>Example 1</span></a>
-				<a href="#" class="sc-tab-icon-text"><i class="material-icons">home</i><span>Example 2</span></a>
-				<a href="#" class="sc-tab-icon-text"><i class="material-icons">home</i><span>Example 3</span></a>
-				<a href="#" class="sc-tab-icon-text"><i class="material-icons">home</i><span>Example 4</span></a>
+					<a href="#" class="sc-tab-icon-text"><i class="material-icons">home</i><span>Example 1</span></a>
+					<a href="#" class="sc-tab-icon-text"><i class="material-icons">home</i><span>Example 2</span></a>
+					<a href="#" class="sc-tab-icon-text"><i class="material-icons">home</i><span>Example 3</span></a>
+					<a href="#" class="sc-tab-icon-text"><i class="material-icons">home</i><span>Example 4</span></a>
 			</div>
 			<?php
 		}
@@ -167,8 +167,8 @@ $keywords .= ', smaterial, css, scss, material design';
 						<img src="/images/profile-icon.jpg" class="sc-drawer-profile-img">
 						<div class="sc-drawer-profile-name">John Doe</div>
 						<div class="sc-drawer-profile-email">johndoe&#64;gmail.com</div>
-						<div class="sc-drawer-profile-more">
-							<i class="material-icons sc-arrow sc-trigger" data-sc-trigger="sc-drawer">arrow_drop_down</i>
+						<div id="sc-drawer-profile-more" class="sc-drawer-profile-more">
+							<i class="material-icons sc-trigger" data-sc-trigger="sc-drawer-profile-more">arrow_drop_down</i>
 
 							<ul>
 								<li><a href="#">Facebook</a></li>
@@ -205,6 +205,7 @@ $keywords .= ', smaterial, css, scss, material design';
 							<li><a href="/components/data-tables.php" <?php echo ( $file == '/components/data-tables' ? 'class="sc-active"' : '' ); ?>>Data tables</a></li>
 							<li><a href="/components/dialogs.php" <?php echo ( $file == '/components/dialogs' ? 'class="sc-active"' : '' ); ?>>Dialogs</a></li>
 							<li><a href="/components/expansion-panels.php" <?php echo ( $file == '/components/expansion-panels' ? 'class="sc-active"' : '' ); ?>>Expansion panels</a></li>
+							<li><a href="/components/grid-lists.php" <?php echo ( $file == '/components/grid-lists' ? 'class="sc-active"' : '' ); ?>>Grid lists</a></li>
 							<li><a href="/components/pickers.php" <?php echo ( $file == '/components/pickers' ? 'class="sc-active"' : '' ); ?>>Pickers</a></li>
 							<li><a href="/components/progress-activity.php" <?php echo ( $file == '/components/progress-activity' ? 'class="sc-active"' : '' ); ?>>Progress &amp; activity</a></li>
 							<li><a href="/components/selection-controls.php" <?php echo ( $file == '/components/selection-controls' ? 'class="sc-active"' : '' ); ?>>Selection controls</a></li>

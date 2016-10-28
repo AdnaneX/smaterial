@@ -7,14 +7,12 @@
 $drawer-padding: rem-calc(16px);
 $drawer-item-height: rem-calc(48px);
 $drawer-icon-size: rem-calc(24px);
-$drawer-small-width: rem-calc(280px);
-$drawer-medium-width: rem-calc(320px);
 $drawer-profile-img: rem-calc(40px);
 $drawer-profile-top: $drawer-padding;
 $drawer-profile-content-height: rem-calc(56px);
 $drawer-profile-bottom-padding: rem-calc(8px);
 $drawer-profile-scrim: to top, rgba($grey-900, 0.4) 15%, rgba($white, 0) 33%;
-//$drawer-profile-height: #{$drawer-padding} + #{$drawer-profile-img} + #{$drawer-profile-content-height} + #{$drawer-profile-bottom-padding};
+$drawer-profile-height: $drawer-padding + $drawer-profile-img + $drawer-profile-content-height + $drawer-profile-bottom-padding;
 
 .sc-drawer {
 	position: fixed;
@@ -28,13 +26,12 @@ $drawer-profile-scrim: to top, rgba($grey-900, 0.4) 15%, rgba($white, 0) 33%;
 		width: $drawer-medium-width;
 	}
 
-	/*@media #{$medium-down} {
+	/*@media #{$small-down} {
 		&:before {
 			content: '';
-			display: block;
-			position: absolute;
-			left: 0;
-			top: 0;
+			display: none;
+			position: fixed;
+			margin: 0 0 0 $drawer-small-width;
 			width: 100%;
 			height: 100%;
 			background: rgba($black, .4);
@@ -64,12 +61,15 @@ $drawer-profile-scrim: to top, rgba($grey-900, 0.4) 15%, rgba($white, 0) 33%;
 		margin: 0 0 0 -102%;
 		@include transition(margin $transition-small-duration $basic-transition);
 
+		@media #{$small-up} {
+			margin: 0;
+		}
+
 		@media #{$medium-only} {
 			@include transition(margin $transition-medium-duration $basic-transition);
 		}
 
 		@media #{$medium-up} {
-			margin: 0;
 			@include transition(margin $transition-large-duration $basic-transition);
 		}
 
@@ -321,19 +321,20 @@ $drawer-profile-scrim: to top, rgba($grey-900, 0.4) 15%, rgba($white, 0) 33%;
 		.sc-drawer-header {
 			padding: 0 0 $drawer-profile-bottom-padding 0;
 			margin: 0 0 $drawer-profile-bottom-padding 0;
-			//height: $drawer-profile-height;
+			height: $drawer-profile-height;
 
 			.sc-drawer-profile-background {
 				top: 0;
 				left: 0;
 				width: 100%;
+				height: $drawer-profile-height;
 			}
 
 			.sc-scrim {
 				background: -moz-linear-gradient($drawer-profile-scrim);
 				background: -webkit-linear-gradient($drawer-profile-scrim);
 				background: linear-gradient($drawer-profile-scrim);
-				bottom: 0;
+				bottom: $drawer-profile-bottom-padding;
 				content: '';
 				left: 0;
 				position: absolute;
@@ -375,12 +376,16 @@ $drawer-profile-scrim: to top, rgba($grey-900, 0.4) 15%, rgba($white, 0) 33%;
 			}
 
 			.sc-drawer-profile-more {
-				@include square($drawer-profile-content-height);
+				height: calc(#{$drawer-profile-content-height} / 2);
 				line-height: $drawer-profile-content-height;
 				right: $drawer-padding;
-				top: calc(#{$drawer-profile-img} + #{$drawer-padding} + #{$drawer-profile-content-height});
+				top: calc(#{$drawer-profile-img} + #{$drawer-padding} + (#{$drawer-profile-content-height} / 2));
 				text-align: right;
-				color: $white;
+
+				.material-icons {
+					margin: calc((#{$drawer-profile-content-height} / 2) * -1) 0 0 0;
+					color: $white;
+				}
 			}
 		}
 
@@ -390,10 +395,9 @@ $drawer-profile-scrim: to top, rgba($grey-900, 0.4) 15%, rgba($white, 0) 33%;
 	}
 
 	&.sc-expanded {
-		@include transform(none);
-
-		@media #{$medium-down} {
+		@media #{$small-down} {
 			&:before {
+				display: block;
 		 		@include opacity(1);
 			}
 		}

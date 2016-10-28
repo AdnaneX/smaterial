@@ -112,7 +112,8 @@ $appbar-title: $white; // Default $white
  * Bottom navigation
  **************************************/
 $bottom-nav-background: $main-color; // Default $main-color
-$bottom-nav-font-color: $white; // Default $white
+$bottom-nav-off-color: rgba($white, .7); // Default rgba($white, .7)
+$bottom-nav-on-color: $white; // Default $white
 
 /**************************************
  * Bottom sheet
@@ -150,6 +151,12 @@ $chips-delete-cross: $chips-background; // Default $chips-background
 $chips-delete-cross-hover: $chips-background-hover; // Default $chips-background-hover
 $chips-delete-background: rgba($black, .54); // Default rgba($black, .54)
 $chips-delete-background-hover: $chips-font-hover-color; // Default $chips-font-hover-color
+
+/**************************************
+ * Grid lists
+ **************************************/
+$grid-background: rgba($black, .3); // Default rgba($black, .3)
+$grid-font-color: $white; // Default $white
 
 /**************************************
  * Pickers
@@ -199,6 +206,8 @@ $notification-background: $background; // $background
  **************************************/
 $drawer-background: $background; // Default $background
 $drawer-hover: $main-color; // Default $main-color
+$drawer-small-width: rem-calc(280px);
+$drawer-medium-width: rem-calc(320px);
 
 /**************************************
  * Sliders
