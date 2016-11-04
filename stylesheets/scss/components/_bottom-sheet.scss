@@ -73,31 +73,29 @@ $bottom-sheet-music-height: rem-calc(50px); // Default rem-calc(40px)
 				margin: 0 rem-calc(32px) 0 0 ;
 				vertical-align: middle;
 			}
-		}
-	}
 
-	&-header {
-		padding: 0 rem-calc(16px) rem-calc(8px) rem-calc(16px);
-
-		ul {
-			li {
-				&.sc-header {
-					color: $bottom-sheet-header-font-color;
-					height: rem-calc(56px);
-				}
-
-				&.sc-divider {
-					margin: rem-calc(7px) rem-calc(-16px) rem-calc(8px) rem-calc(-16px);
-				}
+			&.sc-divider {
+				margin: rem-calc(7px) rem-calc(-16px) rem-calc(8px) rem-calc(-16px);
 			}
 		}
 	}
 
-	&-grid {
-		padding: rem-calc(16px) rem-calc(24px) rem-calc(24px) rem-calc(24px);
+	@if( in-array( 'header', $bottom-sheet ) ) {
+		&-header {
+			padding: 0 rem-calc(16px) rem-calc(8px) rem-calc(16px);
 
-		ul {
-			li {
+			ul li.sc-header {
+				color: $bottom-sheet-header-font-color;
+				height: rem-calc(56px);
+			}
+		}
+	}
+
+	@if( in-array( 'grid', $bottom-sheet ) ) {
+		&-grid {
+			padding: rem-calc(16px) rem-calc(24px) rem-calc(24px) rem-calc(24px);
+
+			ul li {
 				height: rem-calc(64px);
 				margin: 0 0 rem-calc(16px) 0;
 
@@ -130,79 +128,81 @@ $bottom-sheet-music-height: rem-calc(50px); // Default rem-calc(40px)
 		}
 	}
 
-	&-music {
-		height: $bottom-sheet-music-height;
+	@if( in-array( 'music', $bottom-sheet ) ) {
+		&-music {
+			height: $bottom-sheet-music-height;
 
-		img {
-			@include square($bottom-sheet-music-image-size);
-			position: absolute;
-			top: calc( #{$bottom-sheet-music-height} - #{$bottom-sheet-music-image-size} );
-			left: 0;
-		}
-
-		.sc-determinate {
-			background: transparent;
-			top: calc( #{$bottom-sheet-music-height} - #{$bottom-sheet-music-image-size} );
-			left: $bottom-sheet-music-image-size;
-			right: 0;
-			position: absolute;
-			width: calc(100% - #{$bottom-sheet-music-image-size});
-		}
-
-		.sc-info {
-			position: absolute;
-			top: rem-calc(5px);
-			padding: 0 rem-calc(10px);
-			left: $bottom-sheet-music-image-size;
-			width: 75%;
-			line-height: $bottom-sheet-music-height;
-
-			@media #{$medium-up} {
-				width: 50%;
+			img {
+				@include square($bottom-sheet-music-image-size);
+				position: absolute;
+				top: calc(#{$bottom-sheet-music-height} - #{$bottom-sheet-music-image-size});
+				left: 0;
 			}
 
-			.sc-band {
-				font-size: rem-calc(16px);
+			.sc-determinate {
+				background: transparent;
+				top: calc(#{$bottom-sheet-music-height} - #{$bottom-sheet-music-image-size});
+				left: $bottom-sheet-music-image-size;
+				right: 0;
+				position: absolute;
+				width: calc(100% - #{$bottom-sheet-music-image-size});
 			}
 
-			.sc-track {
-				font-size: rem-calc(14px);
-				color: rgba($black, .38);
-			}
+			.sc-info {
+				position: absolute;
+				top: rem-calc(5px);
+				padding: 0 rem-calc(10px);
+				left: $bottom-sheet-music-image-size;
+				width: 75%;
+				line-height: $bottom-sheet-music-height;
 
-			> div {
-				width: 100%;
+				@media #{$medium-up} {
+					width: 50%;
+				}
 
-				@media #{$medium-down} {
-					float: left;
-					width: auto;
+				.sc-band {
+					font-size: rem-calc(16px);
+				}
+
+				.sc-track {
+					font-size: rem-calc(14px);
+					color: rgba($black, .38);
+				}
+
+				> div {
+					width: 100%;
+
+					@media #{$medium-down} {
+						float: left;
+						width: auto;
+					}
 				}
 			}
-		}
 
-		.sc-controls {
-			width: calc(100% - 75% - #{$bottom-sheet-music-image-size});
-			position: absolute;
-			left: calc(#{$bottom-sheet-music-image-size} + 50%);
-			top: rem-calc(5px);
-			line-height: $bottom-sheet-music-height;
-
-			.material-icons {
-				width: calc(100% / 3.1); // TODO fix somehow
-				height: 100%;
-				text-align: center;
-				color: rgba($black, .54);
-			}
-
-			@media #{$medium-down} {
-				width: calc(100% - 50% - #{$bottom-sheet-music-image-size});
-
-				.material-icons:first-of-type, .material-icons:last-of-type {
-					display: none;
-				}
+			.sc-controls {
+				width: calc(100% - 75% - #{$bottom-sheet-music-image-size});
+				position: absolute;
+				left: calc(#{$bottom-sheet-music-image-size} + 50%);
+				top: rem-calc(5px);
+				line-height: $bottom-sheet-music-height;
 
 				.material-icons {
-					width: 100%;
+					width: calc(100% / 3.1); // TODO fix somehow
+					height: 100%;
+					text-align: center;
+					color: rgba($black, .54);
+				}
+
+				@media #{$medium-down} {
+					width: calc(100% - 50% - #{$bottom-sheet-music-image-size});
+
+					.material-icons:first-of-type, .material-icons:last-of-type {
+						display: none;
+					}
+
+					.material-icons {
+						width: 100%;
+					}
 				}
 			}
 		}

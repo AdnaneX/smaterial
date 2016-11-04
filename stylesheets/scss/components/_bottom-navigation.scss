@@ -63,52 +63,56 @@ $bottom-nav-icon-size: rem-calc(24px); // Default rem-calc(24px)
 	}
 }
 
-.sc-bottom-nav ul li a {
-	font-size: rem-calc(12px);
-	height: $bottom-nav-height;
-	max-width: rem-calc(168px);
-	min-width: rem-calc(80px);
-	padding: rem-calc(8px) rem-calc(12px) rem-calc(10px) rem-calc(12px);
+@if( in-array( 'bottom-nav', $bottom-nav ) ) {
+	.sc-bottom-nav ul li a {
+		font-size: rem-calc(12px);
+		height: $bottom-nav-height;
+		max-width: rem-calc(168px);
+		min-width: rem-calc(80px);
+		padding: rem-calc(8px) rem-calc(12px) rem-calc(10px) rem-calc(12px);
 
-	@media #{$medium-up} {
-		min-width: rem-calc(120px);
-	}
+		@media #{$medium-up} {
+			min-width: rem-calc(120px);
+		}
 
-	.material-icons {
-		font-size: $bottom-nav-icon-size;
-		@include square($bottom-nav-icon-size);
-	}
+		.material-icons {
+			font-size: $bottom-nav-icon-size;
+			@include square($bottom-nav-icon-size);
+		}
 
-	&.sc-active {
-		font-size: rem-calc(14px);
-		padding: rem-calc(6px) rem-calc(12px) rem-calc(10px) rem-calc(12px);
+		&.sc-active {
+			font-size: rem-calc(14px);
+			padding: rem-calc(6px) rem-calc(12px) rem-calc(10px) rem-calc(12px);
+		}
 	}
 }
 
-.sc-bottom-shifting ul li a {
-	height: $bottom-nav-height;
-	max-width: rem-calc(96px);
-	min-width: rem-calc(56px);
-	padding: rem-calc(16px) 0;
+@if( in-array( 'bottom-shifting', $bottom-nav ) ) {
+	.sc-bottom-shifting ul li a {
+		height: $bottom-nav-height;
+		max-width: rem-calc(96px);
+		min-width: rem-calc(56px);
+		padding: rem-calc(16px) 0;
 
-	.material-icons {
-		font-size: $bottom-nav-icon-size;
-		@include square($bottom-nav-icon-size);
-	}
-
-	.sc-content {
-		display: none;
-	}
-
-	&.sc-active {
-		font-size: rem-calc(14px);
-		max-width: rem-calc(168px);
-		min-width: rem-calc(96px);
-		padding: rem-calc(6px) 0 rem-calc(10px) 0;
+		.material-icons {
+			font-size: $bottom-nav-icon-size;
+			@include square($bottom-nav-icon-size);
+		}
 
 		.sc-content {
-			display: block;
-			margin: rem-calc(6px) 0 0 0;
+			display: none;
+		}
+
+		&.sc-active {
+			font-size: rem-calc(14px);
+			max-width: rem-calc(168px);
+			min-width: rem-calc(96px);
+			padding: rem-calc(6px) 0 rem-calc(10px) 0;
+
+			.sc-content {
+				display: block;
+				margin: rem-calc(6px) 0 0 0;
+			}
 		}
 	}
 }

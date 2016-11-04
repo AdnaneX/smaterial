@@ -17,7 +17,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		<h3>Default dialog</h3>
 
 		<p class="sc-col sc-xs4 sc-s12 sc-m6">
-			<button type="button" class="sc-raised-button sc-dialog-trigger" data-sc-trigger="default">Default</button>
+			<button type="button" class="sc-raised-button sc-trigger" data-sc-trigger="default">Default</button>
 		</p>
 
 		<div class="sc-col sc-xs4 sc-s12 sc-m6">
@@ -36,8 +36,8 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 			</div>
 
 			<div class="sc-dialog-actions">
-				<button type="button" data-ripple-color="#4CAF50" data-sc-trigger="default" class="sc-flat-button sc-ripple sc-dialog-trigger">Agree</button>
-				<button type="button" data-ripple-color="#F44336" data-sc-trigger="default" class="sc-flat-button sc-ripple sc-dialog-trigger">Disagree</button>
+				<button type="button" data-sc-trigger="default" class="sc-flat-button sc-trigger">Agree</button>
+				<button type="button" data-sc-trigger="default" class="sc-flat-button sc-trigger">Disagree</button>
 			</div>
 		</div>
 	</section>
@@ -46,7 +46,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		<h3>Fullscreen dialog</h3>
 
 		<p class="sc-col sc-xs4 sc-s12 sc-m6">
-			<button type="button" class="sc-raised-button sc-dialog-trigger" data-sc-trigger="fullscreen">Full screen</button>
+			<button type="button" class="sc-raised-button sc-trigger" data-sc-trigger="fullscreen">Full screen</button>
 		</p>
 
 		<div class="sc-dialog sc-dialog-fullscreen" id="fullscreen">
@@ -61,8 +61,8 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 			</div>
 
 			<div class="sc-dialog-actions">
-				<button type="button" data-ripple-color="#4CAF50" data-sc-trigger="fullscreen" class="sc-flat-button sc-ripple sc-dialog-trigger">Agree</button>
-				<button type="button" data-ripple-color="#F44336" data-sc-trigger="fullscreen" class="sc-flat-button sc-ripple sc-dialog-trigger">Disagree</button>
+				<button type="button" data-sc-trigger="fullscreen" class="sc-flat-button sc-trigger">Agree</button>
+				<button type="button" data-sc-trigger="fullscreen" class="sc-flat-button sc-trigger">Disagree</button>
 			</div>
 		</div>
 	</section>

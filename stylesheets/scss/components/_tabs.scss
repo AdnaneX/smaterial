@@ -33,7 +33,9 @@ $tab-padding: rem-calc(12px);
 		width: calc(100% - #{$drawer-small-width} + #{rem-calc(1px)});
 		left: calc(#{$drawer-small-width} - #{rem-calc(1px)});
 		top: $appbar-large-height;
+	}
 
+	@media #{$large-up} {
 		&:hover {
 			overflow: auto;
 			overflow-y: hidden;
@@ -74,26 +76,32 @@ $tab-padding: rem-calc(12px);
 		}
 	}
 
-	.sc-tab {
-		height: $tab-height;
-		line-height: $tab-height;
-		padding: 0 $tab-padding rem-calc(20px) $tab-padding;
+	@if( in-array( 'tab', $tab ) ) {
+		.sc-tab {
+			height: $tab-height;
+			line-height: $tab-height;
+			padding: 0 $tab-padding rem-calc(20px) $tab-padding;
+		}
 	}
 
-	.sc-tab-icon {
-		height: $tab-height;
-		line-height: $tab-height;
-		padding: 0 $tab-indicator-size rem-calc(12px) $tab-indicator-size;
+	@if( in-array( 'tab-icon', $tab ) ) {
+		.sc-tab-icon {
+			height: $tab-height;
+			line-height: $tab-height;
+			padding: 0 $tab-indicator-size rem-calc(12px) $tab-indicator-size;
+		}
 	}
 
-	.sc-tab-icon-text {
-		height: rem-calc(72px);
-		padding: rem-calc(10px) $tab-padding rem-calc(16px) $tab-padding;
+	@if( in-array( 'tab-icon-text', $tab ) ) {
+		.sc-tab-icon-text {
+			height: rem-calc(72px);
+			padding: rem-calc(10px) $tab-padding rem-calc(16px) $tab-padding;
 
-		span {
-			display: block;
-			margin: rem-calc(10px) 0 0 0;
-			width: 100%;
+			span {
+				display: block;
+				margin: rem-calc(10px) 0 0 0;
+				width: 100%;
+			}
 		}
 	}
 }

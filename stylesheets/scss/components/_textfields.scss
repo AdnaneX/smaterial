@@ -98,31 +98,33 @@ $textfield-floating-font-size: rem-calc(16px); // Default rem-calc(16px)
 $textfield-floating-label-font-size: rem-calc(12px); // Default rem-calc(12px);
 
 // Floating inputs
-.sc-floating-input {
-	height: $textfield-floating-height;
-	padding: $textfield-floating-padding 0 $textfield-floating-divider 0;
+@if( in-array( 'floating', $textfield ) ) {
+	.sc-floating-input {
+		height: $textfield-floating-height;
+		padding: $textfield-floating-padding 0 $textfield-floating-divider 0;
 
-	input[type="text"], input[type="password"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="url"], textarea {
-		bottom: $textfield-floating-divider;
-		font-size: $textfield-floating-font-size;
-		padding: $textfield-floating-divider 0;
+		input[type="text"], input[type="password"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="url"], textarea {
+			bottom: $textfield-floating-divider;
+			font-size: $textfield-floating-font-size;
+			padding: $textfield-floating-divider 0;
 
-		&:active, &:focus {
-			+ label {
+			&:active, &:focus {
+				+ label {
+					top: $textfield-floating-padding;
+					font-size: $textfield-floating-label-font-size;
+				}
+			}
+		}
+
+		label {
+			top: calc(#{$textfield-floating-padding} + #{$textfield-floating-font-size} + #{$textfield-floating-divider});
+			font-size: $textfield-floating-font-size;
+			font-weight: 400;
+
+			&.sc-active {
 				top: $textfield-floating-padding;
 				font-size: $textfield-floating-label-font-size;
 			}
-		}
-	}
-
-	label {
-		top: calc(#{$textfield-floating-padding} + #{$textfield-floating-font-size} + #{$textfield-floating-divider});
-		font-size: $textfield-floating-font-size;
-		font-weight: 400;
-
-		&.sc-active {
-			top: $textfield-floating-padding;
-			font-size: $textfield-floating-label-font-size;
 		}
 	}
 }
@@ -133,32 +135,34 @@ $textfield-floating-dense-divider: rem-calc(4px); // Default rem-calc(4x)
 $textfield-floating-dense-font-size: rem-calc(13px); // Default rem-calc(13px)
 $textfield-floating-dense-label-font-size: rem-calc(12px); // Default rem-calc(12px);
 
-// Floating inputs
-.sc-floating-dense-input {
-	height: $textfield-floating-dense-height;
-	padding: $textfield-floating-dense-padding 0 $textfield-floating-dense-divider 0;
+// Floating dense inputs
+@if( in-array( 'floating-dense', $textfield ) ) {
+	.sc-floating-dense-input {
+		height: $textfield-floating-dense-height;
+		padding: $textfield-floating-dense-padding 0 $textfield-floating-dense-divider 0;
 
-	input[type="text"], input[type="password"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="url"], textarea {
-		bottom: $textfield-floating-dense-divider;
-		font-size: $textfield-floating-dense-font-size;
-		padding: $textfield-floating-dense-divider 0;
+		input[type="text"], input[type="password"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="url"], textarea {
+			bottom: $textfield-floating-dense-divider;
+			font-size: $textfield-floating-dense-font-size;
+			padding: $textfield-floating-dense-divider 0;
 
-		&:active, &:focus {
-			+ label {
+			&:active, &:focus {
+				+ label {
+					top: $textfield-floating-dense-padding;
+					font-size: $textfield-floating-dense-label-font-size;
+				}
+			}
+		}
+
+		label {
+			top: calc(#{$textfield-floating-dense-padding} + #{$textfield-floating-dense-font-size} + #{$textfield-floating-dense-divider});
+			font-size: $textfield-floating-dense-font-size;
+			font-weight: 400;
+
+			&.sc-active {
 				top: $textfield-floating-dense-padding;
 				font-size: $textfield-floating-dense-label-font-size;
 			}
-		}
-	}
-
-	label {
-		top: calc(#{$textfield-floating-dense-padding} + #{$textfield-floating-dense-font-size} + #{$textfield-floating-dense-divider});
-		font-size: $textfield-floating-dense-font-size;
-		font-weight: 400;
-
-		&.sc-active {
-			top: $textfield-floating-dense-padding;
-			font-size: $textfield-floating-dense-label-font-size;
 		}
 	}
 }
@@ -170,78 +174,77 @@ $textfield-single-divider: rem-calc(8px); // Default rem-calc(8px)
 $textfield-single-icon-size: rem-calc(24px); // Default rem-calc(24)
 
 // Single line inputs
-.sc-single-input, .sc-single-dense-input {
-	height: $textfield-single-height;
-	padding: $textfield-single-padding 0 $textfield-single-divider 0;
+@if( in-array( 'single', $textfield ) ) {
+	.sc-single-input, .sc-single-dense-input {
+		height: $textfield-single-height;
+		padding: $textfield-single-padding 0 $textfield-single-divider 0;
 
-	&.sc-icon {
+		&.sc-icon {
+			input[type="text"], input[type="password"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="url"] {
+				width: calc(100% - #{$textfield-single-height});
+				left: $textfield-single-height;
+			}
+
+			label {
+				width: calc(100% - #{$textfield-single-height});
+				left: $textfield-single-height;
+			}
+
+			.material-icons {
+				color: $textfield-off-color;
+				@include square($textfield-single-icon-size);
+				font-size: $textfield-single-icon-size;
+				padding: 0 calc((#{$textfield-single-height} - #{$textfield-single-icon-size}) / 2);
+				@include transition(color $transition-small-duration $basic-transition);
+
+				@media #{$medium-only} {
+					@include transition(color $transition-medium-duration $basic-transition);
+				}
+
+				@media #{$medium-up} {
+					@include transition(color $transition-large-duration $basic-transition);
+				}
+			}
+		}
+
 		input[type="text"], input[type="password"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="url"] {
-			width: calc(100% - #{$textfield-single-height});
-			left: $textfield-single-height;
+			bottom: $textfield-single-divider;
+			font-size: $textfield-single-font-size;
+			padding: $textfield-single-divider 0;
+
+			&:active, &:focus {
+				border-bottom: $textfield-border-size solid $textfield-on-color;
+
+				+ label {
+					visibility: hidden;
+					@include opacity(0);
+				}
+
+				~ .material-icons {
+					color: $textfield-on-color;
+				}
+			}
 		}
 
 		label {
-			width: calc(100% - #{$textfield-single-height});
-			left: $textfield-single-height;
-		}
-
-		.material-icons {
-			color: $textfield-off-color;
-			@include square($textfield-single-icon-size);
-			font-size: $textfield-single-icon-size;
-			padding: 0 calc( ( #{$textfield-single-height} - #{$textfield-single-icon-size} ) / 2 );
-			@include transition(color $transition-small-duration $basic-transition);
+			bottom: $textfield-single-padding;
+			visibility: visible;
+			@include opacity(1);
+			font-size: $textfield-single-font-size;
+			@include transition(opacity $transition-small-duration $basic-transition unquote(',') visibility $transition-small-duration $basic-transition);
 
 			@media #{$medium-only} {
-				@include transition(color $transition-medium-duration $basic-transition);
+				@include transition(opacity $transition-medium-duration $basic-transition unquote(',') visibility $transition-medium-duration $basic-transition);
 			}
 
 			@media #{$medium-up} {
-				@include transition(color $transition-large-duration $basic-transition);
+				@include transition(opacity $transition-large-duration $basic-transition unquote(',') visibility $transition-large-duration $basic-transition);
 			}
-		}
-	}
 
-	input[type="text"], input[type="password"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="url"] {
-		bottom: $textfield-single-divider;
-		font-size: $textfield-single-font-size;
-		padding: $textfield-single-divider 0;
-
-		&:active, &:focus {
-			border-bottom: $textfield-border-size solid $textfield-on-color;
-
-			+ label {
+			&.sc-active {
 				visibility: hidden;
 				@include opacity(0);
 			}
-
-			~ .material-icons {
-				color: $textfield-on-color;
-			}
-		}
-	}
-
-	label {
-		bottom: $textfield-single-padding;
-		visibility: visible;
-		@include opacity(1);
-		font-size: $textfield-single-font-size;
-		@include transition(opacity $transition-small-duration $basic-transition unquote(',')
-							visibility $transition-small-duration $basic-transition);
-
-		@media #{$medium-only} {
-			@include transition(opacity $transition-medium-duration $basic-transition unquote(',')
-			visibility $transition-medium-duration $basic-transition);
-		}
-
-		@media #{$medium-up} {
-			@include transition(opacity $transition-large-duration $basic-transition unquote(',')
-			visibility $transition-large-duration $basic-transition);
-		}
-
-		&.sc-active {
-			visibility: hidden;
-			@include opacity(0);
 		}
 	}
 }
@@ -253,36 +256,38 @@ $textfield-single-dense-divider: rem-calc(4px); // Default rem-calc(4px)
 $textfield-single-dense-icon-size: rem-calc(20px); // Default rem-calc(20px)
 
 // Single line dense inputs
-.sc-single-dense-input {
-	height: $textfield-single-dense-height;
-	padding: $textfield-single-dense-padding 0 $textfield-single-dense-divider 0;
+@if( in-array( 'single-dense', $textfield ) ) {
+	.sc-single-dense-input {
+		height: $textfield-single-dense-height;
+		padding: $textfield-single-dense-padding 0 $textfield-single-dense-divider 0;
 
-	&.sc-icon {
+		&.sc-icon {
+			input[type="text"], input[type="password"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="url"] {
+				width: calc(100% - #{$textfield-single-dense-height});
+				left: $textfield-single-dense-height;
+			}
+
+			label {
+				width: calc(100% - #{$textfield-single-dense-height});
+				left: $textfield-single-dense-height;
+			}
+
+			.material-icons {
+				@include square($textfield-single-dense-icon-size);
+				font-size: $textfield-single-dense-icon-size;
+				padding: 0 calc((#{$textfield-single-dense-height} - #{$textfield-single-dense-icon-size}) / 2);
+			}
+		}
+
 		input[type="text"], input[type="password"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="url"] {
-			width: calc(100% - #{$textfield-single-dense-height});
-			left: $textfield-single-dense-height;
+			bottom: $textfield-single-dense-divider;
+			font-size: $textfield-single-dense-font-size;
+			padding: $textfield-single-dense-divider 0;
 		}
 
 		label {
-			width: calc(100% - #{$textfield-single-dense-height});
-			left: $textfield-single-dense-height;
+			bottom: $textfield-single-dense-padding;
+			font-size: $textfield-single-dense-font-size;
 		}
-
-		.material-icons {
-			@include square($textfield-single-dense-icon-size);
-			font-size: $textfield-single-dense-icon-size;
-			padding: 0 calc( ( #{$textfield-single-dense-height} - #{$textfield-single-dense-icon-size} ) / 2 );
-		}
-	}
-
-	input[type="text"], input[type="password"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="url"] {
-		bottom: $textfield-single-dense-divider;
-		font-size: $textfield-single-dense-font-size;
-		padding: $textfield-single-dense-divider 0;
-	}
-
-	label {
-		bottom: $textfield-single-dense-padding;
-		font-size: $textfield-single-dense-font-size;
 	}
 }

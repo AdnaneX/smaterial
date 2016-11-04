@@ -5,25 +5,29 @@
  **************************************/
 
 .sc-stepper {
-	&-horizontal {
-		li {
-			height: rem-calc(72px);
-			float: left;
-			padding: rem-calc(24px) 0 rem-calc(24px) rem-calc(24px);
-		}
+	@if( in-array( 'horizontal', $stepper ) ) {
+		&-horizontal {
+			li {
+				height: rem-calc(72px);
+				float: left;
+				padding: rem-calc(24px) 0 rem-calc(24px) rem-calc(24px);
+			}
 
-		.sc-step-circle {
-			margin: 0 rem-calc(12px) 0 0;
+			.sc-step-circle {
+				margin: 0 rem-calc(12px) 0 0;
+			}
 		}
 	}
 
-	&-vertical {
-		li {
-			padding: 0 0 0 rem-calc(24px);
-		}
+	@if( in-array( 'vertical', $stepper ) ) {
+		&-vertical {
+			li {
+				padding: 0 0 0 rem-calc(24px);
+			}
 
-		.sc-step-circle {
-			margin: 0 rem-calc(8px) 0 0;
+			.sc-step-circle {
+				margin: 0 rem-calc(8px) 0 0;
+			}
 		}
 	}
 }

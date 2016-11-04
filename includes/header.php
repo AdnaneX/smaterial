@@ -86,8 +86,8 @@ $keywords .= ', smaterial, css, scss, material design';
 			}
 
 			.sc-raised-button {
-				color: white !important;
-				background: <?php echo $color; ?> !important;
+				color: white;
+				background: <?php echo $color; ?>;
 			}
 
 			.sc-drawer-permanent-full-height .sc-drawer-header img {
@@ -132,10 +132,15 @@ $keywords .= ', smaterial, css, scss, material design';
 		if( $_SERVER['PHP_SELF'] === '/components/tabs.php' ) {
 			?>
 			<div class="sc-tabs">
-					<a href="#" class="sc-tab-icon-text"><i class="material-icons">home</i><span>Example 1</span></a>
-					<a href="#" class="sc-tab-icon-text"><i class="material-icons">home</i><span>Example 2</span></a>
-					<a href="#" class="sc-tab-icon-text"><i class="material-icons">home</i><span>Example 3</span></a>
-					<a href="#" class="sc-tab-icon-text"><i class="material-icons">home</i><span>Example 4</span></a>
+				<a href="#" class="sc-tab-icon-text"><i class="material-icons">home</i><span>Example 1</span></a>
+				<a href="#" class="sc-tab-icon-text"><i class="material-icons">home</i><span>Example 2</span></a>
+				<a href="#" class="sc-tab-icon-text"><i class="material-icons">home</i><span>Example 3</span></a>
+				<a href="#" class="sc-tab-icon-text"><i class="material-icons">home</i><span>Example 4</span></a>
+				<a href="#" class="sc-tab-icon-text"><i class="material-icons">home</i><span>Example 5</span></a>
+				<a href="#" class="sc-tab-icon-text"><i class="material-icons">home</i><span>Example 6</span></a>
+				<a href="#" class="sc-tab-icon-text"><i class="material-icons">home</i><span>Example 7</span></a>
+				<a href="#" class="sc-tab-icon-text"><i class="material-icons">home</i><span>Example 8</span></a>
+				<a href="#" class="sc-tab-icon-text"><i class="material-icons">home</i><span>Example 9</span></a>
 			</div>
 			<?php
 		}

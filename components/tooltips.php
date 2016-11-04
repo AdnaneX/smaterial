@@ -12,6 +12,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		You can use tooltips to give the user some extra info about a certain
 		<a href="#"><span class="sc-tooltip" title="delete, edit">action</span></a> or
 		<a href="#"><span class="sc-tooltip" title="url: google.com">link</span></a>.
+		<a href="#" class="sc-raised-button sc-tooltip" title="button example">Button</a>
 	</p>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">

@@ -130,7 +130,7 @@ $raised-background: $main-color; // Default $main-color
 $raised-font-color: $white; // Default $white
 $raised-icon-color: $raised-font-color; // Default $raised-font-color
 $raised-disabled-background: if( $theme == light, rgba($black, .12), rgba($white, .12) ); // Default if( $theme == light, rgba($black, .12), rgba($white, .12) )
-$raised-disabled-font-color: if( $theme == light, rgba($black, .3), rgba($white, .3) ); // Default if( $theme == light, rgba($black, .3), rgba($white, .3) )
+$raised-disabled-font-color: if( $theme == light, rgba($black, .26), rgba($white, .3) ); // Default if( $theme == light, rgba($black, .26), rgba($white, .3) )
 
 $flat-color: $main-color; // Default $main-color
 $flat-icon-color: $main-color; // Default $main-color
