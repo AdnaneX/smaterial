@@ -152,36 +152,6 @@ $keywords .= ', smaterial, css, scss, material design';
 					<div class="sc-drawer-header">
 						<img src="/images/logo.svg" alt="SMalterial logo">
 					</div>
-					<!--<li class="sc-drawer-header">
-						<img src="/images/profile-icon.jpg" alt="SMaterial profile example" class="sc-drawer-profile-img">
-						<span class="sc-drawer-profile-name">John</span>
-						<div id="sc-drawer-profile-more" class="sc-drawer-profile-more">
-							<i class="material-icons sc-trigger" data-sc-trigger="sc-drawer-profile-more">arrow_drop_down</i>
-
-							<ul>
-								<li><a href="#">Facebook</a></li>
-								<li><a href="#">Google Plus</a></li>
-								<li><a href="#">Add account</a></li>
-							</ul>
-						</div>
-						<span><i class="material-icons sc-arrow sc-trigger" data-sc-trigger="sc-drawer">chevron_left</i></span>
-					</li>-->
-					<!--<li class="sc-drawer-header">
-						<img src="/images/drawer-background.jpg" class="sc-drawer-profile-background">
-						<div class="sc-scrim"></div>
-						<img src="/images/profile-icon.jpg" class="sc-drawer-profile-img">
-						<div class="sc-drawer-profile-name">John Doe</div>
-						<div class="sc-drawer-profile-email">johndoe&#64;gmail.com</div>
-						<div id="sc-drawer-profile-more" class="sc-drawer-profile-more">
-							<i class="material-icons sc-trigger" data-sc-trigger="sc-drawer-profile-more">arrow_drop_down</i>
-
-							<ul>
-								<li><a href="#">Facebook</a></li>
-								<li><a href="#">Google Plus</a></li>
-								<li><a href="#">Add account</a></li>
-							</ul>
-						</div>
-					</li>-->
 					<li class="sc-drawer-dropdown">SMaterial <i class="material-icons">expand_more</i>
 						<ul>
 							<li><a href="/" <?php echo ( $file == '/index' || $file == '/' ? 'class="sc-active"' : '' ); ?>>Introduction</a></li>
@@ -224,7 +194,7 @@ $keywords .= ', smaterial, css, scss, material design';
 					</li>
 					<li class="sc-drawer-dropdown">Layout <i class="material-icons">expand_more</i>
 						<ul>
-							<li><a href="/layout/grid.php" <?php echo ( $file == '/layout/grid' ? 'class="sc-active"' : '' ); ?>>Grid</a></li>
+							<li><a href="/layout/grid.php" <?php echo ( $file == '/layout/grid' ? 'class="sc-active"' : '' ); ?>>Responsive grid</a></li>
 						</ul>
 					</li>
 					<li class="sc-drawer-dropdown">Patterns <i class="material-icons">expand_more</i>

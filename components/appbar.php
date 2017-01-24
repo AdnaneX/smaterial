@@ -7,7 +7,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>
 
 	<section class="sc-row">
-		<h2>Appbar usage</h2>
+		<h2 class="sc-col sc-xs4 sc-s12">Appbar usage</h2>
 
 		<p class="sc-col sc-xs4 sc-m6">
 			The appbar is used to hold a couple elements.

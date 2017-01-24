@@ -104,7 +104,7 @@ main {
 	}
 
 	@media only screen and (min-width: 600px) {
-		padding: $large-gutter;
+		padding: rem-calc($large-gutter);
 	}
 
 	@media #{$medium-only} {

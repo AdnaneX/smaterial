@@ -57,7 +57,7 @@ $link-hover: $secondary-color;
 /**************************************
  * Global
  **************************************/
-$theme: light; // Default either light or dark
+$theme: light !default; // Default either light or dark
 $typography: english; // Default english, dense or tall
 $select-background: $cyan-a200; // Default $cyan-a200
 $basic-transition: cubic-bezier(0.4, 0.0, 0.2, 1); // Default cubic-bezier(0.4, 0.0, 0.2, 1)
@@ -67,7 +67,7 @@ $returning-transition: cubic-bezier(0.0, 0.0, 0.2, 1); // Default cubic-bezier(0
 $transition-small-duration: 300ms; // Default 300ms
 $transition-medium-duration: 390ms; // Default 390ms
 $transition-large-duration: 200ms; // Default 200ms
-$background: $white; // Default $white
+$background: if( $theme == light, $white, #303030); // Default if( $theme == light, $white, #303030)
 $text-direction: ltr; // Default either ltr or rtl
 
 /**************************************
@@ -104,7 +104,7 @@ $appbar-medium-height: rem-calc(56px); // Default rem-calc(56px)
 $appbar-large-height: rem-calc(64px); // Default rem-calc(64px)
 
 // Colors
-$appbar-background: $main-color; // Default $main-color
+$appbar-background: if( $theme == light, $main-color, $grey-900 ); // Default if( $theme == light, $main-color, $grey-900 )
 $appbar-text: $white; // Default $white
 $appbar-title: $white; // Default $white
 
@@ -118,7 +118,7 @@ $bottom-nav-on-color: $white; // Default $white
 /**************************************
  * Bottom sheet
  **************************************/
-$bottom-sheet-background: $background; // Default $background
+$bottom-sheet-background: if( $theme == light, $background, $grey-800 ); // Default if( $theme == light, $background, $grey-800 )
 $bottom-sheet-font-color: rgba($black, .87); // Default rgba($black, .87)
 $bottom-sheet-header-font-color: rgba($black, .54); // Default rgba($black, .54)
 $bottom-sheet-icons-color: $bottom-sheet-header-font-color; // Default $bottom-sheet-header-font-color
@@ -141,6 +141,11 @@ $floating-background: $main-color; // Default $main-color
 $floating-icon-color: $white; // Default $white
 
 /**************************************
+ * Cards
+ **************************************/
+$card-background: if( $theme == light, $background, $grey-800); // Default if( $theme == light, $background, $grey-800)
+
+/**************************************
  * Chips
  **************************************/
 $chips-font-color: $font-color-headline; // Default $font-color-headline
@@ -151,6 +156,11 @@ $chips-delete-cross: $chips-background; // Default $chips-background
 $chips-delete-cross-hover: $chips-background-hover; // Default $chips-background-hover
 $chips-delete-background: rgba($black, .54); // Default rgba($black, .54)
 $chips-delete-background-hover: $chips-font-hover-color; // Default $chips-font-hover-color
+
+/**************************************
+ * Dialogs
+ **************************************/
+$dialog-background: if( $theme == light, $background, $grey-800 ); // Default if( $theme == light, $background, $grey-800 )
 
 /**************************************
  * Grid lists
@@ -204,7 +214,7 @@ $notification-background: $background; // $background
 /**************************************
  * Navigation drawer
  **************************************/
-$drawer-background: $background; // Default $background
+$drawer-background: if( $theme == light, $background, $grey-800 ); // Default if( $theme == light, $background, $grey-800 )
 $drawer-hover: $main-color; // Default $main-color
 $drawer-small-width: rem-calc(280px);
 $drawer-medium-width: rem-calc(320px);
@@ -263,7 +273,7 @@ $tooltip-font-color: $white; // Default $white
  * Grid settings
  **************************************/
 // Break points
-$xsmall-screen: 480px; // Small mobile
+$xsmall-screen: 600px; // Small mobile
 $small-screen: 960px; // Small tablet, medium mobile
 $medium-screen: 1280px; // Large tablet
 $large-screen: 1600px; // Small desktop
@@ -281,6 +291,5 @@ $large-gutter: 24px; // Default 24px
 /**************************************
  * Icons
  **************************************/
-$icon-font-path: './components/fonts/icons/';
 $icon-size: rem-calc(24px); // Default rem-calc(24px)
 $icon-align: middle; // Default middle

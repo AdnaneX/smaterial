@@ -240,3 +240,43 @@
 		@content;
 	}
 }
+
+@mixin flex-direction( $setting ) {
+	-webkit-flex-direction: $setting;
+	-moz-flex-direction: $setting;
+	-ms-flex-direction: $setting;
+	flex-direction: $setting;
+}
+
+@mixin flex-wrap( $setting ) {
+	-webkit-flex-wrap: $setting;
+	-mox-flex-wrap: $setting;
+	-ms-flex-wrap: $setting;
+	flex-wrap: $setting;
+}
+
+@mixin align-items( $setting ) {
+	-webkit-align-items: $setting;
+	-moz-align-items: $setting;
+	-ms-flex-items: $setting;
+	align-items: $setting;
+}
+
+@mixin align-content( $setting ) {
+	-webkit-align-content: $setting;
+	-moz-align-content: $setting;
+	-ms-flex-content: $setting;
+	align-content: $setting;
+}
+
+@mixin flex( $setting ) {
+	-webkit-flex: $setting;
+	-moz-box-flex: $setting;
+	-ms-flex: $setting;
+	flex: $setting;
+}
+
+@mixin order( $setting ) {
+	-ms-flex-order: $setting;
+	order: $setting;
+}

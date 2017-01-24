@@ -29,17 +29,9 @@ $tab-padding: rem-calc(12px);
 	}
 
 	@media #{$medium-up} {
-		overflow: hidden;
 		width: calc(100% - #{$drawer-small-width} + #{rem-calc(1px)});
 		left: calc(#{$drawer-small-width} - #{rem-calc(1px)});
 		top: $appbar-large-height;
-	}
-
-	@media #{$large-up} {
-		&:hover {
-			overflow: auto;
-			overflow-y: hidden;
-		}
 	}
 
 	.sc-tab, .sc-tab-icon, .sc-tab-icon-text {
