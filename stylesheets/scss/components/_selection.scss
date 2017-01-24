@@ -88,7 +88,7 @@ input[type="checkbox"].sc-checkbox, input[type="radio"].sc-radio {
 	}
 }
 
-@if( in-array( 'raio', $selection ) ) {
+@if( in-array( 'radio', $selection ) ) {
 	input[type="radio"].sc-radio {
 		// Off
 		+ label {

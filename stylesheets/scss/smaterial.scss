@@ -25,7 +25,7 @@ $bottom-nav: ('bottom-nav', 'bottom-shifting');
 $bottom-sheet: ('header', 'grid', 'music');
 @import 'components/bottom-sheet'; // Used to style bottom sheet / modal (can be turned off)
 
-$button: ('raised', 'flat', 'floating', 'toggle', 'ripple'); // It's better to turn off "ripple" since it isn't working properly
+$button: ('raised', 'flat', /*'floating', 'toggle', 'ripple'*/); // It's better to turn off "ripple" since it isn't working properly
 @import 'components/buttons'; // Used to style buttons (can be turned off)
 
 @import 'components/cards'; // Used to style cards (can be turned off)
@@ -37,6 +37,7 @@ $dialog: ('full-screen');
 
 @import 'components/expansion-panels'; // Used to style expansion panels (can be turned off)
 @import 'components/grid-lists'; // Used to style grid lists (can be turned off)
+$navigation-drawer: ('full-height', 'clipped', 'floating', 'persistent', 'temporary');
 @import 'components/navigation-drawer'; // Used to style navigation drawer (can be turned off)
 @import 'components/lists'; // Used to style lists (can be turned off)
 @import 'components/notifications'; // Notifications style (can be turned off)

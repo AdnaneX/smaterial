@@ -6,7 +6,7 @@
 
 .sc-card {
 	@include material-shadow(2);
-	@include border-radius(2px);
+	@include border-radius(rem-calc(2px));
 	margin: rem-calc(8px);
 	width: 100%;
 	padding: 0;
