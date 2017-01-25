@@ -6,7 +6,7 @@ $keywords = 'steps, steppers, breadcrumbs';
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>
 <section class="sc-row">
-	<h2>Steppers usage</h2>
+	<h2 class="sc-col sc-xs4 sc-s12">Steppers usage</h2>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		Steppers are used to display a sequence of numbered steps. Steppers can also be used for navigation such as breadcrumbs.
@@ -14,7 +14,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="sc-row">
-	<h3>Horizontal stepper</h3>
+	<h3 class="sc-col sc-xs4 sc-s12">Horizontal stepper</h3>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6"></p>
 
@@ -36,7 +36,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="sc-row">
-	<h3>Vertical stepper</h3>
+	<h3 class="sc-col sc-xs4 sc-s12">Vertical stepper</h3>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6"></p>
 

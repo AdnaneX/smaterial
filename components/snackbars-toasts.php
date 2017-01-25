@@ -6,7 +6,7 @@ $keywords = 'snackbars, toasts';
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>
 <section class="sc-row">
-	<h2>Snackbars & toasts usage</h2>
+	<h2 class="sc-col sc-xs4 sc-s12">Snackbars & toasts usage</h2>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		You can use a snackbars to give the user some feedback about an action by showing a short message.
@@ -28,7 +28,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="sc-row">
-	<h3>Snackbars & toasts settings</h3>
+	<h3 class="sc-col sc-xs4 sc-s12">Snackbars & toasts settings</h3>
 
 	<table class="sc-col sc-xs4 sc-s12 sc-m6">
 		<thead>

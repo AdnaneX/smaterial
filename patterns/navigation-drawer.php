@@ -7,7 +7,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>
 
 <section class="sc-row">
-	<h2>Navigation drawer usage</h2>
+	<h2 class="sc-col sc-xs4 sc-s12">Navigation drawer usage</h2>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		The navigation drawer has multiple options. Some of the options support a header item.
@@ -15,7 +15,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="sc-row" id="permanent">
-	<h3>Permanent</h3>
+	<h3 class="sc-col sc-xs4 sc-s12">Permanent</h3>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		The permanent navigation drawer is recommended for desktop.
@@ -41,7 +41,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="sc-row" id="permanent-full-height">
-	<h4>Full-height</h4>
+	<h4 class="sc-col sc-xs4 sc-s12">Full-height</h4>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		In order to use the full height navigation you need to add the <code class="language-css">.sc-drawer-permanent-full-height</code> class
@@ -89,7 +89,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="sc-row" id="permanent-clipped">
-	<h4>Clipped</h4>
+	<h4 class="sc-col sc-xs4 sc-s12">Clipped</h4>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		In order to use the clipped navigation you need to add the <code class="language-css">.sc-drawer-permanent-clipped</code> class
@@ -119,7 +119,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="sc-row" id="permanent-floating">
-	<h4>Floating</h4>
+	<h4 class="sc-col sc-xs4 sc-s12">Floating</h4>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		In order to use the floating navigation you need to add the <code class="language-css">.sc-drawer-permanent-floating</code> class
@@ -149,7 +149,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="sc-row" id="persistent">
-	<h3>Persistent</h3>
+	<h3 class="sc-col sc-xs4 sc-s12">Persistent</h3>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		The persistent menu is recommended for all sizes larger than mobile.
@@ -189,7 +189,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="sc-row" id="temporary">
-	<h3>Temporary</h3>
+	<h3 class="sc-col sc-xs4 sc-s12">Temporary</h3>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		The temporary menu is required for mobile and recommended for tablet.

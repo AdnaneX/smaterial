@@ -6,7 +6,7 @@ $keywords = 'SCSS functions, calculate px to rem';
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>
 <section class="sc-row">
-	<h2>SCSS functions</h2>
+	<h2 class="sc-col sc-xs4 sc-s12">SCSS functions</h2>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		You can use the following functions in your SCSS.
@@ -16,7 +16,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="sc-row">
-	<h3>rem-calc()</h3>
+	<h3 class="sc-col sc-xs4 sc-s12">rem-calc()</h3>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		You can use the function rem-calc() to convert <code class="language-html">px</code> into <code class="language-html">rem</code>.
@@ -32,7 +32,7 @@ margin: rem-calc(-16px);
 </section>
 
 <section class="sc-row">
-	<h3>color()</h3>
+	<h3 class="sc-col sc-xs4 sc-s12">color()</h3>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		You can use the color function to find a accent color.

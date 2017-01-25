@@ -6,7 +6,7 @@ $keywords = 'cards';
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>
 <section class="sc-row">
-	<h2>Cards usage</h2>
+	<h2 class="sc-col sc-xs4 sc-s12">Cards usage</h2>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		There are many different variations of cards.
@@ -16,7 +16,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="sc-row">
-	<h3>Image with text</h3>
+	<h3> class="sc-col sc-xs4 sc-s12"Image with text</h3>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		A very basic card with just an image and text.
@@ -47,7 +47,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="sc-row">
-	<h3>Avatar, title and subtitle</h3>
+	<h3 class="sc-col sc-xs4 sc-s12">Avatar, title and subtitle</h3>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		The <code class="language-css">.sc-card-avatar</code> class makes sure the image gets the right styling.
@@ -101,7 +101,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="sc-row">
-	<h3>Full background image</h3>
+	<h3 class="sc-col sc-xs4 sc-s12">Full background image</h3>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		The <code class="language-css">.sc-card-background</code> class will make sure the image has rounded edges and is the background of the card.

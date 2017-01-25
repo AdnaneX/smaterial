@@ -6,7 +6,7 @@ $keywords = 'tooltips';
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>
 <section class="sc-row">
-	<h2>Tooltips usage</h2>
+	<h2 class="sc-col sc-xs4 sc-s12">Tooltips usage</h2>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		You can use tooltips to give the user some extra info about a certain
@@ -34,7 +34,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="sc-row">
-	<h3>Tooltip settings</h3>
+	<h3 class="sc-col sc-xs4 sc-s12">Tooltip settings</h3>
 
 	<table class="sc-col sc-xs4 sc-s12 sc-m6">
 		<thead>

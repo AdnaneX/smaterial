@@ -6,7 +6,7 @@ $keywords = 'tabs';
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>
 <section class="sc-row">
-	<h2>Tabs usage</h2>
+	<h2 class="sc-col sc-xs4 sc-s12">Tabs usage</h2>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		You can use a couple of different tabs. You can use tabs with text only, text with icons and icons only.
@@ -14,7 +14,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="sc-row">
-	<h3>Text only</h3>
+	<h3 class="sc-col sc-xs4 sc-s12">Text only</h3>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6"></p>
 
@@ -31,7 +31,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="sc-row">
-	<h3>Icons only</h3>
+	<h3 class="sc-col sc-xs4 sc-s12">Icons only</h3>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 
@@ -50,7 +50,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="sc-row">
-	<h3>Icons with text</h3>
+	<h3 class="sc-col sc-xs4 sc-s12">Icons with text</h3>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6"></p>
 
@@ -67,7 +67,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="sc-row">
-	<h3>Settings</h3>
+	<h3 class="sc-col sc-xs4 sc-s12">Settings</h3>
 
 	<table class="sc-col sc-xs4 sc-s12 sc-m6">
 		<thead>

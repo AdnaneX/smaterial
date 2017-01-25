@@ -6,7 +6,7 @@ $keywords = 'showroom, show';
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>
 <section class="sc-row">
-	<h2>Show your creations</h2>
+	<h2 class="sc-col sc-xs4 sc-s12">Show your creations</h2>
 
 	<p class="sc-col sc-xs4 sc-m6">
 		Have you made anything using SMaterial and would you like to show.

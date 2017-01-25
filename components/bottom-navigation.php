@@ -7,7 +7,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>
 
 <section class="sc-row">
-	<h2>Bottom navigation usage</h2>
+	<h2 class="sc-col sc-xs4 sc-s12">Bottom navigation usage</h2>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		You can use the bottom navigation to easily switch between top-level views in a single tap.
@@ -16,7 +16,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="sc-row">
-	<h3>Default bottom navigation</h3>
+	<h3 class="sc-col sc-xs4 sc-s12">Default bottom navigation</h3>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		<button class="sc-raised-button sc-trigger" data-sc-trigger="bottom-nav">Show</button>
@@ -60,7 +60,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <Section class="sc-row">
-	<h3>Shifting bottom navigation</h3>
+	<h3 class="sc-col sc-xs4 sc-s12">Shifting bottom navigation</h3>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		<button class="sc-raised-button sc-trigger" data-sc-trigger="shifting-nav">Show</button>
@@ -104,7 +104,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </Section>
 
 <section class="sc-row">
-	<h3>Settings</h3>
+	<h3 class="sc-col sc-xs4 sc-s12">Settings</h3>
 
 	<table>
 		<thead>

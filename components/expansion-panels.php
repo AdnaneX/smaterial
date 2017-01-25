@@ -6,7 +6,7 @@ $keywords = 'expansion panels';
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>
 <section class="sc-row">
-	<h2>Expansion panels usage</h2>
+	<h2 class="sc-col sc-xs4 sc-s12">Expansion panels usage</h2>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 

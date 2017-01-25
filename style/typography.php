@@ -7,7 +7,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>
 
 	<section class="sc-row">
-	<h2>Typography usage</h2>
+	<h2 class="sc-col sc-xs4 sc-s12">Typography usage</h2>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		The Roboto font is default for Material Design.
@@ -94,7 +94,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="sc-row">
-	<h3>Settings</h3>
+	<h3 class="sc-col sc-xs4 sc-s12">Settings</h3>
 
 	<table>
 		<thead>

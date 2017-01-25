@@ -14,7 +14,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </style>
 
 <section class="sc-row">
-	<h2>Elevation and shadows usage</h2>
+	<h2 class="sc-col sc-xs4 sc-s12">Elevation and shadows usage</h2>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		Each element has it's own elevation and shadow. The elevation and shadows are described here.
@@ -22,7 +22,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="sc-row">
-	<h3>Shadow / elevation</h3>
+	<h3 class="sc-col sc-xs4 sc-s12">Shadow / elevation</h3>
 
 	<table class="sc-col sc-xs4 sc-s12 sc-m7">
 		<thead>

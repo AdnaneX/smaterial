@@ -6,7 +6,7 @@ $keywords = 'SCSS mixins';
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>
 <section class="sc-row">
-	<h2>SCSS mixins usage</h2>
+	<h2 class="sc-col sc-xs4 sc-s12">SCSS mixins usage</h2>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		The mixins are made to help you. There are mixins which take care of prefixing.
@@ -27,7 +27,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="sc-row">
-	<h3>box-shadow()</h3>
+	<h3 class="sc-col sc-xs4 sc-s12">box-shadow()</h3>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		The <code class="language-css">box-shadow()</code> mixin is used to make box-shadow styling with all the prefixes.
@@ -42,7 +42,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="sc-row">
-	<h3>border-radius()</h3>
+	<h3 class="sc-col sc-xs4 sc-s12">border-radius()</h3>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		The <code class="language-css">border-radius()</code> mixin is used to add all prefixes for the border-radius.
@@ -56,7 +56,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="sc-row">
-	<h3>box-sizing()</h3>
+	<h3 class="sc-col sc-xs4 sc-s12">box-sizing()</h3>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		The <code class="language-css">box-sizing()</code> mixin is used to add all prefixes for the box-sizing.
@@ -70,7 +70,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="sc-row">
-	<h3>transition()</h3>
+	<h3 class="sc-col sc-xs4 sc-s12">transition()</h3>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		The <code class="language-css">transition()</code> mixin is used to add all prefixes for the transition.
@@ -84,7 +84,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="sc-row">
-	<h3>transform()</h3>
+	<h3 class="sc-col sc-xs4 sc-s12">transform()</h3>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		The <code class="language-css">transform()</code> mixin is used to add all prefixes for the transform.
@@ -98,7 +98,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="sc-row">
-	<h3>animation()</h3>
+	<h3 class="sc-col sc-xs4 sc-s12">animation()</h3>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		The <code class="language-css">animation()</code> mixin is used to add all prefixes for the animation.
@@ -112,7 +112,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="sc-row">
-	<h3>keyframes()</h3>
+	<h3 class="sc-col sc-xs4 sc-s12">keyframes()</h3>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		The <code class="language-css">keyframes</code> can be used to create a specific animation.
@@ -136,7 +136,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="sc-row">
-	<h3>border-top-left-radius</h3>
+	<h3 class="sc-col sc-xs4 sc-s12">border-top-left-radius</h3>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		The <code class="language-css">border-top-left-radius()</code> mixin is used to add all prefixes to the border radius.
@@ -150,7 +150,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="sc-row">
-	<h3>border-top-right-radius</h3>
+	<h3 class="sc-col sc-xs4 sc-s12">border-top-right-radius</h3>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		The <code class="language-css">border-top-right-radius()</code> mixin is used to add all prefixes to the border radius.
@@ -164,7 +164,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="sc-row">
-	<h3>border-radius-top</h3>
+	<h3 class="sc-col sc-xs4 sc-s12">border-radius-top</h3>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		The <code class="language-css">border-radius-top()</code> mixin is used to add all prefixes to the top border radius.
@@ -179,7 +179,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="sc-row">
-	<h3>border-bottom-left-radius</h3>
+	<h3 class="sc-col sc-xs4 sc-s12">border-bottom-left-radius</h3>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		The <code class="language-css">border-bottom-left-radius()</code> mixin is used to add all prefixes to the border radius.
@@ -193,7 +193,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="sc-row">
-	<h3>border-bottom-right-radius</h3>
+	<h3 class="sc-col sc-xs4 sc-s12">border-bottom-right-radius</h3>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		The <code class="language-css">border-bottom-right-radius()</code> mixin is used to add all prefixes to the border radius.
@@ -207,7 +207,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="sc-row">
-	<h3>border-radius-bottom</h3>
+	<h3 class="sc-col sc-xs4 sc-s12">border-radius-bottom</h3>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		The <code class="language-css">border-radius-bottom()</code> mixin is used to add all prefixes to the bottom border radius.
@@ -222,7 +222,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="sc-row">
-	<h3>square</h3>
+	<h3 class="sc-col sc-xs4 sc-s12">square</h3>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		The <code class="language-css">square()</code> mixin is used to give both width and height equal value.
@@ -236,7 +236,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="sc-row">
-	<h3>range-thumb</h3>
+	<h3 class="sc-col sc-xs4 sc-s12">range-thumb</h3>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		The <code class="language-css">range-thumb()</code> mixing is used to add all prefixes for the range thumb.
@@ -252,7 +252,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 	<section class="sc-row">
-		<h3>range-track</h3>
+		<h3 class="sc-col sc-xs4 sc-s12">range-track</h3>
 
 		<p class="sc-col sc-xs4 sc-s12 sc-m6">
 			The <code class="language-css">range-track()</code> mixing is used to add all prefixes for the range track.

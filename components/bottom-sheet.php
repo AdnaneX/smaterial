@@ -6,7 +6,7 @@ $keywords = 'bottom modal, bottom sheet, modal';
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>
 <section class="sc-row">
-	<h2>Bottom sheet / modal usage</h2>
+	<h2 class="sc-col sc-xs4 sc-s12">Bottom sheet / modal usage</h2>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		You can use the bottom sheet or bottom modal in a couple varieties.
@@ -15,7 +15,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="sc-row">
-	<h3>Default</h3>
+	<h3 class="sc-col sc-xs4 sc-s12">Default</h3>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		If you click on the button you can see the default bottom sheet / modal in action.
@@ -45,7 +45,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="sc-row">
-	<h3>Header</h3>
+	<h3 class="sc-col sc-xs4 sc-s12">Header</h3>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		If you click on the button you can see the header bottom sheet / modal in action.
@@ -79,7 +79,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="sc-row">
-	<h3>Grid icons</h3>
+	<h3 class="sc-col sc-xs4 sc-s12">Grid icons</h3>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		If you click on the button you can see the grid icons bottom sheet / modal in action.
@@ -169,7 +169,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="sc-row">
-	<h3>Music</h3>
+	<h3 class="sc-col sc-xs4 sc-s12">Music</h3>
 
 	<p class="sc-col sc-sx4 sc-s12 sc-m6">
 		You can also use a specific bottom sheet styled for music.
@@ -220,7 +220,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="sc-row">
-	<h3>Settings</h3>
+	<h3 class="sc-col sc-xs4 sc-s12">Settings</h3>
 
 	<table>
 		<thead>

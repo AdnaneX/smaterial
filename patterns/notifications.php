@@ -6,7 +6,7 @@ $keywords = 'notifications function, Android Nougat, Nougat, Android 7, Android 
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>
 <section class="sc-row">
-	<h2>Notification usage</h2>
+	<h2 class="sc-col sc-xs4 sc-s12">Notification usage</h2>
 
 	<div class="sc-row">
 		<p class="sc-col sc-xs4 sc-s12 sc-m6">
@@ -40,14 +40,14 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	</div>
 
 	<pre class="language-javascript sc-col sc-s12 sc-m6 sc-offset-m6">
-	<code>
+	    <code>
 notification('Title', {body: 'Content', icon: 'icon_path'}, 'click-url.com')
-	</code>
-</pre>
+	    </code>
+    </pre>
 </section>
 
 <section class="sc-row" id="notifications">
-	<h3>Notifications</h3>
+	<h3 class="sc-col sc-xs4 sc-s12">Notifications</h3>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		There are a couple of different notification templates to choose from.
@@ -352,7 +352,7 @@ notification('Title', {body: 'Content', icon: 'icon_path'}, 'click-url.com')
 </section>
 
 <section class="sc-row">
-	<h3>Settings</h3>
+	<h3 class="sc-col sc-xs4 sc-s12">Settings</h3>
 
 	<table class="sc-col sc-xs4 sc-s12 sc-m6">
 		<thead>

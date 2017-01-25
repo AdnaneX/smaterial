@@ -12,7 +12,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </style>
 
 <section class="sc-row">
-	<h2>Buttons usage</h2>
+	<h2 class="sc-col sc-xs4 sc-s12">Buttons usage</h2>
 
 	<p class="sc-col sc-xs4 sc-s12">
 		There are a couple of different buttons with each a different purpose.
@@ -27,7 +27,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="sc-row" id="raised-button">
-	<h3>Raised button</h3>
+	<h3 class="sc-col sc-xs4 sc-s12">Raised button</h3>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		The raised button can be used on it's own but also with an icon.
@@ -87,7 +87,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="sc-row" id="flat-button">
-	<h3>Flat button</h3>
+	<h3 class="sc-col sc-xs4 sc-s12">Flat button</h3>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		The flat buttons can also be used with an icon.
@@ -135,7 +135,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="sc-row" id="sc-floating-button">
-	<h3>Floating button</h3>
+	<h3 class="sc-col sc-xs4 sc-s12">Floating button</h3>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		The floating button only exists out of an icon.
@@ -172,7 +172,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="sc-row">
-	<h3>Icon toggles</h3>
+	<h3 class="sc-col sc-xs4 sc-s12">Icon toggles</h3>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		The icon toggles could be used for favoring an item or give a star rating
@@ -185,7 +185,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="sc-row">
-	<h3>Button settings</h3>
+	<h3 class="sc-col sc-xs4 sc-s12">Button settings</h3>
 
 	<table class="sc-col sc-xs4 sc-s12 sc-m6">
 		<thead>

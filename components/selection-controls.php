@@ -6,7 +6,7 @@ $keywords = 'selection controls, checkbox, radio button, switch';
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>
 <section class="sc-row" xmlns="http://www.w3.org/1999/html">
-	<h2>Selection controls usage</h2>
+	<h2 class="sc-col sc-xs4 sc-s12">Selection controls usage</h2>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		You can choose a couple of selection controls.
@@ -15,7 +15,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="sc-row" id="checkbox">
-	<h3>Checkbox</h3>
+	<h3 class="sc-col sc-xs4 sc-s12">Checkbox</h3>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		Checkboxes are used when a user has multiple options. If there is only 1 option a <a href="#switch">switch</a> is recommended.
@@ -41,7 +41,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="sc-row" id="radio">
-	<h2>Radio buttons</h2>
+	<h2 class="sc-col sc-xs4 sc-s12">Radio buttons</h2>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		You can use the radio buttons without the use of an additional class.
@@ -66,7 +66,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="sc-row" id="switch">
-	<h2>Switch</h2>
+	<h2 class="sc-col sc-xs4 sc-s12">Switch</h2>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		The switch is usually used when there is only a need for 1 <a href="#checkbox">checkbox</a>.

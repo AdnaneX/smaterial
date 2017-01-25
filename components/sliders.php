@@ -6,7 +6,7 @@ $keywords = 'slider, discrete slider';
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>
 <section class="sc-row">
-	<h2>Slider usage</h2>
+	<h2 class="sc-col sc-xs4 sc-s12">Slider usage</h2>
 
 	<p class="sc-col sc-xs4 sc-m6">
 		There are a couple of different sliders you can use with different styling.
@@ -33,18 +33,18 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	</p>
 
 	<pre class="language-html sc-col sc-xs4 sc-s12 sc-m6">
-	<code>
+	    <code>
 &lt;input type="range" class="sc-slider">
 &lt;input type="range" disabled value="0" class="sc-slider">
 &lt;input type="range" disabled class="sc-slider">
 &lt;input type="range" min="0" max="200" class="sc-slider sc-slider-discrete">
 &lt;input type="range" disabled class="sc-slider sc-slider-discrete">
-	</code>
-</pre>
+	    </code>
+    </pre>
 </section>
 
 <section class="sc-row">
-	<h3>Default slider</h3>
+	<h3 class="sc-col sc-xs4 sc-s12">Default slider</h3>
 
 	<p class="sc-col sc-xs4 sc-m6">
 		The default slider can be made in 2 ways. Using default range input or by adding a class <code class="language-css">.sc-slider</code>.
@@ -62,7 +62,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="sc-row">
-	<h3>Discrete slider</h3>
+	<h3 class="sc-col sc-xs4 sc-s12">Discrete slider</h3>
 
 	<p class="sc-col sc-xs4 sc-m6">
 		Using the discrete slider will add a "bubble" showing the value. The discrete slider also supports disabled styling.

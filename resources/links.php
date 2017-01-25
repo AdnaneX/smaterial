@@ -6,7 +6,7 @@ $keywords = 'links';
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>
 <section class="sc-row">
-	<h2>External links</h2>
+	<h2 class="sc-col sc-xs4 sc-s12">External links</h2>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		You can find a list of all used links to create SMaterial here.
@@ -14,7 +14,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="sc-row">
-	<h3>Style</h3>
+	<h3 class="sc-col sc-xs4 sc-s12">Style</h3>
 
 	<div class="sc-col sc-xs4 sc-s12 sc-m6">
 		<h4><a href="/style/color.php">Color</a></h4>
@@ -53,7 +53,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="sc-row">
-	<h3>Components</h3>
+	<h3 class="sc-col sc-xs4 sc-s12">Components</h3>
 
 	<div class="sc-col sc-xs4 sc-s12 sc-m6">
 		<h4><a href="/components/appbar.php">Appbar</a></h4>
@@ -180,7 +180,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="sc-row">
-	<h3>Resources</h3>
+	<h3 class="sc-col sc-xs4 sc-s12">Resources</h3>
 
 	<div class="sc-col sc-xs4 sc-s12 sc-m6">
 		<h4><a href="/patterns/notifications.php">Notifications</a></h4>

@@ -13,6 +13,10 @@
 		margin-bottom: $large-gutter;
 	}
 
+	.sc-row {
+		margin-bottom: 0;
+	}
+
 	.sc-col {
 		flex-grow: 1;
 		@include box-sizing(border-box);

@@ -24,18 +24,22 @@
 
 	&.sc-18 {
 		font-size: rem-calc(18px);
+		@include square(rem-calc(18px));
 	}
 
 	&.sc-24 {
 		font-size: rem-calc(24px);
+		@include square(rem-calc(24px));
 	}
 
 	&.sc-36 {
 		font-size: rem-calc(36px);
+		@include square(rem-calc(36px));
 	}
 
 	&.sc-48 {
 		font-size: rem-calc(48px);
+		@include square(rem-calc(48px));
 	}
 }
 

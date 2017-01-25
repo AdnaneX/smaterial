@@ -6,7 +6,7 @@ $keywords = 'progress, activity, determinate, indeterminate, buffer, circular';
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>
 <section class="sc-row">
-	<h2>Progress & activity usage</h2>
+	<h2 class="sc-col sc-xs4 sc-s12">Progress & activity usage</h2>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		There are a couple of progress and activity indicator varieties.
@@ -15,7 +15,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="sc-row">
-	<h3>Determinate</h3>
+	<h3 class="sc-col sc-xs4 sc-s12">Determinate</h3>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		You can easily modify the determinate progress indicator by giving the <code>.sc-progressbar</code> the desired width.
@@ -37,7 +37,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="sc-row">
-	<h3>Indeterminate</h3>
+	<h3 class="sc-col sc-xs4 sc-s12">Indeterminate</h3>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		The indeterminate progress indicator will continue forever.
@@ -55,7 +55,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="sc-row">
-	<h3>Buffer</h3>
+	<h3 class="sc-col sc-xs4 sc-s12">Buffer</h3>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		The buffer progressbar is still a work in process.
@@ -83,7 +83,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="sc-row">
-	<h3>Circular</h3>
+	<h3 class="sc-col sc-xs4 sc-s12">Circular</h3>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		The circular progress can easily be changed in SCSS. You can change the width of the loader and the color(s).

@@ -6,7 +6,7 @@ $keywords = 'date picker, time picker';
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>
 <section class="sc-row">
-	<h2>Pickers usage</h2>
+	<h2 class="sc-col sc-xs4 sc-s12">Pickers usage</h2>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		Pickers are still in development.
@@ -14,7 +14,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="sc-row">
-	<h3>Date picker</h3>
+	<h3 class="sc-col sc-xs4 sc-s12">Date picker</h3>
 
 	<div class="sc-col sc-xs4 sc-s12 sc-m3">
 		<div class="sc-picker sc-date-picker">

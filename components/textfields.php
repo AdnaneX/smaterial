@@ -6,7 +6,7 @@ $keywords = 'text fields, input, select, textarea, autocomplete';
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>
 <section class="sc-row">
-	<h2>Text fields</h2>
+	<h2 class="sc-col sc-xs4 sc-s12">Text fields</h2>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		There are numerous text fields you can use.
@@ -23,7 +23,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="sc-row" id="floating">
-	<h3>Floating input</h3>
+	<h3 class="sc-col sc-xs4 sc-s12">Floating input</h3>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		The floating input is most commonly used for forms.
@@ -89,7 +89,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="sc-row">
-	<h3>Form example</h3>
+	<h3 class="sc-col sc-xs4 sc-s12">Form example</h3>
 
 	<div class="sc-col sc-xs4 sc-s12 sc-m3">
 		<form action="<?= $_SERVER['PHP_SELF']; ?>" method="post">
@@ -131,7 +131,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="sc-row" id="floating-dense">
-	<h3>Floating dense input</h3>
+	<h3 class="sc-col sc-xs4 sc-s12">Floating dense input</h3>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		Compared to the "<a href="#floating">floating input</a>" the floating dense input is a bit smaller.
@@ -197,7 +197,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="sc-row" id="single-line">
-	<h3>Single line-textfield</h3>
+	<h3 class="sc-col sc-xs4 sc-s12">Single line-textfield</h3>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		The single line text fields can also have an icon. These are more commonly used when used in a tight area.
@@ -223,7 +223,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="sc-row" id="single-line-dense">
-	<h3>Single dense line text field</h3>
+	<h3 class="sc-col sc-xs4 sc-s12">Single dense line text field</h3>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		The single dense line-text fields can also have an icon but are smaller than "<a href="#single-line">single line-textfields</a>".
@@ -264,7 +264,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="sc-row">
-	<h3>Textarea</h3>
+	<h3 class="sc-col sc-xs4 sc-s12">Textarea</h3>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		The textarea works the same as the floating text fields. Textarea also supports a dense styling.
@@ -279,7 +279,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="sc-row">
-	<h3>Settings</h3>
+	<h3 class="sc-col sc-xs4 sc-s12">Settings</h3>
 
 	<table>
 		<thead>

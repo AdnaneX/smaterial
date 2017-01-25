@@ -6,7 +6,7 @@ $keywords = 'tables, data tables';
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>
 <section class="sc-row">
-	<h2>Tables</h2>
+	<h2 class="sc-col sc-xs4 sc-s12">Tables</h2>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
    		The data tables can be used like any table.
