@@ -99,8 +99,8 @@ $font-color-button: $font-color-headline; // Default $font-color-headline
  * AppBar
  **************************************/
 // Basic (Don't change these, they influence the drawer (sidenav) and tabs as well)
-$appbar-small-height: rem-calc(48px); // Default rem-calc(48px)
-$appbar-medium-height: rem-calc(56px); // Default rem-calc(56px)
+$appbar-mobile-landscape-height: rem-calc(48px); // Default rem-calc(48px)
+$appbar-mobile-portrait-height: rem-calc(56px); // Default rem-calc(56px)
 $appbar-large-height: rem-calc(64px); // Default rem-calc(64px)
 
 // Colors
@@ -285,8 +285,8 @@ $small-columns: 8; // Default 8
 $columns: 12; // Default 12
 
 // Gutter
-$gutter: 16px; // Default 16px
-$large-gutter: 24px; // Default 24px
+$gutter: rem-calc(16px); // Default 16px
+$large-gutter: rem-calc(24px); // Default 24px
 
 /**************************************
  * Icons

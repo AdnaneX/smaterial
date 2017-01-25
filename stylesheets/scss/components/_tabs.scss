@@ -15,22 +15,29 @@ $tab-padding: rem-calc(12px);
 	overflow: auto;
 	overflow-y: hidden;
 	position: fixed;
-	top: $appbar-small-height;
+	top: $appbar-mobile-portrait-height;
 	width: 100%;
 	z-index: 2;
 	left: 0;
 	right: 0;
 	white-space: nowrap;
 
-	@media #{$medium-only} {
-		width: calc(100% - #{$drawer-medium-width} + #{rem-calc(1px)});
-		left: calc(#{$drawer-medium-width} - #{rem-calc(1px)});
-		top: $appbar-medium-height;
+	@media only screen and (orientation: landscape) and (max-width: #{$small-screen}) {
+		width: calc(100% - #{$appbar-mobile-landscape-height} + #{rem-calc(1px)});
+		left: calc(#{$appbar-mobile-landscape-height} - #{rem-calc(1px)});
+		top: $appbar-mobile-landscape-height;
 	}
 
-	@media #{$medium-up} {
-		width: calc(100% - #{$drawer-small-width} + #{rem-calc(1px)});
-		left: calc(#{$drawer-small-width} - #{rem-calc(1px)});
+	@media only screen and (orientation: portrait) and (max-width: #{$xsmall-screen}) {
+		width: calc(100% - #{$appbar-mobile-portrait-height} + #{rem-calc(1px)});
+		left: calc(#{$appbar-mobile-portrait-height} - #{rem-calc(1px)});
+		top: $appbar-mobile-portrait-height;
+	}
+
+	@media #{$small-up} {
+		height: $appbar-large-height;
+		width: calc(100% - #{$appbar-large-height} + #{rem-calc(1px)});
+		left: calc(#{$appbar-large-height} - #{rem-calc(1px)});
 		top: $appbar-large-height;
 	}
 

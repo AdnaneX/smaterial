@@ -21,10 +21,7 @@ $drawer-profile-height: $drawer-padding + $drawer-profile-img + $drawer-profile-
 	width: $drawer-small-width;
 	height: 100%;
 	overflow: hidden;
-
-	@media #{$medium-only} {
-		width: $drawer-medium-width;
-	}
+	max-width: calc(100% - #{rem-calc(56px)});
 
 	/*@media #{$small-down} {
 		&:before {
@@ -149,13 +146,17 @@ $drawer-profile-height: $drawer-padding + $drawer-profile-img + $drawer-profile-
 				.sc-drawer-header {
 					padding: rem-calc(16px) rem-calc(16px) rem-calc(8px) rem-calc(16px);
 					border-bottom: rem-calc(1px) solid if($theme == light, rgba($black, .12), rgba($white, .12));
-					height: $appbar-small-height;
+					height: $appbar-mobile-portrait-height;
 
-					@media #{$medium-only} {
-						height: $appbar-medium-height;
+					@media only screen and (orientation: landscape) and (max-width: #{$small-screen}) {
+						height: $appbar-mobile-landscape-height;
 					}
 
-					@media #{$medium-up} {
+					@media only screen and (orientation: portrait) and (max-width: #{$xsmall-screen}) {
+						height: $appbar-mobile-portrait-height;
+					}
+
+					@media #{$small-up} {
 						height: $appbar-large-height;
 					}
 				}
@@ -164,15 +165,19 @@ $drawer-profile-height: $drawer-padding + $drawer-profile-img + $drawer-profile-
 
 		@if( in-array( 'clipped', $navigation-drawer ) ) {
 			&-clipped {
-				top: $appbar-small-height;
+				top: $appbar-mobile-portrait-height;
 				z-index: 1;
 				border-right: rem-calc(1px) solid if($theme == light, rgba($black, .12), rgba($white, .12));
 
-				@media #{$medium-only} {
-					top: $appbar-medium-height;
+				@media only screen and (orientation: landscape) and (max-width: #{$small-screen}) {
+					top: $appbar-mobile-landscape-height;
 				}
 
-				@media #{$medium-up} {
+				@media only screen and (orientation: portrait) and (max-width: #{$xsmall-screen}) {
+					top: $appbar-mobile-portrait-height;
+				}
+
+				@media #{$small-up} {
 					top: $appbar-large-height;
 				}
 
@@ -184,14 +189,18 @@ $drawer-profile-height: $drawer-padding + $drawer-profile-img + $drawer-profile-
 
 		@if( in-array( 'floating', $navigation-drawer ) ) {
 			&-floating {
-				top: $appbar-small-height;
+				top: $appbar-mobile-portrait-height;
 				z-index: 1;
 
-				@media #{$medium-only} {
-					top: $appbar-medium-height;
+				@media only screen and (orientation: landscape) and (max-width: #{$small-screen}) {
+					top: $appbar-mobile-landscape-height;
 				}
 
-				@media #{$medium-up} {
+				@media only screen and (orientation: portrait) and (max-width: #{$xsmall-screen}) {
+					top: $appbar-mobile-portrait-height;
+				}
+
+				@media #{$small-up} {
 					top: $appbar-large-height;
 				}
 
@@ -209,17 +218,22 @@ $drawer-profile-height: $drawer-padding + $drawer-profile-img + $drawer-profile-
 			z-index: 3;
 
 			.sc-drawer-header {
-				height: $appbar-small-height;
-				line-height: $appbar-small-height;
+				height: $appbar-mobile-portrait-height;
+				line-height: $appbar-mobile-portrait-height;
 				margin: 0 0 $drawer-profile-bottom-padding 0;
 				border-bottom: rem-calc(1px) solid if($theme == light, rgba($black, .12), rgba($white, .12));
 
-				@media #{$medium-only} {
-					height: $appbar-medium-height;
-					line-height: $appbar-medium-height;
+				@media only screen and (orientation: landscape) and (max-width: #{$small-screen}) {
+					height: $appbar-mobile-landscape-height;
+					line-height: $appbar-mobile-landscape-height;
 				}
 
-				@media #{$medium-up} {
+				@media only screen and (orientation: portrait) and (max-width: #{$xsmall-screen}) {
+					height: $appbar-mobile-portrait-height;
+					line-height: $appbar-mobile-portrait-height;
+				}
+
+				@media #{$small-up} {
 					height: $appbar-large-height;
 					line-height: $appbar-large-height;
 				}

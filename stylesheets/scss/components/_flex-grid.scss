@@ -1,6 +1,8 @@
 .sc-row {
 	display: flex;
 	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
 	@include flex-direction(row);
 	@include flex-wrap(wrap);
 	justify-content: flex-start;
@@ -20,10 +22,10 @@
 	.sc-col {
 		flex-grow: 1;
 		@include box-sizing(border-box);
-		padding: 0 rem-calc( ( $gutter / 2 ) );
+		padding: 0 ( $gutter / 2 );
 
 		@media #{$small-up} {
-			padding: 0 rem-calc( ( $large-gutter / 2 ) );
+			padding: 0 ( $large-gutter / 2 );
 		}
 
 		&.sc-xs {

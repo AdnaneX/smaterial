@@ -106,8 +106,8 @@ $keywords .= ', smaterial, css, scss, material design';
 				<h1><?php echo '<span class="sc-xs-hidden sc-s-hidden">'.ucfirst( $folder ).' -</span> '.$title; ?></h1>
 			</div>
 
-			<div class="sc-appbar-actions">
-				<a href="#" class="sc-ripple sc-search-trigger"><i class="material-icons">search</i></a>
+			<div class="sc-appbar-actions sc-row">
+				<a href="#" class="sc-search-trigger sc-col sc-xs"><i class="material-icons">search</i></a>
 
 				<div class="sc-search-input">
 					<form action="<?= $_SERVER['PHP_SELF']; ?>" method="post">
@@ -117,10 +117,8 @@ $keywords .= ', smaterial, css, scss, material design';
 						</div>
 					</form>
 				</div>
-			</div>
 
-			<div class="sc-appbar-menu">
-				<a href="#" class="sc-nav-more sc-trigger" data-sc-trigger="sc-nav-more"><i class="material-icons">more_vert</i></a>
+				<a href="#" class="sc-nav-more sc-trigger  sc-col sc-xs" data-sc-trigger="sc-nav-more"><i class="material-icons">more_vert</i></a>
 
 				<ul class="sc-appbar-menu-more" id="sc-nav-more">
 					<li>Example</li>

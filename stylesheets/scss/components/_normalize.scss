@@ -94,26 +94,25 @@ main {
 	bottom: 0;
 	left: 0;
 	overflow: auto;
-	padding: rem-calc($gutter);
+	padding: $gutter;
 	position: fixed;
 	right: 0;
 	top: rem-calc(48px);
 
-	@media #{$small-up} {
+	@media only screen and (orientation: landscape) and (max-width: #{$small-screen}) {
+		top: rem-calc(48px);
+		padding: $gutter;
+	}
+
+	@media only screen and (orientation: portrait) and (max-width: #{$xsmall-screen}) {
 		top: rem-calc(56px);
+		padding: $gutter;
 	}
 
-	@media only screen and (min-width: 600px) {
-		padding: rem-calc($large-gutter);
-	}
-
-	@media #{$medium-only} {
-		left: $drawer-medium-width;
-	}
-
-	@media #{$medium-up} {
+	@media #{$small-up} {
 		top: rem-calc(64px);
 		left: $drawer-small-width;
+		padding: $large-gutter;
 	}
 }
 
