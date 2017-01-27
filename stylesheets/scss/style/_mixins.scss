@@ -14,12 +14,16 @@
 	border-radius: $settings;
 }
 
-@mixin box-sizing( $settings ) {
-	-webkit-box-sizing: $settings;
-	-moz-box-sizing: $settings;
-	-ms-box-sizing: $settings;
-	-o-box-sizing: $settings;
-	box-sizing: $settings;
+@mixin box-sizing( $settings: border-box ) {
+	@if( in-array( $settings, (content-box, border-box, inherit, initial, unset) ) ) {
+		-webkit-box-sizing: $settings;
+		-moz-box-sizing: $settings;
+		-ms-box-sizing: $settings;
+		-o-box-sizing: $settings;
+		box-sizing: $settings;
+	} @else {
+		@warn 'Property for "box-sizing" not supported: '#{$setting};
+	}
 }
 
 @mixin material-shadow( $dp ) {
@@ -135,7 +139,7 @@
 	transition-delay: $setting;
 }
 
-@mixin button( $border-radius ) {
+@mixin button( $border-radius: rem-calc(2px) ) {
 	cursor: pointer;
 	@include border-radius( $border-radius );
 	text-decoration: none;
@@ -241,42 +245,106 @@
 	}
 }
 
-@mixin flex-direction( $setting ) {
-	-webkit-flex-direction: $setting;
-	-moz-flex-direction: $setting;
-	-ms-flex-direction: $setting;
-	flex-direction: $setting;
+@mixin align-content( $setting: stretch ) {
+	@if( in-array( $setting, (flex-start, flex-end, center, space-between, space-around, stretch, inherit, initial, unset) ) ) {
+		-webkit-align-content: $setting;
+		align-content: $setting;
+	} @else {
+		@warn 'Property for "align-content" not supported: '#{$setting};
+	}
 }
 
-@mixin flex-wrap( $setting ) {
-	-webkit-flex-wrap: $setting;
-	-mox-flex-wrap: $setting;
-	-ms-flex-wrap: $setting;
-	flex-wrap: $setting;
+@mixin align-items( $setting: stretch ) {
+	@if( in-array( $setting, (flex-start, flex-end, center, baseline, stretch, inherit, initial, unset) ) ) {
+		-webkit-align-items: $setting;
+		align-items: $setting;
+	} @else {
+		@warn 'Property for "align-items" not supported: '#{$setting};
+	}
 }
 
-@mixin align-items( $setting ) {
-	-webkit-align-items: $setting;
-	-moz-align-items: $setting;
-	-ms-flex-items: $setting;
-	align-items: $setting;
+@mixin align-self( $setting: auto ) {
+	@if( in-array( $setting, (auto, flex-start, flex-end, center, baseline, stretch, inherit, initial, unset) ) ) {
+		-webkit-align-self: $setting;
+		align-self: $setting;
+	} @else {
+		@warn 'Property for "align-self" not supported: '#{$setting};
+	}
 }
 
-@mixin align-content( $setting ) {
-	-webkit-align-content: $setting;
-	-moz-align-content: $setting;
-	-ms-flex-content: $setting;
-	align-content: $setting;
-}
-
-@mixin flex( $setting ) {
+@mixin flex( $setting: 0 1 auto ) {
 	-webkit-flex: $setting;
-	-moz-box-flex: $setting;
-	-ms-flex: $setting;
 	flex: $setting;
 }
 
-@mixin order( $setting ) {
+@mixin flex-basis( $setting: auto ) {
+	-webkit-flex-basis: $setting;
+	flex-basis: $setting;
+}
+
+@mixin flex-direction( $setting: row ) {
+	@if( in-array( $setting, (row, row-reversed, column, column-reversed, inherit, initial, unset) ) ) {
+		-webkit-flex-direction: $setting;
+		-ms-flex-direction: $setting;
+		flex-direction: $setting;
+	} @else {
+		@warn 'Property for "flex-direction" not supported: '#{$setting};
+	}
+}
+
+@mixin flex-flow( $setting: row nowrap ) {
+	-webkit-flex-font: $setting;
+	flex-flow: $setting;
+}
+
+@mixin flex-grow( $setting: 0 ) {
+	-webkit-flex-grow: $setting;
+	flex-grow: $setting;
+}
+
+@mixin flex-shrink( $setting: 1 ) {
+	-webkit-flex-shrink: $setting;
+	flex-shrink: $setting;
+}
+
+@mixin flex-wrap( $setting: nowrap ) {
+	@if( in-array( $setting, (nowrap, wrap, wrap-reverse, inherit, initial, unset) ) ) {
+		-webkit-flex-wrap: $setting;
+		-mox-flex-wrap: $setting;
+		flex-wrap: $setting;
+	} @else {
+		@warn 'Property for "flex-wrap" not supported: '#{$setting};
+	}
+}
+
+@mixin justify-content( $setting: flex-start ) {
+	@if( in-array( $setting, (flex-start, flex-end, center, space-between, space-around, space-evenly, inherit, initial, unset) ) ) {
+		-webkit-justify-content: $setting;
+		justify-content: $setting;
+	} @else {
+		@warn 'Property for "justify-content" not supported: '#{$setting};
+	}
+}
+
+@mixin order( $setting: 0 ) {
+	-webkit-order: $setting;
 	-ms-flex-order: $setting;
 	order: $setting;
+}
+
+@mixin flex-container( $direction: row, $wrap: no-wrap, $justify: flex-start, $items: stretch, $content: stretch ) {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: flex;
+	@include flex-flow( $direction $wrap );
+	@include justify-content( $justify );
+	@include align-items( $items );
+	@include align-content( $content );
+}
+
+@mixin flex-item( $grow: 0, $shrink: 1, $basis: auto, $order: 0, $self: auto ) {
+	@include order($order);
+	@include flex( $grow $shrink $basis );
+	@include align-self( $self );
 }

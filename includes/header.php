@@ -106,8 +106,8 @@ $keywords .= ', smaterial, css, scss, material design';
 				<h1><?php echo '<span class="sc-xs-hidden sc-s-hidden">'.ucfirst( $folder ).' -</span> '.$title; ?></h1>
 			</div>
 
-			<div class="sc-appbar-actions sc-row">
-				<a href="#" class="sc-search-trigger sc-col sc-xs"><i class="material-icons">search</i></a>
+			<div class="sc-appbar-actions">
+				<a href="#" class="sc-search-trigger"><i class="material-icons">search</i></a>
 
 				<div class="sc-search-input">
 					<form action="<?= $_SERVER['PHP_SELF']; ?>" method="post">
@@ -118,9 +118,9 @@ $keywords .= ', smaterial, css, scss, material design';
 					</form>
 				</div>
 
-				<a href="#" class="sc-nav-more sc-trigger  sc-col sc-xs" data-sc-trigger="sc-nav-more"><i class="material-icons">more_vert</i></a>
+				<a href="#" class="sc-nav-more sc-trigger" data-sc-trigger="sc-nav-more"><i class="material-icons">more_vert</i></a>
 
-				<ul class="sc-appbar-menu-more" id="sc-nav-more">
+				<ul class="sc-appbar-menu" id="sc-nav-more">
 					<li>Example</li>
 				</ul>
 			</div>
@@ -155,7 +155,7 @@ $keywords .= ', smaterial, css, scss, material design';
 							<li><a href="/" <?php echo ( $file == '/index' || $file == '/' ? 'class="sc-active"' : '' ); ?>>Introduction</a></li>
 							<li><a href="/smaterial/getting-started.php" <?php echo ( $file == '/smaterial/getting-started' ? 'class="sc-active"' : '' ); ?>>Getting started</a></li>
 							<li><a href="/smaterial/shadow.php" <?php echo ( $file == '/smaterial/shadow' ? 'class="sc-active"' : '' ); ?>>Elevation and shadows</a></li>
-							<li><a href="/smaterial/news.php" <?php echo ( $file == '/smaterial/new' ? 'class="sc-active"' : '' ); ?>>What's new</a></li>
+							<li><a href="/smaterial/news.php" <?php echo ( $file == '/smaterial/news' ? 'class="sc-active"' : '' ); ?>>What's new</a></li>
 						</ul>
 					</li>
 					<li class="sc-drawer-dropdown">Style <i class="material-icons">expand_more</i>

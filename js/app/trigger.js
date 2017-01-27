@@ -1,7 +1,6 @@
 $(document).ready(function() {
 	var $trigger = $('.sc-trigger'),
-		$triggered = undefined,
-		$drawer = $('#sc-drawer');
+		$triggered = undefined;
 
 	$trigger.click(function() {
 		var $this = $(this),
@@ -26,4 +25,7 @@ $(document).ready(function() {
 			}
 		}
 	});
+
+	// Add element behind title in appbar to place other elements at the end
+	$('.sc-appbar-title').after('<div class="sc-appbar-spacer"></div>');
 });

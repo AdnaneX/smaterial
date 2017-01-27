@@ -16,7 +16,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="sc-row">
-	<h3 class="sc-col sc-xs4 sc-s12">rem-calc()</h3>
+	<h3 class="sc-col sc-xs4 sc-s12">rem-calc($px)</h3>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		You can use the function rem-calc() to convert <code class="language-html">px</code> into <code class="language-html">rem</code>.
@@ -32,7 +32,23 @@ margin: rem-calc(-16px);
 </section>
 
 <section class="sc-row">
-	<h3 class="sc-col sc-xs4 sc-s12">color()</h3>
+    <h3 class="sc-col sc-xs4 sc-s12">em-calc($px)</h3>
+
+    <p class="sc-col sc-xs4 sc-s12 sc-m6">
+        You can use the function em-calc() to convert <code class="language-html">px</code> into <code class="language-html">em</code>.
+        The variable <code class="language-html">$font-size</code> which can be found in <code class="language-html">_settings.scss</code> is used to calculate the em value.
+    </p>
+
+    <pre class="language-css sc-col sc-xs4 sc-s12 sc-m6">
+		<code>
+height: em-calc(16px);
+margin: em-calc(-16px);
+		</code>
+	</pre>
+</section>
+
+<section class="sc-row">
+    <h3 class="sc-col sc-xs4 sc-s12">color(<span class="sc-xs-hidden">$color, $accent</span>)</h3>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
 		You can use the color function to find a accent color.
@@ -43,6 +59,35 @@ margin: rem-calc(-16px);
 	<pre class="language-css sc-col sc-xs4 sc-s12 sc-m6">
 		<code>
 color($blue, 200) // Returns #90CAF9
+		</code>
+	</pre>
+</section>
+
+<section class="sc-row">
+    <h3 class="sc-col sc-xs4 sc-s12">decimal-round(<span class="sc-xs-hidden">$number, $decimals</span>)</h3>
+
+    <p class="sc-col sc-xs4 sc-s12 sc-m6">
+        You can use the <code class="language-css">decimal-round()</code> function to get a decimal number returned.
+    </p>
+
+    <pre class="language-css sc-col sc-xs4 sc-s12 sc-m6">
+		<code>
+decimal-round(20.02221, 2); // returns 20.02
+		</code>
+	</pre>
+</section>
+
+<section class="sc-row">
+    <h3 class="sc-col sc-xs4 sc-s12">in-array(<span class="sc-xs-hidden">$value, $array</span>)</h3>
+
+    <p class="sc-col sc-xs4 sc-s12 sc-m6">
+        You can use the <code class="language-css">in-array()</code> function to get check if a value is in an array.
+    </p>
+
+    <pre class="language-css sc-col sc-xs4 sc-s12 sc-m6">
+		<code>
+in-array(1, (29, 10, 3, 4, 3, 1)); // returns true
+in-array(1, (29, 10, 3, 4, 3)); // returns false
 		</code>
 	</pre>
 </section>

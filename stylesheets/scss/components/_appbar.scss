@@ -71,6 +71,10 @@ $appbar-icon-large-size: calc(#{$appbar-large-height} - (#{rem-calc(20px)} * 2))
 		}
 	}
 
+	&-spacer {
+		@include flex-grow(1);
+	}
+
 	&-title {
 		padding: calc(#{$appbar-mobile-portrait-height} - (#{rem-calc($font-size-title+0px)} + #{rem-calc(20px)})) 0 #{rem-calc(20px)} 0;
 		margin-left: calc(#{rem-calc(72px)} - ((#{$gutter} * 2) + #{$appbar-icon-default-size}));

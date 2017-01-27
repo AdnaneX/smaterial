@@ -1,14 +1,5 @@
 .sc-row {
-	display: flex;
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	@include flex-direction(row);
-	@include flex-wrap(wrap);
-	justify-content: flex-start;
-	@include align-items(flex-start);
-	@include align-content(flex-start);
-	@include box-sizing(border-box);
+	@include flex-container(row, wrap, flex-start, flex-start, flex-start);
 	margin-bottom: $gutter;
 
 	@media #{$small-up} {
@@ -21,7 +12,6 @@
 
 	.sc-col {
 		flex-grow: 1;
-		@include box-sizing(border-box);
 		padding: 0 ( $gutter / 2 );
 
 		@media #{$small-up} {
@@ -181,5 +171,35 @@
 				$i: $i + 1;
 			}
 		}
+	}
+}
+
+.sc-xs-hidden {
+	@media #{$xsmall-only} {
+		display: none;
+	}
+}
+
+.sc-s-hidden {
+	@media #{$small-only} {
+		display: none;
+	}
+}
+
+.sc-m-hidden {
+	@media #{$medium-only} {
+		display: none;
+	}
+}
+
+.sc-l-hidden {
+	@media #{$large-only} {
+		display: none;
+	}
+}
+
+.sc-xl-hidden {
+	@media #{$xlarge-only} {
+		display: none;
 	}
 }
