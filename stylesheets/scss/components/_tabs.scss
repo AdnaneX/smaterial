@@ -20,24 +20,19 @@ $tab-padding: rem-calc(12px);
 	z-index: 2;
 	left: 0;
 	right: 0;
-	white-space: nowrap;
+	@include flex-container(null, null, space-between);
 
 	@media only screen and (orientation: landscape) and (max-width: #{$small-screen}) {
-		width: calc(100% - #{$appbar-mobile-landscape-height} + #{rem-calc(1px)});
-		left: calc(#{$appbar-mobile-landscape-height} - #{rem-calc(1px)});
 		top: $appbar-mobile-landscape-height;
 	}
 
 	@media only screen and (orientation: portrait) and (max-width: #{$xsmall-screen}) {
-		width: calc(100% - #{$appbar-mobile-portrait-height} + #{rem-calc(1px)});
-		left: calc(#{$appbar-mobile-portrait-height} - #{rem-calc(1px)});
 		top: $appbar-mobile-portrait-height;
 	}
 
 	@media #{$small-up} {
-		height: $appbar-large-height;
-		width: calc(100% - #{$appbar-large-height} + #{rem-calc(1px)});
-		left: calc(#{$appbar-large-height} - #{rem-calc(1px)});
+		width: calc(100% - #{$drawer-small-width} + #{rem-calc(1px)});
+		left: calc( #{$drawer-small-width} - #{rem-calc(1px)});
 		top: $appbar-large-height;
 	}
 
