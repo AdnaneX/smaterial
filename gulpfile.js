@@ -42,7 +42,6 @@ gulp.task( 'sass', function () {
 			errLogToConsole: true,
 			outputStyle: 'compressed'
 		} ).on( 'error', sass.logError ) )
-		//.pipe(purge())
 		.pipe( autoprefixer() )
 		.pipe( sourcemaps.write( './' ) )
 		.pipe( gulp.dest( 'stylesheets' ) );

@@ -16,7 +16,9 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 <section class="sc-row">
 	<h3 class="sc-col sc-xs4 sc-s12">Text only</h3>
 
-	<p class="sc-col sc-xs4 sc-s12 sc-m6"></p>
+	<p class="sc-col sc-xs4 sc-s12 sc-m6">
+        These are tabs that only contain text.
+    </p>
 
 	<pre class="language-html sc-col sc-s12 sc-m6">
 		<code>
@@ -34,7 +36,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	<h3 class="sc-col sc-xs4 sc-s12">Icons only</h3>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
-
+        These are tabs that only contain icons.
 	</p>
 
 	<pre class="language-html sc-col sc-xs4 sc-s12 sc-m6">
@@ -52,7 +54,9 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 <section class="sc-row">
 	<h3 class="sc-col sc-xs4 sc-s12">Icons with text</h3>
 
-	<p class="sc-col sc-xs4 sc-s12 sc-m6"></p>
+	<p class="sc-col sc-xs4 sc-s12 sc-m6">
+        These are tabs that contain both icons and text.
+    </p>
 
 	<pre class="language-html sc-col sc-xs4 sc-s12 sc-m6">
 		<code>
@@ -69,7 +73,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 <section class="sc-row">
 	<h3 class="sc-col sc-xs4 sc-s12">Settings</h3>
 
-	<table class="sc-col sc-xs4 sc-s12 sc-m6">
+	<table class="sc-col sc-xs4 sc-s12">
 		<thead>
 		<tr>
 			<th>Variable</th>
@@ -80,10 +84,20 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 
 		<tbody>
 		<tr>
-			<td>$tab-color</td>
+			<td>$tab-background</td>
 			<td>Variable / color</td>
 			<td>Changes the background color of the tabs</td>
 		</tr>
+        <tr>
+            <td>$tab-font-color</td>
+            <td>Variable / color</td>
+            <td>Changes the font color for tabs that are off/ not acitve</td>
+        </tr>
+        <tr>
+            <td>$tab-font-on-color</td>
+            <td>Variable / color</td>
+            <td>Changes the font for tabs that are on/ active</td>
+        </tr>
 		<tr>
 			<td>$tab-indicator-on-color</td>
 			<td>Variable / color</td>

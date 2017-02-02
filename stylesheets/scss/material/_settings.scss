@@ -250,7 +250,7 @@ $stepper-step-on-font-color: rgba($black, .87); // Default rgba($black, .87)
 /**************************************
  * Tabs
  **************************************/
-$tab-color: $main-color; // Default $main-color
+$tab-background: $main-color; // Default $main-color
 $tab-font-color: rgba($white, .7); // Default rgba($white, .7)
 $tab-font-on-color: $white; // Default $white
 $tab-indicator-on-color: $white; // Default $white
@@ -262,6 +262,7 @@ $textfield-off-color: $grey; // $grey
 $textfield-on-color: $main-color; // Default $main-color
 $textfield-disabled-color: $textfield-off-color; // Default $textfield-off-color
 $textfield-required-color: $red; // Default $red
+$textfield-error-color: $textfield-required-color; // Default $textfield-required-color
 
 /**************************************
  * Tooltips

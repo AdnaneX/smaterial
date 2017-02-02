@@ -11,7 +11,7 @@ $tab-padding: rem-calc(12px);
 
 .sc-tabs {
 	@include material-shadow(4);
-	background: $tab-color;
+	background: $tab-background;
 	overflow: auto;
 	overflow-y: hidden;
 	position: fixed;
@@ -37,7 +37,7 @@ $tab-padding: rem-calc(12px);
 	}
 
 	.sc-tab, .sc-tab-icon, .sc-tab-icon-text {
-		border-bottom: $tab-indicator-size solid $tab-color;
+		border-bottom: $tab-indicator-size solid $tab-background;
 		color: $tab-font-color;
 		display: inline-block;
 		font-size: rem-calc(14px);
@@ -47,7 +47,6 @@ $tab-padding: rem-calc(12px);
 		text-align: center;
 		text-overflow: ellipsis;
 		text-transform: uppercase;
-		word-wrap: break-word;
 		@include transition(border $transition-small-duration $basic-transition unquote(',') color $transition-small-duration $basic-transition);
 
 		@media #{$small-up} {

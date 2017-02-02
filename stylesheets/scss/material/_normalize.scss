@@ -12,6 +12,7 @@ html, body {
 
 html {
 	font-size: #{$font-size}px;
+	-webkit-print-color-adjust: exact; // Make Chrome print the colors
 }
 
 label {
@@ -30,27 +31,6 @@ img {
 	height: auto;
 	max-width: 100%;
 	display: block;
-	/*
-	@include animation(img-loader $transition-small-duration $element-enter-transition);
-
-	@media #{$medium-only} {
-		@include animation(img-loader $transition-medium-duration $element-enter-transition);
-	}
-
-	@media #{$medium-up} {
-		@include animation(img-loader $transition-large-duration $element-enter-transition);
-	}
-
-	@include keyframes(img-loader) {
-		0% {
-			@include opacity(0);
-			@include filter(saturate(0%));
-		}
-		100% {
-			@include opacity(1);
-			@include filter(saturate(100%));
-		}
-	}*/
 }
 
 h1, h2, h3, h4, h5, h6 {

@@ -45,26 +45,23 @@ $(document).ready(function() {
 		}
 	});
 
-	$('textarea').each(function () {
-		var $parent = '';
+	$('.sc-multi-input textarea').keyup(function() {
+		var $this = $(this),
+			$fontHeight = $this.css('font-size').replace('px', ''),
+			$container = $this.parent('.sc-multi-input'),
+			$containerHeight = $container.css('height').replace('px', ''),
+			$scrollHeight = $this.scrollHeight,
+			$txtHeight = ($scrollHeight + $fontHeight) + 'px',
+			$containerHeight = ($scrollHeight + $fontHeight + $containerHeight);
 
-		if( this.closest('.sc-floating-input') != null ) {
-			$parent = this.closest('.sc-floating-input');
-		} else if( this.closest('.sc-floating-dense-input') != null ) {
-			$parent = this.closest('.sc-floating-dense-input');
-		}
-		this.setAttribute( 'style', 'height:' + (this.scrollHeight) + 'px;overflow-y:hidden;' );
-	}).on('input', function () {
-		var $parent = '';
+		console.log('f: '+$fontHeight);
+		console.log('c: '+$container);
+		console.log($container);
+		console.log('ch: '+$containerHeight);
+		console.log('s: '+$scrollHeight);
+		console.log('t: '+$txtHeight);
 
-		if( this.closest('.sc-floating-input') != null ) {
-			$parent = this.closest('.sc-floating-input');
-		} else if( this.closest('.sc-floating-dense-input') != null ) {
-			$parent = this.closest('.sc-floating-dense-input');
-		}
-
-		$parent.style.height = 'auto';
-		this.style.height = 'auto';
-		this.style.height = (this.scrollHeight) + 'px';
+		$this.css('height', $txtHeight);
+		$container.css('height', $containerHeight);
 	});
 });

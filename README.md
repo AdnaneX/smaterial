@@ -32,8 +32,6 @@ After making your changes please describe what you have changed. This will speed
 
 ## DONE
 
-- Bottom navigation
-- Bottom sheet
 - Chips
 - Tabs
 - Tooltips
@@ -45,12 +43,9 @@ After making your changes please describe what you have changed. This will speed
     - Delete class "sc-" prefix to save more than 80kb?
     - Fix mobile styling (in Chrome for Android when scrolling a page the title bar remains visible)
     - Check duplicate styling and therefor load speed
-    - When an item can be triggered by clicking work with JavaScript to set an active class.
-    - Use 1 class for all triggers. With the active class make slideup and slidedown action
     - Move global usable classes to `_normailize.scss` (`.sc-no-hover, .sc-active, .sc-disabled`) to name a few
     - Fix max-height max-width to something which works automatically. This applies to several components where these properties are animated 
     - Add Material Design animations
-    - Add flexbox support
     - Fix positions of `<header>`, `<main>`, `<aside>` to be more compatible with for example WordPress (`<aside>` goes over `<header>`, `<main>` slides up under `<header>`)
     - Add support for IE and FireFox
     - Add Hammer.js for a better mobile experience(Optional)
@@ -66,7 +61,9 @@ After making your changes please describe what you have changed. This will speed
     - Add search slide out
     - Redo styling
 - Bottom navigation
+	- Add Flex support
 - Bottom sheet
+	- Add Flex support
 - Buttons
     - Add dropdown buttons
     - Add toggle button actions

@@ -293,7 +293,7 @@
 }
 
 @mixin flex-flow( $setting: row nowrap ) {
-	-webkit-flex-font: $setting;
+	-webkit-flex-flow: $setting;
 	flex-flow: $setting;
 }
 
@@ -344,7 +344,7 @@
 }
 
 @mixin flex-item( $grow: 0, $shrink: 1, $basis: auto, $order: 0, $self: auto ) {
-	@include order($order);
+	@include order( $order );
 	@include flex( $grow $shrink $basis );
 	@include align-self( $self );
 }

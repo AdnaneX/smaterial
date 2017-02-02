@@ -25,9 +25,29 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 <section class="sc-row" id="floating">
 	<h3 class="sc-col sc-xs4 sc-s12">Floating input</h3>
 
-	<p class="sc-col sc-xs4 sc-s12 sc-m6">
-		The floating input is most commonly used for forms.
-	</p>
+    <div class="sc-col sc-xs4 sc-s12 sc-m6">
+        <p>
+            The floating input is most commonly used for forms.
+        </p>
+
+        <form action="<?= $_SERVER['PHP_SELF']; ?>" method="post">
+            <div class="sc-floating-input">
+                <input type="text" name="name" id="name" required>
+                <label for="name">Name</label>
+            </div>
+
+            <div class="sc-floating-input">
+                <input type="email" name="email" id="email" required>
+                <label for="email">Email</label>
+            </div>
+
+            <input type="submit" class="sc-raised-button">
+        </form>
+
+        <p>
+            The <span class="sc-red-text"><i class="material-icons">star</i></span>  is automatically added by required fields but can easily be turned off.
+        </p>
+    </div>
 
 	<div class="sc-col sc-xs4 sc-s12 sc-m3">
 		<div class="sc-floating-input">
@@ -88,54 +108,28 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	</pre>
 </section>
 
-<section class="sc-row">
-	<h3 class="sc-col sc-xs4 sc-s12">Form example</h3>
-
-	<div class="sc-col sc-xs4 sc-s12 sc-m3">
-		<form action="<?= $_SERVER['PHP_SELF']; ?>" method="post">
-			<div class="sc-floating-input">
-				<input type="text" name="name" id="name" required>
-				<label for="name">Name</label>
-			</div>
-
-			<div class="sc-floating-input">
-				<input type="email" name="email" id="email" required>
-				<label for="email">Email</label>
-			</div>
-
-			<input type="submit" class="sc-raised-button">
-		</form>
-	</div>
-
-	<div class="sc-col sc-xs4 sc-s12 sc-push-m3 sc-m6">
-		The <span class="sc-red-text"><i class="material-icons">star</i></span>  is automatically added by required fields but can easily be turned off.
-	</div>
-
-	<pre class="language-html sc-col sc-s12 sc-push-m3 sc-m6">
-		<code>
-&lt;form action="" method="post">
-  &lt;div class="sc-floating-input">
-    &lt;input type="text" name="name" id="name" required>
-    &lt;label for="name">Name&lt;/label>
-  &lt;/div>
-
-  &lt;div class="sc-floating-input">
-    &lt;input type="email" name="email" id="email" required>
-    &lt;label for="email">Email&lt;/label>
-  &lt;/div>
-
-  &lt;input type="submit" class="sc-raised-button">
-&lt;/form>
-		</code>
-	</pre>
-</section>
-
 <section class="sc-row" id="floating-dense">
 	<h3 class="sc-col sc-xs4 sc-s12">Floating dense input</h3>
 
-	<p class="sc-col sc-xs4 sc-s12 sc-m6">
-		Compared to the "<a href="#floating">floating input</a>" the floating dense input is a bit smaller.
-	</p>
+    <div class="sc-col sc-xs4 sc-s12 sc-m6">
+        <p>
+            Compared to the "<a href="#floating">floating input</a>" the floating dense input is a bit smaller.
+        </p>
+
+        <form action="<?= $_SERVER['PHP_SELF']; ?>" method="post">
+            <div class="sc-floating-dense-input">
+                <input type="text" name="name" id="name1" required>
+                <label for="name1">Name</label>
+            </div>
+
+            <div class="sc-floating-dense-input">
+                <input type="email" name="email" id="email2" required>
+                <label for="email2">Email</label>
+            </div>
+
+            <input type="submit" class="sc-raised-button">
+        </form>
+    </div>
 
 	<div class="sc-col sc-xs4 sc-s12 sc-m3">
 		<div class="sc-floating-dense-input">
@@ -199,9 +193,26 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 <section class="sc-row" id="single-line">
 	<h3 class="sc-col sc-xs4 sc-s12">Single line-textfield</h3>
 
-	<p class="sc-col sc-xs4 sc-s12 sc-m6">
-		The single line text fields can also have an icon. These are more commonly used when used in a tight area.
-	</p>
+    <div class="sc-col sc-xs4 sc-s12 sc-m6">
+        <p class="sc-col sc-xs4 sc-s12 sc-m6">
+            The single line text fields can also have an icon. These are more commonly used when used in a tight area.
+        </p>
+
+        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+            <div class="sc-single-input">
+                <input type="text" id="name3">
+                <label for="name3">Name</label>
+            </div>
+
+            <div class="sc-single-input sc-icon">
+                <input type="email" id="email3">
+                <label for="email3">Email</label>
+                <i class="material-icons">email</i>
+            </div>
+
+            <input type="submit" class="sc-raised-button">
+        </form>
+    </div>
 
 	<div class="sc-col sc-xs4 sc-s12 sc-m3">
 		<div class="sc-single-input">
@@ -220,15 +231,47 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 			<label for="disabled2">Disabled</label>
 		</div>
 	</div>
+
+    <pre class="language-html sc-col sc-xs4 sc-s12 sc-m6 sc-offset-m6">
+		<code>
+&lt;div class="sc-single-input sc-icon">
+  &lt;input type="text" id="example17">
+  &lt;label for="example17">Icons&lt;/label>
+  &lt;i class="material-icons">cloud&lt;/i>
+&lt;/div>
+
+&lt;div class="sc-single-input">
+  &lt;input type="text" id="disabled" disabled>
+  &lt;label for="disabled">Disabled&lt;/label>
+&lt;/div>
+		</code>
+	</pre>
 </section>
 
 <section class="sc-row" id="single-line-dense">
 	<h3 class="sc-col sc-xs4 sc-s12">Single dense line text field</h3>
 
-	<p class="sc-col sc-xs4 sc-s12 sc-m6">
-		The single dense line-text fields can also have an icon but are smaller than "<a href="#single-line">single line-textfields</a>".
-		These are more commonly used when used in a tight area.
-	</p>
+    <div class="sc-col sc-xs4 sc-s12 sc-m6">
+        <p>
+            The single dense line-text fields can also have an icon but are smaller than "<a href="#single-line">single line-textfields</a>".
+            These are more commonly used when used in a tight area.
+        </p>
+
+        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+            <div class="sc-single-dense-input">
+                <input type="text" id="name3">
+                <label for="name3">Name</label>
+            </div>
+
+            <div class="sc-single-dense-input sc-icon">
+                <input type="email" id="email3">
+                <label for="email3">Email</label>
+                <i class="material-icons">email</i>
+            </div>
+
+            <input type="submit" class="sc-raised-button">
+        </form>
+    </div>
 
 	<div class="sc-col sc-xs4 sc-s12 sc-m3">
 		<div class="sc-single-dense-input">
@@ -264,14 +307,14 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="sc-row">
-	<h3 class="sc-col sc-xs4 sc-s12">Textarea</h3>
+	<h3 class="sc-col sc-xs4 sc-s12">Multi-line text field</h3>
 
 	<p class="sc-col sc-xs4 sc-s12 sc-m6">
-		The textarea works the same as the floating text fields. Textarea also supports a dense styling.
+		The textarea works the same as the floating text fields
 	</p>
 
 	<div class="sc-col sc-xs4 sc-s12 sc-m6">
-		<div class="sc-floating-input">
+		<div class="sc-multi-input">
 			<textarea id="textarea"></textarea>
 			<label for="textarea">Text area</label>
 		</div>
@@ -310,6 +353,11 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 			<td>Variable / color</td>
 			<td>Changes the color of the required star</td>
 		</tr>
+        <tr>
+            <td>$textfield-error-color</td>
+            <td>Variable / color</td>
+            <td>Changes the color of invalid fields</td>
+        </tr>
 		</tbody>
 	</table>
 </section>
