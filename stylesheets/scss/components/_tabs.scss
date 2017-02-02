@@ -50,12 +50,15 @@ $tab-padding: rem-calc(12px);
 		word-wrap: break-word;
 		@include transition(border $transition-small-duration $basic-transition unquote(',') color $transition-small-duration $basic-transition);
 
+		@media #{$small-up} {
+			min-width: rem-calc(160px);
+		}
+
 		@media #{$medium-only} {
 			@include transition(border $transition-medium-duration $basic-transition unquote(',') color $transition-medium-duration $basic-transition);
 		}
 
 		@media #{$medium-up} {
-			min-width: rem-calc(160px);
 			@include transition(border $transition-large-duration $basic-transition unquote(',') color $transition-large-duration $basic-transition);
 		}
 

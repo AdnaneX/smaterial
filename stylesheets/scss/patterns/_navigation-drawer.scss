@@ -23,19 +23,24 @@ $drawer-profile-height: $drawer-padding + $drawer-profile-img + $drawer-profile-
 	overflow: hidden;
 	max-width: calc(100% - #{rem-calc(56px)});
 
-	/*@media #{$small-down} {
-		&:before {
-			content: '';
-			display: none;
-			position: fixed;
-			margin: 0 0 0 $drawer-small-width;
-			width: 100%;
-			height: 100%;
-			background: rgba($black, .4);
-			@include opacity(0);
-			@include transition(opacity $transition-small-duration $element-enter-transition);
+	&:before {
+		content: '';
+		display: block;
+		position: fixed;
+		margin-left: -102%;
+		width: 100%;
+		height: 100%;
+		background: rgba($black, .4);
+		@include transition(opacity $transition-small-duration $element-enter-transition);
+
+		&.sc-expanded {
+			margin-left: calc(0 + #{$drawer-small-width});
 		}
-	}*/
+
+		@media #{$small-up} {
+			display: none;
+		}
+	}
 
 	&-container {
 		position: relative;
@@ -435,7 +440,7 @@ $drawer-profile-height: $drawer-padding + $drawer-profile-img + $drawer-profile-
 	li {
 		color: if( $theme == light, rgba($black, .87), rgba($white, .87));
 		font-weight: 500;
-		font-size: rem-calc(14px);
+		font-size: rem-calc(15px);
 		height: $drawer-item-height;
 		display: block;
 		padding: 0 $drawer-padding;
@@ -468,7 +473,7 @@ $drawer-profile-height: $drawer-padding + $drawer-profile-img + $drawer-profile-
 		width: 100%;
 		display: block;
 		height: $drawer-item-height;
-		font-size: rem-calc(14px);
+		font-size: rem-calc(15px);
 		margin: 0 calc(#{$drawer-padding} * -2) 0 calc(#{$drawer-padding} * -1);
 		padding: 0 $drawer-padding;
 		@include transition(color $transition-small-duration $basic-transition);
