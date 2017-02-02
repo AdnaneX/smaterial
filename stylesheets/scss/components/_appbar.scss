@@ -21,15 +21,9 @@ $appbar-icon-large-size: calc(#{$appbar-large-height} - (#{rem-calc(20px)} * 2))
 	position: fixed;
 	width: 100%;
 	z-index: 2;
-	display: flex;
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
+	@include flex-container(null, null, flex-start);
 	justify-content: flex-start;
-	@include flex-direction(row);
-	@include flex-wrap(nowrap);
 	@include box-sizing(border-box);
-	@include align-content(stretch);
 	padding: 0 $gutter;
 
 	@media only screen and (orientation: landscape) and (max-width: #{$small-screen}) {

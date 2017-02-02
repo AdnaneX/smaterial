@@ -44,24 +44,4 @@ $(document).ready(function() {
 			}*/
 		}
 	});
-
-	$('.sc-multi-input textarea').keyup(function() {
-		var $this = $(this),
-			$fontHeight = $this.css('font-size').replace('px', ''),
-			$container = $this.parent('.sc-multi-input'),
-			$containerHeight = $container.css('height').replace('px', ''),
-			$scrollHeight = $this.scrollHeight,
-			$txtHeight = ($scrollHeight + $fontHeight) + 'px',
-			$containerHeight = ($scrollHeight + $fontHeight + $containerHeight);
-
-		console.log('f: '+$fontHeight);
-		console.log('c: '+$container);
-		console.log($container);
-		console.log('ch: '+$containerHeight);
-		console.log('s: '+$scrollHeight);
-		console.log('t: '+$txtHeight);
-
-		$this.css('height', $txtHeight);
-		$container.css('height', $containerHeight);
-	});
 });

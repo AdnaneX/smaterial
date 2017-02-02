@@ -28,7 +28,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="sc-row">
-	<h3 class="sc-col sc-xs4 sc-s12">Snackbars & toasts settings</h3>
+	<h3 class="sc-col sc-xs4 sc-s12">Settings</h3>
 
 	<table class="sc-col sc-xs4 sc-s12 sc-m6">
 		<thead>

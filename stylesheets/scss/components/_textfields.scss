@@ -310,6 +310,7 @@ $textfield-single-dense-icon-size: rem-calc(20px); // Default rem-calc(20px)
 @if( in-array( 'multi', $textfield ) ) {
 	.sc-multi-input {
 		padding: $textfield-floating-padding 0 $textfield-floating-divider 0;
+		height: $textfield-floating-height;
 
 		textarea {
 			font-family: inherit;
@@ -317,10 +318,12 @@ $textfield-single-dense-icon-size: rem-calc(20px); // Default rem-calc(20px)
 			font-size: $textfield-floating-font-size;
 			padding: $textfield-floating-divider 0;
 			resize: none;
+			height: calc(#{$textfield-floating-height} - (#{$textfield-floating-padding} + #{$textfield-floating-divider}));
 
 			&:active, &:focus {
 				+ label {
 					font-size: $textfield-floating-label-font-size;
+					top: 0;
 				}
 			}
 		}
@@ -328,9 +331,11 @@ $textfield-single-dense-icon-size: rem-calc(20px); // Default rem-calc(20px)
 		label {
 			font-size: $textfield-floating-font-size;
 			font-weight: 400;
+			top: $textfield-floating-padding;
 
 			&.sc-active {
 				font-size: $textfield-floating-label-font-size;
+				top: 0;
 			}
 		}
 	}
