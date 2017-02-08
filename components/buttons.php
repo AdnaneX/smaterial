@@ -145,13 +145,13 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		<div class="sc-floating-button"><i class="material-icons">cloud</i></div>
 		<div class="sc-floating-button sc-floating-button-mini"><i class="material-icons">cloud</i></div>
 
-		<div href="#" class="sc-floating-button">
+		<div href="#" class="sc-floating-button sc-trigger" data-sc-trigger="options">
 			<i class="material-icons">cloud</i>
 
-			<ul>
-				<li><i class="material-icons">file_upload</i></li>
-				<li><i class="material-icons">file_download</i></li>
-				<li><img src="/images/profile-icon.jpg"></li>
+			<ul id="options">
+				<li class="sc-red"><a href="#"><i class="material-icons">file_upload</i></a></li>
+				<li class="sc-blue"><a href="#"><i class="material-icons">file_download</i></a></li>
+				<li class="sc-green"><a href="#"><img src="/images/profile-icon.jpg"></a></li>
 			</ul>
 		</div>
 	</p>

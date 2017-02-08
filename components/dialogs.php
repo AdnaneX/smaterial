@@ -41,30 +41,5 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
         </div>
     </div>
 </section>
-
-<section class="sc-row">
-    <h3 class="sc-col sc-xs4 sc-s12">Fullscreen dialog</h3>
-
-    <p class="sc-col sc-xs4 sc-s12 sc-m6">
-        <button type="button" class="sc-raised-button sc-trigger" data-sc-trigger="fullscreen">Full screen</button>
-    </p>
-
-    <div class="sc-dialog sc-dialog-fullscreen" id="fullscreen">
-        <div class="sc-dialog-container">
-            <div class="sc-dialog-title">
-                Example of full screen dialog
-            </div>
-
-            <div class="sc-dialog-content">
-                Put dialog content here.
-            </div>
-        </div>
-
-        <div class="sc-dialog-actions">
-            <button type="button" data-sc-trigger="fullscreen" class="sc-flat-button sc-trigger">Agree</button>
-            <button type="button" data-sc-trigger="fullscreen" class="sc-flat-button sc-trigger">Disagree</button>
-        </div>
-    </div>
-</section>
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.php';

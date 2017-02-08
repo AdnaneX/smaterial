@@ -93,8 +93,14 @@ $appbar-icon-large-size: calc(#{$appbar-large-height} - (#{rem-calc(20px)} * 2))
 		margin-right: auto;
 		text-align: right;
 
-		.sc-search-input, .sc-appbar-menu-more {
+		.sc-search-input {
 			display: none;
 		}
+	}
+
+	&-menu {
+		top: rem-calc(4px);
+		right: rem-calc(4px);
+		left: auto;
 	}
 }

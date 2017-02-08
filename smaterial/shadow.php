@@ -73,7 +73,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 			<td>8</td>
 			<td><code>.sc-z8</code></td>
 			<td>
-				<p><a href="">Menu</a></p>
+				<p><a href="/components/menu.php">Menu</a></p>
 				<p><a href="/components/cards.php">Card (picked up state)</a></p>
 				<p><a href="/components/buttons.php#raised-button">Raised button (pressed state)</a></p>
 			</td>

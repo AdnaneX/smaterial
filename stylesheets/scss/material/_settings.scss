@@ -258,6 +258,7 @@ $tab-indicator-on-color: $white; // Default $white
 /**************************************
  * Text fields
  **************************************/
+$textfield-border-size: rem-calc(2px);
 $textfield-off-color: $grey; // $grey
 $textfield-on-color: $main-color; // Default $main-color
 $textfield-disabled-color: $textfield-off-color; // Default $textfield-off-color

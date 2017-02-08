@@ -32,6 +32,8 @@ After making your changes please describe what you have changed. This will speed
 
 ## DONE
 
+- Bottom navigation
+- Bottom sheet
 - Chips
 - Tabs
 - Tooltips
@@ -40,7 +42,6 @@ After making your changes please describe what you have changed. This will speed
 ## TODO
 
 - Global 
-    - Delete class "sc-" prefix to save more than 80kb?
     - Fix mobile styling (in Chrome for Android when scrolling a page the title bar remains visible)
     - Check duplicate styling and therefor load speed
     - Move global usable classes to `_normailize.scss` (`.sc-no-hover, .sc-active, .sc-disabled`) to name a few
@@ -48,24 +49,20 @@ After making your changes please describe what you have changed. This will speed
     - Add Material Design animations
     - Fix positions of `<header>`, `<main>`, `<aside>` to be more compatible with for example WordPress (`<aside>` goes over `<header>`, `<main>` slides up under `<header>`)
     - Add support for IE and FireFox
-    - Add Hammer.js for a better mobile experience(Optional)
     - Future
 		- Add SMaterial CDN package
 		- Add meteor js package
-		- (re)Add to bower 
     	- Add templates
+    	- Add react and or angular
+   		- Add Hammer.js for a better mobile experience(Optional)
     - Components
         - Pickers
 		- Add badges
 - Appbar
     - Add search slide out
-    - Redo styling
 - Bottom navigation
-	- Add Flex support
 - Bottom sheet
-	- Add Flex support
 - Buttons
-    - Add dropdown buttons
     - Add toggle button actions
 - Cards
     - Add card templates
@@ -77,6 +74,10 @@ After making your changes please describe what you have changed. This will speed
     - Add class automation
 - Dialogs
     - Add more JavaScript functionality (open / close by JavaScript call)
+- Expansion panels
+- Grid lists
+    - Redo styling
+- Menus    
 - Progress
     - Fix buffer animation
 - Selection
@@ -106,8 +107,6 @@ After making your changes please describe what you have changed. This will speed
     - Add autocomplete input
     - Add slide out search
     - Add dropdown search
-    - Fix label for textarea
-    - Add text field fallback
 - List
     - Create separate file for list styling
 - Notifications

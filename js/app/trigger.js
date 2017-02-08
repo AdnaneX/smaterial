@@ -10,8 +10,10 @@ $(document).ready(function() {
 
 		if( $element.hasClass('sc-expanded') ) {
 			$element.removeClass('sc-expanded');
+			$(document).trigger('collapsed');
 		} else {
 			$element.addClass('sc-expanded');
+			$(document).trigger('expanded');
 		}
 	});
 
@@ -21,6 +23,7 @@ $(document).ready(function() {
 				// if the target of the click isn't the $triggered nor a descendant of the $triggered
 				if( !$triggered.is( e.target ) && $triggered.has( e.target ).length === 0 ) {
 					$triggered.removeClass( 'sc-expanded' );
+					$(document).trigger('collapsed');
 				}
 			}
 		}
