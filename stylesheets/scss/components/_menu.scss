@@ -27,7 +27,7 @@
 		display: block;
 		height: rem-calc(48px);
 		@include font($font-size-menu, 0, $font-weight-menu, $line-height-menu, $font-color-menu, $letter-spacing-menu);
-		color: initial;
+		color: if( $theme == light, initial, rgba($white, .7));
 		padding: calc(#{rem-calc(48px)} - (#{rem-calc(20px)} + #{#{$font-size-menu}px})) $gutter rem-calc(20px) $gutter;
 		@include transition(background $transition-small-duration $basic-transition);
 

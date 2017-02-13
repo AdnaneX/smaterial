@@ -182,9 +182,16 @@
 
 @mixin radial-gradient( $setting ) {
 	background: -webkit-radial-gradient($setting);
-	background: -o-radial-gradient($setting);
 	background: -moz-radial-gradient($setting);
+	background: -o-radial-gradient($setting);
 	background: radial-gradient($setting);
+}
+
+@mixin linear-gradient( $setting ) {
+	background: -webkit-linear-gradient($setting);
+	background: -moz-linear-gradient($setting);
+	background: -o-linear-gradient($setting);
+	background: linear-gradient($setting);
 }
 
 @mixin scrollbar() {
