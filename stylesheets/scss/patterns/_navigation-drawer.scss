@@ -271,7 +271,7 @@ $drawer-profile-height: $drawer-padding + $drawer-profile-img + $drawer-profile-
 				}
 
 				.sc-scrim {
-					@incude linear-gradient($drawer-profile-scrim);
+					@include linear-gradient($drawer-profile-scrim);
 					bottom: $drawer-profile-bottom-padding;
 					content: '';
 					left: 0;

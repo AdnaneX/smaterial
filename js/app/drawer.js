@@ -14,7 +14,6 @@ $(document).ready(function() {
 					$arrow = $this.find( '.material-icons'),
 					$dropdown = $this.next('.sc-dropdown'),
 					$height = $dropdown.css('height');
-				console.log($height);
 
 				if( $arrow !== undefined ) {
 					if( $arrow.text() == 'expand_more' ) {
