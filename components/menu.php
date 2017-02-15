@@ -76,9 +76,9 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		The select almost looks the same as the menu.
 
 		<select name="example" class="sc-select">
-			<option value="">Example 1</option>
-			<option value="">Example 2</option>
-			<option value="">Example 3</option>
+			<option value="e1">Example 1</option>
+			<option value="e2">Example 2</option>
+			<option value="e3">Example 3</option>
 		</select>
 	</p>
 </section>

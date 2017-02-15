@@ -50,8 +50,8 @@ $(document).ready(function() {
 				'<div class="sc-select">' +
 					'<span class="sc-select-current sc-trigger" data-sc-trigger="select-'+$selectID+'">' +
 						$options[0].text +
-						'<i class="material-icons">arrow_drop_down</i>' +
 					'</span>' +
+					'<i class="material-icons sc-trigger" data-sc-trigger="select-'+$selectID+'">arrow_drop_down</i>' +
 					'<nav class="sc-menu" id="select-'+$selectID+'">'+$html+'</nav>' +
 				'</div>');
 		});
@@ -59,13 +59,19 @@ $(document).ready(function() {
 		var	$selectD = $('div.sc-select');
 
 		$selectD.each(function() {
-			var $this = $(this),
-				$current = $this.find('.sc-select-current'),
-				$options = $this.find('.sc-menu a');
+			var $select = $(this),
+				$current = $select.find('.sc-select-current'),
+				$options = $select.find('.sc-menu a');
 
-			console.log($current.text());
-			$options.click(function() {
-				$current.html( $(this).replace('arrow_drop_down', '') );
+			$options.on('click', function() {
+				var $this = $(this),
+					$index = $this.index(),
+					$select = $this.parent('.sc-select').next('select.sc-select');
+
+				// Set text of sc-select-current
+				$current.text($this.text());
+				// Set value of select.sc-select
+				console.log($select.val($select.find('option').eq($index).val()));
 			});
 		});
 	}
