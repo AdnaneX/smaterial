@@ -75,11 +75,20 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	<p class="sc-col sc-xs4 sc-s12 sc-m">
 		The select almost looks the same as the menu.
 
-		<select name="example" class="sc-select">
-			<option value="e1">Example 1</option>
-			<option value="e2">Example 2</option>
-			<option value="e3">Example 3</option>
-		</select>
+        <?php
+        if( $_POST ) {
+            print_r($_POST);
+        }
+        ?>
+        <form action="" method="post">
+            <select name="example" class="sc-select">
+                <option value="e1">Example 1</option>
+                <option value="e2">Example 2</option>
+                <option value="e3">Example 3</option>
+            </select>
+
+            <button class="sc-raised-button">Submit</button>
+        </form>
 	</p>
 </section>
 <?php

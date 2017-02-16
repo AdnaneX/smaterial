@@ -66,7 +66,7 @@ $(document).ready(function() {
 			$options.on('click', function() {
 				var $this = $(this),
 					$index = $this.index(),
-					$select = $this.parent('.sc-select').next('select.sc-select');
+					$select = $this.closest('div.sc-select').next('select.sc-select');
 
 				// Set text of sc-select-current
 				$current.text($this.text());
