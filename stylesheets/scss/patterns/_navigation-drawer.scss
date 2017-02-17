@@ -362,10 +362,14 @@ $drawer-profile-height: $drawer-padding + $drawer-profile-img + $drawer-profile-
 		}
 
 		&:hover, &.sc-active {
-			color: if( $theme == light, $main-color, $white);
+			color: if( $theme == light, $main-color, null);
 
 			.material-icons {
-				color: if( $theme == light, $main-color, $white);
+				color: if( $theme == light, $main-color, null);
+			}
+
+			.sc-arrow {
+				color: revert;
 			}
 		}
 

@@ -144,40 +144,9 @@ if( $_SERVER['PHP_SELF'] === '/components/tabs.php' ) {
 	<?php
 }
 ?>
-<nav id="sc-drawer" class="sc-drawer sc-drawer-temporary">
-	<!--<header class="sc-drawer-header"> <!-- Full height --
+<nav id="sc-drawer" class="sc-drawer sc-drawer-permanent-full-height">
+	<header class="sc-drawer-header">
 		<img src="/images/logo.svg" alt="SMalterial logo">
-	</header>-->
-	<!--<header> <!-- Persistent --
-		<img src="/images/profile-icon.jpg" alt="SMaterial profile example" class="sc-drawer-profile-img">
-		<div class="sc-drawer-profile-name">John</div>
-		<div class="sc-drawer-profile-more">
-			<i class="material-icons sc-trigger" data-sc-trigger="sc-drawer-profile-menu">arrow_drop_down</i>
-
-			<nav class="sc-menu" id="sc-drawer-profile-menu">
-				<a href="#">Facebook</a>
-				<a href="#">Google Plus</a>
-				<a href="#">Add account</a>
-			</nav>
-		</div>
-		<div><i class="material-icons sc-arrow sc-trigger" data-sc-trigger="sc-drawer">chevron_left</i></div>
-	</header>-->
-
-	<header>
-		<img src="/images/drawer-background.jpg" class="sc-drawer-profile-background" alt="menu background">
-		<div class="sc-scrim"></div>
-		<img src="/images/profile-icon.jpg" class="sc-drawer-profile-img" alt="profile image">
-		<div class="sc-drawer-profile-name">John Doe</div>
-		<div class="sc-drawer-profile-email">johndoe@gmail.com</div>
-		<div class="sc-drawer-profile-more">
-			<i class="material-icons sc-arrow sc-trigger" data-sc-trigger="sc-drawer-profile-menu">arrow_drop_down</i>
-
-			<nav class="sc-menu" id="sc-drawer-profile-menu">
-				<a href="#">Facebook</a>
-				<a href="#">Google Plus</a>
-				<a href="#">Add account</a>
-			</nav>
-		</div>
 	</header>
 
 	<a href="#" class="sc-drawer-dropdown">SMaterial <i class="material-icons">expand_more</i></a>

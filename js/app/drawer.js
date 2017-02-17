@@ -36,7 +36,8 @@ $(document).ready(function() {
 				}
 			} );
 
-			$drawer.find( '.sc-active' ).closest( 'ul' ).closest( 'li' ).addClass( 'sc-expanded' );
+			// Automatically open dropdown
+			$drawer.find( '.sc-active' ).parent('.sc-dropdown').prev('.sc-drawer-dropdown').trigger('click');
 		}
 	}
 });
