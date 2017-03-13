@@ -24,15 +24,15 @@ $(document).ready(function() {
 				$this.click( function () {
 					if( $this.hasClass( 'sc-expanded' ) && $dropdown.hasClass('sc-expanded')) {
 						$this.removeClass( 'sc-expanded' );
-						$dropdown.removeClass('sc-expanded').css('max-height', '0px');
+						$dropdown.removeClass('sc-expanded').css('height', '0px');
 					} else {
 						$this.addClass( 'sc-expanded' );
-						$dropdown.addClass('sc-expanded').css('max-height', $height);
+						$dropdown.addClass('sc-expanded').css('height', $height);
 					}
 				} );
 
 				if( !empty( $height ) ) {
-					$dropdown.css('max-height', '0px');
+					$dropdown.css('height', '0px');
 				}
 			} );
 

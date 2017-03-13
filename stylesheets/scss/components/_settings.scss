@@ -48,8 +48,8 @@ $allowed-colors: (
 	'red', 'pink', 'purple', 'deep-purple', 'indigo', 'blue', 'light-blue', 'cyan', 'teal', 'green', 'light-green',
 	'lime', 'yellow', 'amber', 'orange', 'deep-orange', 'brown', 'grey', 'blue-grey', 'shades');
 
-$main-color: $indigo;
-$secondary-color: $blue;
+$main-color: $indigo !default;
+$secondary-color: $blue !default;
 
 $link-color: $main-color;
 $link-hover: $secondary-color;
@@ -74,8 +74,8 @@ $text-direction: ltr; // Default either ltr or rtl
  * Typography settings
  **************************************/
 // Font paths
-$roboto-font-path: '/stylesheets/scss/style/fonts/Roboto/';
-$noto-font-path: '/stylesheets/scss/style/fonts/Noto/';
+$roboto-font-path: '/stylesheets/scss/fonts/Roboto/';
+$noto-font-path: '/stylesheets/scss/fonts/Noto/';
 
 // Font size
 $font-size: 14; //px Default 14 or 15

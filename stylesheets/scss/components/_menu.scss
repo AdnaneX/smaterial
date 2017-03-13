@@ -13,6 +13,7 @@
 	@include flex-container(column, null);
 	@include border-radius(rem-calc(2px));
 	padding: rem-calc(8px) 0;
+	z-index: 4;
 	@include transition(max-width $transition-small-duration $basic-transition unquote(',') max-height $transition-small-duration $basic-transition);
 
 	@media #{$medium-only} {
@@ -40,8 +41,12 @@
 		}
 
 		&:hover {
-			background: $grey-200;
-			color: initial;
+			background: if( $theme == light, $grey-200, null);
+			color: if( $theme == light, initial, $white);
+
+			.material-icons {
+				color: if($theme == light, initial, $white);
+			}
 		}
 	}
 

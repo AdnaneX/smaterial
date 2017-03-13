@@ -342,6 +342,7 @@ $drawer-profile-height: $drawer-padding + $drawer-profile-img + $drawer-profile-
 	}
 
 	a {
+		cursor: pointer;
 		color: if( $theme == light, rgba($black, .87), rgba($white, .7));
 		font-weight: 500;
 		width: 100%;
@@ -362,10 +363,10 @@ $drawer-profile-height: $drawer-padding + $drawer-profile-img + $drawer-profile-
 		}
 
 		&:hover, &.sc-active {
-			color: if( $theme == light, $main-color, null);
+			color: if( $theme == light, $main-color, $white);
 
 			.material-icons {
-				color: if( $theme == light, $main-color, null);
+				color: if( $theme == light, $main-color, $white);
 			}
 
 			.sc-arrow {
@@ -427,10 +428,8 @@ $drawer-profile-height: $drawer-padding + $drawer-profile-img + $drawer-profile-
 		}
 	}
 
-	.sc-drawer-dropdown.sc-expanded {
-		.sc-arrow {
-			@include transform(rotate(180deg));
-		}
+	.sc-drawer-dropdown.sc-expanded .sc-arrow {
+		@include transform(rotate(180deg));
 	}
 
 	.sc-arrow {
