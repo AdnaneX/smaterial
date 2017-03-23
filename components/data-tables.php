@@ -112,8 +112,8 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 			<tr>
 				<th class="sc-checkbox-col"><input type="checkbox" class="sc-checkbox" id="c1"></th>
 				<th class="">Desert (100g serving)</th>
-				<th class="sc-numeric-col">Calories</th>
-				<th class="sc-numeric-col">Fat (g)</th>
+                <th class="sc-numeric-col"><a href="#">Calories</a></th>
+                <th class="sc-numeric-col"><a href="#">Fat (g)</a></th>
 				<th class="sc-numeric-col">Carbs (g)</th>
 				<th class="sc-numeric-col">Protein (g)</th>
 				<th class="sc-numeric-col">Sodium (mg)</th>

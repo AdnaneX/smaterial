@@ -48,11 +48,11 @@ $(document).ready(function() {
 
 			$this.before(
 				'<div class="sc-select">' +
-					'<span class="sc-select-current sc-trigger" data-sc-trigger="select-'+$selectID+'">' +
-						$options[0].text +
-					'</span>' +
-					'<i class="material-icons sc-trigger" data-sc-trigger="select-'+$selectID+'">arrow_drop_down</i>' +
-					'<nav class="sc-menu" id="select-'+$selectID+'">'+$html+'</nav>' +
+				'<span class="sc-select-current sc-trigger" data-sc-trigger="select-'+$selectID+'">' +
+				$options[0].text +
+				'</span>' +
+				'<i class="material-icons sc-trigger" data-sc-trigger="select-'+$selectID+'">arrow_drop_down</i>' +
+				'<nav class="sc-menu" id="select-'+$selectID+'">'+$html+'</nav>' +
 				'</div>');
 		});
 
@@ -61,17 +61,31 @@ $(document).ready(function() {
 		$selectD.each(function() {
 			var $select = $(this),
 				$current = $select.find('.sc-select-current'),
-				$options = $select.find('.sc-menu a');
+				$options = $select.find('.sc-menu a'),
+				$active = undefined;
 
 			$options.on('click', function() {
 				var $this = $(this),
 					$index = $this.index(),
-					$select = $this.closest('div.sc-select').next('select.sc-select');
+					$selected = $this.closest('div.sc-select').next('select.sc-select');
+
+				// Set item to active
+				$this.addClass('sc-active');
+				if( $active != undefined ) {
+					if( $this != $active ) {
+						$active.removeClass( 'sc-active' );
+					}
+				}
+				$active = $this;
 
 				// Set text of sc-select-current
 				$current.text($this.text());
+
 				// Set value of select.sc-select
-				console.log($select.val($select.find('option').eq($index).val()));
+				$selected.val($selected.find('option').eq($index).val());
+
+				// Close select
+				$select.find('.sc-menu').removeClass('sc-expanded');
 			});
 		});
 	}

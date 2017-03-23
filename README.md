@@ -13,9 +13,9 @@ Git, SASS, Gulp. Want to know how to install those programs I would advise you t
 
 ### Getting started
 To get up and running you need to fork this repository to your own git.
-After downloading the your newly created repository run `npm install` in your console / terminal.
+After downloading your newly created repository run `npm install` in your console / terminal.
 This will install files listed in package.json.
-After all files have installed you can just run `grunt` in your console / terminal.
+After all files have installed you can just run `gulp` in your console / terminal.
 This command will compress js and scss files.
 
 ### PHP files
@@ -48,7 +48,7 @@ After making your changes please describe what you have changed. This will speed
     - Fix max-height max-width to something which works automatically. This applies to several components where these properties are animated 
     - Add Material Design animations
     - Fix positions of `<header>`, `<main>`, `<aside>` to be more compatible with for example WordPress (`<aside>` goes over `<header>`, `<main>` slides up under `<header>`)
-    - Add support for IE and FireFox
+    - Add broader support for IE and FireFox
     - Future
 		- Add SMaterial CDN package
 		- Add meteor js package
@@ -91,6 +91,7 @@ After making your changes please describe what you have changed. This will speed
     - Add settings in documentation 
     - Add black theme support
     - Add variables to settings
+    - Add css variables where possible. Also add fallback.
 - Navigation drawer
     - Add persistent mini
     - Fix styling for profile more
