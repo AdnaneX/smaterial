@@ -32,6 +32,15 @@
 - Tooltips
 
 /**************************************
+ * Imports
+ **************************************/
+@import 'mixins';
+// Font size
+$font-size: 14 !default; //px Default 14 or 15
+@import 'functions';
+@import 'colors';
+
+/**************************************
  * Colors
  **************************************/
 /*
@@ -68,25 +77,23 @@ $transition-small-duration: 300ms; // Default 300ms
 $transition-medium-duration: 390ms; // Default 390ms
 $transition-large-duration: 200ms; // Default 200ms
 $background: if( $theme == light, $white, #303030); // Default if( $theme == light, $white, #303030)
-$text-direction: ltr; // Default either ltr or rtl
-$border-radius: rem-calc(2px);
+$text-direction: ltr !default; // Default either ltr or rtl
+$border-radius: rem-calc(2px) !default;
 
 /**************************************
  * Typography settings
+ * Default font size under imports
  **************************************/
 // Font paths
-$roboto-font-path: '/stylesheets/scss/fonts/Roboto/';
-$noto-font-path: '/stylesheets/scss/fonts/Noto/';
-
-// Font size
-$font-size: 14; //px Default 14 or 15
+$roboto-font-path: '/stylesheets/scss/components/fonts/Roboto/';
+$noto-font-path: '/stylesheets/scss/components/fonts/Noto/';
 
 // Colors
-$font-color-display-4: if( $theme == light, rgba($black, .54), rgba($white, .54) ); // Default rgba($black, .54)
+$font-color-display-4: if( $theme == light, rgba($black, .54), rgba($white, .54) ); // Default if( $theme == light, rgba($black, .54), rgba($white, .54) )
 $font-color-display-3: $font-color-display-4; // Default $font-color-display-4
 $font-color-display-2: $font-color-display-4; // Default $font-color-display-4
 $font-color-display-1: $font-color-display-4; // Default $font-color-display-4
-$font-color-headline: if( $theme == light, rgba($black, .87), rgba($white, .87) ); // Default rgba($black, .87)
+$font-color-headline: if( $theme == light, rgba($black, .87), rgba($white, .87) ); // Default if( $theme == light, rgba($black, .87), rgba($white, .87) )
 $font-color-title: $font-color-headline; // Default $font-color-headline
 $font-color-subhead: $font-color-headline; // Default $font-color-headline
 $font-color-body-2: $font-color-headline; // Default $font-color-headline
