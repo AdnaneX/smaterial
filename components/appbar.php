@@ -64,5 +64,52 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		</code>
 	</pre>
 </section>
+
+<section class="sc-row">
+    <h2 class="sc-col sc-xs4">Badges</h2>
+
+    <p class="sc-col sc-xs4 sc-s12 sc-m6">
+        If you would like to use badges in the appbar you can by simply adding the <code class="language-css">.sc-badge</code>
+        class to a div inside an action.
+    </p>
+
+    <pre class="language-html sc-col sc-xs4 sc-m6">
+        <code>
+&lt;a href="#">&lt;i class="material-icons">mail&lt;/i> &lt;div class="sc-badge">2&lt;/div>&lt;/a>
+        </code>
+    </pre>
+</section>
+
+<section class="sc-row">
+    <h2 class="sc-col sc-xs4">Settings</h2>
+
+    <table>
+        <thead>
+        <tr>
+            <th>Variable</th>
+            <th>Options</th>
+            <th>Result</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr>
+            <td>$appbar-background</td>
+            <td>Color / variable</td>
+            <td>Changes the background color</td>
+        </tr>
+        <tr>
+            <td>$appbar-text</td>
+            <td>Color / variable</td>
+            <td>Changes the font color</td>
+        </tr>
+        <tr>
+            <td>$appbar-title</td>
+            <td>Color / variable</td>
+            <td>Changes the font color of a title / header</td>
+        </tr>
+        </tbody>
+    </table>
+</section>
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.php';

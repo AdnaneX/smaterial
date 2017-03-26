@@ -361,7 +361,9 @@
 }
 
 @mixin flex-item( $grow: 0, $shrink: 1, $basis: auto, $order: 0, $self: auto ) {
-	@include order( $order );
+	@if( $order > 0 ) {
+		@include order( $order );
+	}
 	@include flex( $grow $shrink $basis );
 	@include align-self( $self );
 }

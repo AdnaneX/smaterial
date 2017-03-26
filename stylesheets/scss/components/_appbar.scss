@@ -94,8 +94,25 @@ $appbar-icon-large-size: $appbar-large-height - (rem-calc(20px) * 2);
 		margin-right: auto;
 		text-align: right;
 
+		> a {
+			position: relative;
+		}
+
 		.sc-search-input {
 			display: none;
+		}
+
+		.sc-badge {
+			@include border-radius(50%);
+			background: $badge-background;
+			@include material-shadow(2);
+			font-size: rem-calc(10px);
+			padding: rem-calc(5px);
+			position: absolute;
+			right: rem-calc(-10px);
+			top: 0;
+			text-align: center;
+			@include square( ( rem-calc(5px) * 2 ) + rem-calc(10px) );
 		}
 	}
 

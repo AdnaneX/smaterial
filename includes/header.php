@@ -118,10 +118,12 @@ $keywords .= ', smaterial, css, scss, material design';
 			</form>
 		</div>
 
+        <a href="#"><i class="material-icons">mail</i> <div class="sc-badge">2</div></a>
+
 		<a href="#" class="sc-nav-more sc-trigger" data-sc-trigger="appbar-menu"><i class="material-icons">more_vert</i></a>
 
 		<nav class="sc-menu sc-appbar-menu" id="appbar-menu">
-			<a href="#">Example hoeveel tekst kan hier staan?</a>
+			<a href="#">Example</a>
 			<a href="#">Example</a>
 		</nav>
 	</div>
@@ -144,11 +146,11 @@ if( $_SERVER['PHP_SELF'] === '/components/tabs.php' ) {
 	<?php
 }
 ?>
-<nav id="sc-drawer" class="sc-drawer sc-drawer-persistent">
+<nav id="sc-drawer" class="sc-drawer sc-drawer-temporary">
 	<!--<header class="sc-drawer-header"> <!-- Full height --
 		<img src="/images/logo.svg" alt="SMalterial logo">
 	</header>-->
-	<header> <!-- Persistent ---->
+	<!--<header> <!-- Persistent ----
 		<img src="/images/profile-icon.jpg" alt="SMaterial profile example" class="sc-drawer-profile-img">
 		<div class="sc-drawer-profile-name">John</div>
 		<div class="sc-drawer-profile-more">
@@ -161,9 +163,9 @@ if( $_SERVER['PHP_SELF'] === '/components/tabs.php' ) {
 			</nav>
 		</div>
 		<div><i class="material-icons sc-arrow sc-trigger" data-sc-trigger="sc-drawer">chevron_left</i></div>
-	</header>
+	</header>-->
 
-    <!--
+
 	<header>
 		<img src="/images/drawer-background.jpg" class="sc-drawer-profile-background" alt="menu background">
 		<div class="sc-scrim"></div>
@@ -174,13 +176,12 @@ if( $_SERVER['PHP_SELF'] === '/components/tabs.php' ) {
 			<i class="material-icons sc-arrow sc-trigger" data-sc-trigger="sc-drawer-profile-menu">arrow_drop_down</i>
 
 			<nav class="sc-menu" id="sc-drawer-profile-menu">
-				<a href="#">Facebook hoeveel tekst kan hier staan</a>
+				<a href="#">Facebook</a>
 				<a href="#">Google Plus</a>
 				<a href="#">Add account</a>
 			</nav>
 		</div>
 	</header>
-    -->
 	<a href="#" class="sc-drawer-dropdown">SMaterial <i class="material-icons">expand_more</i></a>
 	<div class="sc-dropdown">
 		<a href="/" <?php echo ( $file == '/index' || $file == '/' ? 'class="sc-active"' : '' ); ?>>Introduction</a>
