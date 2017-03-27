@@ -115,7 +115,7 @@ main {
 
 .sc-divider {
 	background: if( $theme == light, rgba($black, .12), rgba($white, .12) );
-	height: rem-calc(1px);
+	height: $border-size / 2;
 }
 
 .sc-trigger {

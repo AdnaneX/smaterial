@@ -4,7 +4,7 @@
  * http://www.google.com/design/spec/components/sliders.html
  **************************************/
 
-$slider-track-height: rem-calc(2px); // Default rem-calc(2px)
+$slider-track-height: $border-size; // Default $border-size
 $slider-thumb-size: rem-calc(14px); // Default rem-calc(14px)
 $slider-thumb-active-size: rem-calc(16px); // Default rem-calc(16px)
 $slider-thumb-margin: ( ( $slider-thumb-size / 2 ) - $slider-track-height ) * -1;
@@ -148,7 +148,7 @@ input[type="range"] {
 
 	.sc-range-track {
 		height: $slider-track-height;
-		margin: ( ( $slider-thumb-active-size + ( $slider-track-height * 2 ) ) * -1 ) 0 0 0;
+		margin: (($slider-thumb-size * -1) - $slider-track-height) 0 0 0;
 		position: relative;
 		width: 100%;
 		z-index: 1;
@@ -206,10 +206,10 @@ input[type="range"] {
 			@include square($slider-thumb-size);
 			background: $slider-bubble-background;
 			border: $slider-track-height solid $slider-bubble-background;
-			bottom: ( $slider-thumb-active-size + ( $slider-track-height * 2 ) ) * -1;
+			//bottom: ( $slider-thumb-active-size + ( $slider-track-height * 2 ) ) * -1;
 			color: $slider-bubble-font-color;
 			font-size: 0;
-			margin: 0;
+			margin: (($slider-thumb-size / 2) + $slider-track-height) 0 0 (($slider-thumb-size * -1) / 2);
 			position: absolute;
 			z-index: 2;
 			@include transition(background $transition-small-duration $basic-transition unquote(',')
@@ -281,7 +281,7 @@ input[type="range"] {
 		}
 	}
 
-	&:disabled {
+	&:disabled, &.sc-disabled {
 		input[type="range"] {
 			@include range-thumb() {
 				background: $slider-thumb-background;

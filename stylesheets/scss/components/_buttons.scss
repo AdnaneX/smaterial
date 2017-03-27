@@ -14,7 +14,7 @@ button, input[type="button"], input[type="reset"], input[type="submit"], a {
 	@if( in-array( 'raised', $button ) ) {
 		&.sc-raised-button {
 			@include font($font-size-button, 0, $font-weight-button, $line-height-button, $font-color-button, $letter-spacing-button, uppercase);
-			@include button(rem-calc(2px));
+			@include button();
 			@include material-shadow(2);
 			background: $raised-background;
 			color: $raised-font-color;
@@ -79,7 +79,7 @@ button, input[type="button"], input[type="reset"], input[type="submit"], a {
 
 	@if( in-array( 'flat', $button ) ) {
 		&.sc-flat-button {
-			@include button(rem-calc(2px));
+			@include button();
 			@include font($font-size-button, 0, $font-weight-button, $line-height-button, $font-color-button, $letter-spacing-button, uppercase);
 			background: none;
 			color: $flat-color;

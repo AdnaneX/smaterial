@@ -23,7 +23,7 @@ $snackbar-action-margin: rem-calc(24px);
 		right: auto;
 		min-width: rem-calc(288px);
 		max-width: rem-calc(568px);
-		@include border-radius(rem-calc(2px));
+		@include border-radius($border-size);
 	}
 
 	&-action {

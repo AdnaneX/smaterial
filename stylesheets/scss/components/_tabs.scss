@@ -3,7 +3,7 @@
  *
  * https://material.google.com/components/tabs.html
  **************************************/
-$tab-indicator-size: rem-calc(2px);
+$tab-indicator-size: $border-size;
 $tab-height: rem-calc(48px);
 $tab-icon-size: rem-calc(24px);
 $tab-icon-text-height: rem-calc(72px);

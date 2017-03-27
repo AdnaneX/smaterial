@@ -6,12 +6,12 @@
 
 .sc-picker {
 	@include material-shadow(24);
-	@include border-radius(rem-calc(2px));
+	@include border-radius($border-size);
 	background: $background;
 	width: 100%;
 
 	&-titlebar {
-		@include border-radius-top(rem-calc(2px));
+		@include border-radius-top($border-size);
 		background: $picker-color;
 		color: rgba($white, .54);
 		padding: rem-calc(24px);

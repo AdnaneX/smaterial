@@ -74,8 +74,8 @@ $transition-small-duration: 300ms !default; // Default 300ms
 $transition-medium-duration: 390ms !default; // Default 390ms
 $transition-large-duration: 200ms !default; // Default 200ms
 $background: if( $theme == light, $white, #303030) !default; // Default if( $theme == light, $white, #303030)
-$text-direction: ltr !default !default; // Default either ltr or rtl
-$border-radius: rem-calc(2px) !default !default;
+$text-direction: ltr !default; // Default either ltr or rtl
+$border-size: rem-calc(2px) !default;
 
 /**************************************
  * Typography settings
@@ -356,7 +356,7 @@ $tab-indicator-on-color: $white !default; // Default $white
 /**************************************
  * Text fields
  **************************************/
-$textfield-border-size: rem-calc(2px) !default;
+$textfield-border-size: $border-size !default;
 $textfield-off-color: $grey !default; // $grey
 $textfield-on-color: $main-color !default; // Default $main-color
 $textfield-disabled-color: $textfield-off-color !default; // Default $textfield-off-color

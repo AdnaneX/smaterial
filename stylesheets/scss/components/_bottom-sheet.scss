@@ -49,7 +49,7 @@ $bottom-sheet-music-height: rem-calc(50px); // Default rem-calc(40px)
 	@media #{$medium-up} {
 		@include transition(margin $transition-large-duration $basic-transition);
 		width: 40%;
-		@include border-radius-top(rem-calc(2px));
+		@include border-radius-top($border-size);
 	}
 
 	&.sc-expanded {

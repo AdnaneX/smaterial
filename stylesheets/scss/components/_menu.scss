@@ -11,7 +11,7 @@
 	position: absolute;
 	@include material-shadow(8);
 	@include flex-container(column, null);
-	@include border-radius(rem-calc(2px));
+	@include border-radius($border-size);
 	padding: rem-calc(8px) 0;
 	white-space: nowrap;
 	text-align: left;
