@@ -236,7 +236,7 @@ $toggle-icon-size: rem-calc(24px);
 		}
 
 		&:after {
-			background: $main-color;
+			background: var(--main-color, $main-color);
 			border-radius: 50%;
 			content: "";
 			height: 0;

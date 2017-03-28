@@ -5,7 +5,7 @@
  **************************************/
 
 $selection-size: rem-calc($font-size-body-1+0px);
-$selection-border-size: $border-size;
+$selection-border-size: var(--border-size, $border-size);
 
 input[type="checkbox"].sc-checkbox, input[type="radio"].sc-radio {
 	@include opacity(0);
@@ -34,7 +34,7 @@ input[type="checkbox"].sc-checkbox, input[type="radio"].sc-radio {
 	input[type="checkbox"].sc-checkbox {
 		// Off
 		+ label:before {
-			@include border-radius($border-size);
+			@include border-radius(var(--border-size, $border-size));
 			@include transition(background $transition-small-duration $basic-transition unquote(',') content $transition-small-duration $basic-transition unquote(',') border $transition-small-duration $basic-transition);
 
 			@media #{$medium-only} {
@@ -51,7 +51,7 @@ input[type="checkbox"].sc-checkbox, input[type="radio"].sc-radio {
 			background: $selection-active-color;
 			border: $selection-border-size solid $selection-active-color;
 			content: '\E5CA';
-			color: $background;
+			color: var(--background, $background);
 		}
 
 		// Disabled off
@@ -63,8 +63,8 @@ input[type="checkbox"].sc-checkbox, input[type="radio"].sc-radio {
 		&:disabled:checked + label:before {
 			background: $selection-disabled-color;
 			border: none;
-			@include square($selection-size + ($selection-border-size * 2));
-			line-height: $selection-size + ($selection-border-size * 2);
+			@include square($selection-size + ($border-size * 2));
+			line-height: $selection-size + ($border-size * 2);
 			text-align: center;
 		}
 
@@ -129,7 +129,7 @@ input[type="checkbox"].sc-checkbox, input[type="radio"].sc-radio {
 		// On
 		&:checked + label {
 			&:before {
-				border: $border-size solid $selection-active-color;
+				border: var(--border-size, $border-size) solid $selection-active-color;
 			}
 
 			&:after {

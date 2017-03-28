@@ -4,11 +4,11 @@
 	.sc-col {
 		flex-grow: 1;
 		padding: 0 ( $gutter / 2 );
-		margin-bottom: $gutter;
+		margin-bottom: var(--gutter, $gutter);
 
 		@media #{$small-up} {
 			padding: 0 ( $large-gutter / 2 );
-			margin-bottom: $large-gutter;
+			margin-bottom: var( --gutter, $large-gutter);
 		}
 
 		&.sc-xs {

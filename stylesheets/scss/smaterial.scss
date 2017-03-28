@@ -7,8 +7,8 @@
 
 // Style
 @import 'components/settings'; // All settings
-@import 'components/root'; // All CSS variables
 @import 'components/media-queries'; // All possible media queries
+@import 'components/root'; // All CSS variables
 //@import 'components/grid'; // Grid functionality
 @import 'components/flex-grid'; // Grid functionality
 @import 'components/normalize'; // Remove browser default styles add Material default styles
@@ -38,7 +38,7 @@ $button: ('raised', 'flat', 'floating', 'toggle');
 
 @import 'components/expansion-panels'; // Used to style expansion panels (can be turned off)
 @import 'components/grid-lists'; // Used to style grid lists (can be turned off)
-@import 'components/menu'; // Used to style menus (can be turned off)
+@import 'components/menu'; // Used to style menus (can be turned off) is used for appbar and navigation drawer dropdown
 
 $navigation-drawer: ('full-height', 'clipped', 'floating', 'persistent', 'temporary');
 @import 'components/navigation-drawer'; // Used to style navigation drawer (can be turned off)

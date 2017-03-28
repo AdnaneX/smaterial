@@ -4,7 +4,7 @@
  * http://www.google.com/design/spec/components/sliders.html
  **************************************/
 
-$slider-track-height: $border-size; // Default $border-size
+$slider-track-height: $border-size; // Default var(--border-size, $border-size)
 $slider-thumb-size: rem-calc(14px); // Default rem-calc(14px)
 $slider-thumb-active-size: rem-calc(16px); // Default rem-calc(16px)
 $slider-thumb-margin: ( ( $slider-thumb-size / 2 ) - $slider-track-height ) * -1;
@@ -93,7 +93,7 @@ input[type="range"] {
 			@include square($slider-thumb-size);
 			margin: $slider-thumb-margin 0 0 0;
 			background: $slider-off-color;
-			border: $slider-track-height solid $background;
+			border: $slider-track-height solid var(--background, $background);
 		}
 
 		&:active, &:focus {
@@ -291,7 +291,7 @@ input[type="range"] {
 			&.sc-not-null {
 				@include range-thumb() {
 					background: $slider-off-color;
-					border: $slider-track-height solid $background;
+					border: $slider-track-height solid var(--background, $background);
 				}
 			}
 
@@ -311,7 +311,7 @@ input[type="range"] {
 
 		.sc-slider-bubble {
 			background: $slider-off-color;
-			border: $slider-track-height solid $background;
+			border: $slider-track-height solid var(--background, $background);
 		}
 
 		@if( in-array( 'discrete', $slider ) ) {

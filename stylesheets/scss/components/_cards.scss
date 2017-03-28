@@ -6,7 +6,7 @@
 
 .sc-card {
 	@include material-shadow(2);
-	@include border-radius($border-size);
+	@include border-radius(var(--border-size, $border-size));
 	//margin: rem-calc(8px);
 	width: 100%;
 	padding: 0;
@@ -87,11 +87,11 @@
 		width: 100%;
 
 		&.sc-card-top {
-			@include border-radius-top($border-size);
+			@include border-radius-top(var(--border-size, $border-size));
 		}
 
 		&.sc-card-background {
-			@include border-radius($border-size);
+			@include border-radius(var(--border-size, $border-size));
 			height: 100%;
 		}
 
@@ -104,7 +104,7 @@
 	}
 
 	.sc-card-content {
-		@include border-radius-bottom($border-size);
+		@include border-radius-bottom(var(--border-size, $border-size));
 		background: rgba($black, .54);
 		position: absolute;
 		bottom: 0;

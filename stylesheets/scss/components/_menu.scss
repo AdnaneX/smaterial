@@ -5,13 +5,13 @@
  */
 
 .sc-menu {
-	background: $background;
+	background: var(--background, $background);
 	visibility: hidden;
 	@include opacity(0);
 	position: absolute;
 	@include material-shadow(8);
 	@include flex-container(column, null);
-	@include border-radius($border-size);
+	@include border-radius(var(--border-size, $border-size));
 	padding: rem-calc(8px) 0;
 	white-space: nowrap;
 	text-align: left;
@@ -89,6 +89,6 @@ div.sc-select {
 	}
 
 	.sc-active {
-		color: $main-color;
+		color: var(--main-color, $main-color);
 	}
 }

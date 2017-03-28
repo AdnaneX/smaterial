@@ -13,7 +13,7 @@ $notification-image-size: rem-calc(40px);
 
 .sc-notification {
 	@include material-shadow(3);
-	@include border-radius($border-size);
+	@include border-radius(var(--border-size, $border-size));
 	background: $notification-background;
 	float: left;
 	max-width: 100%;

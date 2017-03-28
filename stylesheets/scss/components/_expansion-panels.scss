@@ -41,7 +41,7 @@
 		font-size: rem-calc(12px);
 		border-bottom: rem-calc(1px) solid rgba($black, .12);
 		position: relative;
-		background: $background;
+		background: var(--background, $background);
 
 		label {
 			font-weight: 400;

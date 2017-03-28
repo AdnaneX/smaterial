@@ -57,8 +57,8 @@ $allowed-colors: (
 $main-color: $indigo !default;
 $secondary-color: $blue !default;
 
-$link-color: $main-color;
-$link-hover: $secondary-color;
+$link-color: var(--main-color, $main-color);
+$link-hover: var(--secondary-color, $secondary-color);
 
 /**************************************
  * Global
@@ -75,7 +75,7 @@ $transition-medium-duration: 390ms !default; // Default 390ms
 $transition-large-duration: 200ms !default; // Default 200ms
 $background: if( $theme == light, $white, #303030) !default; // Default if( $theme == light, $white, #303030)
 $text-direction: ltr !default; // Default either ltr or rtl
-$border-size: rem-calc(2px) !default;
+$border-size: rem-calc(2px) !default; // Default rem-calc(2px)
 
 /**************************************
  * Typography settings
@@ -86,11 +86,11 @@ $roboto-font-path: '/stylesheets/scss/components/fonts/Roboto/' !default;
 $noto-font-path: '/stylesheets/scss/components/fonts/Noto/' !default;
 
 // Colors
-$font-color-display-4: if( $theme == light, rgba($black, .54), rgba($white, .54) ) !default; // Default if( $theme == light, rgba($black, .54), rgba($white, .54) )
+$font-color-display-4: var(--font-color-1, if( $theme == light, rgba($black, .54), rgba($white, .54) ) ) !default; // Default if( $theme == light, rgba($black, .54), rgba($white, .54) )
 $font-color-display-3: $font-color-display-4 !default; // Default $font-color-display-4
 $font-color-display-2: $font-color-display-4 !default; // Default $font-color-display-4
 $font-color-display-1: $font-color-display-4 !default; // Default $font-color-display-4
-$font-color-headline: if( $theme == light, rgba($black, .87), rgba($white, .87) ) !default; // Default if( $theme == light, rgba($black, .87), rgba($white, .87) )
+$font-color-headline: var(--font-color-2, if( $theme == light, rgba($black, .87), rgba($white, .87) ) ) !default; // Default if( $theme == light, rgba($black, .87), rgba($white, .87) )
 $font-color-title: $font-color-headline !default; // Default $font-color-headline
 $font-color-subhead: $font-color-headline !default; // Default $font-color-headline
 $font-color-body-2: $font-color-headline !default; // Default $font-color-headline
@@ -109,7 +109,7 @@ $appbar-mobile-portrait-height: rem-calc(56px) !default; // Default rem-calc(56p
 $appbar-large-height: rem-calc(64px) !default; // Default rem-calc(64px)
 
 // Colors
-$appbar-background: if( $theme == light, $main-color, $grey-900 ) !default; // Default if( $theme == light, $main-color, $grey-900 )
+$appbar-background: if( $theme == light, var(--main-color, $main-color), $grey-900 ) !default; // Default if( $theme == light, $main-color, $grey-900 )
 $appbar-text: $white !default; // Default $white
 $appbar-title: $white !default; // Default $white
 
@@ -121,14 +121,14 @@ $badge-background: $red !default;
 /**************************************
  * Bottom navigation
  **************************************/
-$bottom-nav-background: $main-color !default; // Default $main-color
+$bottom-nav-background: var(--main-color, $main-color) !default; // Default $main-color
 $bottom-nav-off-color: rgba($white, .7) !default; // Default rgba($white, .7)
 $bottom-nav-on-color: $white !default; // Default $white
 
 /**************************************
  * Bottom sheet
  **************************************/
-$bottom-sheet-background: if( $theme == light, $background, $grey-800 ) !default; // Default if( $theme == light, $background, $grey-800 )
+$bottom-sheet-background: if( $theme == light, var(--background, $background), $grey-800 ) !default; // Default if( $theme == light, $background, $grey-800 )
 $bottom-sheet-font-color: rgba($black, .87) !default; // Default rgba($black, .87)
 $bottom-sheet-header-font-color: rgba($black, .54) !default; // Default rgba($black, .54)
 $bottom-sheet-icons-color: $bottom-sheet-header-font-color !default; // Default $bottom-sheet-header-font-color
@@ -136,24 +136,24 @@ $bottom-sheet-icons-color: $bottom-sheet-header-font-color !default; // Default 
 /**************************************
  * Buttons
  **************************************/
-$raised-background: $main-color !default; // Default $main-color
+$raised-background: var(--main-color, $main-color) !default; // Default $main-color
 $raised-font-color: $white !default; // Default $white
 $raised-icon-color: $raised-font-color !default; // Default $raised-font-color
 $raised-disabled-background: if( $theme == light, rgba($black, .12), rgba($white, .12) ) !default; // Default if( $theme == light, rgba($black, .12), rgba($white, .12) )
 $raised-disabled-font-color: if( $theme == light, rgba($black, .26), rgba($white, .3) ) !default; // Default if( $theme == light, rgba($black, .26), rgba($white, .3) )
 
-$flat-color: $main-color !default; // Default $main-color
-$flat-icon-color: $main-color !default; // Default $main-color
+$flat-color: var(--main-color, $main-color) !default; // Default $main-color
+$flat-icon-color: $flat-color !default; // Default $flat-color
 $flat-active-background: if( $theme == light, rgba(153, 153, 153, .4), rgba(204, 204, 204, .25) ) !default; // Default if( $theme == light, rgba(153, 153, 153, .4), rgba(204, 204, 204, .25) )
 $flat-disabled-color: if( $theme == light, rgba($black, .26), rgba($white, .3) ) !default; // Default if( $theme == light, rgba($black, .26), rgba($white, .3) )
 
-$floating-background: $main-color !default; // Default $main-color
+$floating-background: var(--secondary-color, $secondary-color) !default; // Default $main-color
 $floating-icon-color: $white !default; // Default $white
 
 /**************************************
  * Cards
  **************************************/
-$card-background: if( $theme == light, $background, $grey-800) !default; // Default if( $theme == light, $background, $grey-800)
+$card-background: if( $theme == light, var(--background, $background), $grey-800) !default; // Default if( $theme == light, $background, $grey-800)
 
 /**************************************
  * Chips
@@ -170,7 +170,7 @@ $chips-delete-background-hover: $chips-font-hover-color !default; // Default $ch
 /**************************************
  * Dialogs
  **************************************/
-$dialog-background: if( $theme == light, $background, $grey-800 ) !default; // Default if( $theme == light, $background, $grey-800 )
+$dialog-background: if( $theme == light, var(--background, $background), $grey-800 ) !default; // Default if( $theme == light, $background, $grey-800 )
 
 /**************************************
  * Grid lists
@@ -181,13 +181,13 @@ $grid-font-color: $white !default; // Default $white
 /**************************************
  * Pickers
  **************************************/
-$picker-color: $main-color !default;
+$picker-color: var(--main-color, $main-color) !default;
 
 /**************************************
  * Progress & activity
  **************************************/
 $progressbar-background: rgba($main-color, .4) !default; // Default rgba($main-color, .4)
-$progress-background: $main-color !default; // Default $main-color
+$progress-background: var(--main-color, $main-color) !default; // Default $main-color
 
 // Circular
 $circular-width: rem-calc(50px) !default; // Default rem-calc(50px)
@@ -219,12 +219,12 @@ $switch-thumb-radial-disabled-background: rgba($grey-400, .2) !default; // Defau
 /**************************************
 * Notifications
 ***************************************/
-$notification-background: $background !default; // $background
+$notification-background: var(--background, $background) !default; // $background
 
 /**************************************
  * Navigation drawer
  **************************************/
-$drawer-background: if( $theme == light, $background, $grey-800 ) !default; // Default if( $theme == light, $background, $grey-800 )
+$drawer-background: if( $theme == light, var(--background, $background), $grey-800 ) !default; // Default if( $theme == light, $background, $grey-800 )
 $drawer-hover: $main-color !default; // Default $main-color
 $drawer-small-width: rem-calc(280px) !default;
 $drawer-medium-width: rem-calc(320px) !default;
@@ -323,7 +323,7 @@ $elevation-ambient-map: (
 // Track
 $slider-off-color: lighten($black, (100% - 26%)) !default; // Default lighten($black, (100% - 26%)) !default;
 $slider-thumb-background: $white !default; // Default $white
-$slider-on-color: $main-color !default; // Default $main-color
+$slider-on-color: var(--main-color, $main-color) !default; // Default $main-color
 
 // Bubble
 $slider-bubble-background: $black !default; // Default $black
@@ -340,7 +340,7 @@ $snackbar-font-color: $white !default; // Default $white
  * Steppers
  **************************************/
 $stepper-circle-off-color: rgba($black, .38) !default; // Default rgba($black, .38)
-$stepper-circle-on-color: $main-color !default; // Default $main-color
+$stepper-circle-on-color: var(--main-color, $main-color) !default; // Default $main-color
 $stepper-circle-font-color: $white !default; // Default $white
 $stepper-step-off-font-color: rgba($black, .38) !default; // Default rgba($black, .38)
 $stepper-step-on-font-color: rgba($black, .87) !default; // Default rgba($black, .87)
@@ -348,7 +348,7 @@ $stepper-step-on-font-color: rgba($black, .87) !default; // Default rgba($black,
 /**************************************
  * Tabs
  **************************************/
-$tab-background: $main-color !default; // Default $main-color
+$tab-background: var(--mainc-color, $main-color) !default; // Default $main-color
 $tab-font-color: rgba($white, .7) !default; // Default rgba($white, .7)
 $tab-font-on-color: $white !default; // Default $white
 $tab-indicator-on-color: $white !default; // Default $white
@@ -356,9 +356,9 @@ $tab-indicator-on-color: $white !default; // Default $white
 /**************************************
  * Text fields
  **************************************/
-$textfield-border-size: $border-size !default;
+$textfield-border-size: var(--border-size, $border-size) !default;
 $textfield-off-color: $grey !default; // $grey
-$textfield-on-color: $main-color !default; // Default $main-color
+$textfield-on-color: var(--main-color, $main-color) !default; // Default $main-color
 $textfield-disabled-color: $textfield-off-color !default; // Default $textfield-off-color
 $textfield-required-color: $red !default; // Default $red
 $textfield-error-color: $textfield-required-color !default; // Default $textfield-required-color

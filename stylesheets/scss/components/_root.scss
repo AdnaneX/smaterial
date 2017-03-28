@@ -2,11 +2,15 @@
  * Define all CSS variables
  */
 :root {
-	--theme: $theme;
 	--main-color: $main-color;
 	--secondary-color: $secondary-color;
 	--background: if( $theme == light, $white, #303030);
-	--border-radius: $border-size;
+	--border-size: $border-size;
 	--gutter: $gutter;
-	--large-gutter: $large-gutter;
+	--font-color-1: if( $theme == light, rgba($black, .54), rgba($white, .54) );
+	--font-color-2: if( $theme == light, rgba($black, .87), rgba($white, .87) );
+
+	@media #{$small-up} {
+		--gutter: $large-gutter;
+	}
 }
