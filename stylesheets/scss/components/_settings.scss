@@ -202,7 +202,7 @@ $circular-color4: $orange !default;
  **************************************/
 // Checkbox
 $selection-color: if( $theme == light, rgba($black, .54), rgba($white, .7) ) !default;
-$selection-active-color: rgba(color($main-color, 500), 1) !default;
+$selection-active-color: rgba( if( color($main-color, 500) != false, color($main-color, 500), $main-color ), 1) !default;
 $selection-disabled-color: if( $theme == light, rgba($black, .26), rgba($white, .3) ) !default;
 
 // Switch
