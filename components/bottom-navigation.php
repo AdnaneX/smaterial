@@ -1,6 +1,6 @@
 <?php
 $title = 'Bottom navigation';
-$description = 'Bottom navigation based on Google\'s Material Design';
+$description = 'Bottom navigation based on Google\'s Material Design. The bottom navigation has a default and shifting option';
 $keywords = 'bottom navigation, bottom menu, bottom shifting';
 
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';

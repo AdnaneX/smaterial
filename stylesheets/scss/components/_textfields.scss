@@ -16,14 +16,14 @@
 		background: none;
 		color: if($theme == light, rgba($black, .87), rgba($white, 1));
 		width: 100%;
-		@include transition(all $transition-small-duration $basic-transition);
+		@include transition(all $transition-small-duration $standard-transition);
 
 		@media #{$medium-only} {
-			@include transition(all $transition-medium-duration $basic-transition);
+			@include transition(all $transition-medium-duration $standard-transition);
 		}
 
 		@media #{$medium-up} {
-			@include transition(all $transition-large-duration $basic-transition);
+			@include transition(all $transition-large-duration $standard-transition);
 		}
 
 		&:hover {
@@ -54,14 +54,14 @@
 			font-family: 'Material Icons';
 			font-size: rem-calc(7px);
 			vertical-align: super;
-			@include transition(color $transition-small-duration $basic-transition);
+			@include transition(color $transition-small-duration $standard-transition);
 
 			@media #{$medium-only} {
-				@include transition(color $transition-medium-duration $basic-transition);
+				@include transition(color $transition-medium-duration $standard-transition);
 			}
 
 			@media #{$medium-up} {
-				@include transition(color $transition-large-duration $basic-transition);
+				@include transition(color $transition-large-duration $standard-transition);
 			}
 		}
 
@@ -84,14 +84,14 @@
 		cursor: text;
 		position: absolute;
 
-		@include transition(all $transition-small-duration $basic-transition);
+		@include transition(all $transition-small-duration $standard-transition);
 
 		@media #{$medium-only} {
-			@include transition(all $transition-small-duration $basic-transition);
+			@include transition(all $transition-small-duration $standard-transition);
 		}
 
 		@media #{$medium-up} {
-			@include transition(all $transition-small-duration $basic-transition);
+			@include transition(all $transition-small-duration $standard-transition);
 		}
 
 		&.sc-active {
@@ -204,14 +204,14 @@ $textfield-single-icon-size: rem-calc(24px); // Default rem-calc(24)
 				@include square($textfield-single-icon-size);
 				font-size: $textfield-single-icon-size;
 				padding: 0 calc((#{$textfield-single-height} - #{$textfield-single-icon-size}) / 2);
-				@include transition(color $transition-small-duration $basic-transition);
+				@include transition(color $transition-small-duration $standard-transition);
 
 				@media #{$medium-only} {
-					@include transition(color $transition-medium-duration $basic-transition);
+					@include transition(color $transition-medium-duration $standard-transition);
 				}
 
 				@media #{$medium-up} {
-					@include transition(color $transition-large-duration $basic-transition);
+					@include transition(color $transition-large-duration $standard-transition);
 				}
 			}
 		}
@@ -244,14 +244,14 @@ $textfield-single-icon-size: rem-calc(24px); // Default rem-calc(24)
 			visibility: visible;
 			@include opacity(1);
 			font-size: $textfield-single-font-size;
-			@include transition(opacity $transition-small-duration $basic-transition unquote(',') visibility $transition-small-duration $basic-transition);
+			@include transition(opacity $transition-small-duration $standard-transition unquote(',') visibility $transition-small-duration $standard-transition);
 
 			@media #{$medium-only} {
-				@include transition(opacity $transition-medium-duration $basic-transition unquote(',') visibility $transition-medium-duration $basic-transition);
+				@include transition(opacity $transition-medium-duration $standard-transition unquote(',') visibility $transition-medium-duration $standard-transition);
 			}
 
 			@media #{$medium-up} {
-				@include transition(opacity $transition-large-duration $basic-transition unquote(',') visibility $transition-large-duration $basic-transition);
+				@include transition(opacity $transition-large-duration $standard-transition unquote(',') visibility $transition-large-duration $standard-transition);
 			}
 
 			&.sc-active {

@@ -18,7 +18,7 @@
 
 .sc-progressbar {
 	background: $progress-background;
-	@include transition(width $transition-small-duration $basic-transition);
+	@include transition(width $transition-small-duration $standard-transition);
 	bottom: 0;
 	position: absolute;
 	top: 0;

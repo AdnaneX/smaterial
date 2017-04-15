@@ -51,15 +51,15 @@ $notification-image-size: rem-calc(40px);
 			@include square($notification-header-icon-size);
 			cursor: pointer;
 			@include transform(rotate(0deg));
-			@include transition(transform $transition-small-duration $basic-transition);
+			@include transition(transform $transition-small-duration $standard-transition);
 
 			@media #{$medium-only} {
-				@include transition(transform $transition-medium-duration $basic-transition);
+				@include transition(transform $transition-medium-duration $standard-transition);
 
 			}
 
 			@media #{$medium-up} {
-				@include transition(transform $transition-large-duration $basic-transition);
+				@include transition(transform $transition-large-duration $standard-transition);
 			}
 		}
 	}
@@ -79,17 +79,17 @@ $notification-image-size: rem-calc(40px);
 
 	&-actions {
 		background: transparent;
-		@include transition(visibility $transition-small-duration $basic-transition unquote(',') opacity $transition-small-duration $basic-transition unquote(',') max-height $transition-small-duration $basic-transition unquote(',') background $transition-small-duration $basic-transition);
+		@include transition(visibility $transition-small-duration $standard-transition unquote(',') opacity $transition-small-duration $standard-transition unquote(',') max-height $transition-small-duration $standard-transition unquote(',') background $transition-small-duration $standard-transition);
 		max-height: 0;
 		@include opacity(0);
 		visibility: hidden;
 
 		@media #{$medium-only} {
-			@include transition(visibility $transition-medium-duration $basic-transition unquote(',') opacity $transition-medium-duration $basic-transition unquote(',') max-height $transition-medium-duration $basic-transition unquote(',') background $transition-medium-duration $basic-transition);
+			@include transition(visibility $transition-medium-duration $standard-transition unquote(',') opacity $transition-medium-duration $standard-transition unquote(',') max-height $transition-medium-duration $standard-transition unquote(',') background $transition-medium-duration $standard-transition);
 		}
 
 		@media #{$medium-up} {
-			@include transition(visibility $transition-large-duration $basic-transition unquote(',') opacity $transition-large-duration $basic-transition unquote(',') max-height $transition-large-duration $basic-transition unquote(',') background $transition-large-duration $basic-transition);
+			@include transition(visibility $transition-large-duration $standard-transition unquote(',') opacity $transition-large-duration $standard-transition unquote(',') max-height $transition-large-duration $standard-transition unquote(',') background $transition-large-duration $standard-transition);
 		}
 
 		> * {
@@ -97,14 +97,14 @@ $notification-image-size: rem-calc(40px);
 			margin: 0 !important;
 			visibility: hidden;
 			@include opacity(0);
-			@include transition(visibility $transition-small-duration $basic-transition unquote(',') opacity $transition-small-duration $basic-transition);
+			@include transition(visibility $transition-small-duration $standard-transition unquote(',') opacity $transition-small-duration $standard-transition);
 
 			@media #{$medium-only} {
-				@include transition(visibility $transition-medium-duration $basic-transition unquote(',') opacity $transition-medium-duration $basic-transition);
+				@include transition(visibility $transition-medium-duration $standard-transition unquote(',') opacity $transition-medium-duration $standard-transition);
 			}
 
 			@media #{$medium-up} {
-				@include transition(visibility $transition-large-duration $basic-transition unquote(',') opacity $transition-large-duration $basic-transition);
+				@include transition(visibility $transition-large-duration $standard-transition unquote(',') opacity $transition-large-duration $standard-transition);
 			}
 		}
 	}
@@ -159,14 +159,14 @@ $notification-image-size: rem-calc(40px);
 					visibility: hidden;
 					@include opacity(0);
 					width: 0;
-					@include transition(opacity $transition-small-duration $basic-transition $transition-small-duration unquote(',') visibility $transition-small-duration $basic-transition $transition-small-duration);
+					@include transition(opacity $transition-small-duration $standard-transition $transition-small-duration unquote(',') visibility $transition-small-duration $standard-transition $transition-small-duration);
 
 					@media #{$medium-only} {
-						@include transition(opacity $transition-medium-duration $basic-transition $transition-medium-duration unquote(',') visibility $transition-medium-duration $basic-transition $transition-medium-duration);
+						@include transition(opacity $transition-medium-duration $standard-transition $transition-medium-duration unquote(',') visibility $transition-medium-duration $standard-transition $transition-medium-duration);
 					}
 
 					@media #{$medium-up} {
-						@include transition(opacity $transition-large-duration $basic-transition $transition-large-duration unquote(',') visibility $transition-large-duration $basic-transition $transition-large-duration);
+						@include transition(opacity $transition-large-duration $standard-transition $transition-large-duration unquote(',') visibility $transition-large-duration $standard-transition $transition-large-duration);
 					}
 				}
 			}
@@ -177,14 +177,14 @@ $notification-image-size: rem-calc(40px);
 				right: $notification-content-sides;
 				top: $notification-content-top;
 				@include opacity(1);
-				@include transition(opacity $transition-small-duration $basic-transition);
+				@include transition(opacity $transition-small-duration $standard-transition);
 
 				@media #{$medium-only} {
-					@include transition(opacity $transition-medium-duration $basic-transition);
+					@include transition(opacity $transition-medium-duration $standard-transition);
 				}
 
 				@media #{$medium-up} {
-					@include transition(opacity $transition-large-duration $basic-transition);
+					@include transition(opacity $transition-large-duration $standard-transition);
 				}
 			}
 		}
@@ -209,15 +209,15 @@ $notification-image-size: rem-calc(40px);
 
 		.sc-notification-content {
 			position: relative;
-			@include transition(height $transition-small-duration $basic-transition);
+			@include transition(height $transition-small-duration $standard-transition);
 
 			@media #{$medium-only} {
-				@include transition(height $transition-medium-duration $basic-transition);
+				@include transition(height $transition-medium-duration $standard-transition);
 
 			}
 
 			@media #{$medium-up} {
-				@include transition(height $transition-large-duration $basic-transition);
+				@include transition(height $transition-large-duration $standard-transition);
 			}
 
 			.sc-actions {
@@ -227,15 +227,15 @@ $notification-image-size: rem-calc(40px);
 				text-align: right;
 				top: $notification-content-top;
 				width: calc(#{$notification-media-icon-size} * 4);
-				@include transition(all $transition-small-duration $basic-transition);
+				@include transition(all $transition-small-duration $standard-transition);
 
 				@media #{$medium-only} {
-					@include transition(all $transition-medium-duration $basic-transition);
+					@include transition(all $transition-medium-duration $standard-transition);
 
 				}
 
 				@media #{$medium-up} {
-					@include transition(all $transition-large-duration $basic-transition);
+					@include transition(all $transition-large-duration $standard-transition);
 				}
 
 				.material-icons {
@@ -248,15 +248,15 @@ $notification-image-size: rem-calc(40px);
 						visibility: hidden;
 						@include opacity(0);
 						width: 0;
-						@include transition(all $transition-small-duration $basic-transition);
+						@include transition(all $transition-small-duration $standard-transition);
 
 						@media #{$medium-only} {
-							@include transition(all $transition-medium-duration $basic-transition);
+							@include transition(all $transition-medium-duration $standard-transition);
 
 						}
 
 						@media #{$medium-up} {
-							@include transition(all $transition-large-duration $basic-transition);
+							@include transition(all $transition-large-duration $standard-transition);
 						}
 					}
 				}
@@ -267,15 +267,15 @@ $notification-image-size: rem-calc(40px);
 				position: absolute;
 				right: rem-calc(8px);
 				top: rem-calc(5px);
-				@include transition(all $transition-small-duration $basic-transition);
+				@include transition(all $transition-small-duration $standard-transition);
 
 				@media #{$medium-only} {
-					@include transition(all $transition-medium-duration $basic-transition);
+					@include transition(all $transition-medium-duration $standard-transition);
 
 				}
 
 				@media #{$medium-up} {
-					@include transition(all $transition-large-duration $basic-transition);
+					@include transition(all $transition-large-duration $standard-transition);
 				}
 			}
 		}

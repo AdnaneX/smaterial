@@ -1,6 +1,6 @@
 <?php
 $title = 'Getting started';
-$description = 'How to get started with SMaterial';
+$description = 'How to get started with SMaterial. Start using SMaterial using vanilla CSS or by using SCSS';
 $keywords = 'getting started, starting, how to use';
 
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
@@ -82,7 +82,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 
         The <code class="language-html">vendor.min.js</code> currently only holds jQuery 3.
         So if you prefer to load jQuery from an external source you can use <a href="https://developers.google.com/speed/libraries/#jquery" target="_blank">this</a>.
-        The <code class="language-html">vendor.min.js</code> or jquery file needs to be loaded before <code class="language-html">app.min.js</code>.
+        The <code class="language-html">vendor.min.js</code> or jQuery file needs to be loaded before <code class="language-html">app.min.js</code>.
     </p>
 </section>
 
@@ -104,10 +104,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
         <tbody>
         <tr>
             <td>gulp</td>
-            <td>Both SCSS and JavaScript files in <code class="language-html">js/app, js/vendor, stylesheets/scss,
-                                                                              stylesheets/scss/components</code> are
-                compressed on watch
-            </td>
+            <td>Both SCSS and JavaScript files in <code class="language-html">js/app, js/vendor, stylesheets/scss, stylesheets/scss/components</code> are compressed on watch</td>
         </tr>
         <tr>
             <td>gulp zip</td>

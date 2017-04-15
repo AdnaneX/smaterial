@@ -23,7 +23,7 @@ $chips-delete-size: rem-calc(15px); // Default rem-calc(15px)
 	&-deletable {
 		.sc-chip-delete {
 			@include border-radius(50%);
-			@include transition(color $transition-small-duration $basic-transition unquote(',') background $transition-small-duration $basic-transition);
+			@include transition(color $transition-small-duration $standard-transition unquote(',') background $transition-small-duration $standard-transition);
 			background: $chips-delete-background;
 			color: $chips-delete-cross;
 			display: inline-block;
@@ -37,11 +37,11 @@ $chips-delete-size: rem-calc(15px); // Default rem-calc(15px)
 			cursor: pointer;
 
 			@media #{$medium-only} {
-				@include transition(color $transition-medium-duration $basic-transition unquote(',') background $transition-medium-duration $basic-transition);
+				@include transition(color $transition-medium-duration $standard-transition unquote(',') background $transition-medium-duration $standard-transition);
 			}
 
 			@media #{$medium-up} {
-				@include transition(color $transition-large-duration $basic-transition unquote(',') background $transition-large-duration $basic-transition);
+				@include transition(color $transition-large-duration $standard-transition unquote(',') background $transition-large-duration $standard-transition);
 			}
 		}
 
@@ -58,14 +58,14 @@ $chips-delete-size: rem-calc(15px); // Default rem-calc(15px)
 
 	&-contact {
 		font-size: rem-calc(14px);
-		@include transition(box-shadow $transition-small-duration $basic-transition);
+		@include transition(box-shadow $transition-small-duration $standard-transition);
 
 		@media #{$medium-only} {
-			@include transition(box-shadow $transition-medium-duration $basic-transition);
+			@include transition(box-shadow $transition-medium-duration $standard-transition);
 		}
 
 		@media #{$medium-up} {
-			@include transition(box-shadow $transition-large-duration $basic-transition);
+			@include transition(box-shadow $transition-large-duration $standard-transition);
 		}
 
 		img {

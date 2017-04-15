@@ -17,20 +17,20 @@
 		max-height: 0;
 		visibility: hidden;
 		@include opacity(0);
-		@include transition(max-height $transition-small-duration $basic-transition unquote(',')
-							visibility $transition-small-duration $basic-transition unquote(',')
-							opacity $transition-small-duration $basic-transition);
+		@include transition(max-height $transition-small-duration $standard-transition unquote(',')
+							visibility $transition-small-duration $standard-transition unquote(',')
+							opacity $transition-small-duration $standard-transition);
 
 		@media #{$medium-only} {
-			@include transition(max-height $transition-medium-duration $basic-transition unquote(',')
-								visibility $transition-medium-duration $basic-transition unquote(',')
-								opacity $transition-medium-duration $basic-transition);
+			@include transition(max-height $transition-medium-duration $standard-transition unquote(',')
+								visibility $transition-medium-duration $standard-transition unquote(',')
+								opacity $transition-medium-duration $standard-transition);
 		}
 
 		@media #{$medium-up} {
-			@include transition(max-height $transition-large-duration $basic-transition unquote(',')
-								visibility $transition-large-duration $basic-transition unquote(',')
-								opacity $transition-large-duration $basic-transition);
+			@include transition(max-height $transition-large-duration $standard-transition unquote(',')
+								visibility $transition-large-duration $standard-transition unquote(',')
+								opacity $transition-large-duration $standard-transition);
 		}
 	}
 
@@ -79,15 +79,15 @@
 				@include square(rem-calc(24px));
 				cursor: pointer;
 				@include transform(rotate(0deg));
-				@include transition(transform $transition-small-duration $basic-transition);
+				@include transition(transform $transition-small-duration $standard-transition);
 
 				@media #{$medium-only} {
-					@include transition(transform $transition-medium-duration $basic-transition);
+					@include transition(transform $transition-medium-duration $standard-transition);
 
 				}
 
 				@media #{$medium-up} {
-					@include transition(transform $transition-large-duration $basic-transition);
+					@include transition(transform $transition-large-duration $standard-transition);
 				}
 			}
 		}

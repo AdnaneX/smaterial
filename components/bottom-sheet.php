@@ -1,6 +1,6 @@
 <?php
 $title = 'Bottom sheet';
-$description = 'Bottom sheet based on Google\'s Material Design';
+$description = 'Bottom sheet based on Google\'s Material Design. The bottom sheet has several styling options being default, header, grid and music';
 $keywords = 'bottom modal, bottom sheet, modal';
 
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';

@@ -49,18 +49,18 @@ $tab-padding: rem-calc(12px);
 		text-overflow: ellipsis;
 		text-transform: uppercase;
 		white-space: nowrap;
-		@include transition(border $transition-small-duration $basic-transition unquote(',') color $transition-small-duration $basic-transition);
+		@include transition(border $transition-small-duration $standard-transition unquote(',') color $transition-small-duration $standard-transition);
 
 		@media #{$small-up} {
 			min-width: rem-calc(160px);
 		}
 
 		@media #{$medium-only} {
-			@include transition(border $transition-medium-duration $basic-transition unquote(',') color $transition-medium-duration $basic-transition);
+			@include transition(border $transition-medium-duration $standard-transition unquote(',') color $transition-medium-duration $standard-transition);
 		}
 
 		@media #{$medium-up} {
-			@include transition(border $transition-large-duration $basic-transition unquote(',') color $transition-large-duration $basic-transition);
+			@include transition(border $transition-large-duration $standard-transition unquote(',') color $transition-large-duration $standard-transition);
 		}
 
 		&:hover, &.sc-active {

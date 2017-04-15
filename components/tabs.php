@@ -1,6 +1,6 @@
 <?php
 $title = 'Tabs';
-$description = 'Tabs based on Google\'s Material Design';
+$description = 'Tabs based on Google\'s Material Design. Tabs consist out of three types being default or text, icons only and text with icons';
 $keywords = 'tabs';
 
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';

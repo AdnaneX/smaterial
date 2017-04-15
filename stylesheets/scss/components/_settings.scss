@@ -66,10 +66,10 @@ $link-hover: var(--secondary-color, $secondary-color);
 $theme: light !default; // Default either light or dark
 $typography: english !default; // Default english, dense or tall
 $select-background: $cyan-a200 !default; // Default $cyan-a200
-$basic-transition: cubic-bezier(0.4, 0.0, 0.2, 1) !default; // Default cubic-bezier(0.4, 0.0, 0.2, 1)
-$element-enter-transition: cubic-bezier(0.0, 0.0, 0.2, 1) !default; // Default cubic-bezier(0.0, 0.0, 0.2, 1)
-$element-exit-transition: cubic-bezier(0.4, 0.0, 1, 1) !default; // Default cubic-bezier(0.4, 0.0, 1, 1)
-$returning-transition: cubic-bezier(0.0, 0.0, 0.2, 1) !default; // Default cubic-bezier(0.0, 0.0, 0.2, 1)
+$standard-transition: cubic-bezier(0.4, 0.0, 0.2, 1) !default; // Default cubic-bezier(0.4, 0.0, 0.2, 1)
+$deceleration-transition: cubic-bezier(0.0, 0.0, 0.2, 1) !default; // Default cubic-bezier(0.0, 0.0, 0.2, 1)
+$acceleration-transition: cubic-bezier(0.4, 0.0, 1, 1) !default; // Default cubic-bezier(0.4, 0.0, 1, 1)
+$sharp-transition: cubic-bezier(0.4, 0.0, 0.6, 1) !default; // Default cubic-bezier(0.4, 0.0, 0.6, 1)
 $transition-small-duration: 300ms !default; // Default 300ms
 $transition-medium-duration: 390ms !default; // Default 390ms
 $transition-large-duration: 200ms !default; // Default 200ms
@@ -82,8 +82,8 @@ $border-size: rem-calc(2px) !default; // Default rem-calc(2px)
  * Default font size under imports
  **************************************/
 // Font paths
-$roboto-font-path: '/stylesheets/scss/components/fonts/Roboto/' !default;
-$noto-font-path: '/stylesheets/scss/components/fonts/Noto/' !default;
+$roboto-font-path: '/stylesheets/fonts/Roboto/' !default;
+$noto-font-path: '/stylesheets/fonts/Noto/' !default;
 
 // Colors
 $font-color-display-4: var(--font-color-1, if( $theme == light, rgba($black, .54), rgba($white, .54) ) ) !default; // Default if( $theme == light, rgba($black, .54), rgba($white, .54) )
@@ -129,8 +129,8 @@ $bottom-nav-on-color: $white !default; // Default $white
  * Bottom sheet
  **************************************/
 $bottom-sheet-background: if( $theme == light, var(--background, $background), $grey-800 ) !default; // Default if( $theme == light, $background, $grey-800 )
-$bottom-sheet-font-color: rgba($black, .87) !default; // Default rgba($black, .87)
-$bottom-sheet-header-font-color: rgba($black, .54) !default; // Default rgba($black, .54)
+$bottom-sheet-font-color: $font-color-headline !default; // Default $font-color-headline
+$bottom-sheet-header-font-color: $font-color-display-4 !default; // Default $font-color-display-4
 $bottom-sheet-icons-color: $bottom-sheet-header-font-color !default; // Default $bottom-sheet-header-font-color
 
 /**************************************

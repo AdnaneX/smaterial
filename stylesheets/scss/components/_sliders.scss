@@ -28,14 +28,14 @@ input[type="range"] {
 	@include range-track() {
 		@include appearance(none);
 		height: $slider-track-height;
-		@include transition(background $transition-small-duration $basic-transition);
+		@include transition(background $transition-small-duration $standard-transition);
 
 		@media #{$medium-up} {
-			@include transition(background $transition-medium-duration $basic-transition);
+			@include transition(background $transition-medium-duration $standard-transition);
 		}
 
 		@media #{$large-up} {
-			@include transition(background $transition-large-duration $basic-transition);
+			@include transition(background $transition-large-duration $standard-transition);
 		}
 
 		&:focus, &:active {
@@ -58,26 +58,26 @@ input[type="range"] {
 		@include border-radius(50%);
 		margin: $slider-thumb-margin 0 0 0;
 		@include appearance(none);
-		@include transition(background $transition-small-duration $basic-transition unquote(',')
-							border $transition-small-duration $basic-transition unquote(',')
-							height $transition-small-duration $basic-transition unquote(',')
-							width $transition-small-duration $basic-transition unquote(',')
-							margin $transition-small-duration $basic-transition);
+		@include transition(background $transition-small-duration $standard-transition unquote(',')
+							border $transition-small-duration $standard-transition unquote(',')
+							height $transition-small-duration $standard-transition unquote(',')
+							width $transition-small-duration $standard-transition unquote(',')
+							margin $transition-small-duration $standard-transition);
 
 		@media #{$medium-only} {
-			@include transition(background $transition-medium-duration $basic-transition unquote(',')
-								border $transition-medium-duration $basic-transition unquote(',')
-								height $transition-medium-duration $basic-transition unquote(',')
-								width $transition-medium-duration $basic-transition unquote(',')
-								margin $transition-medium-duration $basic-transition);
+			@include transition(background $transition-medium-duration $standard-transition unquote(',')
+								border $transition-medium-duration $standard-transition unquote(',')
+								height $transition-medium-duration $standard-transition unquote(',')
+								width $transition-medium-duration $standard-transition unquote(',')
+								margin $transition-medium-duration $standard-transition);
 		}
 
 		@media #{$medium-up} {
-			@include transition(background $transition-large-duration $basic-transition unquote(',')
-								border $transition-large-duration $basic-transition unquote(',')
-								height $transition-large-duration $basic-transition unquote(',')
-								width $transition-large-duration $basic-transition unquote(',')
-								margin $transition-large-duration $basic-transition);
+			@include transition(background $transition-large-duration $standard-transition unquote(',')
+								border $transition-large-duration $standard-transition unquote(',')
+								height $transition-large-duration $standard-transition unquote(',')
+								width $transition-large-duration $standard-transition unquote(',')
+								margin $transition-large-duration $standard-transition);
 		}
 
 		&:focus, &:active {
@@ -212,31 +212,31 @@ input[type="range"] {
 			margin: (($slider-thumb-size / 2) + $slider-track-height) 0 0 (($slider-thumb-size * -1) / 2);
 			position: absolute;
 			z-index: 2;
-			@include transition(background $transition-small-duration $basic-transition unquote(',')
-								width $transition-small-duration $basic-transition unquote(',')
-								height $transition-small-duration $basic-transition unquote(',')
-								border $transition-small-duration $basic-transition unquote(',')
-								bottom $transition-small-duration $basic-transition unquote(',')
-								margin $transition-small-duration $basic-transition unquote(',')
+			@include transition(background $transition-small-duration $standard-transition unquote(',')
+								width $transition-small-duration $standard-transition unquote(',')
+								height $transition-small-duration $standard-transition unquote(',')
+								border $transition-small-duration $standard-transition unquote(',')
+								bottom $transition-small-duration $standard-transition unquote(',')
+								margin $transition-small-duration $standard-transition unquote(',')
 			);
 
 			@media #{$medium-only} {
-				@include transition(background $transition-medium-duration $basic-transition unquote(',')
-									width $transition-medium-duration $basic-transition unquote(',')
-									height $transition-medium-duration $basic-transition unquote(',')
-									border $transition-medium-duration $basic-transition unquote(',')
-									bottom $transition-medium-duration $basic-transition unquote(',')
-									margin $transition-medium-duration $basic-transition unquote(',')
+				@include transition(background $transition-medium-duration $standard-transition unquote(',')
+									width $transition-medium-duration $standard-transition unquote(',')
+									height $transition-medium-duration $standard-transition unquote(',')
+									border $transition-medium-duration $standard-transition unquote(',')
+									bottom $transition-medium-duration $standard-transition unquote(',')
+									margin $transition-medium-duration $standard-transition unquote(',')
 				);
 			}
 
 			@media #{$medium-up} {
-				@include transition(background $transition-large-duration $basic-transition unquote(',')
-									width $transition-large-duration $basic-transition unquote(',')
-									height $transition-large-duration $basic-transition unquote(',')
-									border $transition-large-duration $basic-transition unquote(',')
-									bottom $transition-large-duration $basic-transition unquote(',')
-									margin $transition-large-duration $basic-transition unquote(',')
+				@include transition(background $transition-large-duration $standard-transition unquote(',')
+									width $transition-large-duration $standard-transition unquote(',')
+									height $transition-large-duration $standard-transition unquote(',')
+									border $transition-large-duration $standard-transition unquote(',')
+									bottom $transition-large-duration $standard-transition unquote(',')
+									margin $transition-large-duration $standard-transition unquote(',')
 				);
 			}
 
@@ -249,25 +249,25 @@ input[type="range"] {
 				position: absolute;
 				right: 0;
 				top: 0;
-				@include transition(border-left $transition-small-duration $basic-transition unquote(',')
-									border-right $transition-small-duration $basic-transition unquote(',')
-									border-top $transition-small-duration $basic-transition unquote(',')
-									top $transition-small-duration $basic-transition unquote(',')
+				@include transition(border-left $transition-small-duration $standard-transition unquote(',')
+									border-right $transition-small-duration $standard-transition unquote(',')
+									border-top $transition-small-duration $standard-transition unquote(',')
+									top $transition-small-duration $standard-transition unquote(',')
 				);
 
 				@media #{$medium-only} {
-					@include transition(border-left $transition-medium-duration $basic-transition unquote(',')
-										border-right $transition-medium-duration $basic-transition unquote(',')
-										border-top $transition-medium-duration $basic-transition unquote(',')
-										top $transition-medium-duration $basic-transition unquote(',')
+					@include transition(border-left $transition-medium-duration $standard-transition unquote(',')
+										border-right $transition-medium-duration $standard-transition unquote(',')
+										border-top $transition-medium-duration $standard-transition unquote(',')
+										top $transition-medium-duration $standard-transition unquote(',')
 					);
 				}
 
 				@media #{$medium-up} {
-					@include transition(border-left $transition-large-duration $basic-transition unquote(',')
-										border-right $transition-large-duration $basic-transition unquote(',')
-										border-top $transition-large-duration $basic-transition unquote(',')
-										top $transition-large-duration $basic-transition unquote(',')
+					@include transition(border-left $transition-large-duration $standard-transition unquote(',')
+										border-right $transition-large-duration $standard-transition unquote(',')
+										border-top $transition-large-duration $standard-transition unquote(',')
+										top $transition-large-duration $standard-transition unquote(',')
 					);
 				}
 			}

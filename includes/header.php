@@ -37,7 +37,7 @@ if( $file == '/index' || $file == '/' ) {
 $color = $colors[$folder]['color'];
 $highlight = $colors[$folder]['highlight'];
 
-$keywords .= ', smaterial, css, scss, material design';
+$keywords .= ', smaterial, css, scss, material design, framework, html, js';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -146,7 +146,7 @@ if( $_SERVER['PHP_SELF'] === '/components/tabs.php' ) {
 	<?php
 }
 ?>
-<nav id="sc-drawer" class="sc-drawer sc-drawer-temporary">
+<nav id="sc-drawer" class="sc-drawer sc-drawer-temporary sc-full-width">
 	<!--<header class="sc-drawer-header"> <!-- Full height --
 		<img src="/images/logo.svg" alt="SMalterial logo">
 	</header>-->

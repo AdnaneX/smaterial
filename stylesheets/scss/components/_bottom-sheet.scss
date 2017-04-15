@@ -13,7 +13,7 @@ $bottom-sheet-music-image-size: rem-calc(52.5px); // Default rem-calc(42.5px)
 $bottom-sheet-music-height: rem-calc(50px); // Default rem-calc(40px)
 
 .sc-bottom-sheet {
-	@include transition(margin $transition-small-duration $basic-transition);
+	@include transition(margin $transition-small-duration $standard-transition);
 	@include material-shadow(16);
 	background: $bottom-sheet-background;
 	bottom: 0;
@@ -29,7 +29,7 @@ $bottom-sheet-music-height: rem-calc(50px); // Default rem-calc(40px)
 	right: 0;
 	width: 100%;
 	color: $bottom-sheet-font-color;
-	z-index: 4;
+	z-index: 5;
 
 	/*@media #{$medium-down} {
 		&:before {
@@ -42,18 +42,41 @@ $bottom-sheet-music-height: rem-calc(50px); // Default rem-calc(40px)
 	}*/
 
 	@media #{$medium-only} {
-		@include transition(margin $transition-medium-duration $basic-transition);
+		@include transition(margin $transition-medium-duration $standard-transition);
 		width: 60%;
 	}
 
 	@media #{$medium-up} {
-		@include transition(margin $transition-large-duration $basic-transition);
+		@include transition(margin $transition-large-duration $standard-transition);
 		width: 40%;
 		@include border-radius-top(var(--border-size, $border-size));
 	}
 
+	&-background {
+		background: rgba($black, .20);
+		@include square(100%);
+		top: 0;
+		left: 0;
+		position: fixed;
+		z-index: 4;
+		visibility: hidden;
+		@include transition(all $transition-small-duration $standard-transition);
+
+		@media #{$medium-only} {
+			@include transition(all $transition-medium-duration $standard-transition);
+		}
+
+		@media #{$medium-up} {
+			@include transition(all $transition-large-duration $standard-transition);
+		}
+	}
+
 	&.sc-expanded {
 		margin: 0 auto;
+
+		~ .sc-bottom-sheet-background {
+			visibility: visible;
+		}
 	}
 
 	ul {
@@ -96,19 +119,20 @@ $bottom-sheet-music-height: rem-calc(50px); // Default rem-calc(40px)
 			padding: rem-calc(16px) rem-calc(24px) rem-calc(24px) rem-calc(24px);
 
 			ul li {
-				height: rem-calc(64px);
-				margin: 0 0 rem-calc(16px) 0;
+				margin: 0 0 $large-gutter 0;
+				@include flex-container($justify: space-between);
 
 				&:last-of-type {
 					margin: 0;
 				}
 
 				.sc-grid-item {
-					//@extend .sc-col, .sc-s6, .sc-m4;
 					padding: 0;
+					@include flex-grow(1);
 
 					.sc-grid-icon {
 						@extend .sc-center;
+						margin: 0 0 rem-calc(8px) 0;
 
 						.material-icons {
 							font-size: $bottom-sheet-grid-icon-size;
@@ -122,7 +146,18 @@ $bottom-sheet-music-height: rem-calc(50px); // Default rem-calc(40px)
 						@extend .sc-center;
 						height: $bottom-sheet-grid-content-size;
 						line-height: $bottom-sheet-grid-content-size;
+						font-size: rem-calc(12px);
+						color: $bottom-sheet-header-font-color;
 					}
+				}
+
+				&.sc-divider {
+					margin: 0 rem-calc(8px);
+				}
+
+				&.sc-header {
+					color: $bottom-sheet-header-font-color;
+					height: rem-calc(56px);
 				}
 			}
 		}

@@ -16,7 +16,7 @@ $bottom-nav-icon-size: rem-calc(24px); // Default rem-calc(24px)
 	width: 100%;
 	margin: 0 0 -102% 0;
 	@include flex-container(null, null, space-between);
-	@include transition(margin $transition-small-duration $basic-transition);
+	@include transition(margin $transition-small-duration $standard-transition);
 
 	@media #{$small-up} {
 		left: $drawer-small-width;
@@ -24,11 +24,11 @@ $bottom-nav-icon-size: rem-calc(24px); // Default rem-calc(24px)
 	}
 
 	@media #{$medium-only} {
-		@include transition(margin $transition-medium-duration $basic-transition);
+		@include transition(margin $transition-medium-duration $standard-transition);
 	}
 
 	@media #{$medium-up} {
-		@include transition(margin $transition-large-duration $basic-transition);
+		@include transition(margin $transition-large-duration $standard-transition);
 	}
 
 	&.sc-expanded {

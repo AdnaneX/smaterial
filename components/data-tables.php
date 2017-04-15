@@ -1,6 +1,6 @@
 <?php
 $title = 'Data tables';
-$description = 'Tables based on Google\'s Material Design';
+$description = 'Tables based on Google\'s Material Design. Tables have several styling options, by adding a specific classes to your table you can follow the design specifications as close as possible';
 $keywords = 'tables, data tables';
 
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';

@@ -17,15 +17,15 @@
 	left: 50%;
 	max-width: calc(100% - ( 2 * #{$gutter}));
 	@include transform(translateX(-50%) translateY(-50%));
-	@include transition(all $transition-small-duration $basic-transition);
+	@include transition(all $transition-small-duration $standard-transition);
 
 	@media #{$medium-only} {
-		@include transition(all $transition-medium-duration $basic-transition);
+		@include transition(all $transition-medium-duration $standard-transition);
 	}
 
 	@media #{$medium-up} {
 		width: auto;
-		@include transition(all $transition-large-duration $basic-transition);
+		@include transition(all $transition-large-duration $standard-transition);
 		max-width: calc(100% - ( 2 * #{$large-gutter}));
 	}
 
@@ -37,14 +37,14 @@
 		position: fixed;
 		z-index: 4;
 		visibility: hidden;
-		@include transition(all $transition-small-duration $basic-transition);
+		@include transition(all $transition-small-duration $standard-transition);
 
 		@media #{$medium-only} {
-			@include transition(all $transition-medium-duration $basic-transition);
+			@include transition(all $transition-medium-duration $standard-transition);
 		}
 
 		@media #{$medium-up} {
-			@include transition(all $transition-large-duration $basic-transition);
+			@include transition(all $transition-large-duration $standard-transition);
 		}
 	}
 
@@ -75,9 +75,13 @@
 		.sc-flat-button, .sc-raised-button {
 			height: rem-calc(36px);
 			line-height: rem-calc(36px);
-			margin: 0 0 0 rem-calc(8px);
+			margin: 0 rem-calc(8px) 0 0;
 			padding: 0 rem-calc(8px);
 			min-width: rem-calc(64px);
+
+			&:last-of-type {
+				margin: 0;
+			}
 		}
 	}
 }

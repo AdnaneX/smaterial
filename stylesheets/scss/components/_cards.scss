@@ -11,7 +11,7 @@
 	width: 100%;
 	padding: 0;
 	position: relative;
-	@include transition(box-shadow $transition-small-duration $basic-transition);
+	@include transition(box-shadow $transition-small-duration $standard-transition);
 	background: $card-background;
 
 	&:hover {
@@ -19,11 +19,11 @@
 	}
 
 	@media #{$medium-only} {
-		@include transition(box-shadow $transition-medium-duration $basic-transition);
+		@include transition(box-shadow $transition-medium-duration $standard-transition);
 	}
 
 	@media #{$medium-up} {
-		@include transition(box-shadow $transition-large-duration $basic-transition);
+		@include transition(box-shadow $transition-large-duration $standard-transition);
 		@include material-shadow(0);
 	}
 

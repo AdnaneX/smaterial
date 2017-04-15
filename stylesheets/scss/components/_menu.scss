@@ -16,14 +16,14 @@
 	white-space: nowrap;
 	text-align: left;
 	z-index: 4;
-	@include transition(max-width $transition-small-duration $basic-transition unquote(',') max-height $transition-small-duration $basic-transition);
+	@include transition(max-width $transition-small-duration $standard-transition unquote(',') max-height $transition-small-duration $standard-transition);
 
 	@media #{$medium-only} {
-		@include transition(max-width $transition-medium-duration $basic-transition unquote(',') max-height $transition-medium-duration $basic-transition);
+		@include transition(max-width $transition-medium-duration $standard-transition unquote(',') max-height $transition-medium-duration $standard-transition);
 	}
 
 	@media #{$medium-up} {
-		@include transition(max-width $transition-large-duration $basic-transition unquote(',') max-height $transition-large-duration $basic-transition);
+		@include transition(max-width $transition-large-duration $standard-transition unquote(',') max-height $transition-large-duration $standard-transition);
 	}
 
 	a {
@@ -32,14 +32,14 @@
 		@include font($font-size-menu, 0, $font-weight-menu, $line-height-menu, $font-color-menu, $letter-spacing-menu);
 		color: if( $theme == light, initial, rgba($white, .7));
 		padding: (rem-calc(48px) - (rem-calc(20px) + rem-calc($font-size-menu + 0px))) $gutter rem-calc(20px) $gutter;
-		@include transition(background $transition-small-duration $basic-transition);
+		@include transition(background $transition-small-duration $standard-transition);
 
 		@media #{$medium-only} {
-			@include transition(background $transition-medium-duration $basic-transition);
+			@include transition(background $transition-medium-duration $standard-transition);
 		}
 
 		@media #{$medium-up} {
-			@include transition(background $transition-large-duration $basic-transition);
+			@include transition(background $transition-large-duration $standard-transition);
 		}
 
 		&:hover {

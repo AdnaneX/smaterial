@@ -22,15 +22,15 @@ button, input[type="button"], input[type="reset"], input[type="submit"], a {
 			line-height: $raised-size;
 			min-width: rem-calc(88px);
 			padding: 0 rem-calc(16px);
-			@include transition(box-shadow $transition-small-duration $basic-transition unquote(',') background $transition-small-duration $basic-transition);
+			@include transition(box-shadow $transition-small-duration $standard-transition unquote(',') background $transition-small-duration $standard-transition);
 
 			@media #{$medium-only} {
-				@include transition(box-shadow $transition-medium-duration $basic-transition unquote(',') background $transition-medium-duration $basic-transition);
+				@include transition(box-shadow $transition-medium-duration $standard-transition unquote(',') background $transition-medium-duration $standard-transition);
 			}
 
 			@media #{$medium-up} {
 				@include material-shadow(0);
-				@include transition(box-shadow $transition-large-duration $basic-transition unquote(',') background $transition-large-duration $basic-transition);
+				@include transition(box-shadow $transition-large-duration $standard-transition unquote(',') background $transition-large-duration $standard-transition);
 			}
 
 			&:active {
@@ -125,7 +125,7 @@ $floating-mini-size: rem-calc(40px); // Default rem-calc(40px)
 	.sc-floating-button {
 		@include font($font-size-button, 0, $font-weight-button, $line-height-button, $font-color-button, $letter-spacing-button, uppercase);
 		@include button(50%);
-		@include transition(box-shadow $transition-small-duration $basic-transition);
+		@include transition(box-shadow $transition-small-duration $standard-transition);
 		@include material-shadow(6);
 		@include square($floating-size);
 		background: $floating-background;
@@ -152,7 +152,7 @@ $floating-mini-size: rem-calc(40px); // Default rem-calc(40px)
 			position: absolute;
 			visibility: hidden;
 			@include opacity(0);
-			@include transition(all $transition-small-duration $basic-transition);
+			@include transition(all $transition-small-duration $standard-transition);
 
 			&.sc-expanded {
 				visibility: visible;

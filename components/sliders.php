@@ -1,6 +1,6 @@
 <?php
 $title = 'Slider';
-$description = 'Slider based on Google\'s Material Design';
+$description = 'Slider based on Google\'s Material Design. Sliders have two different types a default and discrete option. However the support is limited';
 $keywords = 'slider, discrete slider';
 
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';

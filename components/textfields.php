@@ -1,6 +1,6 @@
 <?php
 $title = 'Text fields';
-$description = 'Text fields based on Google\'s Material Design';
+$description = 'Text fields based on Google\'s Material Design. Text fields have a couple of different styles not only floating and single line but also dense';
 $keywords = 'text fields, input, select, textarea, autocomplete';
 
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';

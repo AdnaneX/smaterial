@@ -1,6 +1,6 @@
 <?php
 $title = 'Menu';
-$description = 'Menus based on Google\'s Material Design';
+$description = 'Menus based on Google\'s Material Design. The menu isn\'t only used in the appbar or navigation drawer but also for a select element';
 $keywords = 'Menu';
 
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';

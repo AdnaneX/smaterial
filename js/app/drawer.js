@@ -4,6 +4,8 @@ $(document).ready(function() {
 			$dropdownButton = $drawer.find('.sc-drawer-dropdown'),
 			$dropdown = $drawer.find('.sc-dropdown');
 
+		$drawer.after('<div class="sc-drawer-background"></div>');
+
 		if( $dropdownButton.length >= 1 && $dropdown.length >= 1 ) {
 			if( $dropdownButton.length !== $dropdown.length ) {
 				alert('There aren\'t as many dropdowns as dropdown buttons');

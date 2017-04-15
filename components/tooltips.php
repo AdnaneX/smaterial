@@ -1,6 +1,6 @@
 <?php
 $title = 'Tooltips';
-$description = 'Tooltips based on Google\'s Material Design';
+$description = 'Tooltips based on Google\'s Material Design. With tooltips you can easily give your user some more information about for example an action';
 $keywords = 'tooltips';
 
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';

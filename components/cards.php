@@ -1,6 +1,6 @@
 <?php
 $title = 'Cards';
-$description = 'Cards based on Google\'s Material Design';
+$description = 'Cards based on Google\'s Material Design. Each cart consist out of prebuilt blocks. ';
 $keywords = 'cards';
 
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
