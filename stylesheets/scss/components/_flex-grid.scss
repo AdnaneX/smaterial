@@ -29,8 +29,10 @@
 				margin-left: $percentage;
 			}
 
-			&.sc-order-xs#{$i} {
-				@include order(#{$i});
+			@if( in-array( 'order', $flex-grid ) ) {
+				&.sc-order-xs#{$i} {
+					@include order(#{$i});
+				}
 			}
 			$i: $i + 1;
 		}
@@ -54,8 +56,10 @@
 					margin-left: $percentage;
 				}
 
-				&.sc-order-s#{$i} {
-					@include order(#{$i});
+				@if( in-array( 'order', $flex-grid ) ) {
+					&.sc-order-s#{$i} {
+						@include order(#{$i});
+					}
 				}
 				$i: $i + 1;
 			}
@@ -80,8 +84,10 @@
 					margin-left: $percentage;
 				}
 
-				&.sc-order-s#{$i} {
-					@include order(#{$i});
+				@if( in-array( 'order', $flex-grid ) ) {
+					&.sc-order-s#{$i} {
+						@include order(#{$i});
+					}
 				}
 				$i: $i + 1;
 			}
@@ -106,8 +112,10 @@
 					margin-left: $percentage;
 				}
 
-				&.sc-order-m#{$i} {
-					@include order(#{$i});
+				@if( in-array( 'order', $flex-grid ) ) {
+					&.sc-order-m#{$i} {
+						@include order(#{$i});
+					}
 				}
 				$i: $i + 1;
 			}
@@ -132,8 +140,10 @@
 					margin-left: $percentage;
 				}
 
-				&.sc-order-l#{$i} {
-					@include order(#{$i});
+				@if( in-array( 'order', $flex-grid ) ) {
+					&.sc-order-l#{$i} {
+						@include order(#{$i});
+					}
 				}
 				$i: $i + 1;
 			}
@@ -158,8 +168,10 @@
 					margin-left: $percentage;
 				}
 
-				&.sc-order-xl#{$i} {
-					@include order(#{$i});
+				@if( in-array( 'order', $flex-grid ) ) {
+					&.sc-order-xl#{$i} {
+						@include order(#{$i});
+					}
 				}
 				$i: $i + 1;
 			}
@@ -167,32 +179,34 @@
 	}
 }
 
-.sc-xs-hidden {
-	@media #{$xsmall-only} {
-		display: none;
+@if( in-array( 'hidden', $flex-grid ) ) {
+	.sc-xs-hidden {
+		@media #{$xsmall-only} {
+			display: none;
+		}
 	}
-}
 
-.sc-s-hidden {
-	@media #{$small-only} {
-		display: none;
+	.sc-s-hidden {
+		@media #{$small-only} {
+			display: none;
+		}
 	}
-}
 
-.sc-m-hidden {
-	@media #{$medium-only} {
-		display: none;
+	.sc-m-hidden {
+		@media #{$medium-only} {
+			display: none;
+		}
 	}
-}
 
-.sc-l-hidden {
-	@media #{$large-only} {
-		display: none;
+	.sc-l-hidden {
+		@media #{$large-only} {
+			display: none;
+		}
 	}
-}
 
-.sc-xl-hidden {
-	@media #{$xlarge-only} {
-		display: none;
+	.sc-xl-hidden {
+		@media #{$xlarge-only} {
+			display: none;
+		}
 	}
 }

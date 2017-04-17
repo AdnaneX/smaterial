@@ -27,18 +27,22 @@
 }
 
 @mixin material-shadow( $depth ) {
-	@include box-shadow(
-			#{map-get($elevation-umbra-map, $depth)} $elevation-umbra-color unquote(',')
-			#{map-get($elevation-penumbra-map, $depth)} $elevation-penumbra-color unquote(',')
-			#{map-get($elevation-ambient-map, $depth)} $elevation-ambient-color
-	);
-
-	@media #{$medium-up} {
+	@if( $depth >= 1 ) {
 		@include box-shadow(
-				#{map-get($elevation-umbra-map, ( $depth - 2 ))} $elevation-umbra-color unquote(',')
-				#{map-get($elevation-penumbra-map, ( $depth - 2 ))} $elevation-penumbra-color unquote(',')
-				#{map-get($elevation-ambient-map, ( $depth - 2 ))} $elevation-ambient-color
+				#{map-get($elevation-umbra-map, $depth)} $elevation-umbra-color unquote(',')
+				#{map-get($elevation-penumbra-map, $depth)} $elevation-penumbra-color unquote(',')
+				#{map-get($elevation-ambient-map, $depth)} $elevation-ambient-color
 		);
+	}
+
+	@if( ( $depth - 2 ) >= 1 ) {
+		@media #{$medium-up} {
+			@include box-shadow(
+					#{map-get($elevation-umbra-map, ( $depth - 2 ))} $elevation-umbra-color unquote(',')
+					#{map-get($elevation-penumbra-map, ( $depth - 2 ))} $elevation-penumbra-color unquote(',')
+					#{map-get($elevation-ambient-map, ( $depth - 2 ))} $elevation-ambient-color
+			);
+		}
 	}
 }
 
@@ -129,7 +133,7 @@
 }
 
 @mixin filter( $settings ) {
-	webkit-filter: $settings;
+	-webkit-filter: $settings;
 	-moz-filter: $settings;
 	-o-filter: $settings;
 	-ms-filter: $settings;
@@ -350,7 +354,7 @@
 	order: $setting;
 }
 
-@mixin flex-container( $direction: row, $wrap: no-wrap, $justify: flex-start, $items: stretch, $content: stretch ) {
+@mixin flex-container( $direction: row, $wrap: nowrap, $justify: flex-start, $items: stretch, $content: stretch ) {
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: flex;

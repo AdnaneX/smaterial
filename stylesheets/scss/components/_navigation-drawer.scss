@@ -248,7 +248,7 @@ $drawer-profile-height: $drawer-padding + $drawer-profile-img + $drawer-profile-
 				}
 
 				.sc-drawer-profile-name {
-					color: if( $theme == light, '', $white);
+					color: if( $theme == light, inherit, $white);
 				}
 			}
 		}
@@ -444,7 +444,7 @@ $drawer-profile-height: $drawer-padding + $drawer-profile-img + $drawer-profile-
 			}
 
 			.sc-arrow {
-				color: revert;
+				@include filter(invert(100%));
 			}
 		}
 

@@ -8,7 +8,7 @@
 .sc-floating-input, .sc-floating-dense-input, .sc-single-input, .sc-single-dense-input, .sc-multi-input {
 	position: relative;
 
-	input[type="text"], input[type="password"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="url"], textarea {
+	input, textarea {
 		border: none;
 		border-bottom: $textfield-border-size solid if($theme == light, rgba($black, .38), rgba($white, .5));
 		outline: none;
@@ -112,7 +112,7 @@ $textfield-floating-label-font-size: rem-calc(12px); // Default rem-calc(12px);
 		height: $textfield-floating-height;
 		padding: $textfield-floating-padding 0 $textfield-floating-divider 0;
 
-		input[type="text"], input[type="password"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="url"] {
+		input {
 			bottom: $textfield-floating-divider;
 			font-size: $textfield-floating-font-size;
 			padding: $textfield-floating-divider 0;
@@ -150,7 +150,7 @@ $textfield-floating-dense-label-font-size: rem-calc(12px); // Default rem-calc(1
 		height: $textfield-floating-dense-height;
 		padding: $textfield-floating-dense-padding 0 $textfield-floating-dense-divider 0;
 
-		input[type="text"], input[type="password"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="url"] {
+		input {
 			bottom: $textfield-floating-dense-divider;
 			font-size: $textfield-floating-dense-font-size;
 			padding: $textfield-floating-dense-divider 0;
@@ -189,7 +189,7 @@ $textfield-single-icon-size: rem-calc(24px); // Default rem-calc(24)
 		padding: $textfield-single-padding 0 $textfield-single-divider 0;
 
 		&.sc-icon {
-			input[type="text"], input[type="password"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="url"] {
+			input {
 				width: calc(100% - #{$textfield-single-height});
 				left: $textfield-single-height;
 			}
@@ -216,7 +216,7 @@ $textfield-single-icon-size: rem-calc(24px); // Default rem-calc(24)
 			}
 		}
 
-		input[type="text"], input[type="password"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="url"] {
+		input {
 			bottom: $textfield-single-divider;
 			font-size: $textfield-single-font-size;
 			padding: $textfield-single-divider 0;
@@ -275,7 +275,7 @@ $textfield-single-dense-icon-size: rem-calc(20px); // Default rem-calc(20px)
 		padding: $textfield-single-dense-padding 0 $textfield-single-dense-divider 0;
 
 		&.sc-icon {
-			input[type="text"], input[type="password"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="url"] {
+			input {
 				width: calc(100% - #{$textfield-single-dense-height});
 				left: $textfield-single-dense-height;
 			}
@@ -292,7 +292,7 @@ $textfield-single-dense-icon-size: rem-calc(20px); // Default rem-calc(20px)
 			}
 		}
 
-		input[type="text"], input[type="password"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="url"] {
+		input {
 			bottom: $textfield-single-dense-divider;
 			font-size: $textfield-single-dense-font-size;
 			padding: $textfield-single-dense-divider 0;

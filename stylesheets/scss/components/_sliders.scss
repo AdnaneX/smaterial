@@ -58,26 +58,14 @@ input[type="range"] {
 		@include border-radius(50%);
 		margin: $slider-thumb-margin 0 0 0;
 		@include appearance(none);
-		@include transition(background $transition-small-duration $standard-transition unquote(',')
-							border $transition-small-duration $standard-transition unquote(',')
-							height $transition-small-duration $standard-transition unquote(',')
-							width $transition-small-duration $standard-transition unquote(',')
-							margin $transition-small-duration $standard-transition);
+		@include transition(all $transition-small-duration $standard-transition);
 
 		@media #{$medium-only} {
-			@include transition(background $transition-medium-duration $standard-transition unquote(',')
-								border $transition-medium-duration $standard-transition unquote(',')
-								height $transition-medium-duration $standard-transition unquote(',')
-								width $transition-medium-duration $standard-transition unquote(',')
-								margin $transition-medium-duration $standard-transition);
+			@include transition(all $transition-medium-duration $standard-transition);
 		}
 
 		@media #{$medium-up} {
-			@include transition(background $transition-large-duration $standard-transition unquote(',')
-								border $transition-large-duration $standard-transition unquote(',')
-								height $transition-large-duration $standard-transition unquote(',')
-								width $transition-large-duration $standard-transition unquote(',')
-								margin $transition-large-duration $standard-transition);
+			@include transition(all $transition-large-duration $standard-transition);
 		}
 
 		&:focus, &:active {
@@ -217,7 +205,7 @@ input[type="range"] {
 								height $transition-small-duration $standard-transition unquote(',')
 								border $transition-small-duration $standard-transition unquote(',')
 								bottom $transition-small-duration $standard-transition unquote(',')
-								margin $transition-small-duration $standard-transition unquote(',')
+								margin $transition-small-duration $standard-transition
 			);
 
 			@media #{$medium-only} {
@@ -226,7 +214,7 @@ input[type="range"] {
 									height $transition-medium-duration $standard-transition unquote(',')
 									border $transition-medium-duration $standard-transition unquote(',')
 									bottom $transition-medium-duration $standard-transition unquote(',')
-									margin $transition-medium-duration $standard-transition unquote(',')
+									margin $transition-medium-duration $standard-transition
 				);
 			}
 
@@ -236,7 +224,7 @@ input[type="range"] {
 									height $transition-large-duration $standard-transition unquote(',')
 									border $transition-large-duration $standard-transition unquote(',')
 									bottom $transition-large-duration $standard-transition unquote(',')
-									margin $transition-large-duration $standard-transition unquote(',')
+									margin $transition-large-duration $standard-transition
 				);
 			}
 
@@ -252,14 +240,14 @@ input[type="range"] {
 				@include transition(border-left $transition-small-duration $standard-transition unquote(',')
 									border-right $transition-small-duration $standard-transition unquote(',')
 									border-top $transition-small-duration $standard-transition unquote(',')
-									top $transition-small-duration $standard-transition unquote(',')
+									top $transition-small-duration $standard-transition
 				);
 
 				@media #{$medium-only} {
 					@include transition(border-left $transition-medium-duration $standard-transition unquote(',')
 										border-right $transition-medium-duration $standard-transition unquote(',')
 										border-top $transition-medium-duration $standard-transition unquote(',')
-										top $transition-medium-duration $standard-transition unquote(',')
+										top $transition-medium-duration $standard-transition
 					);
 				}
 
@@ -267,7 +255,7 @@ input[type="range"] {
 					@include transition(border-left $transition-large-duration $standard-transition unquote(',')
 										border-right $transition-large-duration $standard-transition unquote(',')
 										border-top $transition-large-duration $standard-transition unquote(',')
-										top $transition-large-duration $standard-transition unquote(',')
+										top $transition-large-duration $standard-transition
 					);
 				}
 			}

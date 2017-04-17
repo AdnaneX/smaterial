@@ -128,154 +128,162 @@ $notification-image-size: rem-calc(40px);
 		}
 	}
 
-	&.sc-big-text {
-		.sc-notification-content {
-			position: relative;
+	@if( in-array( 'big-text', $notification ) ) {
+		&.sc-big-text {
+			.sc-notification-content {
+				position: relative;
 
-			&-text {
-				max-height: 0;
-				@include opacity(0);
-				visibility: hidden;
-			}
-
-			img {
-				@include square($notification-image-size);
-				position: absolute;
-				right: $notification-content-sides;
-				@include border-radius(50%);
-				top: $notification-content-top;
-
-			}
-		}
-	}
-
-	&.sc-big-picture {
-		.sc-notification-content {
-			position: relative;
-
-			&-text {
-				img {
-					max-width: 100%;
-					visibility: hidden;
+				&-text {
+					max-height: 0;
 					@include opacity(0);
-					width: 0;
-					@include transition(opacity $transition-small-duration $standard-transition $transition-small-duration unquote(',') visibility $transition-small-duration $standard-transition $transition-small-duration);
-
-					@media #{$medium-only} {
-						@include transition(opacity $transition-medium-duration $standard-transition $transition-medium-duration unquote(',') visibility $transition-medium-duration $standard-transition $transition-medium-duration);
-					}
-
-					@media #{$medium-up} {
-						@include transition(opacity $transition-large-duration $standard-transition $transition-large-duration unquote(',') visibility $transition-large-duration $standard-transition $transition-large-duration);
-					}
-				}
-			}
-
-			> img {
-				@include square(rem-calc(40px));
-				position: absolute;
-				right: $notification-content-sides;
-				top: $notification-content-top;
-				@include opacity(1);
-				@include transition(opacity $transition-small-duration $standard-transition);
-
-				@media #{$medium-only} {
-					@include transition(opacity $transition-medium-duration $standard-transition);
+					visibility: hidden;
 				}
 
-				@media #{$medium-up} {
-					@include transition(opacity $transition-large-duration $standard-transition);
+				img {
+					@include square($notification-image-size);
+					position: absolute;
+					right: $notification-content-sides;
+					@include border-radius(50%);
+					top: $notification-content-top;
+
 				}
 			}
 		}
 	}
 
-	&.sc-progress {
-		.sc-notification-content {
-			.sc-notification-content-title, .sc-notification-content-text {
-				display: inline-block;
-				width: 50%;
-			}
+	@if( in-array( 'big-picture', $notification ) ) {
+		&.sc-big-picture {
+			.sc-notification-content {
+				position: relative;
 
-			.sc-notification-content-text {
-				float: right;
-				text-align: right;
-			}
-		}
-	}
-
-	&.sc-media {
-		width: rem-calc(400px);
-
-		.sc-notification-content {
-			position: relative;
-			@include transition(height $transition-small-duration $standard-transition);
-
-			@media #{$medium-only} {
-				@include transition(height $transition-medium-duration $standard-transition);
-
-			}
-
-			@media #{$medium-up} {
-				@include transition(height $transition-large-duration $standard-transition);
-			}
-
-			.sc-actions {
-				left: auto;
-				position: absolute;
-				right: rem-calc(48px);
-				text-align: right;
-				top: $notification-content-top;
-				width: calc(#{$notification-media-icon-size} * 4);
-				@include transition(all $transition-small-duration $standard-transition);
-
-				@media #{$medium-only} {
-					@include transition(all $transition-medium-duration $standard-transition);
-
-				}
-
-				@media #{$medium-up} {
-					@include transition(all $transition-large-duration $standard-transition);
-				}
-
-				.material-icons {
-					@include square($notification-media-icon-size);
-					color: rgba($black, .54);
-					font-size: $notification-media-icon-size;
-					line-height: calc((#{rem-calc($line-height-body-1+0px)} * 2));
-
-					&:first-of-type, &:last-of-type {
+				&-text {
+					img {
+						max-width: 100%;
 						visibility: hidden;
 						@include opacity(0);
 						width: 0;
-						@include transition(all $transition-small-duration $standard-transition);
+						@include transition(opacity $transition-small-duration $standard-transition $transition-small-duration unquote(',') visibility $transition-small-duration $standard-transition $transition-small-duration);
 
 						@media #{$medium-only} {
-							@include transition(all $transition-medium-duration $standard-transition);
-
+							@include transition(opacity $transition-medium-duration $standard-transition $transition-medium-duration unquote(',') visibility $transition-medium-duration $standard-transition $transition-medium-duration);
 						}
 
 						@media #{$medium-up} {
-							@include transition(all $transition-large-duration $standard-transition);
+							@include transition(opacity $transition-large-duration $standard-transition $transition-large-duration unquote(',') visibility $transition-large-duration $standard-transition $transition-large-duration);
 						}
 					}
 				}
-			}
 
-			img {
-				@include square(rem-calc(40px));
-				position: absolute;
-				right: rem-calc(8px);
-				top: rem-calc(5px);
-				@include transition(all $transition-small-duration $standard-transition);
+				> img {
+					@include square(rem-calc(40px));
+					position: absolute;
+					right: $notification-content-sides;
+					top: $notification-content-top;
+					@include opacity(1);
+					@include transition(opacity $transition-small-duration $standard-transition);
+
+					@media #{$medium-only} {
+						@include transition(opacity $transition-medium-duration $standard-transition);
+					}
+
+					@media #{$medium-up} {
+						@include transition(opacity $transition-large-duration $standard-transition);
+					}
+				}
+			}
+		}
+	}
+
+	@if( in-array( 'progress', $notification ) ) {
+		&.sc-progress {
+			.sc-notification-content {
+				.sc-notification-content-title, .sc-notification-content-text {
+					display: inline-block;
+					width: 50%;
+				}
+
+				.sc-notification-content-text {
+					float: right;
+					text-align: right;
+				}
+			}
+		}
+	}
+
+	@if( in-array( 'media', $notification ) ) {
+		&.sc-media {
+			width: rem-calc(400px);
+
+			.sc-notification-content {
+				position: relative;
+				@include transition(height $transition-small-duration $standard-transition);
 
 				@media #{$medium-only} {
-					@include transition(all $transition-medium-duration $standard-transition);
+					@include transition(height $transition-medium-duration $standard-transition);
 
 				}
 
 				@media #{$medium-up} {
-					@include transition(all $transition-large-duration $standard-transition);
+					@include transition(height $transition-large-duration $standard-transition);
+				}
+
+				.sc-actions {
+					left: auto;
+					position: absolute;
+					right: rem-calc(48px);
+					text-align: right;
+					top: $notification-content-top;
+					width: calc(#{$notification-media-icon-size} * 4);
+					@include transition(all $transition-small-duration $standard-transition);
+
+					@media #{$medium-only} {
+						@include transition(all $transition-medium-duration $standard-transition);
+
+					}
+
+					@media #{$medium-up} {
+						@include transition(all $transition-large-duration $standard-transition);
+					}
+
+					.material-icons {
+						@include square($notification-media-icon-size);
+						color: rgba($black, .54);
+						font-size: $notification-media-icon-size;
+						line-height: calc((#{rem-calc($line-height-body-1+0px)} * 2));
+
+						&:first-of-type, &:last-of-type {
+							visibility: hidden;
+							@include opacity(0);
+							width: 0;
+							@include transition(all $transition-small-duration $standard-transition);
+
+							@media #{$medium-only} {
+								@include transition(all $transition-medium-duration $standard-transition);
+
+							}
+
+							@media #{$medium-up} {
+								@include transition(all $transition-large-duration $standard-transition);
+							}
+						}
+					}
+				}
+
+				img {
+					@include square(rem-calc(40px));
+					position: absolute;
+					right: rem-calc(8px);
+					top: rem-calc(5px);
+					@include transition(all $transition-small-duration $standard-transition);
+
+					@media #{$medium-only} {
+						@include transition(all $transition-medium-duration $standard-transition);
+
+					}
+
+					@media #{$medium-up} {
+						@include transition(all $transition-large-duration $standard-transition);
+					}
 				}
 			}
 		}
@@ -300,50 +308,56 @@ $notification-image-size: rem-calc(40px);
 			}
 		}
 
-		&.sc-big-text {
-			.sc-notification-content-text {
-				max-height: rem-calc(2000px);
-				@include opacity(1);
-				visibility: visible;
+		@if( in-array( 'big-text', $notification ) ) {
+			&.sc-big-text {
+				.sc-notification-content-text {
+					max-height: rem-calc(2000px);
+					@include opacity(1);
+					visibility: visible;
+				}
 			}
 		}
 
-		&.sc-big-picture {
-			.sc-notification-content {
-				&-text {
+		@if( in-array( 'big-picture', $notification ) ) {
+			&.sc-big-picture {
+				.sc-notification-content {
+					&-text {
+						img {
+							visibility: visible;
+							@include opacity(1);
+							width: 100%;
+						}
+					}
+
+					> img {
+						@include opacity(0);
+					}
+				}
+			}
+		}
+
+		@if( in-array( 'media', $notification ) ) {
+			&.sc-media {
+				.sc-notification-content {
+					height: calc((#{rem-calc($line-height-body-1+0px)} * 2) + #{$notification-media-icon-size} + #{$notification-content-top} + #{$notification-content-bottom});
+
+					.sc-actions {
+						left: $notification-content-sides;
+						text-align: left;
+						right: auto;
+						top: calc(#{rem-calc($line-height-body-1+0px)} * 2);
+						width: calc(#{$notification-media-icon-size} * 6);
+
+						.material-icons:first-of-type, :last-of-type {
+							visibility: visible;
+							@include square($notification-media-icon-size);;
+							@include opacity(1);
+						}
+					}
+
 					img {
-						visibility: visible;
-						@include opacity(1);
-						width: 100%;
+						@include square(calc((#{rem-calc($line-height-body-1+0px)} * 2) + #{$notification-media-icon-size}));
 					}
-				}
-
-				> img {
-					@include opacity(0);
-				}
-			}
-		}
-
-		&.sc-media {
-			.sc-notification-content {
-				height: calc( (#{rem-calc($line-height-body-1+0px)} * 2) + #{$notification-media-icon-size} + #{$notification-content-top} + #{$notification-content-bottom});
-
-				.sc-actions {
-					left: $notification-content-sides;
-					text-align: left;
-					right: auto;
-					top: calc(#{rem-calc($line-height-body-1+0px)} * 2);
-					width: calc(#{$notification-media-icon-size} * 6);
-
-					.material-icons:first-of-type,:last-of-type {
-						visibility: visible;
-						@include square($notification-media-icon-size);;
-						@include opacity(1);
-					}
-				}
-
-				img {
-					@include square(calc((#{rem-calc($line-height-body-1+0px)} * 2)  + #{$notification-media-icon-size}));
 				}
 			}
 		}

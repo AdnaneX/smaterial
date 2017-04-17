@@ -8,6 +8,8 @@ var gulp = require( 'gulp' ),
 	plumber = require( 'gulp-plumber' ),
 	sass = require( 'gulp-sass' ),
 	autoprefixer = require( 'gulp-autoprefixer' ),
+	postccs = require( 'gulp-postcss' ),
+	minify = require( 'gulp-clean-css' ),
 	zip = require( 'gulp-zip' );
 
 // Compress app.js
@@ -38,11 +40,12 @@ gulp.task( 'vendor', function () {
 gulp.task( 'sass', function () {
 	gulp.src( './stylesheets/scss/*.scss' )
 		.pipe( sourcemaps.init() )
-		.pipe( sass( {
-			errLogToConsole: true,
-			outputStyle: 'compressed'
-		} ).on( 'error', sass.logError ) )
+		.pipe( sass() )
 		.pipe( autoprefixer() )
+		.pipe( minify() )
+		.pipe( postccs([
+			require('postcss-merge-rules')
+		]) )
 		.pipe( sourcemaps.write( './' ) )
 		.pipe( gulp.dest( 'stylesheets' ) );
 } );

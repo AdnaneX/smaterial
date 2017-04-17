@@ -10,7 +10,10 @@
 @import 'components/media-queries'; // All possible media queries
 @import 'components/root'; // All CSS variables
 //@import 'components/grid'; // Grid functionality
+
+$flex-grid: (/*'order',*/ 'hidden');
 @import 'components/flex-grid'; // Grid functionality
+
 @import 'components/normalize'; // Remove browser default styles add Material default styles
 
 $shadow-depths: ('0', '1', '2', '3', '4', '6', '8', '9', '10', '12', '16', '24');
@@ -28,11 +31,14 @@ $bottom-nav: ('bottom-nav', 'bottom-shifting');
 $bottom-sheet: ('header', 'grid', 'music');
 @import 'components/bottom-sheet'; // Used to style bottom sheet / modal (can be turned off)
 
-$button: ('raised', 'flat', 'floating', 'toggle');
+$button: ('raised', 'flat', 'floating', 'toggle', /*'ripple'*/);
 @import 'components/buttons'; // Used to style buttons (can be turned off)
 
 @import 'components/cards'; // Used to style cards (can be turned off)
+
+$chip: ('deletable', 'contact');
 @import 'components/chips'; // Used to style chips (can be turned off)
+
 @import 'components/data-tables'; // Used to style tables (can be turned off)
 @import 'components/dialogs'; // Used to style dialog (can be turned off)
 
@@ -44,7 +50,10 @@ $navigation-drawer: ('full-height', 'clipped', 'floating', 'persistent', 'tempor
 @import 'components/navigation-drawer'; // Used to style navigation drawer (can be turned off)
 
 @import 'components/lists'; // Used to style lists (can be turned off)
+
+$notification: ('big-text', 'big-picture', 'progress', 'media');
 @import 'components/notifications'; // Notifications style (can be turned off)
+
 @import 'components/pickers'; // Used to style date and time picker (can be turned off)
 
 $progress: ('determinate', 'indeterminate', 'buffer', 'circular'); // It's better to turn off "buffer" since it isn't working properly

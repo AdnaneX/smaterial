@@ -42,15 +42,13 @@ $font-size: 14 !default; //px Default 14 or 15
  * Add / remove colors you would like to use in CSS
  * NOTE In SCSS all color variables stay accessible
  *
- * All colors below
- * 	$allowed-colors: (
- 		'red', 'pink', 'purple', 'deep-purple', 'indigo', 'blue', 'light-blue', 'cyan', 'teal', 'green', 'light-green', 'lime',
- 		'yellow', 'amber', 'orange', 'deep-orange', 'brown', 'grey', 'blue-grey', 'shades');
+ * Accent means all colors with leading a
+  Text means classes that define text color
  */
 
 $allowed-colors: (
 	'red', 'pink', 'purple', 'deep-purple', 'indigo', 'blue', 'light-blue', 'cyan', 'teal', 'green', 'light-green',
-	'lime', 'yellow', 'amber', 'orange', 'deep-orange', 'brown', 'grey', 'blue-grey', 'shades');
+	'lime', 'yellow', 'amber', 'orange', 'deep-orange', 'brown', 'grey', 'blue-grey', 'shades', 'accent', 'text');
 
 @import 'colors';
 
@@ -348,7 +346,7 @@ $stepper-step-on-font-color: rgba($black, .87) !default; // Default rgba($black,
 /**************************************
  * Tabs
  **************************************/
-$tab-background: var(--mainc-color, $main-color) !default; // Default $main-color
+$tab-background: var(--main-color, $main-color) !default; // Default $main-color
 $tab-font-color: rgba($white, .7) !default; // Default rgba($white, .7)
 $tab-font-on-color: $white !default; // Default $white
 $tab-indicator-on-color: $white !default; // Default $white
