@@ -98,35 +98,33 @@ $keywords .= ', smaterial, css, scss, material design, framework, html, js';
 </style>
 
 <header class="sc-appbar">
-	<!--<div class="sc-appbar-nav">-->
-		<a href="#"><i class="material-icons sc-trigger" data-sc-trigger="sc-drawer">menu</i></a>
-	<!--</div>-->
+    <i class="material-icons sc-trigger" data-sc-trigger="sc-drawer">menu</i>
 
 	<div class="sc-appbar-title">
 		<h1><?php echo '<span class="sc-xs-hidden sc-s-hidden">'.ucfirst( $folder ).' -</span> '.$title; ?></h1>
 	</div>
 
-	<!--<div class="sc-appbar-actions">-->
-		<a href="#" class="sc-search-trigger"><i class="material-icons">search</i></a>
+    <a href="#">Example</a>
 
-		<div class="sc-search-input">
-			<form action="<?= $_SERVER['PHP_SELF']; ?>" method="post">
-				<div class="sc-single-input">
-					<input type="search" name="search" id="search">
-					<label for="search">Search</label>
-				</div>
-			</form>
-		</div>
+	<i class="material-icons">search</i>
 
-        <a href="#"><i class="material-icons">mail</i> <div class="sc-badge">2</div></a>
+    <div class="sc-search-input">
+        <form action="<?= $_SERVER['PHP_SELF']; ?>" method="post">
+            <div class="sc-single-input">
+                <input type="search" name="search" id="search">
+                <label for="search">Search</label>
+            </div>
+        </form>
+    </div>
 
-		<a href="#" class="sc-nav-more sc-trigger" data-sc-trigger="appbar-menu"><i class="material-icons">more_vert</i></a>
+    <i class="material-icons">mail <div class="sc-badge">2</div></i>
 
-		<nav class="sc-menu sc-appbar-menu" id="appbar-menu">
-			<a href="#">Example</a>
-			<a href="#">Example</a>
-		</nav>
-	<!--</div>-->
+    <i class="material-icons sc-trigger" data-sc-trigger="appbar-menu">more_vert</i>
+
+    <nav class="sc-menu sc-appbar-menu" id="appbar-menu">
+        <a href="#">Example</a>
+        <a href="#">Example</a>
+    </nav>
 </header>
 
 <?php

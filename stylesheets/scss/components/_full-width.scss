@@ -1,6 +1,10 @@
 body.sc-full-width {
 	.sc-appbar {
-
+		@media #{$small-up} {
+			.sc-appbar-title {
+				margin-left: rem-calc(72px) - (($large-gutter * 1.5) + $appbar-icon-large-size);
+			}
+		}
 	}
 
 	.sc-bottom-nav, .sc-bottom-shifting {
