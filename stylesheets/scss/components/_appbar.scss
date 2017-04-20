@@ -42,8 +42,14 @@ $appbar-icon-large-size: $appbar-large-height - (rem-calc(20px) * 2);
 		color: $appbar-text;
 	}
 
+	a {
+		display: block;
+		position: relative;
+	}
+
 	.material-icons {
-		padding: $gutter 0;
+		padding: 0;
+		margin: ($appbar-mobile-portrait-height - ($appbar-icon-default-size + rem-calc(20px))) 0 rem-calc(20px) 0;
 		color: $appbar-text;
 		font-size: $appbar-icon-default-size;
 		@include square($appbar-icon-default-size);
@@ -51,17 +57,20 @@ $appbar-icon-large-size: $appbar-large-height - (rem-calc(20px) * 2);
 		@media only screen and (orientation: landscape) and (max-width: #{$small-screen}) {
 			font-size: $appbar-icon-landscape-size;
 			@include square($appbar-icon-landscape-size);
+			margin: ($appbar-mobile-landscape-height - ($appbar-icon-landscape-size + rem-calc(20px))) 0 rem-calc(20px) 0;
 		}
 
 		@media only screen and (orientation: portrait) and (max-width: #{$xsmall-screen}) {
 			font-size: $appbar-icon-portrait-size;
 			@include square($appbar-icon-portrait-size);
+			margin: ($appbar-mobile-portrait-height - ($appbar-icon-portrait-size + rem-calc(20px))) 0 rem-calc(20px) 0;
 		}
 
 		@media #{$small-up} {
-			padding: $large-gutter rem-calc(20px);
+			//margin: $large-gutter rem-calc(20px);
 			font-size: $appbar-icon-large-size;
 			@include square($appbar-icon-large-size);
+			margin: ($appbar-large-height - ($appbar-icon-large-size + rem-calc(20px))) 0 rem-calc(20px) 0;
 		}
 	}
 
@@ -89,30 +98,21 @@ $appbar-icon-large-size: $appbar-large-height - (rem-calc(20px) * 2);
 		}
 	}
 
-	&-actions {
-		margin-right: auto;
-		text-align: right;
+	.sc-search-input {
+		display: none;
+	}
 
-		> a {
-			position: relative;
-		}
-
-		.sc-search-input {
-			display: none;
-		}
-
-		.sc-badge {
-			@include border-radius(50%);
-			background: $badge-background;
-			@include material-shadow(2);
-			font-size: rem-calc(10px);
-			padding: rem-calc(5px);
-			position: absolute;
-			right: rem-calc(-10px);
-			top: 0;
-			text-align: center;
-			@include square( ( rem-calc(5px) * 2 ) + rem-calc(10px) );
-		}
+	.sc-badge {
+		@include border-radius(50%);
+		background: $badge-background;
+		@include material-shadow(2);
+		font-size: rem-calc(10px);
+		padding: rem-calc(5px);
+		position: absolute;
+		right: rem-calc(-10px);
+		top: 0;
+		text-align: center;
+		@include square( ( rem-calc(5px) * 2 ) + rem-calc(10px) );
 	}
 
 	&-menu {

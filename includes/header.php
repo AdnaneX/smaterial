@@ -69,7 +69,7 @@ $keywords .= ', smaterial, css, scss, material design, framework, html, js';
 	<meta name="apple-mobile-web-app-status-bar-style" content="<?php echo $color; ?>">
 </head>
 
-<body>
+<body class="sc-full-width">
 <style>
 	.sc-appbar {
 		background: <?php echo $color; ?>;
@@ -98,15 +98,15 @@ $keywords .= ', smaterial, css, scss, material design, framework, html, js';
 </style>
 
 <header class="sc-appbar">
-	<div class="sc-appbar-nav">
+	<!--<div class="sc-appbar-nav">-->
 		<a href="#"><i class="material-icons sc-trigger" data-sc-trigger="sc-drawer">menu</i></a>
-	</div>
+	<!--</div>-->
 
 	<div class="sc-appbar-title">
 		<h1><?php echo '<span class="sc-xs-hidden sc-s-hidden">'.ucfirst( $folder ).' -</span> '.$title; ?></h1>
 	</div>
 
-	<div class="sc-appbar-actions">
+	<!--<div class="sc-appbar-actions">-->
 		<a href="#" class="sc-search-trigger"><i class="material-icons">search</i></a>
 
 		<div class="sc-search-input">
@@ -126,7 +126,7 @@ $keywords .= ', smaterial, css, scss, material design, framework, html, js';
 			<a href="#">Example</a>
 			<a href="#">Example</a>
 		</nav>
-	</div>
+	<!--</div>-->
 </header>
 
 <?php
@@ -146,7 +146,7 @@ if( $_SERVER['PHP_SELF'] === '/components/tabs.php' ) {
 	<?php
 }
 ?>
-<nav id="sc-drawer" class="sc-drawer sc-drawer-temporary sc-full-width">
+<nav id="sc-drawer" class="sc-drawer sc-drawer-temporary">
 	<!--<header class="sc-drawer-header"> <!-- Full height --
 		<img src="/images/logo.svg" alt="SMalterial logo">
 	</header>-->
@@ -225,6 +225,7 @@ if( $_SERVER['PHP_SELF'] === '/components/tabs.php' ) {
 	<a href="#" class="sc-drawer-dropdown">Layout <i class="material-icons">expand_more</i></a>
 	<div class="sc-dropdown">
 		<a href="/layout/grid.php" <?php echo ( $file == '/layout/grid' ? 'class="sc-active"' : '' ); ?>>Responsive grid</a>
+        <a href="/layout/full-width.php" <?php echo ( $file == '/layout/full-width' ? 'class="sc-active"' : '' ); ?>>Full width</a>
 	</div>
 
 	<a href="#" class="sc-drawer-dropdown">Patterns <i class="material-icons">expand_more</i></a>

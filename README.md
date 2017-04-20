@@ -77,7 +77,8 @@ After making your changes please describe what you have changed. This will speed
 - Expansion panels
 - Grid lists
     - Redo styling
-- Menus    
+- Menus  
+  - Fix bug where menu is behind tabs in appbar
 - Progress
     - Fix buffer animation
 - Selection

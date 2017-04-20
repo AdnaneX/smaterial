@@ -66,11 +66,25 @@ $tab-padding: rem-calc(12px);
 		&:hover, &.sc-active {
 			border-bottom: $tab-indicator-size solid $tab-indicator-on-color;
 			color: $tab-font-on-color;
+
+			.material-icons {
+				color: $tab-font-on-color;
+			}
 		}
 
 		.material-icons {
 			@include square($tab-icon-size);
 			font-size: $tab-icon-size;
+			color: $tab-font-color;
+			@include transition(color $transition-small-duration $standard-transition);
+
+			@media #{$medium-only} {
+				@include transition(color $transition-medium-duration $standard-transition);
+			}
+
+			@media #{$medium-up} {
+				@include transition(color $transition-large-duration $standard-transition);
+			}
 		}
 	}
 

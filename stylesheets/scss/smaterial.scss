@@ -14,12 +14,15 @@
 $flex-grid: (/*'order',*/ 'hidden');
 @import 'components/flex-grid'; // Grid functionality
 
+$normalize: ('scrollbar', 'selection', 'helper-classes');
 @import 'components/normalize'; // Remove browser default styles add Material default styles
 
 $shadow-depths: ('0', '1', '2', '3', '4', '6', '8', '9', '10', '12', '16', '24');
 @import 'components/shadows'; // Shadow depths (Can be turned off)
 
 @import 'components/typography'; // Typography
+
+$icons: ('sizes');
 @import 'components/icons'; // Icons with their shadow (can be turned off)
 
 // Components
@@ -44,7 +47,7 @@ $chip: ('deletable', 'contact');
 
 @import 'components/expansion-panels'; // Used to style expansion panels (can be turned off)
 @import 'components/grid-lists'; // Used to style grid lists (can be turned off)
-@import 'components/menu'; // Used to style menus (can be turned off) is used for appbar and navigation drawer dropdown
+@import 'components/menu'; // Used to style menus (can be turned off) is used for appbar, navigation drawer dropdown and select
 
 $navigation-drawer: ('full-height', 'clipped', 'floating', 'persistent', 'temporary');
 @import 'components/navigation-drawer'; // Used to style navigation drawer (can be turned off)
@@ -78,3 +81,4 @@ $textfield: ('floating', 'floating-dense', 'single', 'single-dense', 'multi');
 
 @import 'components/tooltips'; // Used to style tooltips (can be turned off)
 @import 'components/colors-create'; // Used to create colors(can be turned off)
+@import 'components/full-width'; // Used tp style elements for full screen

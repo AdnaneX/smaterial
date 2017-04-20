@@ -33,7 +33,7 @@ $snackbar-action-margin: rem-calc(24px);
 		text-transform: capitalize;
 
 		@media #{$large-up} {
-			margin: 0 0 0 calc(#{$snackbar-action-margin} * 2);
+			margin: 0 0 0 ($snackbar-action-margin * 2);
 		}
 	}
 }

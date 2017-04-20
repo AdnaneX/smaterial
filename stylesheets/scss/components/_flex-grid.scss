@@ -3,12 +3,12 @@
 
 	.sc-col {
 		flex-grow: 1;
-		padding: 0 ( $gutter / 2 );
-		margin-bottom: var(--gutter, $gutter);
+		padding: ( $gutter / 2 );
+		margin: 0;
 
 		@media #{$small-up} {
-			padding: 0 ( $large-gutter / 2 );
-			margin-bottom: var( --gutter, $large-gutter);
+			padding: ( $large-gutter / 2 );
+			margin: 0;
 		}
 
 		&.sc-xs {

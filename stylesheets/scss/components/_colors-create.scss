@@ -3,12 +3,12 @@
 	@if( in-array($color-name, $allowed-colors)) {
 		@each $color-type, $color-value in $color {
 			@if( $color-type == 'base' ) {
-				.sc-#{$color-name}, .sc-#{$color-name}-#{$color-type} {
+				.sc-#{$color-name}, .sc-#{$color-name}-500 {
 					background: $color-value;
 				}
 
 				@if( in-array( 'text', $allowed-colors ) ) {
-					.sc-#{$color-name}-text, .sc-#{$color-name}-#{$color-type}-text {
+					.sc-#{$color-name}-text, .sc-#{$color-name}-500-text {
 						color: $color-value;
 					}
 				}
@@ -33,15 +33,17 @@
 							color: $color-value;
 						}
 					}
-				}
+				} 
 			} @else {
-				.sc-#{$color-name}-#{$color-type} {
-					background: $color-value;
-				}
+				@if( $color-type != '500' ) {
+					.sc-#{$color-name}-#{$color-type} {
+						background: $color-value;
+					}
 
-				@if( in-array( 'text', $allowed-colors ) ) {
-					.sc-#{$color-name}-#{$color-type}-text {
-						color: $color-value;
+					@if (in-array('text', $allowed-colors)) {
+						.sc-#{$color-name}-#{$color-type}-text {
+							color: $color-value;
+						}
 					}
 				}
 			}

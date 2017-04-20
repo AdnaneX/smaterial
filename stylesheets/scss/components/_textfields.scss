@@ -126,7 +126,7 @@ $textfield-floating-label-font-size: rem-calc(12px); // Default rem-calc(12px);
 		}
 
 		label {
-			top: calc(#{$textfield-floating-padding} + #{$textfield-floating-font-size} + #{$textfield-floating-divider});
+			top: $textfield-floating-padding + $textfield-floating-font-size + $textfield-floating-divider;
 			font-size: $textfield-floating-font-size;
 			font-weight: 400;
 
