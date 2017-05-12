@@ -405,7 +405,7 @@ $drawer-profile-height: $drawer-padding + $drawer-profile-img + $drawer-profile-
 			}
 
 			.sc-arrow {
-				@include filter(invert(100%));
+				color: initial;
 			}
 		}
 

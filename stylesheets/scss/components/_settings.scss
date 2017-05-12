@@ -230,12 +230,22 @@ $drawer-medium-width: rem-calc(320px) !default;
 /**************************************
  * Shadow & elevation
  **************************************/
-$elevation-umbra-color: rgba($black, .2) !default;
-$elevation-penumbra-color: rgba($black, .14) !default;
-$elevation-ambient-color: rgba($black, .12) !default;
+$elevation-umbra-color: rgba($black, .14) !default;
+$elevation-penumbra-color: rgba($black, .12) !default;
+$elevation-ambient-color: rgba($black, .2) !default;
 
 $elevation-umbra-map: (
-	1: rem-calc(0px) rem-calc(2px) rem-calc(1px) rem-calc(-1px),
+	1: rem-calc(0px) rem-calc(0px) rem-calc(2px) rem-calc(0px),
+	2: rem-calc(0px) rem-calc(0px) rem-calc(2px) rem-calc(0px),
+	3: rem-calc(0px) rem-calc(3px) rem-calc(3px) rem-calc(0px),
+	4: rem-calc(0px) rem-calc(2px) rem-calc(4px) rem-calc(0px),
+	6: rem-calc(0px) rem-calc(6px) rem-calc(10px) rem-calc(0px),
+	8: rem-calc(0px) rem-calc(8px) rem-calc(10px) rem-calc(1px),
+	9: rem-calc(0px) rem-calc(9px) rem-calc(12px) rem-calc(1px),
+	12: rem-calc(0px) rem-calc(12px) rem-calc(17px) rem-calc(2px),
+	16: rem-calc(0px) rem-calc(16px) rem-calc(24px) rem-calc(2px),
+	24: rem-calc(0px) rem-calc(24px) rem-calc(38px) rem-calc(3px),
+	/*1: rem-calc(0px) rem-calc(2px) rem-calc(1px) rem-calc(-1px),
 	2: rem-calc(0px) rem-calc(3px) rem-calc(1px) rem-calc(-2px),
 	3: rem-calc(0px) rem-calc(3px) rem-calc(3px) rem-calc(-2px),
 	4: rem-calc(0px) rem-calc(2px) rem-calc(4px) rem-calc(-1px),
@@ -258,11 +268,21 @@ $elevation-umbra-map: (
 	21: rem-calc(0px) rem-calc(10px) rem-calc(13px) rem-calc(-6px),
 	22: rem-calc(0px) rem-calc(10px) rem-calc(14px) rem-calc(-6px),
 	23: rem-calc(0px) rem-calc(11px) rem-calc(14px) rem-calc(-7px),
-	24: rem-calc(0px) rem-calc(11px) rem-calc(15px) rem-calc(-7px)
+	24: rem-calc(0px) rem-calc(11px) rem-calc(15px) rem-calc(-7px)*/
 );
 
 $elevation-penumbra-map: (
-	1: rem-calc(0px) rem-calc(1px) rem-calc(1px) rem-calc(0px),
+	1: rem-calc(0px) rem-calc(2px) rem-calc(2px) rem-calc(0px),
+	2: rem-calc(0px) rem-calc(3px) rem-calc(4px) rem-calc(0px),
+	3: rem-calc(0px) rem-calc(3px) rem-calc(4px) rem-calc(0px),
+	4: rem-calc(0px) rem-calc(4px) rem-calc(5px) rem-calc(0px),
+	6: rem-calc(0px) rem-calc(1px) rem-calc(18px) rem-calc(0px),
+	8: rem-calc(0px) rem-calc(3px) rem-calc(14px) rem-calc(3px),
+	9: rem-calc(0px) rem-calc(3px) rem-calc(16px) rem-calc(2px),
+	12: rem-calc(0px) rem-calc(5px) rem-calc(22px) rem-calc(4px),
+	16: rem-calc(0px) rem-calc(6px) rem-calc(30px) rem-calc(5px),
+	24: rem-calc(0px) rem-calc(9px) rem-calc(46px) rem-calc(8px),
+	/*1: rem-calc(0px) rem-calc(1px) rem-calc(1px) rem-calc(0px),
 	2: rem-calc(0px) rem-calc(2px) rem-calc(2px) rem-calc(0px),
 	3: rem-calc(0px) rem-calc(3px) rem-calc(4px) rem-calc(0px),
 	4: rem-calc(0px) rem-calc(4px) rem-calc(5px) rem-calc(0px),
@@ -285,11 +305,21 @@ $elevation-penumbra-map: (
 	21: rem-calc(0px) rem-calc(21px) rem-calc(33px) rem-calc(3px),
 	22: rem-calc(0px) rem-calc(22px) rem-calc(35px) rem-calc(3px),
 	23: rem-calc(0px) rem-calc(23px) rem-calc(36px) rem-calc(3px),
-	24: rem-calc(0px) rem-calc(24px) rem-calc(38px) rem-calc(3px)
+	24: rem-calc(0px) rem-calc(24px) rem-calc(38px) rem-calc(3px)*/
 );
 
 $elevation-ambient-map: (
 	1: rem-calc(0px) rem-calc(1px) rem-calc(3px) rem-calc(0px),
+	2: rem-calc(0px) rem-calc(1px) rem-calc(5px) rem-calc(0px),
+	3: rem-calc(0px) rem-calc(1px) rem-calc(8px) rem-calc(0px),
+	4: rem-calc(0px) rem-calc(1px) rem-calc(10px) rem-calc(0px),
+	6: rem-calc(0px) rem-calc(3px) rem-calc(5px) rem-calc(0px),
+	8: rem-calc(0px) rem-calc(4px) rem-calc(15px) rem-calc(0px),
+	9: rem-calc(0px) rem-calc(5px) rem-calc(6px) rem-calc(0px),
+	12: rem-calc(0px) rem-calc(7px) rem-calc(8px) rem-calc(0px),
+	16: rem-calc(0px) rem-calc(8px) rem-calc(10px) rem-calc(0px),
+	24: rem-calc(0px) rem-calc(11px) rem-calc(15px) rem-calc(0px),
+	/*1: rem-calc(0px) rem-calc(1px) rem-calc(3px) rem-calc(0px),
 	2: rem-calc(0px) rem-calc(1px) rem-calc(5px) rem-calc(0px),
 	3: rem-calc(0px) rem-calc(1px) rem-calc(8px) rem-calc(0px),
 	4: rem-calc(0px) rem-calc(1px) rem-calc(10px) rem-calc(0px),
@@ -312,7 +342,7 @@ $elevation-ambient-map: (
 	21: rem-calc(0px) rem-calc(8px) rem-calc(40px) rem-calc(7px),
 	22: rem-calc(0px) rem-calc(8px) rem-calc(42px) rem-calc(7px),
 	23: rem-calc(0px) rem-calc(9px) rem-calc(44px) rem-calc(8px),
-	24: rem-calc(0px) rem-calc(9px) rem-calc(46px) rem-calc(8px)
+	24: rem-calc(0px) rem-calc(9px) rem-calc(46px) rem-calc(8px)*/
 );
 
 /**************************************

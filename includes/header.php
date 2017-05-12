@@ -37,12 +37,12 @@ if( $file == '/index' || $file == '/' ) {
 $color = $colors[$folder]['color'];
 $highlight = $colors[$folder]['highlight'];
 
-$keywords .= ', smaterial, css, scss, material design, framework, html, js';
+$keywords .= ', smaterial, css, scss, material design, framework, html, js, css framework, material design framework';
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title><?= $title; ?> | SMaterial</title>
+	<title><?php echo $title; ?> | SMaterial</title>
 
 	<link rel="stylesheet" href="/stylesheets/prism.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -56,11 +56,11 @@ $keywords .= ', smaterial, css, scss, material design, framework, html, js';
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta name="language" content="EN">
 	<meta name="author" content="Derkjan Super">
-	<meta name="description" content="<?= $description; ?>">
-	<meta name="keyword" content="<?= $keywords; ?>">
+	<meta name="description" content="<?php echo $description; ?>">
+	<meta name="keyword" content="<?php echo $keywords; ?>">
 
 	<meta property="og:type" content="article">
-	<meta property="og:title" content="<?= $title; ?> | SMaterial">
+	<meta property="og:title" content="<?php echo $title; ?> | SMaterial">
 	<meta property="og:site_name" content="SMaterial">
 	<meta property="article:section" content="<?php echo $title.' - '.ucfirst($folder); ?>">
 
@@ -104,12 +104,10 @@ $keywords .= ', smaterial, css, scss, material design, framework, html, js';
 		<h1><?php echo '<span class="sc-xs-hidden sc-s-hidden">'.ucfirst( $folder ).' -</span> '.$title; ?></h1>
 	</div>
 
-    <a href="#">Example</a>
-
 	<i class="material-icons">search</i>
 
     <div class="sc-search-input">
-        <form action="<?= $_SERVER['PHP_SELF']; ?>" method="post">
+        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
             <div class="sc-single-input">
                 <input type="search" name="search" id="search">
                 <label for="search">Search</label>

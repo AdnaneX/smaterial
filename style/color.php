@@ -1,7 +1,7 @@
 <?php
 $title = 'Color';
-$description = 'Colors swatches based on Google\'s Material Design. How to use Material Design colors in your website.';
-$keywords = 'color, swatches, material colors';
+$description = 'Colors swatches based on Google\'s Material Design. How to use Material Design colors in your website. How to use different themes';
+$keywords = 'color, swatches, material colors, theme, black light theme';
 
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>
@@ -20,6 +20,22 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
         In SCSS the variables for each color will remain accessible. Therefore it's recommended to remove each color
         when using SCSS unless you need to use a class in HTML.
     </p>
+</section>
+
+<section class="sc-row">
+    <h3 class="sc-col sc-xs4">Theme</h3>
+
+    <p class="sc-col sc-xs2">
+        With SMaterial and SCSS you're also able to choose between a light and dark theme.
+        You can define the theme in the <strong>_settings.scss</strong> file or by overwriting the <code class="language-css">$theme</code> variable.
+        The variable can either be light or dark.
+    </p>
+
+    <pre class="language-css sc-col sc-xs4 sc-s12 sc-m6">
+		<code>
+$theme: light;
+$theme: dark;
+		</code>
 </section>
 
 <section class="sc-row">

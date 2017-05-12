@@ -93,3 +93,14 @@ function eventTrigger( el, etype ){
 		el.dispatchEvent( evObj );
 	}
 }
+
+// Set background color as theme color in html
+var appbarColor = $('.sc-appbar').css('background-color'),
+	themeColor = document.querySelector('meta[name="theme-color"]').getAttribute('content');
+console.log(themeColor);
+
+if( themeColor == '' ) {
+	document.querySelector( 'meta[name="theme-color"]' ).setAttribute( 'content', appbarColor );
+	document.querySelector( 'meta[name="msapplication-navbutton-color"]' ).setAttribute( 'content', appbarColor );
+	document.querySelector( 'meta[name="apple-mobile-web-app-status-bar-style"]' ).setAttribute( 'content', appbarColor );
+}

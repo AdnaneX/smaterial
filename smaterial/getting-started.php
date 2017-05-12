@@ -130,8 +130,10 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
     <h3 class="sc-col sc-xs4 sc-s12">Other useful HTML</h3>
 
     <p class="sc-col sc-xs4 sc-s12 sc-m6">
-        If you would like to complete the looks of your website you can add some additional HTML to it.
+        If you would like to complete the look of your website you can add some additional HTML to it.
         To color the browsers address bar use the code shown on the side in the <code class="language-html">&lt;head></code> tag.
+        If you leave the <code class="language-html">&lt;meta content></code> attribute empty it will be automatically set to the color of the <a href="/components/appbar.php">appbar</a>.
+        Otherwise it will leave the <code class="language-html">&lt;meta content></code> as is.
     </p>
 
     <pre class="language-html sc-col sc-xs4 sc-s12 sc-m6">

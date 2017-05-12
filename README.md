@@ -84,19 +84,12 @@ After making your changes please describe what you have changed. This will speed
 - Selection
     - Add radials for mobile
 - Settings                   
-    - Less options in settings file. Only important options. All other "options" only in the same file at the top after comment before styling     
-    - Complete table of contents
+    - Less options in settings file. Only important options. All other "options" only in the same file at the top after comment before styling
     - Make variables consistent
     - Give variables a clearer name of what they do
-    - Check all colors for (`lighten()` / `darken()` or `rgba()`) where possible
-    - Add settings in documentation 
-    - Add black theme support
-    - Add variables to settings
     - Add css variables where possible. Also add fallback.
 - Navigation drawer
     - Add persistent mini
-    - Fix styling for profile more
-    - Add overlay on mobile
 - Slider
     - Add radials
     - Colors should be rgba but creates weird behaviour (like showing track trough thumb)
@@ -104,7 +97,6 @@ After making your changes please describe what you have changed. This will speed
     - sc-slider-discrete bubble not working mobile
 - Tabs
 - Text fields
-    - Add select
     - Add autocomplete select
     - Add autocomplete input
     - Add slide out search

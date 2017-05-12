@@ -79,7 +79,7 @@ select.sc-select {
 }
 
 div.sc-select {
-	height: rem-calc(48px);
+	height: rem-calc(72px);
 	padding: rem-calc(16px) 0 rem-calc(8px) 0;
 	border-bottom: $textfield-border-size solid if($theme == light, rgba($black, .38), rgba($white, .5));
 	position: relative;
