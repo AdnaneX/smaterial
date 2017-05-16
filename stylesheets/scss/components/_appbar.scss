@@ -96,21 +96,21 @@ $appbar-large-padding: ( ( $appbar-large-height - $appbar-icon-large-size ) / 2 
 
 	&-title {
 		padding: ($appbar-mobile-portrait-height - (rem-calc($font-size-title+0px) + rem-calc(20px))) 0 rem-calc(20px) 0;
-		margin-left: rem-calc(72px) - (($gutter * 1.5) + $appbar-icon-default-size);
+		margin-left: rem-calc(72px) - ($gutter + $appbar-icon-default-size);
 
 		@media only screen and (orientation: landscape) and (max-width: #{$small-screen}) {
 			padding: ($appbar-mobile-landscape-height - (rem-calc($font-size-title+0px) + rem-calc(20px))) 0 rem-calc(20px) 0;
-			margin-left: rem-calc(72px) - (($gutter * 1.5) + $appbar-icon-landscape-size);
+			margin-left: rem-calc(72px) - ($gutter + $appbar-icon-landscape-size);
 		}
 
 		@media only screen and (orientation: portrait) and (max-width: #{$xsmall-screen}) {
 			padding: ($appbar-mobile-portrait-height - (rem-calc($font-size-title+0px) + rem-calc(20px))) 0 rem-calc(20px) 0;
-			margin-left: rem-calc(72px) - (($gutter * 1.5) + $appbar-icon-portrait-size);
+			margin-left: rem-calc(72px) - ($gutter + $appbar-icon-portrait-size);
 		}
 
 		@media #{$small-up} {
 			padding: ($appbar-large-height - (rem-calc($font-size-title+0px) + rem-calc(20px))) 0 rem-calc(20px) 0;
-			margin-left: $drawer-small-width - (($large-gutter * 1.5) + $appbar-icon-large-size);
+			margin-left: $drawer-small-width - ($large-gutter + $appbar-icon-large-size);
 		}
 	}
 

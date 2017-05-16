@@ -69,7 +69,7 @@ $keywords .= ', smaterial, css, scss, material design, framework, html, js, css 
 	<meta name="apple-mobile-web-app-status-bar-style" content="<?php echo $color; ?>">
 </head>
 
-<body class="sc-full-width">
+<body class="">
 <style>
 	.sc-appbar {
 		background: <?php echo $color; ?>;
@@ -221,7 +221,7 @@ if( $_SERVER['PHP_SELF'] === '/components/tabs.php' ) {
 	<a href="#" class="sc-drawer-dropdown">Layout <i class="material-icons">expand_more</i></a>
 	<div class="sc-dropdown">
 		<a href="/layout/grid.php" <?php echo ( $file == '/layout/grid' ? 'class="sc-active"' : '' ); ?>>Responsive grid</a>
-        <a href="/layout/full-width.php" <?php echo ( $file == '/layout/full-width' ? 'class="sc-active"' : '' ); ?>>Full width</a>
+        <a href="/layout/screen-sizes.php" <?php echo ( $file == '/layout/screen-sizes' ? 'class="sc-active"' : '' ); ?>>Screen sizes</a>
 	</div>
 
 	<a href="#" class="sc-drawer-dropdown">Patterns <i class="material-icons">expand_more</i></a>
