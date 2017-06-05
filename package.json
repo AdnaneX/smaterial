@@ -1,5 +1,5 @@
 {
-  "author": "Derkjan Super",
+  "author": "Derkjan Super (https://dsuper.nl)",
   "description": "SMaterial a CSS framework based on Google's Material Design",
   "homepage": "http://www.smaterial.dsuper.nl",
   "repository": {
@@ -7,6 +7,24 @@
     "url": "https://github.com/SuperDJ/smaterial"
   },
   "license": "license.txt",
+  "keywords": [
+    "Material Design",
+    "CSS",
+    "SCSS",
+    "CSS framework",
+    "Material Design framework",
+    "SMaterial"
+  ],
+  "files": [
+    "stylesheets/*.{css|map}",
+    "stylesheets/scss/",
+    "stylesheets/fonts/Roboto/",
+    "stylesheets/fonts/*.{scss|php}",
+    "js/",
+    "package.json",
+    "gulpfile.js",
+    "license.txt"
+  ],
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
@@ -24,5 +42,8 @@
     "jshint": "^2.9.4",
     "minimatch": "^3.0.3",
     "postcss-merge-rules": "^2.1.2"
-  }
+  },
+  "name": "smaterial",
+  "version": "0.3.01",
+  "main": "index.js"
 }

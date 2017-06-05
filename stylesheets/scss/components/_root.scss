@@ -10,7 +10,9 @@
 	--font-color-1: $font-color-display-4;
 	--font-color-2: $font-color-headline;
 
-	@media #{$small-up} {
-		--gutter: $large-gutter;
+	@if( $amp == false ) {
+		@media #{$small-up} {
+			--gutter: $large-gutter;
+		}
 	}
 }

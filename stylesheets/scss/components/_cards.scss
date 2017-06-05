@@ -18,13 +18,15 @@
 		@include material-shadow(8);
 	}
 
-	@media #{$medium-only} {
-		@include transition(box-shadow $transition-medium-duration $standard-transition);
-	}
+	@if( $amp == false ) {
+		@media #{$medium-only} {
+			@include transition(box-shadow $transition-medium-duration $standard-transition);
+		}
 
-	@media #{$medium-up} {
-		@include transition(box-shadow $transition-large-duration $standard-transition);
-		@include material-shadow(0);
+		@media #{$medium-up} {
+			@include transition(box-shadow $transition-large-duration $standard-transition);
+			@include material-shadow(0);
+		}
 	}
 
 	&-actions {

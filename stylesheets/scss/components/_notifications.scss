@@ -53,19 +53,22 @@ $notification-image-size: rem-calc(40px);
 			@include transform(rotate(0deg));
 			@include transition(transform $transition-small-duration $standard-transition);
 
-			@media #{$medium-only} {
-				@include transition(transform $transition-medium-duration $standard-transition);
+			@if( $amp == false ) {
+				@media #{$medium-only} {
+					@include transition(transform $transition-medium-duration $standard-transition);
 
-			}
+				}
 
-			@media #{$medium-up} {
-				@include transition(transform $transition-large-duration $standard-transition);
+				@media #{$medium-up} {
+					@include transition(transform $transition-large-duration $standard-transition);
+				}
 			}
 		}
 	}
 
 	&-content {
 		padding: $notification-content-top $notification-content-sides $notification-content-bottom $notification-content-sides;
+		position: relative;
 
 		&-title, .sc-subject {
 		 	color: rgba($black, .87);
@@ -84,12 +87,14 @@ $notification-image-size: rem-calc(40px);
 		@include opacity(0);
 		visibility: hidden;
 
-		@media #{$medium-only} {
-			@include transition(visibility $transition-medium-duration $standard-transition unquote(',') opacity $transition-medium-duration $standard-transition unquote(',') max-height $transition-medium-duration $standard-transition unquote(',') background $transition-medium-duration $standard-transition);
-		}
+		@if( $amp == false ) {
+			@media #{$medium-only} {
+				@include transition(visibility $transition-medium-duration $standard-transition unquote(',') opacity $transition-medium-duration $standard-transition unquote(',') max-height $transition-medium-duration $standard-transition unquote(',') background $transition-medium-duration $standard-transition);
+			}
 
-		@media #{$medium-up} {
-			@include transition(visibility $transition-large-duration $standard-transition unquote(',') opacity $transition-large-duration $standard-transition unquote(',') max-height $transition-large-duration $standard-transition unquote(',') background $transition-large-duration $standard-transition);
+			@media #{$medium-up} {
+				@include transition(visibility $transition-large-duration $standard-transition unquote(',') opacity $transition-large-duration $standard-transition unquote(',') max-height $transition-large-duration $standard-transition unquote(',') background $transition-large-duration $standard-transition);
+			}
 		}
 
 		> * {
@@ -99,54 +104,47 @@ $notification-image-size: rem-calc(40px);
 			@include opacity(0);
 			@include transition(visibility $transition-small-duration $standard-transition unquote(',') opacity $transition-small-duration $standard-transition);
 
-			@media #{$medium-only} {
-				@include transition(visibility $transition-medium-duration $standard-transition unquote(',') opacity $transition-medium-duration $standard-transition);
-			}
+			@if( $amp == false ) {
+				@media #{$medium-only} {
+					@include transition(visibility $transition-medium-duration $standard-transition unquote(',') opacity $transition-medium-duration $standard-transition);
+				}
 
-			@media #{$medium-up} {
-				@include transition(visibility $transition-large-duration $standard-transition unquote(',') opacity $transition-large-duration $standard-transition);
+				@media #{$medium-up} {
+					@include transition(visibility $transition-large-duration $standard-transition unquote(',') opacity $transition-large-duration $standard-transition);
+				}
 			}
 		}
 	}
 
 	&.sc-standard {
-		.sc-notification-content {
-			position: relative;
+		.sc-notification-content > div {
+			width: 75%;
+		}
 
-			> div {
-				width: 75%;
-			}
-
-			img {
-				@include square($notification-image-size);
-				max-width: 25%;
-				position: absolute;
-				right: $notification-content-sides;
-				@include border-radius(50%);
-				top: $notification-content-top;
-			}
+		img {
+			@include square($notification-image-size);
+			max-width: 25%;
+			position: absolute;
+			right: $notification-content-sides;
+			@include border-radius(50%);
+			top: $notification-content-top;
 		}
 	}
 
 	@if( in-array( 'big-text', $notification ) ) {
 		&.sc-big-text {
-			.sc-notification-content {
-				position: relative;
+			.sc-notification-content-text {
+				max-height: 0;
+				@include opacity(0);
+				visibility: hidden;
+			}
 
-				&-text {
-					max-height: 0;
-					@include opacity(0);
-					visibility: hidden;
-				}
-
-				img {
-					@include square($notification-image-size);
-					position: absolute;
-					right: $notification-content-sides;
-					@include border-radius(50%);
-					top: $notification-content-top;
-
-				}
+			img {
+				@include square($notification-image-size);
+				position: absolute;
+				right: $notification-content-sides;
+				@include border-radius(50%);
+				top: $notification-content-top;
 			}
 		}
 	}
@@ -156,14 +154,14 @@ $notification-image-size: rem-calc(40px);
 			.sc-notification-content {
 				position: relative;
 
-				&-text {
-					img {
-						max-width: 100%;
-						visibility: hidden;
-						@include opacity(0);
-						width: 0;
-						@include transition(opacity $transition-small-duration $standard-transition $transition-small-duration unquote(',') visibility $transition-small-duration $standard-transition $transition-small-duration);
+				&-text img {
+					max-width: 100%;
+					visibility: hidden;
+					@include opacity(0);
+					width: 0;
+					@include transition(opacity $transition-small-duration $standard-transition $transition-small-duration unquote(',') visibility $transition-small-duration $standard-transition $transition-small-duration);
 
+					@if( $amp == false ) {
 						@media #{$medium-only} {
 							@include transition(opacity $transition-medium-duration $standard-transition $transition-medium-duration unquote(',') visibility $transition-medium-duration $standard-transition $transition-medium-duration);
 						}
@@ -182,12 +180,14 @@ $notification-image-size: rem-calc(40px);
 					@include opacity(1);
 					@include transition(opacity $transition-small-duration $standard-transition);
 
-					@media #{$medium-only} {
-						@include transition(opacity $transition-medium-duration $standard-transition);
-					}
+					@if( $amp == false ) {
+						@media #{$medium-only} {
+							@include transition(opacity $transition-medium-duration $standard-transition);
+						}
 
-					@media #{$medium-up} {
-						@include transition(opacity $transition-large-duration $standard-transition);
+						@media #{$medium-up} {
+							@include transition(opacity $transition-large-duration $standard-transition);
+						}
 					}
 				}
 			}
@@ -196,16 +196,14 @@ $notification-image-size: rem-calc(40px);
 
 	@if( in-array( 'progress', $notification ) ) {
 		&.sc-progress {
-			.sc-notification-content {
-				.sc-notification-content-title, .sc-notification-content-text {
-					display: inline-block;
-					width: 50%;
-				}
+			.sc-notification-content-title, .sc-notification-content-text {
+				display: inline-block;
+				width: 50%;
+			}
 
-				.sc-notification-content-text {
-					float: right;
-					text-align: right;
-				}
+			.sc-notification-content-text {
+				float: right;
+				text-align: right;
 			}
 		}
 	}
@@ -215,48 +213,52 @@ $notification-image-size: rem-calc(40px);
 			width: rem-calc(400px);
 
 			.sc-notification-content {
-				position: relative;
 				@include transition(height $transition-small-duration $standard-transition);
 
-				@media #{$medium-only} {
-					@include transition(height $transition-medium-duration $standard-transition);
+				@if( $amp == false ) {
+					@media #{$medium-only} {
+						@include transition(height $transition-medium-duration $standard-transition);
 
+					}
+
+					@media #{$medium-up} {
+						@include transition(height $transition-large-duration $standard-transition);
+					}
 				}
+			}
 
-				@media #{$medium-up} {
-					@include transition(height $transition-large-duration $standard-transition);
-				}
+			.sc-actions {
+				left: auto;
+				position: absolute;
+				right: rem-calc(48px);
+				text-align: right;
+				top: $notification-content-top;
+				width: calc(#{$notification-media-icon-size} * 4);
+				@include transition(all $transition-small-duration $standard-transition);
 
-				.sc-actions {
-					left: auto;
-					position: absolute;
-					right: rem-calc(48px);
-					text-align: right;
-					top: $notification-content-top;
-					width: calc(#{$notification-media-icon-size} * 4);
-					@include transition(all $transition-small-duration $standard-transition);
-
+				@if( $amp == false ) {
 					@media #{$medium-only} {
 						@include transition(all $transition-medium-duration $standard-transition);
-
 					}
 
 					@media #{$medium-up} {
 						@include transition(all $transition-large-duration $standard-transition);
 					}
+				}
 
-					.material-icons {
-						@include square($notification-media-icon-size);
-						color: rgba($black, .54);
-						font-size: $notification-media-icon-size;
-						line-height: calc((#{rem-calc($line-height-body-1+0px)} * 2));
+				.material-icons {
+					@include square($notification-media-icon-size);
+					color: rgba($black, .54);
+					font-size: $notification-media-icon-size;
+					line-height: calc((#{rem-calc($line-height-body-1+0px)} * 2));
 
-						&:first-of-type, &:last-of-type {
-							visibility: hidden;
-							@include opacity(0);
-							width: 0;
-							@include transition(all $transition-small-duration $standard-transition);
+					&:first-of-type, &:last-of-type {
+						visibility: hidden;
+						@include opacity(0);
+						width: 0;
+						@include transition(all $transition-small-duration $standard-transition);
 
+						@if( $amp == false ) {
 							@media #{$medium-only} {
 								@include transition(all $transition-medium-duration $standard-transition);
 
@@ -268,14 +270,16 @@ $notification-image-size: rem-calc(40px);
 						}
 					}
 				}
+			}
 
-				img {
-					@include square(rem-calc(40px));
-					position: absolute;
-					right: rem-calc(8px);
-					top: rem-calc(5px);
-					@include transition(all $transition-small-duration $standard-transition);
+			img {
+				@include square(rem-calc(40px));
+				position: absolute;
+				right: rem-calc(8px);
+				top: rem-calc(5px);
+				@include transition(all $transition-small-duration $standard-transition);
 
+				@if( $amp == false ) {
 					@media #{$medium-only} {
 						@include transition(all $transition-medium-duration $standard-transition);
 

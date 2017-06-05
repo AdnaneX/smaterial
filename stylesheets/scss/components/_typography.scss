@@ -77,49 +77,90 @@ $letter-spacing-label: 0.1; // Default 0.1
 $letter-spacing-menu: 0.1; // Default 0.1
 $letter-spacing-button: 0.1; // Default 0.1
 
-.sc-display-4, h1 {
-	@include font($font-size-display-4, 0, $font-weight-display-4, $line-height-display-4, $font-color-display-4, $letter-spacing-display-4);
-}
-.sc-display-3, h2 {
-	@include font($font-size-display-3, 0, $font-weight-display-3, $line-height-display-3, $font-color-display-3, $letter-spacing-display-3);
-}
-.sc-display-2, h3 {
-	@include font($font-size-display-2, 0, $font-weight-display-2, $line-height-display-2, $font-color-display-2, $letter-spacing-display-2);
-}
-.sc-display-1, h4 {
-	@include font($font-size-display-1, 0, $font-weight-display-1, $line-height-display-1, $font-color-display-1, $letter-spacing-display-1);
-}
-.sc-headline, h5 {
-	@include font($font-size-headline, 0, $font-weight-headline, $line-height-headline, $font-color-headline, $letter-spacing-headline);
-}
-.sc-title, h6, .sc-appbar-title h1, .sc-appbar-title h2, .sc-appbar-title h3, .sc-appbar-title h4, .sc-appbar-title h5, .sc-appbar-title h6 {
-	@include font($font-size-title, 0, $font-weight-title, $line-height-title, $font-color-title, $letter-spacing-title);
-}
-.sc-subhead-2 {
-	@include font($font-size-subhead-2, $font-size-small-subhead, $font-weight-subhead-2, $line-height-subhead-2, $font-color-subhead, $letter-spacing-subhead-2);
-}
-.sc-subhead-1 {
-	@include font($font-size-subhead-1, $font-size-small-subhead, $font-weight-subhead-1, $line-height-subhead-1, $font-color-subhead, $letter-spacing-subhead-1);
-}
-.sc-body-2 {
-	@include font($font-size-body-2, $font-size-small-body, $font-weight-body-2, $line-height-body-2, $font-color-body-2, $letter-spacing-body-2);
-}
-.sc-body-1 {
-	@include font($font-size-body-1, $font-size-small-body, $font-weight-body-1, $line-height-body-1, $font-color-body-1, $letter-spacing-body-1);
-}
-.sc-caption {
-	@include font($font-size-caption, 0, $font-weight-caption, $line-height-caption, $font-color-caption, $letter-spacing-caption);
-}
-.sc-label, label {
-	@include font($font-size-label, 0, $font-weight-label, $line-height-label, $font-color-label, $letter-spacing-label);
-}
-.sc-menu {
-	@include font($font-size-menu, 0, $font-weight-menu, $line-height-menu, $font-color-menu, $letter-spacing-menu);
-}
-.sc-button, button {
-	@include font($font-size-button, 0, $font-weight-button, $line-height-button, $font-color-button, $letter-spacing-button, uppercase);
+@if( in_array( 'display-4', $typography ) ) {
+	.sc-display-4, h1 {
+		@include font($font-size-display-4, 0, $font-weight-display-4, $line-height-display-4, $font-color-display-4, $letter-spacing-display-4);
+	}
 }
 
+@if( in_array( 'display-3', $typography ) ) {
+	.sc-display-3, h2 {
+		@include font($font-size-display-3, 0, $font-weight-display-3, $line-height-display-3, $font-color-display-3, $letter-spacing-display-3);
+	}
+}
+
+@if( in_array( 'display-2', $typography ) ) {
+	.sc-display-2, h3 {
+		@include font($font-size-display-2, 0, $font-weight-display-2, $line-height-display-2, $font-color-display-2, $letter-spacing-display-2);
+	}
+}
+
+@if( in_array( 'display-1', $typography ) ) {
+	.sc-display-1, h4 {
+		@include font($font-size-display-1, 0, $font-weight-display-1, $line-height-display-1, $font-color-display-1, $letter-spacing-display-1);
+	}
+}
+
+@if( in_array( 'headline', $typography ) ) {
+	.sc-headline, h5 {
+		@include font($font-size-headline, 0, $font-weight-headline, $line-height-headline, $font-color-headline, $letter-spacing-headline);
+	}
+}
+
+@if( in_array( 'title', $typography ) ) {
+	.sc-title, h6, .sc-appbar-title h1, .sc-appbar-title h2, .sc-appbar-title h3, .sc-appbar-title h4, .sc-appbar-title h5, .sc-appbar-title h6 {
+		@include font($font-size-title, 0, $font-weight-title, $line-height-title, $font-color-title, $letter-spacing-title);
+	}
+}
+
+@if( in_array( 'subhead-2', $typography ) ) {
+	.sc-subhead-2 {
+		@include font($font-size-subhead-2, $font-size-small-subhead, $font-weight-subhead-2, $line-height-subhead-2, $font-color-subhead, $letter-spacing-subhead-2);
+	}
+}
+
+@if( in_array( 'subhead-1', $typography ) ) {
+	.sc-subhead-1 {
+		@include font($font-size-subhead-1, $font-size-small-subhead, $font-weight-subhead-1, $line-height-subhead-1, $font-color-subhead, $letter-spacing-subhead-1);
+	}
+}
+
+@if( in_array( 'body-2', $typography ) ) {
+	.sc-body-2 {
+		@include font($font-size-body-2, $font-size-small-body, $font-weight-body-2, $line-height-body-2, $font-color-body-2, $letter-spacing-body-2);
+	}
+}
+
+@if( in_array( 'body-1', $typography ) ) {
+	.sc-body-1 {
+		@include font($font-size-body-1, $font-size-small-body, $font-weight-body-1, $line-height-body-1, $font-color-body-1, $letter-spacing-body-1);
+	}
+}
+
+@if( in_array( 'caption', $typography ) ) {
+	.sc-caption {
+		@include font($font-size-caption, 0, $font-weight-caption, $line-height-caption, $font-color-caption, $letter-spacing-caption);
+	}
+}
+
+@if( in_array( 'label', $typography ) ) {
+	.sc-label, label {
+		@include font($font-size-label, 0, $font-weight-label, $line-height-label, $font-color-label, $letter-spacing-label);
+	}
+}
+
+@if( in_array( 'menu', $typography ) ) {
+	.sc-menu {
+		@include font($font-size-menu, 0, $font-weight-menu, $line-height-menu, $font-color-menu, $letter-spacing-menu);
+	}
+}
+
+@if( in_array( 'button', $typography ) ) {
+	.sc-button, button {
+		@include font($font-size-button, 0, $font-weight-button, $line-height-button, $font-color-button, $letter-spacing-button, uppercase);
+	}
+
+}
 body {
 	@include font($font-size-body-1, $font-size-small-body, $font-weight-body-1, $line-height-body-1, $font-color-body-1, $letter-spacing-body-1);
 	direction: $text-direction;

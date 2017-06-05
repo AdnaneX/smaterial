@@ -7,7 +7,7 @@
 $selection-size: rem-calc($font-size-body-1+0px);
 $selection-border-size: var(--border-size, $border-size);
 
-input[type="checkbox"].sc-checkbox, input[type="radio"].sc-radio {
+.sc-checkbox, .sc-radio {
 	@include opacity(0);
 	left: -102%;
 	position: absolute;
@@ -31,18 +31,20 @@ input[type="checkbox"].sc-checkbox, input[type="radio"].sc-radio {
 }
 
 @if( in-array( 'checkbox', $selection ) ) {
-	input[type="checkbox"].sc-checkbox {
+	.sc-checkbox {
 		// Off
 		+ label:before {
 			@include border-radius(var(--border-size, $border-size));
 			@include transition(background $transition-small-duration $standard-transition unquote(',') content $transition-small-duration $standard-transition unquote(',') border $transition-small-duration $standard-transition);
 
-			@media #{$medium-only} {
-				@include transition(background $transition-medium-duration $standard-transition unquote(',') content $transition-medium-duration $standard-transition unquote(',') border $transition-medium-duration $standard-transition);
-			}
+			@if( $amp == false ) {
+				@media #{$medium-only} {
+					@include transition(background $transition-medium-duration $standard-transition unquote(',') content $transition-medium-duration $standard-transition unquote(',') border $transition-medium-duration $standard-transition);
+				}
 
-			@media #{$medium-up} {
-				@include transition(background $transition-large-duration $standard-transition unquote(',') content $transition-large-duration $standard-transition unquote(',') border $transition-large-duration $standard-transition);
+				@media #{$medium-up} {
+					@include transition(background $transition-large-duration $standard-transition unquote(',') content $transition-large-duration $standard-transition unquote(',') border $transition-large-duration $standard-transition);
+				}
 			}
 		}
 
@@ -89,19 +91,21 @@ input[type="checkbox"].sc-checkbox, input[type="radio"].sc-radio {
 }
 
 @if( in-array( 'radio', $selection ) ) {
-	input[type="radio"].sc-radio {
+	.sc-radio {
 		// Off
 		+ label {
 			&:before {
 				@include border-radius(50%);
 				@include transition(all $transition-small-duration $standard-transition);
 
-				@media #{$medium-only} {
-					@include transition(all $transition-medium-duration $standard-transition);
-				}
+				@if( $amp == false ) {
+					@media #{$medium-only} {
+						@include transition(all $transition-medium-duration $standard-transition);
+					}
 
-				@media #{$medium-up} {
-					@include transition(all $transition-large-duration $standard-transition);
+					@media #{$medium-up} {
+						@include transition(all $transition-large-duration $standard-transition);
+					}
 				}
 			}
 
@@ -113,15 +117,16 @@ input[type="checkbox"].sc-checkbox, input[type="radio"].sc-radio {
 				@include square(0);
 				content: '';
 				@include border-radius(50%);
-
 				@include transition(all $transition-small-duration $standard-transition);
 
-				@media #{$medium-only} {
-					@include transition(all $transition-medium-duration $standard-transition);
-				}
+				@if( $amp == false ) {
+					@media #{$medium-only} {
+						@include transition(all $transition-medium-duration $standard-transition);
+					}
 
-				@media #{$medium-up} {
-					@include transition(all $transition-large-duration $standard-transition);
+					@media #{$medium-up} {
+						@include transition(all $transition-large-duration $standard-transition);
+					}
 				}
 			}
 		}
@@ -177,13 +182,15 @@ $switch-thumb-radial-left-active: $switch-thumb-left - ($switch-thumb-size / 2 )
 			width: $switch-track-width; // To accommodate for radial
 			@include transition(background $transition-small-duration $standard-transition);
 
-			@media #{$medium-only} {
-				@include transition(background $transition-medium-duration $standard-transition);
-			}
+			@if( $amp == false ) {
+				@media #{$medium-only} {
+					@include transition(background $transition-medium-duration $standard-transition);
+				}
 
-			@media #{$medium-up} {
-				@include transition(background $transition-large-duration $standard-transition);
-				margin: 0;
+				@media #{$medium-up} {
+					@include transition(background $transition-large-duration $standard-transition);
+					margin: 0;
+				}
 			}
 
 			// Thumb
@@ -199,12 +206,14 @@ $switch-thumb-radial-left-active: $switch-thumb-left - ($switch-thumb-size / 2 )
 				width: $switch-thumb-size;
 				@include transition(background $transition-small-duration $standard-transition unquote(',') left $transition-small-duration $standard-transition);
 
-				@media #{$medium-only} {
-					@include transition(background $transition-medium-duration $standard-transition unquote(',') left $transition-medium-duration $standard-transition);
-				}
+				@if( $amp == false ) {
+					@media #{$medium-only} {
+						@include transition(background $transition-medium-duration $standard-transition unquote(',') left $transition-medium-duration $standard-transition);
+					}
 
-				@media #{$medium-up} {
-					@include transition(background $transition-large-duration $standard-transition unquote(',') left $transition-large-duration $standard-transition);
+					@media #{$medium-up} {
+						@include transition(background $transition-large-duration $standard-transition unquote(',') left $transition-large-duration $standard-transition);
+					}
 				}
 			}
 
@@ -220,8 +229,10 @@ $switch-thumb-radial-left-active: $switch-thumb-left - ($switch-thumb-size / 2 )
 					top: $switch-thumb-top;
 					@include transition(background $transition-small-duration $standard-transition unquote(',') left $transition-small-duration $standard-transition unquote(',') width $transition-small-duration $standard-transition unquote(',') height $transition-small-duration $standard-transition unquote(',') top $transition-small-duration $standard-transition);
 
-					@media #{$medium-only} {
-						@include transition(background $transition-medium-duration $standard-transition unquote(',') left $transition-medium-duration $standard-transition unquote(',') width $transition-medium-duration $standard-transition unquote(',') height $transition-medium-duration $standard-transition unquote(',') top $transition-medium-duration $standard-transition);
+					@if( $amp == false ) {
+						@media #{$medium-only} {
+							@include transition(background $transition-medium-duration $standard-transition unquote(',') left $transition-medium-duration $standard-transition unquote(',') width $transition-medium-duration $standard-transition unquote(',') height $transition-medium-duration $standard-transition unquote(',') top $transition-medium-duration $standard-transition);
+						}
 					}
 				}
 

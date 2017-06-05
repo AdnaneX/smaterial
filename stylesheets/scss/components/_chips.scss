@@ -37,12 +37,14 @@ $chips-delete-size: rem-calc(15px); // Default rem-calc(15px)
 				font-size: $chips-font-size;
 				cursor: pointer;
 
-				@media #{$medium-only} {
-					@include transition(color $transition-medium-duration $standard-transition unquote(',') background $transition-medium-duration $standard-transition);
-				}
+				@if( $amp == false ) {
+					@media #{$medium-only} {
+						@include transition(color $transition-medium-duration $standard-transition unquote(',') background $transition-medium-duration $standard-transition);
+					}
 
-				@media #{$medium-up} {
-					@include transition(color $transition-large-duration $standard-transition unquote(',') background $transition-large-duration $standard-transition);
+					@media #{$medium-up} {
+						@include transition(color $transition-large-duration $standard-transition unquote(',') background $transition-large-duration $standard-transition);
+					}
 				}
 			}
 
@@ -64,12 +66,14 @@ $chips-delete-size: rem-calc(15px); // Default rem-calc(15px)
 			font-size: rem-calc(14px);
 			@include transition(box-shadow $transition-small-duration $standard-transition);
 
-			@media #{$medium-only} {
-				@include transition(box-shadow $transition-medium-duration $standard-transition);
-			}
+			@if( $amp == false ) {
+				@media #{$medium-only} {
+					@include transition(box-shadow $transition-medium-duration $standard-transition);
+				}
 
-			@media #{$medium-up} {
-				@include transition(box-shadow $transition-large-duration $standard-transition);
+				@media #{$medium-up} {
+					@include transition(box-shadow $transition-large-duration $standard-transition);
+				}
 			}
 
 			img {

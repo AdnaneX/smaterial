@@ -29,28 +29,32 @@ $drawer-profile-height: $drawer-padding + $drawer-profile-img + $drawer-profile-
 		margin: 0 0 0 -102%;
 		@include transition(margin $transition-small-duration $deceleration-transition);
 
-		@media #{$small-up} {
-			margin: 0;
-		}
+		@if( $amp == false ) {
+			@media #{$small-up} {
+				margin: 0;
+			}
 
-		@media #{$medium-only} {
-			@include transition(margin $transition-medium-duration $deceleration-transition);
-		}
+			@media #{$medium-only} {
+				@include transition(margin $transition-medium-duration $deceleration-transition);
+			}
 
-		@media #{$medium-up} {
-			@include transition(margin $transition-large-duration $deceleration-transition);
+			@media #{$medium-up} {
+				@include transition(margin $transition-large-duration $deceleration-transition);
+			}
 		}
 
 		&.sc-expanded {
 			margin: 0;
 			@include transition(margin $transition-small-duration $sharp-transition);
 
-			@media #{$medium-only} {
-				@include transition(margin $transition-medium-duration $sharp-transition);
-			}
+			@if( $amp == false ) {
+				@media #{$medium-only} {
+					@include transition(margin $transition-medium-duration $sharp-transition);
+				}
 
-			@media #{$medium-up} {
-				@include transition(margin $transition-large-duration $sharp-transition);
+				@media #{$medium-up} {
+					@include transition(margin $transition-large-duration $sharp-transition);
+				}
 			}
 
 			~ .sc-drawer-background {
@@ -71,12 +75,14 @@ $drawer-profile-height: $drawer-padding + $drawer-profile-img + $drawer-profile-
 		visibility: hidden;
 		@include transition(all $transition-small-duration $standard-transition);
 
-		@media #{$medium-only} {
-			@include transition(all $transition-medium-duration $standard-transition);
-		}
+		@if( $amp == false ) {
+			@media #{$medium-only} {
+				@include transition(all $transition-medium-duration $standard-transition);
+			}
 
-		@media #{$medium-up} {
-			@include transition(all $transition-large-duration $standard-transition);
+			@media #{$medium-up} {
+				@include transition(all $transition-large-duration $standard-transition);
+			}
 		}
 	}
 
@@ -88,76 +94,78 @@ $drawer-profile-height: $drawer-padding + $drawer-profile-img + $drawer-profile-
 		}
 	}
 
-	&-permanent {
-		@if( in-array( 'full-height', $navigation-drawer ) ) {
-			&-full-height {
-				top: 0;
-				border-right: rem-calc(1px) solid if($theme == light, rgba($black, .12), rgba($white, .12));
-				z-index: 3;
+	@if( in_array( 'full-height', $navigation-drawer ) or in_array( 'clipped', $navigation-drawer ) or in_array( 'floating', $navigation-drawer ) ) {
+		&-permanent {
+			@if (in-array('full-height', $navigation-drawer)) {
+				&-full-height {
+					top: 0;
+					border-right: rem-calc(1px) solid if($theme == light, rgba($black, .12), rgba($white, .12));
+					z-index: 3;
 
-				.sc-drawer-header {
-					padding: rem-calc(16px) rem-calc(16px) rem-calc(8px) rem-calc(16px);
-					border-bottom: rem-calc(1px) solid if($theme == light, rgba($black, .12), rgba($white, .12));
-					height: $appbar-mobile-portrait-height;
+					.sc-drawer-header {
+						padding: rem-calc(16px) rem-calc(16px) rem-calc(8px) rem-calc(16px);
+						border-bottom: rem-calc(1px) solid if($theme == light, rgba($black, .12), rgba($white, .12));
+						height: $appbar-mobile-portrait-height;
+
+						@media only screen and (orientation: landscape) and (max-width: #{$small-screen}) {
+							height: $appbar-mobile-landscape-height;
+						}
+
+						@media only screen and (orientation: portrait) and (max-width: #{$xsmall-screen}) {
+							height: $appbar-mobile-portrait-height;
+						}
+
+						@media #{$small-up} {
+							height: $appbar-large-height;
+						}
+					}
+				}
+			}
+
+			@if (in-array('clipped', $navigation-drawer)) {
+				&-clipped {
+					top: $appbar-mobile-portrait-height;
+					z-index: 1;
+					border-right: rem-calc(1px) solid if($theme == light, rgba($black, .12), rgba($white, .12));
 
 					@media only screen and (orientation: landscape) and (max-width: #{$small-screen}) {
-						height: $appbar-mobile-landscape-height;
+						top: $appbar-mobile-landscape-height;
 					}
 
 					@media only screen and (orientation: portrait) and (max-width: #{$xsmall-screen}) {
-						height: $appbar-mobile-portrait-height;
+						top: $appbar-mobile-portrait-height;
 					}
 
 					@media #{$small-up} {
-						height: $appbar-large-height;
+						top: $appbar-large-height;
+					}
+
+					li:first-of-type {
+						margin: $drawer-profile-bottom-padding 0 0 0;
 					}
 				}
 			}
-		}
 
-		@if( in-array( 'clipped', $navigation-drawer ) ) {
-			&-clipped {
-				top: $appbar-mobile-portrait-height;
-				z-index: 1;
-				border-right: rem-calc(1px) solid if($theme == light, rgba($black, .12), rgba($white, .12));
-
-				@media only screen and (orientation: landscape) and (max-width: #{$small-screen}) {
-					top: $appbar-mobile-landscape-height;
-				}
-
-				@media only screen and (orientation: portrait) and (max-width: #{$xsmall-screen}) {
+			@if (in-array('floating', $navigation-drawer)) {
+				&-floating {
 					top: $appbar-mobile-portrait-height;
-				}
+					z-index: 1;
 
-				@media #{$small-up} {
-					top: $appbar-large-height;
-				}
+					@media only screen and (orientation: landscape) and (max-width: #{$small-screen}) {
+						top: $appbar-mobile-landscape-height;
+					}
 
-				li:first-of-type {
-					margin: $drawer-profile-bottom-padding 0 0 0;
-				}
-			}
-		}
+					@media only screen and (orientation: portrait) and (max-width: #{$xsmall-screen}) {
+						top: $appbar-mobile-portrait-height;
+					}
 
-		@if( in-array( 'floating', $navigation-drawer ) ) {
-			&-floating {
-				top: $appbar-mobile-portrait-height;
-				z-index: 1;
+					@media #{$small-up} {
+						top: $appbar-large-height;
+					}
 
-				@media only screen and (orientation: landscape) and (max-width: #{$small-screen}) {
-					top: $appbar-mobile-landscape-height;
-				}
-
-				@media only screen and (orientation: portrait) and (max-width: #{$xsmall-screen}) {
-					top: $appbar-mobile-portrait-height;
-				}
-
-				@media #{$small-up} {
-					top: $appbar-large-height;
-				}
-
-				li:first-of-type {
-					margin: $drawer-profile-bottom-padding 0 0 0;
+					li:first-of-type {
+						margin: $drawer-profile-bottom-padding 0 0 0;
+					}
 				}
 			}
 		}
@@ -197,20 +205,20 @@ $drawer-profile-height: $drawer-padding + $drawer-profile-img + $drawer-profile-
 				> * {
 					float: left;
 				}
+			}
 
-				img, .sc-drawer-profile-img {
-					@include square($drawer-icon-size);
-					margin: 0 (rem-calc(72px) - $drawer-icon-size - $drawer-padding) 0 $gutter;
-					@include border-radius(50%);
-					border: rem-calc(1px) solid if($theme == light, rgba($black, .12), rgba($white, .12));
-					top: 50%;
-					position: inherit;
-					@include transform(translate(0, -50%));
-				}
+			img, .sc-drawer-profile-img {
+				@include square($drawer-icon-size);
+				margin: 0 (rem-calc(72px) - $drawer-icon-size - $drawer-padding) 0 $gutter;
+				@include border-radius(50%);
+				border: rem-calc(1px) solid if($theme == light, rgba($black, .12), rgba($white, .12));
+				top: 50%;
+				position: inherit;
+				@include transform(translate(0, -50%));
+			}
 
-				.sc-drawer-profile-name {
-					color: if( $theme == light, inherit, $white);
-				}
+			.sc-drawer-profile-name {
+				color: if( $theme == light, inherit, $white);
 			}
 		}
 	}
@@ -304,69 +312,69 @@ $drawer-profile-height: $drawer-padding + $drawer-profile-img + $drawer-profile-
 				padding: 0 0 $drawer-profile-bottom-padding 0;
 				margin: 0 0 $drawer-profile-bottom-padding 0;
 				height: $drawer-profile-height;
+			}
 
-				.sc-drawer-profile-background {
-					top: 0;
-					left: 0;
-					width: 100%;
-					height: $drawer-profile-height;
-				}
+			.sc-drawer-profile-background {
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: $drawer-profile-height;
+			}
 
-				.sc-scrim {
-					@include linear-gradient($drawer-profile-scrim);
-					bottom: $drawer-profile-bottom-padding;
-					content: '';
-					left: 0;
-					position: absolute;
-					right: 0;
-					top: 0;
-					margin: 0 0 -#{$drawer-profile-bottom-padding} 0;
-				}
+			.sc-scrim {
+				@include linear-gradient($drawer-profile-scrim);
+				bottom: $drawer-profile-bottom-padding;
+				content: '';
+				left: 0;
+				position: absolute;
+				right: 0;
+				top: 0;
+				margin: 0 0 -#{$drawer-profile-bottom-padding} 0;
+			}
 
-				.sc-drawer-profile-background, .sc-drawer-profile-img, .sc-drawer-profile-name, .sc-drawer-profile-email, .sc-drawer-profile-more {
-					position: absolute;
-				}
+			.sc-drawer-profile-background, .sc-drawer-profile-img, .sc-drawer-profile-name, .sc-drawer-profile-email, .sc-drawer-profile-more {
+				position: absolute;
+			}
 
-				.sc-drawer-profile-img {
-					top: $drawer-padding;
-					left: $drawer-padding;
-					@include square($drawer-profile-img);
-					@include border-radius(50%);
-				}
+			.sc-drawer-profile-img {
+				top: $drawer-padding;
+				left: $drawer-padding;
+				@include square($drawer-profile-img);
+				@include border-radius(50%);
+			}
 
-				.sc-drawer-profile-name, .sc-drawer-profile-email {
-					line-height: $drawer-profile-content-height / 2;
-					left: $drawer-padding;
-					height: $drawer-profile-content-height / 2;
+			.sc-drawer-profile-name, .sc-drawer-profile-email {
+				line-height: $drawer-profile-content-height / 2;
+				left: $drawer-padding;
+				height: $drawer-profile-content-height / 2;
+				color: $white;
+			}
+
+			.sc-drawer-profile-name {
+				top: $drawer-profile-img + $drawer-padding;
+				font-size: rem-calc(14px);
+				font-weight: 500;
+				right: 0;
+			}
+
+			.sc-drawer-profile-email {
+				top: $drawer-profile-img + $drawer-padding + ($drawer-profile-content-height / 2);
+				font-size: rem-calc(14px);
+				font-weight: 400;
+				right: $drawer-profile-content-height + $drawer-padding;
+			}
+
+			.sc-drawer-profile-more {
+				height: $drawer-profile-content-height / 2;
+				line-height: $drawer-profile-content-height;
+				right: $drawer-padding;
+				top: $drawer-profile-img + $drawer-padding + ($drawer-profile-content-height / 2);
+				text-align: right;
+				position: relative;
+
+				.material-icons {
+					margin: (($drawer-profile-content-height / 4) * -1) ($gutter * -1) 0 0;
 					color: $white;
-				}
-
-				.sc-drawer-profile-name {
-					top: $drawer-profile-img + $drawer-padding;
-					font-size: rem-calc(14px);
-					font-weight: 500;
-					right: 0;
-				}
-
-				.sc-drawer-profile-email {
-					top: $drawer-profile-img + $drawer-padding + ($drawer-profile-content-height / 2);
-					font-size: rem-calc(14px);
-					font-weight: 400;
-					right: $drawer-profile-content-height + $drawer-padding;
-				}
-
-				.sc-drawer-profile-more {
-					height: $drawer-profile-content-height / 2;
-					line-height: $drawer-profile-content-height;
-					right: $drawer-padding;
-					top: $drawer-profile-img + $drawer-padding + ($drawer-profile-content-height / 2);
-					text-align: right;
-					position: relative;
-
-					.material-icons {
-						margin: (($drawer-profile-content-height / 4) * -1) ($gutter * -1) 0 0;
-						color: $white;
-					}
 				}
 			}
 
@@ -389,12 +397,14 @@ $drawer-profile-height: $drawer-padding + $drawer-profile-img + $drawer-profile-
 		padding: 0 $drawer-padding;
 		@include transition(color $transition-small-duration $standard-transition);
 
-		@media #{$medium-only} {
-			@include transition(color $transition-medium-duration $standard-transition);
-		}
+		@if( $amp == false ) {
+			@media #{$medium-only} {
+				@include transition(color $transition-medium-duration $standard-transition);
+			}
 
-		@media #{$medium-up} {
-			@include transition(color $transition-large-duration $standard-transition);
+			@media #{$medium-up} {
+				@include transition(color $transition-large-duration $standard-transition);
+			}
 		}
 
 		&:hover, &.sc-active {
@@ -427,12 +437,14 @@ $drawer-profile-height: $drawer-padding + $drawer-profile-img + $drawer-profile-
 		@include opacity(0);
 		@include transition(all $transition-small-duration $standard-transition);
 
-		@media #{$medium-only} {
-			@include transition(all $transition-medium-duration $standard-transition);
-		}
+		@if( $amp == false ) {
+			@media #{$medium-only} {
+				@include transition(all $transition-medium-duration $standard-transition);
+			}
 
-		@media #{$medium-up} {
-			@include transition(all $transition-large-duration $standard-transition);
+			@media #{$medium-up} {
+				@include transition(all $transition-large-duration $standard-transition);
+			}
 		}
 
 		a {
@@ -454,12 +466,14 @@ $drawer-profile-height: $drawer-padding + $drawer-profile-img + $drawer-profile-
 		margin: 0 (rem-calc(72px) - $drawer-padding - $drawer-icon-size) 0 0;
 		@include transition(color $transition-small-duration $standard-transition);
 
-		@media #{$medium-only} {
-			@include transition(color $transition-medium-duration $standard-transition);
-		}
+		@if( $amp == false ) {
+			@media #{$medium-only} {
+				@include transition(color $transition-medium-duration $standard-transition);
+			}
 
-		@media #{$medium-up} {
-			@include transition(color $transition-large-duration $standard-transition);
+			@media #{$medium-up} {
+				@include transition(color $transition-large-duration $standard-transition);
+			}
 		}
 	}
 
@@ -474,12 +488,14 @@ $drawer-profile-height: $drawer-padding + $drawer-profile-img + $drawer-profile-
 		margin: 0;
 		@include transition(all $transition-small-duration $standard-transition);
 
-		@media #{$medium-only} {
-			@include transition(all $transition-medium-duration $standard-transition);
-		}
+		@if( $amp == false ) {
+			@media #{$medium-only} {
+				@include transition(all $transition-medium-duration $standard-transition);
+			}
 
-		@media #{$medium-up} {
-			@include transition(all $transition-large-duration $standard-transition);
+			@media #{$medium-up} {
+				@include transition(all $transition-large-duration $standard-transition);
+			}
 		}
 	}
 

@@ -19,14 +19,16 @@
 	@include transform(translateX(-50%) translateY(-50%));
 	@include transition(all $transition-small-duration $standard-transition);
 
-	@media #{$medium-only} {
-		@include transition(all $transition-medium-duration $standard-transition);
-	}
+	@if( $amp == false ) {
+		@media #{$medium-only} {
+			@include transition(all $transition-medium-duration $standard-transition);
+		}
 
-	@media #{$medium-up} {
-		width: auto;
-		@include transition(all $transition-large-duration $standard-transition);
-		max-width: calc(100% - ( 2 * #{$large-gutter}));
+		@media #{$medium-up} {
+			width: auto;
+			@include transition(all $transition-large-duration $standard-transition);
+			max-width: calc(100% - (2 * #{$large-gutter}));
+		}
 	}
 
 	&-background {
@@ -39,12 +41,14 @@
 		visibility: hidden;
 		@include transition(all $transition-small-duration $standard-transition);
 
-		@media #{$medium-only} {
-			@include transition(all $transition-medium-duration $standard-transition);
-		}
+		@if( $amp == false ) {
+			@media #{$medium-only} {
+				@include transition(all $transition-medium-duration $standard-transition);
+			}
 
-		@media #{$medium-up} {
-			@include transition(all $transition-large-duration $standard-transition);
+			@media #{$medium-up} {
+				@include transition(all $transition-large-duration $standard-transition);
+			}
 		}
 	}
 
@@ -63,7 +67,7 @@
 	}
 
 	.sc-dialog-title {
-		@extend .sc-title;
+		@include font($font-size-title, 0, $font-weight-title, $line-height-title, $font-color-title, $letter-spacing-title);
 		margin-bottom: rem-calc(20px);
 	}
 

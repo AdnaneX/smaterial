@@ -16,56 +16,6 @@ table {
 	overflow: auto;
 	display: block;
 
-	thead th {
-		color: if( $theme == light, rgba($black, .54), rgba($white, .54));
-		font-size: rem-calc(12px);
-		font-weight: 500;
-		height: $table-header-size;
-		line-height: $table-header-size;
-
-		&:hover {
-			background: none;
-		}
-
-		a, .sorted {
-			color: if( $theme == light, rgba($black, .54), rgba($white, .54));
-
-			.material-icons {
-				color: if( $theme == light, rgba($black, .54), rgba($white, .54));
-			}
-
-			&:hover {
-				color: if($theme == light, $black, $white);
-
-				.material-icons {
-					color: if($theme == light, $black, $white);
-				}
-			}
-		}
-	}
-
-	tbody td {
-		color: if( $theme == light, rgba($black, .87), rgba($white, .87));
-		font-size: rem-calc(13px);
-		font-weight: 400;
-		height: $table-content-size;
-		line-height: $table-content-size;
-	}
-
-	tbody td, thead th {
-		text-align: left;
-		@include box-sizing(border-box);
-		padding-right: $table-column-padding;
-
-		&:first-of-type {
-			padding-left: $table-first-column-padding;
-		}
-
-		&:last-of-type {
-			padding-right: $table-first-column-padding;
-		}
-	}
-
 	.sc-numeric-col {
 		text-align: right;
 		padding-left: $table-column-padding;
@@ -75,7 +25,7 @@ table {
 	.sc-checkbox-col {
 		padding: 0 $table-first-column-padding;
 
-		input[type="checkbox"].sc-checkbox + label {
+		.sc-checkbox + label {
 			padding: 0;
 		}
 	}
@@ -104,12 +54,12 @@ table {
 
 				tr {
 					display: block;
+				}
 
-					th {
-						display: block;
-						text-align: right;
-						vertical-align: top;
-					}
+				th {
+					display: block;
+					text-align: right;
+					vertical-align: top;
 				}
 			}
 
@@ -123,15 +73,65 @@ table {
 				tr {
 					display: inline-block;
 					vertical-align: top;
+				}
 
-					td {
-						display: block;
-						text-align: left;
-						vertical-align: top;
-						min-height: $table-header-size;
-					}
+				td {
+					display: block;
+					text-align: left;
+					vertical-align: top;
+					min-height: $table-header-size;
 				}
 			}
 		}
+	}
+}
+
+thead th {
+	color: if( $theme == light, rgba($black, .54), rgba($white, .54));
+	font-size: rem-calc(12px);
+	font-weight: 500;
+	height: $table-header-size;
+	line-height: $table-header-size;
+
+	&:hover {
+		background: none;
+	}
+
+	a, .sorted {
+		color: if( $theme == light, rgba($black, .54), rgba($white, .54));
+
+		.material-icons {
+			color: if( $theme == light, rgba($black, .54), rgba($white, .54));
+		}
+
+		&:hover {
+			color: if($theme == light, $black, $white);
+
+			.material-icons {
+				color: if($theme == light, $black, $white);
+			}
+		}
+	}
+}
+
+tbody td {
+	color: if( $theme == light, rgba($black, .87), rgba($white, .87));
+	font-size: rem-calc(13px);
+	font-weight: 400;
+	height: $table-content-size;
+	line-height: $table-content-size;
+}
+
+tbody td, thead th {
+	text-align: left;
+	@include box-sizing(border-box);
+	padding-right: $table-column-padding;
+
+	&:first-of-type {
+		padding-left: $table-first-column-padding;
+	}
+
+	&:last-of-type {
+		padding-right: $table-first-column-padding;
 	}
 }

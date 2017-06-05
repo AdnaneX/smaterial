@@ -52,7 +52,7 @@ $keywords .= ', smaterial, css, scss, material design, framework, html, js, css 
 	<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
 	<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
 
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=no">
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta name="language" content="EN">
 	<meta name="author" content="Derkjan Super">

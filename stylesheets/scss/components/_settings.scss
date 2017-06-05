@@ -48,7 +48,7 @@ $font-size: 14 !default; //px Default 14 or 15
 
 $allowed-colors: (
 	'red', 'pink', 'purple', 'deep-purple', 'indigo', 'blue', 'light-blue', 'cyan', 'teal', 'green', 'light-green',
-	'lime', 'yellow', 'amber', 'orange', 'deep-orange', 'brown', 'grey', 'blue-grey', 'shades', 'accent', 'text');
+	'lime', 'yellow', 'amber', 'orange', 'deep-orange', 'brown', 'grey', 'blue-grey', 'shades', 'accent', 'text') !default;
 
 @import 'colors';
 
@@ -61,8 +61,9 @@ $link-hover: var(--secondary-color, $secondary-color);
 /**************************************
  * Global
  **************************************/
+$amp: false !default; // Default false
 $theme: light !default; // Default either light or dark
-$typography: english !default; // Default english, dense or tall
+$typography-type: english !default; // Default english, dense or tall
 $select-background: $cyan-a200 !default; // Default $cyan-a200
 $standard-transition: cubic-bezier(0.4, 0.0, 0.2, 1) !default; // Default cubic-bezier(0.4, 0.0, 0.2, 1)
 $deceleration-transition: cubic-bezier(0.0, 0.0, 0.2, 1) !default; // Default cubic-bezier(0.0, 0.0, 0.2, 1)

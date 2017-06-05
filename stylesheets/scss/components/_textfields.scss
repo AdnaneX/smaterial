@@ -4,7 +4,7 @@
  * http://www.google.com/design/spec/components/text-fields.html
  **************************************/
 
-// Some default styling
+// Default styling that goes for all text fields
 .sc-floating-input, .sc-floating-dense-input, .sc-single-input, .sc-single-dense-input, .sc-multi-input {
 	position: relative;
 
@@ -18,12 +18,14 @@
 		width: 100%;
 		@include transition(all $transition-small-duration $standard-transition);
 
-		@media #{$medium-only} {
-			@include transition(all $transition-medium-duration $standard-transition);
-		}
+		@if( $amp == false ) {
+			@media #{$medium-only} {
+				@include transition(all $transition-medium-duration $standard-transition);
+			}
 
-		@media #{$medium-up} {
-			@include transition(all $transition-large-duration $standard-transition);
+			@media #{$medium-up} {
+				@include transition(all $transition-large-duration $standard-transition);
+			}
 		}
 
 		&:hover {
@@ -56,12 +58,14 @@
 			vertical-align: super;
 			@include transition(color $transition-small-duration $standard-transition);
 
-			@media #{$medium-only} {
-				@include transition(color $transition-medium-duration $standard-transition);
-			}
+			@if( $amp == false ) {
+				@media #{$medium-only} {
+					@include transition(color $transition-medium-duration $standard-transition);
+				}
 
-			@media #{$medium-up} {
-				@include transition(color $transition-large-duration $standard-transition);
+				@media #{$medium-up} {
+					@include transition(color $transition-large-duration $standard-transition);
+				}
 			}
 		}
 
@@ -83,15 +87,16 @@
 		line-height: normal;
 		cursor: text;
 		position: absolute;
-
 		@include transition(all $transition-small-duration $standard-transition);
 
-		@media #{$medium-only} {
-			@include transition(all $transition-small-duration $standard-transition);
-		}
+		@if( $amp == false ) {
+			@media #{$medium-only} {
+				@include transition(all $transition-small-duration $standard-transition);
+			}
 
-		@media #{$medium-up} {
-			@include transition(all $transition-small-duration $standard-transition);
+			@media #{$medium-up} {
+				@include transition(all $transition-small-duration $standard-transition);
+			}
 		}
 
 		&.sc-active {
@@ -206,12 +211,14 @@ $textfield-single-icon-size: rem-calc(24px); // Default rem-calc(24)
 				padding: 0 calc((#{$textfield-single-height} - #{$textfield-single-icon-size}) / 2);
 				@include transition(color $transition-small-duration $standard-transition);
 
-				@media #{$medium-only} {
-					@include transition(color $transition-medium-duration $standard-transition);
-				}
+				@if( $amp == false ) {
+					@media #{$medium-only} {
+						@include transition(color $transition-medium-duration $standard-transition);
+					}
 
-				@media #{$medium-up} {
-					@include transition(color $transition-large-duration $standard-transition);
+					@media #{$medium-up} {
+						@include transition(color $transition-large-duration $standard-transition);
+					}
 				}
 			}
 		}
@@ -246,12 +253,14 @@ $textfield-single-icon-size: rem-calc(24px); // Default rem-calc(24)
 			font-size: $textfield-single-font-size;
 			@include transition(opacity $transition-small-duration $standard-transition unquote(',') visibility $transition-small-duration $standard-transition);
 
-			@media #{$medium-only} {
-				@include transition(opacity $transition-medium-duration $standard-transition unquote(',') visibility $transition-medium-duration $standard-transition);
-			}
+			@if( $amp == false ) {
+				@media #{$medium-only} {
+					@include transition(opacity $transition-medium-duration $standard-transition unquote(',') visibility $transition-medium-duration $standard-transition);
+				}
 
-			@media #{$medium-up} {
-				@include transition(opacity $transition-large-duration $standard-transition unquote(',') visibility $transition-large-duration $standard-transition);
+				@media #{$medium-up} {
+					@include transition(opacity $transition-large-duration $standard-transition unquote(',') visibility $transition-large-duration $standard-transition);
+				}
 			}
 
 			&.sc-active {

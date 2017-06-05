@@ -30,10 +30,12 @@ $tab-padding: rem-calc(12px);
 		top: $appbar-mobile-portrait-height;
 	}
 
-	@media #{$small-up} {
-		width: calc(100% - #{$drawer-small-width} + #{rem-calc(1px)});
-		left: $drawer-small-width - rem-calc(1px);
-		top: $appbar-large-height;
+	@if( $amp == false ) {
+		@media #{$small-up} {
+			width: calc(100% - #{$drawer-small-width} + #{rem-calc(1px)});
+			left: $drawer-small-width - rem-calc(1px);
+			top: $appbar-large-height;
+		}
 	}
 
 	.sc-tab, .sc-tab-icon, .sc-tab-icon-text {
@@ -51,16 +53,18 @@ $tab-padding: rem-calc(12px);
 		white-space: nowrap;
 		@include transition(border $transition-small-duration $standard-transition unquote(',') color $transition-small-duration $standard-transition);
 
-		@media #{$small-up} {
-			min-width: rem-calc(160px);
-		}
+		@if( $amp == false ) {
+			@media #{$small-up} {
+				min-width: rem-calc(160px);
+			}
 
-		@media #{$medium-only} {
-			@include transition(border $transition-medium-duration $standard-transition unquote(',') color $transition-medium-duration $standard-transition);
-		}
+			@media #{$medium-only} {
+				@include transition(border $transition-medium-duration $standard-transition unquote(',') color $transition-medium-duration $standard-transition);
+			}
 
-		@media #{$medium-up} {
-			@include transition(border $transition-large-duration $standard-transition unquote(',') color $transition-large-duration $standard-transition);
+			@media #{$medium-up} {
+				@include transition(border $transition-large-duration $standard-transition unquote(',') color $transition-large-duration $standard-transition);
+			}
 		}
 
 		&:hover, &.sc-active {
@@ -78,12 +82,14 @@ $tab-padding: rem-calc(12px);
 			color: $tab-font-color;
 			@include transition(color $transition-small-duration $standard-transition);
 
-			@media #{$medium-only} {
-				@include transition(color $transition-medium-duration $standard-transition);
-			}
+			@if( $amp == false ) {
+				@media #{$medium-only} {
+					@include transition(color $transition-medium-duration $standard-transition);
+				}
 
-			@media #{$medium-up} {
-				@include transition(color $transition-large-duration $standard-transition);
+				@media #{$medium-up} {
+					@include transition(color $transition-large-duration $standard-transition);
+				}
 			}
 		}
 	}

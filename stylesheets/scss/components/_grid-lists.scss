@@ -11,7 +11,7 @@
 		position: relative;
 	}
 
-	.sc-grid-header, .sc-grid-footer {
+	&-header, &-footer {
 		position: absolute;
 		left: 0;
 		width: 100%;
@@ -24,20 +24,20 @@
 		}
 	}
 
-	.sc-grid-header {
+	&-header {
 		top: 0;
 	}
 
-	.sc-grid-footer {
+	&-footer {
 		bottom: 0;
 	}
 
-	.sc-grid-single {
+	&-single {
 		height: rem-calc(48px);
 		font-size: rem-calc(16px);
 	}
 
-	.sc-grid-two {
+	&-two {
 		height: rem-calc(68px);
 
 		.sc-first {

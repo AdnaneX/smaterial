@@ -37,8 +37,10 @@ h1, h2, h3, h4, h5, h6 {
 	word-wrap: break-word;
 }
 
-@if( in-array( 'scrollbar', $normalize ) ) {
-	@include scrollbar();
+@if( $amp == false ) {
+	@if (in-array('scrollbar', $normalize)) {
+		@include scrollbar();
+	}
 }
 
 @if( in-array( 'selection', $normalize ) ) {
@@ -93,10 +95,12 @@ main {
 		padding: ($gutter / 2);
 	}
 
-	@media #{$small-up} {
-		top: $appbar-large-height;
-		left: $drawer-small-width;
-		padding: ($large-gutter / 2);
+	@if( $amp == false ) {
+		@media #{$small-up} {
+			top: $appbar-large-height;
+			left: $drawer-small-width;
+			padding: ($large-gutter / 2);
+		}
 	}
 }
 

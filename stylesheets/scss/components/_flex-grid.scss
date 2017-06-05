@@ -1,180 +1,182 @@
 .sc-row {
 	@include flex-container(row, wrap, flex-start, flex-start, flex-start);
+}
 
-	.sc-col {
-		flex-grow: 1;
-		padding: ( $gutter / 2 );
+.sc-col {
+	flex-grow: 1;
+	padding: ($gutter / 2);
+	margin: 0;
+
+	@media #{$small-up} {
+		padding: ($large-gutter / 2);
 		margin: 0;
+	}
+}
 
-		@media #{$small-up} {
-			padding: ( $large-gutter / 2 );
-			margin: 0;
+.sc-xs {
+	flex-grow: 1;
+	flex-basis: 0;
+	max-width: 100%;
+}
+
+
+$i: 1;
+@while( $i <= $xsmall-columns ) {
+	$percentage: unquote( ( $i / $xsmall-columns ) * 100 + '%' );
+	.sc-xs#{$i} {
+		flex-basis: $percentage;
+		max-width: $percentage;
+	}
+
+	.sc-offset-xs#{$i} {
+		margin-left: $percentage;
+	}
+
+	@if( in-array( 'order', $flex-grid ) ) {
+		.sc-order-xs#{$i} {
+			@include order(#{$i});
+		}
+	}
+	$i: $i + 1;
+}
+
+@media only screen and (min-width: #{$xsmall-screen} + 1px) {
+	.sc-s {
+		flex-grow: 1;
+		flex-basis: 0;
+		max-width: 100%;
+	}
+
+	$i: 1;
+	@while( $i <= $small-columns ) {
+		$percentage: unquote(($i / $small-columns) * 100 + '%');
+		.sc-s#{$i} {
+			flex-basis: $percentage;
+			max-width: $percentage;
 		}
 
-		&.sc-xs {
+		.sc-offset-s#{$i} {
+			margin-left: $percentage;
+		}
+
+		@if( in-array( 'order', $flex-grid ) ) {
+			.sc-order-s#{$i} {
+				@include order(#{$i});
+			}
+		}
+		$i: $i + 1;
+	}
+}
+
+@media only screen and (min-width: 841px) {
+	.sc-s {
+		flex-grow: 1;
+		flex-basis: 0;
+		max-width: 100%;
+	}
+
+	$i: 1;
+	@while( $i <= $columns ) {
+		$percentage: unquote(($i / $columns) * 100 + '%');
+		.sc-s#{$i} {
+			flex-basis: $percentage;
+			max-width: $percentage;
+		}
+
+		.sc-offset-s#{$i} {
+			margin-left: $percentage;
+		}
+
+		@if( in-array( 'order', $flex-grid ) ) {
+			.sc-order-s#{$i} {
+				@include order(#{$i});
+			}
+		}
+		$i: $i + 1;
+	}
+}
+@if( $amp == false ) {
+	@media #{$small-up} {
+		.sc-m {
 			flex-grow: 1;
 			flex-basis: 0;
 			max-width: 100%;
 		}
 
 		$i: 1;
-		@while( $i <= $xsmall-columns ) {
-			$percentage: unquote( ( $i / $xsmall-columns ) * 100 + '%' );
-			&.sc-xs#{$i} {
+		@while( $i <= $columns ) {
+			$percentage: unquote(($i / $columns) * 100 + '%');
+			.sc-m#{$i} {
 				flex-basis: $percentage;
 				max-width: $percentage;
 			}
 
-			&.sc-offset-xs#{$i} {
+			.sc-offset-m#{$i} {
 				margin-left: $percentage;
 			}
 
 			@if( in-array( 'order', $flex-grid ) ) {
-				&.sc-order-xs#{$i} {
+				.sc-order-m#{$i} {
 					@include order(#{$i});
 				}
 			}
 			$i: $i + 1;
 		}
+	}
 
-		@media only screen and (min-width: #{$xsmall-screen} + 1px) {
-			&.sc-s {
-				flex-grow: 1;
-				flex-basis: 0;
-				max-width: 100%;
-			}
-
-			$i: 0;
-			@while( $i <= $small-columns ) {
-				$percentage: unquote(($i / $small-columns) * 100 + '%');
-				&.sc-s#{$i} {
-					flex-basis: $percentage;
-					max-width: $percentage;
-				}
-
-				&.sc-offset-s#{$i} {
-					margin-left: $percentage;
-				}
-
-				@if( in-array( 'order', $flex-grid ) ) {
-					&.sc-order-s#{$i} {
-						@include order(#{$i});
-					}
-				}
-				$i: $i + 1;
-			}
+	@media #{$medium-up} {
+		.sc-l {
+			flex-grow: 1;
+			flex-basis: 0;
+			max-width: 100%;
 		}
 
-		@media only screen and (min-width: 841px) {
-			&.sc-s {
-				flex-grow: 1;
-				flex-basis: 0;
-				max-width: 100%;
+		$i: 1;
+		@while ($i <= $columns) {
+			$percentage: unquote(($i / $columns) * 100 + '%');
+			.sc-l#{$i} {
+				flex-basis: $percentage;
+				max-width: $percentage;
 			}
 
-			$i: 0;
-			@while( $i <= $columns ) {
-				$percentage: unquote(($i / $columns) * 100 + '%');
-				&.sc-s#{$i} {
-					flex-basis: $percentage;
-					max-width: $percentage;
-				}
-
-				&.sc-offset-s#{$i} {
-					margin-left: $percentage;
-				}
-
-				@if( in-array( 'order', $flex-grid ) ) {
-					&.sc-order-s#{$i} {
-						@include order(#{$i});
-					}
-				}
-				$i: $i + 1;
+			.sc-offset-l#{$i} {
+				margin-left: $percentage;
 			}
+
+			@if (in-array('order', $flex-grid)) {
+				.sc-order-l#{$i} {
+					@include order(#{$i});
+				}
+			}
+			$i: $i + 1;
+		}
+	}
+
+	@media #{$large-up} {
+		.sc-xl {
+			flex-grow: 1;
+			flex-basis: 0;
+			max-width: 100%;
 		}
 
-		@media #{$small-up} {
-			&.sc-m {
-				flex-grow: 1;
-				flex-basis: 0;
-				max-width: 100%;
+		$i: 1;
+		@while ($i <= $columns) {
+			$percentage: unquote(($i / $columns) * 100 + '%');
+			.sc-xl#{$i} {
+				flex-basis: $percentage;
+				max-width: $percentage;
 			}
 
-			$i: 0;
-			@while( $i <= $columns ) {
-				$percentage: unquote(($i / $columns) * 100 + '%');
-				&.sc-m#{$i} {
-					flex-basis: $percentage;
-					max-width: $percentage;
-				}
-
-				&.sc-offset-m#{$i} {
-					margin-left: $percentage;
-				}
-
-				@if( in-array( 'order', $flex-grid ) ) {
-					&.sc-order-m#{$i} {
-						@include order(#{$i});
-					}
-				}
-				$i: $i + 1;
-			}
-		}
-
-		@media #{$medium-up} {
-			&.sc-l {
-				flex-grow: 1;
-				flex-basis: 0;
-				max-width: 100%;
+			.sc-offset-xl#{$i} {
+				margin-left: $percentage;
 			}
 
-			$i: 0;
-			@while( $i <= $columns ) {
-				$percentage: unquote(($i / $columns) * 100 + '%');
-				&.sc-l#{$i} {
-					flex-basis: $percentage;
-					max-width: $percentage;
+			@if (in-array('order', $flex-grid)) {
+				.sc-order-xl#{$i} {
+					@include order(#{$i});
 				}
-
-				&.sc-offset-l#{$i} {
-					margin-left: $percentage;
-				}
-
-				@if( in-array( 'order', $flex-grid ) ) {
-					&.sc-order-l#{$i} {
-						@include order(#{$i});
-					}
-				}
-				$i: $i + 1;
 			}
-		}
-
-		@media #{$large-up} {
-			&.sc-xl {
-				flex-grow: 1;
-				flex-basis: 0;
-				max-width: 100%;
-			}
-
-			$i: 0;
-			@while( $i <= $columns ) {
-				$percentage: unquote(($i / $columns) * 100 + '%');
-				&.sc-xl#{$i} {
-					flex-basis: $percentage;
-					max-width: $percentage;
-				}
-
-				&.sc-offset-xl#{$i} {
-					margin-left: $percentage;
-				}
-
-				@if( in-array( 'order', $flex-grid ) ) {
-					&.sc-order-xl#{$i} {
-						@include order(#{$i});
-					}
-				}
-				$i: $i + 1;
-			}
+			$i: $i + 1;
 		}
 	}
 }
@@ -191,22 +193,23 @@
 			display: none;
 		}
 	}
-
-	.sc-m-hidden {
-		@media #{$medium-only} {
-			display: none;
+	@if( $amp == false ) {
+		.sc-m-hidden {
+			@media #{$medium-only} {
+				display: none;
+			}
 		}
-	}
 
-	.sc-l-hidden {
-		@media #{$large-only} {
-			display: none;
+		.sc-l-hidden {
+			@media #{$large-only} {
+				display: none;
+			}
 		}
-	}
 
-	.sc-xl-hidden {
-		@media #{$xlarge-only} {
-			display: none;
+		.sc-xl-hidden {
+			@media #{$xlarge-only} {
+				display: none;
+			}
 		}
 	}
 }

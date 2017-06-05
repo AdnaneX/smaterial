@@ -18,17 +18,19 @@ $bottom-nav-icon-size: rem-calc(24px); // Default rem-calc(24px)
 	@include flex-container(null, null, space-between);
 	@include transition(margin $transition-small-duration $standard-transition);
 
-	@media #{$small-up} {
-		left: $drawer-small-width;
-		width: calc(100% - #{$drawer-small-width});
-	}
+	@if( $amp == false ) {
+		@media #{$small-up} {
+			left: $drawer-small-width;
+			width: calc(100% - #{$drawer-small-width});
+		}
 
-	@media #{$medium-only} {
-		@include transition(margin $transition-medium-duration $standard-transition);
-	}
+		@media #{$medium-only} {
+			@include transition(margin $transition-medium-duration $standard-transition);
+		}
 
-	@media #{$medium-up} {
-		@include transition(margin $transition-large-duration $standard-transition);
+		@media #{$medium-up} {
+			@include transition(margin $transition-large-duration $standard-transition);
+		}
 	}
 
 	&.sc-expanded {
@@ -63,8 +65,10 @@ $bottom-nav-icon-size: rem-calc(24px); // Default rem-calc(24px)
 		min-width: rem-calc(80px);
 		padding: rem-calc(8px) rem-calc(12px) rem-calc(10px) rem-calc(12px);
 
-		@media #{$medium-up} {
-			min-width: rem-calc(120px);
+		@if( $amp == false ) {
+			@media #{$medium-up} {
+				min-width: rem-calc(120px);
+			}
 		}
 
 		.material-icons {

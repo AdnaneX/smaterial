@@ -7,23 +7,23 @@
 
 $raised-size: rem-calc(36px); // Default rem-calc(32px)
 $raised-dense-size: rem-calc(32px); // Default rem-calc(32px)
-
 $flat-size: rem-calc(36px); // Default rem-calc(36px)
 
-button, input[type="button"], input[type="reset"], input[type="submit"], a {
-	@if( in-array( 'raised', $button ) ) {
-		&.sc-raised-button {
-			@include font($font-size-button, 0, $font-weight-button, $line-height-button, $font-color-button, $letter-spacing-button, uppercase);
-			@include button();
-			@include material-shadow(2);
-			background: $raised-background;
-			color: $raised-font-color;
-			height: $raised-size;
-			line-height: $raised-size;
-			min-width: rem-calc(88px);
-			padding: 0 rem-calc(16px);
-			@include transition(box-shadow $transition-small-duration $standard-transition unquote(',') background $transition-small-duration $standard-transition);
 
+@if( in-array( 'raised', $button ) ) {
+	.sc-raised-button {
+		@include font($font-size-button, 0, $font-weight-button, $line-height-button, $font-color-button, $letter-spacing-button, uppercase);
+		@include button();
+		@include material-shadow(2);
+		background: $raised-background;
+		color: $raised-font-color;
+		height: $raised-size;
+		line-height: $raised-size;
+		min-width: rem-calc(88px);
+		padding: 0 rem-calc(16px);
+		@include transition(box-shadow $transition-small-duration $standard-transition unquote(',') background $transition-small-duration $standard-transition);
+
+		@if( $amp == false ) {
 			@media #{$medium-only} {
 				@include transition(box-shadow $transition-medium-duration $standard-transition unquote(',') background $transition-medium-duration $standard-transition);
 			}
@@ -32,89 +32,90 @@ button, input[type="button"], input[type="reset"], input[type="submit"], a {
 				@include material-shadow(0);
 				@include transition(box-shadow $transition-large-duration $standard-transition unquote(',') background $transition-large-duration $standard-transition);
 			}
+		}
 
-			&:active {
-				@include material-shadow(8);
+		&:active {
+			@include material-shadow(8);
 
-				@if $theme == dark {
-					background: color($raised-background, 700);
-				}
-			}
-
-			&:hover {
-				color: $raised-font-color; // To fix bug of links getting link color on hover
-			}
-
-			.material-icons {
-				color: $raised-icon-color;
-				@include square($raised-size);
-				line-height: $raised-size;
-				vertical-align: middle;
-			}
-
-			&-dense {
-				font-size: rem-calc(13px);
-				height: $raised-dense-size;
-				line-height: $raised-dense-size;
-
-				.material-icons {
-					@include square($raised-dense-size);
-					line-height: $raised-dense-size;
-				}
-			}
-
-			&.sc-disabled, &:disabled {
-				background: $raised-disabled-background;
-				color: $raised-disabled-font-color;
-				@include material-shadow(0);
-
-				&:hover {
-					@include material-shadow(0);
-					background: $raised-disabled-background;
-					color: $raised-disabled-font-color;
-				}
+			@if( $theme == dark ) {
+				background: color($raised-background, 700);
 			}
 		}
-	}
 
-	@if( in-array( 'flat', $button ) ) {
-		&.sc-flat-button {
-			@include button();
-			@include font($font-size-button, 0, $font-weight-button, $line-height-button, $font-color-button, $letter-spacing-button, uppercase);
-			background: none;
-			color: $flat-color;
-			height: $flat-size;
-			line-height: $flat-size;
-			min-width: rem-calc(64px);
-			padding: 0 rem-calc(16px);
+		&:hover {
+			color: $raised-font-color; // To fix bug of links getting link color on hover
+		}
 
-			&:hover {
-				color: $flat-color;
-			}
+		.material-icons {
+			color: $raised-icon-color;
+			@include square($raised-size);
+			line-height: $raised-size;
+			vertical-align: middle;
+		}
 
-			&:active {
-				background: $flat-active-background;
-			}
+		&-dense {
+			font-size: rem-calc(13px);
+			height: $raised-dense-size;
+			line-height: $raised-dense-size;
 
 			.material-icons {
-				color: $flat-icon-color;
-				height: $flat-size;
-				line-height: $flat-size;
-				vertical-align: middle;
-				width: $flat-size;
+				@include square($raised-dense-size);
+				line-height: $raised-dense-size;
 			}
+		}
 
-			&.sc-disabled, &:disabled {
-				background: none;
-				color: $flat-disabled-color;
+		&.sc-disabled, &:disabled {
+			background: $raised-disabled-background;
+			color: $raised-disabled-font-color;
+			@include material-shadow(0);
 
-				&:hover {
-					color: $flat-disabled-color;
-				}
+			&:hover {
+				@include material-shadow(0);
+				background: $raised-disabled-background;
+				color: $raised-disabled-font-color;
 			}
 		}
 	}
 }
+
+@if( in-array( 'flat', $button ) ) {
+	.sc-flat-button {
+		@include button();
+		@include font($font-size-button, 0, $font-weight-button, $line-height-button, $font-color-button, $letter-spacing-button, uppercase);
+		background: none;
+		color: $flat-color;
+		height: $flat-size;
+		line-height: $flat-size;
+		min-width: rem-calc(64px);
+		padding: 0 rem-calc(16px);
+
+		&:hover {
+			color: $flat-color;
+		}
+
+		&:active {
+			background: $flat-active-background;
+		}
+
+		.material-icons {
+			color: $flat-icon-color;
+			height: $flat-size;
+			line-height: $flat-size;
+			vertical-align: middle;
+			width: $flat-size;
+		}
+
+		&.sc-disabled, &:disabled {
+			background: none;
+			color: $flat-disabled-color;
+
+			&:hover {
+				color: $flat-disabled-color;
+			}
+		}
+	}
+}
+
 
 $floating-size: rem-calc(56px); // Default rem-calc(56px)
 $floating-sub-size: ($floating-size / 10) * 7;
