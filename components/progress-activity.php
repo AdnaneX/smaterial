@@ -5,97 +5,97 @@ $keywords = 'progress, activity, determinate, indeterminate, buffer, circular';
 
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>
-<section class="sc-row">
-	<h2 class="sc-col sc-xs4 sc-s12">Progress & activity usage</h2>
+<section class="row">
+	<h2 class="col xs4 s12">Progress & activity usage</h2>
 
-	<p class="sc-col sc-xs4 sc-s12 sc-m6">
+	<p class="col xs4 s12 m6">
 		There are a couple of progress and activity indicator varieties.
 		The "determinate", "indeterminate", "buffer", "circular" and "circular on floating button".
 	</p>
 </section>
 
-<section class="sc-row">
-	<h3 class="sc-col sc-xs4 sc-s12">Determinate</h3>
+<section class="row">
+	<h3 class="col xs4 s12">Determinate</h3>
 
-	<p class="sc-col sc-xs4 sc-s12 sc-m6">
-		You can easily modify the determinate progress indicator by giving the <code>.sc-progressbar</code> the desired width.
+	<p class="col xs4 s12 m6">
+		You can easily modify the determinate progress indicator by giving the <code>.progressbar</code> the desired width.
 	</p>
 
-	<div class="sc-col sc-xs4 sc-s12 sc-m6">
-		<div class="sc-determinate">
-			<div class="sc-progressbar" style="width: 10%"></div>
+	<div class="col xs4 s12 m6">
+		<div class="determinate">
+			<div class="progressbar" style="width: 10%"></div>
 		</div>
 	</div>
 
-	<pre class="language-html sc-col sc-s12 sc-m6">
+	<pre class="language-html col s12 m6">
 		<code>
-&lt;div class="sc-determinate">
-  &lt;div class="sc-progressbar" style="width: 10%">&lt;/div>
+&lt;div class="determinate">
+  &lt;div class="progressbar" style="width: 10%">&lt;/div>
 &lt;/div>
 		</code>
 	</pre>
 </section>
 
-<section class="sc-row">
-	<h3 class="sc-col sc-xs4 sc-s12">Indeterminate</h3>
+<section class="row">
+	<h3 class="col xs4 s12">Indeterminate</h3>
 
-	<p class="sc-col sc-xs4 sc-s12 sc-m6">
+	<p class="col xs4 s12 m6">
 		The indeterminate progress indicator will continue forever.
 	</p>
 
-	<div class="sc-col sc-xs4 sc-s12 sc-m6">
-		<div class="sc-indeterminate"></div>
+	<div class="col xs4 s12 m6">
+		<div class="indeterminate"></div>
 	</div>
 
-	<pre class="language-html sc-col sc-s12 sc-m6">
+	<pre class="language-html col s12 m6">
 		<code>
-&lt;div class="sc-indeterminate">&lt;/div>
+&lt;div class="indeterminate">&lt;/div>
 		</code>
 	</pre>
 </section>
 
-<section class="sc-row">
-	<h3 class="sc-col sc-xs4 sc-s12">Buffer</h3>
+<section class="row">
+	<h3 class="col xs4 s12">Buffer</h3>
 
-	<p class="sc-col sc-xs4 sc-s12 sc-m6">
+	<p class="col xs4 s12 m6">
 		The buffer progressbar is still a work in process.
 	</p>
 
-	<div class="sc-col sc-xs4 sc-s12 sc-m6">
-		<div class="sc-buffer">
-			<div class="sc-buffer-progress" style="width: 50%;">
-				<div class="sc-progressbar" style="width: 90%;"></div>
+	<div class="col xs4 s12 m6">
+		<div class="buffer">
+			<div class="buffer-progress" style="width: 50%;">
+				<div class="progressbar" style="width: 90%;"></div>
 			</div>
-			<div class="sc-buffering" style="width: 50%; left: 50%;"></div>
+			<div class="buffering" style="width: 50%; left: 50%;"></div>
 		</div>
 	</div>
 
-	<pre class="language-html sc-col sc-s12 sc-m6">
+	<pre class="language-html col s12 m6">
 		<code>
-&lt;div class="sc-buffer">
-  &lt;div class="sc-buffer-progress" style="width: 50%;">
-    &lt;div class="sc-progressbar" style="width: 90%;">&lt;/div>
+&lt;div class="buffer">
+  &lt;div class="buffer-progress" style="width: 50%;">
+    &lt;div class="progressbar" style="width: 90%;">&lt;/div>
   &lt;/div>
-  &lt;div class="sc-buffering" style="width: 50%; left: 50%;">&lt;/div>
+  &lt;div class="buffering" style="width: 50%; left: 50%;">&lt;/div>
 &lt;/div>
 		</code>
 	</pre>
 </section>
 
-<section class="sc-row">
-	<h3 class="sc-col sc-xs4 sc-s12">Circular</h3>
+<section class="row">
+	<h3 class="col xs4 s12">Circular</h3>
 
-	<p class="sc-col sc-xs4 sc-s12 sc-m6">
+	<p class="col xs4 s12 m6">
 		The circular progress can easily be changed in SCSS. You can change the width of the loader and the color(s).
 	</p>
 
-	<div class="sc-col sc-xs4 sc-s12 sc-m6">
-		<div class="sc-circular"></div>
+	<div class="col xs4 s12 m6">
+		<div class="circular"></div>
 	</div>
 
-	<pre class="language-html sc-col sc-xs4 sc-s12 sc-m6 sc-offset-m6">
+	<pre class="language-html col xs4 s12 m6 offset-m6">
 		<code>
-&lt;div class="sc-circular">&lt;/div>
+&lt;div class="circular">&lt;/div>
 		</code>
 	</pre>
 </section>

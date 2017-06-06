@@ -95,7 +95,7 @@ function eventTrigger( el, etype ){
 }
 
 // Set background color as theme color in html
-var appbarColor = $('.sc-appbar').css('background-color'),
+var appbarColor = $('.appbar').css('background-color'),
 	themeColor = document.querySelector('meta[name="theme-color"]').getAttribute('content');
 console.log(themeColor);
 

@@ -5,23 +5,23 @@ $keywords = 'grid lists';
 
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>
-<section class="sc-row">
-	<h2 class="sc-col sc-xs4 sc-s12">Grid lists usage</h2>
+<section class="row">
+	<h2 class="col xs4 s12">Grid lists usage</h2>
 
-    <div class="sc-col sc-xs4 sc-s4">
-        <figure class="sc-grid">
+    <div class="col xs4 s4">
+        <figure class="grid">
             <img src="/images/album-example.jpg">
-            <figcaption class="sc-grid-header sc-grid-single">Single line</figcaption>
+            <figcaption class="grid-header grid-single">Single line</figcaption>
         </figure>
     </div>
 
-    <div class="sc-col sc-xs4 sc-s4">
-        <figure class="sc-grid">
+    <div class="col xs4 s4">
+        <figure class="grid">
             <img src="/images/album-example.jpg">
-            <figcaption class="sc-grid-footer sc-grid-two">
-                <div class="sc-first-large">2 Line large</div>
-                <div class="sc-second">Example</div>
-                <div class="sc-action sc-left">
+            <figcaption class="grid-footer grid-two">
+                <div class="first-large">2 Line large</div>
+                <div class="second">Example</div>
+                <div class="action left">
                     <i class="material-icons">
                         star
                     </i>
@@ -30,13 +30,13 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
         </figure>
     </div>
 
-    <div class="sc-col sc-xs4 sc-s4">
-        <figure class="sc-grid">
+    <div class="col xs4 s4">
+        <figure class="grid">
             <img src="/images/album-example.jpg">
-            <figcaption class="sc-grid-footer sc-grid-two">
-                <div class="sc-first-small">2 Line small</div>
-                <div class="sc-second">Example</div>
-                <div class="sc-action sc-right">
+            <figcaption class="grid-footer grid-two">
+                <div class="first-small">2 Line small</div>
+                <div class="second">Example</div>
+                <div class="action right">
                     <i class="material-icons">
                         star
                     </i>

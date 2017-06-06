@@ -5,55 +5,55 @@ $keywords = 'getting started, starting, how to use';
 
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>
-<section class="sc-row">
-    <h2 class="sc-col sc-xs4 sc-s12">Getting started</h2>
+<section class="row">
+    <h2 class="col xs4 s12">Getting started</h2>
 
-    <p class="sc-col sc-xs4 sc-s12">
+    <p class="col xs4 s12">
         Smaterial comes in 2 different packages you can choose from.
         You can make a choice depending on your skill levels and what you would like to do with SMaterial.
         Both packages include the bower.json file to manage other files required.
     </p>
 
-    <div class="sc-col sc-xs4 sc-s12 sc-m6">
-        <h4 class="sc-col sc-xs4 sc-s12">CSS</h4>
+    <div class="col xs4 s12 m6">
+        <h4 class="col xs4 s12">CSS</h4>
 
-        <p class="sc-col sc-xs4 sc-s12">
+        <p class="col xs4 s12">
             When unfamilier with SCSS it's recommended to use this package.
-            <a href="/smaterial-css.zip" class="sc-raised-button">CSS Download <i class="material-icons sc-right">file_download</i></a>
+            <a href="/smaterial-css.zip" class="raised-button">CSS Download <i class="material-icons right">file_download</i></a>
         </p>
     </div>
 
-    <div class="sc-col sc-xs4 sc-s12 sc-m6">
-        <h4 class="sc-col sc-xs4 sc-s12">SCSS</h4>
+    <div class="col xs4 s12 m6">
+        <h4 class="col xs4 s12">SCSS</h4>
 
-        <p class="sc-col sc-xs4 sc-s12">
+        <p class="col xs4 s12">
             The SCSS version allows you to fully customize the way SMaterial looks.
             You can also change which files are included and which are not. This package also includes Gulp to
             compress JavaScript an SCSS.
-            <a href="/smaterial-scss.zip" class="sc-raised-button">SCSS Download <i class="material-icons sc-right">file_download</i></a>
+            <a href="/smaterial-scss.zip" class="raised-button">SCSS Download <i class="material-icons right">file_download</i></a>
         </p>
     </div>
 
-    <div class="sc-col sc-xs4 sc-s12 sc-m6">
-        <h4 class="sc-col sc-xs4 sc-s12">Bower</h4>
+    <div class="col xs4 s12 m6">
+        <h4 class="col xs4 s12">Bower</h4>
 
-        <p class="sc-col scs12">
+        <p class="col scs12">
             Do you prefer to use <a href="https://bower.io/" target="_blank">bower</a>? Now you can. You can simply run the following command: <code>bower install smaterial</code>.
         </p>
     </div>
 </section>
 
-<section class="sc-row">
-    <h2 class="sc-col sc-xs4 sc-s12">Setup</h2>
+<section class="row">
+    <h2 class="col xs4 s12">Setup</h2>
 
-    <p class="sc-col sc-xs4 sc-s12 sc-m6">
+    <p class="col xs4 s12 m6">
         You can get SMaterial up and running in a couple of different ways.
         After you have downloaded one of the above packages or used one of the other options you can get started.
         Of course you can use the code shown here.
         You can also use the <code class="language-html">index.php</code> file and files included in the <code class="language-html">includes</code> folder provided in the packages.
     </p>
 
-    <pre class="language-html sc-col sc-xs4 sc-s12 sc-m6">
+    <pre class="language-html col xs4 s12 m6">
         <code>
 &lt;!DOCTYPE html>
 &lt;html>
@@ -74,7 +74,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		</code>
 	</pre>
 
-    <p class="sc-col sc-xs4 sc-s12 sc-m6">
+    <p class="col xs4 s12 m6">
         The <code class="language-html">&lt;link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"></code>
         is used to load the <a href="http://www.smaterial.dsuper.nl/style/icons.php">Material Design font icons</a>.
 
@@ -86,14 +86,14 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
     </p>
 </section>
 
-<section class="sc-row">
-    <h3 class="sc-col sc-xs4 sc-s12">Gulp usage</h3>
+<section class="row">
+    <h3 class="col xs4 s12">Gulp usage</h3>
 
-    <p class="sc-col sc-xs4 sc-s12 sc-m6">
+    <p class="col xs4 s12 m6">
         With Gulp you can easily compress SCSS and JavaScript files. All "tasks" needed are included in the <code class="language-html">gulpfile.js</code>
     </p>
 
-    <table class="sc-col sc-xs4 sc-s12 sc-m6">
+    <table class="col xs4 s12 m6">
         <thead>
         <tr>
             <th>Task</th>
@@ -113,30 +113,30 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
         </tbody>
     </table>
 
-    <p class="sc-col sc-xs4 sc-s12 sc-m6">
+    <p class="col xs4 s12 m6">
         If you were to add other js frameworks for example <a href="http://hammerjs.github.io/" target="_blank">hammer.js</a> you can add the necessary file(s) in <code class="language-html">js/vendor</code>.
         If you create your own JavaScript files you can add these in <code class="language-html">js/app</code>. This way all files will be compressed into minified versions.
         The same goes for SCSS files. If you add your own SCSS files in <code class="language-html">stylesheets/scss</code> these will also be compressed for you.
         This can be achieved by just running gulp task.
     </p>
 
-    <p class="sc-col sc-xs4 sc-s12 sc-m6">
+    <p class="col xs4 s12 m6">
         If you add new files with bower you need to add the necessary files in the right files array.
         JavaScript files in vendor task and SCSS files in scss task.
     </p>
 </section>
 
-<section class="sc-row">
-    <h3 class="sc-col sc-xs4 sc-s12">Other useful HTML</h3>
+<section class="row">
+    <h3 class="col xs4 s12">Other useful HTML</h3>
 
-    <p class="sc-col sc-xs4 sc-s12 sc-m6">
+    <p class="col xs4 s12 m6">
         If you would like to complete the look of your website you can add some additional HTML to it.
         To color the browsers address bar use the code shown on the side in the <code class="language-html">&lt;head></code> tag.
         If you leave the <code class="language-html">&lt;meta content></code> attribute empty it will be automatically set to the color of the <a href="/components/appbar.php">appbar</a>.
         Otherwise it will leave the <code class="language-html">&lt;meta content></code> as is.
     </p>
 
-    <pre class="language-html sc-col sc-xs4 sc-s12 sc-m6">
+    <pre class="language-html col xs4 s12 m6">
 		<code>
 &lt;meta name="theme-color" content="#2196F3">
 &lt;meta name="msapplication-navbutton-color" content="#2196F3">

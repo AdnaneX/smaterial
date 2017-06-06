@@ -36,7 +36,7 @@ $bottom-nav: ('bottom-nav', 'bottom-shifting') !default;
 $bottom-sheet: ('header', 'grid', 'music') !default;
 @import 'components/bottom-sheet'; // Used to style bottom sheet / modal (can be turned off)
 
-$button: ('raised', 'flat', 'floating', 'toggle', /*'ripple'*/) !default;
+$button: ('raised', 'dense', 'flat', 'floating', 'mini', /*'toggle', 'ripple'*/) !default;
 @import 'components/buttons'; // Used to style buttons (can be turned off)
 
 @import 'components/cards'; // Used to style cards (can be turned off)

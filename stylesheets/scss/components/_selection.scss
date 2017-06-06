@@ -5,9 +5,9 @@
  **************************************/
 
 $selection-size: rem-calc($font-size-body-1+0px);
-$selection-border-size: var(--border-size, $border-size);
+$selection-border-size: if( $var == true, var(--border-size, $border-size), $border-size);
 
-.sc-checkbox, .sc-radio {
+.checkbox, .radio {
 	@include opacity(0);
 	left: -102%;
 	position: absolute;
@@ -31,10 +31,10 @@ $selection-border-size: var(--border-size, $border-size);
 }
 
 @if( in-array( 'checkbox', $selection ) ) {
-	.sc-checkbox {
+	.checkbox {
 		// Off
 		+ label:before {
-			@include border-radius(var(--border-size, $border-size));
+			@include border-radius($selection-border-size);
 			@include transition(background $transition-small-duration $standard-transition unquote(',') content $transition-small-duration $standard-transition unquote(',') border $transition-small-duration $standard-transition);
 
 			@if( $amp == false ) {
@@ -53,7 +53,7 @@ $selection-border-size: var(--border-size, $border-size);
 			background: $selection-active-color;
 			border: $selection-border-size solid $selection-active-color;
 			content: '\E5CA';
-			color: var(--background, $background);
+			color: if( $var == true, var(--background, $background), $background );
 		}
 
 		// Disabled off
@@ -91,7 +91,7 @@ $selection-border-size: var(--border-size, $border-size);
 }
 
 @if( in-array( 'radio', $selection ) ) {
-	.sc-radio {
+	.radio {
 		// Off
 		+ label {
 			&:before {
@@ -134,7 +134,7 @@ $selection-border-size: var(--border-size, $border-size);
 		// On
 		&:checked + label {
 			&:before {
-				border: var(--border-size, $border-size) solid $selection-active-color;
+				border: $selection-border-size solid $selection-active-color;
 			}
 
 			&:after {
@@ -169,9 +169,9 @@ $switch-thumb-radial-left: $switch-thumb-size / -2;
 $switch-thumb-radial-left-active: $switch-thumb-left - ($switch-thumb-size / 2 );
 
 @if( in-array( 'switch', $selection ) ) {
-	.sc-switch {
+	.switch {
 		// Track
-		.sc-lever {
+		.lever {
 			background: $switch-track-background;
 			display: inline-block;
 			height: $switch-track-height;
@@ -251,7 +251,7 @@ $switch-thumb-radial-left-active: $switch-thumb-left - ($switch-thumb-size / 2 )
 
 			&:checked {
 				// Track
-				+ .sc-lever {
+				+ .lever {
 					background: $switch-track-background-active;
 
 					// Thumb
@@ -260,11 +260,13 @@ $switch-thumb-radial-left-active: $switch-thumb-left - ($switch-thumb-size / 2 )
 						left: $switch-thumb-left;
 					}
 
-					// Radial
-					@media #{$medium-down} {
-						&:active:before, &:focus:before {
-							left: $switch-thumb-radial-left-active;
-							background: $switch-thumb-radial-background-active;
+					@if( $amp == false ) {
+						// Radial
+						@media #{$medium-down} {
+							&:active:before, &:focus:before {
+								left: $switch-thumb-radial-left-active;
+								background: $switch-thumb-radial-background-active;
+							}
 						}
 					}
 				}
@@ -272,7 +274,7 @@ $switch-thumb-radial-left-active: $switch-thumb-left - ($switch-thumb-size / 2 )
 
 			&:disabled {
 				// Track
-				+ .sc-lever {
+				+ .lever {
 					background: $switch-track-disabled-background;
 
 					// Thumb
@@ -280,10 +282,12 @@ $switch-thumb-radial-left-active: $switch-thumb-left - ($switch-thumb-size / 2 )
 						background: $switch-thumb-disabled-background;
 					}
 
-					// Radial
-					@media #{$medium-down} {
-						&:active:before, &:focus:before {
-							background: $switch-thumb-radial-disabled-background;
+					@if( $amp == false ) {
+						// Radial
+						@media #{$medium-down} {
+							&:active:before, &:focus:before {
+								background: $switch-thumb-radial-disabled-background;
+							}
 						}
 					}
 				}

@@ -149,7 +149,7 @@
 	transition-delay: $setting;
 }
 
-@mixin button( $border-radius: var(--border-size, $border-size) ) {
+@mixin button( $border-radius: if( $var == true, var(--border-size, $border-size), $border-size) ) {
 	cursor: pointer;
 	@include border-radius( $border-radius );
 	text-decoration: none;

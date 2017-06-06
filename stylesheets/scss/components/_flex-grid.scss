@@ -1,8 +1,8 @@
-.sc-row {
+.row {
 	@include flex-container(row, wrap, flex-start, flex-start, flex-start);
 }
 
-.sc-col {
+.col {
 	flex-grow: 1;
 	padding: ($gutter / 2);
 	margin: 0;
@@ -13,7 +13,7 @@
 	}
 }
 
-.sc-xs {
+.xs {
 	flex-grow: 1;
 	flex-basis: 0;
 	max-width: 100%;
@@ -23,17 +23,17 @@
 $i: 1;
 @while( $i <= $xsmall-columns ) {
 	$percentage: unquote( ( $i / $xsmall-columns ) * 100 + '%' );
-	.sc-xs#{$i} {
+	.xs#{$i} {
 		flex-basis: $percentage;
 		max-width: $percentage;
 	}
 
-	.sc-offset-xs#{$i} {
+	.offset-xs#{$i} {
 		margin-left: $percentage;
 	}
 
 	@if( in-array( 'order', $flex-grid ) ) {
-		.sc-order-xs#{$i} {
+		.order-xs#{$i} {
 			@include order(#{$i});
 		}
 	}
@@ -41,7 +41,7 @@ $i: 1;
 }
 
 @media only screen and (min-width: #{$xsmall-screen} + 1px) {
-	.sc-s {
+	.s {
 		flex-grow: 1;
 		flex-basis: 0;
 		max-width: 100%;
@@ -50,17 +50,17 @@ $i: 1;
 	$i: 1;
 	@while( $i <= $small-columns ) {
 		$percentage: unquote(($i / $small-columns) * 100 + '%');
-		.sc-s#{$i} {
+		.s#{$i} {
 			flex-basis: $percentage;
 			max-width: $percentage;
 		}
 
-		.sc-offset-s#{$i} {
+		.offset-s#{$i} {
 			margin-left: $percentage;
 		}
 
 		@if( in-array( 'order', $flex-grid ) ) {
-			.sc-order-s#{$i} {
+			.order-s#{$i} {
 				@include order(#{$i});
 			}
 		}
@@ -69,7 +69,7 @@ $i: 1;
 }
 
 @media only screen and (min-width: 841px) {
-	.sc-s {
+	.s {
 		flex-grow: 1;
 		flex-basis: 0;
 		max-width: 100%;
@@ -78,17 +78,17 @@ $i: 1;
 	$i: 1;
 	@while( $i <= $columns ) {
 		$percentage: unquote(($i / $columns) * 100 + '%');
-		.sc-s#{$i} {
+		.s#{$i} {
 			flex-basis: $percentage;
 			max-width: $percentage;
 		}
 
-		.sc-offset-s#{$i} {
+		.offset-s#{$i} {
 			margin-left: $percentage;
 		}
 
 		@if( in-array( 'order', $flex-grid ) ) {
-			.sc-order-s#{$i} {
+			.order-s#{$i} {
 				@include order(#{$i});
 			}
 		}
@@ -97,7 +97,7 @@ $i: 1;
 }
 @if( $amp == false ) {
 	@media #{$small-up} {
-		.sc-m {
+		.m {
 			flex-grow: 1;
 			flex-basis: 0;
 			max-width: 100%;
@@ -106,17 +106,17 @@ $i: 1;
 		$i: 1;
 		@while( $i <= $columns ) {
 			$percentage: unquote(($i / $columns) * 100 + '%');
-			.sc-m#{$i} {
+			.m#{$i} {
 				flex-basis: $percentage;
 				max-width: $percentage;
 			}
 
-			.sc-offset-m#{$i} {
+			.offset-m#{$i} {
 				margin-left: $percentage;
 			}
 
 			@if( in-array( 'order', $flex-grid ) ) {
-				.sc-order-m#{$i} {
+				.order-m#{$i} {
 					@include order(#{$i});
 				}
 			}
@@ -125,7 +125,7 @@ $i: 1;
 	}
 
 	@media #{$medium-up} {
-		.sc-l {
+		.l {
 			flex-grow: 1;
 			flex-basis: 0;
 			max-width: 100%;
@@ -134,17 +134,17 @@ $i: 1;
 		$i: 1;
 		@while ($i <= $columns) {
 			$percentage: unquote(($i / $columns) * 100 + '%');
-			.sc-l#{$i} {
+			.l#{$i} {
 				flex-basis: $percentage;
 				max-width: $percentage;
 			}
 
-			.sc-offset-l#{$i} {
+			.offset-l#{$i} {
 				margin-left: $percentage;
 			}
 
 			@if (in-array('order', $flex-grid)) {
-				.sc-order-l#{$i} {
+				.order-l#{$i} {
 					@include order(#{$i});
 				}
 			}
@@ -153,7 +153,7 @@ $i: 1;
 	}
 
 	@media #{$large-up} {
-		.sc-xl {
+		.xl {
 			flex-grow: 1;
 			flex-basis: 0;
 			max-width: 100%;
@@ -162,17 +162,17 @@ $i: 1;
 		$i: 1;
 		@while ($i <= $columns) {
 			$percentage: unquote(($i / $columns) * 100 + '%');
-			.sc-xl#{$i} {
+			.xl#{$i} {
 				flex-basis: $percentage;
 				max-width: $percentage;
 			}
 
-			.sc-offset-xl#{$i} {
+			.offset-xl#{$i} {
 				margin-left: $percentage;
 			}
 
 			@if (in-array('order', $flex-grid)) {
-				.sc-order-xl#{$i} {
+				.order-xl#{$i} {
 					@include order(#{$i});
 				}
 			}
@@ -182,31 +182,31 @@ $i: 1;
 }
 
 @if( in-array( 'hidden', $flex-grid ) ) {
-	.sc-xs-hidden {
+	.xs-hidden {
 		@media #{$xsmall-only} {
 			display: none;
 		}
 	}
 
-	.sc-s-hidden {
+	.s-hidden {
 		@media #{$small-only} {
 			display: none;
 		}
 	}
 	@if( $amp == false ) {
-		.sc-m-hidden {
+		.m-hidden {
 			@media #{$medium-only} {
 				display: none;
 			}
 		}
 
-		.sc-l-hidden {
+		.l-hidden {
 			@media #{$large-only} {
 				display: none;
 			}
 		}
 
-		.sc-xl-hidden {
+		.xl-hidden {
 			@media #{$xlarge-only} {
 				display: none;
 			}

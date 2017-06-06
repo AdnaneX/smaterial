@@ -4,19 +4,19 @@
  * http://www.google.com/design/spec/components/progress-activity.html
  **************************************/
 
-.sc-determinate, .sc-indeterminate, .sc-buffer {
+.determinate, .indeterminate, .buffer {
 	width: 100%;
 	height: rem-calc(5px);
 	position: relative;
 }
 
 @if( in-array( 'determinate', $progress ) ) {
-	.sc-determinate {
+	.determinate {
 		background: $progressbar-background;
 	}
 }
 
-.sc-progressbar {
+.progressbar {
 	background: $progress-background;
 	@include transition(width $transition-small-duration $standard-transition);
 	bottom: 0;
@@ -26,11 +26,11 @@
 }
 
 @if( in-array( 'indeterminate', $progress ) ) {
-	.sc-indeterminate {
+	.indeterminate {
 		background: $progressbar-background;
 		overflow: hidden;
 
-		.sc-progressbar {
+		.progressbar {
 			width: 60%;
 			@include animation(indeterminate 1.5s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite);
 			@include keyframes(indeterminate) {
@@ -62,21 +62,21 @@
 }
 
 @if( in-array( 'buffer', $progress ) ) {
-	.sc-buffer {
+	.buffer {
 		overflow: hidden;
 
 		> div {
 			display: inline-block;
 		}
 
-		.sc-buffer-progress {
+		.buffer-progress {
 			background: $progressbar-background;
 			bottom: 0;
 			position: absolute;
 			top: 0;
 		}
 
-		.sc-buffering {
+		.buffering {
 			background-image: linear-gradient(to right, rgba(255, 255, 255, .7), rgba(255, 255, 255, .7)), linear-gradient(to right, $main-color, $main-color);
 			bottom: 0;
 			position: absolute;
@@ -97,7 +97,7 @@
 }
 
 @if( in-array( 'circular', $progress ) ) {
-	.sc-circular {
+	.circular {
 		position: relative;
 		margin: 0 auto;
 		width: $circular-width;

@@ -4,9 +4,9 @@
  * http://www.google.com/design/spec/components/cards.html#cards-usage
  **************************************/
 
-.sc-card {
+.card {
 	@include material-shadow(2);
-	@include border-radius(var(--border-size, $border-size));
+	@include border-radius(if( $var == true, var(--border-size, $border-size), $border-size ) );
 	//margin: rem-calc(8px);
 	width: 100%;
 	padding: 0;
@@ -61,7 +61,7 @@
 			padding: rem-calc(16px) rem-calc(24px);
 		}
 
-		.sc-subhead-1 {
+		.subhead-1 {
 			font-size: rem-calc(14px);
 			color: rgba($black, .38);
 			font-weight: 400;
@@ -88,16 +88,16 @@
 	img {
 		width: 100%;
 
-		&.sc-card-top {
-			@include border-radius-top(var(--border-size, $border-size));
+		&.card-top {
+			@include border-radius-top( if( $var == true, var(--border-size, $border-size), $border-size ) );
 		}
 
-		&.sc-card-background {
-			@include border-radius(var(--border-size, $border-size));
+		&.card-background {
+			@include border-radius( if( $var == true, var(--border-size, $border-size), $border-size ) );
 			height: 100%;
 		}
 
-		&.sc-card-avatar {
+		&.card-avatar {
 			float: left;
 			@include border-radius(50%);
 			margin: rem-calc(16px);
@@ -105,8 +105,8 @@
 		}
 	}
 
-	.sc-card-content {
-		@include border-radius-bottom(var(--border-size, $border-size));
+	.card-content {
+		@include border-radius-bottom( if( $var == true, var(--border-size, $border-size), $border-size ) );
 		background: rgba($black, .54);
 		position: absolute;
 		bottom: 0;

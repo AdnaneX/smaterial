@@ -1,21 +1,21 @@
 @if( $amp == false ) {
-	body.sc-full-width {
-		.sc-appbar {
+	body.full-width {
+		.appbar {
 			@media #{$small-up} {
-				.sc-appbar-title {
+				.appbar-title {
 					margin-left: rem-calc(72px) - (($large-gutter * 1.5) + $appbar-icon-large-size);
 				}
 			}
 		}
 
-		.sc-bottom-nav, .sc-bottom-shifting {
+		.bottom-nav, .bottom-shifting {
 			@media #{$small-up} {
 				left: 0;
 				width: 100%;
 			}
 		}
 
-		.sc-drawer {
+		.drawer {
 			margin: 0 0 0 -102%;
 
 			@media #{$small-up} {
@@ -35,7 +35,7 @@
 				}
 			}
 
-			&.sc-expanded {
+			&.expanded {
 				margin: 0;
 
 				@media #{$small-up} {
@@ -56,7 +56,7 @@
 			}
 		}
 
-		.sc-tabs {
+		.tabs {
 			@media #{$small-up} {
 				left: 0;
 				width: 100%;

@@ -11,9 +11,9 @@ $notification-content-sides: rem-calc(8px);
 $notification-content-bottom: rem-calc(10px);
 $notification-image-size: rem-calc(40px);
 
-.sc-notification {
+.notification {
 	@include material-shadow(3);
-	@include border-radius(var(--border-size, $border-size));
+	@include border-radius(if( $var == true, var(--border-size, $border-size), $border-size ) );
 	background: $notification-background;
 	float: left;
 	max-width: 100%;
@@ -28,7 +28,7 @@ $notification-image-size: rem-calc(40px);
 			display: inline-block;
 		}
 
-		.sc-separator {
+		.separator {
 			&:after {
 				color: rgba($black, .54);
 				content: '\25CF';  // \2022
@@ -70,7 +70,7 @@ $notification-image-size: rem-calc(40px);
 		padding: $notification-content-top $notification-content-sides $notification-content-bottom $notification-content-sides;
 		position: relative;
 
-		&-title, .sc-subject {
+		&-title, .subject {
 		 	color: rgba($black, .87);
 			font-weight: 500;
 		}
@@ -116,8 +116,8 @@ $notification-image-size: rem-calc(40px);
 		}
 	}
 
-	&.sc-standard {
-		.sc-notification-content > div {
+	&.standard {
+		.notification-content > div {
 			width: 75%;
 		}
 
@@ -132,8 +132,8 @@ $notification-image-size: rem-calc(40px);
 	}
 
 	@if( in-array( 'big-text', $notification ) ) {
-		&.sc-big-text {
-			.sc-notification-content-text {
+		&.big-text {
+			.notification-content-text {
 				max-height: 0;
 				@include opacity(0);
 				visibility: hidden;
@@ -150,8 +150,8 @@ $notification-image-size: rem-calc(40px);
 	}
 
 	@if( in-array( 'big-picture', $notification ) ) {
-		&.sc-big-picture {
-			.sc-notification-content {
+		&.big-picture {
+			.notification-content {
 				position: relative;
 
 				&-text img {
@@ -195,13 +195,13 @@ $notification-image-size: rem-calc(40px);
 	}
 
 	@if( in-array( 'progress', $notification ) ) {
-		&.sc-progress {
-			.sc-notification-content-title, .sc-notification-content-text {
+		&.progress {
+			.notification-content-title, .notification-content-text {
 				display: inline-block;
 				width: 50%;
 			}
 
-			.sc-notification-content-text {
+			.notification-content-text {
 				float: right;
 				text-align: right;
 			}
@@ -209,10 +209,10 @@ $notification-image-size: rem-calc(40px);
 	}
 
 	@if( in-array( 'media', $notification ) ) {
-		&.sc-media {
+		&.media {
 			width: rem-calc(400px);
 
-			.sc-notification-content {
+			.notification-content {
 				@include transition(height $transition-small-duration $standard-transition);
 
 				@if( $amp == false ) {
@@ -227,7 +227,7 @@ $notification-image-size: rem-calc(40px);
 				}
 			}
 
-			.sc-actions {
+			.actions {
 				left: auto;
 				position: absolute;
 				right: rem-calc(48px);
@@ -293,8 +293,8 @@ $notification-image-size: rem-calc(40px);
 		}
 	}
 
-	&.sc-expanded {
-		.sc-notification-actions {
+	&.expanded {
+		.notification-actions {
 			background: $grey-200;
 			@include opacity(1);
 			max-height: rem-calc(2000px);
@@ -306,15 +306,15 @@ $notification-image-size: rem-calc(40px);
 			}
 		}
 
-		.sc-notification-header-expand {
+		.notification-header-expand {
 			.material-icons {
 				@include transform(rotate(180deg));
 			}
 		}
 
 		@if( in-array( 'big-text', $notification ) ) {
-			&.sc-big-text {
-				.sc-notification-content-text {
+			&.big-text {
+				.notification-content-text {
 					max-height: rem-calc(2000px);
 					@include opacity(1);
 					visibility: visible;
@@ -323,8 +323,8 @@ $notification-image-size: rem-calc(40px);
 		}
 
 		@if( in-array( 'big-picture', $notification ) ) {
-			&.sc-big-picture {
-				.sc-notification-content {
+			&.big-picture {
+				.notification-content {
 					&-text {
 						img {
 							visibility: visible;
@@ -341,11 +341,11 @@ $notification-image-size: rem-calc(40px);
 		}
 
 		@if( in-array( 'media', $notification ) ) {
-			&.sc-media {
-				.sc-notification-content {
+			&.media {
+				.notification-content {
 					height: calc((#{rem-calc($line-height-body-1+0px)} * 2) + #{$notification-media-icon-size} + #{$notification-content-top} + #{$notification-content-bottom});
 
-					.sc-actions {
+					.actions {
 						left: $notification-content-sides;
 						text-align: left;
 						right: auto;

@@ -11,7 +11,7 @@
 	width: $icon-size;
 	color: if( $theme == light, rgba($black, .26), rgba($white, .3));
 
-	&:active, &.sc-active {
+	&:active, &.active {
 		color: if( $theme == light, rgba($black, .54), rgba($white, 1));
 	}
 
@@ -32,22 +32,22 @@
 	font-feature-settings: 'liga';*/
 
 	@if( in-array( 'sizes', $icons ) ) {
-		&.sc-18 {
+		&.18 {
 			font-size: rem-calc(18px);
 			@include square(rem-calc(18px));
 		}
 
-		&.sc-24 {
+		&.24 {
 			font-size: rem-calc(24px);
 			@include square(rem-calc(24px));
 		}
 
-		&.sc-36 {
+		&.36 {
 			font-size: rem-calc(36px);
 			@include square(rem-calc(36px));
 		}
 
-		&.sc-48 {
+		&.48 {
 			font-size: rem-calc(48px);
 			@include square(rem-calc(48px));
 		}

@@ -1,18 +1,18 @@
 $(document).ready(function() {
-	var $trigger = $('.sc-trigger'),
+	var $trigger = $('.trigger'),
 		$triggered = undefined;
 
 	$trigger.click(function() {
 		var $this = $(this),
-			$element = $('#'+$this.data('sc-trigger'));
+			$element = $('#'+$this.data('trigger'));
 
 		$triggered = $element;
 
-		if( $element.hasClass('sc-expanded') ) {
-			$element.removeClass('sc-expanded');
+		if( $element.hasClass('expanded') ) {
+			$element.removeClass('expanded');
 			$(document).trigger('collapsed');
 		} else {
-			$element.addClass('sc-expanded');
+			$element.addClass('expanded');
 			$(document).trigger('expanded');
 		}
 	});
@@ -22,7 +22,7 @@ $(document).ready(function() {
 			if( $triggered.visible() ) {
 				// if the target of the click isn't the $triggered nor a descendant of the $triggered
 				if( !$triggered.is( e.target ) && $triggered.has( e.target ).length === 0 ) {
-					$triggered.removeClass( 'sc-expanded' );
+					$triggered.removeClass( 'expanded' );
 					$(document).trigger('collapsed');
 				}
 			}
@@ -30,5 +30,5 @@ $(document).ready(function() {
 	});
 
 	// Add element behind title in appbar to place other elements at the end
-	$('.sc-appbar-title').after('<div class="sc-appbar-spacer"></div>');
+	$('.appbar-title').after('<div class="appbar-spacer"></div>');
 });

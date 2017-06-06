@@ -13,18 +13,18 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	}
 </style>
 
-<section class="sc-row">
-	<h2 class="sc-col sc-xs4 sc-s12">Elevation and shadows usage</h2>
+<section class="row">
+	<h2 class="col xs4 s12">Elevation and shadows usage</h2>
 
-	<p class="sc-col sc-xs4 sc-s12 sc-m6">
+	<p class="col xs4 s12 m6">
 		Each element has it's own elevation and shadow. The elevation and shadows are described here.
 	</p>
 </section>
 
-<section class="sc-row">
-	<h3 class="sc-col sc-xs4 sc-s12">Shadow / elevation</h3>
+<section class="row">
+	<h3 class="col xs4 s12">Shadow / elevation</h3>
 
-	<table class="sc-col sc-xs4 sc-s12 sc-m7">
+	<table class="col xs4 s12 m7">
 		<thead>
 		<tr>
 			<th>Elevation (px)</th>
@@ -36,97 +36,97 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		<tbody>
 		<tr>
 			<td>24</td>
-			<td><code>.sc-z24</code></td>
+			<td><code>.z24</code></td>
 			<td>
 				<p><a href="/components/dialogs.php">Dialog</a></p>
 				<p><a href="">Picker</a></p>
 			</td>
-			<td><div class="sc-z24 square"></div></td>
+			<td><div class="z24 square"></div></td>
 		</tr>
 		<tr>
 			<td>16</td>
-			<td><code>.sc-z16</code></td>
+			<td><code>.z16</code></td>
 			<td>
 				<p><a href="/patterns/navigation-drawer.php">Nav drawer (sidenav)</a></p>
 				<p><a href="/patterns/navigation-drawer.php">Right drawer</a></p>
 				<p><a href="/components/bottom-sheet.php">Modal bottom sheet</a></p>
 			</td>
-			<td><div class="sc-z16 square"></div></td>
+			<td><div class="z16 square"></div></td>
 		</tr>
 		<tr>
 			<td>12</td>
-			<td><code>.sc-z12</code></td>
+			<td><code>.z12</code></td>
 			<td>
-					<p><a href="/components/buttons.php#sc-floating-button">Floating action button (FAB - pressed)</a></p>
+					<p><a href="/components/buttons.php#floating-button">Floating action button (FAB - pressed)</a></p>
 			</td>
-			<td><div class="sc-z12 square"></div></td>
+			<td><div class="z12 square"></div></td>
 		</tr>
 		<tr>
 			<td>9</td>
-			<td><code>.sc-z9</code></td>
+			<td><code>.z9</code></td>
 			<td>
 				<p><a href="">Sub menu</a></p>
 			</td>
-			<td><div class="sc-z9 square"></div></td>
+			<td><div class="z9 square"></div></td>
 		</tr>
 		<tr>
 			<td>8</td>
-			<td><code>.sc-z8</code></td>
+			<td><code>.z8</code></td>
 			<td>
 				<p><a href="/components/menu.php">Menu</a></p>
 				<p><a href="/components/cards.php">Card (picked up state)</a></p>
 				<p><a href="/components/buttons.php#raised-button">Raised button (pressed state)</a></p>
 			</td>
-			<td><div class="sc-z8 square"></div></td>
+			<td><div class="z8 square"></div></td>
 		</tr>
 		<tr>
 			<td>6</td>
-			<td><code>.sc-z6</code></td>
+			<td><code>.z6</code></td>
 			<td>
-					<p><a href="/components/buttons.php#sc-floating-button">Floating action button (FAB - resting elevation)</a></p>
+					<p><a href="/components/buttons.php#floating-button">Floating action button (FAB - resting elevation)</a></p>
 				<p><a href="/components/snackbars-toasts.php">Snackbar</a></p>
 			</td>
-			<td><div class="sc-z6 square"></div></td>
+			<td><div class="z6 square"></div></td>
 		</tr>
 		<tr>
 			<td>4</td>
-			<td><code>.sc-z4</code></td>
+			<td><code>.z4</code></td>
 			<td>
 				<p><a href="/components/appbar.php">App Bar</a></p>
 			</td>
-			<td><div class="sc-z4 square"></div></td>
+			<td><div class="z4 square"></div></td>
 		</tr>
 		<tr>
 			<td>3</td>
-			<td><code>.sc-z3</code></td>
+			<td><code>.z3</code></td>
 			<td>
 				<p><a href="">Refresh indicator</a></p>
 				<p><a href="">Quick entry / Search bar (scrolled state)</a></p>
 			</td>
-			<td><div class="sc-z3 square"></div></td>
+			<td><div class="z3 square"></div></td>
 		</tr>
 		<tr>
 			<td>2</td>
-			<td><code>.sc-z2</code></td>
+			<td><code>.z2</code></td>
 			<td>
 				<p><a href="/components/cards.php">Card (resting elevation)</a></p>
 				<p><a href="/components/buttons.php#raised-button">Raised button (resting elevation)</a></p>
 				<p><a href="">Quick entry / Search bar (resting elevation)</a></p>
 				<p><a href="/components/chips.php">Chips (contact chip hovered and pressed)</a></p>
 			</td>
-			<td><div class="sc-z2 square"></div></td>
+			<td><div class="z2 square"></div></td>
 		</tr>
 		<tr>
 			<td>1</td>
-			<td><code>.sc-z1</code></td>
+			<td><code>.z1</code></td>
 			<td>
 				<p><a href="/components/selection-controls.php#switch">Switch</a></p>
 			</td>
-			<td><div class="sc-z1 square"></div></td>
+			<td><div class="z1 square"></div></td>
 		</tr>
 		<tr>
 			<td>0</td>
-			<td><code>.sc-z0</code></td>
+			<td><code>.z0</code></td>
 			<td>Will remove shadow</td>
 		</tr>
 		</tbody>

@@ -1,7 +1,7 @@
 $(document).ready(function() {
-	if($('.sc-chip-delete').length >= 1 ) {
-		$( '.sc-chip-delete' ).click( function () {
-			$( this ).closest( '.sc-chip' ).remove();
+	if($('.chip-delete').length >= 1 ) {
+		$( '.chip-delete' ).click( function () {
+			$( this ).closest( '.chip' ).remove();
 		} );
 	}
 });

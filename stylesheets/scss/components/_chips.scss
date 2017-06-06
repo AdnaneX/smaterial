@@ -9,7 +9,7 @@ $chips-size: rem-calc(32px); // Default rem-calc(32px)
 $chips-font-size: rem-calc(13px);
 $chips-delete-size: rem-calc(15px); // Default rem-calc(15px)
 
-.sc-chip {
+.chip {
 	@include border-radius($chips-size);
 	background: $chips-background;
 	color: $chips-font-color;
@@ -22,7 +22,7 @@ $chips-delete-size: rem-calc(15px); // Default rem-calc(15px)
 
 	@if( in-array( 'deletable', $chip ) ) {
 		&-deletable {
-			.sc-chip-delete {
+			.chip-delete {
 				@include border-radius(50%);
 				@include transition(color $transition-small-duration $standard-transition unquote(',') background $transition-small-duration $standard-transition);
 				background: $chips-delete-background;
@@ -52,7 +52,7 @@ $chips-delete-size: rem-calc(15px); // Default rem-calc(15px)
 				background: $chips-background-hover;
 				color: $chips-font-hover-color;
 
-				.sc-chip-delete {
+				.chip-delete {
 					background: $chips-delete-background-hover;
 					color: $chips-delete-cross-hover;
 				}

@@ -6,43 +6,43 @@ $keywords = 'bottom navigation, bottom menu, bottom shifting';
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>
 
-<section class="sc-row">
-	<h2 class="sc-col sc-xs4 sc-s12">Bottom navigation usage</h2>
+<section class="row">
+	<h2 class="col xs4 s12">Bottom navigation usage</h2>
 
-	<p class="sc-col sc-xs4 sc-s12 sc-m6">
+	<p class="col xs4 s12 m6">
 		You can use the bottom navigation to easily switch between top-level views in a single tap.
 		There are two types of bottom navigation you can use (default and shifting)
 	</p>
 </section>
 
-<section class="sc-row">
-	<h3 class="sc-col sc-xs4 sc-s12">Default bottom navigation</h3>
+<section class="row">
+	<h3 class="col xs4 s12">Default bottom navigation</h3>
 
-	<p class="sc-col sc-xs4 sc-s12 sc-m6">
-		<button class="sc-raised-button sc-trigger" data-sc-trigger="bottom-nav">Show</button>
+	<p class="col xs4 s12 m6">
+		<button class="raised-button trigger" data-trigger="bottom-nav">Show</button>
 	</p>
 
-	<pre class="language-html sc-xs4 sc-s12 sc-m6">
+	<pre class="language-html xs4 s12 m6">
 		<code>
-&lt;nav class="sc-bottom-nav">
+&lt;nav class="bottom-nav">
   &lt;a href="#">
     &lt;i class="material-icons">favorite&lt;/i>
 
-    &lt;div class="sc-content">
+    &lt;div class="content">
       Favorite
     &lt;/div>
   &lt;/a>
-  &lt;a href="#" class="sc-active">
+  &lt;a href="#" class="active">
     &lt;i class="material-icons">cloud&lt;/i>
 
-    &lt;div class="sc-content">
+    &lt;div class="content">
       Cloud
     &lt;/div>
   &lt;/a>
   &lt;a href="#">
     &lt;i class="material-icons">file_upload&lt;/i>
 
-    &lt;div class="sc-content">
+    &lt;div class="content">
       Upload
     &lt;/div>
   &lt;/a>
@@ -51,34 +51,34 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	</pre>
 </section>
 
-<Section class="sc-row">
-	<h3 class="sc-col sc-xs4 sc-s12">Shifting bottom navigation</h3>
+<Section class="row">
+	<h3 class="col xs4 s12">Shifting bottom navigation</h3>
 
-	<p class="sc-col sc-xs4 sc-s12 sc-m6">
-		<button class="sc-raised-button sc-trigger" data-sc-trigger="shifting-nav">Show</button>
+	<p class="col xs4 s12 m6">
+		<button class="raised-button trigger" data-trigger="shifting-nav">Show</button>
 	</p>
 
-	<pre class="language-html sc-xs4 sc-s12 sc-m6">
+	<pre class="language-html xs4 s12 m6">
 		<code>
-&lt;nav class="sc-bottom-shifting">
+&lt;nav class="bottom-shifting">
   &lt;a href="#">
     &lt;i class="material-icons">favorite&lt;/i>
 
-    &lt;div class="sc-content">
+    &lt;div class="content">
       Favorite
     &lt;/div>
   &lt;/a>
-  &lt;a href="#" class="sc-active">
+  &lt;a href="#" class="active">
     &lt;i class="material-icons">cloud&lt;/i>
 
-    &lt;div class="sc-content">
+    &lt;div class="content">
       Cloud
     &lt;/div>
   &lt;/a>
   &lt;a href="#">
     &lt;i class="material-icons">file_upload&lt;/i>
 
-    &lt;div class="sc-content">
+    &lt;div class="content">
       Upload
     &lt;/div>
   &lt;/a>
@@ -87,8 +87,8 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	</pre>
 </Section>
 
-<section class="sc-row">
-	<h3 class="sc-col sc-xs4 sc-s12">Settings</h3>
+<section class="row">
+	<h3 class="col xs4 s12">Settings</h3>
 
 	<table>
 		<thead>
@@ -114,49 +114,49 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	</table>
 </section>
 
-<nav class="sc-bottom-nav" id="bottom-nav">
+<nav class="bottom-nav" id="bottom-nav">
     <a href="#">
         <i class="material-icons">favorite</i>
 
-        <div class="sc-content">
+        <div class="content">
             Favorite
         </div>
     </a>
-    <a href="#" class="sc-active">
+    <a href="#" class="active">
         <i class="material-icons">cloud</i>
 
-        <div class="sc-content">
+        <div class="content">
             Cloud
         </div>
     </a>
     <a href="#">
         <i class="material-icons">file_upload</i>
 
-        <div class="sc-content">
+        <div class="content">
             Upload
         </div>
     </a>
 </nav>
 
-<nav class="sc-bottom-shifting" id="shifting-nav">
+<nav class="bottom-shifting" id="shifting-nav">
     <a href="#">
         <i class="material-icons">favorite</i>
 
-        <div class="sc-content">
+        <div class="content">
             Favorite
         </div>
     </a>
-    <a href="#" class="sc-active">
+    <a href="#" class="active">
         <i class="material-icons">cloud</i>
 
-        <div class="sc-content">
+        <div class="content">
             Cloud
         </div>
     </a>
     <a href="#">
         <i class="material-icons">file_upload</i>
 
-        <div class="sc-content">
+        <div class="content">
             Upload
         </div>
     </a>

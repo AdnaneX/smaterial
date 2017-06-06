@@ -1,4 +1,4 @@
-.sc-row {
+.row {
 	//margin: 0 auto rem-calc(20px) auto;
 
 	// Clear floating children
@@ -8,7 +8,7 @@
 		display: table;
 	}
 
-	.sc-col {
+	.col {
 		float: left;
 		@include box-sizing(border-box);
 		padding: ($gutter / 2);
@@ -27,22 +27,22 @@
 		$i: 1;
 		@while $i <= $xsmall-columns {
 			$percent: unquote(( 100 / ( $xsmall-columns / $i ) ) + "%");
-			&.sc-xs#{$i} {
+			&.xs#{$i} {
 				width: $percent;
 				margin-left: auto;
 				left: auto;
 				right: auto;
 			}
 
-			&.sc-offset-xs#{$i} {
+			&.offset-xs#{$i} {
 				margin-left: $percent;
 			}
 
-			&.sc-pull-xs#{$i} {
+			&.pull-xs#{$i} {
 				right: $percent;
 			}
 
-			&.sc-push-xs#{$i} {
+			&.push-xs#{$i} {
 				left: $percent;
 			}
 			$i: $i + 1;
@@ -55,22 +55,22 @@
 				$i: 1;
 				@while $i <= $small-columns {
 					$percent: unquote(( 100 / ( $small-columns / $i ) ) + "%");
-					&.sc-s#{$i} {
+					&.s#{$i} {
 						width: $percent;
 						margin-left: auto;
 						left: auto;
 						right: auto;
 					}
 
-					&.sc-offset-s#{$i} {
+					&.offset-s#{$i} {
 						margin-left: $percent;
 					}
 
-					&.sc-pull-s#{$i} {
+					&.pull-s#{$i} {
 						right: $percent;
 					}
 
-					&.sc-push-s#{$i} {
+					&.push-s#{$i} {
 						left: $percent;
 					}
 					$i: $i + 1;
@@ -82,22 +82,22 @@
 				$i: 1;
 				@while $i <= $columns {
 					$percent: unquote(( 100 / ( $columns / $i ) ) + "%");
-					&.sc-s#{$i} {
+					&.s#{$i} {
 						width: $percent;
 						margin-left: auto;
 						left: auto;
 						right: auto;
 					}
 
-					&.sc-offset-s#{$i} {
+					&.offset-s#{$i} {
 						margin-left: $percent;
 					}
 
-					&.sc-pull-s#{$i} {
+					&.pull-s#{$i} {
 						right: $percent;
 					}
 
-					&.sc-push-s#{$i} {
+					&.push-s#{$i} {
 						left: $percent;
 					}
 					$i: $i + 1;
@@ -109,22 +109,22 @@
 				$i: 1;
 				@while $i <= $columns {
 					$percent: unquote(( 100 / ( $columns / $i ) ) + "%");
-					&.sc-m#{$i} {
+					&.m#{$i} {
 						width: $percent;
 						margin-left: auto;
 						left: auto;
 						right: auto;
 					}
 
-					&.sc-offset-m#{$i} {
+					&.offset-m#{$i} {
 						margin-left: $percent;
 					}
 
-					&.sc-pull-m#{$i} {
+					&.pull-m#{$i} {
 						right: $percent;
 					}
 
-					&.sc-push-m#{$i} {
+					&.push-m#{$i} {
 						left: $percent;
 					}
 					$i: $i + 1
@@ -135,22 +135,22 @@
 				$i: 1;
 				@while $i <= $columns {
 					$percent: unquote(( 100 / ( $columns / $i ) ) + "%");
-					&.sc-l#{$i} {
+					&.l#{$i} {
 						width: $percent;
 						margin-left: auto;
 						left: auto;
 						right: auto;
 					}
 
-					&.sc-offset-l#{$i} {
+					&.offset-l#{$i} {
 						margin-left: $percent;
 					}
 
-					&.sc-pull-l#{$i} {
+					&.pull-l#{$i} {
 						right: $percent;
 					}
 
-					&.sc-push-l#{$i} {
+					&.push-l#{$i} {
 						left: $percent;
 					}
 					$i: $i + 1;
@@ -161,22 +161,22 @@
 				$i: 1;
 				@while $i <= $columns {
 					$percent: unquote(( 100 / ( $columns / $i ) ) + "%");
-					&.sc-xl#{$i} {
+					&.xl#{$i} {
 						width: $percent;
 						margin-left: auto;
 						left: auto;
 						right: auto;
 					}
 
-					&.sc-offset-xl#{$i} {
+					&.offset-xl#{$i} {
 						margin-left: $percent;
 					}
 
-					&.sc-pull-xl#{$i} {
+					&.pull-xl#{$i} {
 						right: $percent;
 					}
 
-					&.sc-push-xl#{$i} {
+					&.push-xl#{$i} {
 						left: $percent;
 					}
 					$i: $i + 1;
@@ -186,33 +186,33 @@
 	}
 }
 
-@if( in_array( 'hidden', $grid ) ) {
-	.sc-xs-hidden {
+@if( in-array( 'hidden', $grid ) ) {
+	.xs-hidden {
 		@media #{$xsmall-only} {
 			display: none;
 		}
 	}
 
-	.sc-s-hidden {
+	.s-hidden {
 		@media #{$small-only} {
 			display: none;
 		}
 	}
 
 	@if( $amp == false ) {
-		.sc-m-hidden {
+		.m-hidden {
 			@media #{$medium-only} {
 				display: none;
 			}
 		}
 
-		.sc-l-hidden {
+		.l-hidden {
 			@media #{$large-only} {
 				display: none;
 			}
 		}
 
-		.sc-xl-hidden {
+		.xl-hidden {
 			@media #{$xlarge-only} {
 				display: none;
 			}

@@ -5,15 +5,15 @@ $keywords = 'showroom, show';
 
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>
-<section class="sc-row">
-	<h2 class="sc-col sc-xs4 sc-s12">Show your creations</h2>
+<section class="row">
+	<h2 class="col xs4 s12">Show your creations</h2>
 
-	<p class="sc-col sc-xs4 sc-m6">
+	<p class="col xs4 m6">
 		Have you made anything using SMaterial and would you like to show.
 		Grab your chance fill out the form and yor creation might be shown.
 	</p>
 
-	<form action="<?php $_SERVER['PHP_SELF']; ?>" method="post" class="sc-col sc-xs4 sc-m6">
+	<form action="<?php $_SERVER['PHP_SELF']; ?>" method="post" class="col xs4 m6">
 		<?php
 		if( $_POST ) {
 			$errors = array();
@@ -35,12 +35,12 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 			if( empty( $errors ) ) {
 				$message = "Email: {$input['email']}, URL: {$input['url']}, name: {$input['name']}";
 				if( mail( 'smaterial.dsuper.nl', 'SMaterial website submit', $message ) ) {
-					echo '<span class="sc-green-500-text">Successfully submitted</span>';
+					echo '<span class="green-500-text">Successfully submitted</span>';
 				} else {
-					echo '<span class="sc-red-500-text">Something went wrong submitting your website</span>';
+					echo '<span class="red-500-text">Something went wrong submitting your website</span>';
 				}
 			} else {
-				echo '<ul class="sc-red-500-text">';
+				echo '<ul class="red-500-text">';
 				foreach( $errors as $key => $error ) {
 					echo '<li>'.$error.'</li>';
 				}
@@ -49,22 +49,22 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		}
 		?>
 
-		<div class="sc-row sc-floating-input">
-			<input type="email" name="email" id="email" required class="sc-col sc-xs4 sc-m6">
+		<div class="row floating-input">
+			<input type="email" name="email" id="email" required class="col xs4 m6">
 			<label for="email">Email</label>
 		</div>
 
-		<div class="sc-row sc-floating-input">
-			<input type="url" name="url" id="url" required class="sc-col sc-xs4 sc-m6">
+		<div class="row floating-input">
+			<input type="url" name="url" id="url" required class="col xs4 m6">
 			<label for="url">Url</label>
 		</div>
 
-		<div class="sc-row sc-floating-input">
-			<input type="text" name="name" id="name" required class="sc-col sc-xs4 sc-m6">
+		<div class="row floating-input">
+			<input type="text" name="name" id="name" required class="col xs4 m6">
 			<label for="name">Website name</label>
 		</div>
 
-		<button class="sc-raised-button">Submit <i class="material-icons">send</i></button>
+		<button class="raised-button">Submit <i class="material-icons">send</i></button>
 	</form>
 </section>
 <?php

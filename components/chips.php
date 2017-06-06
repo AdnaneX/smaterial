@@ -6,73 +6,73 @@ $keywords = 'chips';
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>
 
-<section class="sc-row">
-    <h2 class="sc-col sc-xs4 sc-s12">Chips usage</h2>
+<section class="row">
+    <h2 class="col xs4 s12">Chips usage</h2>
 
-    <p class="sc-col sc-xs4 sc-s12 sc-m6">
+    <p class="col xs4 s12 m6">
         You could use chips for something like tags or contacts.
     </p>
 </section>
 
-<section class="sc-row">
-    <h3 class="sc-col sc-xs4 sc-s12">Chip examples</h3>
+<section class="row">
+    <h3 class="col xs4 s12">Chip examples</h3>
 
-    <p class="sc-col sc-xs4 sc-s12 sc-m6">
-    There are a couple of chips. The normal (<code>.sc-chip</code>), the deletable (<code>.sc-chip .sc-chip-deletable</code>),
-    the contact (<code>.sc-chip .sc-chip-contact</code>) and the deletable contact (<code>.sc-chip .sc-chip-deletable .sc-chip-contact</code>).
+    <p class="col xs4 s12 m6">
+    There are a couple of chips. The normal (<code>.chip</code>), the deletable (<code>.chip .chip-deletable</code>),
+    the contact (<code>.chip .chip-contact</code>) and the deletable contact (<code>.chip .chip-deletable .chip-contact</code>).
     </p>
 
-    <div class="sc-col sc-xs4 sc-s12 sc-m6">
-        <div class="sc-chip sc-chip-deletable">
+    <div class="col xs4 s12 m6">
+        <div class="chip chip-deletable">
             <span>John Doe</span>
-            <i class="material-icons sc-chip-delete">clear</i>
+            <i class="material-icons chip-delete">clear</i>
         </div>
 
-        <div class="sc-chip">
+        <div class="chip">
             <span>John Doe</span>
         </div>
 
-        <div class="sc-chip sc-chip-contact sc-chip-deletable">
-            <img class="sc-left" src="/images/profile-icon.jpg" alt="Chip contact example">
+        <div class="chip chip-contact chip-deletable">
+            <img class="left" src="/images/profile-icon.jpg" alt="Chip contact example">
             <span>John Doe</span>
-            <i class="material-icons sc-chip-delete">clear</i>
+            <i class="material-icons chip-delete">clear</i>
         </div>
 
-        <div class="sc-chip sc-chip-contact">
-            <img class="sc-left" src="/images/profile-icon.jpg" alt="Chip contact example">
+        <div class="chip chip-contact">
+            <img class="left" src="/images/profile-icon.jpg" alt="Chip contact example">
             <span>John Doe</span>
         </div>
     </div>
 
-    <pre class="language-html sc-col sc-s12 sc-m6">
+    <pre class="language-html col s12 m6">
 		<code>
-&lt;div class="sc-chip sc-chip-deletable">
+&lt;div class="chip chip-deletable">
   &lt;span>John Doe&lt;/span>
-  &lt;i class="material-icons sc-chip-delete">clear&lt;/i>
+  &lt;i class="material-icons chip-delete">clear&lt;/i>
 &lt;/div>
 
-&lt;div class="sc-chip">
+&lt;div class="chip">
   &lt;span>John Doe&lt;/span>
 &lt;/div>
 
-&lt;div class="sc-chip sc-chip-contact sc-chip-deletable">
-  &lt;img class="sc-left" src="" alt="">
+&lt;div class="chip chip-contact chip-deletable">
+  &lt;img class="left" src="" alt="">
   &lt;span>John Doe&lt;/span>
-  &lt;i class="material-icons sc-chip-delete">clear&lt;/i>
+  &lt;i class="material-icons chip-delete">clear&lt;/i>
 &lt;/div>
 
-&lt;div class="sc-chip sc-chip-contact">
-  &lt;img class="sc-left" src="" alt="">
+&lt;div class="chip chip-contact">
+  &lt;img class="left" src="" alt="">
   &lt;span>John Doe&lt;/span>
 &lt;/div>
 		</code>
 	</pre>
 </section>
 
-<section class="sc-row">
-    <h3 class="sc-col sc-xs4 sc-s12">Settings</h3>
+<section class="row">
+    <h3 class="col xs4 s12">Settings</h3>
 
-    <table class="sc-col sc-xs4 sc-s12">
+    <table class="col xs4 s12">
         <thead>
         <tr>
             <th>Variable</th>

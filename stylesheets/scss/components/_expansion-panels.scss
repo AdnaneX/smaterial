@@ -4,7 +4,7 @@
  * https://material.google.com/components/expansion-panels.html
  **************************************/
 
-.sc-expansion-panel {
+.expansion-panel {
 	list-style-type: none;
 	padding: 0;
 	margin: 0;
@@ -39,7 +39,7 @@
 		margin: 0 rem-calc(16px) 0 0;
 	}
 
-	.sc-expand-icon {
+	.expand-icon {
 		color: rgba($black, .38);
 		position: absolute;
 		right: rem-calc(24px);
@@ -75,16 +75,16 @@
 		font-size: rem-calc(12px);
 		border-bottom: rem-calc(1px) solid rgba($black, .12);
 		position: relative;
-		background: var(--background, $background);
+		background: if( $var == true, var(--background, $background), $background );
 
-		&.sc-expanded {
+		&.expanded {
 			margin: rem-calc(16px) 0;
 
-			.sc-expand-icon .material-icons {
+			.expand-icon .material-icons {
 				@include transform(rotate(180deg));
 			}
 
-			.sc-expansion-panel-content {
+			.expansion-panel-content {
 				max-height: 100%;
 				padding: 0 0 rem-calc(16px) 0;
 				@include opacity(1);
@@ -95,7 +95,7 @@
 		&:focus {
 			background: $grey-200;
 
-			.sc-expand-icon {
+			.expand-icon {
 				color: rgba($black, .54);
 			}
 		}

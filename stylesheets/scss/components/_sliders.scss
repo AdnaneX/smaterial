@@ -96,7 +96,7 @@ input[type="range"] {
 	}
 }
 
-.sc-range {
+.range {
 	display: inline-block;
 	position: relative;
 	// Hide track
@@ -113,7 +113,7 @@ input[type="range"] {
 		}
 
 		@if( in-array( 'discrete', $slider ) ) {
-			&.sc-slider-discrete, &.sc-slider-discrete.sc-not-null {
+			&.slider-discrete, &.slider-discrete.not-null {
 				@include range-thumb() {
 					background: transparent;
 					border: $slider-track-height solid transparent;
@@ -122,7 +122,7 @@ input[type="range"] {
 		}
 
 		// When thumb over 0%
-		&.sc-not-null {
+		&.not-null {
 			@include range-thumb() {
 				@include border-radius(50%);
 				@include square($slider-thumb-size);
@@ -138,7 +138,7 @@ input[type="range"] {
 		}
 	}
 
-	.sc-range-track {
+	.range-track {
 		height: $slider-track-height;
 		margin: (($slider-thumb-size * -1) - $slider-track-height) 0 0 0;
 		position: relative;
@@ -150,17 +150,17 @@ input[type="range"] {
 			height: 100%;
 		}
 
-		.sc-range-track-before {
+		.range-track-before {
 			background: $slider-on-color;
 		}
 
-		.sc-range-track-after {
+		.range-track-after {
 			background: $slider-off-color;
 		}
 	}
 
 	&:active, &:focus {
-		.sc-slider-bubble {
+		.slider-bubble {
 			@include square($slider-bubble-active-size);
 			background: $slider-off-color;
 			border: none;
@@ -178,7 +178,7 @@ input[type="range"] {
 				top: $slider-bubble-active-size - ( $slider-track-height * 2 );
 			}
 
-			&.sc-not-null {
+			&.not-null {
 				background: $slider-on-color;
 				border: none;
 				font-size: $slider-bubble-font-size;
@@ -193,7 +193,7 @@ input[type="range"] {
 	}
 
 	@if( in-array( 'discrete', $slider ) ) {
-		.sc-slider-bubble {
+		.slider-bubble {
 			@include border-radius(50%);
 			@include square($slider-thumb-size);
 			background: $slider-bubble-background;
@@ -252,7 +252,7 @@ input[type="range"] {
 				}
 			}
 
-			&.sc-not-null {
+			&.not-null {
 				background: $slider-on-color;
 				border: $slider-track-height solid $slider-on-color;
 				color: $slider-bubble-font-color;
@@ -261,14 +261,14 @@ input[type="range"] {
 		}
 	}
 
-	&:disabled, &.sc-disabled {
+	&:disabled, &.disabled {
 		input[type="range"] {
 			@include range-thumb() {
 				background: $slider-thumb-background;
 				border: $slider-track-height solid $slider-off-color;
 			}
 
-			&.sc-not-null {
+			&.not-null {
 				@include range-thumb() {
 					background: $slider-off-color;
 					border: $slider-track-height solid var(--background, $background);
@@ -276,7 +276,7 @@ input[type="range"] {
 			}
 
 			@if( in-array( 'discrete', $slider ) ) {
-				&.sc-slider-discrete {
+				&.slider-discrete {
 					@include range-thumb() {
 						background: transparent;
 						border: $slider-track-height solid transparent;
@@ -285,18 +285,18 @@ input[type="range"] {
 			}
 		}
 
-		.sc-range-track-before {
+		.range-track-before {
 			background: $slider-off-color;
 		}
 
-		.sc-slider-bubble {
+		.slider-bubble {
 			background: $slider-off-color;
 			border: $slider-track-height solid var(--background, $background);
 		}
 
 		@if( in-array( 'discrete', $slider ) ) {
 			&:active, &:focus {
-				.sc-slider-bubble {
+				.slider-bubble {
 					background: $slider-off-color;
 					border: none;
 

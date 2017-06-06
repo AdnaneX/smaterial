@@ -8,8 +8,28 @@ $tab-height: rem-calc(48px);
 $tab-icon-size: rem-calc(24px);
 $tab-icon-text-height: rem-calc(72px);
 $tab-padding: rem-calc(12px);
+$tabs: '';
+@if( in-array( 'tab', $tab ) ) {
+	$tabs: $tabs + '.tab';
+}
 
-.sc-tabs {
+@if( in-array( 'tab-icon', $tab ) ) {
+	@if( $tabs == '' ) {
+		$tabs: $tabs + '.tab-icon';
+	} @else {
+		$tabs: $tabs + '.tab-icon';
+	}
+}
+
+@if( in-array( 'tab-icon-text', $tab ) ) {
+	@if( $tabs == '' ) {
+		$tabs: $tabs + '.tab-icon-text';
+	} @else {
+		$tabs: $tabs + '.tab-icon-text';
+	}
+}
+
+.tabs {
 	@include material-shadow(4);
 	background: $tab-background;
 	overflow: auto;
@@ -38,7 +58,7 @@ $tab-padding: rem-calc(12px);
 		}
 	}
 
-	.sc-tab, .sc-tab-icon, .sc-tab-icon-text {
+	#{$tabs} {
 		@include flex-item(1, 0);
 		border-bottom: $tab-indicator-size solid $tab-background;
 		color: $tab-font-color;
@@ -67,7 +87,7 @@ $tab-padding: rem-calc(12px);
 			}
 		}
 
-		&:hover, &.sc-active {
+		&:hover, &.active {
 			border-bottom: $tab-indicator-size solid $tab-indicator-on-color;
 			color: $tab-font-on-color;
 
@@ -95,7 +115,7 @@ $tab-padding: rem-calc(12px);
 	}
 
 	@if( in-array( 'tab', $tab ) ) {
-		.sc-tab {
+		.tab {
 			height: $tab-height;
 			line-height: $tab-height;
 			padding: 0 $tab-padding rem-calc(20px) $tab-padding;
@@ -103,7 +123,7 @@ $tab-padding: rem-calc(12px);
 	}
 
 	@if( in-array( 'tab-icon', $tab ) ) {
-		.sc-tab-icon {
+		.tab-icon {
 			height: $tab-height;
 			line-height: $tab-height;
 			padding: 0 $tab-indicator-size rem-calc(12px) $tab-indicator-size;
@@ -111,7 +131,7 @@ $tab-padding: rem-calc(12px);
 	}
 
 	@if( in-array( 'tab-icon-text', $tab ) ) {
-		.sc-tab-icon-text {
+		.tab-icon-text {
 			height: rem-calc(72px);
 			padding: rem-calc(10px) $tab-padding rem-calc(16px) $tab-padding;
 

@@ -16,13 +16,13 @@ ol, ul {
 		height: auto;
 		line-height: rem-calc(48px);
 		padding: 0 rem-calc(16px);
+	}
 
-		a {
-			color: if( $theme == light, rgba($black, .87), rgba($white, .87));
-			font-size: rem-calc(14px);
-			font-weight: 400;
-			height: rem-calc(48px);
-			line-height: rem-calc(48px);
-		}
+	a {
+		color: if( $theme == light, rgba($black, .87), rgba($white, .87));
+		font-size: rem-calc(14px);
+		font-weight: 400;
+		height: rem-calc(48px);
+		line-height: rem-calc(48px);
 	}
 }

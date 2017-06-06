@@ -4,14 +4,14 @@
  * https://material.google.com/components/pickers.html
 ***************************************/
 
-.sc-picker {
+.picker {
 	@include material-shadow(24);
-	@include border-radius(var(--border-size, $border-size));
+	@include border-radius(if( $var == true, var(--border-size, $border-size), $border-size ) );
 	background: var(--background, $background);
 	width: 100%;
 
 	&-titlebar {
-		@include border-radius-top(var(--border-size, $border-size));
+		@include border-radius-top(if( $var == true, var(--border-size, $border-size), $border-size ) );
 		background: $picker-color;
 		color: rgba($white, .54);
 		padding: rem-calc(24px);
@@ -27,7 +27,7 @@
 		}
 	}
 
-	.sc-active {
+	.active {
 		color: $white;
 	}
 }

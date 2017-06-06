@@ -5,7 +5,7 @@
  **************************************/
 
 html, body {
-	background: var(--background, $background);
+	background: if( $var == true, var(--background, $background), $background );
 	margin: 0;
 	padding: 0;
 }
@@ -41,11 +41,11 @@ h1, h2, h3, h4, h5, h6 {
 	@if (in-array('scrollbar', $normalize)) {
 		@include scrollbar();
 	}
-}
 
-@if( in-array( 'selection', $normalize ) ) {
-	@include selection() {
-		background: $select-background;
+	@if (in-array('selection', $normalize)) {
+		@include selection() {
+			background: $select-background;
+		}
 	}
 }
 
@@ -59,12 +59,14 @@ a {
 	text-decoration: none;
 	@include transition(color 300ms cubic-bezier(0.4, 0.0, 0.2, 1));
 
-	@media #{$medium-up} {
-		@include transition(color 390ms cubic-bezier(0.4, 0.0, 0.2, 1));
-	}
+	@if( $amp == false ) {
+		@media #{$medium-up} {
+			@include transition(color 390ms cubic-bezier(0.4, 0.0, 0.2, 1));
+		}
 
-	@media #{$large-up} {
-		@include transition(color 200ms cubic-bezier(0.4, 0.0, 0.2, 1));
+		@media #{$large-up} {
+			@include transition(color 200ms cubic-bezier(0.4, 0.0, 0.2, 1));
+		}
 	}
 
 	&:hover {
@@ -104,31 +106,31 @@ main {
 	}
 }
 
+.trigger {
+	cursor: pointer;
+}
+
 @if( in-array( 'helper-classes', $normalize ) ) {
-	.sc-circle {
+	.circle {
 		@include border-radius(50%);
 	}
 
-	.sc-left {
+	.left {
 		float: left;
 	}
 
-	.sc-right {
+	.right {
 		float: right;
 	}
 
-	.sc-center {
+	.center {
 		text-align: center;
 		vertical-align: middle;
 	}
 
-	hr, .sc-divider {
+	hr, .divider {
 		background: if($theme == light, rgba($black, .12), rgba($white, .12));
 		border: rem-calc(1px) solid if($theme == light, rgba($black, .12), rgba($white, .12));
-		height: var(--border-size, $border-size) / 2;
-	}
-
-	.sc-trigger {
-		cursor: pointer;
+		height: $border-size / 2;
 	}
 }

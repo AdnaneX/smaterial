@@ -44,7 +44,7 @@ After making your changes please describe what you have changed. This will speed
 - Global 
     - Fix mobile styling (in Chrome for Android when scrolling a page the title bar remains visible)
     - Check duplicate styling and therefor load speed
-    - Move global usable classes to `_normailize.scss` (`.sc-no-hover, .sc-active, .sc-disabled`) to name a few
+    - Move global usable classes to `_normailize.scss` (`.no-hover, .active, .disabled`) to name a few
     - Fix max-height max-width to something which works automatically. This applies to several components where these properties are animated 
     - Add Material Design animations
     - Fix positions of `<header>`, `<main>`, `<aside>` to be more compatible with for example WordPress (`<aside>` goes over `<header>`, `<main>` slides up under `<header>`)
@@ -93,8 +93,8 @@ After making your changes please describe what you have changed. This will speed
 - Slider
     - Add radials
     - Colors should be rgba but creates weird behaviour (like showing track trough thumb)
-    - Fix click bug at end of `.sc-slider` slider
-    - sc-slider-discrete bubble not working mobile
+    - Fix click bug at end of `.slider` slider
+    - slider-discrete bubble not working mobile
 - Tabs
 - Text fields
     - Add autocomplete select

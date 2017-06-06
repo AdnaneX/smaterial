@@ -5,39 +5,39 @@ $keywords = 'dialogs';
 
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>
-<section class="sc-row">
-    <h2 class="sc-col sc-xs4 sc-s12">Dialog usage</h2>
+<section class="row">
+    <h2 class="col xs4 s12">Dialog usage</h2>
 
-    <p class="sc-col sc-xs4 sc-s12 sc-m6">
+    <p class="col xs4 s12 m6">
         Click on the buttons to trigger a dialog.
     </p>
 </section>
 
-<section class="sc-row">
-    <h3 class="sc-col sc-xs4 sc-s12">Default dialog</h3>
+<section class="row">
+    <h3 class="col xs4 s12">Default dialog</h3>
 
-    <p class="sc-col sc-xs4 sc-s12 sc-m6">
-        <button type="button" class="sc-raised-button sc-trigger" data-sc-trigger="default">Default</button>
+    <p class="col xs4 s12 m6">
+        <button type="button" class="raised-button trigger" data-trigger="default">Default</button>
     </p>
 
-    <div class="sc-col sc-xs4 sc-s12 sc-m6">
+    <div class="col xs4 s12 m6">
 
     </div>
 
-    <div class="sc-dialog" id="default">
-        <div class="sc-dialog-container">
-            <div class="sc-dialog-title">
+    <div class="dialog" id="default">
+        <div class="dialog-container">
+            <div class="dialog-title">
                 Example of default dialog
             </div>
 
-            <div class="sc-dialog-content">
+            <div class="dialog-content">
                 Put dialog content here.
             </div>
         </div>
 
-        <div class="sc-dialog-actions">
-            <button type="button" data-sc-trigger="default" class="sc-flat-button sc-trigger">Agree</button>
-            <button type="button" data-sc-trigger="default" class="sc-flat-button sc-trigger">Disagree</button>
+        <div class="dialog-actions">
+            <button type="button" data-trigger="default" class="flat-button trigger">Agree</button>
+            <button type="button" data-trigger="default" class="flat-button trigger">Disagree</button>
         </div>
     </div>
 </section>

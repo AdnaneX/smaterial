@@ -14,7 +14,7 @@ $appbar-portrait-padding: ( ( $appbar-mobile-portrait-height - $appbar-icon-defa
 $appbar-landscape-padding: ( ( $appbar-mobile-landscape-height - $appbar-icon-landscape-size ) / 2 );
 $appbar-large-padding: ( ( $appbar-large-height - $appbar-icon-large-size ) / 2 );
 
-.sc-appbar {
+.appbar {
 	@include material-shadow(4);
 	background: $appbar-background;
 	color: $appbar-text;
@@ -123,11 +123,11 @@ $appbar-large-padding: ( ( $appbar-large-height - $appbar-icon-large-size ) / 2 
 		}
 	}
 
-	.sc-search-input {
+	.search-input {
 		display: none;
 	}
 
-	.sc-badge {
+	.badge {
 		@include border-radius(50%);
 		background: $badge-background;
 		@include material-shadow(2);

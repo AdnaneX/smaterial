@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	var $expansionPanel = $('.sc-expansion-panel');
+	var $expansionPanel = $('.expansion-panel');
 
 	$expansionPanel.each(function() {
 		var $this = $(this),
@@ -8,16 +8,16 @@ $(document).ready(function() {
 		// Add arrow
 		$li.each(function() {
 			var $this = $(this),
-				$content = $this.find('.sc-expansion-panel-header').html();
+				$content = $this.find('.expansion-panel-header').html();
 
-			$this.find('.sc-expansion-panel-header').html($content + '<span class="sc-expand-icon"><i class="material-icons">expand_more</i></span>');
+			$this.find('.expansion-panel-header').html($content + '<span class="expand-icon"><i class="material-icons">expand_more</i></span>');
 
-			var $expand = $this.find('.sc-expand-icon');
+			var $expand = $this.find('.expand-icon');
 			$expand.click(function() {
-				if( $this.hasClass('sc-expanded') ) {
-					$this.removeClass('sc-expanded');
+				if( $this.hasClass('expanded') ) {
+					$this.removeClass('expanded');
 				} else {
-					$this.addClass('sc-expanded');
+					$this.addClass('expanded');
 				}
 			});
 		});

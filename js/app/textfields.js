@@ -8,9 +8,9 @@ $(document).ready(function() {
 			$label = $this.parent('div').find('label');
 
 		if( !empty($value) ) {
-			$label.addClass('sc-active');
+			$label.addClass('active');
 		} else {
-			$label.removeClass('sc-active');
+			$label.removeClass('active');
 		}
 	});
 
@@ -21,9 +21,9 @@ $(document).ready(function() {
 			$label = $this.parent('div').find('label');
 
 		if( !empty($value) ) {
-			$label.addClass('sc-active');
+			$label.addClass('active');
 		} else {
-			$label.removeClass('sc-active');
+			$label.removeClass('active');
 		}
 	});
 

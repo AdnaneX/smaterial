@@ -5,7 +5,44 @@
  **************************************/
 
 // Default styling that goes for all text fields
-.sc-floating-input, .sc-floating-dense-input, .sc-single-input, .sc-single-dense-input, .sc-multi-input {
+$fields: '';
+@if( in-array( 'floating', $textfield ) ) {
+	$fields: $fields + '.floating-input';
+}
+
+@if( in-array( 'floating-dense', $textfield ) ) {
+	@if( $fields == '' ) {
+		$fields: $fields + '.floating-dense-input';
+	} @else {
+		$fields: $fields + ', .floating-dense-input';
+	}
+}
+
+@if( in-array( 'single', $textfield ) ) {
+	@if( $fields == '' ) {
+		$fields: $fields + '.single-input';
+	} @else {
+		$fields: $fields + ', .single-input';
+	}
+}
+
+@if( in-array( 'single-dense', $textfield ) ) {
+	@if( $fields == '' ) {
+		$fields: $fields + '.single-dense-input';
+	} @else {
+		$fields: $fields + ', .single-dense-input';
+	}
+}
+
+@if( in-array( 'multi', $textfield ) ) {
+	@if( $fields == '' ) {
+		$fields: $fields + '.multi-input';
+	} @else {
+		$fields: $fields + ', .multi-input';
+	}
+}
+
+#{$fields} {
 	position: relative;
 
 	input, textarea {
@@ -99,7 +136,7 @@
 			}
 		}
 
-		&.sc-active {
+		&.active {
 			color: $textfield-off-color;
 		}
 	}
@@ -113,7 +150,7 @@ $textfield-floating-label-font-size: rem-calc(12px); // Default rem-calc(12px);
 
 // Floating inputs
 @if( in-array( 'floating', $textfield ) ) {
-	.sc-floating-input {
+	.floating-input {
 		height: $textfield-floating-height;
 		padding: $textfield-floating-padding 0 $textfield-floating-divider 0;
 
@@ -135,7 +172,7 @@ $textfield-floating-label-font-size: rem-calc(12px); // Default rem-calc(12px);
 			font-size: $textfield-floating-font-size;
 			font-weight: 400;
 
-			&.sc-active {
+			&.active {
 				top: $textfield-floating-padding;
 				font-size: $textfield-floating-label-font-size;
 			}
@@ -151,7 +188,7 @@ $textfield-floating-dense-label-font-size: rem-calc(12px); // Default rem-calc(1
 
 // Floating dense inputs
 @if( in-array( 'floating-dense', $textfield ) ) {
-	.sc-floating-dense-input {
+	.floating-dense-input {
 		height: $textfield-floating-dense-height;
 		padding: $textfield-floating-dense-padding 0 $textfield-floating-dense-divider 0;
 
@@ -173,7 +210,7 @@ $textfield-floating-dense-label-font-size: rem-calc(12px); // Default rem-calc(1
 			font-size: $textfield-floating-dense-font-size;
 			font-weight: 400;
 
-			&.sc-active {
+			&.active {
 				top: $textfield-floating-dense-padding;
 				font-size: $textfield-floating-dense-label-font-size;
 			}
@@ -189,11 +226,11 @@ $textfield-single-icon-size: rem-calc(24px); // Default rem-calc(24)
 
 // Single line inputs
 @if( in-array( 'single', $textfield ) ) {
-	.sc-single-input, .sc-single-dense-input {
+	.single-input, .single-dense-input {
 		height: $textfield-single-height;
 		padding: $textfield-single-padding 0 $textfield-single-divider 0;
 
-		&.sc-icon {
+		&.icon {
 			input {
 				width: calc(100% - #{$textfield-single-height});
 				left: $textfield-single-height;
@@ -263,7 +300,7 @@ $textfield-single-icon-size: rem-calc(24px); // Default rem-calc(24)
 				}
 			}
 
-			&.sc-active {
+			&.active {
 				visibility: hidden;
 				@include opacity(0);
 			}
@@ -279,11 +316,11 @@ $textfield-single-dense-icon-size: rem-calc(20px); // Default rem-calc(20px)
 
 // Single line dense inputs
 @if( in-array( 'single-dense', $textfield ) ) {
-	.sc-single-dense-input {
+	.single-dense-input {
 		height: $textfield-single-dense-height;
 		padding: $textfield-single-dense-padding 0 $textfield-single-dense-divider 0;
 
-		&.sc-icon {
+		&.icon {
 			input {
 				width: calc(100% - #{$textfield-single-dense-height});
 				left: $textfield-single-dense-height;
@@ -316,7 +353,7 @@ $textfield-single-dense-icon-size: rem-calc(20px); // Default rem-calc(20px)
 
 // Multi-line textfield
 @if( in-array( 'multi', $textfield ) ) {
-	.sc-multi-input {
+	.multi-input {
 		padding: $textfield-floating-padding 0 $textfield-floating-divider 0;
 		height: $textfield-floating-height;
 
@@ -341,7 +378,7 @@ $textfield-single-dense-icon-size: rem-calc(20px); // Default rem-calc(20px)
 			font-weight: 400;
 			top: $textfield-floating-padding;
 
-			&.sc-active {
+			&.active {
 				font-size: $textfield-floating-label-font-size;
 				top: 0;
 			}

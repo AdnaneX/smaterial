@@ -5,32 +5,32 @@ $keywords = 'snackbars, toasts';
 
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>
-<section class="sc-row">
-	<h2 class="sc-col sc-xs4 sc-s12">Snackbars & toasts usage</h2>
+<section class="row">
+	<h2 class="col xs4 s12">Snackbars & toasts usage</h2>
 
-	<p class="sc-col sc-xs4 sc-s12 sc-m6">
+	<p class="col xs4 s12 m6">
 		You can use a snackbars to give the user some feedback about an action by showing a short message.
 		Snackbars can contain an action.
 	</p>
 
-	<p class="sc-col sc-xs4 sc-s12 sc-m6">
+	<p class="col xs4 s12 m6">
 		You can also use toasts which similar to snackbars but they don't contain actions.
 	</p>
 
-	<pre class="language-html sc-col sc-s12 sc-m6 sc-offset-m6">
+	<pre class="language-html col s12 m6 offset-m6">
 		<code>
-&lt;div class="sc-snackbar">
+&lt;div class="snackbar">
   This is a snackbar
-  &lt;a href="#" class="sc-snackbar-action">Undo&lt;/a>
+  &lt;a href="#" class="snackbar-action">Undo&lt;/a>
 &lt;/div>
 		</code>
 	</pre>
 </section>
 
-<section class="sc-row">
-	<h3 class="sc-col sc-xs4 sc-s12">Settings</h3>
+<section class="row">
+	<h3 class="col xs4 s12">Settings</h3>
 
-	<table class="sc-col sc-xs4 sc-s12 sc-m6">
+	<table class="col xs4 s12 m6">
 		<thead>
 		<th>
 			<tr>
@@ -57,8 +57,8 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	</table>
 </section>
 
-<div class="sc-snackbar">
-	This is a snackbar <a href="#" class="sc-snackbar-action">Undo</a>
+<div class="snackbar">
+	This is a snackbar <a href="#" class="snackbar-action">Undo</a>
 </div>
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.php';

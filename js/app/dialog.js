@@ -1,7 +1,7 @@
 $(document).ready(function() {
-	if( $('.sc-dialog').length >= 1 ) {
-		var $dialog = $('.sc-dialog');
+	if( $('.dialog').length >= 1 ) {
+		var $dialog = $('.dialog');
 
-		$dialog.after('<div class="sc-dialog-background"></div>');
+		$dialog.after('<div class="dialog-background"></div>');
 	}
 });

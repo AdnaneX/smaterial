@@ -9,9 +9,8 @@ $raised-size: rem-calc(36px); // Default rem-calc(32px)
 $raised-dense-size: rem-calc(32px); // Default rem-calc(32px)
 $flat-size: rem-calc(36px); // Default rem-calc(36px)
 
-
 @if( in-array( 'raised', $button ) ) {
-	.sc-raised-button {
+	.raised-button {
 		@include font($font-size-button, 0, $font-weight-button, $line-height-button, $font-color-button, $letter-spacing-button, uppercase);
 		@include button();
 		@include material-shadow(2);
@@ -53,18 +52,20 @@ $flat-size: rem-calc(36px); // Default rem-calc(36px)
 			vertical-align: middle;
 		}
 
-		&-dense {
-			font-size: rem-calc(13px);
-			height: $raised-dense-size;
-			line-height: $raised-dense-size;
-
-			.material-icons {
-				@include square($raised-dense-size);
+		@if( in-array( 'dense', $button ) ) {
+			&-dense {
+				font-size: rem-calc(13px);
+				height: $raised-dense-size;
 				line-height: $raised-dense-size;
+
+				.material-icons {
+					@include square($raised-dense-size);
+					line-height: $raised-dense-size;
+				}
 			}
 		}
 
-		&.sc-disabled, &:disabled {
+		&.disabled, &:disabled {
 			background: $raised-disabled-background;
 			color: $raised-disabled-font-color;
 			@include material-shadow(0);
@@ -79,7 +80,7 @@ $flat-size: rem-calc(36px); // Default rem-calc(36px)
 }
 
 @if( in-array( 'flat', $button ) ) {
-	.sc-flat-button {
+	.flat-button {
 		@include button();
 		@include font($font-size-button, 0, $font-weight-button, $line-height-button, $font-color-button, $letter-spacing-button, uppercase);
 		background: none;
@@ -105,7 +106,7 @@ $flat-size: rem-calc(36px); // Default rem-calc(36px)
 			width: $flat-size;
 		}
 
-		&.sc-disabled, &:disabled {
+		&.disabled, &:disabled {
 			background: none;
 			color: $flat-disabled-color;
 
@@ -123,7 +124,7 @@ $floating-icon-size: rem-calc(24px); // Default rem-calc(24px)
 $floating-mini-size: rem-calc(40px); // Default rem-calc(40px)
 
 @if( in-array( 'floating', $button ) ) {
-	.sc-floating-button {
+	.floating-button {
 		@include font($font-size-button, 0, $font-weight-button, $line-height-button, $font-color-button, $letter-spacing-button, uppercase);
 		@include button(50%);
 		@include transition(box-shadow $transition-small-duration $standard-transition);
@@ -143,9 +144,11 @@ $floating-mini-size: rem-calc(40px); // Default rem-calc(40px)
 			vertical-align: middle;
 		}
 
-		&-mini {
-			@include square($floating-mini-size);
-			line-height: $floating-mini-size;
+		@if( in-array( 'mini', $button ) ) {
+			&-mini {
+				@include square($floating-mini-size);
+				line-height: $floating-mini-size;
+			}
 		}
 
 		ul {
@@ -155,7 +158,7 @@ $floating-mini-size: rem-calc(40px); // Default rem-calc(40px)
 			@include opacity(0);
 			@include transition(all $transition-small-duration $standard-transition);
 
-			&.sc-expanded {
+			&.expanded {
 				visibility: visible;
 				@include opacity(1);
 
@@ -163,25 +166,25 @@ $floating-mini-size: rem-calc(40px); // Default rem-calc(40px)
 					margin-top: $floating-sub-size / 2;
 				}
 			}
+		}
 
-			li {
-				margin-top: $floating-sub-size * -1;
-				@include border-radius(50%);
-				@include square($floating-sub-size);
-			}
+		li {
+			margin-top: $floating-sub-size * -1;
+			@include border-radius(50%);
+			@include square($floating-sub-size);
+		}
 
-			a {
-				display: block;
-				position: absolute;
-				line-height: $floating-sub-size;
-				@include square($floating-sub-size);
-				margin-left: $floating-sub-size / 2.4 * -1; // TODO make 2.4 dynamic
-			}
+		a {
+			display: block;
+			position: absolute;
+			line-height: $floating-sub-size;
+			@include square($floating-sub-size);
+			margin-left: $floating-sub-size / 2.4 * -1; // TODO make 2.4 dynamic
+		}
 
-			img {
-				@include square($floating-sub-size);
-				@include border-radius(50%);
-			}
+		img {
+			@include square($floating-sub-size);
+			@include border-radius(50%);
 		}
 	}
 }
@@ -190,7 +193,7 @@ $toggle-size: rem-calc(40px);
 $toggle-icon-size: rem-calc(24px);
 
 @if( in-array( 'toggle', $button ) ) {
-	.sc-toggle-button {
+	.toggle-button {
 		@include button(50%);
 		@include square($toggle-size);
 		background: $floating-background;
@@ -206,7 +209,7 @@ $toggle-icon-size: rem-calc(24px);
 }
 
 @if( in-array( 'ripple', $button ) ) {
-	.sc-hover-ripple {
+	.hover-ripple {
 		overflow: hidden;
 		position: relative;
 		z-index: 1;
@@ -237,7 +240,7 @@ $toggle-icon-size: rem-calc(24px);
 		}
 
 		&:after {
-			background: var(--main-color, $main-color);
+			background: if( $var == true, var(--main-color, $main-color), $main-color);
 			border-radius: 50%;
 			content: "";
 			height: 0;

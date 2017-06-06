@@ -5,38 +5,38 @@ $keywords = 'tooltips';
 
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>
-<section class="sc-row">
-	<h2 class="sc-col sc-xs4 sc-s12">Tooltips usage</h2>
+<section class="row">
+	<h2 class="col xs4 s12">Tooltips usage</h2>
 
-	<p class="sc-col sc-xs4 sc-s12 sc-m6">
+	<p class="col xs4 s12 m6">
 		You can use tooltips to give the user some extra info about a certain
-		<a href="#"><span class="sc-tooltip" title="delete, edit">action</span></a> or
-		<a href="#"><span class="sc-tooltip" title="url: google.com">link</span></a>.
-		<a href="#" class="sc-raised-button sc-tooltip" title="button example">Button</a>
+		<a href="#"><span class="tooltip" title="delete, edit">action</span></a> or
+		<a href="#"><span class="tooltip" title="url: google.com">link</span></a>.
+		<a href="#" class="raised-button tooltip" title="button example">Button</a>
 	</p>
 
-	<p class="sc-col sc-xs4 sc-s12 sc-m6">
-		Tooltips only need the class <code class="language-css">.sc-tooltip</code> and the attribute <code class="language-css">title</code> in order to work. Because of this it's easy
+	<p class="col xs4 s12 m6">
+		Tooltips only need the class <code class="language-css">.tooltip</code> and the attribute <code class="language-css">title</code> in order to work. Because of this it's easy
 		to add to a link or span.
 	</p>
 
-	<pre class="language-html sc-col sc-s12 sc-m6 sc-offset-m6">
+	<pre class="language-html col s12 m6 offset-m6">
 		<code>
-&lt;span class="sc-tooltip" title="delete, edit">
+&lt;span class="tooltip" title="delete, edit">
   action
 &lt;/span>
 
-&lt;a href="#" class="sc-tooltip" title="link">
+&lt;a href="#" class="tooltip" title="link">
   link
 &lt;/a>
 		</code>
 	</pre>
 </section>
 
-<section class="sc-row">
-	<h3 class="sc-col sc-xs4 sc-s12">Tooltip settings</h3>
+<section class="row">
+	<h3 class="col xs4 s12">Tooltip settings</h3>
 
-	<table class="sc-col sc-xs4 sc-s12 sc-m6">
+	<table class="col xs4 s12 m6">
 		<thead>
 		<tr>
 			<th>Variable</th>

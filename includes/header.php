@@ -71,7 +71,7 @@ $keywords .= ', smaterial, css, scss, material design, framework, html, js, css 
 
 <body class="">
 <style>
-	.sc-appbar {
+	.appbar {
 		background: <?php echo $color; ?>;
 	}
 
@@ -83,43 +83,43 @@ $keywords .= ', smaterial, css, scss, material design, framework, html, js, css 
 		color: <?php echo $highlight; ?>;
 	}
 
-	.sc-drawer .sc-active, .sc-drawer a:hover, .sc-drawer a:hover .material-icons {
+	.drawer .active, .drawer a:hover, .drawer a:hover .material-icons {
 		color: <?php echo $color; ?> !important;
 	}
 
-	.sc-raised-button {
+	.raised-button {
 		color: white;
 		background: <?php echo $color; ?>;
 	}
 
-	.sc-drawer-permanent-full-height .sc-drawer-header img {
+	.drawer-permanent-full-height .drawer-header img {
 		height: 100%;
 	}
 </style>
 
-<header class="sc-appbar">
-    <i class="material-icons sc-trigger" data-sc-trigger="sc-drawer">menu</i>
+<header class="appbar">
+    <i class="material-icons trigger" data-trigger="drawer">menu</i>
 
-	<div class="sc-appbar-title">
-		<h1><?php echo '<span class="sc-xs-hidden sc-s-hidden">'.ucfirst( $folder ).' -</span> '.$title; ?></h1>
+	<div class="appbar-title">
+		<h1><?php echo '<span class="xs-hidden s-hidden">'.ucfirst( $folder ).' -</span> '.$title; ?></h1>
 	</div>
 
 	<i class="material-icons">search</i>
 
-    <div class="sc-search-input">
+    <div class="search-input">
         <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-            <div class="sc-single-input">
+            <div class="single-input">
                 <input type="search" name="search" id="search">
                 <label for="search">Search</label>
             </div>
         </form>
     </div>
 
-    <i class="material-icons">mail <div class="sc-badge">2</div></i>
+    <i class="material-icons">mail <div class="badge">2</div></i>
 
-    <i class="material-icons sc-trigger" data-sc-trigger="appbar-menu">more_vert</i>
+    <i class="material-icons trigger" data-trigger="appbar-menu">more_vert</i>
 
-    <nav class="sc-menu sc-appbar-menu" id="appbar-menu">
+    <nav class="menu appbar-menu" id="appbar-menu">
         <a href="#">Example</a>
         <a href="#">Example</a>
     </nav>
@@ -128,113 +128,113 @@ $keywords .= ', smaterial, css, scss, material design, framework, html, js, css 
 <?php
 if( $_SERVER['PHP_SELF'] === '/components/tabs.php' ) {
 	?>
-	<div class="sc-tabs">
-		<a href="#" class="sc-tab-icon-text"><i class="material-icons">home</i><span>Example 1</span></a>
-		<a href="#" class="sc-tab-icon-text"><i class="material-icons">home</i><span>Example 2</span></a>
-		<a href="#" class="sc-tab-icon-text"><i class="material-icons">home</i><span>Example 3</span></a>
-		<a href="#" class="sc-tab-icon-text"><i class="material-icons">home</i><span>Example 4</span></a>
-		<a href="#" class="sc-tab-icon-text"><i class="material-icons">home</i><span>Example 5</span></a>
-		<a href="#" class="sc-tab-icon-text"><i class="material-icons">home</i><span>Example 6</span></a>
-		<a href="#" class="sc-tab-icon-text"><i class="material-icons">home</i><span>Example 7</span></a>
-		<a href="#" class="sc-tab-icon-text"><i class="material-icons">home</i><span>Example 8</span></a>
-		<a href="#" class="sc-tab-icon-text"><i class="material-icons">home</i><span>Example 9</span></a>
+	<div class="tabs">
+		<a href="#" class="tab-icon-text"><i class="material-icons">home</i><span>Example 1</span></a>
+		<a href="#" class="tab-icon-text"><i class="material-icons">home</i><span>Example 2</span></a>
+		<a href="#" class="tab-icon-text"><i class="material-icons">home</i><span>Example 3</span></a>
+		<a href="#" class="tab-icon-text"><i class="material-icons">home</i><span>Example 4</span></a>
+		<a href="#" class="tab-icon-text"><i class="material-icons">home</i><span>Example 5</span></a>
+		<a href="#" class="tab-icon-text"><i class="material-icons">home</i><span>Example 6</span></a>
+		<a href="#" class="tab-icon-text"><i class="material-icons">home</i><span>Example 7</span></a>
+		<a href="#" class="tab-icon-text"><i class="material-icons">home</i><span>Example 8</span></a>
+		<a href="#" class="tab-icon-text"><i class="material-icons">home</i><span>Example 9</span></a>
 	</div>
 	<?php
 }
 ?>
-<nav id="sc-drawer" class="sc-drawer sc-drawer-temporary">
-	<!--<header class="sc-drawer-header"> <!-- Full height --
+<nav id="drawer" class="drawer drawer-temporary">
+	<!--<header class="drawer-header"> <!-- Full height --
 		<img src="/images/logo.svg" alt="SMalterial logo">
 	</header>-->
 	<!--<header> <!-- Persistent ----
-		<img src="/images/profile-icon.jpg" alt="SMaterial profile example" class="sc-drawer-profile-img">
-		<div class="sc-drawer-profile-name">John</div>
-		<div class="sc-drawer-profile-more">
-			<i class="material-icons sc-trigger" data-sc-trigger="sc-drawer-profile-menu">arrow_drop_down</i>
+		<img src="/images/profile-icon.jpg" alt="SMaterial profile example" class="drawer-profile-img">
+		<div class="drawer-profile-name">John</div>
+		<div class="drawer-profile-more">
+			<i class="material-icons trigger" data-trigger="drawer-profile-menu">arrow_drop_down</i>
 
-			<nav class="sc-menu" id="sc-drawer-profile-menu">
+			<nav class="menu" id="drawer-profile-menu">
 				<a href="#">Facebook</a>
 				<a href="#">Google Plus</a>
 				<a href="#">Add account</a>
 			</nav>
 		</div>
-		<div><i class="material-icons sc-arrow sc-trigger" data-sc-trigger="sc-drawer">chevron_left</i></div>
+		<div><i class="material-icons arrow trigger" data-trigger="drawer">chevron_left</i></div>
 	</header>-->
 
 
 	<header>
-		<img src="/images/drawer-background.jpg" class="sc-drawer-profile-background" alt="menu background">
-		<div class="sc-scrim"></div>
-		<img src="/images/profile-icon.jpg" class="sc-drawer-profile-img" alt="profile image">
-		<div class="sc-drawer-profile-name">John Doe</div>
-		<div class="sc-drawer-profile-email">johndoe@gmail.com</div>
-		<div class="sc-drawer-profile-more">
-			<i class="material-icons sc-arrow sc-trigger" data-sc-trigger="sc-drawer-profile-menu">arrow_drop_down</i>
+		<img src="/images/drawer-background.jpg" class="drawer-profile-background" alt="menu background">
+		<div class="scrim"></div>
+		<img src="/images/profile-icon.jpg" class="drawer-profile-img" alt="profile image">
+		<div class="drawer-profile-name">John Doe</div>
+		<div class="drawer-profile-email">johndoe@gmail.com</div>
+		<div class="drawer-profile-more">
+			<i class="material-icons arrow trigger" data-trigger="drawer-profile-menu">arrow_drop_down</i>
 
-			<nav class="sc-menu" id="sc-drawer-profile-menu">
+			<nav class="menu" id="drawer-profile-menu">
 				<a href="#">Facebook</a>
 				<a href="#">Google Plus</a>
 				<a href="#">Add account</a>
 			</nav>
 		</div>
 	</header>
-	<a href="#" class="sc-drawer-dropdown">SMaterial <i class="material-icons">expand_more</i></a>
-	<div class="sc-dropdown">
-		<a href="/" <?php echo ( $file == '/index' || $file == '/' ? 'class="sc-active"' : '' ); ?>>Introduction</a>
-		<a href="/smaterial/getting-started.php" <?php echo ( $file == '/smaterial/getting-started' ? 'class="sc-active"' : '' ); ?>>Getting started</a>
-		<a href="/smaterial/shadow.php" <?php echo ( $file == '/smaterial/shadow' ? 'class="sc-active"' : '' ); ?>>Elevation and shadows</a>
+	<a href="#" class="drawer-dropdown">SMaterial <i class="material-icons">expand_more</i></a>
+	<div class="dropdown">
+		<a href="/" <?php echo ( $file == '/index' || $file == '/' ? 'class="active"' : '' ); ?>>Introduction</a>
+		<a href="/smaterial/getting-started.php" <?php echo ( $file == '/smaterial/getting-started' ? 'class="active"' : '' ); ?>>Getting started</a>
+		<a href="/smaterial/shadow.php" <?php echo ( $file == '/smaterial/shadow' ? 'class="active"' : '' ); ?>>Elevation and shadows</a>
 	</div>
 
-	<a href="#" class="sc-drawer-dropdown">Style <i class="material-icons">expand_more</i></a>
-	<div class="sc-dropdown">
-		<a href="/style/color.php" <?php echo ( $file == '/style/color' ? 'class="sc-active"' : '' ); ?>>Color</a>
-		<a href="/style/icons.php" <?php echo ( $file == '/style/icons' ? 'class="sc-active"' : '' ); ?>>Icons</a>
-		<a href="/style/typography.php" <?php echo ( $file == '/style/typography' ? 'class="sc-active"' : '' ); ?>>Typography</a>
-		<a href="/style/functions.php" <?php echo ( $file == '/style/functions' ? 'class="sc-active"' : '' ); ?>>Functions</a>
-		<a href="/style/mixins.php" <?php echo ( $file == '/style/mixins' ? 'class="sc-active"' : '' ); ?>>Mixins</a>
+	<a href="#" class="drawer-dropdown">Style <i class="material-icons">expand_more</i></a>
+	<div class="dropdown">
+		<a href="/style/color.php" <?php echo ( $file == '/style/color' ? 'class="active"' : '' ); ?>>Color</a>
+		<a href="/style/icons.php" <?php echo ( $file == '/style/icons' ? 'class="active"' : '' ); ?>>Icons</a>
+		<a href="/style/typography.php" <?php echo ( $file == '/style/typography' ? 'class="active"' : '' ); ?>>Typography</a>
+		<a href="/style/functions.php" <?php echo ( $file == '/style/functions' ? 'class="active"' : '' ); ?>>Functions</a>
+		<a href="/style/mixins.php" <?php echo ( $file == '/style/mixins' ? 'class="active"' : '' ); ?>>Mixins</a>
 	</div>
 
-	<a href="#" class="sc-drawer-dropdown">Components <i class="material-icons">expand_more</i></a>
-	<div class="sc-dropdown">
-		<a href="/components/appbar.php" <?php echo ( $file == '/components/appbar' ? 'class="sc-active"' : '' ); ?>>Appbar</a>
-		<a href="/components/bottom-navigation.php" <?php echo ( $file == '/components/bottom-navigation' ? 'class="sc-active"' : '' ); ?>>Bottom navigation</a>
-		<a href="/components/bottom-sheet.php" <?php echo ( $file == '/components/bottom-sheet' ? 'class="sc-active"' : '' ); ?>>Bottom sheet</a>
-		<a href="/components/buttons.php" <?php echo ( $file == '/components/buttons' ? 'class="sc-active"' : '' ); ?>>Buttons</a>
-		<a href="/components/cards.php" <?php echo ( $file == '/components/cards' ? 'class="sc-active"' : '' ); ?>>Cards</a>
-		<a href="/components/chips.php" <?php echo ( $file == '/components/chips' ? 'class="sc-active"' : '' ); ?>>Chips</a>
-		<a href="/components/data-tables.php" <?php echo ( $file == '/components/data-tables' ? 'class="sc-active"' : '' ); ?>>Data tables</a>
-		<a href="/components/dialogs.php" <?php echo ( $file == '/components/dialogs' ? 'class="sc-active"' : '' ); ?>>Dialogs</a>
-		<a href="/components/expansion-panels.php" <?php echo ( $file == '/components/expansion-panels' ? 'class="sc-active"' : '' ); ?>>Expansion panels</a>
-		<a href="/components/grid-lists.php" <?php echo ( $file == '/components/grid-lists' ? 'class="sc-active"' : '' ); ?>>Grid lists</a>
-		<a href="/components/menu.php" <?php echo ( $file == '/components/menu' ? 'class="sc-active"' : '' ); ?>>Menu</a>
-		<a href="/components/pickers.php" <?php echo ( $file == '/components/pickers' ? 'class="sc-active"' : '' ); ?>>Pickers</a>
-		<a href="/components/progress-activity.php" <?php echo ( $file == '/components/progress-activity' ? 'class="sc-active"' : '' ); ?>>Progress &amp; activity</a>
-		<a href="/components/selection-controls.php" <?php echo ( $file == '/components/selection-controls' ? 'class="sc-active"' : '' ); ?>>Selection controls</a>
-		<a href="/components/sliders.php" <?php echo ( $file == '/components/sliders' ? 'class="sc-active"' : '' ); ?>>Slider</a>
-		<a href="/components/snackbars-toasts.php" <?php echo ( $file == '/components/snackbars-toasts' ? 'class="sc-active"' : '' ); ?>>Snackbar &amp; toasts</a>
-		<a href="/components/steppers.php" <?php echo ( $file == '/components/steppers' ? 'class="sc-active"' : '' ); ?>>Steppers</a>
-		<a href="/components/tabs.php" <?php echo ( $file == '/components/tabs' ? 'class="sc-active"' : '' ); ?>>Tabs</a>
-		<a href="/components/textfields.php" <?php echo ( $file == '/components/textfields' ? 'class="sc-active"' : '' ); ?>>Text fields</a>
-		<a href="/components/tooltips.php" <?php echo ( $file == '/components/tooltips' ? 'class="sc-active"' : '' ); ?>>Tooltips</a>
+	<a href="#" class="drawer-dropdown">Components <i class="material-icons">expand_more</i></a>
+	<div class="dropdown">
+		<a href="/components/appbar.php" <?php echo ( $file == '/components/appbar' ? 'class="active"' : '' ); ?>>Appbar</a>
+		<a href="/components/bottom-navigation.php" <?php echo ( $file == '/components/bottom-navigation' ? 'class="active"' : '' ); ?>>Bottom navigation</a>
+		<a href="/components/bottom-sheet.php" <?php echo ( $file == '/components/bottom-sheet' ? 'class="active"' : '' ); ?>>Bottom sheet</a>
+		<a href="/components/buttons.php" <?php echo ( $file == '/components/buttons' ? 'class="active"' : '' ); ?>>Buttons</a>
+		<a href="/components/cards.php" <?php echo ( $file == '/components/cards' ? 'class="active"' : '' ); ?>>Cards</a>
+		<a href="/components/chips.php" <?php echo ( $file == '/components/chips' ? 'class="active"' : '' ); ?>>Chips</a>
+		<a href="/components/data-tables.php" <?php echo ( $file == '/components/data-tables' ? 'class="active"' : '' ); ?>>Data tables</a>
+		<a href="/components/dialogs.php" <?php echo ( $file == '/components/dialogs' ? 'class="active"' : '' ); ?>>Dialogs</a>
+		<a href="/components/expansion-panels.php" <?php echo ( $file == '/components/expansion-panels' ? 'class="active"' : '' ); ?>>Expansion panels</a>
+		<a href="/components/grid-lists.php" <?php echo ( $file == '/components/grid-lists' ? 'class="active"' : '' ); ?>>Grid lists</a>
+		<a href="/components/menu.php" <?php echo ( $file == '/components/menu' ? 'class="active"' : '' ); ?>>Menu</a>
+		<a href="/components/pickers.php" <?php echo ( $file == '/components/pickers' ? 'class="active"' : '' ); ?>>Pickers</a>
+		<a href="/components/progress-activity.php" <?php echo ( $file == '/components/progress-activity' ? 'class="active"' : '' ); ?>>Progress &amp; activity</a>
+		<a href="/components/selection-controls.php" <?php echo ( $file == '/components/selection-controls' ? 'class="active"' : '' ); ?>>Selection controls</a>
+		<a href="/components/sliders.php" <?php echo ( $file == '/components/sliders' ? 'class="active"' : '' ); ?>>Slider</a>
+		<a href="/components/snackbars-toasts.php" <?php echo ( $file == '/components/snackbars-toasts' ? 'class="active"' : '' ); ?>>Snackbar &amp; toasts</a>
+		<a href="/components/steppers.php" <?php echo ( $file == '/components/steppers' ? 'class="active"' : '' ); ?>>Steppers</a>
+		<a href="/components/tabs.php" <?php echo ( $file == '/components/tabs' ? 'class="active"' : '' ); ?>>Tabs</a>
+		<a href="/components/textfields.php" <?php echo ( $file == '/components/textfields' ? 'class="active"' : '' ); ?>>Text fields</a>
+		<a href="/components/tooltips.php" <?php echo ( $file == '/components/tooltips' ? 'class="active"' : '' ); ?>>Tooltips</a>
 	</div>
 
-	<a href="#" class="sc-drawer-dropdown">Layout <i class="material-icons">expand_more</i></a>
-	<div class="sc-dropdown">
-		<a href="/layout/grid.php" <?php echo ( $file == '/layout/grid' ? 'class="sc-active"' : '' ); ?>>Responsive grid</a>
-        <a href="/layout/screen-sizes.php" <?php echo ( $file == '/layout/screen-sizes' ? 'class="sc-active"' : '' ); ?>>Screen sizes</a>
+	<a href="#" class="drawer-dropdown">Layout <i class="material-icons">expand_more</i></a>
+	<div class="dropdown">
+		<a href="/layout/grid.php" <?php echo ( $file == '/layout/grid' ? 'class="active"' : '' ); ?>>Responsive grid</a>
+        <a href="/layout/screen-sizes.php" <?php echo ( $file == '/layout/screen-sizes' ? 'class="active"' : '' ); ?>>Screen sizes</a>
 	</div>
 
-	<a href="#" class="sc-drawer-dropdown">Patterns <i class="material-icons">expand_more</i></a>
-	<div class="sc-dropdown">
-		<a href="/patterns/navigation-drawer.php" <?php echo ( $file == '/patterns/navigation-drawer' ? 'class="sc-active"' : '' ); ?>>Navigation drawer</a>
-		<a href="/patterns/notifications.php" <?php echo ( $file == '/patterns/notifications' ? 'class="sc-active"' : '' ); ?>>Notifications</a>
+	<a href="#" class="drawer-dropdown">Patterns <i class="material-icons">expand_more</i></a>
+	<div class="dropdown">
+		<a href="/patterns/navigation-drawer.php" <?php echo ( $file == '/patterns/navigation-drawer' ? 'class="active"' : '' ); ?>>Navigation drawer</a>
+		<a href="/patterns/notifications.php" <?php echo ( $file == '/patterns/notifications' ? 'class="active"' : '' ); ?>>Notifications</a>
 	</div>
 
-	<a href="#" class="sc-drawer-dropdown">Resources <i class="material-icons">expand_more</i></a>
-	<div class="sc-dropdown">
-		<a href="/resources/templates.php" <?php echo ( $file == '/resources/templates' ? 'class="sc-active"' : '' ); ?>>Templates</a>
-		<a href="/resources/links.php" <?php echo ( $file == '/resources/links' ? 'class="sc-active"' : '' ); ?>>Links</a>
-		<a href="/resources/showroom.php" <?php echo ( $file == '/resources/showroom' ? 'class="sc-active"' : '' ); ?>>Showroom</a>
+	<a href="#" class="drawer-dropdown">Resources <i class="material-icons">expand_more</i></a>
+	<div class="dropdown">
+		<a href="/resources/templates.php" <?php echo ( $file == '/resources/templates' ? 'class="active"' : '' ); ?>>Templates</a>
+		<a href="/resources/links.php" <?php echo ( $file == '/resources/links' ? 'class="active"' : '' ); ?>>Links</a>
+		<a href="/resources/showroom.php" <?php echo ( $file == '/resources/showroom' ? 'class="active"' : '' ); ?>>Showroom</a>
 	</div>
 </nav>
 

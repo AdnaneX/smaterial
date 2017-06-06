@@ -11,7 +11,7 @@ $tooltip-large-height: rem-calc(22px); // Default rem-calc(22px)
 $tooltip-small-padding: 0 rem-calc(16px); // Default 0 rem-calc(16px)
 $tooltip-large-padding: 0 rem-calc(8px); // Default 0 rem-calc(8px)
 
-.sc-tooltip {
+.tooltip {
 	display: inline;
 	position: relative;
 
@@ -66,7 +66,7 @@ $tooltip-large-padding: 0 rem-calc(8px); // Default 0 rem-calc(8px)
 		}
 	}
 
-	&.sc-raised-button, &.sc-flat-button {
+	&.raised-button, &.flat-button {
 		&:hover:after {
 			top: $raised-size;
 			margin: $tooltip-small-top 0 0 0;

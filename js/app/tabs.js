@@ -1,9 +1,9 @@
 $(window).on('resize load', function() {
-	var $tabs = $('.sc-tabs');
+	var $tabs = $('.tabs');
 
 	// Set main height from top
 	if( $tabs.length >= 1 ) {
-		var $appbarHeight = $('.sc-appbar').css('height').replace('px', ''),
+		var $appbarHeight = $('.appbar').css('height').replace('px', ''),
 			$tabsHeight = $tabs.css('height').replace('px', ''),
 			$main = $('main');
 

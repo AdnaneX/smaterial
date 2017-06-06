@@ -17,12 +17,12 @@ function notification( $title, $options, $click ) {
 	}
 }
 
-$('.sc-notification-header-expand').click(function() {
-	var $this = $(this).closest('.sc-notification');
+$('.notification-header-expand').click(function() {
+	var $this = $(this).closest('.notification');
 
-	if( $this.hasClass('sc-expanded') ) {
-		$this.removeClass('sc-expanded');
+	if( $this.hasClass('expanded') ) {
+		$this.removeClass('expanded');
 	} else {
-		$this.addClass('sc-expanded');
+		$this.addClass('expanded');
 	}
 });

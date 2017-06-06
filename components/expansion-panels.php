@@ -5,54 +5,54 @@ $keywords = 'expansion panels';
 
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>
-<section class="sc-row">
-	<h2 class="sc-col sc-xs4 sc-s12">Expansion panels usage</h2>
+<section class="row">
+	<h2 class="col xs4 s12">Expansion panels usage</h2>
 
-	<p class="sc-col sc-xs4 sc-s12 sc-m6">
+	<p class="col xs4 s12 m6">
 
 	</p>
 
-	<div class="sc-col sc-xs4 sc-s12 sc-m6">
-		<ul class="sc-expansion-panel">
+	<div class="col xs4 s12 m6">
+		<ul class="expansion-panel">
 			<li>
-				<div class="sc-expansion-panel-header">
+				<div class="expansion-panel-header">
 					<label>Trip name</label>
 					<span>Caribbean cruise</span>
 				</div>
-				<div class="sc-expansion-panel-content">
+				<div class="expansion-panel-content">
 					There can be content here
 				</div>
 			</li>
 			<li>
-				<div class="sc-expansion-panel-header">
+				<div class="expansion-panel-header">
 					<label>Location</label>
 					<span>Barbados</span>
 				</div>
-				<div class="sc-expansion-panel-content">
+				<div class="expansion-panel-content">
 					There can be content here
 				</div>
 			</li>
 		</ul>
 	</div>
 
-	<pre class="language-html sc-col sc-xs4 sc-s12 sc-m6 sc-offset-m6">
+	<pre class="language-html col xs4 s12 m6 offset-m6">
 		<code>
-&lt;ul class="sc-expansion-panel">
+&lt;ul class="expansion-panel">
   &lt;li>
-    &lt;div class="sc-expansion-panel-header">
+    &lt;div class="expansion-panel-header">
       &lt;label>Trip name&lt;/label>
       &lt;span>Caribbean cruise&lt;/span>
     &lt;/div>
-    &lt;div class="sc-expansion-panel-content">
+    &lt;div class="expansion-panel-content">
       There can be content here
     &lt;/div>
   &lt;/li>
   &lt;li>
-    &lt;div class="sc-expansion-panel-header">
+    &lt;div class="expansion-panel-header">
       &lt;label>Location&lt;/label>
       &lt;span>Barbados&lt;/span>
     &lt;/div>
-    &lt;div class="sc-expansion-panel-content">
+    &lt;div class="expansion-panel-content">
       There can be content here
     &lt;/div>
   &lt;/li>

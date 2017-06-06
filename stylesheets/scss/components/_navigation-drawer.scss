@@ -13,8 +13,41 @@ $drawer-profile-content-height: rem-calc(56px);
 $drawer-profile-bottom-padding: rem-calc(8px);
 $drawer-profile-scrim: to top, rgba($grey-900, 0.4) 15%, rgba($white, 0) 33%;
 $drawer-profile-height: $drawer-padding + $drawer-profile-img + $drawer-profile-content-height + $drawer-profile-bottom-padding;
+$drawers: '';
 
-.sc-drawer {
+@if( in-array( 'full-height', $navigation-drawer ) ) {
+	$drawers: $drawers + '&-permanent-full-height';
+}
+@if( in-array( 'clipped', $navigation-drawer ) ) {
+	@if( $drawers == '' ) {
+		$drawers: $drawers + '&-permanent-clipped';
+	} @else {
+		$drawers: $drawers + ', &-permanent-clipped';
+	}
+}
+@if( in-array( 'floating', $navigation-drawer ) ) {
+	@if( $drawers == '' ) {
+		$drawers: $drawers + '&-permanent-floating';
+	} @else {
+		$drawers: $drawers + ', &-permanent-floating';
+	}
+}
+@if( in-array( 'persistent', $navigation-drawer ) ) {
+	@if( $drawers == '' ) {
+		$drawers: $drawers + '&-persistent';
+	} @else {
+		$drawers: $drawers + ', &-persistent';
+	}
+}
+@if( in-array( 'temporary', $navigation-drawer ) ) {
+	@if( $drawers == '' ) {
+		$drawers: $drawers + '&-temporary';
+	} @else {
+		$drawers: $drawers + ', &-temporary';
+	}
+}
+
+.drawer {
 	position: fixed;
 	left: 0;
 	top: 0;
@@ -25,11 +58,11 @@ $drawer-profile-height: $drawer-padding + $drawer-profile-img + $drawer-profile-
 	overflow-x: hidden;
 	max-width: calc(100% - #{rem-calc(56px)});
 
-	&-permanent-full-height, &-permanent-clipped, &-permanent-floating, &-persistent, &-temporary {
+	#{$drawers} {
 		margin: 0 0 0 -102%;
 		@include transition(margin $transition-small-duration $deceleration-transition);
 
-		@if( $amp == false ) {
+		@if ($amp == false) {
 			@media #{$small-up} {
 				margin: 0;
 			}
@@ -42,25 +75,25 @@ $drawer-profile-height: $drawer-padding + $drawer-profile-img + $drawer-profile-
 				@include transition(margin $transition-large-duration $deceleration-transition);
 			}
 		}
+	}
 
-		&.sc-expanded {
-			margin: 0;
-			@include transition(margin $transition-small-duration $sharp-transition);
+	&.expanded {
+		margin: 0;
+		@include transition(margin $transition-small-duration $sharp-transition);
 
-			@if( $amp == false ) {
-				@media #{$medium-only} {
-					@include transition(margin $transition-medium-duration $sharp-transition);
-				}
-
-				@media #{$medium-up} {
-					@include transition(margin $transition-large-duration $sharp-transition);
-				}
+		@if( $amp == false ) {
+			@media #{$medium-only} {
+				@include transition(margin $transition-medium-duration $sharp-transition);
 			}
 
-			~ .sc-drawer-background {
-				@media #{$small-down} {
-					visibility: visible;
-				}
+			@media #{$medium-up} {
+				@include transition(margin $transition-large-duration $sharp-transition);
+			}
+		}
+
+		~ .drawer-background {
+			@media #{$small-down} {
+				visibility: visible;
 			}
 		}
 	}
@@ -86,7 +119,7 @@ $drawer-profile-height: $drawer-padding + $drawer-profile-img + $drawer-profile-
 		}
 	}
 
-	header, .sc-drawer-header {
+	header, .drawer-header {
 		position: relative;
 
 		&:hover {
@@ -94,7 +127,7 @@ $drawer-profile-height: $drawer-padding + $drawer-profile-img + $drawer-profile-
 		}
 	}
 
-	@if( in_array( 'full-height', $navigation-drawer ) or in_array( 'clipped', $navigation-drawer ) or in_array( 'floating', $navigation-drawer ) ) {
+	@if( in-array( 'full-height', $navigation-drawer ) or in-array( 'clipped', $navigation-drawer ) or in-array( 'floating', $navigation-drawer ) ) {
 		&-permanent {
 			@if (in-array('full-height', $navigation-drawer)) {
 				&-full-height {
@@ -102,7 +135,7 @@ $drawer-profile-height: $drawer-padding + $drawer-profile-img + $drawer-profile-
 					border-right: rem-calc(1px) solid if($theme == light, rgba($black, .12), rgba($white, .12));
 					z-index: 3;
 
-					.sc-drawer-header {
+					.drawer-header {
 						padding: rem-calc(16px) rem-calc(16px) rem-calc(8px) rem-calc(16px);
 						border-bottom: rem-calc(1px) solid if($theme == light, rgba($black, .12), rgba($white, .12));
 						height: $appbar-mobile-portrait-height;
@@ -177,11 +210,11 @@ $drawer-profile-height: $drawer-padding + $drawer-profile-img + $drawer-profile-
 			border-right: rem-calc(1px) solid if($theme == light, rgba($black, .12), rgba($white, .12));
 			z-index: 3;
 
-			.sc-menu {
+			.menu {
 				top: $gutter;
 			}
 
-			header, .sc-drawer-header {
+			header, .drawer-header {
 				height: $appbar-mobile-portrait-height;
 				line-height: $appbar-mobile-portrait-height;
 				margin: 0 0 $drawer-profile-bottom-padding 0;
@@ -207,7 +240,7 @@ $drawer-profile-height: $drawer-padding + $drawer-profile-img + $drawer-profile-
 				}
 			}
 
-			img, .sc-drawer-profile-img {
+			img, .drawer-profile-img {
 				@include square($drawer-icon-size);
 				margin: 0 (rem-calc(72px) - $drawer-icon-size - $drawer-padding) 0 $gutter;
 				@include border-radius(50%);
@@ -217,7 +250,7 @@ $drawer-profile-height: $drawer-padding + $drawer-profile-img + $drawer-profile-
 				@include transform(translate(0, -50%));
 			}
 
-			.sc-drawer-profile-name {
+			.drawer-profile-name {
 				color: if( $theme == light, inherit, $white);
 			}
 		}
@@ -245,15 +278,15 @@ $drawer-profile-height: $drawer-padding + $drawer-profile-img + $drawer-profile-
 			margin: rem-calc(8px) 0 0 0;
 		}
 
-		.sc-divider, .sc-arrow, .sc-drawer-profile-name, .sc-drawer-profile-dropdown, .sc-text {
+		.divider, .arrow, .drawer-profile-name, .drawer-profile-dropdown, .text {
 			display: none;
 		}
 
-		.sc-drawer-header {
+		.drawer-header {
 			height: rem-calc(48px);
 			line-height: rem-calc(48px);
 
-			.sc-drawer-profile-img {
+			.drawer-profile-img {
 				@include square($drawer-icon-size);
 				margin: 0 calc(#{rem-calc(72px)} - #{$drawer-icon-size} - #{$drawer-padding}) 0 0;
 				@include border-radius(50%);
@@ -264,13 +297,13 @@ $drawer-profile-height: $drawer-padding + $drawer-profile-img + $drawer-profile-
 			}
 		}
 
-		&.sc-expanded {
+		&.expanded {
 			width: 100%;
 			top: 0;
 			border-right: rem-calc(1px) solid if($theme == light, rgba($black, .12), rgba($white, .12));
 			z-index: 3;
 
-			.sc-drawer-header {
+			.drawer-header {
 				position: relative;
 				height: $appbar-small-height;
 				line-height: $appbar-small-height;
@@ -304,24 +337,24 @@ $drawer-profile-height: $drawer-padding + $drawer-profile-img + $drawer-profile-
 			z-index: 3;
 			@include material-shadow(16);
 
-			.sc-menu {
+			.menu {
 				top: $drawer-profile-img + $drawer-padding + ($drawer-profile-content-height / 2);
 			}
 
-			header, .sc-drawer-header {
+			header, .drawer-header {
 				padding: 0 0 $drawer-profile-bottom-padding 0;
 				margin: 0 0 $drawer-profile-bottom-padding 0;
 				height: $drawer-profile-height;
 			}
 
-			.sc-drawer-profile-background {
+			.drawer-profile-background {
 				top: 0;
 				left: 0;
 				width: 100%;
 				height: $drawer-profile-height;
 			}
 
-			.sc-scrim {
+			.scrim {
 				@include linear-gradient($drawer-profile-scrim);
 				bottom: $drawer-profile-bottom-padding;
 				content: '';
@@ -332,39 +365,39 @@ $drawer-profile-height: $drawer-padding + $drawer-profile-img + $drawer-profile-
 				margin: 0 0 -#{$drawer-profile-bottom-padding} 0;
 			}
 
-			.sc-drawer-profile-background, .sc-drawer-profile-img, .sc-drawer-profile-name, .sc-drawer-profile-email, .sc-drawer-profile-more {
+			.drawer-profile-background, .drawer-profile-img, .drawer-profile-name, .drawer-profile-email, .drawer-profile-more {
 				position: absolute;
 			}
 
-			.sc-drawer-profile-img {
+			.drawer-profile-img {
 				top: $drawer-padding;
 				left: $drawer-padding;
 				@include square($drawer-profile-img);
 				@include border-radius(50%);
 			}
 
-			.sc-drawer-profile-name, .sc-drawer-profile-email {
+			.drawer-profile-name, .drawer-profile-email {
 				line-height: $drawer-profile-content-height / 2;
 				left: $drawer-padding;
 				height: $drawer-profile-content-height / 2;
 				color: $white;
 			}
 
-			.sc-drawer-profile-name {
+			.drawer-profile-name {
 				top: $drawer-profile-img + $drawer-padding;
 				font-size: rem-calc(14px);
 				font-weight: 500;
 				right: 0;
 			}
 
-			.sc-drawer-profile-email {
+			.drawer-profile-email {
 				top: $drawer-profile-img + $drawer-padding + ($drawer-profile-content-height / 2);
 				font-size: rem-calc(14px);
 				font-weight: 400;
 				right: $drawer-profile-content-height + $drawer-padding;
 			}
 
-			.sc-drawer-profile-more {
+			.drawer-profile-more {
 				height: $drawer-profile-content-height / 2;
 				line-height: $drawer-profile-content-height;
 				right: $drawer-padding;
@@ -378,7 +411,7 @@ $drawer-profile-height: $drawer-padding + $drawer-profile-img + $drawer-profile-
 				}
 			}
 
-			&.sc-expanded {
+			&.expanded {
 				margin: 0;
 			}
 		}
@@ -407,19 +440,19 @@ $drawer-profile-height: $drawer-padding + $drawer-profile-img + $drawer-profile-
 			}
 		}
 
-		&:hover, &.sc-active {
+		&:hover, &.active {
 			color: if( $theme == light, $main-color, $white);
 
 			.material-icons {
 				color: if( $theme == light, $main-color, $white);
 			}
 
-			.sc-arrow {
+			.arrow {
 				color: initial;
 			}
 		}
 
-		&.sc-no-background {
+		&.no-background {
 			background: transparent;
 
 			&:hover {
@@ -428,11 +461,11 @@ $drawer-profile-height: $drawer-padding + $drawer-profile-img + $drawer-profile-
 		}
 	}
 
-	.sc-subheader {
+	.subheader {
 		color: rgba($black, .54);
 	}
 
-	.sc-dropdown {
+	.dropdown {
 		visibility: hidden;
 		@include opacity(0);
 		@include transition(all $transition-small-duration $standard-transition);
@@ -452,7 +485,7 @@ $drawer-profile-height: $drawer-padding + $drawer-profile-img + $drawer-profile-
 			padding: 0 0 0 ($gutter * 2);
 		}
 
-		&.sc-expanded {
+		&.expanded {
 			visibility: visible;
 			@include opacity(1);
 		}
@@ -477,11 +510,11 @@ $drawer-profile-height: $drawer-padding + $drawer-profile-img + $drawer-profile-
 		}
 	}
 
-	.sc-drawer-dropdown.sc-expanded .sc-arrow {
+	.drawer-dropdown.expanded .arrow {
 		@include transform(rotate(180deg));
 	}
 
-	.sc-arrow {
+	.arrow {
 		position: absolute;
 		right: rem-calc(16px);
 		top: ($drawer-item-height - ($drawer-item-height / 2)) - ($drawer-icon-size / 2);
@@ -499,7 +532,7 @@ $drawer-profile-height: $drawer-padding + $drawer-profile-img + $drawer-profile-
 		}
 	}
 
-	.sc-divider {
+	.divider {
 		margin: rem-calc(8px) 0;
 		height: rem-calc(1px);
 		background: if($theme == light, rgba($black, .12), rgba($white, .12));
@@ -509,7 +542,7 @@ $drawer-profile-height: $drawer-padding + $drawer-profile-img + $drawer-profile-
 		}
 	}
 
-	.sc-menu {
+	.menu {
 		position: fixed;
 		z-index: 4;
 		left: rem-calc(4px);
