@@ -33,13 +33,13 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
         </div>
 
         <div class="chip chip-contact chip-deletable">
-            <img class="left" src="/images/profile-icon.jpg" alt="Chip contact example">
+            <<?php echo ($amp ? 'amp-img layout="responsive"' : 'img'); ?> class="left" src="/images/profile-icon.jpg" alt="Chip contact example">
             <span>John Doe</span>
             <i class="material-icons chip-delete">clear</i>
         </div>
 
         <div class="chip chip-contact">
-            <img class="left" src="/images/profile-icon.jpg" alt="Chip contact example">
+            <<?php echo ($amp ? 'amp-img layout="responsive"' : 'img'); ?> class="left" src="/images/profile-icon.jpg" alt="Chip contact example">
             <span>John Doe</span>
         </div>
     </div>

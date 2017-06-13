@@ -15,7 +15,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	</p>
 
 	<figure class="col xs4 s12">
-		<img src="/images/responsive.jpg" alt="SMaterial responsive examples" title="Responsive examples">
+		<<?php echo ($amp ? 'amp-img layout="responsive" width="500px" height="300px"' : 'img'); ?> src="/images/responsive.jpg" alt="SMaterial responsive examples" title="Responsive examples">
 	</figure>
 </section>
 

@@ -139,7 +139,7 @@ notification('Title', {body: 'Content', icon: 'icon_path'}, 'click-url.com')
 		<div class="notification-content">
 			<div class="notification-content-title">John Doe</div>
 			<div class="notification-content-text">This is an example message</div>
-			<img src="/images/profile-icon.jpg">
+			<<?php echo ($amp ? 'amp-img layout="responsive"' : 'img'); ?> src="/images/profile-icon.jpg">
 		</div>
 
 		<div class="notification-actions">
@@ -170,7 +170,7 @@ notification('Title', {body: 'Content', icon: 'icon_path'}, 'click-url.com')
 		<div class="notification-content">
 			<div class="notification-content-title">John Doe</div>
 			<div class="subject">This is an example message</div>
-			<img src="/images/profile-icon.jpg">
+			<<?php echo ($amp ? 'amp-img layout="responsive"' : 'img'); ?> src="/images/profile-icon.jpg">
 			<div class="notification-content-text">This is an example message. This message could contain a hole lot of text.</div>
 		</div>
 
@@ -225,8 +225,8 @@ notification('Title', {body: 'Content', icon: 'icon_path'}, 'click-url.com')
 
 		<div class="notification-content">
 			<div class="notification-content-title">Screenshot captured</div>
-			<img src="/images/profile-icon.jpg">
-			<div class="notification-content-text"><img src="/images/profile-icon.jpg"></div>
+			<<?php echo ($amp ? 'amp-img layout="responsive"' : 'img'); ?> src="/images/profile-icon.jpg">
+			<div class="notification-content-text"><<?php echo ($amp ? 'amp-img layout="responsive"' : 'img'); ?> src="/images/profile-icon.jpg"></div>
 		</div>
 
 		<div class="notification-actions">
@@ -346,7 +346,7 @@ notification('Title', {body: 'Content', icon: 'icon_path'}, 'click-url.com')
 				<i class="material-icons">skip_next</i>
 				<i class="material-icons">thumb_up</i>
 			</div>
-			<img src="/images/album-example.jpg">
+			<<?php echo ($amp ? 'amp-img layout="responsive"' : 'img'); ?> src="/images/album-example.jpg">
 		</div>
 	</div>
 </section>

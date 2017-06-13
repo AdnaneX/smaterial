@@ -10,14 +10,14 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 
     <div class="col xs4 s4">
         <figure class="grid">
-            <img src="/images/album-example.jpg">
+            <<?php echo ($amp ? 'amp-img layout="responsive"' : 'img'); ?> src="/images/album-example.jpg">
             <figcaption class="grid-header grid-single">Single line</figcaption>
         </figure>
     </div>
 
     <div class="col xs4 s4">
         <figure class="grid">
-            <img src="/images/album-example.jpg">
+            <<?php echo ($amp ? 'amp-img layout="responsive"' : 'img'); ?> src="/images/album-example.jpg">
             <figcaption class="grid-footer grid-two">
                 <div class="first-large">2 Line large</div>
                 <div class="second">Example</div>
@@ -32,7 +32,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 
     <div class="col xs4 s4">
         <figure class="grid">
-            <img src="/images/album-example.jpg">
+            <<?php echo ($amp ? 'amp-img layout="responsive"' : 'img'); ?> src="/images/album-example.jpg">
             <figcaption class="grid-footer grid-two">
                 <div class="first-small">2 Line small</div>
                 <div class="second">Example</div>

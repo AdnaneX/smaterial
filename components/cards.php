@@ -25,7 +25,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 
 	<div class="col xs4 s12 m2">
 		<div class="card">
-			<img src="/images/album-example.jpg" class="card-top">
+			<<?php echo ($amp ? 'amp-img layout="responsive"' : 'img'); ?> src="/images/album-example.jpg" class="card-top">
 
 			<div class="card-supporting">
 				This is supporting text.
@@ -59,12 +59,12 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 
 	<div class="col xs4 s12 m3">
 		<div class="card">
-			<img src="/images/profile-icon.jpg" class="card-avatar">
+			<<?php echo ($amp ? 'amp-img layout="responsive"' : 'img'); ?> src="/images/profile-icon.jpg" class="card-avatar">
 			<div class="card-primary card-primary-small card-primary-additional">
 				This is a title
 				<div class="subhead-1">Subhead</div>
 			</div>
-			<img src="/images/album-example.jpg">
+			<<?php echo ($amp ? 'amp-img layout="responsive"' : 'img'); ?> src="/images/album-example.jpg">
 
 			<div class="card-supporting card-supporting-additional">
 				This is supporting text.
@@ -111,7 +111,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 
 	<div class="col xs4 s12 m3">
 		<div class="card">
-			<img src="/images/album-example.jpg" class="card-background">
+			<<?php echo ($amp ? 'amp-img layout="responsive"' : 'img'); ?> src="/images/album-example.jpg" class="card-background">
 
 			<div class="card-content">
 				<div class="card-primary card-primary-additional">

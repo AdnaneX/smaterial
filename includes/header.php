@@ -1,4 +1,5 @@
 <?php
+$amp = ( !empty( $_GET['amp'] ) && $_GET['amp'] == 'true' ? true : false);
 // Set to true this way no unnecessary code is loaded while testing
 define( 'TEST', false );
 $file = str_replace( '.php', '', $_SERVER['PHP_SELF'] );
@@ -40,20 +41,25 @@ $highlight = $colors[$folder]['highlight'];
 $keywords .= ', smaterial, css, scss, material design, framework, html, js, css framework, material design framework';
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html <?php echo ($amp ? 'amp' : ''); ?> lang="en">
 <head>
 	<title><?php echo $title; ?> | SMaterial</title>
 
-	<link rel="stylesheet" href="/stylesheets/prism.css">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-	<link rel="stylesheet" href="/stylesheets/smaterial.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <?php
+    if( !$amp ) {
+        echo '
+        <link rel="stylesheet" href="/stylesheets/prism.css">
+	    <link rel="stylesheet" href="/stylesheets/smaterial.css">';
+	}
+	?>
 
 	<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
 	<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
 	<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
 
 	<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=no">
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
 	<meta name="language" content="EN">
 	<meta name="author" content="Derkjan Super">
 	<meta name="description" content="<?php echo $description; ?>">
@@ -67,35 +73,63 @@ $keywords .= ', smaterial, css, scss, material design, framework, html, js, css 
 	<meta name="theme-color" content="<?php echo $color; ?>">
 	<meta name="msapplication-navbutton-color" content="<?php echo $color; ?>">
 	<meta name="apple-mobile-web-app-status-bar-style" content="<?php echo $color; ?>">
+
+    <?php
+    if( $amp ) {
+        echo '
+            <link rel="canonical" href="'.$_SERVER['PHP_SELF'].'">
+            <script type="application/ld+json">
+            {
+                "@context": "http://schema.org",
+                "@type": "WebApplication",
+                "headline": "'.$title.' - '.ucfirst($folder).'",
+                "image": [
+                    "/images/responsive.jpg"
+                ]
+            }
+            </script>
+            <script async src="https://cdn.ampproject.org/v0.js"></script>
+            <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
+            <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+            <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+            <noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+            <style amp-custom>';
+            require_once './stylesheets/smaterial-amp.css';
+        echo '</style>';
+    } else {
+		echo '
+		    <link rel="amphtml" href="'.$_SERVER['PHP_SELF'].'?amp=true">
+            <style>
+            .appbar {
+                background: '.$color.';
+             }
+        
+            main h1, main h2, main h3, main h4, main h5, main h6, main a {
+                color: '.$color.';
+            }
+            
+            main a:hover {
+                color: '.$highlight.';
+            }
+            
+            .drawer .active, .drawer a:hover, .drawer a:hover .material-icons {
+                color: '.$color.' !important;
+            }
+            
+            .raised-button {
+                color: white;
+                background: '.$color.';
+            }
+            
+            .drawer-permanent-full-height .drawer-header img {
+                height: 100%;
+            }
+            </style>';
+	}
+    ?>
 </head>
 
 <body class="">
-<style>
-	.appbar {
-		background: <?php echo $color; ?>;
-	}
-
-	main h1, main h2, main h3, main h4, main h5, main h6, main a {
-		color: <?php echo $color; ?>;
-	}
-
-	main a:hover {
-		color: <?php echo $highlight; ?>;
-	}
-
-	.drawer .active, .drawer a:hover, .drawer a:hover .material-icons {
-		color: <?php echo $color; ?> !important;
-	}
-
-	.raised-button {
-		color: white;
-		background: <?php echo $color; ?>;
-	}
-
-	.drawer-permanent-full-height .drawer-header img {
-		height: 100%;
-	}
-</style>
 
 <header class="appbar">
     <i class="material-icons trigger" data-trigger="drawer">menu</i>
@@ -107,12 +141,10 @@ $keywords .= ', smaterial, css, scss, material design, framework, html, js, css 
 	<i class="material-icons">search</i>
 
     <div class="search-input">
-        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-            <div class="single-input">
-                <input type="search" name="search" id="search">
-                <label for="search">Search</label>
-            </div>
-        </form>
+        <div class="single-input">
+            <input type="search" name="search" id="search">
+            <label for="search">Search</label>
+        </div>
     </div>
 
     <i class="material-icons">mail <div class="badge">2</div></i>
@@ -163,9 +195,9 @@ if( $_SERVER['PHP_SELF'] === '/components/tabs.php' ) {
 
 
 	<header>
-		<img src="/images/drawer-background.jpg" class="drawer-profile-background" alt="menu background">
+		<<?php echo ($amp ? 'amp-img layout="responsive" height="120px" width="280px"' : 'img'); ?> src="/images/drawer-background.jpg" class="drawer-profile-background" alt="menu background">
 		<div class="scrim"></div>
-		<img src="/images/profile-icon.jpg" class="drawer-profile-img" alt="profile image">
+		<<?php echo ($amp ? 'amp-img layout="responsive" height="50px" width="50px"' : 'img'); ?> src="/images/profile-icon.jpg" class="drawer-profile-img" alt="profile image">
 		<div class="drawer-profile-name">John Doe</div>
 		<div class="drawer-profile-email">johndoe@gmail.com</div>
 		<div class="drawer-profile-more">
@@ -232,8 +264,7 @@ if( $_SERVER['PHP_SELF'] === '/components/tabs.php' ) {
 
 	<a href="#" class="drawer-dropdown">Resources <i class="material-icons">expand_more</i></a>
 	<div class="dropdown">
-		<a href="/resources/templates.php" <?php echo ( $file == '/resources/templates' ? 'class="active"' : '' ); ?>>Templates</a>
-		<a href="/resources/links.php" <?php echo ( $file == '/resources/links' ? 'class="active"' : '' ); ?>>Links</a>
+		<a href="/resources/amp.php" <?php echo ( $file == '/resource/amp' ? 'class="active"' : ''); ?>>Accelerated Mobile Pages (AMP)</a>
 		<a href="/resources/showroom.php" <?php echo ( $file == '/resources/showroom' ? 'class="active"' : '' ); ?>>Showroom</a>
 	</div>
 </nav>

@@ -151,7 +151,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 			<ul id="options">
 				<li class="red"><a href="#"><i class="material-icons">file_upload</i></a></li>
 				<li class="blue"><a href="#"><i class="material-icons">file_download</i></a></li>
-				<li class="green"><a href="#"><img src="/images/profile-icon.jpg"></a></li>
+				<li class="green"><a href="#"><<?php echo ($amp ? 'amp-img layout="responsive"' : 'img'); ?> src="/images/profile-icon.jpg"></a></li>
 			</ul>
 		</div>
 	</p>

@@ -22,7 +22,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	</p>
 
 	<p class="col xs4 s12 m6">
-		<img width="100%" src="http://material-design.storage.googleapis.com/publish/material_v_4/material_ext_publish/0Bx4BSt6jniD7SW9CUzR4MnRpOTg/style_typography_roboto1.png" alt="Roboto font example">
+		<<?php echo ($amp ? 'amp-img layout="responsive"' : 'img'); ?> height="auto" width="100%" src="http://material-design.storage.googleapis.com/publish/material_v_4/material_ext_publish/0Bx4BSt6jniD7SW9CUzR4MnRpOTg/style_typography_roboto1.png" alt="Roboto font example">
 	</p>
 
 	<table class="col xs4 s12 m6">
