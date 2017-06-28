@@ -21,12 +21,30 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
     </p>
 </section>
 
+<section class="row">
+    <h2 class="col xs4">Small width</h2>
+
+    <p class="col xs4 m6">
+        By wrapping the <code class="language-css">.appbar, .drawer, main</code> elements inside a <code class="language-html">&lt;div class="container"></code>
+        element you're able to make a small screen layout.
+        In this case small screen doesn't mean mobile screen but a layout that is about 80% of the screens width.
+        This means that you have some room left on the sides.
+    </p>
+</section>
+
 <script>
     var full = document.getElementById('full');
 
 	full.addEventListener('click', function() {
-		var body = document.getElementsByTagName('body')[0];
-        body.className = 'full-width'
+		var body = document.getElementsByTagName('body')[0],
+            classes = body.className;
+
+		if( classes.indexOf('full-width') > 0 ) {
+			classes = classes.replace(' full-width', '');
+			body.className = classes;
+        } else {
+			body.className += ' full-width';
+        }
 	});
 </script>
 <?php

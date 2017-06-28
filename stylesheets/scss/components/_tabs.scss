@@ -17,7 +17,7 @@ $tabs: '';
 	@if( $tabs == '' ) {
 		$tabs: $tabs + '.tab-icon';
 	} @else {
-		$tabs: $tabs + '.tab-icon';
+		$tabs: $tabs + ', .tab-icon';
 	}
 }
 
@@ -25,7 +25,7 @@ $tabs: '';
 	@if( $tabs == '' ) {
 		$tabs: $tabs + '.tab-icon-text';
 	} @else {
-		$tabs: $tabs + '.tab-icon-text';
+		$tabs: $tabs + ', .tab-icon-text';
 	}
 }
 

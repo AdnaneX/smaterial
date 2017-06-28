@@ -1,7 +1,7 @@
 <?php
 $title = 'Chips';
-$description = 'Chips based on Google\'s Material Design';
-$keywords = 'chips';
+$description = 'Chips based on Google\'s Material Design. They contain basic chips but also deletable and contact chips.';
+$keywords = 'chips, contact, deletable';
 
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>

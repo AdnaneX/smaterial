@@ -19,7 +19,7 @@ $appbar-large-padding: ( ( $appbar-large-height - $appbar-icon-large-size ) / 2 
 	background: $appbar-background;
 	color: $appbar-text;
 	line-height: normal;
-	height: $appbar-mobile-portrait-height;
+	min-height: $appbar-mobile-portrait-height;
 	position: fixed;
 	width: 100%;
 	z-index: 2;
@@ -30,11 +30,11 @@ $appbar-large-padding: ( ( $appbar-large-height - $appbar-icon-large-size ) / 2 
 
 	@if( $amp == false ) {
 		@media only screen and (orientation: landscape) and (max-width: #{$small-screen}) {
-			height: $appbar-mobile-landscape-height;
+			min-height: $appbar-mobile-landscape-height;
 		}
 
 		@media only screen and (orientation: portrait) and (max-width: #{$xsmall-screen}) {
-			height: $appbar-mobile-portrait-height;
+			min-height: $appbar-mobile-portrait-height;
 		}
 
 		@media #{$small-up} {
@@ -67,7 +67,6 @@ $appbar-large-padding: ( ( $appbar-large-height - $appbar-icon-large-size ) / 2 
 			}
 		}
 	}
-
 
 	.material-icons {
 		margin: $appbar-portrait-padding ($gutter / 2);

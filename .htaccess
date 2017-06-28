@@ -14,3 +14,8 @@ RewriteRule ^(.*)$ http://www.smaterial.dsuper.nl/$1 [L,R=301]
 
 
 ErrorDocument 404 /404.php
+
+##-------Force HTTPS connection -------##
+RewriteCond %{HTTPS} !=on
+RewriteRule ^/?(.*) https://smaterial.dsuper.nl/$1 [R=301,L]
+##

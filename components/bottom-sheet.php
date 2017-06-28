@@ -200,10 +200,10 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	</pre>
 
 	<div class="bottom-sheet bottom-sheet-music" id="music">
-		<<?php echo ($amp ?  : 'img'); ?> src="/images/album-example.jpg">
+		<<?php echo ($amp ? 'amp-img layout="responsive" width="50px" height="50px"' : 'img'); ?> src="/images/album-example.jpg">
 
 		<div class="determinate">
-			<div class="progressbar" style="width:10%"></div>
+			<div class="progressbar" <?php echo ($amp ? '' : 'style="width:10%"'); ?>></div>
 		</div>
 
 		<div class="info">

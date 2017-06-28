@@ -1,6 +1,6 @@
 <?php
 $title = 'Getting started';
-$description = 'How to get started with SMaterial. Start using SMaterial using vanilla CSS or by using SCSS';
+$description = 'How to get started with SMaterial. Start using SMaterial using vanilla CSS or by using SCSS. A quick getting started guide and some other useful HTML';
 $keywords = 'getting started, starting, how to use';
 
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
@@ -143,6 +143,20 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 &lt;meta name="apple-mobile-web-app-status-bar-style" content="#2196F3">
 		</code>
 	</pre>
+</section>
+
+<section class="row">
+    <h3 class="col xs4">Accelerated Mobile Pages (AMP)</h3>
+
+    <p class="col xs2">
+        SMaterial also supports AMP. The support of still very limited as it is still in development.
+        This means that there is a dedicated stylesheet, but everything that relies on JavaScript doesn't work.
+        The AMP stylesheet removes all the media queries that are larger than mobile. The stylesheet also has less components on by default.
+        This means that the stylesheet is about 1/3 the size. It also means that if one of the components isn't working it might be turned off.
+        If you're using SCSS you can easily change the components.
+        If you don't want to use AMP but you're only developing for mobile this stylesheet might help you a lot as well.
+        You can also trigger the AMP behaviour on your own by setting the <code class="language-css">$amp</code> variable to <code>false</code> in your own stylesheet.
+    </p>
 </section>
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.php';

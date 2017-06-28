@@ -422,3 +422,81 @@ $large-gutter: rem-calc(24px) !default; // Default 24px
  * Icons
  **************************************/
 $icon-size: rem-calc(24px) !default; // Default rem-calc(24px)
+
+/**************************************
+ * Small screen (Not mobile screen. Used when you don't want 100% screen width)
+ **************************************/
+$small-small-screen-width: 90%;
+$large-small-screen-width: 80%;
+
+/**************************************
+ * Components
+ **************************************/
+
+$grid: null !default;
+$flex-grid: null !default;
+$normalize: null !default;
+$shadow-depths: null !default;
+$typography: null !default;
+$icons: null !default;
+
+// Components
+$bottom-nav: null !default;
+$bottom-sheet: null !default;
+$button: null !default;
+$chip: null !default;
+$navigation-drawer: null !default;
+$notification: null !default;
+$progress: null !default;
+$selection: null !default;
+$slider: null !default;
+$stepper: null !default;
+$tab: null !default;
+$textfield: null !default;
+
+@if( $amp == false ) {
+	// Style
+	$grid: ('hidden') !default;
+	$flex-grid: (/*'order',*/'hidden') !default;
+	$normalize: ('scrollbar', 'selection', 'helper-classes') !default;
+	$shadow-depths: ('0', '1', '2', '3', '4', '6', '8', '9', '10', '12', '16', '24') !default;
+	$typography: ('display-4', 'display-3', 'display-2', 'display-1', 'headline', 'title', 'subhead-1', 'subhead-2', 'body-1', 'body-2', 'caption', 'label', 'menu', 'button') !default;
+	$icons: ('sizes') !default;
+
+	// Components
+	$bottom-nav: ('bottom-nav', 'bottom-shifting') !default;
+	$bottom-sheet: ('header', 'grid', 'music') !default;
+	$button: ('raised', 'dense', 'flat', 'floating', 'mini', /*'toggle', 'ripple'*/) !default;
+	$chip: ('deletable', 'contact') !default;
+	$navigation-drawer: ('full-height', 'clipped', 'floating', 'persistent', 'temporary') !default;
+	$notification: ('big-text', 'big-picture', 'progress', 'media') !default;
+	$progress: ('determinate', 'indeterminate', 'buffer', 'circular') !default; // It's better to turn off "buffer" since it isn't working properly
+	$selection: ('checkbox', 'radio', 'switch') !default;
+	$slider: ('discrete') !default;
+	$stepper: ('horizontal', 'vertical') !default;
+	$tab: ('tab', 'tab-icon', 'tab-icon-text') !default;
+	$textfield: ('floating', 'floating-dense', 'single', 'single-dense', 'multi') !default;
+
+} @else if $amp == true {
+	// Style
+	$grid: (/*'hidden'*/) !default;
+	$flex-grid: (/*'order', 'hidden'*/) !default;
+	$normalize: (/*'scrollbar', 'selection', 'helper-classes'*/ ) !default;
+	$shadow-depths: ('0', '1', '2', '3', '4', '6', '8', '9', '10', '12', '16', '24') !default;
+	$typography: ('display-4', 'display-3', 'display-2', 'display-1', 'headline', 'title', 'subhead-1', 'subhead-2', 'body-1', 'body-2', 'caption', 'label',  /*'menu', 'button'*/) !default;
+	$icons: (/*'sizes'*/) !default;
+
+	// Components
+	$bottom-nav: ('bottom-nav', 'bottom-shifting') !default;
+	$bottom-sheet: ('header', 'grid'/*, 'music'*/) !default;
+	$button: ('raised', /*'dense',*/ 'flat', 'floating', /*'mini', 'toggle', 'ripple'*/) !default;
+	$chip: ('deletable', 'contact') !default;
+	$navigation-drawer: (/*'full-height', 'clipped', 'floating', 'persistent',*/ 'temporary') !default;
+	$notification: ('big-text', 'big-picture', 'progress', 'media') !default;
+	$progress: ('determinate', 'indeterminate', /*'buffer',*/ 'circular') !default; // It's better to turn off "buffer" since it isn't working properly
+	$selection: ('checkbox', 'radio', 'switch') !default;
+	$slider: (/*'discrete'*/) !default;
+	$stepper: ('horizontal', 'vertical') !default;
+	$tab: ('tab', 'tab-icon', 'tab-icon-text') !default;
+	$textfield: ('floating', /*'floating-dense',*/ 'single', /*'single-dense',*/ 'multi') !default;
+}
