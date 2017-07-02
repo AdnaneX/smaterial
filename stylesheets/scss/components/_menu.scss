@@ -16,6 +16,8 @@
 	padding: rem-calc(8px) 0;
 	white-space: nowrap;
 	text-align: left;
+	max-height: 50vh;
+	overflow: auto;
 	z-index: 4;
 	@include transition(max-width $transition-small-duration $standard-transition unquote(',') max-height $transition-small-duration $standard-transition);
 
@@ -91,6 +93,7 @@ div.select {
 
 	.menu {
 		top: 0;
+		width: 100%;
 	}
 
 	.active {

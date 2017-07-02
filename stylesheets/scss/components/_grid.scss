@@ -1,3 +1,7 @@
+/**************************************
+ * Column settings and offset, push, pull need to separate or column will overwrite
+ **************************************/
+
 .row {
 	//margin: 0 auto rem-calc(20px) auto;
 
@@ -33,7 +37,12 @@
 				left: auto;
 				right: auto;
 			}
+			$i: $i + 1;
+		}
 
+		$i: 1;
+		@while $i <= $xsmall-columns {
+			$percent: unquote(( 100 / ( $xsmall-columns / $i ) ) + "%");
 			&.offset-xs#{$i} {
 				margin-left: $percent;
 			}
@@ -61,7 +70,12 @@
 						left: auto;
 						right: auto;
 					}
+					$i: $i + 1;
+				}
 
+				$i: 1;
+				@while $i <= $small-columns {
+					$percent: unquote(( 100 / ( $small-columns / $i ) ) + "%");
 					&.offset-s#{$i} {
 						margin-left: $percent;
 					}
@@ -88,7 +102,12 @@
 						left: auto;
 						right: auto;
 					}
+					$i: $i + 1;
+				}
 
+				$i: 1;
+				@while $i <= $columns {
+					$percent: unquote(( 100 / ( $columns / $i ) ) + "%");
 					&.offset-s#{$i} {
 						margin-left: $percent;
 					}
@@ -115,7 +134,12 @@
 						left: auto;
 						right: auto;
 					}
+					$i: $i + 1
+				}
 
+				$i: 1;
+				@while $i <= $columns {
+					$percent: unquote(( 100 / ( $columns / $i ) ) + "%");
 					&.offset-m#{$i} {
 						margin-left: $percent;
 					}
@@ -141,7 +165,12 @@
 						left: auto;
 						right: auto;
 					}
+					$i: $i + 1;
+				}
 
+				$i: 1;
+				@while $i <= $columns {
+					$percent: unquote(( 100 / ( $columns / $i ) ) + "%");
 					&.offset-l#{$i} {
 						margin-left: $percent;
 					}
@@ -167,7 +196,12 @@
 						left: auto;
 						right: auto;
 					}
+					$i: $i + 1;
+				}
 
+				$i: 1;
+				@while $i <= $columns {
+					$percent: unquote(( 100 / ( $columns / $i ) ) + "%");
 					&.offset-xl#{$i} {
 						margin-left: $percent;
 					}

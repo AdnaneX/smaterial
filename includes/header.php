@@ -152,6 +152,14 @@ $keywords .= ', smaterial, css, scss, material design, framework, html, js, css 
         <nav class="menu appbar-menu" id="appbar-menu">
             <a href="#">Example</a>
             <a href="#">Example</a>
+            <a href="#">Example</a>
+            <a href="#">Example</a>
+            <a href="#">Example</a>
+            <a href="#">Example</a>
+            <a href="#">Example</a>
+            <a href="#">Example</a>
+            <a href="#">Example</a>
+            <a href="#">Example</a>
         </nav>
     </header>
 

@@ -4,12 +4,15 @@ $description = 'Buttons based on Google\'s Material Design. The buttons have sev
 $keywords = 'buttons, floating button, flat button, raised button, icon toggle, floating, flat, raised';
 
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
-?>
-<style>
+
+if( !$amp ) {
+    echo '<style>
 	.raised-button, .flat-button, .raised-button-dense, .flat-button-dense, .raised-button-disabled, .flat-button-disabled {
 		margin: 8px;
 	}
-</style>
+</style>';
+}
+?>
 
 <section class="row">
 	<h2 class="col xs4 s12">Buttons usage</h2>
@@ -38,7 +41,6 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		<button class="raised-button"><i class="material-icons left">cloud</i> Button example with icon left</button>
 		<button class="raised-button"><i class="material-icons right">cloud</i> Button example with icon right</button>
 		<button class="raised-button">Button example without icon</button>
-		<input type="button" value="Input type button" class="raised-button">
 		<input type="submit" value="Submit button" class="raised-button">
 		<input type="reset" value="Reset button" class="raised-button">
 		<button class="raised-button raised-button-disabled">Disabled</button>
@@ -97,7 +99,6 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		<button class="flat-button"><i class="material-icons left">cloud</i> Button example with icon left</button>
 		<button class="flat-button"><i class="material-icons right">cloud</i> Button example with icon right</button>
 		<button class="flat-button">Button example without icon</button>
-		<input type="button" value="Input type button" class="flat-button">
 		<input type="submit" value="Submit button" class="flat-button">
 		<input type="reset" value="Reset button" class="flat-button">
 		<button class="flat-button flat-button-disabled">Disabled</button>
@@ -145,7 +146,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		<div class="floating-button"><i class="material-icons">cloud</i></div>
 		<div class="floating-button floating-button-mini"><i class="material-icons">cloud</i></div>
 
-		<div href="#" class="floating-button trigger" data-trigger="options">
+		<div class="floating-button trigger" data-trigger="options">
 			<i class="material-icons">cloud</i>
 
 			<ul id="options">

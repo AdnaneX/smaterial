@@ -72,23 +72,21 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 <section class="row">
 	<h3 class="col xs4">Select</h3>
 
-	<p class="col xs4 s12 m">
+	<p class="col xs4 s12">
 		The select almost looks the same as the menu.
 
-        <?php
-        if( $_POST ) {
-            print_r($_POST);
-        }
-        ?>
-        <form action="" method="post">
+        <div class="col xs2 m2 offset-m10">
             <select name="example" class="select">
                 <option value="e1">Example 1</option>
                 <option value="e2">Example 2</option>
                 <option value="e3">Example 3</option>
+                <option value="e3">Example 3</option>
+                <option value="e3">Example 3</option>
+                <option value="e3">Example 3</option>
+                <option value="e3">Example 3</option>
+                <option value="e3">Example 3</option>
             </select>
-
-            <button class="raised-button">Submit</button>
-        </form>
+        </div>
 	</p>
 </section>
 <?php

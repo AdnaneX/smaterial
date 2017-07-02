@@ -62,17 +62,21 @@
 		}
 	}
 
-	&-container {
-		padding: rem-calc(24px);
+	&-content {
+		padding: 0 rem-calc(24px) rem-calc(24px) rem-calc(24px);
+		max-height: 50vh;
+		overflow: auto;
 	}
 
 	&-title {
+		width: 100%;
 		@include font($font-size-title, 0, $font-weight-title, $line-height-title, $font-color-title, $letter-spacing-title);
-		margin-bottom: rem-calc(20px);
+		padding: rem-calc(24px) rem-calc(24px) rem-calc(20px) rem-calc(24px);
 	}
 
 	&-actions {
-		float: right;
+		width: 100%;
+		text-align: right;
 		height: rem-calc(52px);
 		padding: rem-calc(8px);
 
