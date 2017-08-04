@@ -43,18 +43,14 @@ After making your changes please describe what you have changed. This will speed
 
 - Global 
     - Fix mobile styling (in Chrome for Android when scrolling a page the title bar remains visible)
-    - Check duplicate styling and therefor load speed
-    - Move global usable classes to `_normailize.scss` (`.no-hover, .active, .disabled`) to name a few
     - Fix max-height max-width to something which works automatically. This applies to several components where these properties are animated 
     - Add Material Design animations
     - Fix positions of `<header>`, `<main>`, `<aside>` to be more compatible with for example WordPress (`<aside>` goes over `<header>`, `<main>` slides up under `<header>`)
     - Add broader support for IE and FireFox
     - Future
 		- Add SMaterial CDN package
-		- Add meteor js package
     	- Add templates
     	- Add react and or angular
-   		- Add Hammer.js for a better mobile experience(Optional)
     - Components
         - Pickers
 		- Add badges
@@ -70,8 +66,6 @@ After making your changes please describe what you have changed. This will speed
 - Data tables
     - Fix styling
     - Add table title
-    - Add pagination
-    - Add class automation
 - Dialogs
     - Add more JavaScript functionality (open / close by JavaScript call)
 - Expansion panels

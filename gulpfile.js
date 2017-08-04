@@ -39,12 +39,15 @@ gulp.task( 'vendor', function () {
 // Compress .scss files
 gulp.task( 'sass', function () {
 	gulp.src( './stylesheets/scss/*.scss' )
+		.pipe( plumber() )
 		.pipe( sourcemaps.init() )
 		.pipe( sass() )
 		.pipe( autoprefixer() )
 		.pipe( minify() )
 		.pipe( postccs([
-			require('postcss-merge-rules')
+			require('postcss-merge-rules'),
+			require('postcss-move-media'),
+			//require('postcss-merge-selectors')(promote:true)
 		]) )
 		.pipe( sourcemaps.write( './' ) )
 		.pipe( gulp.dest( 'stylesheets' ) );
@@ -52,14 +55,16 @@ gulp.task( 'sass', function () {
 
 // SCSS Zip all required files
 gulp.task( 'scss-zip', function () {
-	gulp.src( ['js/*', 'js/*/**.js', 'stylesheets/*', 'stylesheets/*/**.scss', 'stylesheets/*/*/**.scss', 'stylesheets/*/*/*/**.ttf', 'bower.json', 'index.php', 'includes/*', 'gulpfile.js', 'package.json'], {base: '.'} )
+	gulp.src( ['js/app.min.js', 'js/vendor.min.js', 'js/*/**.js', 'stylesheets/scss/smaterial.scss', 'stylesheets/scss/smaterial-amp.scss',
+			   'stylesheets/scss/components/**.scss', 'stylesheets/fonts/Roboto/**.ttf', 'bower.json', 'index.php', 'includes/*',
+			   'gulpfile.js', 'package.json', 'stylesheets/smaterial.css', 'stylesheets/smaterial-amp.css', 'stylesheets/smaterial.css.map', 'stylesheets/smaterial-amp.css.map'], {base: '.'} )
 		.pipe( zip( 'smaterial-scss.zip' ) )
 		.pipe( gulp.dest( './' ) );
 } );
 
 // CSS Zip all required files
 gulp.task( 'css-zip', function () {
-	gulp.src( ['js/app.min.js', 'js/vendor.min.js', 'stylesheets/smaterial.css', 'stylesheets/*/*/*/**.ttf', 'index.php', 'bower.json', 'includes/*'], {base: '.'} )
+	gulp.src( ['js/app.min.js', 'js/vendor.min.js', 'stylesheets/smaterial.css', 'stylesheets/fonts/Roboto/**.ttf', 'index.php', 'bower.json', 'includes/*'], {base: '.'} )
 		.pipe( zip( 'smaterial-css.zip' ) )
 		.pipe( gulp.dest( './' ) );
 } );

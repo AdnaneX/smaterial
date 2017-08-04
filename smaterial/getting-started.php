@@ -149,7 +149,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
     <h3 class="col xs4">Accelerated Mobile Pages (AMP)</h3>
 
     <p class="col xs2">
-        SMaterial also supports AMP. The support of still very limited as it is still in development.
+        SMaterial also supports <a href="/resources/amp.php">AMP</a>. The support of AMP still very limited as it is still in development.
         This means that there is a dedicated stylesheet, but everything that relies on JavaScript doesn't work.
         The AMP stylesheet removes all the media queries that are larger than mobile. The stylesheet also has less components on by default.
         This means that the stylesheet is about 1/3 the size. It also means that if one of the components isn't working it might be turned off.

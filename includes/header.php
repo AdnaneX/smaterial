@@ -205,7 +205,7 @@ if( $_SERVER['PHP_SELF'] === '/components/tabs.php' ) {
             <div class="scrim"></div>
             <<?php echo ($amp ? 'amp-img layout="responsive" height="50px" width="50px"' : 'img'); ?> src="/images/profile-icon.jpg" class="drawer-profile-img" alt="profile image">
             <div class="drawer-profile-name">John Doe</div>
-            <div class="drawer-profile-email">johndoe@gmail.com</div>
+            <div class="drawer-profile-email">johndoe&#64;gmail.com</div>
             <div class="drawer-profile-more">
                 <i class="material-icons arrow trigger" data-trigger="drawer-profile-menu">arrow_drop_down</i>
 
@@ -221,6 +221,7 @@ if( $_SERVER['PHP_SELF'] === '/components/tabs.php' ) {
             <a href="/" <?php echo ( $file == '/index' || $file == '/' ? 'class="active"' : '' ); ?>>Introduction</a>
             <a href="/smaterial/getting-started.php" <?php echo ( $file == '/smaterial/getting-started' ? 'class="active"' : '' ); ?>>Getting started</a>
             <a href="/smaterial/shadow.php" <?php echo ( $file == '/smaterial/shadow' ? 'class="active"' : '' ); ?>>Elevation and shadows</a>
+            <a href="/smaterial/news.php" <?php echo ( $file == '/smaterial/news' ? 'class="active"' : '' ); ?>>What's new</a>
         </div>
 
         <a href="#" class="drawer-dropdown">Style <i class="material-icons">expand_more</i></a>
@@ -252,7 +253,7 @@ if( $_SERVER['PHP_SELF'] === '/components/tabs.php' ) {
             <a href="/components/snackbars-toasts.php" <?php echo ( $file == '/components/snackbars-toasts' ? 'class="active"' : '' ); ?>>Snackbar &amp; toasts</a>
             <a href="/components/steppers.php" <?php echo ( $file == '/components/steppers' ? 'class="active"' : '' ); ?>>Steppers</a>
             <a href="/components/tabs.php" <?php echo ( $file == '/components/tabs' ? 'class="active"' : '' ); ?>>Tabs</a>
-            <a href="/components/textfields.php" <?php echo ( $file == '/components/textfields' ? 'class="active"' : '' ); ?>>Text fields</a>
+            <a href="/components/text-fields.php" <?php echo ( $file == '/components/text-fields' ? 'class="active"' : '' ); ?>>Text fields</a>
             <a href="/components/tooltips.php" <?php echo ( $file == '/components/tooltips' ? 'class="active"' : '' ); ?>>Tooltips</a>
         </div>
 

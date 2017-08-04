@@ -1,0 +1,25 @@
+/**************************************
+ * All stylesheets
+ *
+ * Some may be turned off by commenting them
+ * NOTE that some classes are extended and could there for cause problems when turned off
+ **************************************/
+
+$theme: dark;
+
+// Style
+@import 'components/settings'; // All settings
+@import 'components/media-queries'; // All possible media queries
+@import 'components/root'; // All CSS variables
+//@import 'components/grid'; // Grid functionality
+@import 'components/flex-grid'; // Grid functionality
+@import 'components/normalize'; // Remove browser default styles add Material default styles
+@import 'components/shadows'; // Shadow depths (Can be turned off)
+@import 'components/typography'; // Typography
+@import 'components/icons'; // Icons with their shadow (can be turned off)
+
+// Components
+@import 'components/appbar'; // Top menu bar (can be turned off)
+@import 'components/menu'; // Used to style menus (can be turned off) is used for appbar, navigation drawer dropdown and select
+@import 'components/navigation-drawer'; // Used to style navigation drawer (can be turned off)
+@import 'components/colors-create'; // Used to create colors(can be turned off)

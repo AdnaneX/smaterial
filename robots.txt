@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: http://www.smaterial.dsuper.nl/sitemap.xml
+Sitemap: https://smaterial.dsuper.nl/sitemap.xml

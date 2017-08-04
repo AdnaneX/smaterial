@@ -41,9 +41,13 @@
     "gulp-zip": "^4.0.0",
     "jshint": "^2.9.4",
     "minimatch": "^3.0.3",
-    "postcss-merge-rules": "^2.1.2"
+    "postcss-merge-rules": "^2.1.2",
+    "postcss-move-media": "^1.0.0-pre"
   },
   "name": "smaterial",
   "version": "0.3.01",
-  "main": "index.js"
+  "main": "index.js",
+  "dependencies": {
+    "postcss-move-media": "^1.0.0-pre"
+  }
 }

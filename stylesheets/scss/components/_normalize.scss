@@ -5,7 +5,7 @@
  **************************************/
 
 html, body {
-	background: if( $var == true, var(--background, $background), $background );
+	background: if( $theme == light, $grey-50, #303030 );
 	margin: 0;
 	padding: 0;
 }

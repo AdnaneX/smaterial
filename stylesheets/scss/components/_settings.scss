@@ -73,7 +73,7 @@ $sharp-transition: cubic-bezier(0.4, 0.0, 0.6, 1) !default; // Default cubic-bez
 $transition-small-duration: 300ms !default; // Default 300ms
 $transition-medium-duration: 390ms !default; // Default 390ms
 $transition-large-duration: 200ms !default; // Default 200ms
-$background: if( $theme == light, $white, #303030) !default; // Default if( $theme == light, $white, #303030)
+$background: if( $theme == light, $white, $grey-800) !default; // Default if( $theme == light, $white, $grey-800)
 $text-direction: ltr !default; // Default either ltr or rtl
 $border-size: rem-calc(2px) !default; // Default rem-calc(2px)
 
@@ -475,7 +475,7 @@ $textfield: null !default;
 	$slider: ('discrete') !default;
 	$stepper: ('horizontal', 'vertical') !default;
 	$tab: ('tab', 'tab-icon', 'tab-icon-text') !default;
-	$textfield: ('floating', 'floating-dense', 'single', 'single-dense', 'multi') !default;
+	$textfield: ('input', 'textarea') !default;
 
 } @else if $amp == true {
 	// Style
@@ -498,5 +498,5 @@ $textfield: null !default;
 	$slider: (/*'discrete'*/) !default;
 	$stepper: ('horizontal', 'vertical') !default;
 	$tab: ('tab', 'tab-icon', 'tab-icon-text') !default;
-	$textfield: ('floating', /*'floating-dense',*/ 'single', /*'single-dense',*/ 'multi') !default;
+	$textfield: ('input', 'textarea') !default;
 }

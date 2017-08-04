@@ -58,11 +58,7 @@ $.fn.visible = function() {
  * @return boolean        True or false depending if empty or not
  */
 function empty( $value ) {
-	if( $.trim($value).length === 0) {
-		return true;
-	} else {
-		return false;
-	}
+	return $.trim( $value ).length === 0;
 }
 
 /**
@@ -94,8 +90,9 @@ function eventTrigger( el, etype ){
 	}
 }
 
+var appbar = $('.appbar');
 // Set background color as theme color in html
-var appbarColor = $('.appbar').css('background-color'),
+var appbarColor = appbar.css('background-color'),
 	themeColor = document.querySelector('meta[name="theme-color"]').getAttribute('content');
 //console.log(themeColor);
 
@@ -104,3 +101,9 @@ if( themeColor == '' ) {
 	document.querySelector( 'meta[name="msapplication-navbutton-color"]' ).setAttribute( 'content', appbarColor );
 	document.querySelector( 'meta[name="apple-mobile-web-app-status-bar-style"]' ).setAttribute( 'content', appbarColor );
 }
+
+// Correct padding of main compared to appbar
+$(window).on('resize load', function() {
+	var appbarHeight = appbar.css( 'height' );
+	$('main').css('top', appbarHeight);
+});
