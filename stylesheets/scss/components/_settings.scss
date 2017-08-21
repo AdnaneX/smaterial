@@ -475,7 +475,7 @@ $textfield: null !default;
 	$slider: ('discrete') !default;
 	$stepper: ('horizontal', 'vertical') !default;
 	$tab: ('tab', 'tab-icon', 'tab-icon-text') !default;
-	$textfield: ('input', 'textarea') !default;
+	$textfield: ('input', 'textarea', 'date-picker') !default;
 
 } @else if $amp == true {
 	// Style
@@ -498,5 +498,5 @@ $textfield: null !default;
 	$slider: (/*'discrete'*/) !default;
 	$stepper: ('horizontal', 'vertical') !default;
 	$tab: ('tab', 'tab-icon', 'tab-icon-text') !default;
-	$textfield: ('input', 'textarea') !default;
+	$textfield: ('input', 'textarea', /*'date-picker'*/) !default;
 }

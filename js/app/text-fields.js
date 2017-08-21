@@ -127,4 +127,18 @@ $(document).ready(function() {
 	};
 
 	$( "form" ).each( createAllErrors );
+
+	// Add date-picker
+	$(function() {
+		$('.input.date-picker input').datepicker();
+	});
+
+	$('.input.date-picker input').click(function() {
+		// Remove span
+		$('.ui-datepicker-prev, .ui-datepicker-next').find('span').remove();
+
+		// Add material design icons
+		$('.ui-datepicker-prev').html('<i class="material-icons">chevron_left</i>');
+		$('.ui-datepicker-next').html('<i class="material-icons">chevron_right</i>');
+	});
 });

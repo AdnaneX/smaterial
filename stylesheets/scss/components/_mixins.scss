@@ -36,7 +36,7 @@
 	}
 
 	@if( $amp == false ) {
-		@if (( $depth - 2 ) >= 1) {
+		@if( map_has_key($elevation-ambient-map, ($depth - 2 ) ) == true ) {
 			@media #{$medium-up} {
 				@include box-shadow(
 						#{map-get($elevation-umbra-map, ( $depth - 2 ))} $elevation-umbra-color unquote(',')

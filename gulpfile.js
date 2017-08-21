@@ -10,7 +10,8 @@ var gulp = require( 'gulp' ),
 	autoprefixer = require( 'gulp-autoprefixer' ),
 	postccs = require( 'gulp-postcss' ),
 	minify = require( 'gulp-clean-css' ),
-	zip = require( 'gulp-zip' );
+	zip = require( 'gulp-zip' ),
+	order = require('gulp-order');
 
 // Compress app.js
 gulp.task( 'app', function () {
@@ -27,6 +28,10 @@ gulp.task( 'app', function () {
 // Compress vendor.js
 gulp.task( 'vendor', function () {
 	gulp.src( ['js/vendor/*.js'] )
+		.pipe(order([
+			'jquery.js',
+			'*.js'
+		]))
 		.pipe( plumber() )
 		.pipe( jshint() )
 		.pipe( sourcemaps.init() )

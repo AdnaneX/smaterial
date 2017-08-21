@@ -29,37 +29,29 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
     <pre class="language-html col xs4 m6 offset-m6">
 		<code>
 &lt;header class="appbar">
-  &lt;div class="appbar-nav">
-    &lt;a href="#" id="nav-button" data-trigger="drawer">
-      &lt;i class="material-icons ripple">menu&lt;/i>
-    &lt;/a>
-  &lt;/div>
+  &lt;i class="material-icons trigger" data-trigger="drawer">menu&lt;/i>
 
   &lt;div class="appbar-title">
-    &lt;h1>Example&lt;/h1>
+    &lt;h1>Title&lt;/h1>
   &lt;/div>
 
-  &lt;div class="appbar-actions">
-    &lt;div class="search-input">
-      &lt;a href="#" class="ripple search-trigger">
-        &lt;i class="material-icons">search&lt;/i>
-      &lt;/a>
+  &lt;i class="material-icons">search&lt;/i>
 
-      &lt;form action="" method="post">
-        &lt;input type="search" name="search">
-      &lt;/form>
+  &lt;div class="search-input">
+    &lt;div class="single-input">
+      &lt;input type="search" name="search" id="search">
+      &lt;label for="search">Search&lt;/label>
     &lt;/div>
   &lt;/div>
 
-  &lt;div class="appbar-menu">
-    &lt;a href="#" class="nav-more ripple" data-trigger="nav-more">
-      &lt;i class="material-icons">more_vert&lt;/i>
-    &lt;/a>
+  &lt;i class="material-icons">mail &lt;div class="badge">2&lt;/div>&lt;/i>
 
-    &lt;ul class="appbar-menu-more" id="nav-more">
-      &lt;li>Example&lt;/li>
-    &lt;/ul>
-  &lt;/div>
+  &lt;i class="material-icons trigger" data-trigger="appbar-menu">more_vert&lt;/i>
+
+  &lt;nav class="menu appbar-menu" id="appbar-menu">
+    &lt;a href="#">Example&lt;/a>
+    &lt;a href="#">Example&lt;/a>
+  &lt;/nav>
 &lt;/header>
 		</code>
 	</pre>

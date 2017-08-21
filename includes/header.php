@@ -271,7 +271,7 @@ if( $_SERVER['PHP_SELF'] === '/components/tabs.php' ) {
 
         <a href="#" class="drawer-dropdown">Resources <i class="material-icons">expand_more</i></a>
         <div class="dropdown">
-            <a href="/resources/amp.php" <?php echo ( $file == '/resource/amp' ? 'class="active"' : ''); ?>>Accelerated Mobile Pages (AMP)</a>
+            <a href="/resources/amp.php" <?php echo ( $file == '/resources/amp' ? 'class="active"' : ''); ?>>Accelerated Mobile Pages (AMP)</a>
             <a href="/resources/templates.php" <?php echo ( $file == '/resources/templates' ? 'class="active"' : '' ); ?>>Templates</a>
         </div>
     </nav>

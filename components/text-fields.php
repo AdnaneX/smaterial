@@ -45,6 +45,11 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
                 <i class="material-icons">mail</i>
             </div>
 
+            <div class="input date-picker">
+                <input type="text" name="date" id="date" required>
+                <label for="date">Date</label>
+            </div>
+
             <input type="submit" class="raised-button">
         </form>
 

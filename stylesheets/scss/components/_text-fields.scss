@@ -320,3 +320,79 @@
 		}
 	}
 }
+
+@if( in-array( 'date-picker', $textfield ) ) {
+	.ui-datepicker {
+		background: var(--background, $background);
+		@include material-shadow(16);
+		padding: rem-calc(16px);
+		margin-top: rem-calc(8px) + rem-calc(12px);
+
+		&-title {
+			width: 50%;
+			font-weight: 500;
+			margin: 0 25%;
+			font-size: rem-calc(14px);
+		}
+
+		&-title, &-prev, &-next {
+			text-align: center;
+			display: inline-block;
+		}
+
+		&-prev, &-next {
+			width: 25%;
+			cursor: pointer;
+			position: absolute;
+		}
+
+		&-prev {
+			left: rem-calc(16px);
+		}
+
+		&-next {
+			right: rem-calc(16px);
+		}
+
+		&-calendar {
+			td, th {
+				text-align: center;
+				padding: rem-calc(8px);
+			}
+
+			a {
+				@include border-radius(50%);
+				color: initial;
+				padding: rem-calc(8px);
+				@include square(rem-calc(32px));
+				line-height: normal;
+				display: inline-block;
+				background: transparent;
+				@include transition(background $standard-transition $transition-small-duration unquote(',') width $standard-transition $transition-small-duration);
+
+				@if ($amp == false) {
+					@media #{$medium-only} {
+						@include transition(background $standard-transition $transition-medium-duration unquote(',') width $standard-transition $transition-medium-duration);
+					}
+
+					@media #{$medium-up} {
+						@include transition(background $standard-transition $transition-large-duration unquote(',') width $standard-transition $transition-large-duration);
+					}
+				}
+
+				&:hover {
+					background: if($theme == light, color($main-color, 'a700'), color($main-color, 'a200'));
+					color: $white;
+				}
+			}
+		}
+	}
+
+	a.ui-state-highlight {
+		color: if($theme == light, color($main-color, 'a700'), color($main-color, 'a200'));
+
+		&:hover {
+			color: $white;
+		}
+	}
+}

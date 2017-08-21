@@ -8,13 +8,13 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 <section class="row">
 	<h2 class="col xs4">AMP introduction</h2>
 
-	<p class="col xs2">
+	<p class="col xs4 s6">
 		To make use of AMP I would highly recommend to read up on the <a href="https://www.ampproject.org/" target="_blank">documentation</a>.
 		This page will only tell you how to get started but doesn't go to deep into the documentation.
 		This is because AMP still still in development.
 	</p>
 
-	<p class="col xs2 deep-orange-text">
+	<p class="col xs4 s6 deep-orange-text">
 		Since the usage of JavaScript files is prohibited for AMP a lot of components won't work.
 		For now the main reasons for using AMP with SMaterial would be the following:
 		The stylesheet <code>smaterial-amp.css</code> is about 1/3 the size of the normal stylesheet.
