@@ -96,7 +96,7 @@ var appbarColor = appbar.css('background-color'),
 	themeColor = document.querySelector('meta[name="theme-color"]').getAttribute('content');
 //console.log(themeColor);
 
-if( themeColor == '' ) {
+if( themeColor == '' && themeColor != undefined ) {
 	document.querySelector( 'meta[name="theme-color"]' ).setAttribute( 'content', appbarColor );
 	document.querySelector( 'meta[name="msapplication-navbutton-color"]' ).setAttribute( 'content', appbarColor );
 	document.querySelector( 'meta[name="apple-mobile-web-app-status-bar-style"]' ).setAttribute( 'content', appbarColor );

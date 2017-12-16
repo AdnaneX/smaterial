@@ -73,7 +73,7 @@ $sharp-transition: cubic-bezier(0.4, 0.0, 0.6, 1) !default; // Default cubic-bez
 $transition-small-duration: 300ms !default; // Default 300ms
 $transition-medium-duration: 390ms !default; // Default 390ms
 $transition-large-duration: 200ms !default; // Default 200ms
-$background: if( $theme == light, $white, $grey-800) !default; // Default if( $theme == light, $white, $grey-800)
+$background: if( $theme == light, $white, #303030) !default; // Default if( $theme == light, $white, #303030)
 $text-direction: ltr !default; // Default either ltr or rtl
 $border-size: rem-calc(2px) !default; // Default rem-calc(2px)
 
@@ -433,6 +433,7 @@ $large-small-screen-width: 80%;
  * Components
  **************************************/
 
+$appbar: null !default;
 $grid: null !default;
 $flex-grid: null !default;
 $normalize: null !default;
@@ -456,6 +457,7 @@ $textfield: null !default;
 
 @if( $amp == false ) {
 	// Style
+	$appbar: ('badge') !default;
 	$grid: ('hidden') !default;
 	$flex-grid: (/*'order',*/'hidden') !default;
 	$normalize: ('scrollbar', 'selection', 'helper-classes') !default;
@@ -479,6 +481,7 @@ $textfield: null !default;
 
 } @else if $amp == true {
 	// Style
+	$appbar: ('badge') !default;
 	$grid: (/*'hidden'*/) !default;
 	$flex-grid: (/*'order', 'hidden'*/) !default;
 	$normalize: (/*'scrollbar', 'selection', 'helper-classes'*/ ) !default;

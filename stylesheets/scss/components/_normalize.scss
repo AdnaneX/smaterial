@@ -5,7 +5,7 @@
  **************************************/
 
 html, body {
-	background: if( $theme == light, $grey-50, #303030 );
+	background: if( $var == true, var(--background, $background), $background );
 	margin: 0;
 	padding: 0;
 }
@@ -130,7 +130,16 @@ main, .main-content {
 
 	hr, .divider {
 		background: if($theme == light, rgba($black, .12), rgba($white, .12));
-		border: rem-calc(1px) solid if($theme == light, rgba($black, .12), rgba($white, .12));
+		border: none;
 		height: $border-size / 2;
+		border-width: 0;
+	}
+
+	.main-color-font {
+		color: if($var == true, var(--main-color, $main-color), $main-color);
+	}
+
+	.main-color-background {
+		background: if($var == true, var(--main-color, $main-color), $main-color);
 	}
 }
