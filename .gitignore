@@ -5,3 +5,5 @@ googlef8a0d5705f3e17df.html
 /stylesheets/*.css
 /stylesheets/*.map
 *.zip
+/js/prism.js
+/js/smaterial.js
