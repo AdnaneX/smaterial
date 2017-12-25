@@ -22,7 +22,7 @@
     "stylesheets/fonts/*.{scss|php}",
     "js/",
     "package.json",
-    "gulpfile.js",
+    "webpack.config.json",
     "license.txt"
   ],
   "devDependencies": {
@@ -36,16 +36,18 @@
     "node-sass": "^4.7.2",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.19.0",
-    "webpack": "^3.8.1"
+    "uglifyjs-webpack-plugin": "^1.1.4",
+    "webpack": "^3.8.1",
+    "webpack-merge": "^4.1.1"
   },
   "name": "smaterial",
   "version": "0.3.01",
   "main": "webpack.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "development": "./node_modules/.bin/webpack --config webpack.config.js -w",
+    "development": "./node_modules/.bin/webpack --config webpack.dev.js -w",
     "dev": "npm run development",
-    "production": "./node_modules/.bin/webpack --config webpack.config.js --p",
+    "production": "./node_modules/.bin/webpack --config webpack.prod.js --p",
     "prod": "npm run production"
   }
 }

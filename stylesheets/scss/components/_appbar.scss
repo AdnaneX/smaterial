@@ -30,11 +30,11 @@ $appbar-large-padding: ( ( $appbar-large-height - $appbar-icon-large-size ) / 2 
 
 	@if( $amp == false ) {
 		@media only screen and (orientation: landscape) and (max-width: #{$small-screen}) {
-			min-height: $appbar-mobile-landscape-height;
+			height: $appbar-mobile-landscape-height;
 		}
 
 		@media only screen and (orientation: portrait) and (max-width: #{$xsmall-screen}) {
-			min-height: $appbar-mobile-portrait-height;
+			height: $appbar-mobile-portrait-height;
 		}
 
 		@media #{$small-up} {

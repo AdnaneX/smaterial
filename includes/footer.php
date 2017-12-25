@@ -2,9 +2,7 @@
 
         <?php
         if( !$amp ) {
-            echo '  <script src="/js/vendor.min.js"></script>
-                    <script src="/js/app.min.js"></script>
-                    <script src="/js/smaterial.js"></script>
+            echo '  <script src="/js/smaterial.js"></script>
                     <script src="/js/prism.js"></script>';
         }
 		if( TEST === false ) {

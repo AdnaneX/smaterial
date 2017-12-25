@@ -517,12 +517,7 @@ if( forms.length > 0 ) {
 
 /* Trigger */
 let triggers = document.getElementsByClassName('trigger'),
-	triggered;
-
-function visible(el) {
-	let style = window.getComputedStyle(el);
-	return (style.display === 'none')
-}
+	triggered = [];
 
 if( triggers.length > 0 ) {
 	let collapse = new Event('collapsed', {'bubbles': true, 'cancelable': false});
@@ -534,8 +529,8 @@ if( triggers.length > 0 ) {
 		trigger.addEventListener('click', function() {
 			let element = document.querySelector('#'+trigger.dataset.trigger);
 
-			// Set the currently triggered element
-			triggered = element;
+			// Set the currently triggered element(s) in array
+			triggered.indexOf(element) < 0 ? triggered.push(element) : '';
 
 			if( element.classList.contains('expanded') ) {
 				element.classList.remove('expanded');
@@ -549,11 +544,16 @@ if( triggers.length > 0 ) {
 
 	document.addEventListener('mouseup', function(e) {
 		console.log(triggered, e.target);
-		if( triggered && visible(triggered) ) {
-			if( triggered !== e.target && triggered.querySelectorAll(e.target).length === 0 ) {
-				triggered.classList.remove('expanded');
+		for(let i = 0; i < triggered.length; i++) {
+			let trigger = triggered[i];
+
+			 if( trigger === e.target || trigger !== e.target && !trigger.contains( e.target ) ) {
+				trigger.classList.remove('expanded');
 				document.dispatchEvent(collapse);
-			}
+
+				// Remove element from array
+			 	i === 0 ? triggered.shift() : triggered.slice(i, 1);
+			 }
 		}
 	});
 }

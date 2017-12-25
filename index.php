@@ -33,8 +33,8 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 			The framework is build with SCSS and there for easy customizable with variables.
 			For CSS there is always a prefix to prevent overwriting classes.
 			All actions that are done by JavaScript are made in vanilla js or with jQuery so you don't need to depend on other libraries or frameworks.
-			The use of <a href="http://gulpjs.com/" target="_blank">Gulp</a> should also speed up your development.
-			Because SMaterial is open-source feel free to <a href="https://github.com/SuperDJ/smaterial" target="_blank">commit</a> your additions and or problems.
+			The use of <a href="//webpack.js.org/" target="_blank">Webpack</a> should also speed up your development.
+			Because SMaterial is open-source feel free to <a href="//github.com/SuperDJ/smaterial" target="_blank">commit</a> your additions and or problems.
 		</div>
 	</div>
 

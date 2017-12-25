@@ -8,15 +8,15 @@ This for example means use a language like json that can be used with various ot
 
 ## Contributing
 ### Requirements
-In order to contribute you need to have a installed a couple of programs. The programs used to create SMaterial are the following:
-Git, SASS, Gulp. Want to know how to install those programs I would advise you to visit the corresponding website.
+In order to contribute you need to have installed a couple programs. The programs used to create SMaterial are the following:
+[Git](https://git-scm.com/), [SASS](http://sass-lang.com/), [Webpack](https://webpack.js.org/). Want to know how to install those programs I would advise you to visit the corresponding website.
 
 ### Getting started
 To get up and running you need to fork this repository to your own git.
 After downloading your newly created repository run `npm install` in your console / terminal.
-This will install files listed in package.json.
-After all files have installed you can just run `gulp` in your console / terminal.
-This command will compress js and scss files.
+This will install files listed in `package.json`.
+After all files have installed you can run a few commands in your console / terminal. These commands are `npm run dev` for development or `npm run prod` for production.
+This command will compress JS and SCSS files.
 
 ### PHP files
 The website uses PHP files to make working with the menu, headers and footers a lot easier.
@@ -50,7 +50,7 @@ After making your changes please describe what you have changed. This will speed
     - Future
 		- Add SMaterial CDN package
     	- Add templates
-    	- Add react and or angular
+    	- Add react and or vue
     - Components
         - Pickers
 		- Add badges
@@ -78,9 +78,8 @@ After making your changes please describe what you have changed. This will speed
 - Selection
     - Add radials for mobile
 - Settings                   
-    - Less options in settings file. Only important options. All other "options" only in the same file at the top after comment before styling
-    - Make variables consistent
-    - Give variables a clearer name of what they do
+    - Less options in settings file. Only important options. All other "options" only in the same file
+    - Make variables consistent. Give variables a clearer name of what they do
     - Add css variables where possible. Also add fallback.
 - Navigation drawer
     - Add persistent mini

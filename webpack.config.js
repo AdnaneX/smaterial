@@ -1,4 +1,4 @@
-var path = require('path'),
+const path = require('path'),
 	ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
