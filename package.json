@@ -45,9 +45,9 @@
   "main": "webpack.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "development": "./node_modules/.bin/webpack --config webpack.dev.js -w",
+    "development": "./node_modules/.bin/webpack --config webpack.config.js --env.dev -w",
     "dev": "npm run development",
-    "production": "./node_modules/.bin/webpack --config webpack.prod.js --p",
+    "production": "./node_modules/.bin/webpack --config webpack.config.js --env.prod --p",
     "prod": "npm run production"
   }
 }

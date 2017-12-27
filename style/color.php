@@ -25,7 +25,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 <section class="row">
     <h3 class="col xs4">Theme</h3>
 
-    <p class="col xs2">
+    <p class="col xs4 s6">
         With SMaterial and SCSS you're also able to choose between a light and dark theme.
         You can define the theme in the <strong>_settings.scss</strong> file or by overwriting the <code class="language-css">$theme</code> variable.
         The variable can either be light or dark.
@@ -38,12 +38,10 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
             btn.addEventListener('click', function() {
 				var $styles = document.getElementsByTagName('link');
 				for(var i = 0; i < $styles.length; i++) {
-					if( $styles[i].getAttribute('href') === '/stylesheets/smaterial.css' ) {
-						console.log(1);
-					    $styles[i].setAttribute('href', '/stylesheets/dark-smaterial.css');
-					} else if( $styles[i].getAttribute('href') === '/stylesheets/dark-smaterial.css' ) {
-						console.log(2);
-						$styles[i].setAttribute('href', '/stylesheets/smaterial.css');
+					if( $styles[i].getAttribute('href') === '/stylesheets/smaterial-light.css' ) {
+					    $styles[i].setAttribute('href', '/stylesheets/smaterial-dark.css');
+					} else if( $styles[i].getAttribute('href') === '/stylesheets/smaterial-dark.css' ) {
+						$styles[i].setAttribute('href', '/stylesheets/smaterial-light.css');
 					}
 				}
             });

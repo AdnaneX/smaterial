@@ -30,6 +30,18 @@ $colors = array('smaterial' => array(
 				)
 );
 
+$currentTime = date('H:i');
+$sunset =  date_sunset(time(), SUNFUNCS_RET_STRING, 52.7, 5.3, 90, 1);
+$sunrise = date_sunrise(time(), SUNFUNCS_RET_STRING, 52.7, 5.3, 90, 1);
+
+function isBetween($from, $till, $input) {
+	$f = DateTime::createFromFormat('!H:i', $from);
+	$t = DateTime::createFromFormat('!H:i', $till);
+	$i = DateTime::createFromFormat('!H:i', $input);
+	if ($f > $t) $t->modify('+1 day');
+	return ($f <= $i && $i <= $t) || ($f <= $i->modify('+1 day') && $i <= $t);
+}
+
 if( $file == '/index' || $file == '/' ) {
 	$folder = 'smaterial';
 } else {
@@ -50,7 +62,7 @@ $keywords .= ', smaterial, css, scss, material design, framework, html, js, css 
     if( !$amp ) {
         echo '
         <link rel="stylesheet" href="/stylesheets/prism.css">
-	    <link rel="stylesheet" href="/stylesheets/smaterial.css">';
+	    <link rel="stylesheet" href="/stylesheets/smaterial-'.(isBetween($sunset, $sunrise, $currentTime) ? 'dark' : 'light').'.css">';
 	}
 	?>
 

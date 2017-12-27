@@ -11,7 +11,6 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
     <p class="col xs4 s12">
         Smaterial comes in 2 different packages you can choose from.
         You can make a choice depending on your skill levels and what you would like to do with SMaterial.
-        Both packages include the bower.json file to manage other files required.
     </p>
 
     <div class="col xs4 s12 m6">
@@ -31,14 +30,6 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
             You can also change which files are included and which are not. This package also includes Gulp to
             compress JavaScript an SCSS.
             <a href="/smaterial-scss.zip" class="raised-button">SCSS Download <i class="material-icons right">file_download</i></a>
-        </p>
-    </div>
-
-    <div class="col xs4 s12 m6">
-        <h4 class="col xs4 s12">Bower</h4>
-
-        <p class="col scs12">
-            Do you prefer to use <a href="https://bower.io/" target="_blank">bower</a>? Now you can. You can simply run the following command: <code>bower install smaterial</code>.
         </p>
     </div>
 </section>
@@ -67,8 +58,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 
   &lt;body>
 
-    &lt;script src="/js/vendor.min.js">&lt;/script>
-    &lt;script src="/js/app.min.js">&lt;/script>
+    &lt;script src="/js/smaterial.js">&lt;/script>
   &lt;/body>
 &lt;/html>
 		</code>
@@ -79,50 +69,22 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
         is used to load the <a href="http://www.smaterial.dsuper.nl/style/icons.php">Material Design font icons</a>.
 
         The line <code class="language-html">&lt;meta name="viewport" content="width=device-width, initial-scale=1"></code> makes the website responsive.
-
-        The <code class="language-html">vendor.min.js</code> currently only holds jQuery 3.
-        So if you prefer to load jQuery from an external source you can use <a href="https://developers.google.com/speed/libraries/#jquery" target="_blank">this</a>.
-        The <code class="language-html">vendor.min.js</code> or jQuery file needs to be loaded before <code class="language-html">app.min.js</code>.
     </p>
 </section>
 
 <section class="row">
-    <h3 class="col xs4 s12">Gulp usage</h3>
+    <h3 class="col xs4 s12">Webpack usage</h3>
 
     <p class="col xs4 s12 m6">
-        With Gulp you can easily compress SCSS and JavaScript files. All "tasks" needed are included in the <code class="language-html">gulpfile.js</code>
-    </p>
-
-    <table class="col xs4 s12 m6">
-        <thead>
-        <tr>
-            <th>Task</th>
-            <th>Result</th>
-        </tr>
-        </thead>
-
-        <tbody>
-        <tr>
-            <td>gulp</td>
-            <td>Both SCSS and JavaScript files in <code class="language-html">js/app, js/vendor, stylesheets/scss, stylesheets/scss/components</code> are compressed on watch</td>
-        </tr>
-        <tr>
-            <td>gulp zip</td>
-            <td>Will zip all required files for both css and scss packages</td>
-        </tr>
-        </tbody>
-    </table>
-
-    <p class="col xs4 s12 m6">
-        If you were to add other js frameworks for example <a href="http://hammerjs.github.io/" target="_blank">hammer.js</a> you can add the necessary file(s) in <code class="language-html">js/vendor</code>.
-        If you create your own JavaScript files you can add these in <code class="language-html">js/app</code>. This way all files will be compressed into minified versions.
-        The same goes for SCSS files. If you add your own SCSS files in <code class="language-html">stylesheets/scss</code> these will also be compressed for you.
-        This can be achieved by just running gulp task.
+        With Gulp you can easily compress SCSS and JavaScript files.
+        All "commands" needed are included in the <code class="language-html">package.js</code>.
+        The available commands are: <code class="language-html">dev, development, prod and production</code>.
+        The difference between the commands for development and production is the file output.
+        For production all files are being minimized in contrast to development where all files are outputted as is.
     </p>
 
     <p class="col xs4 s12 m6">
-        If you add new files with bower you need to add the necessary files in the right files array.
-        JavaScript files in vendor task and SCSS files in scss task.
+        In order to use Webpack you still need to change the entries in the <code class="language-html">webpack.config.js</code> file.
     </p>
 </section>
 
@@ -148,7 +110,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 <section class="row">
     <h3 class="col xs4">Accelerated Mobile Pages (AMP)</h3>
 
-    <p class="col xs2">
+    <p class="col xs4 s6">
         SMaterial also supports <a href="/resources/amp.php">AMP</a>. The support of AMP still very limited as it is still in development.
         This means that there is a dedicated stylesheet, but everything that relies on JavaScript doesn't work.
         The AMP stylesheet removes all the media queries that are larger than mobile. The stylesheet also has less components on by default.

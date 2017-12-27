@@ -1,5 +1,3 @@
-import '../stylesheets/scss/smaterial.scss';
-
 /**
  * Check if something is empty
  * @return boolean        True or false depending if empty or not
@@ -543,7 +541,6 @@ if( triggers.length > 0 ) {
 	}
 
 	document.addEventListener('mouseup', function(e) {
-		console.log(triggered, e.target);
 		for(let i = 0; i < triggered.length; i++) {
 			let trigger = triggered[i];
 

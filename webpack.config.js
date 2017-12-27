@@ -1,34 +1,48 @@
-const path = require('path'),
-	ExtractTextPlugin = require('extract-text-webpack-plugin');
+const 	path = require('path'),
+		ExtractTextPlugin = require('extract-text-webpack-plugin'),
+		UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
-module.exports = {
-	entry: './js/main.js',
-	output: {
-		path: __dirname,
-		filename: 'js/smaterial.js'
-	},
-	module: {
-		rules: [
-			{
-				test: /\.js$/,
-				exclude: /node_modules/,
-				use: [
-					'babel-loader'
-				]
-			},
-			{
-				test: /\.scss$/,
-				use: ExtractTextPlugin.extract({
-					fallback: 'style-loader',
+module.exports = env => {
+	return {
+		entry: {
+			'smaterial': './js/main.js',
+			'smaterial-light': './stylesheets/scss/smaterial-light.scss',
+			'smaterial-dark': './stylesheets/scss/smaterial-dark.scss',
+			'smaterial-amp': './stylesheets/scss/smaterial-amp.scss'
+		},
+		output: {
+			path: __dirname,
+			filename: 'js/[name].js'
+		},
+		module: {
+			rules: [
+				{
+					test: /\.js$/,
+					exclude: ['/node_modules/', '/stylesheets/'],
 					use: [
-						'css-loader',
-						'sass-loader'
+						'babel-loader'
 					]
-				})
-			}
+				},
+				{
+					test: /\.scss$/,
+					use: ExtractTextPlugin.extract( {
+						fallback: 'style-loader',
+						use: [
+							{
+								loader: 'css-loader',
+								options: {
+									minimize: {discardComments: {removeAll: !env.dev}}
+								}
+							},
+							'sass-loader'
+						]
+					} )
+				}
+			]
+		},
+		plugins: [
+			new ExtractTextPlugin( 'stylesheets/[name].css' ),
+			new UglifyJSPlugin()
 		]
-	},
-	plugins: [
-		new ExtractTextPlugin('stylesheets/smaterial.css')
-	]
+	}
 };
