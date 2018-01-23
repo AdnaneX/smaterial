@@ -4,9 +4,6 @@
  * http://www.google.com/design/spec/components/selection-controls.html
  **************************************/
 
-$selection-size: rem-calc($font-size-body-1+0px);
-$selection-border-size: if( $var == true, var(--border-size, $border-size), $border-size);
-
 .checkbox, .radio {
 	@include opacity(0);
 	left: -102%;
@@ -157,16 +154,6 @@ $selection-border-size: if( $var == true, var(--border-size, $border-size), $bor
 		}
 	}
 }
-
-$switch-track-height: rem-calc(12px);
-$switch-track-width: rem-calc(24px);
-$switch-thumb-size: rem-calc(14px);
-$switch-thumb-top: ($switch-track-height - $switch-thumb-size ) / 2;
-$switch-thumb-left: $switch-track-width - $switch-thumb-size;
-$switch-thumb-radial-size: $switch-thumb-size * 2;
-$switch-thumb-radial-top: ($switch-track-height - $switch-thumb-radial-size ) / 2;
-$switch-thumb-radial-left: $switch-thumb-size / -2;
-$switch-thumb-radial-left-active: $switch-thumb-left - ($switch-thumb-size / 2 );
 
 @if( in-array( 'switch', $selection ) ) {
 	.switch {

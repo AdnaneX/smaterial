@@ -4,9 +4,6 @@
  * http://www.google.com/design/spec/components/bottom-navigation.html
  **************************************/
 
-$bottom-nav-height: rem-calc(56px); // Default rem-calc(56px)
-$bottom-nav-icon-size: rem-calc(24px); // Default rem-calc(24px)
-
 .bottom-nav, .bottom-shifting {
 	background: $bottom-nav-background;
 	bottom: 0;
@@ -33,6 +30,20 @@ $bottom-nav-icon-size: rem-calc(24px); // Default rem-calc(24px)
 		}
 	}
 
+	.material-icons {
+		@include transition(color $transition-small-duration $standard-transition);
+
+		@if( $amp == false ) {
+			@media #{$medium-only} {
+				@include transition(color $transition-medium-duration $standard-transition);
+			}
+
+			@media #{$medium-up} {
+				@include transition(color $transition-large-duration $standard-transition);
+			}
+		}
+	}
+
 	&.expanded {
 		margin: 0;
 	}
@@ -43,7 +54,7 @@ $bottom-nav-icon-size: rem-calc(24px); // Default rem-calc(24px)
 		line-height: normal;
 		text-align: center;
 
-		&:hover {
+		&:hover, &:hover .material-icons {
 			color: $bottom-nav-on-color;
 		}
 
@@ -59,15 +70,15 @@ $bottom-nav-icon-size: rem-calc(24px); // Default rem-calc(24px)
 
 @if( in-array( 'bottom-nav', $bottom-nav ) ) {
 	.bottom-nav a {
-		font-size: rem-calc(12px);
+		font-size: $bottom-nav-font-size;
 		height: $bottom-nav-height;
-		max-width: rem-calc(168px);
-		min-width: rem-calc(80px);
-		padding: rem-calc(8px) rem-calc(12px) rem-calc(10px) rem-calc(12px);
+		max-width: $bottom-nav-max-width;
+		min-width: $bottom-nav-min-width;
+		padding: $bottom-nav-padding;
 
 		@if( $amp == false ) {
 			@media #{$medium-up} {
-				min-width: rem-calc(120px);
+				min-width: $bottom-nav-min-width-large;
 			}
 		}
 
@@ -77,8 +88,8 @@ $bottom-nav-icon-size: rem-calc(24px); // Default rem-calc(24px)
 		}
 
 		&.active {
-			font-size: rem-calc(14px);
-			padding: rem-calc(6px) rem-calc(12px) rem-calc(10px) rem-calc(12px);
+			font-size: $bottom-nav-font-size-active;
+			padding: $bottom-nav-padding-active;
 		}
 	}
 }
@@ -86,9 +97,9 @@ $bottom-nav-icon-size: rem-calc(24px); // Default rem-calc(24px)
 @if( in-array( 'bottom-shifting', $bottom-nav ) ) {
 	.bottom-shifting a {
 		height: $bottom-nav-height;
-		max-width: rem-calc(96px);
-		min-width: rem-calc(56px);
-		padding: rem-calc(16px) 0;
+		max-width: $bottom-shifting-max-width;
+		min-width: $bottom-shifting-min-width;
+		padding: $bottom-shifting-padding;
 
 		.material-icons {
 			font-size: $bottom-nav-icon-size;
@@ -100,14 +111,14 @@ $bottom-nav-icon-size: rem-calc(24px); // Default rem-calc(24px)
 		}
 
 		&.active {
-			font-size: rem-calc(14px);
-			max-width: rem-calc(168px);
-			min-width: rem-calc(96px);
-			padding: rem-calc(6px) 0 rem-calc(10px) 0;
+			font-size: $bottom-nav-font-size-active;
+			max-width: $bottom-shifting-max-width-active;
+			min-width: $bottom-shifting-min-width-active;
+			padding: $bottom-shifting-padding-active;
 
 			.content {
 				display: block;
-				margin: rem-calc(6px) 0 0 0;
+				margin: $bottom-shifting-content-margin;
 			}
 		}
 	}

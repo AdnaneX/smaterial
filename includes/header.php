@@ -157,6 +157,8 @@ $keywords .= ', smaterial, css, scss, material design, framework, html, js, css 
             </div>
         </div>
 
+        <a href="#">Example</a>
+
         <i class="material-icons">mail <div class="badge">2</div></i>
 
         <i class="material-icons trigger" data-trigger="appbar-menu">more_vert</i>

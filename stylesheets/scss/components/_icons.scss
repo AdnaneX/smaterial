@@ -7,8 +7,7 @@
 
 .material-icons {
 	font-size: $icon-size;
-	height: $icon-size;
-	width: $icon-size;
+	@include square($icon-size);
 	color: if( $theme == light, rgba($black, .26), rgba($white, .3));
 
 	&:active, &.active {
@@ -19,37 +18,15 @@
 	align-items: center;
 	justify-content: center;
 	vertical-align: middle;
-
-	/*!* Support for all WebKit browsers. *!
 	-webkit-font-smoothing: antialiased;
-	!* Support for Safari and Chrome. *!
 	text-rendering: optimizeLegibility;
-
-	!* Support for Firefox. *!
 	-moz-osx-font-smoothing: grayscale;
+	font-feature-settings: 'liga';
 
-	!* Support for IE. *!
-	font-feature-settings: 'liga';*/
-
-	@if( in-array( 'sizes', $icons ) ) {
-		&.18 {
-			font-size: rem-calc(18px);
-			@include square(rem-calc(18px));
-		}
-
-		&.24 {
-			font-size: rem-calc(24px);
-			@include square(rem-calc(24px));
-		}
-
-		&.36 {
-			font-size: rem-calc(36px);
-			@include square(rem-calc(36px));
-		}
-
-		&.48 {
-			font-size: rem-calc(48px);
-			@include square(rem-calc(48px));
+	@each $icon in $icons {
+		&.size-#{$icon} {
+			font-size: rem-calc($icon + 0px);
+			@include square(rem-calc($icon + 0px));
 		}
 	}
 }

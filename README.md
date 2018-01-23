@@ -35,7 +35,6 @@ After making your changes please describe what you have changed. This will speed
 - Bottom navigation
 - Bottom sheet
 - Chips
-- Tabs
 - Tooltips
 - Snackbars & toasts
 
@@ -89,6 +88,7 @@ After making your changes please describe what you have changed. This will speed
     - Fix click bug at end of `.slider` slider
     - slider-discrete bubble not working mobile
 - Tabs
+	- Add support for scroll on desktop
 - Text fields
     - Add autocomplete select
     - Add autocomplete input

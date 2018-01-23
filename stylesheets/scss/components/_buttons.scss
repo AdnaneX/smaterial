@@ -5,21 +5,18 @@
  * http://www.google.com/design/spec/components/buttons-floating-action-button.html
  **************************************/
 
-$raised-size: rem-calc(36px); // Default rem-calc(32px)
-$raised-dense-size: rem-calc(32px); // Default rem-calc(32px)
-$flat-size: rem-calc(36px); // Default rem-calc(36px)
+
 
 @if( in-array( 'raised', $button ) ) {
 	.raised-button {
-		@include font($font-size-button, 0, $font-weight-button, $line-height-button, $font-color-button, $letter-spacing-button, uppercase);
 		@include button();
 		@include material-shadow(2);
 		background: $raised-background;
 		color: $raised-font-color;
-		height: $raised-size;
-		line-height: $raised-size;
+		height: $button-height;
+		line-height: $button-height;
 		min-width: rem-calc(88px);
-		padding: 0 rem-calc(16px);
+		padding: 0 $gutter;
 		@include transition(box-shadow $transition-small-duration $standard-transition unquote(',') background $transition-small-duration $standard-transition);
 
 		@if( $amp == false ) {
@@ -41,26 +38,23 @@ $flat-size: rem-calc(36px); // Default rem-calc(36px)
 			}
 		}
 
-		&:hover {
+		&:hover, &:hover .material-icons {
 			color: $raised-font-color; // To fix bug of links getting link color on hover
 		}
 
 		.material-icons {
 			color: $raised-icon-color;
-			@include square($raised-size);
-			line-height: $raised-size;
-			vertical-align: middle;
 		}
 
 		@if( in-array( 'dense', $button ) ) {
 			&-dense {
 				font-size: rem-calc(13px);
-				height: $raised-dense-size;
-				line-height: $raised-dense-size;
+				height: $button-dense-height;
+				line-height: $button-dense-height;
 
 				.material-icons {
-					@include square($raised-dense-size);
-					line-height: $raised-dense-size;
+					@include square($button-dense-height);
+					line-height: $button-dense-height;
 				}
 			}
 		}
@@ -82,15 +76,14 @@ $flat-size: rem-calc(36px); // Default rem-calc(36px)
 @if( in-array( 'flat', $button ) ) {
 	.flat-button {
 		@include button();
-		@include font($font-size-button, 0, $font-weight-button, $line-height-button, $font-color-button, $letter-spacing-button, uppercase);
 		background: none;
 		color: $flat-color;
-		height: $flat-size;
-		line-height: $flat-size;
+		height: $button-height;
+		line-height: $button-height;
 		min-width: rem-calc(64px);
-		padding: 0 rem-calc(16px);
+		padding: 0 $gutter;
 
-		&:hover {
+		&:hover, &:hover .material-icons {
 			color: $flat-color;
 		}
 
@@ -100,10 +93,6 @@ $flat-size: rem-calc(36px); // Default rem-calc(36px)
 
 		.material-icons {
 			color: $flat-icon-color;
-			height: $flat-size;
-			line-height: $flat-size;
-			vertical-align: middle;
-			width: $flat-size;
 		}
 
 		&.disabled, &:disabled {
@@ -111,6 +100,10 @@ $flat-size: rem-calc(36px); // Default rem-calc(36px)
 			color: $flat-disabled-color;
 
 			&:hover {
+				color: $flat-disabled-color;
+			}
+
+			.material-icons {
 				color: $flat-disabled-color;
 			}
 		}
@@ -125,7 +118,6 @@ $floating-mini-size: rem-calc(40px); // Default rem-calc(40px)
 
 @if( in-array( 'floating', $button ) ) {
 	.floating-button {
-		@include font($font-size-button, 0, $font-weight-button, $line-height-button, $font-color-button, $letter-spacing-button, uppercase);
 		@include button(50%);
 		@include transition(box-shadow $transition-small-duration $standard-transition);
 		@include material-shadow(6);
@@ -136,6 +128,10 @@ $floating-mini-size: rem-calc(40px); // Default rem-calc(40px)
 
 		&:hover {
 			@include material-shadow(12);
+
+			.material-icons {
+				color: $floating-icon-color;
+			}
 		}
 
 		.material-icons {
@@ -189,8 +185,6 @@ $floating-mini-size: rem-calc(40px); // Default rem-calc(40px)
 	}
 }
 
-$toggle-size: rem-calc(40px);
-$toggle-icon-size: rem-calc(24px);
 
 @if( in-array( 'toggle', $button ) ) {
 	.toggle-button {

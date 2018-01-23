@@ -10,7 +10,7 @@
 	margin: 0;
 
 	&-header {
-		height: rem-calc(48px);
+		height: $expansion-header-height;
 	}
 
 	&-content {
@@ -34,18 +34,18 @@
 
 	label {
 		font-weight: 400;
-		font-size: rem-calc(15px);
-		color: rgba($black, .87);
-		margin: 0 rem-calc(16px) 0 0;
+		font-size: $expansion-label-font-size;
+		color: $expansion-label-font-color;
+		margin: 0 $gutter 0 0;
 	}
 
 	.expand-icon {
 		color: rgba($black, .38);
 		position: absolute;
-		right: rem-calc(24px);
+		right: $large-gutter;
 		line-height: rem-calc(48px);
 		cursor: pointer;
-		margin: 0 0 0 rem-calc(16px);
+		margin: 0 0 0 $gutter;
 		vertical-align: middle;
 
 		.material-icons {

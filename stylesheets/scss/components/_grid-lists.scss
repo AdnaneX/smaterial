@@ -16,7 +16,7 @@
 		left: 0;
 		width: 100%;
 		color: $grid-font-color;
-		padding: rem-calc(16px);
+		padding: $gutter;
 		background: $grid-background;
 
 		.material-icons {
@@ -61,7 +61,7 @@
 		max-width: 25%;
 
 		.material-icons {
-			padding: rem-calc(16px);
+			padding: $gutter;
 			font-size: rem-calc(16px);
 			cursor: pointer;
 

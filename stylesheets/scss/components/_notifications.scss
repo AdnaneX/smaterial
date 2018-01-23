@@ -4,16 +4,11 @@
  *  https://material.google.com/patterns/notifications.html
  **************************************/
 
-$notification-header-icon-size: rem-calc(14px);
-$notification-media-icon-size: rem-calc(35px);
-$notification-content-top: rem-calc(5px);
-$notification-content-sides: rem-calc(8px);
-$notification-content-bottom: rem-calc(10px);
-$notification-image-size: rem-calc(40px);
+
 
 .notification {
 	@include material-shadow(3);
-	@include border-radius(if( $var == true, var(--border-size, $border-size), $border-size ) );
+	@include border-radius($border-size );
 	background: $notification-background;
 	float: left;
 	max-width: 100%;
@@ -21,7 +16,7 @@ $notification-image-size: rem-calc(40px);
 	width: auto;
 
 	&-header {
-		padding: rem-calc(8px) rem-calc(8px) 0 rem-calc(8px);
+		padding: $notification-header-padding;
 		width: 100%;
 
 		> div {

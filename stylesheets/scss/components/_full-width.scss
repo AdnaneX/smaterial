@@ -3,7 +3,7 @@
 		.appbar {
 			@media #{$small-up} {
 				.appbar-title {
-					margin-left: rem-calc(72px) - (($large-gutter * 1.5) + $appbar-icon-large-size);
+					margin-left: $appbar-title-margin-left - (($large-gutter * 1.5) + $appbar-icon-large-size);
 				}
 			}
 		}

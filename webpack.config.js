@@ -42,7 +42,11 @@ module.exports = env => {
 		},
 		plugins: [
 			new ExtractTextPlugin( 'stylesheets/[name].css' ),
-			new UglifyJSPlugin()
+			new UglifyJSPlugin({
+				uglifyOptions: {
+					compress: !env.dev
+				}
+			})
 		]
 	}
 };

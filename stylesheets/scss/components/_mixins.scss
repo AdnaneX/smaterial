@@ -51,9 +51,22 @@
 @mixin transition( $settings ) {
 	-webkit-transition: $settings;
 	-moz-transition: $settings;
-	-ms-transition: $settings;
 	-o-transition: $settings;
 	transition: $settings;
+}
+
+@mixin transition-duration( $settings ) {
+	-webkit-transition-duration: $settings;
+	-moz-transition-duration: $settings;
+	-o-transition-duration: $settings;
+	transition-duration: $settings;
+}
+
+@mixin transition-property( $settings ) {
+	-webkit-transition-property: $settings;
+	-moz-transition-property: $settings;
+	-o-transition-property: $settings;
+	transition-property: $settings;
 }
 
 @mixin transform( $settings ) {
@@ -94,6 +107,14 @@
 	-webkit-border-top-left-radius: $px;
 	-moz-border-radius-topleft: $px;
 	border-top-left-radius: $px;
+}
+
+@mixin user-select( $settings ) {
+	-webkit-user-select: $settings;
+	-moz-user-select: $settings;
+	-ms-user-select: $settings;
+	-o-user-select: $settings;
+	user-select: $settings;
 }
 
 @mixin border-top-right-radius( $px ) {
@@ -151,6 +172,7 @@
 
 @mixin button( $border-radius: if( $var == true, var(--border-size, $border-size), $border-size) ) {
 	cursor: pointer;
+	@include font($font-size-button, 0, $font-weight-button, $line-height-button, $font-color-button, $letter-spacing-button, uppercase);
 	@include border-radius( $border-radius );
 	text-decoration: none;
 	border: none;
@@ -158,7 +180,22 @@
 	display: inline-block;
 	text-align: center;
 	position: relative;
-	text-rendering: optimizeLegibility;
+	vertical-align: middle;
+
+	.material-icons {
+		width: rem-calc($font-size-button + 0px);
+		height: $button-height;
+		line-height: $button-height;
+		vertical-align: middle;
+
+		&.left {
+			margin-right: $gutter;
+		}
+
+		&.right {
+			margin-left: $gutter;
+		}
+	}
 }
 
 @mixin font( $font-size, $small-font-size, $weight, $leading, $color, $tracking, $transform: inherit ) {

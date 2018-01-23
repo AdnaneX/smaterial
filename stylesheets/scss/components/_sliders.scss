@@ -4,15 +4,7 @@
  * http://www.google.com/design/spec/components/sliders.html
  **************************************/
 
-$slider-track-height: $border-size; // Default var(--border-size, $border-size)
-$slider-thumb-size: rem-calc(14px); // Default rem-calc(14px)
-$slider-thumb-active-size: rem-calc(16px); // Default rem-calc(16px)
-$slider-thumb-margin: ( ( $slider-thumb-size / 2 ) - $slider-track-height ) * -1;
-$slider-thumb-on-margin: ( ( $slider-thumb-active-size / 2 ) - $slider-track-height ) * -1;
-$slider-bubble-active-size: rem-calc(25px); // Default rem-calc(25px)
-$slider-bubble-font-size: rem-calc(10px); // Default 10px
-$slider-triangle-size: rem-calc(10px);
-$slider-triangle-border-hidden: $slider-triangle-size solid transparent;
+
 
 input[type="range"] {
 	background: $slider-off-color;
@@ -58,7 +50,7 @@ input[type="range"] {
 		background: $slider-thumb-background;
 		border: $slider-track-height solid $slider-off-color;
 		@include border-radius(50%);
-		margin: $slider-thumb-margin 0 0 0;
+		margin: $slider-thumb-margin;
 		@include appearance(none);
 		@include transition(all $transition-small-duration $standard-transition);
 
@@ -76,14 +68,14 @@ input[type="range"] {
 			@include square($slider-thumb-active-size);
 			background: $slider-on-color;
 			border: $slider-track-height solid $slider-on-color;
-			margin: $slider-thumb-on-margin 0 0 0;
+			margin: $slider-thumb-on-margin;
 		}
 	}
 
 	&:disabled {
 		@include range-thumb() {
 			@include square($slider-thumb-size);
-			margin: $slider-thumb-margin 0 0 0;
+			margin: $slider-thumb-margin;
 			background: $slider-off-color;
 			border: $slider-track-height solid var(--background, $background);
 		}
@@ -128,11 +120,11 @@ input[type="range"] {
 				@include square($slider-thumb-size);
 				background: $slider-on-color;
 				border: $slider-track-height solid $slider-on-color;
-				margin: $slider-thumb-margin 0 0 0;
+				margin: $slider-thumb-margin;
 
 				&:active, &:focus {
 					@include square($slider-thumb-active-size);
-					margin: $slider-thumb-on-margin 0 0 0;
+					margin: $slider-thumb-on-margin;
 				}
 			}
 		}

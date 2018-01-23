@@ -4,20 +4,11 @@
  * http://www.google.com/design/spec/layout/structure.html#structure-app-bar
  * http://www.google.com/design/spec/layout/structure.html#structure-toolbars
  **************************************/
-// More menu
-$appbar-more-margin: rem-calc(4px); // Default rem-calc(4px)
-$appbar-icon-default-size: $appbar-mobile-portrait-height - ($gutter * 2);
-$appbar-icon-landscape-size: $appbar-mobile-landscape-height - ($gutter * 2);
-$appbar-icon-portrait-size: $appbar-icon-default-size;
-$appbar-icon-large-size: $appbar-large-height - (rem-calc(20px) * 2);
-$appbar-portrait-padding: ( ( $appbar-mobile-portrait-height - $appbar-icon-default-size ) / 2 );
-$appbar-landscape-padding: ( ( $appbar-mobile-landscape-height - $appbar-icon-landscape-size ) / 2 );
-$appbar-large-padding: ( ( $appbar-large-height - $appbar-icon-large-size ) / 2 );
 
 .appbar {
 	@include material-shadow(4);
 	background: $appbar-background;
-	color: $appbar-text;
+	color: $appbar-font-color;
 	line-height: normal;
 	min-height: $appbar-mobile-portrait-height;
 	position: fixed;
@@ -25,73 +16,71 @@ $appbar-large-padding: ( ( $appbar-large-height - $appbar-icon-large-size ) / 2 
 	z-index: 2;
 	@include flex-container(null, null, flex-start);
 	justify-content: flex-start;
-	@include box-sizing(border-box);
-	padding: 0 ( $gutter / 2 );
+	padding: $appbar-padding;
 
 	@if( $amp == false ) {
 		@media only screen and (orientation: landscape) and (max-width: #{$small-screen}) {
-			height: $appbar-mobile-landscape-height;
+			min-height: $appbar-mobile-landscape-height;
 		}
 
 		@media only screen and (orientation: portrait) and (max-width: #{$xsmall-screen}) {
-			height: $appbar-mobile-portrait-height;
+			min-height: $appbar-mobile-portrait-height;
 		}
 
 		@media #{$small-up} {
-			height: $appbar-large-height;
-			padding: 0 ($large-gutter / 2);
+			min-height: $appbar-large-height;
+			padding: $appbar-large-padding;
 		}
 	}
 
-	a, h1, h2, h3, h4, h5, h6 {
-		color: $appbar-text;
+	a, h1, h2, h3, h4, h5, h6, .material-icons, .title {
+		color: $appbar-font-color;
 	}
 
 	a {
 		display: block;
 		position: relative;
 		font-weight: 500;
-		margin: ($appbar-mobile-portrait-height - (rem-calc($font-size-small-body+0px) + rem-calc(20px))) 0 rem-calc(20px) 0;
+		margin: $appbar-item-margin;
 
 		@if( $amp == false ) {
 			@media only screen and (orientation: landscape) and (max-width: #{$small-screen}) {
-				margin: ($appbar-mobile-landscape-height - (rem-calc($font-size-small-body+0px) + rem-calc(20px))) 0 rem-calc(20px) 0;
+				margin: $appbar-item-margin;
 			}
 
 			@media only screen and (orientation: portrait) and (max-width: #{$xsmall-screen}) {
-				margin: ($appbar-mobile-portrait-height - (rem-calc($font-size-small-body+0px) + rem-calc(20px))) 0 rem-calc(20px) 0;
+				margin: $appbar-item-margin;
 			}
 
 			@media #{$small-up} {
-				margin: ($appbar-large-height - (rem-calc($font-size-body-1+0px) + rem-calc(20px))) 0 rem-calc(20px) 0;
+				margin: $appbar-item-margin-large;
 			}
 		}
 	}
 
 	.material-icons {
-		margin: $appbar-portrait-padding ($gutter / 2);
-		color: $appbar-text;
-		font-size: $appbar-icon-default-size;
+		margin: $appbar-item-margin;
+		font-size: $appbar-icon-portrait-size;
 		position: relative;
-		@include square($appbar-icon-default-size);
+		@include square($appbar-icon-portrait-size);
 
 		@if( $amp == false ) {
 			@media only screen and (orientation: landscape) and (max-width: #{$small-screen}) {
 				font-size: $appbar-icon-landscape-size;
 				@include square($appbar-icon-landscape-size);
-				margin: $appbar-landscape-padding ($gutter / 2);
+				margin: $appbar-item-margin;
 			}
 
 			@media only screen and (orientation: portrait) and (max-width: #{$xsmall-screen}) {
 				font-size: $appbar-icon-portrait-size;
 				@include square($appbar-icon-portrait-size);
-				margin: $appbar-portrait-padding ($gutter / 2);
+				margin: $appbar-item-margin;
 			}
 
 			@media #{$small-up} {
 				font-size: $appbar-icon-large-size;
 				@include square($appbar-icon-large-size);
-				margin: $appbar-large-padding ($large-gutter / 2);
+				margin: $appbar-item-margin-large;
 			}
 		}
 	}
@@ -101,23 +90,19 @@ $appbar-large-padding: ( ( $appbar-large-height - $appbar-icon-large-size ) / 2 
 	}
 
 	&-title {
-		padding: ($appbar-mobile-portrait-height - (rem-calc($font-size-title+0px) + rem-calc(20px))) 0 rem-calc(20px) 0;
-		margin-left: rem-calc(72px) - ($gutter + $appbar-icon-default-size);
+		margin: 0 0 ($appbar-padding - $appbar-title-padding-bottom) ($appbar-title-margin-left - ($gutter + $appbar-icon-portrait-size));
 
 		@if( $amp == false ) {
 			@media only screen and (orientation: landscape) and (max-width: #{$small-screen}) {
-				padding: ($appbar-mobile-landscape-height - (rem-calc($font-size-title+0px) + rem-calc(20px))) 0 rem-calc(20px) 0;
-				margin-left: rem-calc(72px) - ($gutter + $appbar-icon-landscape-size);
+				margin: 0 0 ($appbar-padding - $appbar-title-padding-bottom) ($appbar-title-margin-left - ($gutter + $appbar-icon-landscape-size));
 			}
 
 			@media only screen and (orientation: portrait) and (max-width: #{$xsmall-screen}) {
-				padding: ($appbar-mobile-portrait-height - (rem-calc($font-size-title+0px) + rem-calc(20px))) 0 rem-calc(20px) 0;
-				margin-left: rem-calc(72px) - ($gutter + $appbar-icon-portrait-size);
+				margin: 0 0 ($appbar-padding - $appbar-title-padding-bottom) ($appbar-title-margin-left - ($gutter + $appbar-icon-portrait-size));
 			}
 
 			@media #{$small-up} {
-				padding: ($appbar-large-height - (rem-calc($font-size-title+0px) + rem-calc(20px))) 0 rem-calc(20px) 0;
-				margin-left: $drawer-small-width - ($large-gutter + $appbar-icon-large-size);
+				margin: 0 0 ($appbar-padding-large - $appbar-title-padding-bottom) ($drawer-small-width - ($large-gutter + $appbar-icon-large-size));
 			}
 		}
 	}
@@ -142,8 +127,8 @@ $appbar-large-padding: ( ( $appbar-large-height - $appbar-icon-large-size ) / 2 
 	}
 
 	&-menu {
-		top: rem-calc(4px);
-		right: rem-calc(4px);
+		top: $appbar-more-margin;
+		right: $appbar-more-margin;
 		left: auto;
 
 		a {

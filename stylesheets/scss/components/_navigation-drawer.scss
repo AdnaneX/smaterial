@@ -4,15 +4,6 @@
  * https://material.google.com/patterns/navigation-drawer.html
  **************************************/
 
-$drawer-padding: $gutter;
-$drawer-item-height: rem-calc(48px);
-$drawer-icon-size: rem-calc(24px);
-$drawer-profile-img: rem-calc(40px);
-$drawer-profile-top: $drawer-padding;
-$drawer-profile-content-height: rem-calc(56px);
-$drawer-profile-bottom-padding: rem-calc(8px);
-$drawer-profile-scrim: to top, rgba($grey-900, 0.4) 15%, rgba($white, 0) 33%;
-$drawer-profile-height: $drawer-padding + $drawer-profile-img + $drawer-profile-content-height + $drawer-profile-bottom-padding;
 $drawers: '';
 
 @if( in-array( 'full-height', $navigation-drawer ) ) {
@@ -132,12 +123,12 @@ $drawers: '';
 			@if (in-array('full-height', $navigation-drawer)) {
 				&-full-height {
 					top: 0;
-					border-right: rem-calc(1px) solid if($theme == light, rgba($black, .12), rgba($white, .12));
+					border-right: $drawer-border;
 					z-index: 3;
 
 					.drawer-header {
-						padding: rem-calc(16px) rem-calc(16px) rem-calc(8px) rem-calc(16px);
-						border-bottom: rem-calc(1px) solid if($theme == light, rgba($black, .12), rgba($white, .12));
+						padding: $gutter $gutter ( $gutter / 2 ) $gutter;
+						border-bottom: $drawer-border;
 						height: $appbar-mobile-portrait-height;
 
 						@media only screen and (orientation: landscape) and (max-width: #{$small-screen}) {
@@ -159,7 +150,7 @@ $drawers: '';
 				&-clipped {
 					top: $appbar-mobile-portrait-height;
 					z-index: 1;
-					border-right: rem-calc(1px) solid if($theme == light, rgba($black, .12), rgba($white, .12));
+					border-right: $drawer-border;
 
 					@media only screen and (orientation: landscape) and (max-width: #{$small-screen}) {
 						top: $appbar-mobile-landscape-height;
@@ -207,7 +198,7 @@ $drawers: '';
 	@if( in-array( 'persistent', $navigation-drawer ) ) {
 		&-persistent {
 			top: 0;
-			border-right: rem-calc(1px) solid if($theme == light, rgba($black, .12), rgba($white, .12));
+			border-right: $drawer-border;
 			z-index: 3;
 
 			.menu {
@@ -218,7 +209,7 @@ $drawers: '';
 				height: $appbar-mobile-portrait-height;
 				line-height: $appbar-mobile-portrait-height;
 				margin: 0 0 $drawer-profile-bottom-padding 0;
-				border-bottom: rem-calc(1px) solid if($theme == light, rgba($black, .12), rgba($white, .12));
+				border-bottom: $drawer-border;
 
 				@media only screen and (orientation: landscape) and (max-width: #{$small-screen}) {
 					height: $appbar-mobile-landscape-height;
@@ -244,7 +235,7 @@ $drawers: '';
 				@include square($drawer-icon-size);
 				margin: 0 (rem-calc(72px) - $drawer-icon-size - $drawer-padding) 0 $gutter;
 				@include border-radius(50%);
-				border: rem-calc(1px) solid if($theme == light, rgba($black, .12), rgba($white, .12));
+				border: $drawer-border;
 				top: 50%;
 				position: inherit;
 				@include transform(translate(0, -50%));
@@ -290,7 +281,7 @@ $drawers: '';
 				@include square($drawer-icon-size);
 				margin: 0 calc(#{rem-calc(72px)} - #{$drawer-icon-size} - #{$drawer-padding}) 0 0;
 				@include border-radius(50%);
-				border: rem-calc(1px) solid if($theme == light, rgba($black, .12), rgba($white, .12));
+				border: $drawer-border;
 				top: 50%;
 				position: inherit;
 				@include transform(translate(0, -50%));
@@ -300,7 +291,7 @@ $drawers: '';
 		&.expanded {
 			width: 100%;
 			top: 0;
-			border-right: rem-calc(1px) solid if($theme == light, rgba($black, .12), rgba($white, .12));
+			border-right: $drawer-border;
 			z-index: 3;
 
 			.drawer-header {
@@ -308,7 +299,7 @@ $drawers: '';
 				height: $appbar-small-height;
 				line-height: $appbar-small-height;
 				margin: 0 0 rem-calc(8px) 0;
-				border-bottom: rem-calc(1px) solid if($theme == light, rgba($black, .12), rgba($white, .12));
+				border-bottom: $drawer-border;
 
 				@media #{$medium-only} {
 					height: $appbar-medium-height;
@@ -419,12 +410,12 @@ $drawers: '';
 
 	a {
 		cursor: pointer;
-		color: if( $theme == light, rgba($black, .87), rgba($white, .7));
+		color: $drawer-item-font-color;
 		font-weight: 500;
 		width: 100%;
 		display: block;
 		height: $drawer-item-height;
-		font-size: rem-calc(14px);
+		font-size: $list-font-size;
 		line-height: $drawer-item-height;
 		position: relative;
 		padding: 0 $drawer-padding;
@@ -463,6 +454,11 @@ $drawers: '';
 
 	.subheader {
 		color: rgba($black, .54);
+		font-size: rem-calc(14px);
+		font-weight: 500;
+		margin: 0 $gutter;
+		height: $list-item-height;
+		line-height: $list-item-height;
 	}
 
 	.dropdown {
@@ -517,11 +513,23 @@ $drawers: '';
 	.arrow {
 		position: absolute;
 		right: rem-calc(16px);
-		top: ($drawer-item-height - ($drawer-item-height / 2)) - ($drawer-icon-size / 2);
+		top: ($appbar-mobile-portrait-height / 2) - ($drawer-icon-size / 2);
 		margin: 0;
 		@include transition(all $transition-small-duration $standard-transition);
 
+		@media only screen and (orientation: landscape) and (max-width: #{$small-screen}) {
+			top: ($appbar-mobile-landscape-height / 2) - ($drawer-icon-size / 2);
+		}
+
+		@media only screen and (orientation: portrait) and (max-width: #{$xsmall-screen}) {
+			top: ($appbar-mobile-portrait-height / 2) - ($drawer-icon-size / 2);
+		}
+
 		@if( $amp == false ) {
+			@media #{$small-up} {
+				top: ($appbar-large-height / 2) - ($drawer-icon-size / 2);
+			}
+
 			@media #{$medium-only} {
 				@include transition(all $transition-medium-duration $standard-transition);
 			}
@@ -533,13 +541,9 @@ $drawers: '';
 	}
 
 	.divider {
-		margin: rem-calc(8px) 0;
+		margin: ( $gutter / 2 ) 0;
 		height: rem-calc(1px);
 		background: if($theme == light, rgba($black, .12), rgba($white, .12));
-
-		&:hover {
-			background: none;
-		}
 	}
 
 	.menu {

@@ -15,7 +15,7 @@
 	z-index: 5;
 	top: 50%;
 	left: 50%;
-	max-width: calc(100% - ( 2 * #{$gutter}));
+	max-width: $dialog-max-width;
 	@include transform(translateX(-50%) translateY(-50%));
 	@include transition(all $transition-small-duration $standard-transition);
 
@@ -27,7 +27,7 @@
 		@media #{$medium-up} {
 			width: auto;
 			@include transition(all $transition-large-duration $standard-transition);
-			max-width: calc(100% - (2 * #{$large-gutter}));
+			max-width: $dialog-max-width-large;
 		}
 	}
 
@@ -63,7 +63,7 @@
 	}
 
 	&-content {
-		padding: 0 rem-calc(24px) rem-calc(24px) rem-calc(24px);
+		padding: $dialog-content-padding;
 		max-height: 50vh;
 		overflow: auto;
 	}
@@ -71,25 +71,18 @@
 	&-title {
 		width: 100%;
 		@include font($font-size-title, 0, $font-weight-title, $line-height-title, $font-color-title, $letter-spacing-title);
-		padding: rem-calc(24px) rem-calc(24px) rem-calc(20px) rem-calc(24px);
+		padding: $dialog-title-padding
 	}
 
 	&-actions {
 		width: 100%;
 		text-align: right;
-		height: rem-calc(52px);
-		padding: rem-calc(8px);
+		min-height: $dialog-actions-height;
+		padding: $dialog-actions-padding;
 
-		.flat-button, .raised-button {
-			height: rem-calc(36px);
-			line-height: rem-calc(36px);
-			margin: 0 rem-calc(8px) 0 0;
-			padding: 0 rem-calc(8px);
+		* {
+			margin: 0 0 0 rem-calc(8px);
 			min-width: rem-calc(64px);
-
-			&:last-of-type {
-				margin: 0;
-			}
 		}
 	}
 }

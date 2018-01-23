@@ -2,8 +2,9 @@
 BingSiteAuth.xml
 googlef8a0d5705f3e17df.html
 /node_modules
-/stylesheets/*.css
-/stylesheets/*.map
-*.zip
+stylesheets/*.css
 /js/prism.js
 /js/smaterial.js
+js/smaterial-amp.js
+js/smaterial-dark.js
+js/smaterial-light.js

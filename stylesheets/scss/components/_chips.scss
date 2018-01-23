@@ -5,9 +5,7 @@
  **************************************/
 
 
-$chips-size: rem-calc(32px); // Default rem-calc(32px)
-$chips-font-size: rem-calc(13px);
-$chips-delete-size: rem-calc(15px); // Default rem-calc(15px)
+
 
 .chip {
 	@include border-radius($chips-size);
@@ -18,7 +16,7 @@ $chips-delete-size: rem-calc(15px); // Default rem-calc(15px)
 	font-weight: 400;
 	height: $chips-size;
 	line-height: $chips-size;
-	padding: 0 rem-calc(12px);
+	padding: $chips-padding;
 
 	@if( in-array( 'deletable', $chip ) ) {
 		&-deletable {
@@ -29,7 +27,7 @@ $chips-delete-size: rem-calc(15px); // Default rem-calc(15px)
 				color: $chips-delete-cross;
 				display: inline-block;
 				height: $chips-delete-size;
-				margin: 0 rem-calc(-8px) 0 rem-calc(4px);
+				margin: $chips-delete-margin;
 				line-height: $chips-delete-size;
 				text-align: center;
 				vertical-align: middle;
@@ -63,7 +61,7 @@ $chips-delete-size: rem-calc(15px); // Default rem-calc(15px)
 
 	@if( in-array( 'contact', $chip ) ) {
 		&-contact {
-			font-size: rem-calc(14px);
+			font-size: $chips-contact-font-size;
 			@include transition(box-shadow $transition-small-duration $standard-transition);
 
 			@if( $amp == false ) {
@@ -79,7 +77,7 @@ $chips-delete-size: rem-calc(15px); // Default rem-calc(15px)
 			img {
 				@include border-radius(50%);
 				@include square($chips-size);
-				margin: 0 rem-calc(8px) 0 rem-calc(-12px);
+				margin: $chips-contact-img-margin;
 			}
 
 			&:hover {

@@ -71,6 +71,10 @@ a {
 
 	&:hover {
 		color: $link-hover;
+
+		.material-icons {
+			color: $link-hover;
+		}
 	}
 
 	img {
@@ -128,18 +132,9 @@ main, .main-content {
 		vertical-align: middle;
 	}
 
-	hr, .divider {
+	hr {
 		background: if($theme == light, rgba($black, .12), rgba($white, .12));
-		border: none;
+		border: rem-calc(1px) solid if($theme == light, rgba($black, .12), rgba($white, .12));
 		height: $border-size / 2;
-		border-width: 0;
-	}
-
-	.main-color-font {
-		color: if($var == true, var(--main-color, $main-color), $main-color);
-	}
-
-	.main-color-background {
-		background: if($var == true, var(--main-color, $main-color), $main-color);
 	}
 }

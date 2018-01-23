@@ -7,7 +7,6 @@
 .card {
 	@include material-shadow(2);
 	@include border-radius(if( $var == true, var(--border-size, $border-size), $border-size ) );
-	//margin: rem-calc(8px);
 	width: 100%;
 	padding: 0;
 	position: relative;
@@ -30,58 +29,58 @@
 	}
 
 	&-actions {
-		padding: rem-calc(8px);
+		padding: $card-actions-padding;
 
 		> * {
-			margin: 0 rem-calc(8px) rem-calc(4px) 0;
+			margin: 0 $card-actions-padding ($card-actions-padding / 2) 0;
 
 			&:last-of-type {
-				margin: 0 0 rem-calc(4px) 0;
+				margin: 0 0 ($card-actions-padding / 2) 0;
 			}
 		}
 	}
 
 	&-primary {
-		padding-left: rem-calc(16px);
-		padding-right: rem-calc(16px);
-		padding-top: rem-calc(24px);
-		padding-bottom: rem-calc(24px);
-		font-size: rem-calc(24px);
+		padding-left: $gutter;
+		padding-right: $gutter;
+		padding-top: $large-gutter;
+		padding-bottom: $large-gutter;
+		font-size: $card-primary-font-size;
 
 		&-small {
-			font-size: rem-calc(14px);
-			padding-top: rem-calc(16px);
+			font-size: $card-primary-small-font-size;
+			padding-top: $gutter;
 		}
 
 		&-additional {
-			padding-bottom: rem-calc(16px);
+			padding-bottom: $gutter;
 		}
 
 		#{$medium-up} {
-			padding: rem-calc(16px) rem-calc(24px);
+			padding: $gutter $large-gutter;
 		}
 
 		.subhead-1 {
-			font-size: rem-calc(14px);
-			color: rgba($black, .38);
+			font-size: $card-subhead-font-size;
+			color: $card-subhead-font-color;
 			font-weight: 400;
 		}
 	}
 
 	&-supporting {
-		font-size: rem-calc(14px);
-		padding-top: rem-calc(16px);
-		padding-left: rem-calc(16px);
-		padding-right: rem-calc(16px);
-		padding-bottom: rem-calc(24px);
+		font-size: $card-supporting-font-size;
+		padding-top: $gutter;
+		padding-left: $gutter;
+		padding-right: $gutter;
+		padding-bottom: $large-gutter;
 
 		&-additional {
-			padding-bottom: rem-calc(16px);
+			padding-bottom: $gutter;
 		}
 
 		@media #{$medium-up} {
-			padding-left: rem-calc(24px);
-			padding-right: rem-calc(24px);
+			padding-left: $large-gutter;
+			padding-right: $large-gutter;
 		}
 	}
 
@@ -100,8 +99,8 @@
 		&.card-avatar {
 			float: left;
 			@include border-radius(50%);
-			margin: rem-calc(16px);
-			@include square( rem-calc(72px) - (rem-calc(16px) * 2 ) );
+			margin: $gutter;
+			@include square( rem-calc(72px) - ($gutter * 2 ) );
 		}
 	}
 

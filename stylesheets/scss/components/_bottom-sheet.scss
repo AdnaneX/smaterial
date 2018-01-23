@@ -4,14 +4,6 @@
  * http://www.google.com/design/spec/components/bottom-sheets.html
  **************************************/
 
-$bottom-sheet-font-weight: 400; // Default 400
-$bottom-sheet-font-size: rem-calc(16px); // Default rem-calc(16px)
-$bottom-sheet-icons-size: rem-calc(24px); // Default rem-calc(24px)
-$bottom-sheet-grid-icon-size: rem-calc(48px); // Default rem-calc(48px)
-$bottom-sheet-grid-content-size: rem-calc(16px); // Default rem-calc(16px)
-$bottom-sheet-music-image-size: rem-calc(52.5px); // Default rem-calc(42.5px)
-$bottom-sheet-music-height: rem-calc(50px); // Default rem-calc(40px)
-
 .bottom-sheet {
 	@include transition(margin $transition-small-duration $standard-transition);
 	@include material-shadow(16);
@@ -24,7 +16,7 @@ $bottom-sheet-music-height: rem-calc(50px); // Default rem-calc(40px)
 	height: auto;
 	left: 0;
 	overflow: inherit;
-	padding: rem-calc(8px) rem-calc(16px);
+	padding: $bottom-sheet-padding;
 	position: fixed;
 	right: 0;
 	width: 100%;
@@ -94,7 +86,7 @@ $bottom-sheet-music-height: rem-calc(50px); // Default rem-calc(40px)
 			padding: 0;
 
 			&.divider {
-				margin: rem-calc(7px) rem-calc(-16px) rem-calc(8px) rem-calc(-16px);
+				margin: $bottom-sheet-divider-margin;
 			}
 		}
 	}
@@ -103,24 +95,24 @@ $bottom-sheet-music-height: rem-calc(50px); // Default rem-calc(40px)
 		color: $bottom-sheet-icons-color;
 		font-size: $bottom-sheet-icons-size;
 		@include square($bottom-sheet-icons-size);
-		margin: 0 rem-calc(32px) 0 0 ;
+		margin: $bottom-sheet-icons-margin;
 		vertical-align: middle;
 	}
 
 	@if( in-array( 'header', $bottom-sheet ) ) {
 		&-header {
-			padding: 0 rem-calc(16px) rem-calc(8px) rem-calc(16px);
+			padding: $bottom-sheet-header-padding;
 
 			li.header {
 				color: $bottom-sheet-header-font-color;
-				height: rem-calc(56px);
+				height: $bottom-sheet-header-height;
 			}
 		}
 	}
 
 	@if( in-array( 'grid', $bottom-sheet ) ) {
 		&-grid {
-			padding: rem-calc(16px) rem-calc(24px) rem-calc(24px) rem-calc(24px);
+			padding: $bottom-sheet-grid-padding;
 
 			li {
 				margin: 0 0 $large-gutter 0;
@@ -131,24 +123,24 @@ $bottom-sheet-music-height: rem-calc(50px); // Default rem-calc(40px)
 				}
 
 				&.divider {
-					margin: 0 rem-calc(8px);
+					margin: $bottom-sheet-grid-divider-margin;
 				}
 
 				&.header {
 					color: $bottom-sheet-header-font-color;
-					height: rem-calc(56px);
+					height: $bottom-sheet-header-height;
 				}
 			}
 
-			.grid-item {
+			&-item {
 				padding: 0;
 				@include flex-grow(1);
 			}
 
-			.grid-icon {
+			&-icon {
 				text-align: center;
 				vertical-align: middle;
-				margin: 0 0 rem-calc(8px) 0;
+				margin: $bottom-sheet-grid-icon-margin;
 
 				.material-icons {
 					font-size: $bottom-sheet-grid-icon-size;
@@ -158,7 +150,7 @@ $bottom-sheet-music-height: rem-calc(50px); // Default rem-calc(40px)
 				}
 			}
 
-			.grid-content {
+			&-content {
 				text-align: center;
 				vertical-align: middle;
 				height: $bottom-sheet-grid-content-size;

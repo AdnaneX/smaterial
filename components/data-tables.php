@@ -18,7 +18,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		To get the specific styling use <code class="language-css">.checkbox-col</code> class.
 	</p>
 
-	<div class="col xs4 s12 m6">
+	<div class="col xs4 s12 m6 table-responsive">
 		<table class="table-hover">
 			<thead>
 			<tr>
@@ -61,97 +61,13 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		</table>
 	</div>
 
+    <p class="col xs4 s12 m6">
+        By wrapping a table in a <code class="language-css">.table-responsive</code> element the table will get a horizontal scroll bar.
+    </p>
+
 	<pre class="language-html col xs4 s12 m6 offset-m6">
 		<code>
 &lt;table class="table-hover">
-  &lt;thead>
-    &lt;tr>
-      &lt;th class="checkbox-col">&lt;input type="checkbox" class="checkbox" id="c1">&lt;/th>
-      &lt;th class="">Desert (100g serving)&lt;/th>
-      &lt;th class="numeric-col">Calories&lt;/th>
-      &lt;th class="numeric-col">Fat (g)&lt;/th>
-      &lt;th class="numeric-col">Carbs (g)&lt;/th>
-      &lt;th class="numeric-col">Protein (g)&lt;/th>
-      &lt;th class="numeric-col">Sodium (mg)&lt;/th>
-      &lt;th class="numeric-col">Calcium (%)&lt;/th>
-      &lt;th class="numeric-col">Iron (%)&lt;/th>
-    &lt;/tr>
-  &lt;/thead>
-
-  &lt;tbody>
-    &lt;tr>
-      &lt;td class="checkbox-col">&lt;input type="checkbox" class="checkbox" id="c2">&lt;/td>
-      &lt;td>Frozen yogurt&lt;/td>
-      &lt;td class="numeric-col">159&lt;/td>
-      &lt;td class="numeric-col">6.0&lt;/td>
-      &lt;td class="numeric-col">24&lt;/td>
-      &lt;td class="numeric-col">4.0&lt;/td>
-      &lt;td class="numeric-col">87&lt;/td>
-      &lt;td class="numeric-col">14%&lt;/td>
-      &lt;td class="numeric-col">1%&lt;/td>
-    &lt;/tr>
-    &lt;tr>
-      &lt;td class="checkbox-col">&lt;input type="checkbox" class="checkbox" id="c3">&lt;/td>
-      &lt;td>Ice cream sandwich&lt;/td>
-      &lt;td class="numeric-col">237&lt;/td>
-      &lt;td class="numeric-col">9.0&lt;/td>
-      &lt;td class="numeric-col">37&lt;/td>
-      &lt;td class="numeric-col">4.3&lt;/td>
-      &lt;td class="numeric-col">129&lt;/td>
-      &lt;td class="numeric-col">8%&lt;/td>
-      &lt;td class="numeric-col">1%&lt;/td>
-    &lt;/tr>
-  &lt;/tbody>
-&lt;/table>
-		</code>
-	</pre>
-
-	<div class="col xs4 s12 m6">
-		<table class="table-hover table-responsive">
-			<thead>
-			<tr>
-				<th class="checkbox-col"><input type="checkbox" class="checkbox" id="c1"></th>
-				<th class="">Desert (100g serving)</th>
-                <th class="numeric-col"><a href="#">Calories</a></th>
-                <th class="numeric-col"><a href="#">Fat (g)</a></th>
-				<th class="numeric-col">Carbs (g)</th>
-				<th class="numeric-col">Protein (g)</th>
-				<th class="numeric-col">Sodium (mg)</th>
-				<th class="numeric-col">Calcium (%)</th>
-				<th class="numeric-col">Iron (%)</th>
-			</tr>
-			</thead>
-
-			<tbody>
-			<tr>
-				<td class="checkbox-col"><input type="checkbox" class="checkbox" id="c2"></td>
-				<td>Frozen yogurt</td>
-				<td class="numeric-col">159</td>
-				<td class="numeric-col">6.0</td>
-				<td class="numeric-col">24</td>
-				<td class="numeric-col">4.0</td>
-				<td class="numeric-col">87</td>
-				<td class="numeric-col">14%</td>
-				<td class="numeric-col">1%</td>
-			</tr>
-			<tr>
-				<td class="checkbox-col"><input type="checkbox" class="checkbox" id="c3"></td>
-				<td>Ice cream sandwich</td>
-				<td class="numeric-col">237</td>
-				<td class="numeric-col">9.0</td>
-				<td class="numeric-col">37</td>
-				<td class="numeric-col">4.3</td>
-				<td class="numeric-col">129</td>
-				<td class="numeric-col">8%</td>
-				<td class="numeric-col">1%</td>
-			</tr>
-			</tbody>
-		</table>
-	</div>
-
-	<pre class="language-html col xs4 s12 m6 offset-m6">
-		<code>
-&lt;table class="table-hover table-responsive">
   &lt;thead>
     &lt;tr>
       &lt;th class="checkbox-col">&lt;input type="checkbox" class="checkbox" id="c1">&lt;/th>

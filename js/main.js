@@ -17,11 +17,17 @@ function empty( value ) {
 
 /* Appbar */
 let appbar = document.getElementsByClassName('appbar')[0];
-let appbarColor = getComputedStyle(appbar)['background-color'];
 let themeColor = document.querySelector('meta[name="theme-color"]');
 let msApp = document.querySelector('meta[name="msapplication-navbutton-color"]');
 let apple = document.querySelector('meta[name="apple-mobile-web-app-status-bar-style"]');
-let appbarTitle = appbar.querySelector('.appbar-title');
+
+if( appbar ) {
+	let appbarColor = getComputedStyle( appbar )['background-color'];
+	let appbarTitle = appbar.querySelector('.appbar-title');
+
+	// Add element behind title in appbar to place other elements at the end
+	appbarTitle.insertAdjacentHTML('afterend', '<div class="appbar-spacer"></div>');
+}
 
 // Set theme color automatically
 if( themeColor && themeColor === '' ) {
@@ -37,16 +43,15 @@ if( apple && apple === '' ) {
 }
 
 // Correct padding of main compared to appbar
-['resize', 'load'].forEach(function( e ) {
-	window.addEventListener(e, function() {
-		let appbarHeight = getComputedStyle(appbar)['height'];
-		let main = document.getElementsByTagName('body')[0].querySelector('main');
-		main.style.top = appbarHeight;
+if( appbar ) {
+	['resize', 'load'].forEach( function ( e ) {
+		window.addEventListener( e, function () {
+			let appbarHeight = getComputedStyle( appbar )['height'];
+			let main = document.getElementsByTagName( 'body' )[0].querySelector( 'main' );
+			main.style.top = appbarHeight;
+		});
 	});
-});
-
-// Add element behind title in appbar to place other elements at the end
-appbarTitle.insertAdjacentHTML('afterend', '<div class="appbar-spacer"></div>');
+}
 
 /* Bottom sheet */
 let bottomSheet = document.getElementsByClassName('bottom-sheet');

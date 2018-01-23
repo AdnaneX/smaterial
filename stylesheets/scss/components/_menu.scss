@@ -13,7 +13,7 @@
 	@include material-shadow(8);
 	@include flex-container(column, null);
 	@include border-radius(if( $var == true, var(--border-size, $border-size), $border-size));
-	padding: rem-calc(8px) 0;
+	padding: $menu-padding;
 	white-space: nowrap;
 	text-align: left;
 	max-height: 50vh;
@@ -33,10 +33,10 @@
 
 	a {
 		display: block;
-		height: rem-calc(48px);
+		height: $menu-item-height;
 		@include font($font-size-menu, 0, $font-weight-menu, $line-height-menu, $font-color-menu, $letter-spacing-menu);
-		color: if( $theme == light, initial, rgba($white, .7));
-		padding: (rem-calc(48px) - (rem-calc(20px) + rem-calc($font-size-menu + 0px))) $gutter rem-calc(20px) $gutter;
+		color: $menu-item-font-color;
+		padding: $menu-item-padding;
 		@include transition(background $transition-small-duration $standard-transition);
 
 		@if( $amp == false ) {
@@ -65,13 +65,13 @@
 	}
 
 	&-cascading {
-		padding: rem-calc(16px) 0;
+		padding: $menu-cascading-padding;
 
 		a {
 			@include font(15, 0, $font-weight-menu, $line-height-menu, $font-color-menu, $letter-spacing-menu);
-			height: rem-calc(32px);
-			line-height: rem-calc(32px);
-			padding: 0 $large-gutter rem-calc(20px) $large-gutter;
+			height: $menu-cascading-item-height;
+			line-height: $menu-cascading-item-height;
+			padding: $menu-cascading-item-padding;
 		}
 	}
 
@@ -85,11 +85,10 @@ select.select {
 }
 
 div.select {
-	height: rem-calc(72px);
-	padding: rem-calc(16px) 0 rem-calc(8px) 0;
+	padding: $menu-select-padding;
 	border-bottom: $textfield-border-size solid if($theme == light, rgba($black, .38), rgba($white, .5));
 	position: relative;
-	margin: 0 0 rem-calc(8px) 0;
+	margin: $menu-select-margin;
 
 	.menu {
 		top: 0;

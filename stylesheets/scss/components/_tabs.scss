@@ -3,11 +3,7 @@
  *
  * https://material.google.com/components/tabs.html
  **************************************/
-$tab-indicator-size: var(--border-size, $border-size);
-$tab-height: rem-calc(48px);
-$tab-icon-size: rem-calc(24px);
-$tab-icon-text-height: rem-calc(72px);
-$tab-padding: rem-calc(12px);
+
 $tabs: '';
 @if( in-array( 'tab', $tab ) ) {
 	$tabs: $tabs + '.tab';
@@ -63,10 +59,10 @@ $tabs: '';
 		border-bottom: $tab-indicator-size solid $tab-background;
 		color: $tab-font-color;
 		//display: inline-block;
-		font-size: rem-calc(14px);
+		font-size: $tab-font-size;
 		font-weight: 500;
-		max-width: rem-calc(264px);
-		min-width: rem-calc(72px);
+		max-width: $tab-max-width;
+		min-width: $tab-min-width;
 		text-align: center;
 		text-overflow: ellipsis;
 		text-transform: uppercase;
@@ -75,7 +71,7 @@ $tabs: '';
 
 		@if( $amp == false ) {
 			@media #{$small-up} {
-				min-width: rem-calc(160px);
+				min-width: $tab-min-width-large;
 			}
 
 			@media #{$medium-only} {
@@ -118,7 +114,7 @@ $tabs: '';
 		.tab {
 			height: $tab-height;
 			line-height: $tab-height;
-			padding: 0 $tab-padding rem-calc(20px) $tab-padding;
+			padding: $tab-padding;
 		}
 	}
 
@@ -126,14 +122,14 @@ $tabs: '';
 		.tab-icon {
 			height: $tab-height;
 			line-height: $tab-height;
-			padding: 0 $tab-indicator-size rem-calc(12px) $tab-indicator-size;
+			padding: $tab-icon-padding;
 		}
 	}
 
 	@if( in-array( 'tab-icon-text', $tab ) ) {
 		.tab-icon-text {
-			height: rem-calc(72px);
-			padding: rem-calc(10px) $tab-padding rem-calc(16px) $tab-padding;
+			height: $tab-icon-text-height;
+			padding: $tab-icon-text-padding;
 
 			span {
 				display: block;
