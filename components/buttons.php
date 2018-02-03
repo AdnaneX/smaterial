@@ -15,17 +15,13 @@ if( !$amp ) {
 ?>
 
 <section class="row">
-	<h2 class="col xs4 s12">Buttons usage</h2>
+	<h2 class="col xs4">Buttons usage</h2>
 
-	<p class="col xs4 s12">
-		There are a couple of different buttons with each a different purpose.
-	</p>
-
-	<p class="col xs4 s12">
-		The <em>raised button</em> is the most common button and is used for example in forms and with <code>&lt;button></code>.
-		The <em>flat button</em> is used in dialogs (modals) and toolbars.
-		The <em>floating button</em> are mostly used for actions.
-		If you would like to use the default browser button style you don't need to add a class.
+	<p class="col xs4 s6">
+		There are a couple of different buttons you can choose from.
+        The <em><a href="#raised-button">raised button</a></em>.
+        The <em><a href="#flat-button">flat button</a></em>.
+        The <em><a href="#floating-button">floating button</a></em>.
 	</p>
 </section>
 

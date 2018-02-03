@@ -1,7 +1,7 @@
 /**
  * Check if something is empty
  * @return boolean        True or false depending if empty or not
- * @param $value
+ * @param value
  */
 function empty( value ) {
 	if( typeof value === 'number' ) {
@@ -27,23 +27,21 @@ if( appbar ) {
 
 	// Add element behind title in appbar to place other elements at the end
 	appbarTitle.insertAdjacentHTML('afterend', '<div class="appbar-spacer"></div>');
-}
 
-// Set theme color automatically
-if( themeColor && themeColor === '' ) {
-	themeColor.setAttribute('content', appbarColor);
-}
+	// Set theme color automatically
+	if( themeColor && themeColor === '' ) {
+		themeColor.setAttribute('content', appbarColor);
+	}
 
-if( msApp && msApp === '' ) {
-	msApp.setAttribute('content', appbarColor);
-}
+	if( msApp && msApp === '' ) {
+		msApp.setAttribute('content', appbarColor);
+	}
 
-if( apple && apple === '' ) {
-	apple.setAttribute('content', appbarColor);
-}
+	if( apple && apple === '' ) {
+		apple.setAttribute('content', appbarColor);
+	}
 
-// Correct padding of main compared to appbar
-if( appbar ) {
+	// Correct padding of main compared to appbar
 	['resize', 'load'].forEach( function ( e ) {
 		window.addEventListener( e, function () {
 			let appbarHeight = getComputedStyle( appbar )['height'];
@@ -67,7 +65,6 @@ if( chipDelete.length > 0 ) {
 	for( let i = 0; i < chipDelete.length; i++ ) {
 		let chip = chipDelete[i];
 		let button = chip.querySelector('.chip-delete');
-		console.log(button);
 		button.addEventListener( 'click', function () {
 			chip.remove();
 		});
@@ -83,6 +80,12 @@ if( dialog.length > 0 ) {
 }
 
 /* Navigation Drawer */
+function toggleDropdownItems(items, toggle) {
+	for( let i = 0; i < items.length; i++ ) {
+		items[i].style.display = toggle;
+	}
+}
+
 let drawer = document.getElementById('drawer');
 if( drawer ) {
 	let dropdownButton = drawer.querySelectorAll('.drawer-dropdown'),
@@ -97,7 +100,10 @@ if( drawer ) {
 			let button = dropdownButton[i];
 			let icon = button.querySelector('.material-icons');
 			let dropdown = button.nextElementSibling;
+			let dropdownItems = dropdown.querySelectorAll('a');
 			let height = getComputedStyle(dropdown)['height'];
+
+			toggleDropdownItems(dropdownItems, 'none');
 
 			if( icon && icon.innerText === 'expand_more' ) {
 				icon.classList.add('arrow');
@@ -108,10 +114,14 @@ if( drawer ) {
 					button.classList.remove('expanded');
 					dropdown.classList.remove('expanded');
 					dropdown.style.height = '0px';
+
+					toggleDropdownItems(dropdownItems, 'none');
 				} else {
 					button.classList.add('expanded');
 					dropdown.classList.add('expanded');
 					dropdown.style.height = height;
+
+					toggleDropdownItems(dropdownItems, 'block');
 				}
 			});
 
@@ -137,7 +147,7 @@ if( expansionPanel.length > 0 ) {
 			let header = item.querySelector('.expansion-panel-header').innerHTML;
 
 			// Auto add icon
-			item.querySelector('.expansion-panel-header').innerHTML = header + '<span class="expand-icon"><i class="material-icons">expand_more</i></span>';
+			item.querySelector('.expansion-panel-header').innerHTML = `${header} <span class="expand-icon"><i class="material-icons">expand_more</i></span>`;
 
 			let expand = item.querySelector('.expand-icon');
 			expand.addEventListener('click', function() {
@@ -194,17 +204,18 @@ if( selects.length > 0 ) {
 
 		// Add options to menu
 		for( let j = 0; j < options.length; j++ ) {
-			html += '<a href="#">'+ options[i].text +'</a>';
+			html += `<a href="#">${options[i].text}</a>`;
 		}
 
 		select.insertAdjacentHTML('beforebegin',
-			'<div class="select">' +
-			'<span class="select-current trigger" data-trigger="select-'+selectId+'">' +
-			options[0].text +
-			'</span>' +
-			'<i class="material-icons trigger" data-trigger="select-'+selectId+'">arrow_drop_down</i>' +
-			'<nav class="menu" id="select-'+selectId+'">'+html+'</nav>' +
-			'</div>');
+			`<div class="select">
+				<span class="select-current trigger" data-trigger="select-'+selectId+'">
+					${options[0].text}
+				</span>
+				
+				<i class="material-icons trigger" data-trigger="select-'+selectId+'">arrow_drop_down</i>
+				<nav class="menu" id="select-'+selectId+'">${html}</nav>
+			</div>`);
 	}
 
 	let selectDivs = document.querySelectorAll('div.select');
@@ -300,7 +311,7 @@ if( indeterminate.length > 0 ) {
 				lever = selection.querySelector('.switch');
 
 			if( !lever ) {
-				selection.insertAdjacentHTML('afterend', '<label for="'+id+'"></label>');
+				selection.insertAdjacentHTML('afterend', `<label for="${id}"></label>`);
 			}
 		}
 	}
@@ -315,9 +326,22 @@ if( sliders.length > 0 ) {
 			html;
 
 		if( slider.classList.contains('slider-discrete') ) {
-			html = '<div class="range"><div class="slider-bubble"></div>' + slider.outerHTML + '<div class="range-track"><div class="range-track-before"></div><div class="range-track-after"></div></div></div>';
+			html = `<div class="range">
+						<div class="slider-bubble"></div>
+						${slider.outerHTML}
+						<div class="range-track">
+							<div class="range-track-before"></div>
+							<div class="range-track-after"></div>
+						</div>
+					</div>`;
 		} else {
-			html = '<div class="range">' + slider.outerHTML + '<div class="range-track"><div class="range-track-before"></div><div class="range-track-after"></div></div></div>';
+			html = `<div class="range">
+						${slider.outerHTML}
+						<div class="range-track">
+							<div class="range-track-before"></div>
+							<div class="range-track-after"></div>
+						</div>
+					</div>`;
 		}
 
 		slider.outerHTML = html;
@@ -336,8 +360,6 @@ if( ranges.length > 0 ) {
 				percentage = (slider.value / (maxVal - minVal)) * 100,
 				before = slider.closest('div').querySelector('.range-track-before'),
 				after = slider.closest('div').querySelector('.range-track-after');
-
-			console.log(slider.value);
 
 			before.style.width = percentage+'%';
 			after.style.width = (100 - percentage)+'%';
@@ -373,14 +395,13 @@ if( ranges.length > 0 ) {
 */
 ['resize', 'load'].forEach(function(e) {
 	window.addEventListener(e, function() {
-		let tabs = document.querySelectorAll('.tabs');
+		let tabs = document.querySelectorAll('body > .tabs');
 
 		if( tabs.length > 0 ) {
 			for( let i = 0; i < tabs.length; i++ ) {
 				let tab = tabs[i];
 				let appbarHeight = parseInt( getComputedStyle( document.querySelector( '.appbar' ) )['height'].replace( 'px', '' ) );
 				let tabHeight = parseInt( getComputedStyle( document.querySelector( '.tabs' ) )['height'].replace( 'px', '' ) );
-				console.log(appbarHeight, tabHeight);
 
 				document.getElementsByTagName('main')[0].style.top = (appbarHeight + tabHeight)+'px';
 			}
@@ -414,15 +435,6 @@ if( inputs.length > 0 ) {
 
 		// Add expander
 		input.insertAdjacentHTML('afterend', '<div class="expander"></div>');
-
-		// TODO Fix bug: text field not selected when label is clicked
-		label.addEventListener('click', function() {
-			if( input.getAttribute('input') === 'checkbox' || input.getAttribute('input') === 'radio' ) {
-				return;
-		}
-
-			input.focus();
-		});
 	}
 }
 
@@ -450,7 +462,6 @@ if( textareas.length > 0 ) {
 }
 
 let createErrors = function(form) {
-	console.log(form);
 
 	let messages = function() {
 		let invalidFields = form.querySelectorAll(':invalid');
@@ -462,7 +473,6 @@ let createErrors = function(form) {
 					parent = invalidField.parentElement,
 					helper = parent.querySelector('.helper-text'),
 					message = invalidField.validationMessage || 'Invalid value.';
-				console.log(helper);
 
 				parent.classList.add('invalid');
 
@@ -471,7 +481,7 @@ let createErrors = function(form) {
 					helper.innerHTML = '';
 					helper.innerHTML = '<i class="material-icons">error_outline</i> ' + message;
 				} else {
-					invalidField.insertAdjacentHTML('afterend', '<div class="helper-text"><i class="material-icons">error_outline</i>' + message + '</div>');
+					invalidField.insertAdjacentHTML('afterend', `<div class="helper-text"><i class="material-icons">error_outline</i>${message}</div>`);
 				}
 			}
 		}
@@ -486,7 +496,6 @@ let createErrors = function(form) {
 	});
 
 	['input[type="submit"]', 'button:not([type="button"])'].forEach(function(e) {
-		console.log(e);
 		let submit = form.querySelector(e);
 
 		if(submit) {

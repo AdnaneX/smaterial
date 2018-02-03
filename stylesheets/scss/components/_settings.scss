@@ -617,6 +617,12 @@ $textfield-on-color: if( $var == true, var(--main-color, $main-color), $main-col
 $textfield-disabled-color: $textfield-off-color !default;
 $textfield-required-color: $red !default;
 $textfield-error-color: $textfield-required-color !default;
+$textfield-border: ($border-size / 2) solid if($theme == light, rgba($black, .42), rgba($white, .7)) !default;
+$textfield-label-font-color: if($theme == light, rgba($black, .54), rgba($white, .7)) !default;
+$textfield-active-color: if($theme == light, color($main-color, 'a700'), color($main-color, 'a200')) !default;
+
+$textfield-disabled-font-color: if($theme == light, rgba($black, .42), rgba($white, .5)) !default;
+$textfield-disabled-label-font-color: if($theme == light, rgba($black, .42), rgba($white, .7)) !default;
 
 /**************************************
  * Tooltips
@@ -686,7 +692,7 @@ $textfield: null !default;
 	$slider: ('discrete') !default;
 	$stepper: ('horizontal', 'vertical') !default;
 	$tab: ('tab', 'tab-icon', 'tab-icon-text') !default;
-	$textfield: ('input', 'textarea', 'date-picker') !default;
+	$textfield: ('input', 'textarea') !default;
 
 } @else if $amp == true {
 	// Style
@@ -710,5 +716,5 @@ $textfield: null !default;
 	$slider: (/*'discrete'*/) !default;
 	$stepper: ('horizontal', 'vertical') !default;
 	$tab: ('tab', 'tab-icon', 'tab-icon-text') !default;
-	$textfield: ('input', 'textarea', /*'date-picker'*/) !default;
+	$textfield: ('input', 'textarea') !default;
 }

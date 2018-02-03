@@ -214,7 +214,7 @@ if( $_SERVER['PHP_SELF'] === '/components/tabs.php' ) {
         </header>-->
 
 
-        <header>
+        <header class="drawer-header">
             <<?php echo ($amp ? 'amp-img layout="responsive" height="120px" width="280px"' : 'img'); ?> src="/images/drawer-background.jpg" class="drawer-profile-background" alt="menu background">
             <div class="scrim"></div>
             <<?php echo ($amp ? 'amp-img layout="responsive" height="50px" width="50px"' : 'img'); ?> src="/images/profile-icon.jpg" class="drawer-profile-img" alt="profile image">

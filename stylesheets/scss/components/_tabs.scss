@@ -30,7 +30,7 @@ $tabs: '';
 	background: $tab-background;
 	overflow: auto;
 	overflow-y: hidden;
-	position: fixed;
+	position: relative;
 	top: $appbar-mobile-portrait-height;
 	width: 100%;
 	z-index: 2;

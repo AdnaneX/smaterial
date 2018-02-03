@@ -5,8 +5,6 @@
  * http://www.google.com/design/spec/components/buttons-floating-action-button.html
  **************************************/
 
-
-
 @if( in-array( 'raised', $button ) ) {
 	.raised-button {
 		@include button();

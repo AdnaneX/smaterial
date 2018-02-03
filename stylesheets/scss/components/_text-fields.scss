@@ -7,18 +7,18 @@
 @if( in-array('input', $textfield) ) {
 	.input {
 		position: relative;
-		height: (2 * rem-calc(12px) ) + $border-size + ( 3 * rem-calc(8px) ) + ( 2 * rem-calc(16px) );
+		height: (2 * rem-calc(12px) ) + $border-size + ( 3 * ( $gutter / 2 ) ) + ( 2 * $gutter );
 
 		input {
 			outline: none;
 			width: 100%;
 			border: none;
 			background: none;
-			border-bottom: ($border-size / 2) solid if($theme == light, rgba($black, .42), rgba($white, .7));
+			border-bottom: $textfield-border;
 			font-size: rem-calc(16px);
-			padding-bottom: rem-calc(8px);
+			padding-bottom: ( $gutter / 2 );
 			position: absolute;
-			bottom: rem-calc(8px) + rem-calc(12px);
+			bottom: ( $gutter / 2 ) + rem-calc(12px);
 			@include transition(all $transition-small-duration $standard-transition);
 
 			@if ($amp == false) {
@@ -32,11 +32,11 @@
 			}
 
 			&:disabled, &:disabled:hover {
-				border-bottom: ($border-size / 2) dotted;
-				color: if($theme == light, rgba($black, .42), rgba($white, .5));
+				border-bottom: ( $border-size / 2 ) dotted;
+				color: $textfield-disabled-font-color;
 
 				~ label {
-					color: if($theme == light, rgba($black, .42), rgba($white, .7));
+					color: $textfield-disabled-label-font-color;
 				}
 
 				~ .expander {
@@ -45,7 +45,7 @@
 			}
 
 			&:hover + label {
-				color: if($theme == light, rgba($black, .54), rgba($white, .7));
+				color: $textfield-label-font-color;
 			}
 
 			&:hover, &:active, &:focus, &:active:hover, &:focus:hover {
@@ -54,16 +54,16 @@
 			}
 
 			&:active, &:focus {
-				caret-color: if($theme == light, color($main-color, 'a700'), color($main-color, 'a200'));
+				caret-color: $textfield-active-color;
 
 				~ label {
-					color: if($theme == light, color($main-color, 'a700'), color($main-color, 'a200'));
+					color: $textfield-active-color;
 					font-size: rem-calc(12px);
 					bottom: ( 3 * rem-calc(8px) ) + rem-calc(12px) + $border-size + rem-calc(16px); // 3 * padding + helper font size + bottom border size + input font size
 				}
 
 				~ .material-icons {
-					color: if($theme == light, color($main-color, 'a700'), color($main-color, 'a200'));
+					color: $textfield-active-color;
 				}
 
 				&:required ~ label:after {
@@ -96,9 +96,10 @@
 		}
 
 		label {
-			color: if($theme == light, rgba($black, .54), rgba($white, .7));
+			color: $textfield-label-font-color;
 			font-size: rem-calc(16px);
 			position: absolute;
+			pointer-events: none;
 			left: 0;
 			bottom: ( 2 * rem-calc(8px) ) + rem-calc(12px) + ( $border-size / 2 ); // 2 * padding + helper font size + bottom border size
 			font-weight: 400;
@@ -122,7 +123,7 @@
 
 		.helper-text {
 			font-size: rem-calc(12px);
-			color: if($theme == light, rgba($black, .54), rgba($white, .7));
+			color: $textfield-label-font-color;
 			position: absolute;
 			bottom: 0;
 			line-height: normal;
@@ -135,7 +136,7 @@
 
 		.expander {
 			width: 0;
-			background: if($theme == light, color($main-color, 'a700'), color($main-color, 'a200'));
+			background: $textfield-active-color;
 			position: absolute;
 			height: ($border-size / 2);
 			left: 50%;
@@ -231,12 +232,12 @@
 			}
 
 			&:active, &:focus {
-				caret-color: if($theme == light, color($main-color, 'a700'), color($main-color, 'a200'));
+				caret-color: $textfield-active-color;
 
 				~ label {
 					top: rem-calc(8px);
 					font-size: rem-calc(12px);
-					color: if($theme == light, color($main-color, 'a700'), color($main-color, 'a200'));
+					color: $textfield-active-color;
 				}
 			}
 
@@ -249,6 +250,7 @@
 		}
 
 		label {
+			pointer-events: none;
 			position: absolute;
 			top: rem-calc(16px);
 			font-weight: 400;
@@ -290,7 +292,7 @@
 		}
 
 		&.active {
-			border: $border-size solid if($theme == light, color($main-color, 'a700'), color($main-color, 'a200'));
+			border: $border-size solid $textfield-active-color;
 		}
 
 		&.invalid {
@@ -317,82 +319,6 @@
 		&.disabled {
 			background: $grey-300;
 			border: ($border-size / 2) solid if($theme == light, rgba($black, .42), rgba($white, .7))
-		}
-	}
-}
-
-@if( in-array( 'date-picker', $textfield ) ) {
-	.ui-datepicker {
-		background: var(--background, $background);
-		@include material-shadow(16);
-		padding: rem-calc(16px);
-		margin-top: rem-calc(8px) + rem-calc(12px);
-
-		&-title {
-			width: 50%;
-			font-weight: 500;
-			margin: 0 25%;
-			font-size: rem-calc(14px);
-		}
-
-		&-title, &-prev, &-next {
-			text-align: center;
-			display: inline-block;
-		}
-
-		&-prev, &-next {
-			width: 25%;
-			cursor: pointer;
-			position: absolute;
-		}
-
-		&-prev {
-			left: rem-calc(16px);
-		}
-
-		&-next {
-			right: rem-calc(16px);
-		}
-
-		&-calendar {
-			td, th {
-				text-align: center;
-				padding: rem-calc(8px);
-			}
-
-			a {
-				@include border-radius(50%);
-				color: initial;
-				padding: rem-calc(8px);
-				@include square(rem-calc(32px));
-				line-height: normal;
-				display: inline-block;
-				background: transparent;
-				@include transition(background $standard-transition $transition-small-duration unquote(',') width $standard-transition $transition-small-duration);
-
-				@if ($amp == false) {
-					@media #{$medium-only} {
-						@include transition(background $standard-transition $transition-medium-duration unquote(',') width $standard-transition $transition-medium-duration);
-					}
-
-					@media #{$medium-up} {
-						@include transition(background $standard-transition $transition-large-duration unquote(',') width $standard-transition $transition-large-duration);
-					}
-				}
-
-				&:hover {
-					background: if($theme == light, color($main-color, 'a700'), color($main-color, 'a200'));
-					color: $white;
-				}
-			}
-		}
-	}
-
-	a.ui-state-highlight {
-		color: if($theme == light, color($main-color, 'a700'), color($main-color, 'a200'));
-
-		&:hover {
-			color: $white;
 		}
 	}
 }

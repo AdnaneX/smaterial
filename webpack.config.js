@@ -1,6 +1,5 @@
 const 	path = require('path'),
-		ExtractTextPlugin = require('extract-text-webpack-plugin'),
-		UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+		ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 module.exports = env => {
 	return {
@@ -31,7 +30,7 @@ module.exports = env => {
 							{
 								loader: 'css-loader',
 								options: {
-									minimize: {discardComments: {removeAll: !env.dev}}
+									minimize: !env.dev
 								}
 							},
 							'sass-loader'
@@ -41,12 +40,7 @@ module.exports = env => {
 			]
 		},
 		plugins: [
-			new ExtractTextPlugin( 'stylesheets/[name].css' ),
-			new UglifyJSPlugin({
-				uglifyOptions: {
-					compress: !env.dev
-				}
-			})
+			new ExtractTextPlugin( 'stylesheets/[name].css' )
 		]
 	}
 };

@@ -4,8 +4,6 @@
  *  https://material.google.com/patterns/notifications.html
  **************************************/
 
-
-
 .notification {
 	@include material-shadow(3);
 	@include border-radius($border-size );

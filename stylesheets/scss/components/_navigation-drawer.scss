@@ -110,7 +110,7 @@ $drawers: '';
 		}
 	}
 
-	header, .drawer-header {
+	.drawer-header {
 		position: relative;
 
 		&:hover {
@@ -205,7 +205,7 @@ $drawers: '';
 				top: $gutter;
 			}
 
-			header, .drawer-header {
+			.drawer-header {
 				height: $appbar-mobile-portrait-height;
 				line-height: $appbar-mobile-portrait-height;
 				margin: 0 0 $drawer-profile-bottom-padding 0;
@@ -231,7 +231,7 @@ $drawers: '';
 				}
 			}
 
-			img, .drawer-profile-img {
+			.drawer-profile-img {
 				@include square($drawer-icon-size);
 				margin: 0 (rem-calc(72px) - $drawer-icon-size - $drawer-padding) 0 $gutter;
 				@include border-radius(50%);
@@ -332,7 +332,7 @@ $drawers: '';
 				top: $drawer-profile-img + $drawer-padding + ($drawer-profile-content-height / 2);
 			}
 
-			header, .drawer-header {
+			.drawer-header {
 				padding: 0 0 $drawer-profile-bottom-padding 0;
 				margin: 0 0 $drawer-profile-bottom-padding 0;
 				height: $drawer-profile-height;

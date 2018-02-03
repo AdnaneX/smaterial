@@ -15,6 +15,18 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="row">
+    <h3 class="col xs4">January 24, 2018</h3>
+
+    <ul class="col xs4 s6">
+        <li>Replaced Gulp with Webpack</li>
+        <li>Fixed CSS for shadows</li>
+        <li>Changed jQuery to vanilla JS</li>
+        <li>Redo SCSS settings file</li>
+        <li>Fixed text field bug</li>
+    </ul>
+</section>
+
+<section class="row">
     <h3 class="col xs4">August 4, 2017</h3>
 
     <ul class="col xs4 s6">
@@ -22,6 +34,10 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
         The error messages are from the HTML5 form validation.</li>
         <li>Changed color of the main background</li>
     </ul>
+
+    <p class="col xs4 s6">
+        GitHub <a href="https://github.com/SuperDJ/smaterial/commit/e505a670405bc393a2116bc077a6852ba42e8268" target="_blank">e505a670405bc393a2116bc077a6852ba42e8268</a>
+    </p>
 </section>
 
 <section class="row">
