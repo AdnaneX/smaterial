@@ -164,6 +164,14 @@ $large-gutter: rem-calc(24px) !default;
 $icon-size: rem-calc(24px) !default;
 
 /**************************************
+ * Lists
+ **************************************/
+$list-item-height: rem-calc(48px) !default;
+$list-font-color: $font-color-headline !default;
+$list-font-size: rem-calc(14px) !default;
+$list-item-padding: 0 rem-calc(16px) !default;
+
+/**************************************
  * AppBar
  **************************************/
 $appbar-padding: ( $gutter / 2 ) !default;
@@ -216,25 +224,26 @@ $bottom-shifting-content-margin: rem-calc(6px) 0 0 0  !default;
 /**************************************
  * Bottom sheet
  **************************************/
-$bottom-sheet-font-weight: 400 !default;
-$bottom-sheet-font-size: rem-calc(16px) !default;
-$bottom-sheet-icons-size: rem-calc(24px) !default;
-$bottom-sheet-grid-icon-size: rem-calc(48px) !default;
-$bottom-sheet-grid-content-size: rem-calc(16px) !default;
-$bottom-sheet-music-image-size: rem-calc(52.5px) !default;
-$bottom-sheet-music-height: rem-calc(50px) !default;
-$bottom-sheet-padding: ( $gutter / 2 ) $gutter !default;
 $bottom-sheet-background: $background !default;
-$bottom-sheet-font-color: $font-color-headline !default;
-$bottom-sheet-header-font-color: $font-color-display-4 !default;
-$bottom-sheet-icons-color: $bottom-sheet-header-font-color !default;
-$bottom-sheet-divider-margin: (( $gutter / 2 ) - 1) ( $gutter * -1 ) ( $gutter / 2 ) ( $gutter * -1 ) !default;
-$bottom-sheet-icons-margin: 0 ( $gutter * 2 ) 0 0 !default;
-$bottom-sheet-header-padding: 0 $gutter ( $gutter / 2 ) $gutter !default;
-$bottom-sheet-header-height: rem-calc(56px) !default;
-$bottom-sheet-grid-padding: $gutter $large-gutter $large-gutter $large-gutter !default;
-$bottom-sheet-grid-divider-margin: 0 ( $gutter / 2 ) !default;
-$bottom-sheet-grid-icon-margin: 0 0 ( $gutter / 2 ) 0 !default;
+$bottom-sheet-padding-size: $gutter !default;
+$bottom-sheet-padding: ( $bottom-sheet-padding-size / 2 ) $bottom-sheet-padding-size !default;
+
+$bottom-sheet-icon-size: $icon-size !default;
+$bottom-sheet-icon-margin: 0 ( $gutter * 2 ) 0 0 !default;
+
+$bottom-sheet-item-height: $list-item-height !default;
+$bottom-sheet-title-height: rem-calc(56px);
+
+$bottom-sheet-color: $font-color-headline !default;
+$bottom-sheet-font-size: rem-calc(16px) !default;
+$bottom-sheet-font-weight: 400 !default;
+$bottom-sheet-title-color: $font-color-display-4 !default;
+$bottom-sheet-title-font-size: rem-calc(16px) !default;
+$bottom-sheet-title-font-weight: 400 !default;
+
+$bottom-sheet-grid-padding-size: $large-gutter !default;
+$bottom-sheet-grid-padding: $bottom-sheet-grid-padding-size !default;
+$bottom-sheet-grid-icon-size: rem-calc(48px) !default;
 
 /**************************************
  * Buttons
@@ -315,6 +324,12 @@ $dialog-actions-height: rem-calc(52px) !default;
 $dialog-actions-padding: rem-calc(8px) !default;
 
 /**************************************
+ * Dividers
+ **************************************/
+$divider-height: rem-calc(1px) !default;
+$divider-color: if($theme == light, rgba($black, .12), rgba($white, .12)) !default;
+
+/**************************************
  * Expansion panels
  **************************************/
 $expansion-header-height: rem-calc(48px) !default;
@@ -326,14 +341,6 @@ $expansion-label-font-color: $font-color-headline !default;
  **************************************/
 $grid-background: rgba($black, .3) !default;
 $grid-font-color: $white !default;
-
-/**************************************
- * Lists
- **************************************/
-$list-item-height: rem-calc(48px) !default;
-$list-font-color: $font-color-headline !default;
-$list-font-size: rem-calc(14px) !default;
-$list-item-padding: 0 rem-calc(16px) !default;
 
 /**************************************
  * Menu
@@ -682,7 +689,7 @@ $textfield: null !default;
 
 	// Components
 	$bottom-nav: ('bottom-nav', 'bottom-shifting') !default;
-	$bottom-sheet: ('header', 'grid', 'music') !default;
+	$bottom-sheet: ('bottom-sheet', 'grid') !default;
 	$button: ('raised', 'dense', 'flat', 'floating', 'mini', /*'toggle', 'ripple'*/) !default;
 	$chip: ('deletable', 'contact') !default;
 	$navigation-drawer: ('full-height', 'clipped', 'floating', 'persistent', 'temporary') !default;
@@ -706,7 +713,7 @@ $textfield: null !default;
 
 	// Components
 	$bottom-nav: ('bottom-nav', 'bottom-shifting') !default;
-	$bottom-sheet: ('header', 'grid'/*, 'music'*/) !default;
+	$bottom-sheet: ('bottom-sheet', 'grid') !default;
 	$button: ('raised', /*'dense',*/ 'flat', 'floating', /*'mini', 'toggle', 'ripple'*/) !default;
 	$chip: ('deletable', 'contact') !default;
 	$navigation-drawer: (/*'full-height', 'clipped', 'floating', 'persistent',*/ 'temporary') !default;

@@ -22,7 +22,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 <section class="row">
 	<div class="col xs4 s12 m6">
         <div class="col xs4 s12 center">
-            <i class="material-icons cyan-text 48">build</i>
+            <i class="material-icons cyan-text size-48">build</i>
         </div>
 
         <div class="col xs4 s12 center">
@@ -40,7 +40,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 
 	<div class="col xs4 s12 m6">
 		<div class="col xs4 s12 center">
-			<i class="material-icons cyan-text 48">accessibility</i>
+			<i class="material-icons cyan-text size-48">accessibility</i>
 		</div>
 
 		<div class="col xs4 s12 center">

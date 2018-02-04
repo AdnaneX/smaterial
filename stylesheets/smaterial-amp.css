@@ -36,6 +36,9 @@
  * Icons
  **************************************/
 /**************************************
+ * Lists
+ **************************************/
+/**************************************
  * AppBar
  **************************************/
 /**************************************
@@ -63,13 +66,13 @@
  * Dialogs
  **************************************/
 /**************************************
+ * Dividers
+ **************************************/
+/**************************************
  * Expansion panels
  **************************************/
 /**************************************
  * Grid lists
- **************************************/
-/**************************************
- * Lists
  **************************************/
 /**************************************
  * Menu
@@ -1767,7 +1770,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.71429rem;
   width: 1.71429rem;
   height: 1.71429rem;
-  color: rgba(0, 0, 0, 0.26);
+  color: rgba(0, 0, 0, 0.38);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1777,7 +1780,7 @@ h1, h2, h3, h4, h5, h6 {
   -moz-osx-font-smoothing: grayscale;
   font-feature-settings: 'liga'; }
   .material-icons:active, .material-icons.active {
-    color: rgba(0, 0, 0, 0.54); }
+    color: rgba(0, 0, 0, 0.87); }
 
 /**************************************
  * Shadow and tint
@@ -1947,7 +1950,7 @@ h1, h2, h3, h4, h5, h6 {
  *
  * http://www.google.com/design/spec/components/bottom-sheets.html
  **************************************/
-.bottom-sheet {
+.bottom-sheet, .bottom-sheet-grid {
   -webkit-transition: margin 300ms cubic-bezier(0.4, 0, 0.2, 1);
   -moz-transition: margin 300ms cubic-bezier(0.4, 0, 0.2, 1);
   -o-transition: margin 300ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1960,28 +1963,15 @@ h1, h2, h3, h4, h5, h6 {
   background: #FFFFFF;
   bottom: 0;
   display: block;
-  font-size: 1.14286rem;
-  font-weight: 400;
   margin: 0 auto -102% auto;
   height: auto;
   left: 0;
   overflow: inherit;
-  padding: 0.57143rem 1.14286rem;
   position: fixed;
   right: 0;
   width: 100%;
-  color: rgba(0, 0, 0, 0.87);
-  z-index: 5;
-  /*@media only screen and (max-width: 1280px) {
-		&:before {
-			position: absolute;
-			top: 0;
-			left: 0;
-			@include square(100%);
-			background: rgba($black, .2);
-		}
-	}*/ }
-  .bottom-sheet-background {
+  z-index: 5; }
+  .bottom-sheet .bottom-sheet-background, .bottom-sheet-grid .bottom-sheet-background {
     background: rgba(0, 0, 0, 0.2);
     width: 100%;
     height: 100%;
@@ -1994,75 +1984,85 @@ h1, h2, h3, h4, h5, h6 {
     -moz-transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
     -o-transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
     transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1); }
-  .bottom-sheet.expanded {
+  .bottom-sheet.expanded, .bottom-sheet-grid.expanded {
     margin: 0 auto; }
-    .bottom-sheet.expanded ~ .bottom-sheet-background {
+    .bottom-sheet.expanded ~ .bottom-sheet-background, .bottom-sheet-grid.expanded ~ .bottom-sheet-background {
       visibility: visible; }
-  .bottom-sheet ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0; }
-    .bottom-sheet ul li {
-      font-size: 1.14286rem;
-      font-weight: 400;
-      padding: 0; }
-      .bottom-sheet ul li.divider {
-        margin: -0.42857rem -1.14286rem 0.57143rem -1.14286rem; }
+
+.bottom-sheet {
+  padding: 0.57143rem 1.14286rem; }
+  .bottom-sheet a {
+    color: rgba(0, 0, 0, 0.87);
+    font-size: 1.14286rem;
+    font-weight: 400;
+    -webkit-transition: color 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    -moz-transition: color 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    -o-transition: color 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 300ms cubic-bezier(0.4, 0, 0.2, 1); }
+    .bottom-sheet a:hover, .bottom-sheet a:hover .material-icons {
+      color: inherit; }
   .bottom-sheet .material-icons {
-    color: rgba(0, 0, 0, 0.54);
     font-size: 1.71429rem;
     width: 1.71429rem;
     height: 1.71429rem;
     margin: 0 2.28571rem 0 0;
-    vertical-align: middle; }
-  .bottom-sheet-header {
-    padding: 0 1.14286rem 0.57143rem 1.14286rem; }
-    .bottom-sheet-header li.header {
-      color: rgba(0, 0, 0, 0.54);
-      height: 4rem; }
-  .bottom-sheet-grid {
-    padding: 1.14286rem 1.71429rem 1.71429rem 1.71429rem; }
-    .bottom-sheet-grid li {
-      margin: 0 0 1.71429rem 0;
-      display: -webkit-flex;
-      display: -moz-flex;
-      display: flex;
-      -webkit-flex-flow: row nowrap;
-      flex-flow: row nowrap;
-      -webkit-justify-content: space-between;
-      justify-content: space-between;
-      -webkit-align-items: stretch;
-      align-items: stretch;
-      -webkit-align-content: stretch;
-      align-content: stretch; }
-      .bottom-sheet-grid li:last-of-type {
-        margin: 0; }
-      .bottom-sheet-grid li.divider {
-        margin: 0 0.57143rem; }
-      .bottom-sheet-grid li.header {
-        color: rgba(0, 0, 0, 0.54);
-        height: 4rem; }
-    .bottom-sheet-grid-item {
-      padding: 0;
-      -webkit-flex-grow: 1;
-      flex-grow: 1; }
-    .bottom-sheet-grid-icon {
-      text-align: center;
-      vertical-align: middle;
-      margin: 0 0 0.57143rem 0; }
-      .bottom-sheet-grid-icon .material-icons {
-        font-size: 3.42857rem;
-        width: 3.42857rem;
-        height: 3.42857rem;
-        margin: 0;
-        vertical-align: middle; }
-    .bottom-sheet-grid-content {
-      text-align: center;
-      vertical-align: middle;
-      height: 1.14286rem;
-      line-height: 1.14286rem;
-      font-size: 0.85714rem;
+    -webkit-transition: color 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    -moz-transition: color 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    -o-transition: color 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 300ms cubic-bezier(0.4, 0, 0.2, 1); }
+  .bottom-sheet ul li {
+    padding: 0;
+    height: 3.42857rem; }
+    .bottom-sheet ul li.bottom-sheet-header {
+      height: 4rem;
+      line-height: 4rem;
+      margin-top: -1.14286rem;
+      font-size: 1.14286rem;
+      font-weight: 400;
       color: rgba(0, 0, 0, 0.54); }
+    .bottom-sheet ul li.divider {
+      height: 0.07143rem;
+      background: rgba(0, 0, 0, 0.12);
+      margin: 1.67857rem -1.14286rem 1.67857rem -1.14286rem; }
+
+.bottom-sheet-grid {
+  padding: 1.71429rem; }
+  .bottom-sheet-grid .row {
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    margin: 0 0 1.71429rem 0; }
+    .bottom-sheet-grid .row:last-of-type {
+      margin: 0; }
+  .bottom-sheet-grid .grid-item {
+    text-align: center;
+    color: rgba(0, 0, 0, 0.87);
+    font-size: 1.14286rem;
+    font-weight: 400;
+    display: block; }
+  .bottom-sheet-grid .material-icons {
+    font-size: 3.42857rem;
+    height: 3.42857rem;
+    width: 100%;
+    margin: 0 0 0.57143rem 0; }
+  .bottom-sheet-grid a {
+    color: rgba(0, 0, 0, 0.87);
+    -webkit-transition: color 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    -moz-transition: color 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    -o-transition: color 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 300ms cubic-bezier(0.4, 0, 0.2, 1); }
+  .bottom-sheet-grid a:hover .material-icons {
+    color: inherit; }
+  .bottom-sheet-grid-header {
+    height: 4rem;
+    line-height: 4rem;
+    margin-top: -1.71429rem;
+    font-size: 1.14286rem;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.54); }
+  .bottom-sheet-grid .divider {
+    height: 0.07143rem;
+    background: rgba(0, 0, 0, 0.12);
+    margin: 1.67857rem -1.71429rem 1.67857rem -1.71429rem; }
 
 /**************************************
  * Buttons

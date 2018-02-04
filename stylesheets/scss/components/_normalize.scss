@@ -133,8 +133,8 @@ main, .main-content {
 	}
 
 	hr {
-		background: if($theme == light, rgba($black, .12), rgba($white, .12));
-		border: rem-calc(1px) solid if($theme == light, rgba($black, .12), rgba($white, .12));
-		height: $border-size / 2;
+		background: $divider-color;
+		border: ($divider-height / 2) solid $divider-color;
+		height: $divider-height;
 	}
 }

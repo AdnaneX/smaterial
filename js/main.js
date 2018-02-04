@@ -16,10 +16,10 @@ function empty( value ) {
 }
 
 /* Appbar */
-let appbar = document.getElementsByClassName('appbar')[0];
-let themeColor = document.querySelector('meta[name="theme-color"]');
-let msApp = document.querySelector('meta[name="msapplication-navbutton-color"]');
-let apple = document.querySelector('meta[name="apple-mobile-web-app-status-bar-style"]');
+const appbar = document.getElementsByClassName('appbar')[0];
+const themeColor = document.querySelector('meta[name="theme-color"]');
+const msApp = document.querySelector('meta[name="msapplication-navbutton-color"]');
+const apple = document.querySelector('meta[name="apple-mobile-web-app-status-bar-style"]');
 
 if( appbar ) {
 	let appbarColor = getComputedStyle( appbar )['background-color'];
@@ -52,7 +52,7 @@ if( appbar ) {
 }
 
 /* Bottom sheet */
-let bottomSheet = document.getElementsByClassName('bottom-sheet');
+const bottomSheet = document.querySelectorAll('.bottom-sheet, .bottom-sheet-grid');
 if( bottomSheet.length > 0 ) {
 	for( let i = 0; i < bottomSheet.length; i++ ) {
 		bottomSheet[i].insertAdjacentHTML( 'afterend', '<div class="bottom-sheet-background"></div>' );
@@ -60,7 +60,7 @@ if( bottomSheet.length > 0 ) {
 }
 
 /* Chips */
-let chipDelete = document.getElementsByClassName('chip-deletable');
+const chipDelete = document.getElementsByClassName('chip-deletable');
 if( chipDelete.length > 0 ) {
 	for( let i = 0; i < chipDelete.length; i++ ) {
 		let chip = chipDelete[i];
@@ -72,7 +72,7 @@ if( chipDelete.length > 0 ) {
 }
 
 /* Dialog */
-let dialog = document.getElementsByClassName('dialog');
+const dialog = document.getElementsByClassName('dialog');
 if( dialog.length > 0 ) {
 	for( let i = 0; i < dialog.length; i++) {
 		dialog[i].insertAdjacentHTML( 'afterend', '<div class="dialog-background"></div>' );
@@ -86,7 +86,7 @@ function toggleDropdownItems(items, toggle) {
 	}
 }
 
-let drawer = document.getElementById('drawer');
+const drawer = document.getElementById('drawer');
 if( drawer ) {
 	let dropdownButton = drawer.querySelectorAll('.drawer-dropdown'),
 		dropdown = drawer.querySelectorAll('.dropdown');
@@ -136,7 +136,7 @@ if( drawer ) {
 }
 
 /* Expansion panels */
-let expansionPanel = document.getElementsByClassName('expansion-panel');
+const expansionPanel = document.getElementsByClassName('expansion-panel');
 if( expansionPanel.length > 0 ) {
 	for( let i = 0; i < expansionPanel.length; i ++ ) {
 		let panel = expansionPanel[i];
@@ -158,7 +158,7 @@ if( expansionPanel.length > 0 ) {
 }
 
 /* Menu */
-let menus = document.getElementsByClassName('menu');
+const menus = document.getElementsByClassName('menu');
 if( menus.length > 0 ) {
 	for( let i = 0; i < menus.length; i++ ) {
 		let menu = menus[i];
@@ -192,7 +192,7 @@ if( menus.length > 0 ) {
 	}
 }
 
-let selects = document.querySelectorAll('select.select');
+const selects = document.querySelectorAll('select.select');
 if( selects.length > 0 ) {
 	let selectId = 0;
 
@@ -272,7 +272,7 @@ function notification( $title, $options, $click ) {
 	}
 }
 
-let notifications = document.getElementsByClassName('notification');
+const notifications = document.getElementsByClassName('notification');
 if( notifications.length > 0 ) {
 	for( let i = 0; i < notifications.length; i++ ) {
 		let notification = notifications[i];
@@ -285,7 +285,7 @@ if( notifications.length > 0 ) {
 }
 
 /* Progress */
-let circular = document.getElementsByClassName('circular'),
+const circular = document.getElementsByClassName('circular'),
 	indeterminate = document.getElementsByClassName('indeterminate');
 
 if( circular.length > 0 ) {
@@ -302,7 +302,7 @@ if( indeterminate.length > 0 ) {
 
 /* Selection */
 ['checkbox', 'radio'].forEach(function(e) {
-	let selections = document.getElementsByClassName(e);
+	const selections = document.getElementsByClassName(e);
 
 	if( selections.length > 0 ) {
 		for( let i = 0; i < selections.length; i++ ) {
@@ -318,8 +318,7 @@ if( indeterminate.length > 0 ) {
 });
 
 /* Slider */
-let sliders = document.querySelectorAll('input[type="range"].slider');
-
+const sliders = document.querySelectorAll('input[type="range"].slider');
 if( sliders.length > 0 ) {
 	for( let i = 0; i < sliders.length; i++ ) {
 		let slider = sliders[i],
@@ -348,8 +347,7 @@ if( sliders.length > 0 ) {
 	}
 }
 
-let ranges = document.querySelectorAll('.range .slider');
-
+const ranges = document.querySelectorAll('.range .slider');
 if( ranges.length > 0 ) {
 	for( let i = 0; i < ranges.length; i++ ) {
 		let slider = ranges[i];
@@ -390,16 +388,15 @@ if( ranges.length > 0 ) {
 	}
 }
 
-/* Tabs
-* TODO only change the top of the main element when the tabs are used outside the main.
-*/
+/*
+ *Tabs
+ */
 ['resize', 'load'].forEach(function(e) {
 	window.addEventListener(e, function() {
-		let tabs = document.querySelectorAll('body > .tabs');
+		const tabs = document.querySelectorAll('body > .tabs');
 
 		if( tabs.length > 0 ) {
 			for( let i = 0; i < tabs.length; i++ ) {
-				let tab = tabs[i];
 				let appbarHeight = parseInt( getComputedStyle( document.querySelector( '.appbar' ) )['height'].replace( 'px', '' ) );
 				let tabHeight = parseInt( getComputedStyle( document.querySelector( '.tabs' ) )['height'].replace( 'px', '' ) );
 
@@ -410,7 +407,7 @@ if( ranges.length > 0 ) {
 });
 
 /* Text fields */
-let inputs = document.querySelectorAll('.input input'),
+const inputs = document.querySelectorAll('.input input'),
 	textareas = document.querySelectorAll('.textarea textarea');
 
 if( inputs.length > 0 ) {
@@ -519,7 +516,7 @@ let createErrors = function(form) {
 	});
 };
 
-let forms = document.getElementsByTagName('form');
+const forms = document.getElementsByTagName('form');
 
 if( forms.length > 0 ) {
 	for( let i = 0; i < forms.length; i++ ) {
@@ -528,7 +525,7 @@ if( forms.length > 0 ) {
 }
 
 /* Trigger */
-let triggers = document.getElementsByClassName('trigger'),
+const triggers = document.getElementsByClassName('trigger'),
 	triggered = [];
 
 if( triggers.length > 0 ) {
