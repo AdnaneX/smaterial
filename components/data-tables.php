@@ -6,9 +6,9 @@ $keywords = 'tables, data tables';
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>
 <section class="row">
-	<h2 class="col xs4 s12">Tables</h2>
+	<h2 class="col xs4">Tables</h2>
 
-	<p class="col xs4 s12 m6">
+	<p class="col xs4 m6">
    		The data tables can be used like any table.
 		If you like to use the row highlighting use <code class="language-css">.table-hover</code> class in the <code class="language-html">table</code> tag.
 		To make the table responsive use <code class="language-css">.table-responsive</code> class in the <code class="language-html">table</code> tag.
@@ -18,7 +18,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		To get the specific styling use <code class="language-css">.checkbox-col</code> class.
 	</p>
 
-	<div class="col xs4 s12 m6 table-responsive">
+	<div class="col xs4 m6 table-responsive">
 		<table class="table-hover">
 			<thead>
 			<tr>
@@ -61,7 +61,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		</table>
 	</div>
 
-    <p class="col xs4 s12 m6">
+    <p class="col xs4 m6">
         By wrapping a table in a <code class="language-css">.table-responsive</code> element the table will get a horizontal scroll bar.
     </p>
 

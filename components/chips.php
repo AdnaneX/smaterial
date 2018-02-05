@@ -7,22 +7,22 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>
 
 <section class="row">
-    <h2 class="col xs4 s12">Chips usage</h2>
+    <h2 class="col xs4">Chips usage</h2>
 
-    <p class="col xs4 s12 m6">
+    <p class="col xs4 m6">
         You could use chips for something like tags or contacts.
     </p>
 </section>
 
 <section class="row">
-    <h3 class="col xs4 s12">Chip examples</h3>
+    <h3 class="col xs4">Chip examples</h3>
 
-    <p class="col xs4 s12 m6">
+    <p class="col xs4 m6">
     There are a couple of chips. The normal (<code>.chip</code>), the deletable (<code>.chip .chip-deletable</code>),
     the contact (<code>.chip .chip-contact</code>) and the deletable contact (<code>.chip .chip-deletable .chip-contact</code>).
     </p>
 
-    <div class="col xs4 s12 m6">
+    <div class="col xs4 m6">
         <div class="chip chip-deletable">
             <span>John Doe</span>
             <i class="material-icons chip-delete">clear</i>
@@ -70,9 +70,9 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="row">
-    <h3 class="col xs4 s12">Settings</h3>
+    <h3 class="col xs4">Settings</h3>
 
-    <table class="col xs4 s12">
+    <table class="col xs4">
         <thead>
         <tr>
             <th>Variable</th>

@@ -6,18 +6,18 @@ $keywords = 'bottom modal, bottom sheet, modal';
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>
 <section class="row">
-	<h2 class="col xs4 s12">Bottom sheet / modal usage</h2>
+	<h2 class="col xs4">Bottom sheet / modal usage</h2>
 
-	<p class="col xs4 s12 m6">
+	<p class="col xs4 m6">
 		You can use the bottom sheet or bottom modal in a couple varieties.
 		You can use the default, grid icons and header.
 	</p>
 </section>
 
 <section class="row">
-	<h3 class="col xs4 s12">Default</h3>
+	<h3 class="col xs4">Default</h3>
 
-	<p class="col xs4 s12 m6">
+	<p class="col xs4 m6">
 		If you click on the button you can see the default bottom sheet / modal in action.
 
 		<button type="button" class="raised-button trigger" data-trigger="default">Default</button>
@@ -45,9 +45,9 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="row">
-	<h3 class="col xs4 s12">Header</h3>
+	<h3 class="col xs4">Header</h3>
 
-	<p class="col xs4 s12 m6">
+	<p class="col xs4 m6">
 		If you click on the button you can see the header bottom sheet / modal in action.
 
 		<button type="button" class="raised-button trigger" data-trigger="header">Header</button>
@@ -79,9 +79,9 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="row">
-	<h3 class="col xs4 s12">Grid</h3>
+	<h3 class="col xs4">Grid</h3>
 
-	<p class="col xs4 s12 m6">
+	<p class="col xs4 m6">
 		If you click on the button you can see the grid bottom sheet / modal in action.
 
 	    <button type="button" class="raised-button trigger" data-trigger="grid-icons">Grid </button>
@@ -192,7 +192,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
     <!--
 <section class="row">
-	<h3 class="col xs4 s12">Music</h3>
+	<h3 class="col xs4">Music</h3>
 
 	<p class="col sx4 s12 m6">
 		You can also use a specific bottom sheet styled for music.
@@ -243,7 +243,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>-->
 
 <section class="row">
-	<h3 class="col xs4 s12">Settings</h3>
+	<h3 class="col xs4">Settings</h3>
 
 	<table>
 		<thead>

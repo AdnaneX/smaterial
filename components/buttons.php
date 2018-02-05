@@ -26,14 +26,14 @@ if( !$amp ) {
 </section>
 
 <section class="row" id="raised-button">
-	<h3 class="col xs4 s12">Raised button</h3>
+	<h3 class="col xs4">Raised button</h3>
 
-	<p class="col xs4 s12 m6">
+	<p class="col xs4 m6">
 		The raised button can be used on it's own but also with an icon.
 		See the examples below:
 	</p>
 
-	<p class="col xs4 s12 m6">
+	<p class="col xs4 m6">
 		<button class="raised-button"><i class="material-icons left">cloud</i> Button example with icon left</button>
 		<button class="raised-button"><i class="material-icons right">cloud</i> Button example with icon right</button>
 		<button class="raised-button">Button example without icon</button>
@@ -85,13 +85,13 @@ if( !$amp ) {
 </section>
 
 <section class="row" id="flat-button">
-	<h3 class="col xs4 s12">Flat button</h3>
+	<h3 class="col xs4">Flat button</h3>
 
-	<p class="col xs4 s12 m6">
+	<p class="col xs4 m6">
 		The flat buttons can also be used with an icon.
 	</p>
 
-	<p class="col xs4 s12 m6">
+	<p class="col xs4 m6">
 		<button class="flat-button"><i class="material-icons left">cloud</i> Button example with icon left</button>
 		<button class="flat-button"><i class="material-icons right">cloud</i> Button example with icon right</button>
 		<button class="flat-button">Button example without icon</button>
@@ -132,13 +132,13 @@ if( !$amp ) {
 </section>
 
 <section class="row" id="floating-button">
-	<h3 class="col xs4 s12">Floating button</h3>
+	<h3 class="col xs4">Floating button</h3>
 
-	<p class="col xs4 s12 m6">
+	<p class="col xs4 m6">
 		The floating button only exists out of an icon.
 	</p>
 
-	<p class="col xs4 s12 m6">
+	<p class="col xs4 m6">
 		<div class="floating-button"><i class="material-icons">cloud</i></div>
 		<div class="floating-button floating-button-mini"><i class="material-icons">cloud</i></div>
 
@@ -169,22 +169,22 @@ if( !$amp ) {
 </section>
 
 <section class="row">
-	<h3 class="col xs4 s12">Icon toggles</h3>
+	<h3 class="col xs4">Icon toggles</h3>
 
-	<p class="col xs4 s12 m6">
+	<p class="col xs4 m6">
 		The icon toggles could be used for favoring an item or give a star rating
 	</p>
 
-	<p class="col xs4 s12 m6">
+	<p class="col xs4 m6">
 		<input type="checkbox" class="toggle-button white-toggle-button" data-toggle-icon="star_rate" data-color="yellow-text">
 		<input type="checkbox" class="toggle-button color-toggle-button" data-toggle-icon="favorite" data-color="red-text">
 	</p>
 </section>
 
 <section class="row">
-	<h3 class="col xs4 s12">Settings</h3>
+	<h3 class="col xs4">Settings</h3>
 
-	<table class="col xs4 s12">
+	<table class="col xs4">
 		<thead>
 		<tr>
 			<th>Variable</th>

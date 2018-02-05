@@ -6,17 +6,17 @@ $keywords = 'date picker, time picker';
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>
 <section class="row">
-	<h2 class="col xs4 s12">Pickers usage</h2>
+	<h2 class="col xs4">Pickers usage</h2>
 
-	<p class="col xs4 s12 m6">
+	<p class="col xs4 m6">
 		Pickers are still in development.
 	</p>
 </section>
 
 <section class="row">
-	<h3 class="col xs4 s12">Date picker</h3>
+	<h3 class="col xs4">Date picker</h3>
 
-	<div class="col xs4 s12 m3">
+	<div class="col xs4 m3">
 		<div class="picker date-picker">
 			<div class="picker-titlebar">
 				<div class="picker-titlebar-year"><?php echo date('Y'); ?></div>

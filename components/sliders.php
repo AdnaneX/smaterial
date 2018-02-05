@@ -6,7 +6,7 @@ $keywords = 'slider, discrete slider';
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>
 <section class="row">
-	<h2 class="col xs4 s12">Slider usage</h2>
+	<h2 class="col xs4">Slider usage</h2>
 
 	<p class="col xs4 m6">
 		There are a couple of different sliders you can use with different styling.
@@ -19,11 +19,11 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		For IE/ Edge the <code class="language-css">slider-discrete</code> will work the best.
 	</p>
 
-	<p class="col xs4 s12 m6">
+	<p class="col xs4 m6">
 		The disabled styling is also supported.
 	</p>
 
-	<p class="col xs4 s12 m6">
+	<p class="col xs4 m6">
 		<input type="range">
 		<input type="range" class="slider">
 		<input type="range" disabled value="0" class="slider">
@@ -44,7 +44,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="row">
-	<h3 class="col xs4 s12">Default slider</h3>
+	<h3 class="col xs4">Default slider</h3>
 
 	<p class="col xs4 m6">
 		The default slider can be made in 2 ways. Using default range input or by adding a class <code class="language-css">.slider</code>.
@@ -62,7 +62,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="row">
-	<h3 class="col xs4 s12">Discrete slider</h3>
+	<h3 class="col xs4">Discrete slider</h3>
 
 	<p class="col xs4 m6">
 		Using the discrete slider will add a "bubble" showing the value. The discrete slider also supports disabled styling.

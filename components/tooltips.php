@@ -6,16 +6,16 @@ $keywords = 'tooltips';
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>
 <section class="row">
-	<h2 class="col xs4 s12">Tooltips usage</h2>
+	<h2 class="col xs4">Tooltips usage</h2>
 
-	<p class="col xs4 s12 m6">
+	<p class="col xs4 m6">
 		You can use tooltips to give the user some extra info about a certain
 		<a href="#"><span class="tooltip" title="delete, edit">action</span></a> or
 		<a href="#"><span class="tooltip" title="url: google.com">link</span></a>.
 		<a href="#" class="raised-button tooltip" title="button example">Button</a>
 	</p>
 
-	<p class="col xs4 s12 m6">
+	<p class="col xs4 m6">
 		Tooltips only need the class <code class="language-css">.tooltip</code> and the attribute <code class="language-css">title</code> in order to work. Because of this it's easy
 		to add to a link or span.
 	</p>
@@ -34,9 +34,9 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="row">
-	<h3 class="col xs4 s12">Tooltip settings</h3>
+	<h3 class="col xs4">Tooltip settings</h3>
 
-	<table class="col xs4 s12 m6">
+	<table class="col xs4 m6">
 		<thead>
 		<tr>
 			<th>Variable</th>

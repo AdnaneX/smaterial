@@ -6,13 +6,13 @@ $keywords = 'expansion panels';
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>
 <section class="row">
-	<h2 class="col xs4 s12">Expansion panels usage</h2>
+	<h2 class="col xs4">Expansion panels usage</h2>
 
-	<p class="col xs4 s12 m6">
+	<p class="col xs4 m6">
 
 	</p>
 
-	<div class="col xs4 s12 m6">
+	<div class="col xs4 m6">
 		<ul class="expansion-panel">
 			<li>
 				<div class="expansion-panel-header">

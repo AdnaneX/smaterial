@@ -6,17 +6,17 @@ $keywords = 'tabs';
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>
 <section class="row">
-	<h2 class="col xs4 s12">Tabs usage</h2>
+	<h2 class="col xs4">Tabs usage</h2>
 
-	<p class="col xs4 s12 m6">
+	<p class="col xs4 m6">
 		You can use a couple of different tabs. You can use tabs with text only, text with icons and icons only.
 	</p>
 </section>
 
 <section class="row">
-	<h3 class="col xs4 s12">Text only</h3>
+	<h3 class="col xs4">Text only</h3>
 
-	<p class="col xs4 s12 m6">
+	<p class="col xs4 m6">
         These are tabs that only contain text.
     </p>
 
@@ -33,9 +33,9 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="row">
-	<h3 class="col xs4 s12">Icons only</h3>
+	<h3 class="col xs4">Icons only</h3>
 
-	<p class="col xs4 s12 m6">
+	<p class="col xs4 m6">
         These are tabs that only contain icons.
 	</p>
 
@@ -52,9 +52,9 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="row">
-	<h3 class="col xs4 s12">Icons with text</h3>
+	<h3 class="col xs4">Icons with text</h3>
 
-	<p class="col xs4 s12 m6">
+	<p class="col xs4 m6">
         These are tabs that contain both icons and text.
     </p>
 
@@ -71,9 +71,9 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="row">
-	<h3 class="col xs4 s12">Settings</h3>
+	<h3 class="col xs4">Settings</h3>
 
-	<table class="col xs4 s12">
+	<table class="col xs4">
 		<thead>
 		<tr>
 			<th>Variable</th>

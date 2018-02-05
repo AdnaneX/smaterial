@@ -6,14 +6,14 @@ $keywords = 'Menu';
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>
 <section class="row">
-	<h2 class="col xs4 s12">Menu usage</h2>
+	<h2 class="col xs4">Menu usage</h2>
 
-	<p class="col xs4 s12 m6">
+	<p class="col xs4 m6">
 		The menus are in 2 varieties available. You can choose the default menu and the cascading menu.
 		The menu styling is also applied to the <code class="language-html">&lt;select></code> element.
 	</p>
 
-    <p class="col xs4 s12 m6">
+    <p class="col xs4 m6">
         If you were looking for the side menu please take a look at the <a href="/patterns/navigation-drawer.php">navigation drawer</a>.
     </p>
 </section>
@@ -21,7 +21,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 <section class="row">
 	<h3 class="col xs4">Default menu</h3>
 
-	<div class="col xs4 s12 m6">
+	<div class="col xs4 m6">
 		The default menu is very basic and easy the setup.
 
 		<button class="raised-button trigger" data-trigger="default-menu">Example</button>
@@ -46,7 +46,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 <section class="row">
 	<h3 class="col xs4 12">Cascading menu</h3>
 
-	<div class="col xs4 s12 m6">
+	<div class="col xs4 m6">
 		The cascading menu is more suitable for a menu on larger screens.
 		This is because a cascading menu would allow sub menus.
 
@@ -72,7 +72,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 <section class="row">
 	<h3 class="col xs4">Select</h3>
 
-	<p class="col xs4 s12">
+	<p class="col xs4">
 		The select almost looks the same as the menu.
 
         <div class="col xs2 m2 offset-m10">

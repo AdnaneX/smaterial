@@ -14,17 +14,17 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </style>
 
 <section class="row">
-	<h2 class="col xs4 s12">Elevation and shadows usage</h2>
+	<h2 class="col xs4">Elevation and shadows usage</h2>
 
-	<p class="col xs4 s12 m6">
+	<p class="col xs4 m6">
 		Each element has it's own elevation and shadow. The elevation and shadows are described here.
 	</p>
 </section>
 
 <section class="row">
-	<h3 class="col xs4 s12">Shadow / elevation</h3>
+	<h3 class="col xs4">Shadow / elevation</h3>
 
-	<table class="col xs4 s12 m7">
+	<table class="col xs4 m7">
 		<thead>
 		<tr>
 			<th>Elevation (px)</th>

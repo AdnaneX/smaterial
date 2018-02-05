@@ -24,9 +24,9 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	</style>
 
 	<section class="row">
-		<h2 class="col xs4 s12">Icon usage</h2>
+		<h2 class="col xs4">Icon usage</h2>
 
-		<p class="col xs4 s12 m6">
+		<p class="col xs4 m6">
 			In order to use the icons add the following line: <code class="language-html">&lt;link rel="stylesheet"
 																						  href="https://fonts.googleapis.com/icon?family=Material+Icons"></code>
 			in your <code class="language-html">&lt;head></code> tag. To use an icon use the following code: <code
@@ -36,7 +36,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 			can see this and the icons in the examples below.
 		</p>
 
-		<p class="col xs4 s12 m6">
+		<p class="col xs4 m6">
 			All icons are listed below in alphabetical order but you can also take a look <a
 				href="https://design.google.com/icons/" target="_blank">here</a>.
 			For a quick search press <code>CTRL</code> and <code>F</code> on your keyboard (pc only) to start searching.
@@ -44,7 +44,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	</section>
 
 	<section class="row">
-		<h3 class="col xs4 s12">A</h3>
+		<h3 class="col xs4">A</h3>
 
 		<div class="col xs2 s4 m2 icon-box">
 			<i class="material-icons">3d_rotation</i>
@@ -333,7 +333,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	</section>
 
 	<section class="row">
-		<h3 class="col xs4 s12">B</h3>
+		<h3 class="col xs4">B</h3>
 
 		<div class="col xs2 s4 m2 icon-box">
 			<i class="material-icons">backspace</i>
@@ -554,7 +554,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	</section>
 
 	<section class="row">
-		<h3 class="col xs4 s12">C</h3>
+		<h3 class="col xs4">C</h3>
 
 		<div class="col xs2 s4 m2 icon-box">
 			<i class="material-icons">cached</i>
@@ -899,7 +899,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	</section>
 
 	<section class="row">
-		<h3 class="col xs4 s12">D</h3>
+		<h3 class="col xs4">D</h3>
 
 		<div class="col xs2 s4 m2 icon-box">
 			<i class="material-icons">dashboard</i>
@@ -1080,7 +1080,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	</section>
 
 	<section class="row">
-		<h3 class="col xs4 s12">E</h3>
+		<h3 class="col xs4">E</h3>
 
 		<div class="col xs2 s4 m2 icon-box">
 			<i class="material-icons">edit</i>
@@ -1193,7 +1193,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	</section>
 
 	<section class="row">
-		<h3 class="col xs4 s12">F</h3>
+		<h3 class="col xs4">F</h3>
 
 		<div class="col xs2 s4 m2 icon-box">
 			<i class="material-icons">face</i>
@@ -1550,7 +1550,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	</section>
 
 	<section class="row">
-		<h3 class="col xs4 s12">G</h3>
+		<h3 class="col xs4">G</h3>
 
 		<div class="col xs2 s4 m2 icon-box">
 			<i class="material-icons">g_translate</i>
@@ -1635,7 +1635,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	</section>
 
 	<section class="row">
-		<h3 class="col xs4 s12">H</h3>
+		<h3 class="col xs4">H</h3>
 
 		<div class="col xs2 s4 m2 icon-box">
 			<i class="material-icons">hd</i>
@@ -1728,7 +1728,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	</section>
 
 	<section class="row">
-		<h3 class="col xs4 s12">I</h3>
+		<h3 class="col xs4">I</h3>
 
 		<div class="col xs2 s4 m2 icon-box">
 			<i class="material-icons">image</i>
@@ -1813,7 +1813,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	</section>
 
 	<section class="row">
-		<h3 class="col xs4 s12">K</h3>
+		<h3 class="col xs4">K</h3>
 
 		<div class="col xs2 s4 m2 icon-box">
 			<i class="material-icons">keyboard</i>
@@ -1866,7 +1866,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	</section>
 
 	<section class="row">
-		<h3 class="col xs4 s12">L</h3>
+		<h3 class="col xs4">L</h3>
 
 		<div class="col xs2 s4 m2 icon-box">
 			<i class="material-icons">label</i>
@@ -2171,7 +2171,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	</section>
 
 	<section class="row">
-		<h3 class="col xs4 s12">M</h3>
+		<h3 class="col xs4">M</h3>
 
 		<div class="col xs2 s4 m2 icon-box">
 			<i class="material-icons">mail</i>
@@ -2308,7 +2308,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	</section>
 
 	<section class="row">
-		<h3 class="col xs4 s12">N</h3>
+		<h3 class="col xs4">N</h3>
 
 		<div class="col xs2 s4 m2 icon-box">
 			<i class="material-icons">nature</i>
@@ -2405,7 +2405,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	</section>
 
 	<section class="row">
-		<h3 class="col xs4 s12">O</h3>
+		<h3 class="col xs4">O</h3>
 
 		<div class="col xs2 s4 m2 icon-box">
 			<i class="material-icons">offline_pin</i>
@@ -2434,7 +2434,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	</section>
 
 	<section class="row">
-		<h3 class="col xs4 s12">P</h3>
+		<h3 class="col xs4">P</h3>
 
 		<div class="col xs2 s4 m2 icon-box">
 			<i class="material-icons">pages</i>
@@ -2771,7 +2771,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	</section>
 
 	<section class="row">
-		<h3 class="col xs4 s12">Q</h3>
+		<h3 class="col xs4">Q</h3>
 
 		<div class="col xs2 s4 m2 icon-box">
 			<i class="material-icons">query_builder</i>
@@ -2796,7 +2796,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	</section>
 
 	<section class="row">
-		<h3 class="col xs4 s12">R</h3>
+		<h3 class="col xs4">R</h3>
 
 		<div class="col xs2 s4 m2 icon-box">
 			<i class="material-icons">radio</i>
@@ -2969,7 +2969,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	</section>
 
 	<section class="row">
-		<h3 class="col xs4 s12">S</h3>
+		<h3 class="col xs4">S</h3>
 
 		<div class="col xs2 s4 m2 icon-box">
 			<i class="material-icons">satellite</i>
@@ -3426,7 +3426,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	</section>
 
 	<section class="row">
-		<h3 class="col xs4 s12">T</h3>
+		<h3 class="col xs4">T</h3>
 
 		<div class="col xs2 s4 m2 icon-box">
 			<i class="material-icons">tab</i>
@@ -3607,7 +3607,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	</section>
 
 	<section class="row">
-		<h3 class="col xs4 s12">U</h3>
+		<h3 class="col xs4">U</h3>
 
 		<div class="col xs2 s4 m2 icon-box">
 			<i class="material-icons">unarchive</i>
@@ -3636,7 +3636,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	</section>
 
 	<section class="row">
-		<h3 class="col xs4 s12">V</h3>
+		<h3 class="col xs4">V</h3>
 
 		<div class="col xs2 s4 m2 icon-box">
 			<i class="material-icons">verified_user</i>
@@ -3781,7 +3781,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	</section>
 
 	<section class="row">
-		<h3 class="col xs4 s12">W</h3>
+		<h3 class="col xs4">W</h3>
 
 		<div class="col xs2 s4 m2 icon-box">
 			<i class="material-icons">wallpaper</i>
@@ -3866,7 +3866,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	</section>
 
 	<section class="row">
-		<h3 class="col xs4 s12">Y</h3>
+		<h3 class="col xs4">Y</h3>
 
 		<div class="col xs2 s4 m2 icon-box">
 			<i class="material-icons">youtube_searched_for</i>
@@ -3875,7 +3875,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 	</section>
 
 	<section class="row">
-		<h3 class="col xs4 s12">Z</h3>
+		<h3 class="col xs4">Z</h3>
 
 		<div class="col xs2 s4 m2 icon-box">
 			<i class="material-icons">zoom_in</i>

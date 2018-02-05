@@ -6,22 +6,22 @@ $keywords = 'progress, activity, determinate, indeterminate, buffer, circular';
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>
 <section class="row">
-	<h2 class="col xs4 s12">Progress & activity usage</h2>
+	<h2 class="col xs4">Progress & activity usage</h2>
 
-	<p class="col xs4 s12 m6">
+	<p class="col xs4 m6">
 		There are a couple of progress and activity indicator varieties.
 		The "determinate", "indeterminate", "buffer", "circular" and "circular on floating button".
 	</p>
 </section>
 
 <section class="row">
-	<h3 class="col xs4 s12">Determinate</h3>
+	<h3 class="col xs4">Determinate</h3>
 
-	<p class="col xs4 s12 m6">
+	<p class="col xs4 m6">
 		You can easily modify the determinate progress indicator by giving the <code>.progressbar</code> the desired width.
 	</p>
 
-	<div class="col xs4 s12 m6">
+	<div class="col xs4 m6">
 		<div class="determinate">
 			<div class="progressbar" style="width: 10%"></div>
 		</div>
@@ -37,13 +37,13 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="row">
-	<h3 class="col xs4 s12">Indeterminate</h3>
+	<h3 class="col xs4">Indeterminate</h3>
 
-	<p class="col xs4 s12 m6">
+	<p class="col xs4 m6">
 		The indeterminate progress indicator will continue forever.
 	</p>
 
-	<div class="col xs4 s12 m6">
+	<div class="col xs4 m6">
 		<div class="indeterminate"></div>
 	</div>
 
@@ -55,13 +55,13 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="row">
-	<h3 class="col xs4 s12">Buffer</h3>
+	<h3 class="col xs4">Buffer</h3>
 
-	<p class="col xs4 s12 m6">
+	<p class="col xs4 m6">
 		The buffer progressbar is still a work in process.
 	</p>
 
-	<div class="col xs4 s12 m6">
+	<div class="col xs4 m6">
 		<div class="buffer">
 			<div class="buffer-progress" style="width: 50%;">
 				<div class="progressbar" style="width: 90%;"></div>
@@ -83,13 +83,13 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="row">
-	<h3 class="col xs4 s12">Circular</h3>
+	<h3 class="col xs4">Circular</h3>
 
-	<p class="col xs4 s12 m6">
+	<p class="col xs4 m6">
 		The circular progress can easily be changed in SCSS. You can change the width of the loader and the color(s).
 	</p>
 
-	<div class="col xs4 s12 m6">
+	<div class="col xs4 m6">
 		<div class="circular"></div>
 	</div>
 

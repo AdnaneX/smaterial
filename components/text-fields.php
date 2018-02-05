@@ -6,16 +6,16 @@ $keywords = 'text fields, input, select, textarea, autocomplete';
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>
 <section class="row">
-	<h2 class="col xs4 s12">Text fields</h2>
+	<h2 class="col xs4">Text fields</h2>
 
-	<p class="col xs4 s12 m6">
+	<p class="col xs4 m6">
 		There are two types of fields you can use.
 		The text fields and the options you can use are listed below.
         <strong>NOTE*</strong> that additional elements like the <code class="language-html">&lt;label></code> and
         <code class="language-html">&lt;div class="helper-text"></code> should always be below the input or textarea.
 	</p>
 
-	<p class="col xs4 s12 m6">
+	<p class="col xs4 m6">
 		If you are looking for a date or time picker take a look at <a href="/components/pickers.php">pickers</a>.
 		if you need to use <code class="language-html">&lt;select></code> take a look at <a href="/components/menu.php">menu</a>.
 		If you are looking for <code class="language-html">&lt;input type="range"></code> take a look at <a href="/components/sliders.php">sliders</a>.
@@ -24,9 +24,9 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="row" id="floating">
-	<h3 class="col xs4 s12">Input</h3>
+	<h3 class="col xs4">Input</h3>
 
-    <div class="col xs4 s12 m6">
+    <div class="col xs4 m6">
         <form action="<?= $_SERVER['PHP_SELF']; ?>" method="post">
             <div class="input">
                 <input type="text" name="name" id="name" required placeholder="Name">
@@ -58,7 +58,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
         </p>
     </div>
 
-	<div class="col xs4 s12 m3">
+	<div class="col xs4 m3">
 		<div class="input">
 			<input type="text" id="example">
 			<label for="example">Example</label>
@@ -80,7 +80,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		</div>
 	</div>
 
-	<div class="col xs4 s12 m3">
+	<div class="col xs4 m3">
 		<div class="input">
 			<input type="search" id="example5">
 			<label for="example5">Search</label>
@@ -125,13 +125,13 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="row">
-	<h3 class="col xs4 s12">Text area</h3>
+	<h3 class="col xs4">Text area</h3>
 
-	<p class="col xs4 s12 m6">
+	<p class="col xs4 m6">
 		The text area works the same as the floating text fields
 	</p>
 
-	<div class="col xs4 s12 m6">
+	<div class="col xs4 m6">
         <form>
             <div class="textarea">
                 <textarea id="textarea" required></textarea>
@@ -155,7 +155,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="row">
-	<h3 class="col xs4 s12">Settings</h3>
+	<h3 class="col xs4">Settings</h3>
 
 	<table>
 		<thead>

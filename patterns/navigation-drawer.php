@@ -7,17 +7,17 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>
 
 <section class="row">
-	<h2 class="col xs4 s12">Navigation drawer usage</h2>
+	<h2 class="col xs4">Navigation drawer usage</h2>
 
-	<p class="col xs4 s12 m6">
+	<p class="col xs4 m6">
 		The navigation drawer has multiple options. Some of the options support a header item.
 	</p>
 </section>
 
 <section class="row" id="permanent">
-	<h3 class="col xs4 s12">Permanent</h3>
+	<h3 class="col xs4">Permanent</h3>
 
-	<p class="col xs4 s12 m6">
+	<p class="col xs4 m6">
 		The permanent navigation drawer is recommended for desktop.
 		The permanent navigation drawer has three alternatives.
 	</p>
@@ -37,9 +37,9 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="row" id="permanent-full-height">
-	<h4 class="col xs4 s12">Full-height</h4>
+	<h4 class="col xs4">Full-height</h4>
 
-	<p class="col xs4 s12 m6">
+	<p class="col xs4 m6">
 		In order to use the full height navigation you need to add the <code class="language-css">.drawer-permanent-full-height</code> class
 		to your <code class="language-css">.drawer</code>.
 	</p>
@@ -82,14 +82,14 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="row" id="permanent-clipped">
-	<h4 class="col xs4 s12">Clipped</h4>
+	<h4 class="col xs4">Clipped</h4>
 
-	<p class="col xs4 s12 m6">
+	<p class="col xs4 m6">
 		In order to use the clipped navigation you need to add the <code class="language-css">.drawer-permanent-clipped</code> class
 		to your <code class="language-css">.drawer</code>.
 	</p>
 
-	<p class="col xs4 s12 m6">
+	<p class="col xs4 m6">
 		The clipped navigation doesn't support a header.
 	</p>
 
@@ -108,14 +108,14 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="row" id="permanent-floating">
-	<h4 class="col xs4 s12">Floating</h4>
+	<h4 class="col xs4">Floating</h4>
 
-	<p class="col xs4 s12 m6">
+	<p class="col xs4 m6">
 		In order to use the floating navigation you need to add the <code class="language-css">.drawer-permanent-floating</code> class
 		to your <code class="language-css">.drawer</code>.
 	</p>
 
-	<p class="col xs4 s12 m6">
+	<p class="col xs4 m6">
 		The clipped navigation doesn't support a header.
 	</p>
 
@@ -134,14 +134,14 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="row" id="persistent">
-	<h3 class="col xs4 s12">Persistent</h3>
+	<h3 class="col xs4">Persistent</h3>
 
-	<p class="col xs4 s12 m6">
+	<p class="col xs4 m6">
 		The persistent menu is recommended for all sizes larger than mobile.
 		To use the persistent menu add the <code class="language-css">.drawer-persistent</code> class to your <code class="language-css">.drawer</code>.
 	</p>
 
-    <p class="col xs4 s12 m6">
+    <p class="col xs4 m6">
         In order to use the profile dropdown you have to use the <a href="/components/menu.php">menu</a> styling as well.
     </p>
 
@@ -175,13 +175,13 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="row" id="temporary">
-	<h3 class="col xs4 s12">Temporary</h3>
+	<h3 class="col xs4">Temporary</h3>
 
-	<p class="col xs4 s12 m6">
+	<p class="col xs4 m6">
 		To use the temporary menu add the <code class="language-css">.drawer-temporary</code> class to your <code class="language-css">.drawer</code>.
 	</p>
 
-	<p class="col xs4 s12 m6">
+	<p class="col xs4 m6">
 		The temporary menu has the most options for the header.
 		The <code class="language-css">.scrum</code> class can be added for background images that are light.
         In order to use the profile dropdown you have to use the <a href="/components/menu.php">menu</a> styling as well.

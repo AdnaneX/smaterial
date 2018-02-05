@@ -8,12 +8,8 @@
 				}
 
 				@if( in-array( 'text', $allowed-colors ) ) {
-					.#{$color-name}-text, .#{$color-name}-500-text {
+					.#{$color-name}-text, .#{$color-name}-500-text, .#{$color-name}-text .material-icons, .#{$color-name}-500-text .material-icons {
 						color: $color-value;
-
-						.material-icons {
-							color: $color-value;
-						}
 					}
 				}
 			} @else if $color-name == 'shades' {
@@ -22,12 +18,8 @@
 				}
 
 				@if( in-array( 'text', $allowed-colors ) ) {
-					.#{$color-type}-text {
+					.#{$color-type}-text, .#{$color-type}-text .material-icons {
 						color: $color-value;
-
-						.material-icons {
-							color: $color-value;
-						}
 					}
 				}
 			} @else if str_index( quote( $color-value ), 'a' ) {
@@ -37,12 +29,8 @@
 					}
 
 					@if( in-array( 'text', $allowed-colors ) ) {
-						.#{$color-name}-#{$color-type}-text {
+						.#{$color-name}-#{$color-type}-text, .#{$color-name}-#{$color-type}-text .material-icons  {
 							color: $color-value;
-
-							.material-icons {
-								color: $color-value;
-							}
 						}
 					}
 				}
@@ -53,12 +41,8 @@
 					}
 
 					@if (in-array('text', $allowed-colors)) {
-						.#{$color-name}-#{$color-type}-text {
+						.#{$color-name}-#{$color-type}-text, .#{$color-name}-#{$color-type}-text .material-icons {
 							color: $color-value;
-
-							.material-icons {
-								color: $color-value;
-							}
 						}
 					}
 				}

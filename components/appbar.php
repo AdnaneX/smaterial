@@ -7,7 +7,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>
 
 <section class="row">
-    <h2 class="col xs4 s12">Appbar usage</h2>
+    <h2 class="col xs4">Appbar usage</h2>
 
     <p class="col xs4 m6">
         The appbar is used to hold a couple elements.
@@ -60,7 +60,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 <section class="row">
     <h2 class="col xs4">Badges</h2>
 
-    <p class="col xs4 s12 m6">
+    <p class="col xs4 m6">
         If you would like to use badges in the appbar you can by simply adding the <code class="language-css">.badge</code>
         class to a div inside an action.
     </p>

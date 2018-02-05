@@ -6,9 +6,9 @@ $keywords = 'cards';
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>
 <section class="row">
-	<h2 class="col xs4 s12">Cards usage</h2>
+	<h2 class="col xs4">Cards usage</h2>
 
-	<p class="col xs4 s12 m6">
+	<p class="col xs4 m6">
 		There are many different variations of cards.
 		You can make each card with the blocks provided.
 		Each block has sub classes to follow the design specs.
@@ -16,14 +16,14 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="row">
-	<h3 class="col xs4 s12">Image with text</h3>
+	<h3 class="col xs4">Image with text</h3>
 
-	<p class="col xs4 s12 m6">
+	<p class="col xs4 m6">
 		A very basic card with just an image and text.
 		The <code class="language-css">.card-top</code> class makes sure the image gets rounded edges.
 	</p>
 
-	<div class="col xs4 s12 m2">
+	<div class="col xs4 m2">
 		<div class="card">
 			<<?php echo ($amp ? 'amp-img layout="responsive"' : 'img'); ?> src="/images/album-example.jpg" class="card-top">
 
@@ -47,9 +47,9 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="row">
-	<h3 class="col xs4 s12">Avatar, title and subtitle</h3>
+	<h3 class="col xs4">Avatar, title and subtitle</h3>
 
-	<p class="col xs4 s12 m6">
+	<p class="col xs4 m6">
 		The <code class="language-css">.card-avatar</code> class makes sure the image gets the right styling.
 		The <code class="language-css">.card-primary-small</code> class makes the title smaller.
 		The <code class="language-css">.card-primary-additional</code> and
@@ -57,7 +57,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		The <code class="language-css">.card-actions</code> class gives the right margins between actions.
 	</p>
 
-	<div class="col xs4 s12 m3">
+	<div class="col xs4 m3">
 		<div class="card">
 			<<?php echo ($amp ? 'amp-img layout="responsive"' : 'img'); ?> src="/images/profile-icon.jpg" class="card-avatar">
 			<div class="card-primary card-primary-small card-primary-additional">
@@ -101,15 +101,15 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="row">
-	<h3 class="col xs4 s12">Full background image</h3>
+	<h3 class="col xs4">Full background image</h3>
 
-	<p class="col xs4 s12 m6">
+	<p class="col xs4 m6">
 		The <code class="language-css">.card-background</code> class will make sure the image has rounded edges and is the background of the card.
 		The <code class="language-css">.card-content</code> class is used to make the text white and gives the background an scrim.
 		<strong>NOTE*</strong> <code class="language-css">.card-content</code> class might change.
 	</p>
 
-	<div class="col xs4 s12 m3">
+	<div class="col xs4 m3">
 		<div class="card">
 			<<?php echo ($amp ? 'amp-img layout="responsive"' : 'img'); ?> src="/images/album-example.jpg" class="card-background">
 

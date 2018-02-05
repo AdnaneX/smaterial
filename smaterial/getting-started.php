@@ -6,38 +6,37 @@ $keywords = 'getting started, starting, how to use';
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>
 <section class="row">
-    <h2 class="col xs4 s12">Getting started</h2>
+    <h2 class="col xs4">Getting started</h2>
 
-    <p class="col xs4 s12">
+    <p class="col xs4">
         Smaterial comes in 2 different packages you can choose from.
         You can make a choice depending on your skill levels and what you would like to do with SMaterial.
     </p>
 
-    <div class="col xs4 s12 m6">
-        <h4 class="col xs4 s12">CSS</h4>
+    <div class="col xs4 m6">
+        <h4 class="col xs4">CSS</h4>
 
-        <p class="col xs4 s12">
-            When unfamilier with SCSS it's recommended to use this package.
-            <a href="/smaterial-css.zip" class="raised-button">CSS Download <i class="material-icons right">file_download</i></a>
+        <p class="col xs4">
+            When unfamilier with SCSS it's recommended to use the default package.
+            <a href="/stylesheets/smaterial-light.css" class="raised-button"><i class="material-icons right">file_download</i> Download CSS</a>
+            <a href="/js/smaterial.js" class="raised-button"><i class="material-icons right">file_download</i> Download JS</a>
         </p>
     </div>
 
-    <div class="col xs4 s12 m6">
-        <h4 class="col xs4 s12">SCSS</h4>
+    <div class="col xs4 m6">
+        <h4 class="col xs4">SCSS</h4>
 
-        <p class="col xs4 s12">
-            The SCSS version allows you to fully customize the way SMaterial looks.
-            You can also change which files are included and which are not. This package also includes Gulp to
-            compress JavaScript an SCSS.
-            <a href="/smaterial-scss.zip" class="raised-button">SCSS Download <i class="material-icons right">file_download</i></a>
+        <p class="col xs4">
+            If you would like to use SCSS I recommend to go to <a href="//github.com/SuperDJ/smaterial" target="_blank">Github</a>
+            and clone/ download the project from there.
         </p>
     </div>
 </section>
 
 <section class="row">
-    <h2 class="col xs4 s12">Setup</h2>
+    <h2 class="col xs4">Setup</h2>
 
-    <p class="col xs4 s12 m6">
+    <p class="col xs4 m6">
         You can get SMaterial up and running in a couple of different ways.
         After you have downloaded one of the above packages or used one of the other options you can get started.
         Of course you can use the code shown here.
@@ -64,7 +63,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		</code>
 	</pre>
 
-    <p class="col xs4 s12 m6">
+    <p class="col xs4 m6">
         The <code class="language-html">&lt;link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"></code>
         is used to load the <a href="http://www.smaterial.dsuper.nl/style/icons.php">Material Design font icons</a>.
 
@@ -73,25 +72,25 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="row">
-    <h3 class="col xs4 s12">Webpack usage</h3>
+    <h3 class="col xs4">Webpack usage</h3>
 
-    <p class="col xs4 s12 m6">
-        With Gulp you can easily compress SCSS and JavaScript files.
+    <p class="col xs4 m6">
+        With Webpack you can easily compress SCSS and JavaScript files.
         All "commands" needed are included in the <code class="language-html">package.js</code>.
         The available commands are: <code class="language-html">dev, development, prod and production</code>.
         The difference between the commands for development and production is the file output.
         For production all files are being minimized in contrast to development where all files are outputted as is.
     </p>
 
-    <p class="col xs4 s12 m6">
+    <p class="col xs4 m6">
         In order to use Webpack you still need to change the entries in the <code class="language-html">webpack.config.js</code> file.
     </p>
 </section>
 
 <section class="row">
-    <h3 class="col xs4 s12">Other useful HTML</h3>
+    <h3 class="col xs4">Other useful HTML</h3>
 
-    <p class="col xs4 s12 m6">
+    <p class="col xs4 m6">
         If you would like to complete the look of your website you can add some additional HTML to it.
         To color the browsers address bar use the code shown on the side in the <code class="language-html">&lt;head></code> tag.
         If you leave the <code class="language-html">&lt;meta content></code> attribute empty it will be automatically set to the color of the <a href="/components/appbar.php">appbar</a>.

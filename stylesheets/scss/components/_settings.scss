@@ -419,7 +419,7 @@ $selection-disabled-color: if( $theme == light, rgba($black, .26), rgba($white, 
 $switch-track-height: rem-calc(12px) !default;
 $switch-track-width: rem-calc(24px) !default;
 $switch-thumb-size: rem-calc(14px) !default;
-$switch-thumb-top: ($switch-track-height - $switch-thumb-size ) / 2;
+$switch-thumb-top: ( $switch-track-height - $switch-thumb-size ) / 2;
 $switch-thumb-left: $switch-track-width - $switch-thumb-size;
 $switch-thumb-radial-size: $switch-thumb-size * 2;
 $switch-thumb-radial-top: ($switch-track-height - $switch-thumb-radial-size ) / 2;
@@ -452,31 +452,7 @@ $elevation-umbra-map: (
 	9: rem-calc(0px) rem-calc(9px) rem-calc(12px) rem-calc(1px),
 	12: rem-calc(0px) rem-calc(12px) rem-calc(17px) rem-calc(2px),
 	16: rem-calc(0px) rem-calc(16px) rem-calc(24px) rem-calc(2px),
-	24: rem-calc(0px) rem-calc(24px) rem-calc(38px) rem-calc(3px),
-	/*1: rem-calc(0px) rem-calc(2px) rem-calc(1px) rem-calc(-1px),
-	2: rem-calc(0px) rem-calc(3px) rem-calc(1px) rem-calc(-2px),
-	3: rem-calc(0px) rem-calc(3px) rem-calc(3px) rem-calc(-2px),
-	4: rem-calc(0px) rem-calc(2px) rem-calc(4px) rem-calc(-1px),
-	5: rem-calc(0px) rem-calc(3px) rem-calc(5px) rem-calc(-1px),
-	6: rem-calc(0px) rem-calc(3px) rem-calc(5px) rem-calc(-1px),
-	7: rem-calc(0px) rem-calc(4px) rem-calc(5px) rem-calc(-2px),
-	8: rem-calc(0px) rem-calc(5px) rem-calc(5px) rem-calc(-3px),
-	9: rem-calc(0px) rem-calc(5px) rem-calc(6px) rem-calc(-3px),
-	10: rem-calc(0px) rem-calc(6px) rem-calc(6px) rem-calc(-3px),
-	11: rem-calc(0px) rem-calc(6px) rem-calc(7px) rem-calc(-4px),
-	12: rem-calc(0px) rem-calc(7px) rem-calc(8px) rem-calc(-4px),
-	13: rem-calc(0px) rem-calc(7px) rem-calc(8px) rem-calc(-4px),
-	14: rem-calc(0px) rem-calc(7px) rem-calc(9px) rem-calc(-4px),
-	15: rem-calc(0px) rem-calc(8px) rem-calc(9px) rem-calc(-5px),
-	16: rem-calc(0px) rem-calc(8px) rem-calc(10px) rem-calc(-5px),
-	17: rem-calc(0px) rem-calc(8px) rem-calc(11px) rem-calc(-5px),
-	18: rem-calc(0px) rem-calc(9px) rem-calc(11px) rem-calc(-5px),
-	19: rem-calc(0px) rem-calc(9px) rem-calc(12px) rem-calc(-6px),
-	20: rem-calc(0px) rem-calc(10px) rem-calc(13px) rem-calc(-6px),
-	21: rem-calc(0px) rem-calc(10px) rem-calc(13px) rem-calc(-6px),
-	22: rem-calc(0px) rem-calc(10px) rem-calc(14px) rem-calc(-6px),
-	23: rem-calc(0px) rem-calc(11px) rem-calc(14px) rem-calc(-7px),
-	24: rem-calc(0px) rem-calc(11px) rem-calc(15px) rem-calc(-7px)*/
+	24: rem-calc(0px) rem-calc(24px) rem-calc(38px) rem-calc(3px)
 );
 
 $elevation-penumbra-map: (
@@ -489,31 +465,7 @@ $elevation-penumbra-map: (
 	9: rem-calc(0px) rem-calc(3px) rem-calc(16px) rem-calc(2px),
 	12: rem-calc(0px) rem-calc(5px) rem-calc(22px) rem-calc(4px),
 	16: rem-calc(0px) rem-calc(6px) rem-calc(30px) rem-calc(5px),
-	24: rem-calc(0px) rem-calc(9px) rem-calc(46px) rem-calc(8px),
-	/*1: rem-calc(0px) rem-calc(1px) rem-calc(1px) rem-calc(0px),
-	2: rem-calc(0px) rem-calc(2px) rem-calc(2px) rem-calc(0px),
-	3: rem-calc(0px) rem-calc(3px) rem-calc(4px) rem-calc(0px),
-	4: rem-calc(0px) rem-calc(4px) rem-calc(5px) rem-calc(0px),
-	5: rem-calc(0px) rem-calc(5px) rem-calc(8px) rem-calc(0px),
-	6: rem-calc(0px) rem-calc(6px) rem-calc(10px) rem-calc(0px),
-	7: rem-calc(0px) rem-calc(7px) rem-calc(10px) rem-calc(1px),
-	8: rem-calc(0px) rem-calc(8px) rem-calc(10px) rem-calc(1px),
-	9: rem-calc(0px) rem-calc(9px) rem-calc(12px) rem-calc(1px),
-	10: rem-calc(0px) rem-calc(10px) rem-calc(14px) rem-calc(1px),
-	11: rem-calc(0px) rem-calc(11px) rem-calc(15px) rem-calc(1px),
-	12: rem-calc(0px) rem-calc(12px) rem-calc(17px) rem-calc(2px),
-	13: rem-calc(0px) rem-calc(13px) rem-calc(19px) rem-calc(2px),
-	14: rem-calc(0px) rem-calc(14px) rem-calc(21px) rem-calc(2px),
-	15: rem-calc(0px) rem-calc(15px) rem-calc(22px) rem-calc(2px),
-	16: rem-calc(0px) rem-calc(16px) rem-calc(24px) rem-calc(2px),
-	17: rem-calc(0px) rem-calc(17px) rem-calc(26px) rem-calc(2px),
-	18: rem-calc(0px) rem-calc(18px) rem-calc(28px) rem-calc(2px),
-	19: rem-calc(0px) rem-calc(19px) rem-calc(29px) rem-calc(2px),
-	20: rem-calc(0px) rem-calc(20px) rem-calc(31px) rem-calc(3px),
-	21: rem-calc(0px) rem-calc(21px) rem-calc(33px) rem-calc(3px),
-	22: rem-calc(0px) rem-calc(22px) rem-calc(35px) rem-calc(3px),
-	23: rem-calc(0px) rem-calc(23px) rem-calc(36px) rem-calc(3px),
-	24: rem-calc(0px) rem-calc(24px) rem-calc(38px) rem-calc(3px)*/
+	24: rem-calc(0px) rem-calc(9px) rem-calc(46px) rem-calc(8px)
 );
 
 $elevation-ambient-map: (
@@ -526,31 +478,7 @@ $elevation-ambient-map: (
 	9: rem-calc(0px) rem-calc(5px) rem-calc(6px) rem-calc(0px),
 	12: rem-calc(0px) rem-calc(7px) rem-calc(8px) rem-calc(0px),
 	16: rem-calc(0px) rem-calc(8px) rem-calc(10px) rem-calc(0px),
-	24: rem-calc(0px) rem-calc(11px) rem-calc(15px) rem-calc(0px),
-	/*1: rem-calc(0px) rem-calc(1px) rem-calc(3px) rem-calc(0px),
-	2: rem-calc(0px) rem-calc(1px) rem-calc(5px) rem-calc(0px),
-	3: rem-calc(0px) rem-calc(1px) rem-calc(8px) rem-calc(0px),
-	4: rem-calc(0px) rem-calc(1px) rem-calc(10px) rem-calc(0px),
-	5: rem-calc(0px) rem-calc(1px) rem-calc(14px) rem-calc(0px),
-	6: rem-calc(0px) rem-calc(1px) rem-calc(18px) rem-calc(0px),
-	7: rem-calc(0px) rem-calc(2px) rem-calc(16px) rem-calc(1px),
-	8: rem-calc(0px) rem-calc(3px) rem-calc(14px) rem-calc(2px),
-	9: rem-calc(0px) rem-calc(3px) rem-calc(16px) rem-calc(2px),
-	10: rem-calc(0px) rem-calc(4px) rem-calc(18px) rem-calc(3px),
-	11: rem-calc(0px) rem-calc(4px) rem-calc(20px) rem-calc(3px),
-	12: rem-calc(0px) rem-calc(5px) rem-calc(22px) rem-calc(4px),
-	13: rem-calc(0px) rem-calc(5px) rem-calc(24px) rem-calc(4px),
-	14: rem-calc(0px) rem-calc(5px) rem-calc(26px) rem-calc(4px),
-	15: rem-calc(0px) rem-calc(6px) rem-calc(28px) rem-calc(5px),
-	16: rem-calc(0px) rem-calc(6px) rem-calc(30px) rem-calc(5px),
-	17: rem-calc(0px) rem-calc(6px) rem-calc(32px) rem-calc(5px),
-	18: rem-calc(0px) rem-calc(7px) rem-calc(34px) rem-calc(6px),
-	19: rem-calc(0px) rem-calc(7px) rem-calc(36px) rem-calc(6px),
-	20: rem-calc(0px) rem-calc(8px) rem-calc(38px) rem-calc(7px),
-	21: rem-calc(0px) rem-calc(8px) rem-calc(40px) rem-calc(7px),
-	22: rem-calc(0px) rem-calc(8px) rem-calc(42px) rem-calc(7px),
-	23: rem-calc(0px) rem-calc(9px) rem-calc(44px) rem-calc(8px),
-	24: rem-calc(0px) rem-calc(9px) rem-calc(46px) rem-calc(8px)*/
+	24: rem-calc(0px) rem-calc(11px) rem-calc(15px) rem-calc(0px)
 );
 
 /**************************************
@@ -560,7 +488,7 @@ $slider-track-height: $border-size !default;
 $slider-thumb-size: rem-calc(14px) !default;
 $slider-thumb-active-size: rem-calc(16px) !default;
 $slider-thumb-margin: ( ( ( $slider-thumb-size / 2 ) - $slider-track-height ) * -1 ) 0 0 0 !default;
-$slider-thumb-on-margin: ( ( ( $slider-thumb-active-size / 2 ) - $slider-track-height ) * -1) 0 0 0 !default;
+$slider-thumb-on-margin: ( ( ( $slider-thumb-active-size / 2 ) - $slider-track-height ) * -1 ) 0 0 0 !default;
 $slider-bubble-active-size: rem-calc(25px) !default;
 $slider-bubble-font-size: rem-calc(10px) !default;
 $slider-triangle-size: rem-calc(10px) !default;

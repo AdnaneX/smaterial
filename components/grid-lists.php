@@ -6,7 +6,7 @@ $keywords = 'grid lists';
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>
 <section class="row">
-	<h2 class="col xs4 s12">Grid lists usage</h2>
+	<h2 class="col xs4">Grid lists usage</h2>
 
     <div class="col xs4 s4">
         <figure class="grid">

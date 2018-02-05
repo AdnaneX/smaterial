@@ -7,25 +7,25 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>
 
 	<section class="row">
-	<h2 class="col xs4 s12">Typography usage</h2>
+	<h2 class="col xs4">Typography usage</h2>
 
-	<p class="col xs4 s12 m6">
+	<p class="col xs4 m6">
 		The Roboto font is default for Material Design.
 		The font is included in the framework and is set as the default font.
 		If you would like to use Noto click <a href="https://www.google.com/get/noto/" target="_blank">here</a>.
 	</p>
 
-	<p class="col xs4 s12 m6">
+	<p class="col xs4 m6">
 		The Roboto font is available in a couple of font weights: 100 (<em>thin</em>),
 		300 (<em>light</em>), 400 (<em>regular</em>), 500 (<em>medium</em>), 700 (<em>bold</em>) and 900 (<em>black</em>).
 		The availability of font weights for The Noto font depends.
 	</p>
 
-	<p class="col xs4 s12 m6">
+	<p class="col xs4 m6">
 		<<?php echo ($amp ? 'amp-img layout="responsive"' : 'img'); ?> height="640px" width="500px" src="http://material-design.storage.googleapis.com/publish/material_v_4/material_ext_publish/0Bx4BSt6jniD7SW9CUzR4MnRpOTg/style_typography_roboto1.png" alt="Roboto font example">
 	</p>
 
-	<table class="col xs4 s12 m6">
+	<table class="col xs4 m6">
 		<thead>
 		<tr>
 			<th>Class</th>
@@ -94,7 +94,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="row">
-	<h3 class="col xs4 s12">Settings</h3>
+	<h3 class="col xs4">Settings</h3>
 
 	<table>
 		<thead>

@@ -6,10 +6,10 @@ $keywords = 'notifications function, Android Nougat, Nougat, Android 7, Android 
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>
 <section class="row">
-	<h2 class="col xs4 s12">Notification usage</h2>
+	<h2 class="col xs4">Notification usage</h2>
 
 	<div class="row">
-		<p class="col xs4 s12 m6">
+		<p class="col xs4 m6">
 			The notifications browser support is very limited. Only Chrome, FireFox and Opera support it. These notifications are only working on pc / laptop.
 			Maybe some day in the future
 			<a href="https://developers.google.com/web/fundamentals/getting-started/push-notifications/?hl=en" target="_blank">push</a>
@@ -17,12 +17,12 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 			In the mean time checkout the CSS styled <a href="#notifications">notifications</a>.
 		</p>
 
-		<div class="col xs4 s12 m6">
+		<div class="col xs4 m6">
 			<button type="button" onclick="notification('Example', {'body': 'Test', icon: 'alert'}, '/resources/notifications.php')" class="raised-button">Notification</button>
 		</div>
 	</div>
 
-	<p class="col xs4 s12 m6">
+	<p class="col xs4 m6">
 		The notification function which is called in JavaScript takes 3 parameters (<code class="language-javascript">$title, $options, $click</code>).
 		The <code class="language-javascript">$title</code class="language-javascript"> speaks for itself.
 		The <code class="language-javascript">$click</code> parameter is used to handle click events on the notification.
@@ -30,7 +30,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 		<a href="https://developer.mozilla.org/en-US/docs/Web/API/notification" target="_blank">here</a>. But here is a list of supported options:
 	</p>
 
-	<div class="col xs4 s12 m6">
+	<div class="col xs4 m6">
 		<ul>
 			<li>body (Notification content)</li>
 			<li>icon (Notification icon)</li>
@@ -47,16 +47,16 @@ notification('Title', {body: 'Content', icon: 'icon_path'}, 'click-url.com')
 </section>
 
 <section class="row" id="notifications">
-	<h3 class="col xs4 s12">Notifications</h3>
+	<h3 class="col xs4">Notifications</h3>
 
-	<p class="col xs4 s12 m6">
+	<p class="col xs4 m6">
 		There are a couple of different notification templates to choose from.
 		The templates you can choose from are <a href="#standard-notification">standard</a>, <a href="#big-text-notification">big text</a>,
 		<a href="#big-picture-notification">big picture</a>, <a href="#progress-notification">progress</a> and <a href="#media-notification">media</a>.
 		All the templates are inspired on the new Android (N) Nougat.
 	</p>
 
-	<p class="col xs4 s12 m6">
+	<p class="col xs4 m6">
 		The additional classes for each template are not only for styling.
 		In the future the classes will also make sure the appropriate actions are taking place in JavaScript.
 	</p>
@@ -65,7 +65,7 @@ notification('Title', {body: 'Content', icon: 'icon_path'}, 'click-url.com')
 <section class="row" id="standard-notification">
 	<h4>Standard notification</h4>
 
-	<p class="col xs4 s12 m6">
+	<p class="col xs4 m6">
 		According to the documentation the header text and timestamp are optional.
 	</p>
 
@@ -89,7 +89,7 @@ notification('Title', {body: 'Content', icon: 'icon_path'}, 'click-url.com')
 		</div>
 	</div>
 
-	<p class="col xs4 s12 m6">
+	<p class="col xs4 m6">
 		To create the most basic notification you simply need the following code.
 		The <code class="language-css">.separator</code> is to add the bullet.
 		To give the app icon, the app name and expand a other color you can add a text color class.
@@ -121,7 +121,7 @@ notification('Title', {body: 'Content', icon: 'icon_path'}, 'click-url.com')
 		</code>
 	</pre>
 
-	<p class="col xs4 s12 m6">
+	<p class="col xs4 m6">
 		If you would like to add an profile image you need to add the <code class="language-css">.standard</code> class.
 		This class makes sure that you get the standard template.
 		You can now also add a <code class="language-html">&lt;img></code> tag to notification content.
@@ -152,7 +152,7 @@ notification('Title', {body: 'Content', icon: 'icon_path'}, 'click-url.com')
 <section class="row" id="big-text-notification">
 	<h4>Big text notification</h4>
 
-	<p class="col xs4 s12 m6">
+	<p class="col xs4 m6">
 		If you would like to use the big text template you simply need to add the
 		<code class="language-css">.big-text</code> class to the notification.
 		To get the subject typography add the <code class="language-css">.subject</code>
@@ -209,7 +209,7 @@ notification('Title', {body: 'Content', icon: 'icon_path'}, 'click-url.com')
 <section class="row" id="big-image-notification">
 	<h4>Big picture notification</h4>
 
-	<p class="col xs4 s12 m6">
+	<p class="col xs4 m6">
 		If you want to use the big picture notification you need to add the <code class="language-css">.big-picture</code>
 		class to your notification.
 		You can also add a <code class="language-html"><img></code> tag in both the notification content and text.
@@ -263,7 +263,7 @@ notification('Title', {body: 'Content', icon: 'icon_path'}, 'click-url.com')
 <section class="row" id="progress-notification">
 	<h4>Progress notification</h4>
 
-	<p class="col xs4 s12 m6">
+	<p class="col xs4 m6">
 		To get the template for the progress notification simply add the <code class="language-css">.progress</code> to the notification.
 		You can find a different progressbar <a href="/components/progress-activity.php">here</a>.
 	</p>
@@ -320,7 +320,7 @@ notification('Title', {body: 'Content', icon: 'icon_path'}, 'click-url.com')
 <section class="row" id="media-notification">
 	<h4>Media notification</h4>
 
-	<p class="col xs4 s12 m6">
+	<p class="col xs4 m6">
 		If you would like to use the media template you can add the <code class="language-css">.media</code> class
 		to your notification.
 		Inside the notification content you can add a div with the class <code class="language-css">.actions</code>.
@@ -352,9 +352,9 @@ notification('Title', {body: 'Content', icon: 'icon_path'}, 'click-url.com')
 </section>
 
 <section class="row">
-	<h3 class="col xs4 s12">Settings</h3>
+	<h3 class="col xs4">Settings</h3>
 
-	<table class="col xs4 s12 m6">
+	<table class="col xs4 m6">
 		<thead>
 		<tr>
 			<th>Variable</th>

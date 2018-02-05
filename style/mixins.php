@@ -6,30 +6,30 @@ $keywords = 'SCSS mixins';
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>
 <section class="row">
-	<h2 class="col xs4 s12">SCSS mixins usage</h2>
+	<h2 class="col xs4">SCSS mixins usage</h2>
 
-	<p class="col xs4 s12 m6">
+	<p class="col xs4 m6">
 		The mixins are made to help you. There are mixins which take care of prefixing.
 		There are also mixins that take care of repetitive codes.
 	</p>
 
-	<p class="col xs4 s12 m6">
+	<p class="col xs4 m6">
 		The mixins that help with the prefixes are especially useful when you don't use <a href="http://gulpjs.com/" target="_blank">gulp</a>.
 		Some mixins are made to prevent repetitive, duplicate code and thereby more code to edit.
 		For example to take care of all the typography there is one.
 		There is also a mixin that takes care of all default styling of <a href="/components/buttons.php#raised-button">raised</a> and <a href="/components/buttons.php#flat-button">flat</a> buttons.
 	</p>
 
-	<p class="col xs4 s12 m6">
+	<p class="col xs4 m6">
 		To use a comma in the parameter you have to unquote it. For example when you would like to add multiple transitions:
 		<code class="language-css">@include transition(color .3s ease-in-out unquote(',') background .3ms ease-in-out)</code>.
 	</p>
 </section>
 
 <section class="row">
-	<h3 class="col xs4 s12">box-shadow()</h3>
+	<h3 class="col xs4">box-shadow()</h3>
 
-	<p class="col xs4 s12 m6">
+	<p class="col xs4 m6">
 		The <code class="language-css">box-shadow()</code> mixin is used to make box-shadow styling with all the prefixes.
 	</p>
 
@@ -42,9 +42,9 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="row">
-	<h3 class="col xs4 s12">border-radius()</h3>
+	<h3 class="col xs4">border-radius()</h3>
 
-	<p class="col xs4 s12 m6">
+	<p class="col xs4 m6">
 		The <code class="language-css">border-radius()</code> mixin is used to add all prefixes for the border-radius.
 	</p>
 
@@ -56,9 +56,9 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="row">
-	<h3 class="col xs4 s12">box-sizing()</h3>
+	<h3 class="col xs4">box-sizing()</h3>
 
-	<p class="col xs4 s12 m6">
+	<p class="col xs4 m6">
 		The <code class="language-css">box-sizing()</code> mixin is used to add all prefixes for the box-sizing.
 	</p>
 
@@ -70,9 +70,9 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="row">
-	<h3 class="col xs4 s12">transition()</h3>
+	<h3 class="col xs4">transition()</h3>
 
-	<p class="col xs4 s12 m6">
+	<p class="col xs4 m6">
 		The <code class="language-css">transition()</code> mixin is used to add all prefixes for the transition.
 	</p>
 
@@ -84,9 +84,9 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="row">
-	<h3 class="col xs4 s12">transform()</h3>
+	<h3 class="col xs4">transform()</h3>
 
-	<p class="col xs4 s12 m6">
+	<p class="col xs4 m6">
 		The <code class="language-css">transform()</code> mixin is used to add all prefixes for the transform.
 	</p>
 
@@ -98,9 +98,9 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="row">
-	<h3 class="col xs4 s12">animation()</h3>
+	<h3 class="col xs4">animation()</h3>
 
-	<p class="col xs4 s12 m6">
+	<p class="col xs4 m6">
 		The <code class="language-css">animation()</code> mixin is used to add all prefixes for the animation.
 	</p>
 
@@ -112,9 +112,9 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="row">
-	<h3 class="col xs4 s12">keyframes()</h3>
+	<h3 class="col xs4">keyframes()</h3>
 
-	<p class="col xs4 s12 m6">
+	<p class="col xs4 m6">
 		The <code class="language-css">keyframes</code> can be used to create a specific animation.
 		The mixin adds all prefixes.
 		Between the round brackets "<code class="language-css">()</code>" you set the name, between the curly brackets "<code class="language-css">{}</code>" you set what needs to be done.
@@ -136,9 +136,9 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="row">
-	<h3 class="col xs4 s12">border-top-left-radius</h3>
+	<h3 class="col xs4">border-top-left-radius</h3>
 
-	<p class="col xs4 s12 m6">
+	<p class="col xs4 m6">
 		The <code class="language-css">border-top-left-radius()</code> mixin is used to add all prefixes to the border radius.
 	</p>
 
@@ -150,9 +150,9 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="row">
-	<h3 class="col xs4 s12">border-top-right-radius</h3>
+	<h3 class="col xs4">border-top-right-radius</h3>
 
-	<p class="col xs4 s12 m6">
+	<p class="col xs4 m6">
 		The <code class="language-css">border-top-right-radius()</code> mixin is used to add all prefixes to the border radius.
 	</p>
 
@@ -164,9 +164,9 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="row">
-	<h3 class="col xs4 s12">border-radius-top</h3>
+	<h3 class="col xs4">border-radius-top</h3>
 
-	<p class="col xs4 s12 m6">
+	<p class="col xs4 m6">
 		The <code class="language-css">border-radius-top()</code> mixin is used to add all prefixes to the top border radius.
 		This mixing includes both <code class="language-css">border-top-right-radius()</code> and <code class="language-css">border-top-left-radius()</code>
 	</p>
@@ -179,9 +179,9 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="row">
-	<h3 class="col xs4 s12">border-bottom-left-radius</h3>
+	<h3 class="col xs4">border-bottom-left-radius</h3>
 
-	<p class="col xs4 s12 m6">
+	<p class="col xs4 m6">
 		The <code class="language-css">border-bottom-left-radius()</code> mixin is used to add all prefixes to the border radius.
 	</p>
 
@@ -193,9 +193,9 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="row">
-	<h3 class="col xs4 s12">border-bottom-right-radius</h3>
+	<h3 class="col xs4">border-bottom-right-radius</h3>
 
-	<p class="col xs4 s12 m6">
+	<p class="col xs4 m6">
 		The <code class="language-css">border-bottom-right-radius()</code> mixin is used to add all prefixes to the border radius.
 	</p>
 
@@ -207,9 +207,9 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="row">
-	<h3 class="col xs4 s12">border-radius-bottom</h3>
+	<h3 class="col xs4">border-radius-bottom</h3>
 
-	<p class="col xs4 s12 m6">
+	<p class="col xs4 m6">
 		The <code class="language-css">border-radius-bottom()</code> mixin is used to add all prefixes to the bottom border radius.
 		This mixing includes both <code class="language-css">border-bottom-right-radius()</code> and <code class="language-css">border-bottom-left-radius()</code>.
 	</p>
@@ -222,9 +222,9 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="row">
-	<h3 class="col xs4 s12">square</h3>
+	<h3 class="col xs4">square</h3>
 
-	<p class="col xs4 s12 m6">
+	<p class="col xs4 m6">
 		The <code class="language-css">square()</code> mixin is used to give both width and height equal value.
 	</p>
 
@@ -236,9 +236,9 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <section class="row">
-	<h3 class="col xs4 s12">range-thumb</h3>
+	<h3 class="col xs4">range-thumb</h3>
 
-	<p class="col xs4 s12 m6">
+	<p class="col xs4 m6">
 		The <code class="language-css">range-thumb()</code> mixing is used to add all prefixes for the range thumb.
 	</p>
 
@@ -252,9 +252,9 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 	<section class="row">
-		<h3 class="col xs4 s12">range-track</h3>
+		<h3 class="col xs4">range-track</h3>
 
-		<p class="col xs4 s12 m6">
+		<p class="col xs4 m6">
 			The <code class="language-css">range-track()</code> mixing is used to add all prefixes for the range track.
 		</p>
 

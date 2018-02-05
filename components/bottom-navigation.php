@@ -7,18 +7,18 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>
 
 <section class="row">
-	<h2 class="col xs4 s12">Bottom navigation usage</h2>
+	<h2 class="col xs4">Bottom navigation usage</h2>
 
-	<p class="col xs4 s12 m6">
+	<p class="col xs4 m6">
 		You can use the bottom navigation to easily switch between top-level views in a single tap.
 		There are two types of bottom navigation you can use (default and shifting)
 	</p>
 </section>
 
 <section class="row">
-	<h3 class="col xs4 s12">Default bottom navigation</h3>
+	<h3 class="col xs4">Default bottom navigation</h3>
 
-	<p class="col xs4 s12 m6">
+	<p class="col xs4 m6">
 		<button class="raised-button trigger" data-trigger="bottom-nav">Show</button>
 	</p>
 
@@ -52,9 +52,9 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </section>
 
 <Section class="row">
-	<h3 class="col xs4 s12">Shifting bottom navigation</h3>
+	<h3 class="col xs4">Shifting bottom navigation</h3>
 
-	<p class="col xs4 s12 m6">
+	<p class="col xs4 m6">
 		<button class="raised-button trigger" data-trigger="shifting-nav">Show</button>
 	</p>
 
@@ -88,7 +88,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 </Section>
 
 <section class="row">
-	<h3 class="col xs4 s12">Settings</h3>
+	<h3 class="col xs4">Settings</h3>
 
 	<table>
 		<thead>
