@@ -62,7 +62,7 @@ $keywords .= ', smaterial, css, scss, material design, framework, html, js, css 
     if( !$amp ) {
         echo '
         <link rel="stylesheet" href="/stylesheets/prism.css">
-	    <link rel="stylesheet" href="/stylesheets/smaterial-'.(isBetween($sunset, $sunrise, $currentTime) ? 'dark' : 'light').'.css">';
+	    <link rel="stylesheet" href="/dist/css/smaterial-'.(isBetween($sunset, $sunrise, $currentTime) ? 'dark' : 'light').'.css">';
 	}
 	?>
 
@@ -105,7 +105,7 @@ $keywords .= ', smaterial, css, scss, material design, framework, html, js, css 
             <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
             <noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
             <style amp-custom>';
-            require_once $_SERVER['DOCUMENT_ROOT'].'/stylesheets/smaterial-amp.css';
+            require_once $_SERVER['DOCUMENT_ROOT'].'/dist/css/smaterial-amp.css';
         echo '</style>';
     } else {
 		echo '
@@ -195,25 +195,6 @@ if( $_SERVER['PHP_SELF'] === '/components/tabs.php' ) {
 }
 ?>
     <nav id="drawer" class="drawer drawer-temporary">
-        <!--<header class="drawer-header"> <!-- Full height --
-            <img src="/images/logo.svg" alt="SMalterial logo">
-        </header>-->
-        <!--<header> <!-- Persistent ----
-            <img src="/images/profile-icon.jpg" alt="SMaterial profile example" class="drawer-profile-img">
-            <div class="drawer-profile-name">John</div>
-            <div class="drawer-profile-more">
-                <i class="material-icons trigger" data-trigger="drawer-profile-menu">arrow_drop_down</i>
-
-                <nav class="menu" id="drawer-profile-menu">
-                    <a href="#">Facebook</a>
-                    <a href="#">Google Plus</a>
-                    <a href="#">Add account</a>
-                </nav>
-            </div>
-            <div><i class="material-icons arrow trigger" data-trigger="drawer">chevron_left</i></div>
-        </header>-->
-
-
         <header class="drawer-header">
             <<?php echo ($amp ? 'amp-img layout="responsive" height="120px" width="280px"' : 'img'); ?> src="/images/drawer-background.jpg" class="drawer-profile-background" alt="menu background">
             <div class="scrim"></div>

@@ -7,7 +7,6 @@
  **************************************/
 
 // Load requested fonts
-@import '../../fonts/fonts';
 
 @if( in-array( 'display-4', $typography ) ) {
 	.display-4, h1 {

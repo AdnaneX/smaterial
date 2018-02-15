@@ -2,8 +2,8 @@
 
         <?php
         if( !$amp ) {
-            echo '  <script src="/js/smaterial.js"></script>
-                    <script src="/js/prism.js"></script>';
+            echo '  <script src="/dist/js/smaterial.js"></script>
+                    <script src="/src/js/prism.js"></script>';
         }
 		if( TEST === false ) {
             if( $amp ) {

@@ -34,6 +34,7 @@
     "css-loader": "^0.28.9",
     "es6-promise": "^4.2.2",
     "extract-text-webpack-plugin": "^3.0.2",
+    "google-fonts-webpack-plugin": "^0.4.4",
     "jshint": "^2.9.5",
     "minimatch": "^3.0.4",
     "node-sass": "^4.7.2",
